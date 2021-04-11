@@ -1,3 +1,4 @@
 # mintarn
 
-mintarn.de
+http://mintarn.de
+
