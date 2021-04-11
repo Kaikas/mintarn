@@ -1,0 +1,178 @@
+{
+  "__data_type": "UTI ",
+  "AddCost": {
+    "type": "dword",
+    "value": 25
+  },
+  "BaseItem": {
+    "type": "int",
+    "value": 52
+  },
+  "Charges": {
+    "type": "byte",
+    "value": 0
+  },
+  "Comment": {
+    "type": "cexostring",
+    "value": ""
+  },
+  "Cost": {
+    "type": "dword",
+    "value": 25
+  },
+  "Cursed": {
+    "type": "byte",
+    "value": 0
+  },
+  "DescIdentified": {
+    "type": "cexolocstring",
+    "value": {
+      "0": "Dieser und einige ähnlich geartete Ringe wurden ursprünglich hergestellt, um die Söhne von König Castter De'wess zu schützen, aber es ist nicht bekannt, wer den Zauber über die Ringe aussprach. Geschichtliche Aufzeichnungen besagen, dass die Ringe mindestens 13 Generationen im Besitz dieser Familie blieben, obwohl sie alle schließlich im Verlauf von nur einer Generation verlorengingen. Der Grund hierfür war möglicherweise die Feindschaft zwischen dem König und der Familie des Erschaffers.",
+      "4": "Dieser und einige ähnlich geartete Ringe wurden ursprünglich hergestellt, um die Söhne von König Castter De'wess zu schützen, aber es ist nicht bekannt, wer den Zauber über die Ringe aussprach. Geschichtliche Aufzeichnungen besagen, dass die Ringe mindestens 13 Generationen im Besitz dieser Familie blieben, obwohl sie alle schließlich im Verlauf von nur einer Generation verlorengingen. Der Grund hierfür war möglicherweise die Feindschaft zwischen dem König und der Familie des Erschaffers."
+    }
+  },
+  "Description": {
+    "type": "cexolocstring",
+    "value": {
+      "0": "",
+      "4": ""
+    }
+  },
+  "Identified": {
+    "type": "byte",
+    "value": 1
+  },
+  "LocalizedName": {
+    "type": "cexolocstring",
+    "value": {
+      "0": "Schutzring +1 \"Prinzenring\"",
+      "4": "Schutzring +1 \"Prinzenring\""
+    }
+  },
+  "ModelPart1": {
+    "type": "byte",
+    "value": 237
+  },
+  "PaletteID": {
+    "type": "byte",
+    "value": 205
+  },
+  "Plot": {
+    "type": "byte",
+    "value": 0
+  },
+  "PropertiesList": {
+    "type": "list",
+    "value": [
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 2
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 1
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 255
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 1
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 2
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 1
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 255
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 40
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 21
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 50
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 255
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 155
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 0
+        }
+      }
+    ]
+  },
+  "StackSize": {
+    "type": "word",
+    "value": 1
+  },
+  "Stolen": {
+    "type": "byte",
+    "value": 0
+  },
+  "Tag": {
+    "type": "cexostring",
+    "value": "CRAFT_Prinzenring"
+  },
+  "TemplateResRef": {
+    "type": "resref",
+    "value": "sw_ri_prinzenrin"
+  }
+}

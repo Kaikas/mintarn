@@ -1,0 +1,209 @@
+{
+  "__data_type": "UTI ",
+  "AddCost": {
+    "type": "dword",
+    "value": 25
+  },
+  "BaseItem": {
+    "type": "int",
+    "value": 52
+  },
+  "Charges": {
+    "type": "byte",
+    "value": 0
+  },
+  "Comment": {
+    "type": "cexostring",
+    "value": "by Grashnak"
+  },
+  "Cost": {
+    "type": "dword",
+    "value": 25
+  },
+  "Cursed": {
+    "type": "byte",
+    "value": 0
+  },
+  "DescIdentified": {
+    "type": "cexolocstring",
+    "value": {
+      "0": "Der bekannteste Besitzer dieses Rings verdiente seinen Lebensunterhalt damit, dass er dessen verwunschene Natur ausnutzte. Der Narr Gregoria setzte seine unvergleichliche Fingerfertigkeit ein, um diesen Ring mit dem einer als Zielscheibe des Spotts ausersehenen Person im Publikum zu vertauschen. Die restliche Darbietung bestand darin, die jetzt plötzlich völlig ungeschickte und tolpatschige Person zur Freude des restlichen Publikums zu verspotten. Der Ring wurde nur entfernt (mit einer Methode, die nur dem listigen Narren bekannt war), wenn das Opfer versprach, keine Vergeltung für die ihm widerfahrene Behandlungen zu üben. Aber Gregoria mußte sich oft hastig zurückziehen. Seine letzte bekannte Darbietung hatte Gerüchten zufolge einen schlecht gelaunten Magier der Zentilfeste zum Opfer; eine Darbietung, bei der er sich nicht ganz schnell genug zurückzog.",
+      "4": "Der bekannteste Besitzer dieses Rings verdiente seinen Lebensunterhalt damit, dass er dessen verwunschene Natur ausnutzte. Der Narr Gregoria setzte seine unvergleichliche Fingerfertigkeit ein, um diesen Ring mit dem einer als Zielscheibe des Spotts ausersehenen Person im Publikum zu vertauschen. Die restliche Darbietung bestand darin, die jetzt plötzlich völlig ungeschickte und tolpatschige Person zur Freude des restlichen Publikums zu verspotten. Der Ring wurde nur entfernt (mit einer Methode, die nur dem listigen Narren bekannt war), wenn das Opfer versprach, keine Vergeltung für die ihm widerfahrene Behandlungen zu üben. Aber Gregoria mußte sich oft hastig zurückziehen. Seine letzte bekannte Darbietung hatte Gerüchten zufolge einen schlecht gelaunten Magier der Zentilfeste zum Opfer; eine Darbietung, bei der er sich nicht ganz schnell genug zurückzog."
+    }
+  },
+  "Description": {
+    "type": "cexolocstring",
+    "value": {
+      "0": "",
+      "4": ""
+    }
+  },
+  "Identified": {
+    "type": "byte",
+    "value": 1
+  },
+  "LocalizedName": {
+    "type": "cexolocstring",
+    "value": {
+      "0": "Ungeschicklichkeitsring \"Die Torheit des Narren\"",
+      "4": "Ungeschicklichkeitsring \"Die Torheit des Narren\""
+    }
+  },
+  "ModelPart1": {
+    "type": "byte",
+    "value": 86
+  },
+  "PaletteID": {
+    "type": "byte",
+    "value": 205
+  },
+  "Plot": {
+    "type": "byte",
+    "value": 0
+  },
+  "PropertiesList": {
+    "type": "list",
+    "value": [
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 30
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 1
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 255
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 87
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 27
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 19
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 255
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 84
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 21
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 5
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 255
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 27
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 1
+        }
+      },
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 21
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 50
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 255
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 155
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 0
+        }
+      }
+    ]
+  },
+  "StackSize": {
+    "type": "word",
+    "value": 1
+  },
+  "Stolen": {
+    "type": "byte",
+    "value": 0
+  },
+  "Tag": {
+    "type": "cexostring",
+    "value": "CRAFT_Ungeschicklichkeitsring"
+  },
+  "TemplateResRef": {
+    "type": "resref",
+    "value": "sw_ri_ungeschick"
+  }
+}

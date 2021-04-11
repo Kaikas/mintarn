@@ -1,0 +1,217 @@
+{
+  "__data_type": "UTI ",
+  "AddCost": {
+    "type": "dword",
+    "value": 0
+  },
+  "BaseItem": {
+    "type": "int",
+    "value": 2
+  },
+  "Charges": {
+    "type": "byte",
+    "value": 100
+  },
+  "Comment": {
+    "type": "cexostring",
+    "value": "by Grashnak"
+  },
+  "Cost": {
+    "type": "dword",
+    "value": 0
+  },
+  "Cursed": {
+    "type": "byte",
+    "value": 0
+  },
+  "DescIdentified": {
+    "type": "cexolocstring",
+    "value": {
+      "0": "Die schmutzige Kriegsaxt der Orks. Ungepflegt, schartig und wohl bereits aus zweiter Hand. Fakt ist jedoch, dass selbst abgebrühte Krieger jederzeit Respekt vor solch einer brachialen Waffe haben sollten. Insbesondere wenn sie von einem Ork geschwungen wird, der sich an der Plumpheit und dem zusätzlichen Gewicht dieser Waffe nicht stört.",
+      "4": "Die schmutzige Kriegsaxt der Orks. Ungepflegt, schartig und wohl bereits aus zweiter Hand. Fakt ist jedoch, dass selbst abgebrühte Krieger jederzeit Respekt vor solch einer brachialen Waffe haben sollten. Insbesondere wenn sie von einem Ork geschwungen wird, der sich an der Plumpheit und dem zusätzlichen Gewicht dieser Waffe nicht stört."
+    }
+  },
+  "Description": {
+    "type": "cexolocstring",
+    "value": {
+      "0": "",
+      "4": ""
+    }
+  },
+  "Identified": {
+    "type": "byte",
+    "value": 1
+  },
+  "LocalizedName": {
+    "type": "cexolocstring",
+    "value": {
+      "0": "Orkische Streitaxt",
+      "4": "Orkische Streitaxt"
+    }
+  },
+  "ModelPart1": {
+    "type": "byte",
+    "value": 92
+  },
+  "ModelPart2": {
+    "type": "byte",
+    "value": 92
+  },
+  "ModelPart3": {
+    "type": "byte",
+    "value": 93
+  },
+  "PaletteID": {
+    "type": "byte",
+    "value": 197
+  },
+  "Plot": {
+    "type": "byte",
+    "value": 0
+  },
+  "PropertiesList": {
+    "type": "list",
+    "value": [
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 4
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 2
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 255
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 16
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 2
+        }
+      },
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 20
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 1
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 255
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 60
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 21
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 50
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 255
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 155
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 0
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 0
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 11
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 81
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 0
+        }
+      }
+    ]
+  },
+  "StackSize": {
+    "type": "word",
+    "value": 1
+  },
+  "Stolen": {
+    "type": "byte",
+    "value": 0
+  },
+  "Tag": {
+    "type": "cexostring",
+    "value": "CRAFT_orkaxt"
+  },
+  "TemplateResRef": {
+    "type": "resref",
+    "value": "sw_wa_orkaxt"
+  }
+}

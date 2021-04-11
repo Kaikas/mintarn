@@ -1,0 +1,216 @@
+{
+  "__data_type": "UTI ",
+  "AddCost": {
+    "type": "dword",
+    "value": 300
+  },
+  "BaseItem": {
+    "type": "int",
+    "value": 53
+  },
+  "Charges": {
+    "type": "byte",
+    "value": 0
+  },
+  "Comment": {
+    "type": "cexostring",
+    "value": ""
+  },
+  "Cost": {
+    "type": "dword",
+    "value": 300
+  },
+  "Cursed": {
+    "type": "byte",
+    "value": 0
+  },
+  "DescIdentified": {
+    "type": "cexolocstring",
+    "value": {
+      "0": "Corellon Larethian, Patron und Beschützer aller Tel-quessir (Elfen) wurde einst durch Gruumsh, den obersten Gott der Orks unter dem Vorwand einer Verhandlung getäuscht, verraten und in einen blutigen Zweikampf verwickelt.\nElfische Krieger sehen sich dieser Tage als die Saat von Corellons Blut, welches im Ringen mit Gruumsh auf die Erde von Abeir Toril tropfte. Im Gedenken an diesen legendären Kampf fertigen begabte Elfenschmiede noch heute diese filigranen Krummsäbelartigen Schwerter. Nur selten gelangen solche Klingen in die Hände von anderen Völkern.",
+      "4": "Corellon Larethian, Patron und Beschützer aller Tel-quessir (Elfen) wurde einst durch Gruumsh, den obersten Gott der Orks unter dem Vorwand einer Verhandlung getäuscht, verraten und in einen blutigen Zweikampf verwickelt.\nElfische Krieger sehen sich dieser Tage als die Saat von Corellons Blut, welches im Ringen mit Gruumsh auf die Erde von Abeir Toril tropfte. Im Gedenken an diesen legendären Kampf fertigen begabte Elfenschmiede noch heute diese filigranen Krummsäbelartigen Schwerter. Nur selten gelangen solche Klingen in die Hände von anderen Völkern."
+    }
+  },
+  "Description": {
+    "type": "cexolocstring",
+    "value": {
+      "4": ""
+    }
+  },
+  "Identified": {
+    "type": "byte",
+    "value": 1
+  },
+  "LocalizedName": {
+    "type": "cexolocstring",
+    "value": {
+      "0": "Elfenschwert",
+      "4": "Elfenschwert"
+    }
+  },
+  "ModelPart1": {
+    "type": "byte",
+    "value": 254
+  },
+  "ModelPart2": {
+    "type": "byte",
+    "value": 1
+  },
+  "ModelPart3": {
+    "type": "byte",
+    "value": 251
+  },
+  "PaletteID": {
+    "type": "byte",
+    "value": 197
+  },
+  "Plot": {
+    "type": "byte",
+    "value": 0
+  },
+  "PropertiesList": {
+    "type": "list",
+    "value": [
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 2
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 2
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 255
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 56
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 10
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 1
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 255
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 11
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 4
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 1
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 0
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 18
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 14
+        }
+      },
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 21
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 50
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 255
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 155
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 0
+        }
+      }
+    ]
+  },
+  "StackSize": {
+    "type": "word",
+    "value": 1
+  },
+  "Stolen": {
+    "type": "byte",
+    "value": 0
+  },
+  "Tag": {
+    "type": "cexostring",
+    "value": "CRAFT_Elfenschwert"
+  },
+  "TemplateResRef": {
+    "type": "resref",
+    "value": "sw_wa_elfenschwe"
+  }
+}

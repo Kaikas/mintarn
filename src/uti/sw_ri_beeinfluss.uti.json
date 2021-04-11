@@ -1,0 +1,178 @@
+{
+  "__data_type": "UTI ",
+  "AddCost": {
+    "type": "dword",
+    "value": 25
+  },
+  "BaseItem": {
+    "type": "int",
+    "value": 52
+  },
+  "Charges": {
+    "type": "byte",
+    "value": 0
+  },
+  "Comment": {
+    "type": "cexostring",
+    "value": "by Grashnak"
+  },
+  "Cost": {
+    "type": "dword",
+    "value": 25
+  },
+  "Cursed": {
+    "type": "byte",
+    "value": 0
+  },
+  "DescIdentified": {
+    "type": "cexolocstring",
+    "value": {
+      "0": "Der Sage nach suchte einst ein Graf die Reiche nach einer geeigneten Braut für seinen Sohn ab. Dummerweise genügt keine der Frauen den übertriebenen Ansprüchen, eines unglaublich verzogenen Bengels. Da der Graf einen Thronerben wollte und die Geduld mit seinem Sohn verlor, ließ er diesen Ring von seinem Hofmagier anfertigen. Er überreichte den Ring einer Frau, die am Hof relativ großen Einfluss hatte und verliebte sich sofort in sie. Sie heirateten drei Wochen später. Mitlerweile sind zahlreiche solcher Ringe im Umlauf. Schwer zu sagen, ob es sich um das Original handelt.",
+      "4": "Der Sage nach suchte einst ein Graf die Reiche nach einer geeigneten Braut für seinen Sohn ab. Dummerweise genügt keine der Frauen den übertriebenen Ansprüchen, eines unglaublich verzogenen Bengels. Da der Graf einen Thronerben wollte und die Geduld mit seinem Sohn verlor, ließ er diesen Ring von seinem Hofmagier anfertigen. Er überreichte den Ring einer Frau, die am Hof relativ großen Einfluss hatte und verliebte sich sofort in sie. Sie heirateten drei Wochen später. Mitlerweile sind zahlreiche solcher Ringe im Umlauf. Schwer zu sagen, ob es sich um das Original handelt."
+    }
+  },
+  "Description": {
+    "type": "cexolocstring",
+    "value": {
+      "0": "",
+      "4": ""
+    }
+  },
+  "Identified": {
+    "type": "byte",
+    "value": 1
+  },
+  "LocalizedName": {
+    "type": "cexolocstring",
+    "value": {
+      "0": "Antiker Beeinflussungsring",
+      "4": "Antiker Beeinflussungsring"
+    }
+  },
+  "ModelPart1": {
+    "type": "byte",
+    "value": 36
+  },
+  "PaletteID": {
+    "type": "byte",
+    "value": 205
+  },
+  "Plot": {
+    "type": "byte",
+    "value": 0
+  },
+  "PropertiesList": {
+    "type": "list",
+    "value": [
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 1
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 1
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 255
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 0
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 5
+        }
+      },
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 2
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 1
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 255
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 41
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 2
+        }
+      },
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 21
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 50
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 255
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 155
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 0
+        }
+      }
+    ]
+  },
+  "StackSize": {
+    "type": "word",
+    "value": 1
+  },
+  "Stolen": {
+    "type": "byte",
+    "value": 0
+  },
+  "Tag": {
+    "type": "cexostring",
+    "value": "CRAFT_Beeinflussungsring"
+  },
+  "TemplateResRef": {
+    "type": "resref",
+    "value": "sw_ri_beeinfluss"
+  }
+}

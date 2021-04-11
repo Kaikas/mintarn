@@ -1,0 +1,216 @@
+{
+  "__data_type": "UTI ",
+  "AddCost": {
+    "type": "dword",
+    "value": 200
+  },
+  "BaseItem": {
+    "type": "int",
+    "value": 8
+  },
+  "Charges": {
+    "type": "byte",
+    "value": 0
+  },
+  "Comment": {
+    "type": "cexostring",
+    "value": ""
+  },
+  "Cost": {
+    "type": "dword",
+    "value": 200
+  },
+  "Cursed": {
+    "type": "byte",
+    "value": 0
+  },
+  "DescIdentified": {
+    "type": "cexolocstring",
+    "value": {
+      "0": "Elfische Waldläufer segnen Ihre Bögen in speziellen Zeremonien, die gleichermaßen als Initiationsriten gelten. In diesem Ritual wird üblicherweise eine bevorzugte Gottheit erwählt. In diesem Falle, so verraten die kunstvollen Schnitzereien an den Wurfarmen: Angharradh, die Dreieinige. Diese elfische Gottheit setzt sich aus den Aspekten Aerdrie Faenyas (Wind, Freiheit und Luft), Hanali Celanils (Schönheit und Liebe) und schließlich Sehanine Mondbogens (Wachsamkeit und Reise) zusammen.",
+      "4": "Elfische Waldläufer segnen Ihre Bögen in speziellen Zeremonien, die gleichermaßen als Initiationsriten gelten. In diesem Ritual wird üblicherweise eine bevorzugte Gottheit erwählt. In diesem Falle, so verraten die kunstvollen Schnitzereien an den Wurfarmen: Angharradh, die Dreieinige. Diese elfische Gottheit setzt sich aus den Aspekten Aerdrie Faenyas (Wind, Freiheit und Luft), Hanali Celanils (Schönheit und Liebe) und schließlich Sehanine Mondbogens (Wachsamkeit und Reise) zusammen."
+    }
+  },
+  "Description": {
+    "type": "cexolocstring",
+    "value": {
+      "4": ""
+    }
+  },
+  "Identified": {
+    "type": "byte",
+    "value": 1
+  },
+  "LocalizedName": {
+    "type": "cexolocstring",
+    "value": {
+      "0": "Elfischer Bogen",
+      "4": "Elfischer Bogen"
+    }
+  },
+  "ModelPart1": {
+    "type": "byte",
+    "value": 74
+  },
+  "ModelPart2": {
+    "type": "byte",
+    "value": 71
+  },
+  "ModelPart3": {
+    "type": "byte",
+    "value": 71
+  },
+  "PaletteID": {
+    "type": "byte",
+    "value": 197
+  },
+  "Plot": {
+    "type": "byte",
+    "value": 0
+  },
+  "PropertiesList": {
+    "type": "list",
+    "value": [
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 2
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 2
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 255
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 56
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 4
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 1
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 0
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 8
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 18
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 14
+        }
+      },
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 2
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 10
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 255
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 45
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 21
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 50
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 255
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 155
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 0
+        }
+      }
+    ]
+  },
+  "StackSize": {
+    "type": "word",
+    "value": 1
+  },
+  "Stolen": {
+    "type": "byte",
+    "value": 0
+  },
+  "Tag": {
+    "type": "cexostring",
+    "value": "CRAFT_Elfenbogen"
+  },
+  "TemplateResRef": {
+    "type": "resref",
+    "value": "sw_wa_elfenlangb"
+  }
+}

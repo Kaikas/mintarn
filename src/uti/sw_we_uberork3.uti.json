@@ -1,0 +1,82 @@
+{
+  "__data_type": "UTI ",
+  "AddCost": {
+    "type": "dword",
+    "value": 0
+  },
+  "BaseItem": {
+    "type": "int",
+    "value": 74
+  },
+  "Charges": {
+    "type": "byte",
+    "value": 0
+  },
+  "Comment": {
+    "type": "cexostring",
+    "value": ""
+  },
+  "Cost": {
+    "type": "dword",
+    "value": 1
+  },
+  "Cursed": {
+    "type": "byte",
+    "value": 0
+  },
+  "DescIdentified": {
+    "type": "cexolocstring",
+    "value": {
+      "4": "Über die Orks - Band II\n\nAus der Feder des Magisters Melchior Dannenberg, der im Jahre 1314 TZ mehrere Monate mittels eines Unsichtbarkeitszaubers unter den Orkclans der westlichen Herzlande lebte und Ihre Kultur erforschte.\nMagister Melchior kehrte von seiner vierten Forschungsreise nicht mehr zurück, vermutlich weil der Verwandlungszaubers, der es Ihm ermöglichte offen unter den Orks zu leben, versagte. Seine Aufzeichnungen konnten dann wenig später von mir, Scholar Drengist Hallbach, im Jahre 1317 geborgen und neu verfasst wurden.\n\nKapitel 4 - Der Orkanführer\nDer Anführer, oder Boss legt stets Wert auf sein (für orkische Verhältnisse) majestätisches Auftreten. Eine regelmäßige Inszenierung, körperlicher und geistige Überlegenheit wird durch besonders exotische Ausrüstungsteile, Trophäen oder Waffen vermittelt. Nicht selten stammen diese Insignien von einem mächtigen, im Kampf erschlagenen Gegner. Niedergestellte Orkkrieger machen dies dem Orkboss nach, dürfen jedoch niemals den Prunk des Bosses übertreffen, wenn sie nicht ein sofortiges Machtduell provozieren wollen. Der Boss führt bei Verhandlungen des Clans (so sie denn stattfinden) stets das erste und letzte Wort und trifft die Entscheidungen für den Clan nicht selten einfach aus dem Stehgreif.\nEin Clankrieger der unteren Hierarchieebenen, der den Boss herausfordert, um sich selbst zu etablieren, wird vom Clan oft direkt getötet oder verstoßen. So ernetet er meist für seinen Mut, sich mit dem Anführer zu messen, von loyalen Kriegern Prügel, Verachtung oder Schlimmeres. Somit wird in gewisser weise eine erstaunlich wirksame Befehlskette und Disziplin im Clan hergestellt. Einzige potenzielle Herausforderer des Machtanspruches eines Bosses bilden die gestandenen Elitekrieger, die direkt in der Hierarchieebene unter dem Boss stehen. Die Herausfordferung eines solchen Kriegers wird nicht einfach als Disziplinlosigkeit abgetan, sondern mündet in der Regel in einen rituellen Machtkampf auf Leben und Tod um die künftige Führung des Clans. Hierbei spielt oft der Vize des Bosses, der sognenannte \"Grobgit\" ein besondere Rolle. In meinen Beobachtungen durfte ich nur einen einzigen Fall solcher Ritualkämpfe miterleben. Hier wurde zwischen dem Vize und dem Boss die Führung im Duell erkämpft. Ein weiterer, eher unvorhersehbarer Machtwechsel entstand durch den Tod des Anführers im Kampf gegen die Miliz einer befestigten Zwergensiedlung - in diesem Fall übernahm direkt der Grobgit des Clans und wurde hinterher nicht weiter durch Machtansprüche herausgefordert.\n\nKapitel 5 - Jungorks, oder auch \"Hegel\"   \nDies sind junge, unerfahrene Orks die sich noch in der Clanstruktur zu beweisen haben. Der Beginn des Hegeldaseins beginnt in der Regel bereits nach spä#testens etwa zehn Lebensjahren. Wann ein Hegl zu einem Krieger wird, entscheidet der ausschließlich der Boss, auf Empfehlung des Grobgits. Die anderen Krieger akzeptieren blind diese Entscheidung über seines Status und der Hegl wird, so es möglich ist in einem orkischen Ritual zu einem Krieger ernannt. Das Ritual beinhaltet meistens eine spezielle Prüfung, in der sich der Krieger ohne Mithilfe der anderen Orks ein letztes Mal beweisen muss. Dabei begibt er sich nicht selten in extreme Gefahr begibt. Meine Hochrechnungen von etwa zwei Dutzend Hegelprüfungen ergaben, dass nur etwa sechs von zehn Hegel die Prüfung überleben und zum Krieger ernannt werden. Auch erklärt diese Initiation das oftmals geringe Durchschnittsalter der Orkpopulation.\n\nKapitel 6 - Die Krieger \nDiese angesehene Bezeichnung ist für Orks geläufig, die bereits über anerkannte Kampffähigkeiten verfügen und diese in mehreren erntzunehmenden Kämpfen des Clans gegen Feinde bewiesen haben. Titel wie \"Spargl-Vanichtah\" (Der Elfenverichter) oder \"Stumpn-Kloppah\" (Der Zwergeklopper) wurden in dem von mir beobachteten Clan durch entsprechende Aktionen und Errungenschaften verliehen. Dies hebet besonders skrupellose oder erfolgreiche Krieger von den Anderen ab und sichert Ihnen Ansprüche auf Provilegien in der Gemeinschaft. Oftmals sind diese Geschichten sehr ausgeschmückt und die bloße Tatsache, dass es nur einen einzigen Überlebenen eines Gefechts gibt (der sich die Titel dann gern auch selbst verleiht), unterstreicht die übertriebene Verherrlichung besonders markanter Titel unter den Orks.\nInnerhalb der Krieger gibt es eine recht informelle und ebenso instabile Rangordnung nach einfachem \"je stärker, desto höher\" Prinzip. So ist es nicht verwunderlich, dass innerhalb der Orks zum Teil blutige Auseinandersetzungen zum guten Ton dazu gehören: Immerhin scheint jeder Ork ein gesteigertes Bedürfnis zu besitzen, auf die Rangordnung einzuwirken. Selbst junge Krieger möchten spätestens nach der erfolgreichen \"Hegelprüfung\" - des Initiationsritus der Krieger, seine Position gegenüber anderen Orks festigen oder verbessern. Kämpfe unter Kriegern können dabei nicht selten auch mit Unterstützung eines fachkundigen Schamanen zu Ritualen werden, die den kriegerischen Gottheiten der Orks gefallen sollen.\n\nKapitel 7 - Die Sucher\nSucher sind meistens spezielle Krieger, die sich mehr auf ihre Instinkte und Fähigkeiten im Überleben verlassen als auf bloße ungeschlachte Nahkampffähigkeiten. Oft als Waldläufer- und Schurken geschult,  zeichnen sie sich als Späher, Fallensteller oder Intriganten aus, verfügen jedoch in der Regel auch über eine Grunderfahrung als Nahkämpfer, die sie in Ihrer Zeit als Hegel des Clans erlangt haben. Anders als die Krieger, bilden die Sucher die einzige Kaste, in der Orks auch einzeln operieren und mehrere Tage vom Clanlager entfernt leben können. Schnell war klar, dass ich in die Rolle eines Suchers schlüpfen musste um meine Forschungen voranzutreiben. So konnte ich den Kriegern meine häufige Abwesenheit, die ich benötigte um ungestört meine Aufzeichnungen anzufertigen, erklären. Nicht zuletzt brauchte ich diese Zeit auch um mich von den Strapazen im Clanalltag zu erholen. \n\nKapitel 8 - Schamanen\nEin Schamane ist meist eine Art graue Eminenz zwischen Kriegern und einem Anführer. Er deutet den Willen der orkischen Götter und ist in der Lage von ihnen Macht zu empfangen, vor der sich die meisten anderen Orks verständlicherweise fürchten - was sie freilich nie offen zeigen würden. Er gilt für Orkkrieger meist als schwächlich und feige, oft entstehen auch insgeheim Spotttitel für ihn - sogar bis hin zum beleidigend wahrgenommenen \"Trickser\". Oft erkennt jedoch der Anführer das Potenzial eines Schamanen und macht sich seine Macht zunutze. Dabei gelingt es den Schamanen meist suggestiv auf den \"Boss\" einzuwirken und eventuell eigene Pläne durchzusetzen oder sich vor dem Zorn der Mitstreiter zu schützen. Schamanen definieren sich über das Wirken von Priesterzaubern oder verfügen in der Regel über Zauber, ähnlich eines Hexenmeisters oder Drachenblutes. Auch ein Schamane kann Kampferfahrung besitzen und die grundlegenden Fähigkeiten als Kämpfer oder Barbar an den Tag legen. Mir ist es leider nicht gelungen tiefere Nachforschungen über die Art der Bann- und Zauberwirkung der Schamanen anzustellen. Selbst vor Orks scheinen die Schamanen dieses Wissen nur mündlich und unter Ausschluss von Mitgliedern anderer Kasten weiterzugeben. Soweit ich beobachten konnte, verstehen sich Schamanen untereinander als elitär - zeigen dies jedoch keineswegs offen der Kriegerkaste eines Clans.\n\n\nKapitel 9 - Arkane Talente, Zauberer und Druiden\nHexenmeister, Hexer, Geisterschamanen oder Druiden in elementarer Form sind in der orkischen Population äußerst selten. Sie fassen in Jugendjahren in einer orkischen Clanstruktur meist nur schwer und langsam Fuß, da sie durch die Hierachie der Krieger gnadenlos niedergehalten werden und nur selten die Hegelprüfung bestehen. Durch körperliche Unterlegenheit sind sie ohne besondere Verdienste für die Gruppe meist noch unterhalb der Hegels anzusetzen. Ihre Chance besteht lediglich darin, mit arkanen Fähigkeiten oder dem Beschwören von Naturgewalten Furcht in den Reihen der Krieger und Hegels zu säen und dies zu überleben. Ein so etablierter Bannwirker kann dann jedoch durchaus zu einem Schamanen werden oder eine separate Funktion innerhalb eines Clans einnehmen. Oft sagt man diesen Nebenrollen eines Clans dann auch hellseherische Fähigkeiten nach. Interessanterweise gibt es in den Reihen orkischer Bannwirker äußert intelligente und begabte Individuen, die zwar nicht über die Bildung eines arkanen Adepten herankommen, jedoch Ihre magischen Fertigkeiten, soweit ich es bewerten kann, weit übertreffen."
+    }
+  },
+  "Description": {
+    "type": "cexolocstring",
+    "value": {
+      "4": ""
+    }
+  },
+  "Identified": {
+    "type": "byte",
+    "value": 1
+  },
+  "LocalizedName": {
+    "type": "cexolocstring",
+    "value": {
+      "0": "Über Orks: Band III",
+      "4": "Über Orks: Band III"
+    }
+  },
+  "ModelPart1": {
+    "type": "byte",
+    "value": 76
+  },
+  "PaletteID": {
+    "type": "byte",
+    "value": 198
+  },
+  "Plot": {
+    "type": "byte",
+    "value": 0
+  },
+  "PropertiesList": {
+    "type": "list",
+    "value": []
+  },
+  "StackSize": {
+    "type": "word",
+    "value": 1
+  },
+  "Stolen": {
+    "type": "byte",
+    "value": 0
+  },
+  "Tag": {
+    "type": "cexostring",
+    "value": "CRAFT_buchuberorks3"
+  },
+  "TemplateResRef": {
+    "type": "resref",
+    "value": "sw_we_uberork3"
+  }
+}

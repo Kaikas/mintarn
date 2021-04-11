@@ -1,0 +1,113 @@
+{
+  "__data_type": "UTI ",
+  "AddCost": {
+    "type": "dword",
+    "value": 0
+  },
+  "BaseItem": {
+    "type": "int",
+    "value": 79
+  },
+  "Charges": {
+    "type": "byte",
+    "value": 0
+  },
+  "Comment": {
+    "type": "cexostring",
+    "value": ""
+  },
+  "Cost": {
+    "type": "dword",
+    "value": 4
+  },
+  "Cursed": {
+    "type": "byte",
+    "value": 0
+  },
+  "DescIdentified": {
+    "type": "cexolocstring",
+    "value": {
+      "0": "Würfeln und Emotes gehen auf diesem Server über Chat befehle. Hier eine Liste der möglichen Befehle:\n\nAussehen editieren:\n/aussehen\n\nEmotes:\n/ausweichen\n/beschwören\n/beten\n/betrunken\n/bitten\n/feiern\n/gelangweilt\n/greifen\n/grüßen\n/heben\n/hinlegen\n/knien\n/kratzen\n/lachen\n/lauschen\n/lesen\n/rauchen\n/salutieren\n/schneidersitz\n/schreien\n/sitzen\n/spähen\n/spotten\n/stehlen\n/tanzen\n/totstellen\n/trinken\n/verbeugen\n/zucken\n\n\nWürfeln (Attribute):\n/stärke\n/geschicklichkeit\n/konstitution\n/intelligenz\n/weisheit\n/charisma\n\nWürfeln (Fertigkeiten):\n/mittierenumgehen\n/konzentration\n/motiverkennen\n/heilkunde\n/verstecken\n/lauschen\n/wissenweltliches\n/leisebewegen\n/mechanismusausschalten\n/auftretem\n/überzeugen\n/fingerfertigkeit\n/nachforschungen\n/wissennatur\n/wissenarkanes\n/entdecken\n/magischengegenstandbenutzen\n/wissenreligion\n/akrobatik\n/handwerklederer\n/täuschen\n/einschüchtern\n/handwerkschmied\n/handwerkschreiner\n/handwerkalchemie\n/athletik\n/überleben\n/wissenbarde\n\nWürfeln\n/d4\n/d6\n/d8\n/d10\n/d20\n\n\nReiten:\n/pferd 1\n/pferd 2\n/pferd 3\n/pferd 4\n\n\nCharakter löschen:\n/delete\n\n\nDekorative Maske, Hut oder Kapuze tragen:\n\n/maske 1\n...\n/maske 53\n\n\nKollision mit Lebewesen ausschalten:\n/geist\n\nRucksack anziehen:\n/rucksack"
+    }
+  },
+  "Description": {
+    "type": "cexolocstring",
+    "value": {
+      "0": ""
+    }
+  },
+  "Identified": {
+    "type": "byte",
+    "value": 1
+  },
+  "LocalizedName": {
+    "type": "cexolocstring",
+    "value": {
+      "0": "Würfel- und Emotebeutel"
+    }
+  },
+  "ModelPart1": {
+    "type": "byte",
+    "value": 22
+  },
+  "PaletteID": {
+    "type": "byte",
+    "value": 198
+  },
+  "Plot": {
+    "type": "byte",
+    "value": 1
+  },
+  "PropertiesList": {
+    "type": "list",
+    "value": [
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 3
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 13
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 255
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 15
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 329
+        }
+      }
+    ]
+  },
+  "StackSize": {
+    "type": "word",
+    "value": 1
+  },
+  "Stolen": {
+    "type": "byte",
+    "value": 0
+  },
+  "Tag": {
+    "type": "cexostring",
+    "value": "CRAFT_Wuerfelbeutel"
+  },
+  "TemplateResRef": {
+    "type": "resref",
+    "value": "sw_we_wuerfelbeu"
+  }
+}
