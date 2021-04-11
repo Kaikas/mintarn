@@ -18,7 +18,7 @@ void CreateMeta(string tag, string text) {
     }
 }
 
-// Erstellt news einträge auf der Webseite und auf dem Messageboard
+// Erstellt news eintrÃ¤ge auf der Webseite und auf dem Messageboard
 void CreateNews(string text) {
     string sQuery = "INSERT INTO News (text) VALUES (?)";
     if (NWNX_SQL_PrepareQuery(sQuery)) {
@@ -53,14 +53,14 @@ void main() {
     // Willkommen
     string sWillkommen = "Willkommen auf dem Neverwinter Nights Server Mintarn!\n\n" +
     "Mintarn ist eine Insel im Meer der Schwerter westlich von Faerun. Gespielt wird in der Stadt Freihafen und der Umgebung im Jahr 1490 DR (es gilt die D&D 5e Geschichte). " +
-    "Schwerpunkt des Servers ist zum einen Rollenspiel zum anderen natürlich das Moschen von Monstern und Erkunden von Dungeons. \n\n" +
+    "Schwerpunkt des Servers ist zum einen Rollenspiel zum anderen natÃ¼rlich das Moschen von Monstern und Erkunden von Dungeons. \n\n" +
     "Mintarn bietet euch ein Questsystem mit dem euch hoffentlich nie langweilig wird, ein handgemachtes Craftingsystem, welches " +
-    "möglichst einfach aber allumfassend ist, ein eigenes KI System um eine möglichst lebendige Welt darzustellen und vieles mehr. \n\n" +
-    "Mintarn ist ein Rollenspielserver. Bitte denkt euch einen Charakter aus den ihr möglichst gut darstellt. " +
+    "mÃ¶glichst einfach aber allumfassend ist, ein eigenes KI System um eine mÃ¶glichst lebendige Welt darzustellen und vieles mehr. \n\n" +
+    "Mintarn ist ein Rollenspielserver. Bitte denkt euch einen Charakter aus den ihr mÃ¶glichst gut darstellt. " +
     "Emotes werden in *Sternchen* geschrieben, Out Of Character (OOC) Informationen in (( doppelten Klammern )).\n\n" +
-    "Gewürfelt wird mit /befehlen, zum Beispiel ein Wurf auf Stärke geht mit /stärke. Für eine Liste der Befehle gebt /hilfe ein.\n\n" +
-    "Die Beschreibung eures Charakters könnt ihr auf der Webseite ändern. Dazu benötigt ihr euren einzigartigen Spielertoken den ihr mit /token bekommt.\n\n" +
-    "Wir befinden uns derzeit in der Entwicklungsphase und suchen Dungeon Master und tatkräftige Unterstützung beim Erstellen von Gebieten. " +
+    "GewÃ¼rfelt wird mit /befehlen, zum Beispiel ein Wurf auf StÃ¤rke geht mit /stÃ¤rke. FÃ¼r eine Liste der Befehle gebt /hilfe ein.\n\n" +
+    "Die Beschreibung eures Charakters kÃ¶nnt ihr auf der Webseite Ã¤ndern. Dazu benÃ¶tigt ihr euren einzigartigen Spielertoken den ihr mit /token bekommt.\n\n" +
+    "Wir befinden uns derzeit in der Entwicklungsphase und suchen Dungeon Master und tatkrÃ¤ftige UnterstÃ¼tzung beim Erstellen von Gebieten. " +
     "Wer mitmachen will kommt am besten auf unser Discord (https://discord.gg/9vP7TPT) und schreibt Kaikas an.";
     sWillkommen = ColorStrings(sWillkommen, "*", "*", STRING_COLOR_ROSE);
     sWillkommen = ColorStrings(sWillkommen, "((", "))", "333");
@@ -69,10 +69,10 @@ void main() {
     SetDescription(oBoard, sWillkommen);
     // Regeln
     string sRegeln = "<c0z0>Regeln</c>\n\n" +
-    "Es gelten die üblichen Regeln für gesittetes Rollenspiel [RP]. Also keine Out Of Character [OOC] Informationen verwenden, keine Dinge per RP erzwingen " +
-    "auf die euer Gegenüber keinen Einfluss hat und kein Wissensaustausch unter eigenen Charakteren.\n\n" +
-    "PvP ist nur erlaubt nach interaktivem Rollenspiel. Es muss also nicht nur eine Rollenspielbegründung für PvP geben, es muss vorher ausführlich eine Begründung erspielt werden. " +
-    "Taschendiebstahl ist an jedem Spieler nur ein mal täglich (Echtzeit) erlaubt. Es muss vorher interaktives Rollenspiel geschehen sein.";
+    "Es gelten die Ã¼blichen Regeln fÃ¼r gesittetes Rollenspiel [RP]. Also keine Out Of Character [OOC] Informationen verwenden, keine Dinge per RP erzwingen " +
+    "auf die euer GegenÃ¼ber keinen Einfluss hat und kein Wissensaustausch unter eigenen Charakteren.\n\n" +
+    "PvP ist nur erlaubt nach interaktivem Rollenspiel. Es muss also nicht nur eine RollenspielbegrÃ¼ndung fÃ¼r PvP geben, es muss vorher ausfÃ¼hrlich eine BegrÃ¼ndung erspielt werden. " +
+    "Taschendiebstahl ist an jedem Spieler nur ein mal tÃ¤glich (Echtzeit) erlaubt. Es muss vorher interaktives Rollenspiel geschehen sein.";
     CreateMeta("regeln", sRegeln);
     oBoard = GetObjectByTag("SIGN_Regeln");
     SetDescription(oBoard, sRegeln);
@@ -89,9 +89,9 @@ void main() {
     oBoard = GetObjectByTag("SIGN_Team");
     SetDescription(oBoard, sTeam);
     // Description Anleitung
-    CreateMeta("description", "Öffnet http://mintarn.de/character.php und gebt folgenden Token ein: ");
+    CreateMeta("description", "Ã–ffnet http://mintarn.de/character.php und gebt folgenden Token ein: ");
 
-    // News Einträge
+    // News EintrÃ¤ge
     sQuery = "DROP TABLE News";
     NWNX_SQL_ExecuteQuery(sQuery);
     sQuery = "CREATE TABLE IF NOT EXISTS News (" +
@@ -100,33 +100,33 @@ void main() {
         "PRIMARY KEY (id))";
     NWNX_SQL_ExecuteQuery(sQuery);
     // 1. Erstelle neuen sNewsxxxx string
-    string sNews0001 = "<c0z0>Emotes, Würfeln und Aussehen</c>\n\n" +
-    "Emotes, Würfeln und Aussehen editieren ist nun über /emote, /attribut, /skill, /aussehen möglich. " +
-    "Tippe /hilfe für eine Liste der Befehle.";
+    string sNews0001 = "<c0z0>Emotes, WÃ¼rfeln und Aussehen</c>\n\n" +
+    "Emotes, WÃ¼rfeln und Aussehen editieren ist nun Ã¼ber /emote, /attribut, /skill, /aussehen mÃ¶glich. " +
+    "Tippe /hilfe fÃ¼r eine Liste der Befehle.";
     string sNews0002 ="<c0z0>Patch 1.80</c>\n\n" +
-    "Beamdog veröffentlicht ein Update von NWN EE auf Version 1.80. " +
+    "Beamdog verÃ¶ffentlicht ein Update von NWN EE auf Version 1.80. " +
     "Unsere Server sind auf die neueste Version umgezogen.";
     string sNews0003 ="<c0z0>OOC und Intro</c>\n\n" +
-    "Im OOC Gebiet könnt ihr eure Charakterbeschreibung und euer Aussehen ändern. " +
-    "Zusätzlich gibt es hier ein Geschäft, in welchem ihr die Minimalausrüstung kaufen könnt. " +
-    "Alle weiteren Gegenstände erhaltet ihr über das Crafting";
+    "Im OOC Gebiet kÃ¶nnt ihr eure Charakterbeschreibung und euer Aussehen Ã¤ndern. " +
+    "ZusÃ¤tzlich gibt es hier ein GeschÃ¤ft, in welchem ihr die MinimalausrÃ¼stung kaufen kÃ¶nnt. " +
+    "Alle weiteren GegenstÃ¤nde erhaltet ihr Ã¼ber das Crafting";
     string sNews0004 ="<c0z0>Rastsystem</c>\n\n" +
-    "Es gibt nun ein Rastsystem. Ihr könnt nur Rasten wenn ihr Nahrung im Inventar " +
+    "Es gibt nun ein Rastsystem. Ihr kÃ¶nnt nur Rasten wenn ihr Nahrung im Inventar " +
     "habt und zwischen eurer letzten Rast eine bestimmte Zeitspanne liegt.";
     string sNews0005 ="<c0z0>Sterben</c>\n\n" +
-    "Sterben befördert euch nun ins Jenseits. Vielleicht hilft /beten um die " +
+    "Sterben befÃ¶rdert euch nun ins Jenseits. Vielleicht hilft /beten um die " +
     "Aufmerksamkeit eines Gottes auf euch zu lenken?";
     string sNews0006 ="<c0z0>Freihafen</c>\n\n" +
     "Die Stadt Freihafen ist jetzt im Modul zu finden.";
     string sNews0007 ="<c0z0>Reiten</c>\n\n" +
-    "Sofern ihr den Reitskill habt könnt ihr mit /pferd 1 bis /pferd 4 ein Reitpferd für Rollenspielzwecke erzeugen. " +
+    "Sofern ihr den Reitskill habt kÃ¶nnt ihr mit /pferd 1 bis /pferd 4 ein Reitpferd fÃ¼r Rollenspielzwecke erzeugen. " +
     "Tippt /pferd ein um wieder abzusteigen.";
     string sNews0008 ="<c0z0>Westmark</c>\n\n" +
     "Das Gebiet Westmark ist nun im Modul zu finden.\n";
     string sNews0009 ="<c0z0>Stadtwache</c>\n\n" +
     "Die Stadtwache ist nun im Modul zu finden.\n";
-    string sNews0010 = "<c0z0>Charakter löschen</c>\n\n" +
-    "Ihr könnt nun euren Charakter mit dem Befehl /delete endgültig löschen.\n";
+    string sNews0010 = "<c0z0>Charakter lÃ¶schen</c>\n\n" +
+    "Ihr kÃ¶nnt nun euren Charakter mit dem Befehl /delete endgÃ¼ltig lÃ¶schen.\n";
 
     // 2. CreateNews mit dem neuen sNewsxxxx
     CreateNews(sNews0001);
@@ -141,7 +141,7 @@ void main() {
     CreateNews(sNews0010);
     oBoard = GetObjectByTag("SIGN_News");
 
-    // 3. Füge sNewsxxxx an den Anfang der Description mit zwei \n\n hinzu
+    // 3. FÃ¼ge sNewsxxxx an den Anfang der Description mit zwei \n\n hinzu
     SetDescription(oBoard,
     sNews0010 + "\n\n" +
     sNews0009 + "\n\n" +
@@ -347,9 +347,9 @@ void main() {
     }
 
 
-    // Farben für Conversationen
+    // Farben fÃ¼r Conversationen
     SetCustomToken(100, "</c>");
-    SetCustomToken(101, "<cÙ§`>");
+    SetCustomToken(101, "<cÃ™Â§`>");
     SetCustomToken(102, "<cuuu>");
 
     // Fertigkeits-Talente
@@ -398,7 +398,7 @@ void main() {
     skillFeat.iFeat = 1123;
     NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
 
-    // Überleben
+    // Ãœberleben
     skillFeat.iSkill = 36;
     skillFeat.iFeat = 1124;
     NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
@@ -417,6 +417,7 @@ void main() {
 
     // webhook
     string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK");
+    WriteTimestampedLogEntry("Webhook:" + webhook);
     NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, "Das Modul wurde neu gestartet.", "Mintarn");
 
     // Events
