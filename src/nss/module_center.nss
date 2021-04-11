@@ -197,7 +197,8 @@ void main() {
         string sAccountName = GetPCPlayerName(oPc);
         string sName = GetName(oPc);
         if (!GetIsDM(oPc)) {
-            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", "/api/webhooks/698915011552084009/mGO7QhdkzpM8As5-8JN6-Bki8P4AjzCZmk5z0GqbKKr0moNL55kS8GNPWllZ5F3CKrOa/slack", sAccountName + " hat sich eingeloggt.", "Mintarn");
+            string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK");
+            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, sAccountName + " hat sich eingeloggt.", "Mintarn");
         }
         location loc = GetLocation(oPc);
         object oArea = GetAreaFromLocation(loc);

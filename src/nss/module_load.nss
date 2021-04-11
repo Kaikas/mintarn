@@ -416,7 +416,8 @@ void main() {
     ExecuteScript("alarm", OBJECT_SELF);
 
     // webhook
-    NWNX_WebHook_SendWebHookHTTPS("discordapp.com", "/api/webhooks/698915011552084009/mGO7QhdkzpM8As5-8JN6-Bki8P4AjzCZmk5z0GqbKKr0moNL55kS8GNPWllZ5F3CKrOa/slack", "Das Modul wurde neu gestartet.", "Mintarn");
+    string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK");
+    NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, "Das Modul wurde neu gestartet.", "Mintarn");
 
     // Events
     NWNX_Events_SubscribeEvent("NWNX_ON_ELC_VALIDATE_CHARACTER_BEFORE", "global_elc");

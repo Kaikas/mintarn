@@ -1,5 +1,6 @@
 #include "nwnx_sql"
 #include "nwnx_webhook"
+#include "nwnx_util"
 
 void main()
 {
@@ -11,7 +12,8 @@ void main()
         string sAccountName = GetPCPlayerName(oPc);
         // Hook
         if (!GetIsDM(oPc)) {
-            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", "/api/webhooks/698915011552084009/mGO7QhdkzpM8As5-8JN6-Bki8P4AjzCZmk5z0GqbKKr0moNL55kS8GNPWllZ5F3CKrOa/slack", sAccountName + " hat sich ausgeloggt.", "Mintarn");
+            string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK");
+            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, sAccountName + " hat sich ausgeloggt.", "Mintarn");
         }
         string sName = GetName(oPc);
         location loc = GetLocation(oPc);
