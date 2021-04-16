@@ -7,6 +7,7 @@
 #include "nwnx_webhook"
 #include "nwnx_events"
 #include "nwnx_skillranks"
+#include "light_helper"
 
 // Erstellt metainformationen die auf der webseite und auf hinweisschildern stehen
 void CreateMeta(string tag, string text) {
@@ -432,24 +433,11 @@ void main() {
     NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_LEVEL_AFTER", "global_dmlevel");
     NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_ALIGNMENT_AFTER", "global_dmalignme");
 
-    // Turn on lights
-    int i;
-    object oLight;
-    for (i = 0; i < 1000; i++) {
-        oLight = GetObjectByTag("LIGHT_Dauerlicht", i);
-        if (oLight != OBJECT_INVALID) {
-            SetLocalInt(oLight, "light", 1);
-            // VFX_DUR_LIGHT_YELLOW_15
-            int lighttype = VFX_DUR_LIGHT_YELLOW_15;
-            if (GetLocalInt(oLight, "lighttype") != 0) {
-                lighttype = GetLocalInt(oLight, "lighttype");
-            }
-            ApplyEffectToObject(DURATION_TYPE_PERMANENT, EffectVisualEffect(lighttype), GetNearestObjectByTag("INVISIBLE_LIGHT", oLight));
-            RecomputeStaticLighting(GetArea(oLight));
-            SetPlaceableIllumination(oLight, TRUE);
-            AssignCommand(oLight, ActionPlayAnimation(ANIMATION_PLACEABLE_ACTIVATE));
-        }
-    }
-    // Wechsellights
-    ExecuteScript("module_wechselli", OBJECT_SELF);
+    // Lighting 
+    ReplaceLightWaypoints(); 
+    ToggleAllLightsWithTag("LIGHT_DAYTIME");
+    ToggleAllLightsWithTag("LIGHT_NIGHTTIME");
+    ToggleAllLightsWithTag("LIGHT_ALWAYS");
+    ToggleDayNightLighting(); // pseudo-heartbeat
+
 }
