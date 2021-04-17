@@ -5,6 +5,8 @@
 #include "global_smoke"
 #include "x3_inc_horse"
 #include "nwnx_chat"
+#include "x0_i0_position"
+#include "nwnx_webhook"
 
 // Setzt einen Würfel wurf zusammen
 string PrintRoll(string sValue, int iRand, int iBonus) {
@@ -246,6 +248,18 @@ void main() {
                 oPlayer = GetNextPC();
             }
             NWNX_Administration_ShutdownServer();
+        // Unstuck
+        } else if (sMessage == "/unstuck") {
+            vector vCurrentLocation = GetPosition(oPc);
+            string sLogMessage = GetName(oPc)+" steckt in "+GetName(GetArea(oPc))+" ("+FloatToString(vCurrentLocation.x,6,2)+", "+FloatToString(vCurrentLocation.y,6,2)+", "+FloatToString(vCurrentLocation.z,6,2)+") fest.";
+            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", NWNX_Util_GetEnvironmentVariable("WEBHOOK"), sLogMessage, "Mintarn");
+            AssignCommand(oPc, JumpToLocation(GetAheadLocation(oPc)));
+        // Report
+        } else if (GetSubString(sMessage, 0, 7) == "/report" || GetSubString(sMessage, 0, 7) == "/melden") {
+            vector vCurrentLocation = GetPosition(oPc);
+            string sLogMessage = GetName(oPc)+" meldet in "+GetName(GetArea(oPc))+" ("+FloatToString(vCurrentLocation.x,6,2)+", "+FloatToString(vCurrentLocation.y,6,2)+", "+FloatToString(vCurrentLocation.z,6,2)+"): "+GetSubString(sMessage, 7, 50);
+            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", NWNX_Util_GetEnvironmentVariable("WEBHOOK"), sLogMessage, "Mintarn");
+            AssignCommand(oPc, JumpToLocation(GetAheadLocation(oPc)));
         // Delete Characters
         } else if (GetSubString(sMessage, 0, 8) == "/delete ") {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
