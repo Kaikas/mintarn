@@ -1111,6 +1111,8 @@ void main() {
             } else if (sMessage == "/hilfe") {
                 SendMessageToPC(oPc, "/afk\n" +
                                     "/geist\n" +
+                                    "/unstuck\n" +
+                                    "/report\n" +
                                     "/token\n" +
                                     "/familiar\n" +
                                     "/companion\n" +
