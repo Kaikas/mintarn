@@ -20062,17 +20062,6 @@
                   },
                   {
                     "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Razor Wire"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "razorwirepcbl"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
                     "RESREF": {
                       "type": "resref",
                       "value": "zep_traps009"
@@ -20080,6 +20069,17 @@
                     "STRREF": {
                       "type": "dword",
                       "value": 16812588
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Razor Wire"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "razorwirepcbl"
                     }
                   },
                   {

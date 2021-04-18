@@ -66,6 +66,21 @@
                 "type": "byte",
                 "value": 0
               }
+            },
+            {
+              "__struct_id": 3,
+              "Spell": {
+                "type": "word",
+                "value": 527
+              },
+              "SpellFlags": {
+                "type": "byte",
+                "value": 1
+              },
+              "SpellMetaMagic": {
+                "type": "byte",
+                "value": 0
+              }
             }
           ]
         },
@@ -122,6 +137,21 @@
               "Spell": {
                 "type": "word",
                 "value": 166
+              },
+              "SpellFlags": {
+                "type": "byte",
+                "value": 1
+              },
+              "SpellMetaMagic": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 3,
+              "Spell": {
+                "type": "word",
+                "value": 523
               },
               "SpellFlags": {
                 "type": "byte",
@@ -221,21 +251,6 @@
               "__struct_id": 3,
               "Spell": {
                 "type": "word",
-                "value": 523
-              },
-              "SpellFlags": {
-                "type": "byte",
-                "value": 1
-              },
-              "SpellMetaMagic": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 3,
-              "Spell": {
-                "type": "word",
                 "value": 40
               },
               "SpellFlags": {
@@ -282,21 +297,6 @@
         "MemorizedList6": {
           "type": "list",
           "value": [
-            {
-              "__struct_id": 3,
-              "Spell": {
-                "type": "word",
-                "value": 527
-              },
-              "SpellFlags": {
-                "type": "byte",
-                "value": 1
-              },
-              "SpellMetaMagic": {
-                "type": "byte",
-                "value": 0
-              }
-            },
             {
               "__struct_id": 3,
               "Spell": {
@@ -421,12 +421,7 @@
                 "type": "byte",
                 "value": 0
               }
-            }
-          ]
-        },
-        "MemorizedList8": {
-          "type": "list",
-          "value": [
+            },
             {
               "__struct_id": 3,
               "Spell": {
@@ -441,7 +436,12 @@
                 "type": "byte",
                 "value": 0
               }
-            },
+            }
+          ]
+        },
+        "MemorizedList8": {
+          "type": "list",
+          "value": [
             {
               "__struct_id": 3,
               "Spell": {

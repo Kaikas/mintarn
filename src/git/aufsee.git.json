@@ -3496,6 +3496,21 @@
                       "type": "byte",
                       "value": 0
                     }
+                  },
+                  {
+                    "__struct_id": 3,
+                    "Spell": {
+                      "type": "word",
+                      "value": 544
+                    },
+                    "SpellFlags": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "SpellMetaMagic": {
+                      "type": "byte",
+                      "value": 0
+                    }
                   }
                 ]
               },
@@ -3552,21 +3567,6 @@
               "KnownList3": {
                 "type": "list",
                 "value": [
-                  {
-                    "__struct_id": 3,
-                    "Spell": {
-                      "type": "word",
-                      "value": 544
-                    },
-                    "SpellFlags": {
-                      "type": "byte",
-                      "value": 1
-                    },
-                    "SpellMetaMagic": {
-                      "type": "byte",
-                      "value": 0
-                    }
-                  },
                   {
                     "__struct_id": 3,
                     "Spell": {
@@ -20794,7 +20794,7 @@
         },
         "ZPosition": {
           "type": "float",
-          "value": 9.8847
+          "value": 9.884700000000001
         }
       },
       {
@@ -21514,7 +21514,7 @@
         },
         "ZPosition": {
           "type": "float",
-          "value": 9.286799999999999
+          "value": 9.2868
         }
       },
       {
