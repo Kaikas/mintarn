@@ -82,9 +82,8 @@ void ToggleDayNightLighting() {
         i++;
     }
 
-    int iSecondToFullHour = (60.0 - GetTimeMinute()) * 0.7 * 60.0;
-    //SendMessageToPC( GetFirstPC(), IntToString(GetTimeHour()));
-    DelayCommand((60.0 - m), ToggleDayNightLighting());
+    float fSecondsToFullHour = (60.0 - GetTimeMinute()) * 0.7 * 60.0;
+    DelayCommand(fSecondsToFullHour, ToggleDayNightLighting());
     WriteTimestampedLogEntry("Toggle global lighting");
 }
 
