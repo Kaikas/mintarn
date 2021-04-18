@@ -117,12 +117,7 @@
                 "type": "byte",
                 "value": 0
               }
-            }
-          ]
-        },
-        "MemorizedList1": {
-          "type": "list",
-          "value": [
+            },
             {
               "__struct_id": 3,
               "Spell": {
@@ -137,7 +132,12 @@
                 "type": "byte",
                 "value": 0
               }
-            },
+            }
+          ]
+        },
+        "MemorizedList1": {
+          "type": "list",
+          "value": [
             {
               "__struct_id": 3,
               "Spell": {
@@ -167,12 +167,7 @@
                 "type": "byte",
                 "value": 0
               }
-            }
-          ]
-        },
-        "MemorizedList2": {
-          "type": "list",
-          "value": [
+            },
             {
               "__struct_id": 3,
               "Spell": {
@@ -187,7 +182,12 @@
                 "type": "byte",
                 "value": 0
               }
-            },
+            }
+          ]
+        },
+        "MemorizedList2": {
+          "type": "list",
+          "value": [
             {
               "__struct_id": 3,
               "Spell": {
@@ -232,12 +232,7 @@
                 "type": "byte",
                 "value": 0
               }
-            }
-          ]
-        },
-        "MemorizedList3": {
-          "type": "list",
-          "value": [
+            },
             {
               "__struct_id": 3,
               "Spell": {
@@ -252,7 +247,12 @@
                 "type": "byte",
                 "value": 0
               }
-            },
+            }
+          ]
+        },
+        "MemorizedList3": {
+          "type": "list",
+          "value": [
             {
               "__struct_id": 3,
               "Spell": {
@@ -297,12 +297,7 @@
                 "type": "byte",
                 "value": 0
               }
-            }
-          ]
-        },
-        "MemorizedList4": {
-          "type": "list",
-          "value": [
+            },
             {
               "__struct_id": 3,
               "Spell": {
@@ -317,7 +312,12 @@
                 "type": "byte",
                 "value": 0
               }
-            },
+            }
+          ]
+        },
+        "MemorizedList4": {
+          "type": "list",
+          "value": [
             {
               "__struct_id": 3,
               "Spell": {

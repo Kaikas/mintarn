@@ -117,6 +117,21 @@
                 "type": "byte",
                 "value": 0
               }
+            },
+            {
+              "__struct_id": 3,
+              "Spell": {
+                "type": "word",
+                "value": 439
+              },
+              "SpellFlags": {
+                "type": "byte",
+                "value": 1
+              },
+              "SpellMetaMagic": {
+                "type": "byte",
+                "value": 0
+              }
             }
           ]
         },
@@ -178,26 +193,6 @@
               "Spell": {
                 "type": "word",
                 "value": 64
-              },
-              "SpellFlags": {
-                "type": "byte",
-                "value": 1
-              },
-              "SpellMetaMagic": {
-                "type": "byte",
-                "value": 0
-              }
-            }
-          ]
-        },
-        "KnownList5": {
-          "type": "list",
-          "value": [
-            {
-              "__struct_id": 3,
-              "Spell": {
-                "type": "word",
-                "value": 439
               },
               "SpellFlags": {
                 "type": "byte",

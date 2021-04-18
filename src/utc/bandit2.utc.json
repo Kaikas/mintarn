@@ -101,21 +101,6 @@
               "__struct_id": 3,
               "Spell": {
                 "type": "word",
-                "value": 520
-              },
-              "SpellFlags": {
-                "type": "byte",
-                "value": 1
-              },
-              "SpellMetaMagic": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 3,
-              "Spell": {
-                "type": "word",
                 "value": 102
               },
               "SpellFlags": {
@@ -132,21 +117,6 @@
               "Spell": {
                 "type": "word",
                 "value": 107
-              },
-              "SpellFlags": {
-                "type": "byte",
-                "value": 1
-              },
-              "SpellMetaMagic": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 3,
-              "Spell": {
-                "type": "word",
-                "value": 533
               },
               "SpellFlags": {
                 "type": "byte",
@@ -181,7 +151,7 @@
               "__struct_id": 3,
               "Spell": {
                 "type": "word",
-                "value": 541
+                "value": 520
               },
               "SpellFlags": {
                 "type": "byte",
@@ -287,6 +257,46 @@
               "Spell": {
                 "type": "word",
                 "value": 40
+              },
+              "SpellFlags": {
+                "type": "byte",
+                "value": 1
+              },
+              "SpellMetaMagic": {
+                "type": "byte",
+                "value": 0
+              }
+            }
+          ]
+        },
+        "KnownList8": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 3,
+              "Spell": {
+                "type": "word",
+                "value": 541
+              },
+              "SpellFlags": {
+                "type": "byte",
+                "value": 1
+              },
+              "SpellMetaMagic": {
+                "type": "byte",
+                "value": 0
+              }
+            }
+          ]
+        },
+        "KnownList9": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 3,
+              "Spell": {
+                "type": "word",
+                "value": 533
               },
               "SpellFlags": {
                 "type": "byte",

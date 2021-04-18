@@ -582,12 +582,7 @@
                 "type": "byte",
                 "value": 0
               }
-            }
-          ]
-        },
-        "MemorizedList6": {
-          "type": "list",
-          "value": [
+            },
             {
               "__struct_id": 3,
               "Spell": {
@@ -602,7 +597,12 @@
                 "type": "byte",
                 "value": 0
               }
-            },
+            }
+          ]
+        },
+        "MemorizedList6": {
+          "type": "list",
+          "value": [
             {
               "__struct_id": 3,
               "Spell": {

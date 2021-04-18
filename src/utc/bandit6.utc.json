@@ -112,7 +112,7 @@
               "__struct_id": 3,
               "Spell": {
                 "type": "word",
-                "value": 420
+                "value": 32
               },
               "SpellFlags": {
                 "type": "byte",
@@ -122,12 +122,17 @@
                 "type": "byte",
                 "value": 0
               }
-            },
+            }
+          ]
+        },
+        "MemorizedList2": {
+          "type": "list",
+          "value": [
             {
               "__struct_id": 3,
               "Spell": {
                 "type": "word",
-                "value": 32
+                "value": 420
               },
               "SpellFlags": {
                 "type": "byte",
