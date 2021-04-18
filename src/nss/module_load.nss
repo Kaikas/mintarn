@@ -7,7 +7,7 @@
 #include "nwnx_webhook"
 #include "nwnx_events"
 #include "nwnx_skillranks"
-#include "light_helper"
+#include "global_lighting"
 
 // Erstellt metainformationen die auf der webseite und auf hinweisschildern stehen
 void CreateMeta(string tag, string text) {

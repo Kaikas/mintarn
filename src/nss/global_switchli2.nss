@@ -1,4 +1,4 @@
-#include "light_helper"
+#include "global_lighting"
 
 void main()
 {

@@ -56,6 +56,7 @@ void ToggleDayNightLighting() {
 
     while (GetObjectByTag("LIGHT_DAYTIME", i) != OBJECT_INVALID) {
         oLight = GetObjectByTag("LIGHT_DAYTIME", i);
+        // Note that dawn (6) and dusk (18) are ignored.
         if (GetIsDay() &&  GetLocalInt(oLight, "light") == 0) {
             //SendMessageToPC( GetFirstPC(), "Es ist Tag. Schalte Tageslicht an.");
             ToggleLight(oLight);
@@ -81,10 +82,10 @@ void ToggleDayNightLighting() {
         i++;
     }
 
-    int m = GetTimeMinute();
-    //SendMessageToPC( GetFirstPC(), IntToString(m));
+    int iSecondToFullHour = (60.0 - GetTimeMinute()) * 0.7 * 60.0;
     //SendMessageToPC( GetFirstPC(), IntToString(GetTimeHour()));
     DelayCommand((60.0 - m), ToggleDayNightLighting());
+    WriteTimestampedLogEntry("Toggle global lighting");
 }
 
 
