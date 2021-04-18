@@ -258,6 +258,13 @@
           "type": "resref",
           "value": "zumrettendenufer"
         }
+      },
+      {
+        "__struct_id": 6,
+        "Area_Name": {
+          "type": "resref",
+          "value": "freihafen210417"
+        }
       }
     ]
   },
