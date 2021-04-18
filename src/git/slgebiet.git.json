@@ -7179,7 +7179,7 @@
         },
         "FactionID": {
           "type": "word",
-          "value": 7
+          "value": 6
         },
         "FeatList": {
           "type": "list",
@@ -8150,7 +8150,7 @@
         },
         "FactionID": {
           "type": "word",
-          "value": 8
+          "value": 7
         },
         "FeatList": {
           "type": "list",
@@ -10092,7 +10092,7 @@
         },
         "FactionID": {
           "type": "word",
-          "value": 9
+          "value": 2
         },
         "FeatList": {
           "type": "list",

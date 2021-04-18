@@ -247,7 +247,7 @@
         },
         "FactionID": {
           "type": "word",
-          "value": 7
+          "value": 6
         },
         "FeatList": {
           "type": "list",
@@ -945,7 +945,7 @@
         },
         "FactionID": {
           "type": "word",
-          "value": 7
+          "value": 6
         },
         "FeatList": {
           "type": "list",
@@ -1643,7 +1643,7 @@
         },
         "FactionID": {
           "type": "word",
-          "value": 7
+          "value": 6
         },
         "FeatList": {
           "type": "list",
@@ -12519,7 +12519,7 @@
         },
         "X": {
           "type": "float",
-          "value": 87.9385
+          "value": 87.93850000000001
         },
         "Y": {
           "type": "float",
@@ -13435,7 +13435,7 @@
         },
         "X": {
           "type": "float",
-          "value": 90.99469999999999
+          "value": 90.9947
         },
         "Y": {
           "type": "float",
@@ -15251,7 +15251,7 @@
         },
         "X": {
           "type": "float",
-          "value": 91.0177
+          "value": 91.01770000000001
         },
         "Y": {
           "type": "float",
@@ -21492,7 +21492,7 @@
         },
         "X": {
           "type": "float",
-          "value": 97.94889999999999
+          "value": 97.9489
         },
         "Y": {
           "type": "float",
@@ -23521,7 +23521,7 @@
         },
         "X": {
           "type": "float",
-          "value": 95.57689999999999
+          "value": 95.5769
         },
         "Y": {
           "type": "float",
@@ -25815,7 +25815,7 @@
         },
         "X": {
           "type": "float",
-          "value": 85.31619999999999
+          "value": 85.3162
         },
         "Y": {
           "type": "float",
@@ -28969,7 +28969,7 @@
         },
         "X": {
           "type": "float",
-          "value": 93.02809999999999
+          "value": 93.0281
         },
         "Y": {
           "type": "float",
