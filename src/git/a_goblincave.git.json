@@ -11307,7 +11307,7 @@
         },
         "Tag": {
           "type": "cexostring",
-          "value": "LIGHT_Einzellicht"
+          "value": "LIGHT_NEVER"
         },
         "TemplateResRef": {
           "type": "resref",
@@ -11344,6 +11344,26 @@
         "Useable": {
           "type": "byte",
           "value": 1
+        },
+        "VarTable": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "Name": {
+                "type": "cexostring",
+                "value": "lighttype"
+              },
+              "Type": {
+                "type": "dword",
+                "value": 1
+              },
+              "Value": {
+                "type": "int",
+                "value": 170
+              }
+            }
+          ]
         },
         "Will": {
           "type": "byte",
@@ -73068,7 +73088,7 @@
         "LocName": {
           "type": "cexolocstring",
           "value": {
-            "0": "LIGHT_Dauerlicht"
+            "0": "Leuchten"
           }
         },
         "OnClick": {
@@ -73153,7 +73173,7 @@
         },
         "Tag": {
           "type": "cexostring",
-          "value": "LIGHT_Dauerlicht"
+          "value": "LIGHT_ALWAYS"
         },
         "TemplateResRef": {
           "type": "resref",

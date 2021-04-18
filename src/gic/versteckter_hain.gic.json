@@ -815,13 +815,6 @@
         "__struct_id": 9,
         "Comment": {
           "type": "cexostring",
-          "value": ""
-        }
-      },
-      {
-        "__struct_id": 9,
-        "Comment": {
-          "type": "cexostring",
           "value": "Tree - Normal"
         }
       },
@@ -2314,20 +2307,6 @@
         "Comment": {
           "type": "cexostring",
           "value": "Source: Pine Tree Placeables by JaffBarrow and Scooterpb"
-        }
-      },
-      {
-        "__struct_id": 9,
-        "Comment": {
-          "type": "cexostring",
-          "value": ""
-        }
-      },
-      {
-        "__struct_id": 9,
-        "Comment": {
-          "type": "cexostring",
-          "value": ""
         }
       },
       {
