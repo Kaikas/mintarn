@@ -7,3 +7,6 @@
 # Ignore the nasher directory
 .nasher/
 install/
+
+#unignore tlk
+!tlk/*.tlk
