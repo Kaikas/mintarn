@@ -12,7 +12,7 @@ void main()
         string sAccountName = GetPCPlayerName(oPc);
         // Hook
         if (!GetIsDM(oPc)) {
-            string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK");
+            string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_MODULE");
             NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, sAccountName + " hat sich ausgeloggt.", "Mintarn");
         }
         string sName = GetName(oPc);

@@ -197,7 +197,7 @@ void main() {
         string sAccountName = GetPCPlayerName(oPc);
         string sName = GetName(oPc);
         if (!GetIsDM(oPc)) {
-            string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK");
+            string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_MODULE");
             NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, sAccountName + " hat sich eingeloggt.", "Mintarn");
         }
         location loc = GetLocation(oPc);
