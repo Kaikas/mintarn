@@ -417,7 +417,7 @@ void main() {
     ExecuteScript("alarm", OBJECT_SELF);
 
     // webhook
-    string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK");
+    string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_MODULE");
     WriteTimestampedLogEntry("Webhook:" + webhook);
     NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, "Das Modul wurde neu gestartet.", "Mintarn");
 
