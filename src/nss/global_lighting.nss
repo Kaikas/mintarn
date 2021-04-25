@@ -11,8 +11,8 @@ void ToggleLight(object oLight) {
         }
 
         // Update lighting
-        SetPlaceableIllumination(oLight, FALSE);
-        RecomputeStaticLighting(GetArea(oLight));
+        // SetPlaceableIllumination(oLight, FALSE);
+        // RecomputeStaticLighting(GetArea(oLight));
         AssignCommand(oLight, ActionPlayAnimation(ANIMATION_PLACEABLE_DEACTIVATE));
     } else {
         SetLocalInt(oLight, "light", 1);
@@ -28,8 +28,8 @@ void ToggleLight(object oLight) {
         ApplyEffectToObject(DURATION_TYPE_PERMANENT, EffectVisualEffect(lighttype), oTarget);
 
         // Update lighting
-        SetPlaceableIllumination(oLight, TRUE);
-        RecomputeStaticLighting(GetArea(oLight));
+        // SetPlaceableIllumination(oLight, TRUE);
+        // RecomputeStaticLighting(GetArea(oLight));
         AssignCommand(oLight, ActionPlayAnimation(ANIMATION_PLACEABLE_ACTIVATE));
     }
 }
