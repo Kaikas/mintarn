@@ -1,4 +1,5 @@
 #include "nwnx_webhook"
+#include "nwnx_util"
 
 void main() {
     object oPc = GetLastUsedBy();
