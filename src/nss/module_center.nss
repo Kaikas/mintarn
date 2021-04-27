@@ -199,6 +199,11 @@ void main() {
         if (!GetIsDM(oPc)) {
             string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_MODULE");
             NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, sAccountName + " hat sich eingeloggt.", "Mintarn");
+        } else {
+            string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_MODULE");
+            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, "Ein Spielleiter hat sich eingeloggt.", "Mintarn");
+            webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_LOGS");
+            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, sAccountName + " hat sich eingeloggt.", "Mintarn");
         }
         location loc = GetLocation(oPc);
         object oArea = GetAreaFromLocation(loc);
