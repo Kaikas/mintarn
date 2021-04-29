@@ -53,39 +53,42 @@ void main() {
     NWNX_SQL_ExecuteQuery(sQuery);
     // Willkommen
     string sWillkommen = "Willkommen auf dem Neverwinter Nights Server Mintarn!\n\n" +
-    "Mintarn ist eine Insel im Meer der Schwerter westlich von Faerun. Gespielt wird in der Stadt Freihafen und der Umgebung im Jahr 1490 DR (es gilt die D&D 5e Geschichte). " +
-    "Schwerpunkt des Servers ist zum einen Rollenspiel zum anderen natürlich das Moschen von Monstern und Erkunden von Dungeons. \n\n" +
-    "Mintarn bietet euch ein Questsystem mit dem euch hoffentlich nie langweilig wird, ein handgemachtes Craftingsystem, welches " +
-    "möglichst einfach aber allumfassend ist, ein eigenes KI System um eine möglichst lebendige Welt darzustellen und vieles mehr. \n\n" +
-    "Mintarn ist ein Rollenspielserver. Bitte denkt euch einen Charakter aus den ihr möglichst gut darstellt. " +
-    "Emotes werden in *Sternchen* geschrieben, Out Of Character (OOC) Informationen in (( doppelten Klammern )).\n\n" +
-    "Gewürfelt wird mit /befehlen, zum Beispiel ein Wurf auf Stärke geht mit /stärke. Für eine Liste der Befehle gebt /hilfe ein.\n\n" +
-    "Die Beschreibung eures Charakters könnt ihr auf der Webseite ändern. Dazu benötigt ihr euren einzigartigen Spielertoken den ihr mit /token bekommt.\n\n" +
-    "Wir befinden uns derzeit in der Entwicklungsphase und suchen Dungeon Master und tatkräftige Unterstützung beim Erstellen von Gebieten. " +
-    "Wer mitmachen will kommt am besten auf unser Discord (https://discord.gg/9vP7TPT) und schreibt Kaikas an.";
+    "Wir sind ein deutscher Neverwinter Nights: Enhanced Edition Server mit Fokus auf Rollenspiel in einer detailreichen Spielwelt. Gemeinsam erwecken wir das unabhängige Inselkönigreich Mintarn im Westen Faerûns zum Leben!\n\n" +
+    "Alle weiteren Informationen findet ihr auf unserer Homepage und in unserem Wiki auf http://mintarn.de.";
     sWillkommen = ColorStrings(sWillkommen, "*", "*", STRING_COLOR_ROSE);
     sWillkommen = ColorStrings(sWillkommen, "((", "))", "333");
     CreateMeta("willkommen", sWillkommen);
     object oBoard = GetObjectByTag("SIGN_Willkommen");
     SetDescription(oBoard, sWillkommen);
     // Regeln
-    string sRegeln = "<c0z0>Regeln</c>\n\n" +
-    "Es gelten die üblichen Regeln für gesittetes Rollenspiel [RP]. Also keine Out Of Character [OOC] Informationen verwenden, keine Dinge per RP erzwingen " +
-    "auf die euer Gegenüber keinen Einfluss hat und kein Wissensaustausch unter eigenen Charakteren.\n\n" +
-    "PvP ist nur erlaubt nach interaktivem Rollenspiel. Es muss also nicht nur eine Rollenspielbegründung für PvP geben, es muss vorher ausführlich eine Begründung erspielt werden. " +
-    "Taschendiebstahl ist an jedem Spieler nur ein mal täglich (Echtzeit) erlaubt. Es muss vorher interaktives Rollenspiel geschehen sein.";
+    string sRegeln = "<c0z0>Regeln und Etikette</c>\n\n" +
+    "Um ein angenehmes Miteinander zu ermöglichen, gibt es auf Mintarn Regeln und Etikette. Die Regeln sind unbedingt zu befolgen. Die Etikette bezieht sich auf das Rollenspiel und ist nicht verbindlich, aber dringend erwünscht zum harmonischen Miteinander. Zusätzlich gilt der gesunde Menschenverstand." +
+    "<c0z0>Regeln</c>\n\n" +
+    "- Beleidigungen und Doxing sind nicht erlaubt.\n" +
+    "- Beziehungsrollenspiel romantischer Natur ist prinzipiell erlaubt, allerdings sind alle expliziten Handlungen und Erotik-Inhalte nicht erwünscht und zu unterlassen.\n" +
+    "- Rassismus (OOC) wird nicht toleriert.\n" + 
+    "- Bei Charakternamen, die nicht dem Fantasy-Setting entsprechen, behalten wir uns das Löschen des Charakters vor.\n" + 
+    "- Der Missbrauch von Bugs oder Enginemechaniken ist verboten. Bitte meldet Bugs im entsprechenden Kanal in Discord oder verwendet /report.\n" +
+    "- PvP ist nur nach interaktivem Rollenspiel erlaubt. Es muss also nicht nur eine Rollenspielbegründung für PvP geben, sondern es muss vorher ausführlich eine Begründung erspielt werden. Unter PvP fallen nicht nur Kampfaktionen, sondern auch andere Handlungen wie zum Beispiel Taschendiebstahl oder Fallen stellen. Vor Beginn des PvPs sollte jedem Beteiligten die Möglichkeit gegeben werden der Situation zu entgehen.\n" + 
+    "- Alle Spielcharaktere sollten volljährig sein. Dies entspricht bei Menschen einem Alter von 18 Jahren. Bei Orks 15, bei Elfen 40, etc.. Jüngere Charaktere dürfen in Ausnahmefällen und nur mit dem Einverständnis der Spielleitung gespielt wird.\n\n" +
+    "<c0z0>Etikette</c>\n\n" + 
+    "- OOC Informationen, also Informationen die euer Charakter nicht weiß, dürfen auch nicht im Rollenspiel verwendet werden (hierzu zählt auch Wissensaustausch zwischen euren eigenen Charakteren).\n" +
+    "- Jeder Spieler sollte sich auf einen Charakter pro Plot beschränken, um Login-Hopping zu vermeiden, falls beide Charaktere gleichzeitig für den Spielbetrieb nötig sind.\n" + 
+    "- Es dürfen keine Dinge im RP erzwungen werden, auf die euer Gegenüber keinen Einfluss hat.\n" + 
+    "- Gewaltdarstellungen werden geduldet, sofern sie pietätvoll und nicht exzessiv sind und keine anderen Spieler stören (!).\n" + 
+    "- OOC Texte beginnen mit // oder werden in (( )) Klammern geschrieben und sind nur geduldet, solange sie keine anderen Spieler stören.\n" + 
+    "- Emotete Spielhandlungen sollten dem Gegenüber Freiraum zur Reaktion lassen. Die Aktion *klaut jemandem den Giftbeutel* nimmt dem Gegenüber die Entscheidungsfähigkeit und grenzt aus. Stattdessen wäre *versucht jemandem den Giftbeutel zu klauen* sympathischer, da dem Mitspieler die Möglichkeit gegeben wird zu reagieren, indem er es geschehen lässt oder verhindert.\n";
+
+
     CreateMeta("regeln", sRegeln);
     oBoard = GetObjectByTag("SIGN_Regeln");
     SetDescription(oBoard, sRegeln);
     // Team
-    string sTeam = "<c0z0>Team</c>\n\n" +
-    "Kaikas: Weltenbau, Scripts, SL \n" +
-    "Sonnenfeuer: Weltenbau, Lore\n" +
-    "enikross: Weltenbau\n" +
-    "Mira: Weltenbau\n" +
-    "Victorious: Scripts\n" +
-    "zankstelle: Items, Orks\n" +
-    "Helfer gesucht! Meldet euch wenn ihr etwas zu dem Projekt beisteuern wollt.";
+    string sTeam = "<c0z0>Mintarn - Ein Modul zum mitmachen</c>\n\n" +
+    "Mit Mintarn möchten wir euch einen Rollenspiel Server bieten, auf den ihr gerne kommt um RP Abende zu verbringen, euren Charakter auszuleben oder einfach Monster zu kloppen." +
+    "Aber auch das so genannte world building mit dem Modulbau, dem erstellen von Gebieten, dem Skripten, dem Erfinden von Geschichten und Hintergründen kann sehr viel Spaß machen!\n\n" + 
+    "Hiermit möchten wir euch herzlich einladen euch zu beteiligen und euch in dieser Welt einzubrigen. Anteil nehmen und mitarbeiten ist ausdrücklich erlaubt und erwünscht!\n\n" + 
+    "Bei Interesse meldet einfach im Discord an, dass ihr gerne mithelfen wollt und ihr bekommt eine entsprechende Rolle zugewiesen, mit der weitere Channels freigeschaltet werden.";
     CreateMeta("team", sTeam);
     oBoard = GetObjectByTag("SIGN_Team");
     SetDescription(oBoard, sTeam);
