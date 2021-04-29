@@ -160,14 +160,14 @@ string GenerateToken() {
 }
 
 void main() {
-    // Send branch info
-    string branch = NWNX_Util_GetEnvironmentVariable("BRANCH");
-    SendMessageToPC(oPc, "Willkommen auf Mintarn. Aktueller Branch: " + branch);
-
     // Default Script
     ExecuteScript("x3_mod_pre_enter", OBJECT_SELF);
 
     object oPc = GetEnteringObject();
+
+    // Send branch info
+    string branch = NWNX_Util_GetEnvironmentVariable("BRANCH");
+    SendMessageToPC(oPc, "Willkommen auf Mintarn. Aktueller Branch: " + branch);
 
     // Set to commoner faction
     ChangeToStandardFaction(oPc, STANDARD_FACTION_COMMONER);
