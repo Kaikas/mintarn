@@ -19,7 +19,7 @@ void CreateMeta(string tag, string text) {
     }
 }
 
-// Erstellt news einträge auf der Webseite und auf dem Messageboard
+// Erstellt news eintraege auf der Webseite und auf dem Messageboard
 void CreateNews(string text) {
     string sQuery = "INSERT INTO News (text) VALUES (?)";
     if (NWNX_SQL_PrepareQuery(sQuery)) {
@@ -53,46 +53,49 @@ void main() {
     NWNX_SQL_ExecuteQuery(sQuery);
     // Willkommen
     string sWillkommen = "Willkommen auf dem Neverwinter Nights Server Mintarn!\n\n" +
-    "Mintarn ist eine Insel im Meer der Schwerter westlich von Faerun. Gespielt wird in der Stadt Freihafen und der Umgebung im Jahr 1490 DR (es gilt die D&D 5e Geschichte). " +
-    "Schwerpunkt des Servers ist zum einen Rollenspiel zum anderen natürlich das Moschen von Monstern und Erkunden von Dungeons. \n\n" +
-    "Mintarn bietet euch ein Questsystem mit dem euch hoffentlich nie langweilig wird, ein handgemachtes Craftingsystem, welches " +
-    "möglichst einfach aber allumfassend ist, ein eigenes KI System um eine möglichst lebendige Welt darzustellen und vieles mehr. \n\n" +
-    "Mintarn ist ein Rollenspielserver. Bitte denkt euch einen Charakter aus den ihr möglichst gut darstellt. " +
-    "Emotes werden in *Sternchen* geschrieben, Out Of Character (OOC) Informationen in (( doppelten Klammern )).\n\n" +
-    "Gewürfelt wird mit /befehlen, zum Beispiel ein Wurf auf Stärke geht mit /stärke. Für eine Liste der Befehle gebt /hilfe ein.\n\n" +
-    "Die Beschreibung eures Charakters könnt ihr auf der Webseite ändern. Dazu benötigt ihr euren einzigartigen Spielertoken den ihr mit /token bekommt.\n\n" +
-    "Wir befinden uns derzeit in der Entwicklungsphase und suchen Dungeon Master und tatkräftige Unterstützung beim Erstellen von Gebieten. " +
-    "Wer mitmachen will kommt am besten auf unser Discord (https://discord.gg/9vP7TPT) und schreibt Kaikas an.";
+    "Wir sind ein deutscher Neverwinter Nights: Enhanced Edition Server mit Fokus auf Rollenspiel in einer detailreichen Spielwelt. Gemeinsam erwecken wir das unabhaengige Inselkoenigreich Mintarn im Westen Faeruns zum Leben!\n\n" +
+    "Alle weiteren Informationen findet ihr auf unserer Homepage und in unserem Wiki auf http://mintarn.de.";
     sWillkommen = ColorStrings(sWillkommen, "*", "*", STRING_COLOR_ROSE);
     sWillkommen = ColorStrings(sWillkommen, "((", "))", "333");
     CreateMeta("willkommen", sWillkommen);
     object oBoard = GetObjectByTag("SIGN_Willkommen");
     SetDescription(oBoard, sWillkommen);
     // Regeln
-    string sRegeln = "<c0z0>Regeln</c>\n\n" +
-    "Es gelten die üblichen Regeln für gesittetes Rollenspiel [RP]. Also keine Out Of Character [OOC] Informationen verwenden, keine Dinge per RP erzwingen " +
-    "auf die euer Gegenüber keinen Einfluss hat und kein Wissensaustausch unter eigenen Charakteren.\n\n" +
-    "PvP ist nur erlaubt nach interaktivem Rollenspiel. Es muss also nicht nur eine Rollenspielbegründung für PvP geben, es muss vorher ausführlich eine Begründung erspielt werden. " +
-    "Taschendiebstahl ist an jedem Spieler nur ein mal täglich (Echtzeit) erlaubt. Es muss vorher interaktives Rollenspiel geschehen sein.";
+    string sRegeln = "<c0z0>Regeln und Etikette</c>\n\n" +
+    "Um ein angenehmes Miteinander zu ermoeglichen, gibt es auf Mintarn Regeln und Etikette. Die Regeln sind unbedingt zu befolgen. Die Etikette bezieht sich auf das Rollenspiel und ist nicht verbindlich, aber dringend erwuenscht zum harmonischen Miteinander. Zusaetzlich gilt der gesunde Menschenverstand.\n\n" +
+    "<c0z0>Regeln</c>\n\n" +
+    "- Beleidigungen und Doxing sind nicht erlaubt.\n" +
+    "- Beziehungsrollenspiel romantischer Natur ist prinzipiell erlaubt, allerdings sind alle expliziten Handlungen und Erotik-Inhalte nicht erwuenscht und zu unterlassen.\n" +
+    "- Rassismus (OOC) wird nicht toleriert.\n" + 
+    "- Bei Charakternamen, die nicht dem Fantasy-Setting entsprechen, behalten wir uns das Loeschen des Charakters vor.\n" + 
+    "- Der Missbrauch von Bugs oder Enginemechaniken ist verboten. Bitte meldet Bugs im entsprechenden Kanal in Discord oder verwendet /report.\n" +
+    "- PvP ist nur nach interaktivem Rollenspiel erlaubt. Es muss also nicht nur eine Rollenspielbegruendung fuer PvP geben, sondern es muss vorher ausfuehrlich eine Begruendung erspielt werden. Unter PvP fallen nicht nur Kampfaktionen, sondern auch andere Handlungen wie zum Beispiel Taschendiebstahl oder Fallen stellen. Vor Beginn des PvPs sollte jedem Beteiligten die Moeglichkeit gegeben werden der Situation zu entgehen.\n" + 
+    "- Alle Spielcharaktere sollten volljaehrig sein. Dies entspricht bei Menschen einem Alter von 18 Jahren. Bei Orks 15, bei Elfen 40, etc.. Juengere Charaktere duerfen in Ausnahmefaellen und nur mit dem Einverstaendnis der Spielleitung gespielt wird.\n\n" +
+    "<c0z0>Etikette</c>\n\n" + 
+    "- OOC Informationen, also Informationen die euer Charakter nicht weiss, duerfen auch nicht im Rollenspiel verwendet werden (hierzu zaehlt auch Wissensaustausch zwischen euren eigenen Charakteren).\n" +
+    "- Jeder Spieler sollte sich auf einen Charakter pro Plot beschraenken, um Login-Hopping zu vermeiden, falls beide Charaktere gleichzeitig fuer den Spielbetrieb noetig sind.\n" + 
+    "- Es duerfen keine Dinge im RP erzwungen werden, auf die euer Gegenueber keinen Einfluss hat.\n" + 
+    "- Gewaltdarstellungen werden geduldet, sofern sie pietaetvoll und nicht exzessiv sind und keine anderen Spieler stoeren (!).\n" + 
+    "- OOC Texte beginnen mit // oder werden in (( )) Klammern geschrieben und sind nur geduldet, solange sie keine anderen Spieler stoeren.\n" + 
+    "- Emotete Spielhandlungen sollten dem Gegenueber Freiraum zur Reaktion lassen. Die Aktion *klaut jemandem den Giftbeutel* nimmt dem Gegenueber die Entscheidungsfaehigkeit und grenzt aus. Stattdessen waere *versucht jemandem den Giftbeutel zu klauen* sympathischer, da dem Mitspieler die Moeglichkeit gegeben wird zu reagieren, indem er es geschehen laesst oder verhindert.\n";
+
+
     CreateMeta("regeln", sRegeln);
     oBoard = GetObjectByTag("SIGN_Regeln");
     SetDescription(oBoard, sRegeln);
     // Team
-    string sTeam = "<c0z0>Team</c>\n\n" +
-    "Kaikas: Weltenbau, Scripts, SL \n" +
-    "Sonnenfeuer: Weltenbau, Lore\n" +
-    "enikross: Weltenbau\n" +
-    "Mira: Weltenbau\n" +
-    "Victorious: Scripts\n" +
-    "zankstelle: Items, Orks\n" +
-    "Helfer gesucht! Meldet euch wenn ihr etwas zu dem Projekt beisteuern wollt.";
+    string sTeam = "<c0z0>Mintarn - Ein Modul zum mitmachen</c>\n\n" +
+    "Mit Mintarn moechten wir euch einen Rollenspiel Server bieten, auf den ihr gerne kommt um RP Abende zu verbringen, euren Charakter auszuleben oder einfach Monster zu kloppen. " +
+    "Aber auch das so genannte world building mit dem Modulbau, dem erstellen von Gebieten, dem Skripten, dem Erfinden von Geschichten und Hintergruenden kann sehr viel Spass machen!\n\n" + 
+    "Hiermit moechten wir euch herzlich einladen euch zu beteiligen und euch in dieser Welt einzubringen. Anteil nehmen und mitarbeiten ist ausdruecklich erlaubt und erwuenscht!\n\n" + 
+    "Bei Interesse meldet einfach im Discord an, dass ihr gerne mithelfen wollt und ihr bekommt eine entsprechende Rolle zugewiesen, mit der weitere Channels freigeschaltet werden.";
     CreateMeta("team", sTeam);
     oBoard = GetObjectByTag("SIGN_Team");
     SetDescription(oBoard, sTeam);
     // Description Anleitung
     CreateMeta("description", "Öffnet http://mintarn.de/character.php und gebt folgenden Token ein: ");
 
-    // News Einträge
+    // News Eintraege
     sQuery = "DROP TABLE News";
     NWNX_SQL_ExecuteQuery(sQuery);
     sQuery = "CREATE TABLE IF NOT EXISTS News (" +
@@ -101,33 +104,33 @@ void main() {
         "PRIMARY KEY (id))";
     NWNX_SQL_ExecuteQuery(sQuery);
     // 1. Erstelle neuen sNewsxxxx string
-    string sNews0001 = "<c0z0>Emotes, Würfeln und Aussehen</c>\n\n" +
-    "Emotes, Würfeln und Aussehen editieren ist nun über /emote, /attribut, /skill, /aussehen möglich. " +
-    "Tippe /hilfe für eine Liste der Befehle.";
+    string sNews0001 = "<c0z0>Emotes, Wuerfeln und Aussehen</c>\n\n" +
+    "Emotes, Wuerfeln und Aussehen editieren ist nun ueber /emote, /attribut, /skill, /aussehen moeglich. " +
+    "Tippe /hilfe fuer eine Liste der Befehle.";
     string sNews0002 ="<c0z0>Patch 1.80</c>\n\n" +
-    "Beamdog veröffentlicht ein Update von NWN EE auf Version 1.80. " +
+    "Beamdog veroeffentlicht ein Update von NWN EE auf Version 1.80. " +
     "Unsere Server sind auf die neueste Version umgezogen.";
     string sNews0003 ="<c0z0>OOC und Intro</c>\n\n" +
-    "Im OOC Gebiet könnt ihr eure Charakterbeschreibung und euer Aussehen ändern. " +
-    "Zusätzlich gibt es hier ein Geschäft, in welchem ihr die Minimalausrüstung kaufen könnt. " +
-    "Alle weiteren Gegenstände erhaltet ihr über das Crafting";
+    "Im OOC Gebiet koennt ihr eure Charakterbeschreibung und euer Aussehen aendern. " +
+    "Zusaetzlich gibt es hier ein Geschaeft, in welchem ihr die Minimalausruestung kaufen koennt. " +
+    "Alle weiteren Gegenstaende erhaltet ihr ueber das Crafting";
     string sNews0004 ="<c0z0>Rastsystem</c>\n\n" +
-    "Es gibt nun ein Rastsystem. Ihr könnt nur Rasten wenn ihr Nahrung im Inventar " +
+    "Es gibt nun ein Rastsystem. Ihr koennt nur Rasten wenn ihr Nahrung im Inventar " +
     "habt und zwischen eurer letzten Rast eine bestimmte Zeitspanne liegt.";
     string sNews0005 ="<c0z0>Sterben</c>\n\n" +
-    "Sterben befördert euch nun ins Jenseits. Vielleicht hilft /beten um die " +
+    "Sterben befoerdert euch nun ins Jenseits. Vielleicht hilft /beten um die " +
     "Aufmerksamkeit eines Gottes auf euch zu lenken?";
     string sNews0006 ="<c0z0>Freihafen</c>\n\n" +
     "Die Stadt Freihafen ist jetzt im Modul zu finden.";
     string sNews0007 ="<c0z0>Reiten</c>\n\n" +
-    "Sofern ihr den Reitskill habt könnt ihr mit /pferd 1 bis /pferd 4 ein Reitpferd für Rollenspielzwecke erzeugen. " +
+    "Sofern ihr den Reitskill habt koennt ihr mit /pferd 1 bis /pferd 4 ein Reitpferd fuer Rollenspielzwecke erzeugen. " +
     "Tippt /pferd ein um wieder abzusteigen.";
     string sNews0008 ="<c0z0>Westmark</c>\n\n" +
     "Das Gebiet Westmark ist nun im Modul zu finden.\n";
     string sNews0009 ="<c0z0>Stadtwache</c>\n\n" +
     "Die Stadtwache ist nun im Modul zu finden.\n";
-    string sNews0010 = "<c0z0>Charakter löschen</c>\n\n" +
-    "Ihr könnt nun euren Charakter mit dem Befehl /delete endgültig löschen.\n";
+    string sNews0010 = "<c0z0>Charakter loeschen</c>\n\n" +
+    "Ihr koennt nun euren Charakter mit dem Befehl /delete endgueltig loeschen.\n";
 
     // 2. CreateNews mit dem neuen sNewsxxxx
     CreateNews(sNews0001);
@@ -142,7 +145,7 @@ void main() {
     CreateNews(sNews0010);
     oBoard = GetObjectByTag("SIGN_News");
 
-    // 3. Füge sNewsxxxx an den Anfang der Description mit zwei \n\n hinzu
+    // 3. Fuege sNewsxxxx an den Anfang der Description mit zwei \n\n hinzu
     SetDescription(oBoard,
     sNews0010 + "\n\n" +
     sNews0009 + "\n\n" +
@@ -348,7 +351,7 @@ void main() {
     }
 
 
-    // Farben für Conversationen
+    // Farben fuer Conversationen
     SetCustomToken(100, "</c>");
     SetCustomToken(101, "<cÙ§`>");
     SetCustomToken(102, "<cuuu>");
