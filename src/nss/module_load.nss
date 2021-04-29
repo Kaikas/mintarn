@@ -418,8 +418,9 @@ void main() {
 
     // webhook
     string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_MODULE");
+    string branch = NWNX_Util_GetEnvironmentVariable("BRANCH");
     WriteTimestampedLogEntry("Webhook:" + webhook);
-    NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, "Das Modul wurde neu gestartet.", "Mintarn");
+    NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, "Das Modul wurde neu gestartet. (" + branch + ")", "Mintarn");
 
     // Events
     NWNX_Events_SubscribeEvent("NWNX_ON_ELC_VALIDATE_CHARACTER_BEFORE", "global_elc");

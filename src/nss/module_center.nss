@@ -11,6 +11,9 @@ float quadratic(float x) {
 
 // Gibt einem Spieler XP
 void GiveXP(object oPc, int iCount, int iSumXp, int iToken) {
+    string branch = NWNX_Util_GetEnvironmentVariable("BRANCH");
+    SendMessageToPC(oPc, "Willkommen auf Mintarn. Aktueller Branch: " + branch);
+
     // Prüft ob genügend Zeit vergangen ist
     if (iToken != GetLocalInt(oPc, "xp_token")) {
         return;
