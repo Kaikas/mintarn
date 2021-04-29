@@ -165,6 +165,10 @@ void main() {
 
     object oPc = GetEnteringObject();
 
+    // Send branch info
+    string branch = NWNX_Util_GetEnvironmentVariable("BRANCH");
+    SendMessageToPC(oPc, "Willkommen auf Mintarn. Aktueller Branch: " + branch);
+
     // Set to commoner faction
     ChangeToStandardFaction(oPc, STANDARD_FACTION_COMMONER);
 
