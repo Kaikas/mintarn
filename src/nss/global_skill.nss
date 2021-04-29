@@ -24,7 +24,7 @@ void AnimalEmpathy(object oPc, object oTarget) {
 
     // Roll - take into account take 20
     int nRoll = 20 + GetLevelByClass(CLASS_TYPE_DRUID, oPc) + GetLevelByClass(CLASS_TYPE_RANGER, oPc) + GetAbilityScore(oPc, ABILITY_CHARISMA);
-    if(GetIsInCombat(oPc)) nRoll = d20();
+    if(GetIsInCombat(oPc)) nRoll = d20() + GetLevelByClass(CLASS_TYPE_DRUID, oPc) + GetLevelByClass(CLASS_TYPE_RANGER, oPc) + GetAbilityScore(oPc, ABILITY_CHARISMA);
 
     // Need to know failure so custom roll (else use GetIsSkillSuccessful).
     if(nRoll >= nDC)
