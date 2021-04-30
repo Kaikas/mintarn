@@ -2,7 +2,8 @@
 
 // Animal Empathy
 void AnimalEmpathy(object oPc, object oTarget) {
-    float fDuration = TurnsToSeconds(GetHitDice(oPc));
+    // Duration of the dominated effect. 10 Minutes + 
+    float fDuration = IntToFloat(600 + GetHitDice(oPc));
     effect eDom = EffectDominated();
 
     // Needs to be Ranger or Druid
@@ -17,6 +18,9 @@ void AnimalEmpathy(object oPc, object oTarget) {
     int nRacialType = GetRacialType(oTarget);
     if(nRacialType != RACIAL_TYPE_ANIMAL && nRacialType != RACIAL_TYPE_BEAST && nRacialType != RACIAL_TYPE_MAGICAL_BEAST) return;
 
+    // If create is a companion we do not posess it
+    if (GetMaster(oTarget) != OBJECT_INVALID) return;
+    
     // Calculate DC
     int nDC = 15;
     if(nRacialType != RACIAL_TYPE_ANIMAL) nDC = 19;
