@@ -445,13 +445,6 @@
         "__struct_id": 8,
         "Mod_Hak": {
           "type": "cexostring",
-          "value": "ci_blank_tin01"
-        }
-      },
-      {
-        "__struct_id": 8,
-        "Mod_Hak": {
-          "type": "cexostring",
           "value": "medievalcomp"
         }
       },
@@ -481,13 +474,6 @@
         "Mod_Hak": {
           "type": "cexostring",
           "value": "cep2_add_doors"
-        }
-      },
-      {
-        "__struct_id": 8,
-        "Mod_Hak": {
-          "type": "cexostring",
-          "value": "cep2_add_loads"
         }
       },
       {
@@ -530,13 +516,6 @@
         "Mod_Hak": {
           "type": "cexostring",
           "value": "cep2_add_reforge"
-        }
-      },
-      {
-        "__struct_id": 8,
-        "Mod_Hak": {
-          "type": "cexostring",
-          "value": "cep2_add_skies"
         }
       },
       {
