@@ -439,8 +439,8 @@ void main() {
     NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_ALIGNMENT_AFTER", "global_dmalignme");
 
     NWNX_Events_SubscribeEvent("NWNX_ON_DM_SPAWN_OBJECT_BEFORE", "dm_spawn");
-    NWNX_Events_SubscribeEvent("NWNX_ON_DEBUG_RUN_SCRIPT_BEFORE", "dm_spawn");
-    NWNX_Events_SubscribeEvent("NWNX_ON_DEBUG_RUN_SCRIPT_CHUNK_BEFORE", "dm_spawn");
+    //NWNX_Events_SubscribeEvent("NWNX_ON_DEBUG_RUN_SCRIPT_BEFORE", "dm_spawn");
+    //NWNX_Events_SubscribeEvent("NWNX_ON_DEBUG_RUN_SCRIPT_CHUNK_BEFORE", "dm_spawn");
 
     // Lighting 
     ReplaceLightWaypoints(); 
