@@ -432,10 +432,13 @@ void main() {
     NWNX_Events_SubscribeEvent("NWNX_ON_USE_SKILL_BEFORE", "global_skill");
     NWNX_Events_SubscribeEvent("NWNX_ON_COMBAT_MODE_ON", "global_cmode");
 
+    // DM Events
     NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_GOLD_AFTER", "global_dmgold");
     NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_XP_AFTER", "global_dmxp");
     NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_LEVEL_AFTER", "global_dmlevel");
     NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_ALIGNMENT_AFTER", "global_dmalignme");
+
+    NWNX_Events_SubscribeEvent("NWNX_ON_DM_SPAWN_OBJECT_BEFORE", "dm_spawn");
 
     // Lighting 
     ReplaceLightWaypoints(); 
