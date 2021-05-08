@@ -11,6 +11,13 @@
         "__struct_id": 6,
         "Area_Name": {
           "type": "resref",
+          "value": "a_goblincave"
+        }
+      },
+      {
+        "__struct_id": 6,
+        "Area_Name": {
+          "type": "resref",
           "value": "alchemist"
         }
       },
@@ -26,13 +33,6 @@
         "Area_Name": {
           "type": "resref",
           "value": "aufsee"
-        }
-      },
-      {
-        "__struct_id": 6,
-        "Area_Name": {
-          "type": "resref",
-          "value": "a_goblincave"
         }
       },
       {
@@ -61,20 +61,6 @@
         "Area_Name": {
           "type": "resref",
           "value": "festunginnen"
-        }
-      },
-      {
-        "__struct_id": 6,
-        "Area_Name": {
-          "type": "resref",
-          "value": "freihafen"
-        }
-      },
-      {
-        "__struct_id": 6,
-        "Area_Name": {
-          "type": "resref",
-          "value": "freihafen210410"
         }
       },
       {
@@ -243,13 +229,6 @@
         "Area_Name": {
           "type": "resref",
           "value": "westmarkneu"
-        }
-      },
-      {
-        "__struct_id": 6,
-        "Area_Name": {
-          "type": "resref",
-          "value": "westmark_alt"
         }
       },
       {
