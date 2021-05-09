@@ -239,55 +239,55 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Feuerfalle"
+                      "value": "Gewöhnliche Feuerfalle"
                     },
                     "RESREF": {
                       "type": "resref",
-                      "value": "sw_fa_feuerfalle"
+                      "value": "sw_fa_feuer_g"
                     }
                   },
                   {
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Göttliches Feuer"
+                      "value": "Professionelle Feuerfalle"
                     },
                     "RESREF": {
                       "type": "resref",
-                      "value": "sw_fa_goettlich"
+                      "value": "sw_fa_feuer_p"
                     }
                   },
                   {
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Stachelfalle"
+                      "value": "Schwache Feuerfalle"
                     },
                     "RESREF": {
                       "type": "resref",
-                      "value": "sw_fa_stachelfal"
+                      "value": "sw_fa_feuer_s"
                     }
                   },
                   {
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Stromfalle"
+                      "value": "Starke Feuerfalle"
                     },
                     "RESREF": {
                       "type": "resref",
-                      "value": "sw_fa_stromfalle"
+                      "value": "sw_fa_feuer_st"
                     }
                   },
                   {
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Verstrickungsfalle"
+                      "value": "Tödliche Feuerfalle"
                     },
                     "RESREF": {
                       "type": "resref",
-                      "value": "sw_fa_verstricku"
+                      "value": "sw_fa_feuer_t"
                     }
                   }
                 ]
