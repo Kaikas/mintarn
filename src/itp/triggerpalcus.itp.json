@@ -112,6 +112,703 @@
               "__struct_id": 0,
               "ID": {
                 "type": "byte",
+                "value": 19
+              },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Blitzfalle2"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_blit2"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Feuerfalle2"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_feue2"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Frostfalle2"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_fros2"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Heiligfalle2"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_heil2"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Klingenfalle2"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_klin2"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Negativfalle2"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_nega2"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Saurefalle2"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_saur2"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Schallfalle2"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_scha2"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Stachelfalle2"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_stac2"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Verstrickungsfalle3"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_vers2"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Wuchtfalle2"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_wuch2"
+                    }
+                  }
+                ]
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16777400
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 22
+              },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Blitzfalle5"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_blit5"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "CRAFT_Heiligfalle5"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_heil5"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Feuerfalle5"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_feue5"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Frostfalle5"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_fros5"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Klingenfalle5"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_klin5"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Negativfalle5"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_nega5"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Saurefalle5"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_saur5"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Schallfalle5"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_scha5"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Stachelfalle5"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_stac5"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Verstrickungsfalle1"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_vers5"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Wuchtfalle5"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_wuch5"
+                    }
+                  }
+                ]
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16777403
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 18
+              },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Blitzfalle1"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_blit1"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Feuerfalle1"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_feue1"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Frostfalle1"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_fros1"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Heiligfalle1"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_heil1"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Klingenfalle1"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_klin1"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Negativfalle1"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_nega1"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Säurefalle1"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_saur1"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Schallfalle1"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_scha1"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Stachelfalle1"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_stac1"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Verstrickungsfalle2"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_vers1"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Wuchtfalle1"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_wuch1"
+                    }
+                  }
+                ]
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16777399
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 20
+              },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Blitzfalle3"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_blit3"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Feuerfalle3"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_feue3"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Frostfalle3"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_fros3"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Heiligfalle3"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_heil3"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Klingenfalle3"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_klin3"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Negativfalle3"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_nega3"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Saurefalle3"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_saur3"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Schallfalle3"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_scha3"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Stachelfalle3"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_stac3"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Verstrickungsfalle4"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_vers3"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Wuchtfalle3"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_wuch3"
+                    }
+                  }
+                ]
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16777401
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 21
+              },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Blitzfalle4"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_blit4"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Feuerfalle4"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_feue4"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Frostfalle4"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_fros4"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Heiligfalle4"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_heil4"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Klingenfalle4"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_klin4"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Negativfalle4"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_nega4"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Saurefalle4"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_saur4"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Schallfalle4"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_scha4"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Stachelfalle4"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_stac4"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Verstrickungsfalle5"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_vers4"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Wuchtfalle4"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_tr_wuch4"
+                    }
+                  }
+                ]
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16777402
+              }
+            }
+          ]
+        },
+        "STRREF": {
+          "type": "dword",
+          "value": 16777398
+        }
+      },
+      {
+        "__struct_id": 0,
+        "LIST": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
                 "value": 11
               },
               "LIST": {
