@@ -7271,6 +7271,39 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
+                      "value": "Mintarner Groschen"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_we_groschen"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Mintarner Gulden"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_we_gulden"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Mintarner Mark"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_we_mark"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
                       "value": "Mond am Stil"
                     },
                     "RESREF": {
@@ -7683,39 +7716,6 @@
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_we_trompete"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Über Orks: Band I"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_we_uberork1"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Über Orks: Band II"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_we_uberork2"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Über Orks: Band III"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_we_uberork3"
                     }
                   },
                   {

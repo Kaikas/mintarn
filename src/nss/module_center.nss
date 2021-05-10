@@ -4,6 +4,7 @@
 #include "global_helper"
 #include "nwnx_webhook"
 #include "nwnx_feedback"
+#include "global_money"
 
 float quadratic(float x) {
     return (x/10000) * (x/10000);
@@ -350,6 +351,17 @@ void main() {
             }
         }
     }
+
+    // Money
+    if (!GetLocalInt(oPC, "COIN_DESTRUCTION_PREVENTION"))
+        {
+        MONEY_TurnCoinsIntoGP(oPc);
+        SetLocalInt(oPc, "COIN_DESTRUCTION_PREVENTION", TRUE);
+        DelayCommand(0.1, DeleteLocalInt(oPc, "COIN_DESTRUCTION_PREVENTION"));
+        }
+    }
+
+
 
     // Quests
     //ExecuteScript("quests_enter", OBJECT_SELF);
