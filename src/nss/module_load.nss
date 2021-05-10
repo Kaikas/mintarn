@@ -164,6 +164,7 @@ void main() {
         "name TEXT, " +
         "cdkey TEXT, " +
         "PRIMARY KEY (id))";
+    NWNX_SQL_ExecuteQuery(sQuery);
 
     // Create Users table if not exist
     sQuery = "CREATE TABLE IF NOT EXISTS Users (" +
