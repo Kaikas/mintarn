@@ -7172,6 +7172,17 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
+                      "value": "Goldmünze"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_we_gold"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
                       "value": "Harfe"
                     },
                     "RESREF": {
@@ -7232,6 +7243,17 @@
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_we_kugel"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Kupfermünze"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_we_kupfer"
                     }
                   },
                   {
@@ -7485,6 +7507,17 @@
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_we_seil"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Silbermünze"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_we_silber"
                     }
                   },
                   {

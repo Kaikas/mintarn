@@ -353,15 +353,12 @@ void main() {
     }
 
     // Money
-    if (!GetLocalInt(oPC, "COIN_DESTRUCTION_PREVENTION"))
-        {
+    if (!GetLocalInt(oPc, "COIN_DESTRUCTION_PREVENTION"))
+    {
         MONEY_TurnCoinsIntoGP(oPc);
         SetLocalInt(oPc, "COIN_DESTRUCTION_PREVENTION", TRUE);
         DelayCommand(0.1, DeleteLocalInt(oPc, "COIN_DESTRUCTION_PREVENTION"));
-        }
     }
-
-
 
     // Quests
     //ExecuteScript("quests_enter", OBJECT_SELF);

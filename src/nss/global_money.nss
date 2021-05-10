@@ -61,9 +61,9 @@
     const string MONEY_RESREF_CRYSTAL    = "coin_crystal";
     const string MONEY_RESREF_ETCHEDPLAT = "coin_etchedplat";
     const string MONEY_RESREF_PLATINUM   = "coin_platinum";
-    const string MONEY_RESREF_GOLD       = "sw_we_gulden";
-    const string MONEY_RESREF_SILVER     = "sw_we_mark";
-    const string MONEY_RESREF_COPPER     = "sw_we_groschen"; // This is the 1gp coin resref.
+    const string MONEY_RESREF_GOLD       = "sw_we_gold";
+    const string MONEY_RESREF_SILVER     = "sw_we_silber";
+    const string MONEY_RESREF_COPPER     = "sw_we_kupfer"; // This is the 1gp coin resref.
     // To have 1-1 conversion with a non-copper item, set up a custom coin blueprint,
     // put that blueprint resref in as the copper resref, and deactivate
     // the other coin types (it's a bit further up in this list of settings).
