@@ -441,6 +441,8 @@ void main() {
     NWNX_Events_SubscribeEvent("NWNX_ON_COMBAT_MODE_ON", "e_cmode");
 
     NWNX_Events_SubscribeEvent("NWNX_ON_PVP_ATTITUDE_CHANGE_BEFORE", "e_pvp");
+    NWNX_Events_SubscribeEvent("NWNX_ON_START_COMBAT_ROUND_BEFORE", "e_combatround");
+
 
     NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_GOLD_AFTER", "e_dmgold");
     NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_XP_AFTER", "e_dmxp");
