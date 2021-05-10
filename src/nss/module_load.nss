@@ -66,17 +66,17 @@ void main() {
     "<c0z0>Regeln</c>\n\n" +
     "- Beleidigungen und Doxing sind nicht erlaubt.\n" +
     "- Beziehungsrollenspiel romantischer Natur ist prinzipiell erlaubt, allerdings sind alle expliziten Handlungen und Erotik-Inhalte nicht erwuenscht und zu unterlassen.\n" +
-    "- Rassismus (OOC) wird nicht toleriert.\n" + 
-    "- Bei Charakternamen, die nicht dem Fantasy-Setting entsprechen, behalten wir uns das Loeschen des Charakters vor.\n" + 
+    "- Rassismus (OOC) wird nicht toleriert.\n" +
+    "- Bei Charakternamen, die nicht dem Fantasy-Setting entsprechen, behalten wir uns das Loeschen des Charakters vor.\n" +
     "- Der Missbrauch von Bugs oder Enginemechaniken ist verboten. Bitte meldet Bugs im entsprechenden Kanal in Discord oder verwendet /report.\n" +
-    "- PvP ist nur nach interaktivem Rollenspiel erlaubt. Es muss also nicht nur eine Rollenspielbegruendung fuer PvP geben, sondern es muss vorher ausfuehrlich eine Begruendung erspielt werden. Unter PvP fallen nicht nur Kampfaktionen, sondern auch andere Handlungen wie zum Beispiel Taschendiebstahl oder Fallen stellen. Vor Beginn des PvPs sollte jedem Beteiligten die Moeglichkeit gegeben werden der Situation zu entgehen.\n" + 
+    "- PvP ist nur nach interaktivem Rollenspiel erlaubt. Es muss also nicht nur eine Rollenspielbegruendung fuer PvP geben, sondern es muss vorher ausfuehrlich eine Begruendung erspielt werden. Unter PvP fallen nicht nur Kampfaktionen, sondern auch andere Handlungen wie zum Beispiel Taschendiebstahl oder Fallen stellen. Vor Beginn des PvPs sollte jedem Beteiligten die Moeglichkeit gegeben werden der Situation zu entgehen.\n" +
     "- Alle Spielcharaktere sollten volljaehrig sein. Dies entspricht bei Menschen einem Alter von 18 Jahren. Bei Orks 15, bei Elfen 40, etc.. Juengere Charaktere duerfen in Ausnahmefaellen und nur mit dem Einverstaendnis der Spielleitung gespielt wird.\n\n" +
-    "<c0z0>Etikette</c>\n\n" + 
+    "<c0z0>Etikette</c>\n\n" +
     "- OOC Informationen, also Informationen die euer Charakter nicht weiss, duerfen auch nicht im Rollenspiel verwendet werden (hierzu zaehlt auch Wissensaustausch zwischen euren eigenen Charakteren).\n" +
-    "- Jeder Spieler sollte sich auf einen Charakter pro Plot beschraenken, um Login-Hopping zu vermeiden, falls beide Charaktere gleichzeitig fuer den Spielbetrieb noetig sind.\n" + 
-    "- Es duerfen keine Dinge im RP erzwungen werden, auf die euer Gegenueber keinen Einfluss hat.\n" + 
-    "- Gewaltdarstellungen werden geduldet, sofern sie pietaetvoll und nicht exzessiv sind und keine anderen Spieler stoeren (!).\n" + 
-    "- OOC Texte beginnen mit // oder werden in (( )) Klammern geschrieben und sind nur geduldet, solange sie keine anderen Spieler stoeren.\n" + 
+    "- Jeder Spieler sollte sich auf einen Charakter pro Plot beschraenken, um Login-Hopping zu vermeiden, falls beide Charaktere gleichzeitig fuer den Spielbetrieb noetig sind.\n" +
+    "- Es duerfen keine Dinge im RP erzwungen werden, auf die euer Gegenueber keinen Einfluss hat.\n" +
+    "- Gewaltdarstellungen werden geduldet, sofern sie pietaetvoll und nicht exzessiv sind und keine anderen Spieler stoeren (!).\n" +
+    "- OOC Texte beginnen mit // oder werden in (( )) Klammern geschrieben und sind nur geduldet, solange sie keine anderen Spieler stoeren.\n" +
     "- Emotete Spielhandlungen sollten dem Gegenueber Freiraum zur Reaktion lassen. Die Aktion *klaut jemandem den Giftbeutel* nimmt dem Gegenueber die Entscheidungsfaehigkeit und grenzt aus. Stattdessen waere *versucht jemandem den Giftbeutel zu klauen* sympathischer, da dem Mitspieler die Moeglichkeit gegeben wird zu reagieren, indem er es geschehen laesst oder verhindert.\n";
 
 
@@ -86,8 +86,8 @@ void main() {
     // Team
     string sTeam = "<c0z0>Mintarn - Ein Modul zum mitmachen</c>\n\n" +
     "Mit Mintarn moechten wir euch einen Rollenspiel Server bieten, auf den ihr gerne kommt um RP Abende zu verbringen, euren Charakter auszuleben oder einfach Monster zu kloppen. " +
-    "Aber auch das so genannte world building mit dem Modulbau, dem erstellen von Gebieten, dem Skripten, dem Erfinden von Geschichten und Hintergruenden kann sehr viel Spass machen!\n\n" + 
-    "Hiermit moechten wir euch herzlich einladen euch zu beteiligen und euch in dieser Welt einzubringen. Anteil nehmen und mitarbeiten ist ausdruecklich erlaubt und erwuenscht!\n\n" + 
+    "Aber auch das so genannte world building mit dem Modulbau, dem erstellen von Gebieten, dem Skripten, dem Erfinden von Geschichten und Hintergruenden kann sehr viel Spass machen!\n\n" +
+    "Hiermit moechten wir euch herzlich einladen euch zu beteiligen und euch in dieser Welt einzubringen. Anteil nehmen und mitarbeiten ist ausdruecklich erlaubt und erwuenscht!\n\n" +
     "Bei Interesse meldet einfach im Discord an, dass ihr gerne mithelfen wollt und ihr bekommt eine entsprechende Rolle zugewiesen, mit der weitere Channels freigeschaltet werden.";
     CreateMeta("team", sTeam);
     oBoard = GetObjectByTag("SIGN_Team");
@@ -157,6 +157,13 @@ void main() {
     sNews0003 + "\n\n" +
     sNews0002 + "\n\n" +
     sNews0001);
+
+    // Create CD Key table
+    sQuery = "CREATE TABLE IF NOT EXISTS CDkey (" +
+        "id MEDIUMINT NOT NULL AUTO_INCREMENT, " +
+        "name TEXT, " +
+        "cdkey TEXT, " +
+        "PRIMARY KEY (id))";
 
     // Create Users table if not exist
     sQuery = "CREATE TABLE IF NOT EXISTS Users (" +
@@ -437,8 +444,8 @@ void main() {
     NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_LEVEL_AFTER", "global_dmlevel");
     NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_ALIGNMENT_AFTER", "global_dmalignme");
 
-    // Lighting 
-    ReplaceLightWaypoints(); 
+    // Lighting
+    ReplaceLightWaypoints();
     ToggleAllLightsWithTag("LIGHT_DAYTIME");
     ToggleAllLightsWithTag("LIGHT_NIGHTTIME");
     ToggleAllLightsWithTag("LIGHT_ALWAYS");
