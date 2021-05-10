@@ -348,8 +348,32 @@ void main() {
                     NWNX_SQL_PreparedString(3, "0");
                     NWNX_SQL_ExecutePreparedQuery();
                 }
+                // Create CDKey
+                sQuery = "INSERT INTO CDkey (name, cdkey) VALUES (?, ?)";
+                if (NWNX_SQL_PrepareQuery(sQuery)) {
+                    NWNX_SQL_PreparedString(0, sAccountName);
+                    NWNX_SQL_PreparedString(1, GetPCPublicCDKey(oPc));
+                    NWNX_SQL_ExecutePreparedQuery();
+                }
             }
         }
+    }
+
+    // Check if CDkey matches accountname
+    string sQuery = "SELECT * FROM CDkey WHERE name=? AND cdkey=?";
+    int iCDkeyFound = 0;
+    if (NWNX_SQL_PrepareQuery(sQuery)) {
+        NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
+        NWNX_SQL_PreparedString(1, GetPCPublicCDKey(oPc));
+        NWNX_SQL_ExecutePreparedQuery();
+        while (NWNX_SQL_ReadyToReadNextRow()) {
+            NWNX_SQL_ReadNextRow();
+            iCDkeyFound = 1;
+        }
+    }
+    if (iCDkeyFound == 0) {
+        string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_LOGS");
+        NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, GetPCPlayerName(oPc) + " und " + GetPCPublicCDKey(oPc) + " passen nicht zu den Datenbankwerten!", "Mintarn");
     }
 
     // Money
@@ -391,7 +415,7 @@ void main() {
     }
 
     // Schmied
-    string sQuery = "SELECT * FROM QuestStatus WHERE name=? AND charname=? AND quest=?";
+    sQuery = "SELECT * FROM QuestStatus WHERE name=? AND charname=? AND quest=?";
     int iStage = -1;
     if (NWNX_SQL_PrepareQuery(sQuery)) {
         NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
