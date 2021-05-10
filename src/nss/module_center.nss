@@ -4,6 +4,7 @@
 #include "global_helper"
 #include "nwnx_webhook"
 #include "nwnx_feedback"
+#include "global_money"
 
 float quadratic(float x) {
     return (x/10000) * (x/10000);
@@ -350,6 +351,11 @@ void main() {
             }
         }
     }
+
+    // Money
+    int nGold  = GetGold(oPc);
+    MONEY_GiveCoinMoneyWorth(nGold, oPc);
+    TakeGoldFromCreature(nGold, oPc, TRUE);
 
     // Quests
     //ExecuteScript("quests_enter", OBJECT_SELF);

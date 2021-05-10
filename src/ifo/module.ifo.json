@@ -67,13 +67,6 @@
         "__struct_id": 6,
         "Area_Name": {
           "type": "resref",
-          "value": "freihafen210417"
-        }
-      },
-      {
-        "__struct_id": 6,
-        "Area_Name": {
-          "type": "resref",
           "value": "friedhof002"
         }
       },
@@ -179,13 +172,6 @@
         "__struct_id": 6,
         "Area_Name": {
           "type": "resref",
-          "value": "tempel"
-        }
-      },
-      {
-        "__struct_id": 6,
-        "Area_Name": {
-          "type": "resref",
           "value": "trollhoehle"
         }
       },
@@ -243,6 +229,13 @@
         "Area_Name": {
           "type": "resref",
           "value": "zumrettendenufer"
+        }
+      },
+      {
+        "__struct_id": 6,
+        "Area_Name": {
+          "type": "resref",
+          "value": "freihafen"
         }
       }
     ]
