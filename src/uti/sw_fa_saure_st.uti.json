@@ -18,7 +18,7 @@
   },
   "Cost": {
     "type": "dword",
-    "value": 0
+    "value": 7
   },
   "Cursed": {
     "type": "byte",
@@ -30,24 +30,21 @@
   },
   "Description": {
     "type": "cexolocstring",
-    "value": {
-      "0": ""
-    }
+    "value": {}
   },
   "Identified": {
     "type": "byte",
-    "value": 1
+    "value": 0
   },
   "LocalizedName": {
-    "id": 13700,
     "type": "cexolocstring",
     "value": {
-      "0": "Stromfalle"
+      "0": "Starke Säurefalle"
     }
   },
   "ModelPart1": {
     "type": "byte",
-    "value": 3
+    "value": 1
   },
   "PaletteID": {
     "type": "byte",
@@ -72,7 +69,7 @@
         },
         "CostValue": {
           "type": "word",
-          "value": 6
+          "value": 1
         },
         "Param1": {
           "type": "byte",
@@ -90,37 +87,6 @@
           "type": "word",
           "value": 0
         }
-      },
-      {
-        "__struct_id": 0,
-        "ChanceAppear": {
-          "type": "byte",
-          "value": 100
-        },
-        "CostTable": {
-          "type": "byte",
-          "value": 21
-        },
-        "CostValue": {
-          "type": "word",
-          "value": 50
-        },
-        "Param1": {
-          "type": "byte",
-          "value": 255
-        },
-        "Param1Value": {
-          "type": "byte",
-          "value": 0
-        },
-        "PropertyName": {
-          "type": "word",
-          "value": 155
-        },
-        "Subtype": {
-          "type": "word",
-          "value": 0
-        }
       }
     ]
   },
@@ -130,14 +96,14 @@
   },
   "Stolen": {
     "type": "byte",
-    "value": 1
+    "value": 0
   },
   "Tag": {
     "type": "cexostring",
-    "value": "CRAFT_Stromfalle"
+    "value": "CRAFT_StarkeSaurefalle"
   },
   "TemplateResRef": {
     "type": "resref",
-    "value": "sw_fa_stromfalle"
+    "value": "sw_fa_saure_st"
   }
 }
