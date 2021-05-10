@@ -434,16 +434,18 @@ void main() {
     NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, "Das Modul wurde neu gestartet. (" + branch + ")", "Mintarn");
 
     // Events
-    NWNX_Events_SubscribeEvent("NWNX_ON_ELC_VALIDATE_CHARACTER_BEFORE", "global_elc");
-    NWNX_Events_SubscribeEvent("NWNX_ON_TRAP_SET_BEFORE", "global_settrap");
-    NWNX_Events_SubscribeEvent("NWNX_ON_TRAP_RECOVER_BEFORE", "global_rectrap");
-    NWNX_Events_SubscribeEvent("NWNX_ON_USE_SKILL_BEFORE", "global_skill");
-    NWNX_Events_SubscribeEvent("NWNX_ON_COMBAT_MODE_ON", "global_cmode");
+    NWNX_Events_SubscribeEvent("NWNX_ON_ELC_VALIDATE_CHARACTER_BEFORE", "e_elc");
+    NWNX_Events_SubscribeEvent("NWNX_ON_TRAP_SET_BEFORE", "e_settrap");
+    NWNX_Events_SubscribeEvent("NWNX_ON_TRAP_RECOVER_BEFORE", "e_rectrap");
+    NWNX_Events_SubscribeEvent("NWNX_ON_USE_SKILL_BEFORE", "e_skill");
+    NWNX_Events_SubscribeEvent("NWNX_ON_COMBAT_MODE_ON", "e_cmode");
 
-    NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_GOLD_AFTER", "global_dmgold");
-    NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_XP_AFTER", "global_dmxp");
-    NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_LEVEL_AFTER", "global_dmlevel");
-    NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_ALIGNMENT_AFTER", "global_dmalignme");
+    NWNX_Events_SubscribeEvent("NWNX_ON_PVP_ATTITUDE_CHANGE_BEFORE", "e_pvp");
+
+    NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_GOLD_AFTER", "e_dmgold");
+    NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_XP_AFTER", "e_dmxp");
+    NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_LEVEL_AFTER", "e_dmlevel");
+    NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_ALIGNMENT_AFTER", "e_dmalignme");
 
     // Lighting
     ReplaceLightWaypoints();
