@@ -16,7 +16,7 @@
 // https://neverwintervault.org/project/nwn1/script/coin-money-system
 
     // If this is TRUE, debug messages will show.
-    const int MONEY_DEBUG = TRUE;
+    const int MONEY_DEBUG = FALSE;
 
     // Tag of money container item.
     const string MONEY_CONTAINER_TAG = "coin_bag";
