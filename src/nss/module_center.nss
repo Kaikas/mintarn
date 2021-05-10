@@ -352,7 +352,7 @@ void main() {
                 sQuery = "INSERT INTO CDkey (name, cdkey) VALUES (?, ?)";
                 if (NWNX_SQL_PrepareQuery(sQuery)) {
                     NWNX_SQL_PreparedString(0, sAccountName);
-                    NWNX_SQL_PreparedString(2, GetPCPublicCDKey(oPc));
+                    NWNX_SQL_PreparedString(1, GetPCPublicCDKey(oPc));
                     NWNX_SQL_ExecutePreparedQuery();
                 }
             }
