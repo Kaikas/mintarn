@@ -353,12 +353,9 @@ void main() {
     }
 
     // Money
-    if (!GetLocalInt(oPc, "COIN_DESTRUCTION_PREVENTION"))
-    {
-        MONEY_TurnCoinsIntoGP(oPc);
-        SetLocalInt(oPc, "COIN_DESTRUCTION_PREVENTION", TRUE);
-        DelayCommand(0.1, DeleteLocalInt(oPc, "COIN_DESTRUCTION_PREVENTION"));
-    }
+    int nGold  = GetGold(oPc);
+    MONEY_GiveCoinMoneyWorth(nGold, oPc);
+    TakeGoldFromCreature(nGold, oPc, TRUE);
 
     // Quests
     //ExecuteScript("quests_enter", OBJECT_SELF);
