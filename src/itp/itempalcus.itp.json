@@ -239,28 +239,6 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Gew?hnliche Verstrickungsfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_vers2"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Gew?hnliche Wuchtfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_wuch2"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Gewöhnliche Blitzfalle"
                     },
                     "RESREF": {
@@ -360,6 +338,28 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
+                      "value": "Gewöhnliche Verstrickungsfalle"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_fa_vers2"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Gewöhnliche Wuchtfalle"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_fa_wuch2"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
                       "value": "Professionelle Blitzfalle"
                     },
                     "RESREF": {
@@ -426,7 +426,7 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Professionelle S?urefalle"
+                      "value": "Professionelle Säurefalle"
                     },
                     "RESREF": {
                       "type": "resref",
@@ -547,7 +547,7 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Schwache S?urefalle"
+                      "value": "Schwache Säurefalle"
                     },
                     "RESREF": {
                       "type": "resref",
@@ -668,7 +668,7 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Starke S?urefalle"
+                      "value": "Starke Säurefalle"
                     },
                     "RESREF": {
                       "type": "resref",
@@ -723,7 +723,7 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "T?dliche Blitzfalle"
+                      "value": "Tödliche Blitzfalle"
                     },
                     "RESREF": {
                       "type": "resref",
@@ -734,7 +734,7 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "T?dliche Feuerfalle"
+                      "value": "Tödliche Feuerfalle"
                     },
                     "RESREF": {
                       "type": "resref",
@@ -745,7 +745,7 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "T?dliche Frostfalle"
+                      "value": "Tödliche Frostfalle"
                     },
                     "RESREF": {
                       "type": "resref",
@@ -756,7 +756,7 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "T?dliche heilige Falle"
+                      "value": "Tödliche heilige Falle"
                     },
                     "RESREF": {
                       "type": "resref",
@@ -767,7 +767,7 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "T?dliche Klingenfalle"
+                      "value": "Tödliche Klingenfalle"
                     },
                     "RESREF": {
                       "type": "resref",
@@ -778,7 +778,7 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "T?dliche negative Falle"
+                      "value": "Tödliche negative Falle"
                     },
                     "RESREF": {
                       "type": "resref",
@@ -789,7 +789,7 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "T?dliche S?urefalle"
+                      "value": "Tödliche Säurefalle"
                     },
                     "RESREF": {
                       "type": "resref",
@@ -800,7 +800,7 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "T?dliche Schallfalle"
+                      "value": "Tödliche Schallfalle"
                     },
                     "RESREF": {
                       "type": "resref",
@@ -811,7 +811,7 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "T?dliche Stachelfalle"
+                      "value": "Tödliche Stachelfalle"
                     },
                     "RESREF": {
                       "type": "resref",
@@ -822,7 +822,7 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "T?dliche Verstrickungsfalle"
+                      "value": "Tödliche Verstrickungsfalle"
                     },
                     "RESREF": {
                       "type": "resref",
@@ -833,7 +833,7 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "T?dliche Wuchtfalle"
+                      "value": "Tödliche Wuchtfalle"
                     },
                     "RESREF": {
                       "type": "resref",
