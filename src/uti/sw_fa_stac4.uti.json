@@ -42,12 +42,12 @@
     "id": 13700,
     "type": "cexolocstring",
     "value": {
-      "0": "Stachelfalle"
+      "0": "Tödliche Stachelfalle"
     }
   },
   "ModelPart1": {
     "type": "byte",
-    "value": 1
+    "value": 4
   },
   "PaletteID": {
     "type": "byte",
@@ -72,7 +72,7 @@
         },
         "CostValue": {
           "type": "word",
-          "value": 1
+          "value": 5
         },
         "Param1": {
           "type": "byte",
@@ -134,10 +134,10 @@
   },
   "Tag": {
     "type": "cexostring",
-    "value": "CRAFT_Stachelfalle"
+    "value": "CRAFT_Stachelfalle4"
   },
   "TemplateResRef": {
     "type": "resref",
-    "value": "sw_fa_stachelfal"
+    "value": "sw_fa_stac4"
   }
 }

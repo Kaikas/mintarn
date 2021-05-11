@@ -42,7 +42,7 @@
     "id": 13700,
     "type": "cexolocstring",
     "value": {
-      "0": "Feuerfalle"
+      "0": "Professionelle Klingenfalle"
     }
   },
   "ModelPart1": {
@@ -134,10 +134,10 @@
   },
   "Tag": {
     "type": "cexostring",
-    "value": "CRAFT_Feuerfalle"
+    "value": "CRAFT_Klingenfalle5"
   },
   "TemplateResRef": {
     "type": "resref",
-    "value": "sw_fa_feuerfalle"
+    "value": "sw_fa_klin5"
   }
 }
