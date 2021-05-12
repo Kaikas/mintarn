@@ -70,10 +70,10 @@ void main() {
     // d20 for skillcheck
     int iRoll = d20();
     // If Ranger, Rogue or Assassin and not in combat take 20
-    if (GetLevelByClass(CLASS_TYPE_ROGUE, oPc) + 
+    if ((GetLevelByClass(CLASS_TYPE_ROGUE, oPc) + 
         GetLevelByClass(CLASS_TYPE_ASSASSIN, oPc) +
         GetLevelByClass(CLASS_TYPE_RANGER, oPc) > 0 &&
-        !GetIsInCombat(oPc)) {
+        !GetIsInCombat(oPc)) || GetHasFeat(SW_FEAT_SKILL_MASTERY, oPc)) {
       iRoll = 20;
     }
     // Add modifiers
