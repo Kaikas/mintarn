@@ -77,7 +77,7 @@ void main() {
       iRoll = 20;
     }
     // Add modifiers
-    int iSkillCheck = iRoll + GetSkillRank(SW_SKILL_SET_TRAP, oPc);
+    int iSkillCheck = iRoll + GetHitDice(oPc);
     // Synergy with disable trap
     if (GetSkillRank(SW_SKILL_DISABLE_TRAP, oPc) > 4)
       iSkillCheck = iSkillCheck + 2;
