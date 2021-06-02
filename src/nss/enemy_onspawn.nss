@@ -40,7 +40,7 @@ void main() {
             CreateItemOnObject("sw_qu_goblintali", OBJECT_SELF, 1);
         }
         if (Random(4) == 0) {
-            CreateItemOnObject("NW_IT_GOLD001", OBJECT_SELF, Random(20));
+            CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
         }
         if (Random(100) == 0) {
             CreateItemOnObject("sw_we_zerfruestu", OBJECT_SELF, 1);
@@ -62,7 +62,7 @@ void main() {
         }
         iTreasure = Random(6);
         if (iTreasure == 0) {
-            CreateItemOnObject("NW_IT_GOLD001", OBJECT_SELF, Random(20));
+            CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
         }
     }
 
@@ -78,7 +78,7 @@ void main() {
         }
         iTreasure = Random(6);
         if (iTreasure == 0) {
-            CreateItemOnObject("NW_IT_GOLD001", OBJECT_SELF, Random(20));
+            CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
         }
         iTreasure = Random(100);
         if (iTreasure == 0) {
@@ -102,7 +102,7 @@ void main() {
         }
         iTreasure = Random(6);
         if (iTreasure == 0) {
-            CreateItemOnObject("NW_IT_GOLD001", OBJECT_SELF, Random(20));
+            CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
         }
         iTreasure = Random(100);
         if (iTreasure == 0) {
@@ -134,7 +134,7 @@ void main() {
         }
         iTreasure = Random(6);
         if (iTreasure == 0) {
-            CreateItemOnObject("NW_IT_GOLD001", OBJECT_SELF, Random(20));
+            CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
         }
         iTreasure = Random(100);
         if (iTreasure == 0) {
@@ -158,7 +158,7 @@ void main() {
         }
         iTreasure = Random(6);
         if (iTreasure == 0) {
-            CreateItemOnObject("NW_IT_GOLD001", OBJECT_SELF, Random(20));
+            CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
         }
         iTreasure = Random(100);
         if (iTreasure == 0) {
@@ -182,7 +182,7 @@ void main() {
         }
         iTreasure = Random(6);
         if (iTreasure == 0) {
-            CreateItemOnObject("NW_IT_GOLD001", OBJECT_SELF, Random(20));
+            CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
         }
         iTreasure = Random(100);
         if (iTreasure == 0) {
@@ -206,7 +206,7 @@ void main() {
         }
         iTreasure = Random(6);
         if (iTreasure == 0) {
-            CreateItemOnObject("NW_IT_GOLD001", OBJECT_SELF, Random(20));
+            CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
         }
     }
 
@@ -222,7 +222,7 @@ void main() {
         }
         iTreasure = Random(6);
         if (iTreasure == 0) {
-            CreateItemOnObject("NW_IT_GOLD001", OBJECT_SELF, Random(20));
+            CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
         }
     }
 
@@ -257,7 +257,7 @@ void main() {
         }
         iTreasure = Random(6);
         if (iTreasure == 0) {
-            CreateItemOnObject("NW_IT_GOLD001", OBJECT_SELF, Random(20));
+            CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
         }
         iTreasure = Random(100);
         if (iTreasure == 0) {
@@ -289,7 +289,7 @@ void main() {
         }
         iTreasure = Random(6);
         if (iTreasure == 0) {
-            CreateItemOnObject("NW_IT_GOLD001", OBJECT_SELF, Random(20));
+            CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
         }
         iTreasure = Random(100);
         if (iTreasure == 0) {
@@ -316,7 +316,7 @@ void main() {
         }
         iTreasure = Random(6);
         if (iTreasure == 0) {
-            CreateItemOnObject("NW_IT_GOLD001", OBJECT_SELF, Random(20));
+            CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
         }
         iTreasure = Random(6);
         if (iTreasure == 0) {
@@ -369,7 +369,7 @@ void main() {
 
     // Kriegsmeister (Goblins)
     if (GetTag(OBJECT_SELF) == "ENEMY_Kriegsmeister") {
-        CreateItemOnObject("NW_IT_GOLD001", OBJECT_SELF, 50 + Random(50));
+        CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, 50 + Random(50));
         iTreasure = Random(5);
         if (iTreasure == 0) {
             CreateItemOnObject("sw_re_guertelele", OBJECT_SELF, 1);
