@@ -1,0 +1,163 @@
+{
+  "__data_type": "UTI ",
+  "AddCost": {
+    "type": "dword",
+    "value": 0
+  },
+  "BaseItem": {
+    "type": "int",
+    "value": 64
+  },
+  "Charges": {
+    "type": "byte",
+    "value": 0
+  },
+  "Comment": {
+    "type": "cexostring",
+    "value": ""
+  },
+  "Cost": {
+    "type": "dword",
+    "value": 7
+  },
+  "Cursed": {
+    "type": "byte",
+    "value": 0
+  },
+  "DescIdentified": {
+    "type": "cexolocstring",
+    "value": {}
+  },
+  "Description": {
+    "type": "cexolocstring",
+    "value": {}
+  },
+  "Identified": {
+    "type": "byte",
+    "value": 0
+  },
+  "LocalizedName": {
+    "type": "cexolocstring",
+    "value": {
+<<<<<<< HEAD:src/uti/sw_fa_blit2.uti.json
+      "0": "Gewöhnliche Blitzfalle"
+=======
+      "0": "Starke elektrische Falle"
+>>>>>>> master:src/uti/sw_fa_elek_st.uti.json
+    }
+  },
+  "ModelPart1": {
+    "type": "byte",
+<<<<<<< HEAD:src/uti/sw_fa_blit2.uti.json
+    "value": 4
+=======
+    "value": 1
+>>>>>>> master:src/uti/sw_fa_elek_st.uti.json
+  },
+  "PaletteID": {
+    "type": "byte",
+    "value": 184
+  },
+  "Plot": {
+    "type": "byte",
+    "value": 0
+  },
+  "PropertiesList": {
+    "type": "list",
+    "value": [
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 21
+        },
+        "CostValue": {
+          "type": "word",
+<<<<<<< HEAD:src/uti/sw_fa_blit2.uti.json
+          "value": 50
+=======
+          "value": 1
+>>>>>>> master:src/uti/sw_fa_elek_st.uti.json
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 255
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 155
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 0
+        }
+<<<<<<< HEAD:src/uti/sw_fa_blit2.uti.json
+      },
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 17
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 5
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 255
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 70
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 0
+        }
+=======
+>>>>>>> master:src/uti/sw_fa_elek_st.uti.json
+      }
+    ]
+  },
+  "StackSize": {
+    "type": "word",
+    "value": 1
+  },
+  "Stolen": {
+    "type": "byte",
+    "value": 0
+  },
+  "Tag": {
+    "type": "cexostring",
+<<<<<<< HEAD:src/uti/sw_fa_blit2.uti.json
+    "value": "CRAFT_Blitzfalle2"
+  },
+  "TemplateResRef": {
+    "type": "resref",
+    "value": "sw_fa_blit2"
+=======
+    "value": "CRAFT_StarkeElektrischeFalle"
+  },
+  "TemplateResRef": {
+    "type": "resref",
+    "value": "sw_fa_elek_st"
+>>>>>>> master:src/uti/sw_fa_elek_st.uti.json
+  }
+}

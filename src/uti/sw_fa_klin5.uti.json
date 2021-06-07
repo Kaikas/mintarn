@@ -18,7 +18,7 @@
   },
   "Cost": {
     "type": "dword",
-    "value": 7
+    "value": 0
   },
   "Cursed": {
     "type": "byte",
@@ -30,21 +30,24 @@
   },
   "Description": {
     "type": "cexolocstring",
-    "value": {}
+    "value": {
+      "0": ""
+    }
   },
   "Identified": {
     "type": "byte",
-    "value": 0
+    "value": 1
   },
   "LocalizedName": {
+    "id": 13700,
     "type": "cexolocstring",
     "value": {
-      "0": "Professionelle elektrische Falle"
+      "0": "Professionelle Klingenfalle"
     }
   },
   "ModelPart1": {
     "type": "byte",
-    "value": 1
+    "value": 4
   },
   "PaletteID": {
     "type": "byte",
@@ -69,7 +72,7 @@
         },
         "CostValue": {
           "type": "word",
-          "value": 1
+          "value": 5
         },
         "Param1": {
           "type": "byte",
@@ -87,6 +90,37 @@
           "type": "word",
           "value": 0
         }
+      },
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 21
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 50
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 255
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 0
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 155
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 0
+        }
       }
     ]
   },
@@ -96,14 +130,14 @@
   },
   "Stolen": {
     "type": "byte",
-    "value": 0
+    "value": 1
   },
   "Tag": {
     "type": "cexostring",
-    "value": "CRAFT_ProfessionElektrischeFalle"
+    "value": "CRAFT_Klingenfalle5"
   },
   "TemplateResRef": {
     "type": "resref",
-    "value": "sw_fa_elek_p"
+    "value": "sw_fa_klin5"
   }
 }

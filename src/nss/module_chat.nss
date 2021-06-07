@@ -200,12 +200,14 @@ void main() {
             string sBanPlayer = GetSubString(sMessage, 5, 1000);
             NWNX_Administration_AddBannedCDKey(sBanPlayer);
             SendMessageToPC(oPc, sBanPlayer + " banned!");
+            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", NWNX_Util_GetEnvironmentVariable("WEBHOOK_LOGS"), GetPCPlayerName(oPc) + " hat " + sBanPlayer + " gebannt!" , "Mintarn");
         // unban player
         } else if (sUnban == "/unban" && GetIsDM(oPc)) {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             string sBanPlayer = GetSubString(sMessage, 7, 1000);
             NWNX_Administration_RemoveBannedCDKey(sBanPlayer);
             SendMessageToPC(oPc, sBanPlayer + " unbanned!");
+            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", NWNX_Util_GetEnvironmentVariable("WEBHOOK_LOGS"), GetPCPlayerName(oPc) + " hat " + sBanPlayer + " entbannt!" , "Mintarn");
         // List cdkeys
         } else if (sMessage == "/cdkeys" && GetIsDM(oPc)) {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
@@ -1050,6 +1052,10 @@ void main() {
                     int iRace = GetRacialType(oPc);
                     ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(EffectVisualEffect(9515), "eff_backpack"), oPc);
                 }
+            // PvP
+            } else if (sMessage == "/pvp") {
+                SetLocalInt(oPc, "pvp", 1);
+                SendMessageToPC(oPc, "Ihr hab PvP (Spieler gegen Spieler) aktiviert und könnt nun angegriffen werden!");
             // Masks
             } else if (GetSubString(sMessage, 0, 6) == "/maske") {
                 int iMask = StringToInt(GetSubString(sMessage, 7, 2));
