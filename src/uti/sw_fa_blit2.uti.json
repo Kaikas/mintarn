@@ -18,7 +18,7 @@
   },
   "Cost": {
     "type": "dword",
-    "value": 0
+    "value": 7
   },
   "Cursed": {
     "type": "byte",
@@ -30,24 +30,29 @@
   },
   "Description": {
     "type": "cexolocstring",
-    "value": {
-      "0": ""
-    }
+    "value": {}
   },
   "Identified": {
     "type": "byte",
-    "value": 1
+    "value": 0
   },
   "LocalizedName": {
-    "id": 13700,
     "type": "cexolocstring",
     "value": {
+<<<<<<< HEAD:src/uti/sw_fa_blit2.uti.json
       "0": "Gewöhnliche Blitzfalle"
+=======
+      "0": "Starke elektrische Falle"
+>>>>>>> master:src/uti/sw_fa_elek_st.uti.json
     }
   },
   "ModelPart1": {
     "type": "byte",
+<<<<<<< HEAD:src/uti/sw_fa_blit2.uti.json
     "value": 4
+=======
+    "value": 1
+>>>>>>> master:src/uti/sw_fa_elek_st.uti.json
   },
   "PaletteID": {
     "type": "byte",
@@ -72,7 +77,11 @@
         },
         "CostValue": {
           "type": "word",
+<<<<<<< HEAD:src/uti/sw_fa_blit2.uti.json
           "value": 50
+=======
+          "value": 1
+>>>>>>> master:src/uti/sw_fa_elek_st.uti.json
         },
         "Param1": {
           "type": "byte",
@@ -90,6 +99,7 @@
           "type": "word",
           "value": 0
         }
+<<<<<<< HEAD:src/uti/sw_fa_blit2.uti.json
       },
       {
         "__struct_id": 0,
@@ -121,6 +131,8 @@
           "type": "word",
           "value": 0
         }
+=======
+>>>>>>> master:src/uti/sw_fa_elek_st.uti.json
       }
     ]
   },
@@ -130,14 +142,22 @@
   },
   "Stolen": {
     "type": "byte",
-    "value": 1
+    "value": 0
   },
   "Tag": {
     "type": "cexostring",
+<<<<<<< HEAD:src/uti/sw_fa_blit2.uti.json
     "value": "CRAFT_Blitzfalle2"
   },
   "TemplateResRef": {
     "type": "resref",
     "value": "sw_fa_blit2"
+=======
+    "value": "CRAFT_StarkeElektrischeFalle"
+  },
+  "TemplateResRef": {
+    "type": "resref",
+    "value": "sw_fa_elek_st"
+>>>>>>> master:src/uti/sw_fa_elek_st.uti.json
   }
 }

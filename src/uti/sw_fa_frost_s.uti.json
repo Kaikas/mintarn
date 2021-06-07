@@ -39,11 +39,7 @@
   "LocalizedName": {
     "type": "cexolocstring",
     "value": {
-<<<<<<< HEAD:src/uti/sw_fa_blit3.uti.json
-      "0": "Starke Blitzfalle"
-=======
-      "0": "Professionelle elektrische Falle"
->>>>>>> master:src/uti/sw_fa_elek_p.uti.json
+      "0": "Schwache Frostfalle"
     }
   },
   "ModelPart1": {
@@ -104,18 +100,10 @@
   },
   "Tag": {
     "type": "cexostring",
-<<<<<<< HEAD:src/uti/sw_fa_blit3.uti.json
-    "value": "CRAFT_Blitzfalle3"
+    "value": "CRAFT_SchwacheFrostfalle"
   },
   "TemplateResRef": {
     "type": "resref",
-    "value": "sw_fa_blit3"
-=======
-    "value": "CRAFT_ProfessionElektrischeFalle"
-  },
-  "TemplateResRef": {
-    "type": "resref",
-    "value": "sw_fa_elek_p"
->>>>>>> master:src/uti/sw_fa_elek_p.uti.json
+    "value": "sw_fa_frost_s"
   }
 }
