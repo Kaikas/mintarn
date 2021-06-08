@@ -39,20 +39,12 @@
   "LocalizedName": {
     "type": "cexolocstring",
     "value": {
-<<<<<<< HEAD:src/uti/sw_fa_feue3.uti.json
-      "0": "Starke Feuerfalle"
-=======
       "0": "Schwache elektrische Falle"
->>>>>>> master:src/uti/sw_fa_elek_s.uti.json
     }
   },
   "ModelPart1": {
     "type": "byte",
-<<<<<<< HEAD:src/uti/sw_fa_feue3.uti.json
-    "value": 4
-=======
     "value": 1
->>>>>>> master:src/uti/sw_fa_elek_s.uti.json
   },
   "PaletteID": {
     "type": "byte",
@@ -77,11 +69,7 @@
         },
         "CostValue": {
           "type": "word",
-<<<<<<< HEAD:src/uti/sw_fa_feue3.uti.json
           "value": 5
-=======
-          "value": 1
->>>>>>> master:src/uti/sw_fa_elek_s.uti.json
         },
         "Param1": {
           "type": "byte",
@@ -112,18 +100,10 @@
   },
   "Tag": {
     "type": "cexostring",
-<<<<<<< HEAD:src/uti/sw_fa_feue3.uti.json
     "value": "CRAFT_Feuerfalle3"
   },
   "TemplateResRef": {
     "type": "resref",
     "value": "sw_fa_feue3"
-=======
-    "value": "CRAFT_SchwacheElektrischeFalle"
-  },
-  "TemplateResRef": {
-    "type": "resref",
-    "value": "sw_fa_elek_s"
->>>>>>> master:src/uti/sw_fa_elek_s.uti.json
   }
 }
