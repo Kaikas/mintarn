@@ -24,7 +24,7 @@ jobs:
 
       # Runs nasher to pack the module
       - name: Run nasher pack to build Mintarn.mod
-        run: docker run --rm -v ${PWD}:/nasher nwntools/nasher:latest pack
+        run: docker run --rm -v ${PWD}:/nasher kaikas/nasher:nwn_develop pack
 
       # Copy module to correct folder
       - name: Copy module to server
