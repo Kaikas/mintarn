@@ -32,4 +32,4 @@ jobs:
         
       # Restart nwn server
       - name: Restart the dev server
-        run: docker-compse -f ~/nwn_dev/docker-compose.yml restart
+        run: docker-compose -f ~/nwn_dev/docker-compose.yml restart
