@@ -34,4 +34,4 @@ jobs:
           
       # Runs nasher to pack the module
       - name: Run nasher pack to build Mintarn.mod
-        run: nasher pack --default
+        run: docker run --rm -it -v ${PWD}:/nasher nwntools/nasher:latest pack
