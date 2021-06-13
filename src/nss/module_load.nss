@@ -85,8 +85,8 @@ void main() {
     // Team
     string sTeam = "<c0z0>Mintarn - Ein Modul zum mitmachen</c>\n\n" +
     "Mit Mintarn möchten wir euch einen Rollenspiel Server bieten, auf den ihr gerne kommt um RP Abende zu verbringen, euren Charakter auszuleben oder einfach Monster zu kloppen. " +
-    "Aber auch das so genannte World Building mit dem Modulbau, dem Erstellen von Gebieten, dem Skripten, dem Erfinden von Geschichten und Hintergruenden kann sehr viel Spass machen!\n\n" +
-    "Hiermit moechten wir euch herzlich einladen euch zu beteiligen und euch in dieser Welt einzubringen. Anteil nehmen und mitarbeiten ist ausdruecklich erlaubt und erwuenscht!\n\n" +
+    "Aber auch das so genannte World Building mit dem Modulbau, dem Erstellen von Gebieten, dem Skripten, dem Erfinden von Geschichten und Hintergründen kann sehr viel Spass machen!\n\n" +
+    "Hiermit möchten wir euch herzlich einladen euch zu beteiligen und euch in dieser Welt einzubringen. Anteil nehmen und mitarbeiten ist ausdrücklich erlaubt und erwünscht!\n\n" +
     "Bei Interesse meldet einfach im Discord an, dass ihr gerne mithelfen wollt und ihr bekommt eine entsprechende Rolle zugewiesen, mit der weitere Channels freigeschaltet werden.";
     CreateMeta("team", sTeam);
     oBoard = GetObjectByTag("SIGN_Team");
