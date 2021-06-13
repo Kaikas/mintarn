@@ -26,7 +26,8 @@ jobs:
       
       # Convert files to ANSI
       - name: Convert files to ANSI
-        run: find . -exec scripts/sw_recode.sh {} \; #recode UTF8..windows-1252 src/nss/module_load.nss 
+        run: chmod +x scripts/sw_records.sh && \
+          find . -exec scripts/sw_recode.sh {} \; 
 
       # Runs nasher to pack the module
       - name: Run nasher pack to build Mintarn.mod
