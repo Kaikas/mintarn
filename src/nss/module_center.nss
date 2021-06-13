@@ -1,6 +1,5 @@
 #include "nwnx_sql"
 #include "nwnx_time"
-#include "dmfi_init_inc"
 #include "global_helper"
 #include "nwnx_webhook"
 #include "nwnx_feedback"
@@ -192,7 +191,6 @@ void main() {
         CreateItemOnObject("sw_we_sprichals4", oPc);
         CreateItemOnObject("sw_we_sprichals5", oPc);
         CreateItemOnObject("sw_we_fraktion", oPc);
-        CreateItemOnObject("dmfi_dmw", oPc);
         CreateItemOnObject("sw_we_rasten", oPc);
     }
 

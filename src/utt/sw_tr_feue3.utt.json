@@ -1,8 +1,4 @@
 {
-  "4": {
-    "type": "cexostring",
-    "value": "CRAFT_Feuerfalle3"
-  },
   "__data_type": "UTT ",
   "AutoRemoveKey": {
     "type": "byte",
@@ -84,6 +80,10 @@
   },
   "ScriptUserDefine": {
     "type": "resref",
+    "value": ""
+  },
+  "Tag": {
+    "type": "cexostring",
     "value": ""
   },
   "TemplateResRef": {
