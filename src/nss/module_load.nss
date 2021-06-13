@@ -52,8 +52,8 @@ void main() {
         "PRIMARY KEY (id))";
     NWNX_SQL_ExecuteQuery(sQuery);
     // Willkommen
-    string sWillkommen = "blaüäöWillkommen auf dem Neverwinter Nights Server Mintarn!\n\n" +
-    "Wir sind ein deutscher Neverwinter Nights: Enhanced Edition Server mit Fokus auf Rollenspiel in einer detailreichen Spielwelt. Gemeinsam erwecken wir das unabhaengige Inselkoenigreich Mintarn im Westen Faeruns zum Leben!\n\n" +
+    string sWillkommen = "Willkommen auf dem Neverwinter Nights Server Mintarn!\n\n" +
+    "Wir sind ein deutscher Neverwinter Nights: Enhanced Edition Server mit Fokus auf Rollenspiel in einer detailreichen Spielwelt. Gemeinsam erwecken wir das unabhängige Inselkönigreich Mintarn im Westen Faerûns zum Leben!\n\n" +
     "Alle weiteren Informationen findet ihr auf unserer Homepage und in unserem Wiki auf http://mintarn.de.";
     sWillkommen = ColorStrings(sWillkommen, "*", "*", STRING_COLOR_ROSE);
     sWillkommen = ColorStrings(sWillkommen, "((", "))", "333");
@@ -62,22 +62,21 @@ void main() {
     SetDescription(oBoard, sWillkommen);
     // Regeln
     string sRegeln = "<c0z0>Regeln und Etikette</c>\n\n" +
-    "Um ein angenehmes Miteinander zu ermoeglichen, gibt es auf Mintarn Regeln und Etikette. Die Regeln sind unbedingt zu befolgen. Die Etikette bezieht sich auf das Rollenspiel und ist nicht verbindlich, aber dringend erwuenscht zum harmonischen Miteinander. Zusaetzlich gilt der gesunde Menschenverstand.\n\n" +
+    "Um ein angenehmes Miteinander zu ermöglichen, gibt es auf Mintarn Regeln und Etikette. Die Regeln sind unbedingt zu befolgen. Die Etikette bezieht sich auf das Rollenspiel und ist nicht verbindlich, aber dringend erwünscht zum harmonischen Miteinander. Zusätzlich gilt der gesunde Menschenverstand.\n\n" +
     "<c0z0>Regeln</c>\n\n" +
     "- Beleidigungen und Doxing sind nicht erlaubt.\n" +
-    "- Beziehungsrollenspiel romantischer Natur ist prinzipiell erlaubt, allerdings sind alle expliziten Handlungen und Erotik-Inhalte nicht erwuenscht und zu unterlassen.\n" +
+    "- Beziehungsrollenspiel romantischer Natur ist prinzipiell erlaubt, allerdings sind alle expliziten Handlungen und Erotik-Inhalte nicht erwünscht und zu unterlassen.\n" +
     "- Rassismus (OOC) wird nicht toleriert.\n" +
-    "- Bei Charakternamen, die nicht dem Fantasy-Setting entsprechen, behalten wir uns das Loeschen des Charakters vor.\n" +
+    "- Bei Charakternamen, die nicht dem Fantasy-Setting entsprechen, behalten wir uns das Löschen des Charakters vor.\n" +
     "- Der Missbrauch von Bugs oder Enginemechaniken ist verboten. Bitte meldet Bugs im entsprechenden Kanal in Discord oder verwendet /report.\n" +
-    "- PvP ist nur nach interaktivem Rollenspiel erlaubt. Es muss also nicht nur eine Rollenspielbegruendung fuer PvP geben, sondern es muss vorher ausfuehrlich eine Begruendung erspielt werden. Unter PvP fallen nicht nur Kampfaktionen, sondern auch andere Handlungen wie zum Beispiel Taschendiebstahl oder Fallen stellen. Vor Beginn des PvPs sollte jedem Beteiligten die Moeglichkeit gegeben werden der Situation zu entgehen.\n" +
-    "- Alle Spielcharaktere sollten volljaehrig sein. Dies entspricht bei Menschen einem Alter von 18 Jahren. Bei Orks 15, bei Elfen 40, etc.. Juengere Charaktere duerfen in Ausnahmefaellen und nur mit dem Einverstaendnis der Spielleitung gespielt wird.\n\n" +
+    "- PvP ist nur nach interaktivem Rollenspiel erlaubt. Es muss also nicht nur eine Rollenspielbegründung fuer PvP geben, sondern es muss vorher ausführlich eine Begründung erspielt werden. Unter PvP fallen nicht nur Kampfaktionen, sondern auch andere Handlungen wie zum Beispiel Taschendiebstahl oder Fallen stellen. Vor Beginn des PvPs sollte jedem Beteiligten die Möglichkeit gegeben werden der Situation zu entgehen.\n" +
+    "- Alle Spielcharaktere sollten volljährig sein. Dies entspricht bei Menschen einem Alter von 18 Jahren. Bei Orks 15, bei Elfen 40, etc.. Jüngere Charaktere dürfen in Ausnahmefällen und nur mit dem Einverstaendnis der Spielleitung gespielt wird.\n\n" +
     "<c0z0>Etikette</c>\n\n" +
-    "- OOC Informationen, also Informationen die euer Charakter nicht weiss, duerfen auch nicht im Rollenspiel verwendet werden (hierzu zaehlt auch Wissensaustausch zwischen euren eigenen Charakteren).\n" +
-    "- Jeder Spieler sollte sich auf einen Charakter pro Plot beschraenken, um Login-Hopping zu vermeiden, falls beide Charaktere gleichzeitig fuer den Spielbetrieb noetig sind.\n" +
-    "- Es duerfen keine Dinge im RP erzwungen werden, auf die euer Gegenueber keinen Einfluss hat.\n" +
-    "- Gewaltdarstellungen werden geduldet, sofern sie pietaetvoll und nicht exzessiv sind und keine anderen Spieler stoeren (!).\n" +
-    "- OOC Texte beginnen mit // oder werden in (( )) Klammern geschrieben und sind nur geduldet, solange sie keine anderen Spieler stoeren.\n" +
-    "- Emotete Spielhandlungen sollten dem Gegenueber Freiraum zur Reaktion lassen. Die Aktion *klaut jemandem den Giftbeutel* nimmt dem Gegenueber die Entscheidungsfaehigkeit und grenzt aus. Stattdessen waere *versucht jemandem den Giftbeutel zu klauen* sympathischer, da dem Mitspieler die Moeglichkeit gegeben wird zu reagieren, indem er es geschehen laesst oder verhindert.\n";
+    "- OOC Informationen, also Informationen die euer Charakter nicht weiß, dürfen auch nicht im Rollenspiel verwendet werden (hierzu zählt auch Wissensaustausch zwischen euren eigenen Charakteren).\n" +
+    "- Jeder Spieler sollte sich auf einen Charakter pro Plot beschränken, um Login-Hopping zu vermeiden, falls beide Charaktere gleichzeitig für den Spielbetrieb nötig sind.\n" +
+    "- Gewaltdarstellungen werden geduldet, sofern sie pietätvoll und nicht exzessiv sind und keine anderen Spieler stören(!).\n" +
+    "- OOC Texte beginnen mit // oder werden in (( )) Klammern geschrieben und sind nur geduldet, solange sie keine anderen Spieler stören.\n" +
+    "- Emotete Spielhandlungen sollten dem Gegenüber Freiraum zur Reaktion lassen. Die Aktion *klaut jemandem den Giftbeutel* nimmt dem Gegenüber die Entscheidungsfähigkeit und grenzt aus. Stattdessen wäre *versucht jemandem den Giftbeutel zu klauen* sympathischer, da dem Mitspieler die Möglichkeit gegeben wird zu reagieren, indem er es geschehen lässt oder verhindert.\n";
 
 
     CreateMeta("regeln", sRegeln);
@@ -85,7 +84,7 @@ void main() {
     SetDescription(oBoard, sRegeln);
     // Team
     string sTeam = "<c0z0>Mintarn - Ein Modul zum mitmachen</c>\n\n" +
-    "Mit Mintarn moechten wir euch einen Rollenspiel Server bieten, auf den ihr gerne kommt um RP Abende zu verbringen, euren Charakter auszuleben oder einfach Monster zu kloppen. " +
+    "Mit Mintarn möchten wir euch einen Rollenspiel Server bieten, auf den ihr gerne kommt um RP Abende zu verbringen, euren Charakter auszuleben oder einfach Monster zu kloppen. " +
     "Aber auch das so genannte World Building mit dem Modulbau, dem Erstellen von Gebieten, dem Skripten, dem Erfinden von Geschichten und Hintergruenden kann sehr viel Spass machen!\n\n" +
     "Hiermit moechten wir euch herzlich einladen euch zu beteiligen und euch in dieser Welt einzubringen. Anteil nehmen und mitarbeiten ist ausdruecklich erlaubt und erwuenscht!\n\n" +
     "Bei Interesse meldet einfach im Discord an, dass ihr gerne mithelfen wollt und ihr bekommt eine entsprechende Rolle zugewiesen, mit der weitere Channels freigeschaltet werden.";
@@ -93,7 +92,7 @@ void main() {
     oBoard = GetObjectByTag("SIGN_Team");
     SetDescription(oBoard, sTeam);
     // Description Anleitung
-    CreateMeta("description", "Ã–ffnet http://mintarn.de/character.php und gebt folgenden Token ein: ");
+    CreateMeta("description", "Öffnet http://mintarn.de/character.php und gebt folgenden Token ein: ");
 
     // News Eintraege
     sQuery = "DROP TABLE News";
