@@ -52,7 +52,7 @@ void main() {
         "PRIMARY KEY (id))";
     NWNX_SQL_ExecuteQuery(sQuery);
     // Willkommen
-    string sWillkommen = "üäöWillkommen auf dem Neverwinter Nights Server Mintarn!\n\n" +
+    string sWillkommen = "blaüäöWillkommen auf dem Neverwinter Nights Server Mintarn!\n\n" +
     "Wir sind ein deutscher Neverwinter Nights: Enhanced Edition Server mit Fokus auf Rollenspiel in einer detailreichen Spielwelt. Gemeinsam erwecken wir das unabhaengige Inselkoenigreich Mintarn im Westen Faeruns zum Leben!\n\n" +
     "Alle weiteren Informationen findet ihr auf unserer Homepage und in unserem Wiki auf http://mintarn.de.";
     sWillkommen = ColorStrings(sWillkommen, "*", "*", STRING_COLOR_ROSE);
