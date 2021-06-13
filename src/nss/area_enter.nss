@@ -12,6 +12,8 @@ void main() {
         string sAccountName = GetPCPlayerName(oPc);
         string sName = GetName(oPc);
         if (GetTag(OBJECT_SELF) == "AREA_Freihafen") {
+            // Make area visible
+            ExploreAreaForPlayer(OBJECT_SELF, oPc);
             // Anfänger Quest
             sQuery = "SELECT * FROM QuestStatus WHERE name=? AND charname=? AND quest=?";
             if (NWNX_SQL_PrepareQuery(sQuery)) {
