@@ -26,7 +26,7 @@ jobs:
       
       # Convert files to ANSI
       - name: Convert files to ANSI
-        run: recode UTF8..windows-1252 src/nss/module_load.nss 
+        run: echo "1" #recode UTF8..windows-1252 src/nss/module_load.nss 
 
       # Runs nasher to pack the module
       - name: Run nasher pack to build Mintarn.mod
