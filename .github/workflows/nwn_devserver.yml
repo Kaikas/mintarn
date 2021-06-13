@@ -3,8 +3,8 @@
 name: NWN Devserver
 
 # Controls when the action will run. 
-on:
-  # Triggers the workflow on push or pull request events but only for the master branch
+on: 
+  # Run on every push
   push:
 
   # Allows you to run this workflow manually from the Actions tab
@@ -21,6 +21,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+        with:
+          ref: ${GITHUB_REF##*/}
+      
+      # Convert files to ANSI
+      - name: Convert files to ANSI
+        run: echo "1"
 
       # Runs nasher to pack the module
       - name: Run nasher pack to build Mintarn.mod
