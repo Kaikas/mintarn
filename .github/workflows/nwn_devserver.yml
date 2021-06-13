@@ -25,11 +25,19 @@ jobs:
       # Runs nasher to pack the module
       - name: Run nasher pack to build Mintarn.mod
         run: docker run --rm -v ${PWD}:/nasher kaikas/nasher:nwn_develop pack
+      
+      # Set branch name
+      - name: Set branch name
+        run: sed -i "/BRANCH=/c\BRANCH=\"${GITHUB_REF##*/}"" ~/nwn_dev/config/nwserver.env
 
       # Copy module to correct folder
       - name: Copy module to server
         run: cp Mintarn.mod ~/nwn_dev/server/modules/
         
-      # Restart nwn server
-      - name: Restart the dev server
-        run: docker-compose -f ~/nwn_dev/docker-compose.yml restart
+      # Stop the server
+      - name: Stop the dev server
+        run: docker-compose -f ~/nwn_dev/docker-compose.yml down
+
+      # Start the server
+      - name: Start the dev server
+        run: docker-compose -f ~/nwn_dev/docker-compose.yml up -d
