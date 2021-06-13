@@ -6,5 +6,5 @@ if [ ! "windows-1252" == "${encoding}" ]
 then
 	# Encodings differ, we have to encode
 	echo "recoding from ${encoding} to $1 file : $2"
-	recode ${encoding}..windows-1252 $2
+	recode ${encoding}..windows-1252 ../$2
 fi
