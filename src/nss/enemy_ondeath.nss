@@ -21,7 +21,7 @@ void main() {
     int iRpEp = 0;
     int iDatetime = 0;
     object oPc = GetFirstPC();
-    while (oPc != OBJECT_INVALID) {
+    while (oPc != OBJECT_INVALID && GetHitDice(oPc) < 15) {
         if (GetArea(oPc) == GetArea(OBJECT_SELF)) {
             if (GetDistanceBetween(OBJECT_SELF, oPc) < 50.0) {
                 // Get old xp

@@ -16,6 +16,9 @@ void GiveXP(object oPc, int iCount, int iSumXp, int iToken) {
         return;
     }
 
+    // Checks if the player is over level 15
+    if (GetHitDice(oPc) > 14) return;
+
     // Prüft ob der Spieler in den letzten 5 Minuten etwas geschrieben hat.
     string sQuery = "SELECT * FROM Chat WHERE name=? AND charname=? ORDER BY id DESC LIMIT 1";
     int iTalked = 0;
