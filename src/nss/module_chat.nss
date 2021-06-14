@@ -260,7 +260,7 @@ void main() {
         // Report
         } else if (GetSubString(sMessage, 0, 7) == "/report" || GetSubString(sMessage, 0, 7) == "/melden") {
             vector vCurrentLocation = GetPosition(oPc);
-            string sLogMessage = GetPCPlayerName(oPc) + 
+            string sLogMessage = GetPCPlayerName(oPc) +
               " (" +
               GetName(oPc) +
               ") meldet in " +
@@ -269,9 +269,9 @@ void main() {
               FloatToString(vCurrentLocation.x,6,2) +
               ", " +
               FloatToString(vCurrentLocation.y,6,2) +
-              ", " + 
+              ", " +
               FloatToString(vCurrentLocation.z,6,2) +
-              "): " + 
+              "): " +
               GetSubString(sMessage, 7, 50);
             NWNX_WebHook_SendWebHookHTTPS("discordapp.com", NWNX_Util_GetEnvironmentVariable("WEBHOOK_FEHLER"), sLogMessage, "Mintarn");
         // Delete Characters
@@ -1134,20 +1134,20 @@ void main() {
                                     "/token\n" +
                                     "/familiar\n" +
                                     "/companion\n" +
-                                    "\nCharakter lÃ¶schen:\n" +
+                                    "\nCharakter löschen:\n" +
                                     "/delete\n" +
                                     "\nAussehen editieren:\n" +
                                     "/aussehen\n" +
                                     "/rucksack\n" +
                                     "/maske 0-53\n" +
                                     "/pferd 1-4\n" +
-                                    "\nWÃ¼rfel:\n" +
+                                    "\nWürfel:\n" +
                                     "/d4\n" +
                                     "/d6\n" +
                                     "/d8\n" +
                                     "/d10\n" +
                                     "/d20\n" +
-                                    "\nWeitere Ãœbersichten:\n" +
+                                    "\nWeitere Übersichten:\n" +
                                     "/hilfe fertigkeit\n" +
                                     "/hilfe animation\n");
             } else if (sMessage == "/hilfe animation") {
@@ -1174,11 +1174,11 @@ void main() {
                                     "/beten\n" +
                                     "/zaubern\n" +
                                     "/zaubern2\n" +
-                                    "/liegen rÃ¼cken\n" +
+                                    "/liegen rücken\n" +
                                     "/liegen bauch\n" +
                                     "/aufheben\n" +
                                     "/interagieren\n" +
-                                    "/spÃ¤hen\n" +
+                                    "/spähen\n" +
                                     "/schwanken\n" +
                                     "/schimpfen\n" +
                                     "/lachen\n" +
@@ -1193,14 +1193,14 @@ void main() {
                                     "VFX:\n" +
                                     "/rauchen");
             } else if (sMessage == "/hilfe fertigkeit") {
-                SendMessageToPC(oPc, "Fertigkeiten kÃ¶nnen mit beliebigen Attributen gewÃ¼rfelt werden indem man das entsprechede KÃ¼rzel anhÃ¤ngt, zum Beispiel '/akrobatik str'\n\n"+
+                SendMessageToPC(oPc, "Fertigkeiten können mit beliebigen Attributen gewürfelt werden indem man das entsprechede Kürzel anhängt, zum Beispiel '/akrobatik str'\n\n"+
                                     "Fertigkeiten:\n" +
                                     "/akrobatik\n" +
                                     "/alchemist\n" +
                                     "/arkanes\n" +
                                     "/athletik\n" +
                                     "/auftreten\n" +
-                                    "/einschÃ¼chtern\n" +
+                                    "/einschüchtern\n" +
                                     "/entdecken\n" +
                                     "/fingerfertigkeit\n" +
                                     "/heilkunde\n" +
@@ -1216,14 +1216,14 @@ void main() {
                                     "/religion\n" +
                                     "/schmied\n" +
                                     "/schreiner\n" +
-                                    "/tÃ¤uschen\n" +
+                                    "/täuschen\n" +
                                     "/untersuchen\n" +
                                     "/verstecken\n" +
                                     "/weltliches\n" +
-                                    "/Ã¼berleben\n" +
-                                    "/Ã¼berzeugen\n");
+                                    "/überleben\n" +
+                                    "/überzeugen\n");
             } else {
-                SendMessageToPC(oPc, "UngÃ¼ltiger Befehl: \"" +
+                SendMessageToPC(oPc, "Ungültiger Befehl: \"" +
                                      sMessage +
                                      "\" \n\n" +
                                      "/hilfe \n" +
