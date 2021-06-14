@@ -360,7 +360,7 @@ void main() {
 
     // Farben fuer Conversationen
     SetCustomToken(100, "</c>");
-    SetCustomToken(101, "<cÙ§`>");
+    SetCustomToken(101, "<c�f >"); //Ù§
     SetCustomToken(102, "<cuuu>");
 
     // Fertigkeits-Talente
