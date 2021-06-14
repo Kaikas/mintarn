@@ -2,6 +2,7 @@
 #include "nwnx_time"
 #include "nwnx_sql"
 #include "nwnx_player"
+#include "x0_i0_match"
 
 // Zählt wieviel Nahrung ein Spieler im Inventar hat
 int CountFood(object oPc) {
@@ -86,6 +87,10 @@ void main() {
     string sQuery;
     string sAccountName = GetPCPlayerName(oPc);
     string sName = GetName(oPc);
+    if (GetHasEffect(EFFECT_TYPE_NEGATIVELEVEL, oPc)) {
+       AssignCommand(oPc, ClearAllActions());
+       SendMessageToPC(oPc, "Ihr seid gestorben und könnt noch nicht rasten.");
+    }
     switch (iRestType) {
         case REST_EVENTTYPE_REST_STARTED:
             if (GetTag(GetArea(oPc)) == "AREA_UnterDeck") {
