@@ -499,8 +499,4 @@ void main() {
     // Give XP every few seconds
     SetLocalInt(oPc, "xp_token", Random(1000000));
     DelayCommand(600.0, GiveXP(oPc, 1, 0, GetLocalInt(oPc, "xp_token")));
-
-    // DMFI
-    object oUser = GetEnteringObject();
-    dmfiInitialize(oUser);
 }
