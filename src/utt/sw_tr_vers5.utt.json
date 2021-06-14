@@ -88,7 +88,7 @@
   },
   "TemplateResRef": {
     "type": "resref",
-    "value": "sw_tr_vers1"
+    "value": "sw_tr_vers5"
   },
   "TrapDetectable": {
     "type": "byte",

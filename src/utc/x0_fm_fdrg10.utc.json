@@ -94,7 +94,7 @@
   },
   "FactionID": {
     "type": "word",
-    "value": 65533
+    "value": 65532
   },
   "FeatList": {
     "type": "list",

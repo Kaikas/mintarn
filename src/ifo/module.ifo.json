@@ -280,11 +280,11 @@
   },
   "Mod_Entry_X": {
     "type": "float",
-    "value": 5.3543
+    "value": 5.0
   },
   "Mod_Entry_Y": {
     "type": "float",
-    "value": 24.2117
+    "value": 24.0
   },
   "Mod_Entry_Z": {
     "type": "float",
@@ -594,13 +594,6 @@
           "type": "cexostring",
           "value": "cep2_core7"
         }
-      },
-      {
-        "__struct_id": 8,
-        "Mod_Hak": {
-          "type": "cexostring",
-          "value": "dmfi"
-        }
       }
     ]
   },
@@ -610,7 +603,7 @@
   },
   "Mod_MinGameVer": {
     "type": "cexostring",
-    "value": "1.82"
+    "value": "1.83"
   },
   "Mod_MinPerHour": {
     "type": "byte",
