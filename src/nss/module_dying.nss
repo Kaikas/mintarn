@@ -40,7 +40,7 @@ void bleed(object oPc) {
     }
 
     // Check if we ressurected
-    if (GetLocalInt(oPc, "LIVING_POINTS") > 2) {
+    if (GetLocalInt(oPc, "LIVING_POINTS") > 2 || iHitPoints > 0) {
         SetLocalInt(oPc, "LIVING_POINTS", 1);
         SendMessageToPC(oPc, "Überleben: Ihr seid dem Tod entkommen!");
         effect eHeal = EffectHeal(abs(iHitPoints) + 1);
