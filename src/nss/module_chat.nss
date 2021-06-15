@@ -272,8 +272,8 @@ void main() {
               ", " +
               FloatToString(vCurrentLocation.z,6,2) +
               "): " +
-              GetSubString(sMessage, 7, 50);
-            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", NWNX_Util_GetEnvironmentVariable("WEBHOOK_FEHLER"), sLogMessage, "Mintarn");
+              GetSubString(sMessage, 7, 300);
+            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", NWNX_Util_GetEnvironmentVariable("WEBHOOK_FEHLER"), sLogMessage, "Mintarn", 0);
         // Delete Characters
         } else if (GetSubString(sMessage, 0, 8) == "/delete ") {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
