@@ -369,6 +369,13 @@
           "type": "cexostring",
           "value": "Potted Plant"
         }
+      },
+      {
+        "__struct_id": 9,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
       }
     ]
   },

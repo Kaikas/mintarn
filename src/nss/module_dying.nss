@@ -16,15 +16,17 @@ void bleed(object oPc) {
     // > 10 stay stable
     // 20 ressurect
     if (iRoll <= 10 && iRoll > 1) {
-        SendMessageToPC(oPc, "Überleben: " + IntToString(iRoll) + " (d20). Ihr kommt dem Tode näher!");
         SetLocalInt(oPc, "DYING_POINTS", GetLocalInt(oPc, "DYING_POINTS") + 1);
-    } else if (iRoll > 10 && iRoll < 20) {
+        SendMessageToPC(oPc, "[d20 = " + IntToString(iRoll) + "] Ihr kommt dem Tode näher! (" + IntToString(GetLocalInt(oPc, "DYING_POINTS")) + "/3 Misserfolge)");
+     } else if (iRoll > 10 && iRoll < 20) {
         SetLocalInt(oPc, "LIVING_POINTS", GetLocalInt(oPc, "LIVING_POINTS") + 1);
-        SendMessageToPC(oPc, "Überleben: " + IntToString(iRoll) + " (d20). Ihr erholt euch!");
+        SendMessageToPC(oPc, "[d20 = " + IntToString(iRoll) + "] Ihr erholt euch! (" + IntToString(GetLocalInt(oPc, "LIVING_POINTS")) + "/3 Erfolge)");
     } else if (iRoll == 20) {
         SetLocalInt(oPc, "LIVING_POINTS", GetLocalInt(oPc, "LIVING_POINTS") + 3);
+        SendMessageToPC(oPc, "[d20 = " + IntToString(iRoll) + "] Ihr erholt euch! (" + IntToString(GetLocalInt(oPc, "LIVING_POINTS")) + "/3 Erfolge)");
     } else if (iRoll == 1) {
         SetLocalInt(oPc, "DYING_POINTS", GetLocalInt(oPc, "DYING_POINTS") + 3);
+        SendMessageToPC(oPc, "[d20 = " + IntToString(iRoll) + "] Ihr kommt dem Tode näher! (" + IntToString(GetLocalInt(oPc, "DYING_POINTS")) + "/3 Misserfolge)");
     }
 
     //SendMessageToPC(oPc, "DYING_POINTS" + IntToString(GetLocalInt(oPc, "DYING_POINTS")));
@@ -34,15 +36,16 @@ void bleed(object oPc) {
     if (GetLocalInt(oPc, "DYING_POINTS") > 2) {
         SetLocalInt(oPc, "DYING_POINTS", 1);
         SetLocalInt(oPc, "LIVING_POINTS", 1);
+        SendMessageToPC(oPc, "Ihr seid gestorben!");
         effect eDamage = EffectDamage(10, DAMAGE_TYPE_MAGICAL, DAMAGE_POWER_PLUS_FIVE);
-        ApplyEffectToObject(DURATION_TYPE_INSTANT, eDamage, oPc);
+        DelayCommand(5.0f, ApplyEffectToObject(DURATION_TYPE_INSTANT, eDamage, oPc));
         return;
     }
 
     // Check if we ressurected
     if (GetLocalInt(oPc, "LIVING_POINTS") > 2 || iHitPoints > 0) {
         SetLocalInt(oPc, "LIVING_POINTS", 1);
-        SendMessageToPC(oPc, "Überleben: Ihr seid dem Tod entkommen!");
+        SendMessageToPC(oPc, "Ihr seid dem Tod entkommen!");
         effect eHeal = EffectHeal(abs(iHitPoints) + 1);
         ApplyEffectToObject(DURATION_TYPE_INSTANT, eHeal, oPc);
         return;
