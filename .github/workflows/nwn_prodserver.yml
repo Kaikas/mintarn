@@ -1,0 +1,47 @@
+# This is a basic workflow to help you get started with Actions
+
+name: NWN Prodserver
+
+# Controls when the action will run. 
+on: 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: nwn_prod
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@master
+        with:
+          ref: ${{ github.ref }}
+      
+      # Convert files to ANSI
+      - name: Convert files to ANSI
+        run: | 
+          chmod +x scripts/sw_recode.sh 
+          find . -type f -exec scripts/sw_recode.sh {} \; 
+      # Runs nasher to pack the module
+      - name: Run nasher pack to build Mintarn.mod
+        run: docker run --rm -v ${PWD}:/nasher kaikas/nasher pack
+      
+      # Set branch name
+      - name: Set branch name
+        run: sed -i "/BRANCH=/c\BRANCH=\"${GITHUB_REF##*/}\"" ~/nwn/config/nwserver.env
+
+      # Copy module to correct folder
+      - name: Copy module to server
+        run: cp Mintarn.mod ~/nwn/server/modules/
+        
+      # Stop the server
+      - name: Stop the dev server
+        run: docker-compose -f ~/nwn/docker-compose.yml down
+
+      # Start the server
+      - name: Start the dev server
+        run: docker-compose -f ~/nwn/docker-compose.yml up -d
