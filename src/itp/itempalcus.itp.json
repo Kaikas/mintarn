@@ -272,44 +272,11 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Gewöhnliche Feuerfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_feuer_g"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Gewöhnliche Frostfalle"
                     },
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_fa_fros2"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Gewöhnliche Frostfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_frost_g"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Gewöhnliche Giftfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_gift_g"
                     }
                   },
                   {
@@ -327,33 +294,11 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Gewöhnliche heilige Falle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_heil_g"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Gewöhnliche Klingenfalle"
                     },
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_fa_klin2"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Gewöhnliche Klingenfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_klin_g"
                     }
                   },
                   {
@@ -371,33 +316,11 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Gewöhnliche negative Falle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_nega_g"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Gewöhnliche Säurefalle"
                     },
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_fa_saur2"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Gewöhnliche Säurefalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_saure_g"
                     }
                   },
                   {
@@ -415,17 +338,6 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Gewöhnliche Schallfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_schal_g"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Gewöhnliche Stachelfalle"
                     },
                     "RESREF": {
@@ -437,44 +349,11 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Gewöhnliche Stachelfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_stach_g"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Gewöhnliche stumpfe Falle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_stum_g"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Gewöhnliche Verstrickungsfalle"
                     },
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_fa_vers2"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Gewöhnliche Verstrickungsfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_vers_g"
                     }
                   },
                   {
@@ -525,44 +404,11 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Professionelle Feuerfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_feuer_p"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Professionelle Frostfalle"
                     },
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_fa_fros5"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Professionelle Frostfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_frost_p"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Professionelle Giftfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_gift_p"
                     }
                   },
                   {
@@ -580,33 +426,11 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Professionelle heilige Falle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_heil_p"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Professionelle Klingenfalle"
                     },
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_fa_klin5"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Professionelle Klingenfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_klin_p"
                     }
                   },
                   {
@@ -624,33 +448,11 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Professionelle negative Falle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_nega_p"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Professionelle Säurefalle"
                     },
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_fa_saur5"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Professionelle Säurefalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_saure_p"
                     }
                   },
                   {
@@ -668,17 +470,6 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Professionelle Schallfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_schal_p"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Professionelle Stachelfalle"
                     },
                     "RESREF": {
@@ -690,44 +481,11 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Professionelle Stachelfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_stach_p"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Professionelle stumpfe Falle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_stum_p"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Professionelle Verstrickungsfalle"
                     },
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_fa_vers5"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Professionelle Verstrickungsfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_vers_p"
                     }
                   },
                   {
@@ -767,44 +525,11 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Schwache Feuerfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_feuer_s"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Schwache Frostfalle"
                     },
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_fa_fros1"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Schwache Frostfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_frost_s"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Schwache Giftfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_gift_s"
                     }
                   },
                   {
@@ -822,33 +547,11 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Schwache heilige Falle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_heil_s"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Schwache Klingenfalle"
                     },
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_fa_klin1"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Schwache Klingenfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_klin_s"
                     }
                   },
                   {
@@ -866,33 +569,11 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Schwache negative Falle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_nega_s"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Schwache Säurefalle"
                     },
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_fa_saur1"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Schwache Säurefalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_saure_s"
                     }
                   },
                   {
@@ -910,44 +591,11 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Schwache Schallfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_schal_s"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Schwache Stachelfalle"
                     },
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_fa_stac1"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Schwache Stachelfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_stach_s"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Schwache stumpfe Falle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_stum_s"
                     }
                   },
                   {
@@ -965,33 +613,11 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Schwache Verstrickungsfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_vers_s"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Schwache Wuchtfalle"
                     },
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_fa_wuch1"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Starke Feuerfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_feuer_st"
                     }
                   },
                   {
@@ -1009,44 +635,11 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Starke Frostfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_frost_st"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Starke Giftfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_gift_st"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Starke heilige Falle"
                     },
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_fa_heil3"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Starke heilige Falle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_heil_st"
                     }
                   },
                   {
@@ -1064,33 +657,11 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Starke Klingenfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_klin_st"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Starke negative Falle"
                     },
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_fa_nega3"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Starke negative Falle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_nega_st"
                     }
                   },
                   {
@@ -1108,33 +679,11 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Starke Säurefalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_saure_st"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Starke Schallfalle"
                     },
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_fa_scha3"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Starke Schallfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_schal_st"
                     }
                   },
                   {
@@ -1152,44 +701,11 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Starke Stachelfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_stach_st"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Starke stumpfe Falle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_stum_st"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Starke Verstrickungsfalle"
                     },
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_fa_vers3"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Starke Verstrickungsfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_vers_st"
                     }
                   },
                   {
@@ -1218,33 +734,11 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Tödliche elektrische Falle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_elek_t"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Tödliche Feuerfalle"
                     },
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_fa_feue4"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Tödliche Feuerfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_feuer_t"
                     }
                   },
                   {
@@ -1262,44 +756,11 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Tödliche Frostfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_frost_t"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Tödliche Giftfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_gift_t"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Tödliche heilige Falle"
                     },
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_fa_heil4"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Tödliche heilige Falle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_heil_t"
                     }
                   },
                   {
@@ -1317,33 +778,11 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Tödliche Klingenfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_klin_t"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Tödliche negative Falle"
                     },
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_fa_nega4"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Tödliche negative Falle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_nega_t"
                     }
                   },
                   {
@@ -1361,33 +800,11 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Tödliche Säurefalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_saure_t"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Tödliche Schallfalle"
                     },
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_fa_scha4"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Tödliche Schallfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_schal_t"
                     }
                   },
                   {
@@ -1405,44 +822,11 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Tödliche Stachelfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_stach_t"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Tödliche stumpfe Falle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_stum_t"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Tödliche Verstrickungsfalle"
                     },
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_fa_vers4"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Tödliche Verstrickungsfalle"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_fa_vers_t"
                     }
                   },
                   {

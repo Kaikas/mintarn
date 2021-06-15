@@ -306,11 +306,11 @@ void main() {
                     CreateItemOnObject("sw_we_wuerfelbeu", oPc);
                     // Gib Schurke Fallen
                     if (GetLevelByClass(CLASS_TYPE_ROGUE, oPc) > 0) {
-                        CreateItemOnObject("sw_fa_stachelfal", oPc);
-                        CreateItemOnObject("sw_fa_stachelfal", oPc);
-                        CreateItemOnObject("sw_fa_stachelfal", oPc);
-                        CreateItemOnObject("sw_fa_stachelfal", oPc);
-                        CreateItemOnObject("sw_fa_stachelfal", oPc);
+                        CreateItemOnObject("sw_fa_klin1", oPc);
+                        CreateItemOnObject("sw_fa_klin1", oPc);
+                        CreateItemOnObject("sw_fa_klin1", oPc);
+                        CreateItemOnObject("sw_fa_klin1", oPc);
+                        CreateItemOnObject("sw_fa_klin1", oPc);
                     }
                     // Update database
                     NWNX_SQL_PreparedString(0, sAccountName);
