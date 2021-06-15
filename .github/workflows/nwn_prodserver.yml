@@ -12,27 +12,28 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: nwn_prod
+    runs-on: nwn_production
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@master
         with:
-          ref: ${{ github.ref }}
+          ref: master
       
       # Convert files to ANSI
       - name: Convert files to ANSI
         run: | 
           chmod +x scripts/sw_recode.sh 
           find . -type f -exec scripts/sw_recode.sh {} \; 
+          
       # Runs nasher to pack the module
       - name: Run nasher pack to build Mintarn.mod
-        run: docker run --rm -v ${PWD}:/nasher kaikas/nasher:production pack
+        run: docker run --rm -v ${PWD}:/nasher kaikas/nasher:nwn_production pack
       
       # Set branch name
       - name: Set branch name
-        run: sed -i "/BRANCH=/c\BRANCH=\"${GITHUB_REF##*/}\"" ~/nwn/config/nwserver.env
+        run: sed -i "/BRANCH=/c\BRANCH=liveserver" ~/nwn/config/nwserver.env
 
       # Copy module to correct folder
       - name: Copy module to server
