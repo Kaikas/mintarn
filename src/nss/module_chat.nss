@@ -143,7 +143,7 @@ void main() {
         if (oTarget1 != OBJECT_INVALID && sSecondChar == "1" && !GetIsPC(oTarget1) || GetIsDM(oPc)) {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             //AssignCommand(oTarget1, ActionSpeakString(sMessage, iChatVolume));
-            sMessage = ColorStrings(sMessage, "*", "*", "Ù§`");
+            sMessage = ColorStrings(sMessage, "*", "*", "c�f ");
             sMessage = ColorStrings(sMessage, "((", "))", "uuu");
             SetLocalString(oTarget1, "sMessage", sMessage);
             SetLocalInt(oTarget1, "iChatVolume", iChatVolume);
@@ -152,7 +152,7 @@ void main() {
         if (oTarget2 != OBJECT_INVALID && sSecondChar == "2" && !GetIsPC(oTarget2) || GetIsDM(oPc)) {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             //AssignCommand(oTarget2, ActionSpeakString(sMessage, iChatVolume));
-            sMessage = ColorStrings(sMessage, "*", "*", "Ù§`");
+            sMessage = ColorStrings(sMessage, "*", "*", "c�f ");
             sMessage = ColorStrings(sMessage, "((", "))", "uuu");
             SetLocalString(oTarget2, "sMessage", sMessage);
             SetLocalInt(oTarget2, "iChatVolume", iChatVolume);
@@ -161,7 +161,7 @@ void main() {
         if (oTarget3 != OBJECT_INVALID && sSecondChar == "3" && !GetIsPC(oTarget3) || GetIsDM(oPc)) {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             //AssignCommand(oTarget3, ActionSpeakString(sMessage, iChatVolume));
-            sMessage = ColorStrings(sMessage, "*", "*", "Ù§`");
+            sMessage = ColorStrings(sMessage, "*", "*", "c�f ");
             sMessage = ColorStrings(sMessage, "((", "))", "uuu");
             SetLocalString(oTarget3, "sMessage", sMessage);
             SetLocalInt(oTarget3, "iChatVolume", iChatVolume);
@@ -170,7 +170,7 @@ void main() {
         if (oTarget4 != OBJECT_INVALID && sSecondChar == "4" && !GetIsPC(oTarget4) || GetIsDM(oPc)) {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             //AssignCommand(oTarget4, ActionSpeakString(sMessage, iChatVolume));
-            sMessage = ColorStrings(sMessage, "*", "*", "Ù§`");
+            sMessage = ColorStrings(sMessage, "*", "*", "c�f ");
             sMessage = ColorStrings(sMessage, "((", "))", "uuu");
             SetLocalString(oTarget4, "sMessage", sMessage);
             SetLocalInt(oTarget4, "iChatVolume", iChatVolume);
@@ -179,7 +179,7 @@ void main() {
         if (oTarget5 != OBJECT_INVALID && sSecondChar == "5" && !GetIsPC(oTarget5) || GetIsDM(oPc)) {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             //AssignCommand(oTarget5, ActionSpeakString(sMessage, iChatVolume));
-            sMessage = ColorStrings(sMessage, "*", "*", "Ù§`");
+            sMessage = ColorStrings(sMessage, "*", "*", "c�f ");
             sMessage = ColorStrings(sMessage, "((", "))", "uuu");
             SetLocalString(oTarget5, "sMessage", sMessage);
             SetLocalInt(oTarget5, "iChatVolume", iChatVolume);
@@ -1126,7 +1126,7 @@ void main() {
                 if (iMask == 52) applyMask(oPc, 9465);
                 if (iMask == 53) applyMask(oPc, 9490);
             // Sterben
-            else if (sMessage == "/sterben") {
+            } else if (sMessage == "/sterben") {
                 SetLocalInt(oPc, "DYING_FOR_REAL", 0);
                 location lStart = GetLocation(GetObjectByTag("WP_DEATH"));
                 AssignCommand(oPc, JumpToLocation(lStart));
@@ -1244,7 +1244,7 @@ void main() {
         if (iChatVolume == 0) {
             // Normal talk
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
-            sMessage = ColorStrings(sMessage, "*", "*", "Ù§`");
+            sMessage = ColorStrings(sMessage, "*", "*", "c�f ");
             sMessage = ColorStrings(sMessage, "((", "))", "uuu");
             //AssignCommand(oPc, ActionSpeakString(sMessage, iChatVolume));
 
@@ -1255,7 +1255,7 @@ void main() {
             // Whisper
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             sMessage = "<cvvv>" + sMessage + "</c>";
-            sMessage = ColorStrings(sMessage, "*", "*", "Ù§`");
+            sMessage = ColorStrings(sMessage, "*", "*", "c�f ");
             sMessage = ColorStrings(sMessage, "((", "))", "uuu");
             //AssignCommand(oPc, ActionSpeakString(sMessage, iChatVolume));
 
