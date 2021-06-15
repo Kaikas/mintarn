@@ -125,6 +125,8 @@ void main() {
                                 NWNX_SQL_PreparedString(2, sName);
                                 NWNX_SQL_ExecutePreparedQuery();
                             }
+                            // Refresh short rest
+                            SetLocalInt(oPc, "rast_short", 0);
                             DeleteFood(oPc);
                             healPets(oPc);
                         }
