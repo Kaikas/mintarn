@@ -28,7 +28,7 @@ jobs:
           find . -type f -exec scripts/sw_recode.sh {} \; 
       # Runs nasher to pack the module
       - name: Run nasher pack to build Mintarn.mod
-        run: docker run --rm -v ${PWD}:/nasher kaikas/nasher pack
+        run: docker run --rm -v ${PWD}:/nasher kaikas/nasher:production pack
       
       # Set branch name
       - name: Set branch name
