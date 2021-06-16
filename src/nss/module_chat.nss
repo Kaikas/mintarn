@@ -274,6 +274,7 @@ void main() {
               "): " +
               GetSubString(sMessage, 7, 300);
             NWNX_WebHook_SendWebHookHTTPS("discordapp.com", NWNX_Util_GetEnvironmentVariable("WEBHOOK_FEHLER"), sLogMessage, "Mintarn", 0);
+            SendMessageToPC(oPc, "Vielen Dank für die Fehlermeldung. Sie ist im Discord angekommen und wird von uns so bald wie möglich bearbeitet.");
         // Delete Characters
         } else if (GetSubString(sMessage, 0, 8) == "/delete ") {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
@@ -405,7 +406,7 @@ void main() {
                 if (GetTag(GetArea(oPc)) == "AREA_Nether") {
                     location lTempel = GetLocation(GetObjectByTag("WP_TEMPEL"));
                     AssignCommand(oPc, JumpToLocation(lTempel));
-                    string sMessage = "Nach der Reinigung eurer Wunden hat man euch im 'Saal der Klagenden' der Selbstreflektion überlassen; auf dass euer Weg kein weiteres mal hierher führen mÃ¶ge.";
+                    string sMessage = "Nach der Reinigung eurer Wunden hat man euch im 'Saal der Klagenden' der Selbstreflektion überlassen; auf dass euer Weg kein weiteres mal hierher führen möge.";
                     SendMessageToPC(oPc, sMessage);
                     // Health
                     //ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectHeal(GetMaxHitPoints(oPc)), oPc);

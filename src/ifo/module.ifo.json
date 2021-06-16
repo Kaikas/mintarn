@@ -46,13 +46,6 @@
         "__struct_id": 6,
         "Area_Name": {
           "type": "resref",
-          "value": "dmfi_custom_enc"
-        }
-      },
-      {
-        "__struct_id": 6,
-        "Area_Name": {
-          "type": "resref",
           "value": "echsenhhle"
         }
       },

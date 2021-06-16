@@ -1,7 +1,7 @@
 void switchLights() {
     //SetTime(Random(24), 0, 0, 0);
     //SetTime(9, 0, 0, 0);
-    if (GetTimeHour() > 6 && GetTimeHour() < 19) {
+    if (GetTimeHour() > 6 && GetTimeHour() < 18) {
         int i;
         object oLight;
         for (i = 0; i < 1000; i++) {
