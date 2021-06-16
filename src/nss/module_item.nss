@@ -709,5 +709,11 @@ void main() {
         }
     }
 
+    // SW Zeit
+    if (GetTag(oItem) == "SW_Zeit") {
+        AssignCommand(oPc, ActionStartConversation(oPc, "sw_zeit", TRUE));
+    }
+
+
 
 }

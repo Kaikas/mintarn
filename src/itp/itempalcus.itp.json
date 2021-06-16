@@ -8239,6 +8239,17 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
+                      "value": "SW Zeit"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_we_zeit"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
                       "value": "Tabak: Baumrinde"
                     },
                     "RESREF": {
