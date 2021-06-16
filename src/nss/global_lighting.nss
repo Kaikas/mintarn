@@ -57,11 +57,10 @@ void ToggleDayNightLighting() {
     while (GetObjectByTag("LIGHT_DAYTIME", i) != OBJECT_INVALID) {
         oLight = GetObjectByTag("LIGHT_DAYTIME", i);
         // Note that dawn (6) and dusk (18) are ignored.
-        if (GetIsDay() &&  GetLocalInt(oLight, "light") == 0) {
+        if (GetTimeHour() < 17 && GetTimeHour() > 7 && GetLocalInt(oLight, "light") == 0) {
             //SendMessageToPC( GetFirstPC(), "Es ist Tag. Schalte Tageslicht an.");
             ToggleLight(oLight);
-        }
-        if (GetIsNight() && GetLocalInt(oLight, "light") == 1) {
+        } else {
             //SendMessageToPC( GetFirstPC(), "Es ist Nacht. Schalte Tageslicht aus.");
             ToggleLight(oLight);
         }
@@ -71,11 +70,10 @@ void ToggleDayNightLighting() {
     i = 0;
     while (GetObjectByTag("LIGHT_NIGHTTIME", i) != OBJECT_INVALID) {
         oLight = GetObjectByTag("LIGHT_NIGHTTIME", i);
-        if (GetIsDay() &&  GetLocalInt(oLight, "light") == 1) {
+        if (GetTimeHour() > 16 && GetTimeHour() < 8 && GetLocalInt(oLight, "light") == 1) {
             //SendMessageToPC( GetFirstPC(), "Es ist Tag. Schalte Nachtlicht aus.");
             ToggleLight(oLight);
-        }
-        if (GetIsNight() && GetLocalInt(oLight, "light") == 0) {
+        } else {
             //SendMessageToPC( GetFirstPC(), "Es ist Nacht. Schalte Nachtlicht an.");
             ToggleLight(oLight);
         }
