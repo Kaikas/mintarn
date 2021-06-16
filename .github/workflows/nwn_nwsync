@@ -1,0 +1,15 @@
+name: NWN nwsync
+on: 
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: nwn_production
+    steps:
+      - name: foo
+        run: docker-compose -f ~/nwn/docker-compose.yml restart
+  build:
+    runs-on: nwn_development
+    steps:
+      - name: bar
+        run: docker-compose -f ~/nwn_dev/docker-compose.yml restart
