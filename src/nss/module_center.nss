@@ -494,7 +494,7 @@ void main() {
             iStage = StringToInt(NWNX_SQL_ReadDataInActiveRow(4));
         }
     }
-    PrintString("Stadtwache: iStage = " + IntToString(iStage) + " Player = " + GetName(oPc) + " Account = " + GetPCPlayerName(oPc));
+    PrintString("DEBUG: Stadtwache: iStage = " + IntToString(iStage) + " Player = " + GetName(oPc) + " Account = " + GetPCPlayerName(oPc));
     if (iStage == 0) {
         AddJournalQuestEntry("wache", 1, oPc, FALSE, FALSE, TRUE);
     }
