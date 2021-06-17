@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: NWN Prodserver
+name: NWN Liveserver New Release
 
 # Controls when the action will run. 
 on: 
