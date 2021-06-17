@@ -1,0 +1,17 @@
+name: NWN Devserver Restart
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: nwn_develop
+
+    steps:
+      # Stop the server
+      - name: Stop the dev server
+        run: docker-compose -f ~/nwn_dev/docker-compose.yml down
+
+      # Start the server
+      - name: Start the dev server
+        run: docker-compose -f ~/nwn_dev/docker-compose.yml up -d
