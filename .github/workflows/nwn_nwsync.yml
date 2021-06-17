@@ -9,7 +9,7 @@ jobs:
       - name: foo
         run: docker-compose -f ~/nwn/docker-compose.yml restart
   build_dev:
-    needs: dev
+    needs: build
     runs-on: nwn_development
     steps:
       - name: bar
