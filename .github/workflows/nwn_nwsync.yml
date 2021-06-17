@@ -37,7 +37,7 @@ jobs:
         run: cd ~/mintarn-haks && cp mintarn.hak ~/nwn_dev/server/hak/mintarn.hak
       
       - name: Copy tlk file
-        run: cd ~/mintarn-haks && cp tlk/* ~/nwn/server/tlk/
+        run: cd ~/mintarn-haks && cp tlk/* ~/nwn_dev/server/tlk/
         
       - name: Restart dev server
         run: docker-compose -f ~/nwn_dev/docker-compose.yml restart
