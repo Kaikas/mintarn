@@ -6,11 +6,37 @@ jobs:
   build:
     runs-on: nwn_production
     steps:
-      - name: foo
+      - name: Pull hak repository
+        run: cd ~/mintarn-haks && git pull    
+        
+      - name: Pack mintarn.hak with nasher
+        run: cd ~/mintarn-haks && docker run --rm --user 1019:1019 -v ${PWD}:/nasher kaikas/nasher:nwn_production pack --default
+        
+      - name: Copy hak to live server
+        run: cd ~/mintarn-haks && cp ~/mintarn.hak ~/nwn/server/hak/mintarn.hak
+      
+      - name: Copy tlk file
+        run: cd ~/mintarn-haks && cp tlk/* ~/nwn/server/tlk/
+        
+      - name: Run nwsync
+        run: cd ~/nwn/ && nwsync/nwsync_write --description="Mintarn Development" website/nwsync/ server/modules/Mintarn.mod
+        
+      - name: Restart live server
         run: docker-compose -f ~/nwn/docker-compose.yml restart
   build_dev:
     needs: build
     runs-on: nwn_develop
     steps:
-      - name: bar
+      - name: Pull hak repository
+        run: cd ~/mintarn-haks && git pull    
+        
+      - name: Pack mintarn.hak with nasher
+        run: cd ~/mintarn-haks && docker run --rm --user 1017:1017 -v ${PWD}:/nasher kaikas/nasher:nwn_develop pack --default
+        
+      - name: Copy hak to dev server
+        run: cd ~/mintarn-haks && cp ~/mintarn.hak ~/nwn_dev/server/hak/mintarn.hak
+      
+      - name: Copy tlk file
+        run: cd ~/mintarn-haks && cp tlk/* ~/nwn/server/tlk/
+      - name: Restart dev server
         run: docker-compose -f ~/nwn_dev/docker-compose.yml restart
