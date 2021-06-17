@@ -10,7 +10,7 @@ jobs:
         run: docker-compose -f ~/nwn/docker-compose.yml restart
   build_dev:
     needs: build
-    runs-on: nwn_development
+    runs-on: nwn_develop
     steps:
       - name: bar
         run: docker-compose -f ~/nwn_dev/docker-compose.yml restart
