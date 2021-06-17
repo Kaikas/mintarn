@@ -13,7 +13,7 @@ jobs:
         run: cd ~/mintarn-haks && docker run --rm --user 1019:1019 -v ${PWD}:/nasher kaikas/nasher:nwn_production pack --default
         
       - name: Copy hak to live server
-        run: cd ~/mintarn-haks && cp ~/mintarn.hak ~/nwn/server/hak/mintarn.hak
+        run: cd ~/mintarn-haks && cp mintarn.hak ~/nwn/server/hak/mintarn.hak
       
       - name: Copy tlk file
         run: cd ~/mintarn-haks && cp tlk/* ~/nwn/server/tlk/
@@ -34,9 +34,10 @@ jobs:
         run: cd ~/mintarn-haks && docker run --rm --user 1017:1017 -v ${PWD}:/nasher kaikas/nasher:nwn_develop pack --default
         
       - name: Copy hak to dev server
-        run: cd ~/mintarn-haks && cp ~/mintarn.hak ~/nwn_dev/server/hak/mintarn.hak
+        run: cd ~/mintarn-haks && cp mintarn.hak ~/nwn_dev/server/hak/mintarn.hak
       
       - name: Copy tlk file
         run: cd ~/mintarn-haks && cp tlk/* ~/nwn/server/tlk/
+        
       - name: Restart dev server
         run: docker-compose -f ~/nwn_dev/docker-compose.yml restart
