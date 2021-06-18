@@ -27,6 +27,22 @@
                       "type": "byte",
                       "value": 178
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Übergang"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "portal001"
+                          }
+                        }
+                      ]
+                    },
                     "STRREF": {
                       "type": "dword",
                       "value": 6688
@@ -265,6 +281,22 @@
                 "type": "byte",
                 "value": 97
               },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Barricade"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "foo"
+                    }
+                  }
+                ]
+              },
               "STRREF": {
                 "type": "dword",
                 "value": 16810712
@@ -353,6 +385,88 @@
               "ID": {
                 "type": "byte",
                 "value": 44
+              },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Big Rock"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "bigrock"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Big Rock 2"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "bigrock2"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Boulders"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "foo001"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Boulders"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "foo002"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Boulders"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "foo003"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Boulders"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "foo004"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Stein"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "erde001"
+                    }
+                  }
+                ]
               },
               "STRREF": {
                 "type": "dword",
@@ -566,6 +680,22 @@
                 "type": "byte",
                 "value": 93
               },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Ofen"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "ofen"
+                    }
+                  }
+                ]
+              },
               "STRREF": {
                 "type": "dword",
                 "value": 16810801
@@ -614,6 +744,22 @@
                     "ID": {
                       "type": "byte",
                       "value": 37
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Sessel"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sessel"
+                          }
+                        }
+                      ]
                     },
                     "STRREF": {
                       "type": "dword",
@@ -666,6 +812,22 @@
                 "type": "byte",
                 "value": 92
               },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Erde"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "erde"
+                    }
+                  }
+                ]
+              },
               "STRREF": {
                 "type": "dword",
                 "value": 16810800
@@ -687,6 +849,44 @@
               "ID": {
                 "type": "byte",
                 "value": 90
+              },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Lagerfeuer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "lagerfeuer"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Lagerfeuer (aus)"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "blueprint"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Topf"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "topf"
+                    }
+                  }
+                ]
               },
               "STRREF": {
                 "type": "dword",
@@ -809,6 +1009,22 @@
         "ID": {
           "type": "byte",
           "value": 8
+        },
+        "LIST": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Zelt"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "zelt"
+              }
+            }
+          ]
         },
         "STRREF": {
           "type": "dword",
@@ -1047,6 +1263,22 @@
                 "type": "byte",
                 "value": 105
               },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Lagerfeuer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "lagerfeuer001"
+                    }
+                  }
+                ]
+              },
               "STRREF": {
                 "type": "dword",
                 "value": 16810732
@@ -1084,6 +1316,33 @@
                     "ID": {
                       "type": "byte",
                       "value": 115
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Dirt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "dirt"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Pilz"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "pilz"
+                          }
+                        }
+                      ]
                     },
                     "STRREF": {
                       "type": "dword",
@@ -1299,6 +1558,814 @@
           "type": "byte",
           "value": 253
         },
+        "LIST": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Adamanterz"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "sw_pl_adamanterz"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Arganwurzel"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "sw_pl_arganwurze"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Arkasu"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "sw_pl_arkasu"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Badezuber"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "badezuber"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Baumstumpf"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "baumstumpf"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Besen"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "besen"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Birke"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "sw_pl_birke"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Blutfleck"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "blutfleck"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Brorkwilb"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "sw_pl_brorkwilb"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Buch"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "buch"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Carlog"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "sw_pl_carlog"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Champignon"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "sw_pl_pilz"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Chronichinis"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "sw_pl_chronichin"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Dartbord"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dartbord"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Eiche"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "sw_pl_eiche"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Eimer"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "eimer"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Eisenerz"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "sw_pl_eisenerz"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Esche"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "sw_pl_esche"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Fell"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "fell"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Fisch"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "fisch"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Flasche"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "flasche"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Fleisch"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "fleisch"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Fußabdruck"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "fussabdrucklinks"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Fußabdruck"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "fussabdruckrecht"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Gebeine"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "gebeine"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Gefäß"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "gefaess"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Gerümpel"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "abfall"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Glas"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "glas"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Harfe"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "harfe"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Hiradwurz"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "sw_pl_hiradwurz"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Hocker"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "hocker"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Holzklotz"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "holzklotz"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Holzscheite"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "holzscheite"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Holzstapel"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "holzstapel"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Kanne"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "kanne"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Karte"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "karte"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Käse"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "kaese"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Kästchen"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "kaestchen"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Kerze"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "kerze"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Kissen"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "kissen"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Kiste"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "kiste"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Kristallkugel"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "kristallkugel"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Krug"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "krug"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Kürbis"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "kuerbis"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Lagerfeuer"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "lagerfeuer2"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Lagerfeuer"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "lagerfeuer3"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Loch"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "kleinesloch"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Loch"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "lochimboden"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Mithrilerz"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "sw_pl_mithrilerz"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Mörser"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "moerser"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Netz"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "netz"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Obst"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "obst"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Rad"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "rad"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Ressource"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "ressource"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Runenkreis"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "runenkreis"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Rußfleck"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "russfleck"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Schlafplatz"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "schlafplatz"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Schuh"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "schuh"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Schüssel"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "schuessel"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Seil"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "seil2"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Spielkarten"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "spielkarten"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Staffelei"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "staffelei"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Stundenglas"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "stundenglas"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Teppich"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "teppich"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Tisch"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "tisch"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Tote Ratte"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "toteratte"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Wagen"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "wagen"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Wassereimer"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "wassereimer"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Wasserfleck"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "wasserfleck"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Wasserpfeife"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "wasserpfeife"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Wirselkraut"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "sw_pl_wirselkrau"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Würfel"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "wuerfel"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Zelt"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "zelt2"
+              }
+            }
+          ]
+        },
         "STRREF": {
           "type": "dword",
           "value": 16967227
@@ -1369,6 +2436,22 @@
               "ID": {
                 "type": "byte",
                 "value": 4
+              },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "<cÿÿÿ><cÿÿ ><cÿ ÿ><c ÿÿ><cÿ  ><c ÿ ><c  ÿ><cÿÿÿ>Color Tag Generator"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dem_color_text"
+                    }
+                  }
+                ]
               },
               "STRREF": {
                 "type": "dword",
@@ -1569,6 +2652,44 @@
                       "type": "byte",
                       "value": 74
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Seil"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "seil"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Ship"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "ship"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Steuerrad"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "steuerrad"
+                          }
+                        }
+                      ]
+                    },
                     "STRREF": {
                       "type": "dword",
                       "value": 16810780
@@ -1768,6 +2889,55 @@
                       "type": "byte",
                       "value": 125
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Taverne"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "taverne"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Taverne 2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "taverne2"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Taverne 3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "taverne3"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Taverne 4"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "taverne4"
+                          }
+                        }
+                      ]
+                    },
                     "STRREF": {
                       "type": "dword",
                       "value": 16810762
@@ -1820,6 +2990,88 @@
                 "type": "byte",
                 "value": 149
               },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Fog High"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "weather_foghigh"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Fog Icy High"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "weather_fogihigh"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Fog Icy Low"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "weather_fogilow"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Fog Icy Mid"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "weather_fogimid"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Fog Low"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "weather_foglow"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Fog Mid"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "weather_fogmid"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Portal"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "portal"
+                    }
+                  }
+                ]
+              },
               "STRREF": {
                 "type": "dword",
                 "value": 16810751
@@ -1830,6 +3082,44 @@
               "ID": {
                 "type": "byte",
                 "value": 5
+              },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Invisible Item"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "invisibleitem"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Light White"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "lightwhite"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "VFX: Fog (50m), Sparse"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "tm_pl_fog50_h002"
+                    }
+                  }
+                ]
               },
               "STRREF": {
                 "type": "dword",
