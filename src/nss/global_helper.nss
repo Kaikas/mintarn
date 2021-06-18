@@ -76,7 +76,7 @@ string ColorStrings(string sMessage, string sStart, string sEnd, string sColor) 
     sMessage = StringRemoveParsed(sMessage, sPart, sEnd);
     // If there are still delimiters in the string do it again
     sNewMessage = sNewMessage +
-        "<c" + sColor + ">" + sStart + sPart + sEnd + "</c>" +
+        "<" + sColor + ">" + sStart + sPart + sEnd + "</c>" +
         ColorStrings(sMessage, sStart, sEnd, sColor);
     return sNewMessage;
 }

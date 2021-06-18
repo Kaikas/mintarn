@@ -144,7 +144,7 @@ void main() {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             //AssignCommand(oTarget1, ActionSpeakString(sMessage, iChatVolume));
             sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
-            sMessage = ColorStrings(sMessage, "((", "))", "uuu");
+            sMessage = ColorStrings(sMessage, "((", "))", "cuuu");
             SetLocalString(oTarget1, "sMessage", sMessage);
             SetLocalInt(oTarget1, "iChatVolume", iChatVolume);
             ExecuteScript("global_speak", oTarget1);
@@ -153,7 +153,7 @@ void main() {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             //AssignCommand(oTarget2, ActionSpeakString(sMessage, iChatVolume));
             sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
-            sMessage = ColorStrings(sMessage, "((", "))", "uuu");
+            sMessage = ColorStrings(sMessage, "((", "))", "cuuu");
             SetLocalString(oTarget2, "sMessage", sMessage);
             SetLocalInt(oTarget2, "iChatVolume", iChatVolume);
             ExecuteScript("global_speak", oTarget2);
@@ -162,7 +162,7 @@ void main() {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             //AssignCommand(oTarget3, ActionSpeakString(sMessage, iChatVolume));
             sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
-            sMessage = ColorStrings(sMessage, "((", "))", "uuu");
+            sMessage = ColorStrings(sMessage, "((", "))", "cuuu");
             SetLocalString(oTarget3, "sMessage", sMessage);
             SetLocalInt(oTarget3, "iChatVolume", iChatVolume);
             ExecuteScript("global_speak", oTarget3);
@@ -171,7 +171,7 @@ void main() {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             //AssignCommand(oTarget4, ActionSpeakString(sMessage, iChatVolume));
             sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
-            sMessage = ColorStrings(sMessage, "((", "))", "uuu");
+            sMessage = ColorStrings(sMessage, "((", "))", "cuuu");
             SetLocalString(oTarget4, "sMessage", sMessage);
             SetLocalInt(oTarget4, "iChatVolume", iChatVolume);
             ExecuteScript("global_speak", oTarget4);
@@ -180,7 +180,7 @@ void main() {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             //AssignCommand(oTarget5, ActionSpeakString(sMessage, iChatVolume));
             sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
-            sMessage = ColorStrings(sMessage, "((", "))", "uuu");
+            sMessage = ColorStrings(sMessage, "((", "))", "cuuu");
             SetLocalString(oTarget5, "sMessage", sMessage);
             SetLocalInt(oTarget5, "iChatVolume", iChatVolume);
             ExecuteScript("global_speak", oTarget5);
@@ -1246,7 +1246,7 @@ void main() {
             // Normal talk
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
-            sMessage = ColorStrings(sMessage, "((", "))", "uuu");
+            sMessage = ColorStrings(sMessage, "((", "))", "cuuu");
             //AssignCommand(oPc, ActionSpeakString(sMessage, iChatVolume));
 
             SetLocalString(oPc, "sMessage", sMessage);
@@ -1257,7 +1257,7 @@ void main() {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             sMessage = "<cvvv>" + sMessage + "</c>";
             sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
-            sMessage = ColorStrings(sMessage, "((", "))", "uuu");
+            sMessage = ColorStrings(sMessage, "((", "))", "cuuu");
             //AssignCommand(oPc, ActionSpeakString(sMessage, iChatVolume));
 
             SetLocalString(oPc, "sMessage", sMessage);
@@ -1265,9 +1265,9 @@ void main() {
             ExecuteScript("global_speak", oPc);
         } else if (iChatVolume == 2) {
             // Rufen
-            sMessage = "<cÃ™Ã™#>" + sMessage + "</c>";
-            sMessage = ColorStrings(sMessage, "*", "*", "Ã™Â§`");
-            sMessage = ColorStrings(sMessage, "((", "))", "uuu");
+            sMessage = "<cþ >" + sMessage + "</c>";
+            sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
+            sMessage = ColorStrings(sMessage, "((", "))", "cuuu");
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             if (GetIsDM(oPc)) {
                 object oPlayer = GetFirstPC();
