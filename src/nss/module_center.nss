@@ -195,6 +195,8 @@ void main() {
         CreateItemOnObject("sw_we_sprichals5", oPc);
         CreateItemOnObject("sw_we_fraktion", oPc);
         CreateItemOnObject("sw_we_rasten", oPc);
+        CreateItemOnObject("sw_we_wuerfelbeu", oPc);
+        CreateItemOnObject("sw_we_zeit", oPc);
     }
 
     // Create user in database if not exists
@@ -206,9 +208,9 @@ void main() {
             string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_MODULE");
             NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, sAccountName + " hat sich eingeloggt.", "Mintarn");
         } else {
-            string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_MODULE");
-            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, "Ein Spielleiter hat sich eingeloggt.", "Mintarn");
-            webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_LOGS");
+            //string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_MODULE");
+            //NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, "Ein Spielleiter hat sich eingeloggt.", "Mintarn");
+            string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_LOGS");
             NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, sAccountName + " hat sich eingeloggt.", "Mintarn");
         }
         location loc = GetLocation(oPc);
@@ -302,7 +304,7 @@ void main() {
                     CreateItemOnObject("sw_na_braten", oPc);
                     CreateItemOnObject("sw_na_braten", oPc);
 
-                    // Gib den Würfelbeutel
+                    // Gib den Wunderbeutel
                     CreateItemOnObject("sw_we_wuerfelbeu", oPc);
                     // Gib Schurke Fallen
                     if (GetLevelByClass(CLASS_TYPE_ROGUE, oPc) > 0) {
