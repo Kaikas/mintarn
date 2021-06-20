@@ -379,7 +379,7 @@
   },
   "ScriptSpawn": {
     "type": "resref",
-    "value": "nw_ch_acani9ni9"
+    "value": "nw_ch_acani9"
   },
   "ScriptSpellAt": {
     "type": "resref",
