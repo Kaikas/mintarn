@@ -12244,7 +12244,7 @@
         },
         "OnHeartbeat": {
           "type": "resref",
-          "value": "zep_torchspawn"
+          "value": ""
         },
         "OnInvDisturbed": {
           "type": "resref",
@@ -12276,7 +12276,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "zep_torch"
+          "value": ""
         },
         "OnUserDefined": {
           "type": "resref",
