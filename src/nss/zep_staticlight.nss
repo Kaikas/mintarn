@@ -30,11 +30,12 @@
 //:: Created By:  Brent
 //:: Created On:  January 2002
 //:://////////////////////////////////////////////
-// Manuel Fierlbeck, 15.11.2014: created, based on zep_onoff
+// Manuel Fierlbeck, 15.11.2014: created, based on 
 
 void main()
 {
-    if (GetLocalInt(OBJECT_SELF, "CEP_L_AMION")) {
+    // Removed 20.06.2021
+    /*if (GetLocalInt(OBJECT_SELF, "CEP_L_AMION")) {
         DeleteLocalInt(OBJECT_SELF, "CEP_L_AMION");
         PlaySound(GetLocalString(OBJECT_SELF, "CEP_L_SOUND2"));
         DelayCommand(0.1, PlayAnimation(ANIMATION_PLACEABLE_DEACTIVATE));
@@ -46,4 +47,5 @@ void main()
         DelayCommand(2.0, SetPlaceableIllumination(OBJECT_SELF, TRUE));
     }
     DelayCommand(2.1, RecomputeStaticLighting(GetArea(OBJECT_SELF)));
+    */
 }

@@ -11806,7 +11806,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "zep_onoff"
+          "value": ""
         },
         "OnUserDefined": {
           "type": "resref",
