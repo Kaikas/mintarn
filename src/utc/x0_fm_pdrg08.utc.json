@@ -256,7 +256,7 @@
         "__struct_id": 16384,
         "EquippedRes": {
           "type": "resref",
-          "value": "x0_creatur_bite1"
+          "value": ""
         }
       },
       {

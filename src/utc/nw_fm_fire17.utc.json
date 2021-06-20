@@ -264,7 +264,7 @@
   },
   "ScriptSpellAt": {
     "type": "resref",
-    "value": "nw_ch_fmb"
+    "value": ""
   },
   "ScriptUserDefine": {
     "type": "resref",
