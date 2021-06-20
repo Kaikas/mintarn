@@ -6788,7 +6788,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "zep_use_chair"
+          "value": ""
         },
         "OnUserDefined": {
           "type": "resref",
@@ -11531,7 +11531,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "zep_use_chair"
+          "value": ""
         },
         "OnUserDefined": {
           "type": "resref",
@@ -11760,7 +11760,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "zep_use_chair"
+          "value": ""
         },
         "OnUserDefined": {
           "type": "resref",
@@ -11989,7 +11989,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "zep_use_chair"
+          "value": ""
         },
         "OnUserDefined": {
           "type": "resref",
@@ -12218,7 +12218,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "zep_use_chair"
+          "value": ""
         },
         "OnUserDefined": {
           "type": "resref",
@@ -12447,7 +12447,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "zep_use_chair"
+          "value": ""
         },
         "OnUserDefined": {
           "type": "resref",
@@ -12676,7 +12676,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "zep_use_chair"
+          "value": ""
         },
         "OnUserDefined": {
           "type": "resref",
@@ -12905,7 +12905,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "zep_use_chair"
+          "value": ""
         },
         "OnUserDefined": {
           "type": "resref",
@@ -13134,7 +13134,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "zep_use_chair"
+          "value": ""
         },
         "OnUserDefined": {
           "type": "resref",
@@ -13363,7 +13363,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "zep_use_chair"
+          "value": ""
         },
         "OnUserDefined": {
           "type": "resref",
@@ -16085,7 +16085,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "zep_use_chair"
+          "value": ""
         },
         "OnUserDefined": {
           "type": "resref",
@@ -16314,7 +16314,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "zep_use_chair"
+          "value": ""
         },
         "OnUserDefined": {
           "type": "resref",
@@ -16768,7 +16768,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "zep_use_chair"
+          "value": ""
         },
         "OnUserDefined": {
           "type": "resref",
