@@ -259,6 +259,7 @@ void main() {
             AssignCommand(oPc, JumpToLocation(GetAheadLocation(oPc)));
         // Report
         } else if (GetSubString(sMessage, 0, 7) == "/report" || GetSubString(sMessage, 0, 7) == "/melden") {
+            SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             vector vCurrentLocation = GetPosition(oPc);
             string sLogMessage = GetPCPlayerName(oPc) +
               " (" +
@@ -1038,7 +1039,9 @@ void main() {
             // Remove Collision
             } else if (sMessage == "/geist" || sMessage == "/ghost") {
                 effect eGhost = EffectCutsceneGhost();
-                ApplyEffectToObject(DURATION_TYPE_PERMANENT, eGhost, oPc);
+                ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(SupernaturalEffect(eGhost), "GHOST"), oPc);
+                SendMessageToPC(oPc, "Geist Modus für eine Minute angeschaltet.");
+                DelayCommand(60.0f, RemoveEffectByName(oPc, "GHOST"));
             // Climb
             } else if (sMessage == "/klettern" || sMessage == "/climb") {
                 if (GetTag(GetArea(oPc)) == "AREA_Freihafen" && GetDistanceBetween(oPc, GetObjectByTag("KLETTERN_Tempel")) < 2.0) {

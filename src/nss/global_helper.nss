@@ -106,6 +106,16 @@ string ColorStringsOld(string sMessage, string sStart, string sEnd, string sColo
     return sNewMessage;
 }
 
+void RemoveEffectByName(object oPc, string sEffect) {
+    effect eEffect = GetFirstEffect(oPc);
+    while(GetIsEffectValid(eEffect)) {
+        if(GetEffectTag(eEffect) == sEffect) {
+            RemoveEffect(oPc, eEffect);
+        }
+        eEffect = GetNextEffect(oPc);
+    }
+}
+
 // Rounds a float to digits
 float round(float fNumber, int iDecimalPlaces) {
     float mult = IntToFloat(10^iDecimalPlaces);
