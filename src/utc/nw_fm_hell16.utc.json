@@ -222,7 +222,7 @@
   },
   "ScriptDisturbed": {
     "type": "resref",
-    "value": "nw_ch_fm8"
+    "value": ""
   },
   "ScriptEndRound": {
     "type": "resref",
@@ -242,7 +242,7 @@
   },
   "ScriptRested": {
     "type": "resref",
-    "value": "nw_ch_aca"
+    "value": "nw_ch_acani9"
   },
   "ScriptSpawn": {
     "type": "resref",

@@ -319,7 +319,7 @@
   },
   "ScriptRested": {
     "type": "resref",
-    "value": "nw_ch_aca"
+    "value": "nw_ch_acani9"
   },
   "ScriptSpawn": {
     "type": "resref",
@@ -327,7 +327,7 @@
   },
   "ScriptSpellAt": {
     "type": "resref",
-    "value": "nw_nw_acb"
+    "value": ""
   },
   "ScriptUserDefine": {
     "type": "resref",

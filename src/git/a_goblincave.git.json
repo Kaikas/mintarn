@@ -10335,7 +10335,7 @@
         },
         "OnMeleeAttacked": {
           "type": "resref",
-          "value": "zep_demi_bone_us"
+          "value": ""
         },
         "OnOpen": {
           "type": "resref",
@@ -10343,7 +10343,7 @@
         },
         "OnSpellCastAt": {
           "type": "resref",
-          "value": "zep_demi_bone_us"
+          "value": ""
         },
         "OnTrapTriggered": {
           "type": "resref",
@@ -10355,7 +10355,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "zep_demi_bone_us"
+          "value": ""
         },
         "OnUserDefined": {
           "type": "resref",
@@ -10466,7 +10466,7 @@
         },
         "Conversation": {
           "type": "resref",
-          "value": "zep_demi_regen_c"
+          "value": ""
         },
         "CurrentHP": {
           "type": "short",
@@ -10582,7 +10582,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "zep_g0_convpripl"
+          "value": ""
         },
         "OnUserDefined": {
           "type": "resref",
