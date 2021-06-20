@@ -36,7 +36,7 @@ void bleed(object oPc) {
     if (GetLocalInt(oPc, "DYING_POINTS") > 2) {
         SetLocalInt(oPc, "DYING_POINTS", 1);
         SetLocalInt(oPc, "LIVING_POINTS", 1);
-        SendMessageToPC(oPc, "Ihr seid gestorben!");
+        SendMessageToPC(oPc, "Ihr seid gestorben! Gebt nun /sterben ein um endgültig zu sterben oder wartet auf Hilfe.");
         effect eDamage = EffectDamage(10, DAMAGE_TYPE_MAGICAL, DAMAGE_POWER_PLUS_FIVE);
         DelayCommand(5.0f, ApplyEffectToObject(DURATION_TYPE_INSTANT, eDamage, oPc));
         return;
