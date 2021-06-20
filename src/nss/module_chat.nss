@@ -140,7 +140,7 @@ void main() {
         object oTarget5 = GetLocalObject(oPc, "dmspeak5");
         sMessage = GetSubString(sMessage, 2, 10000);
 
-        if (oTarget1 != OBJECT_INVALID && sSecondChar == "1" && !GetIsPC(oTarget1) || GetIsDM(oPc)) {
+        if (oTarget1 != OBJECT_INVALID && sSecondChar == "1" && !GetIsPC(oTarget1) || oTarget1 != OBJECT_INVALID && sSecondChar == "1" && GetIsDM(oPc)) {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             //AssignCommand(oTarget1, ActionSpeakString(sMessage, iChatVolume));
             sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
@@ -149,7 +149,7 @@ void main() {
             SetLocalInt(oTarget1, "iChatVolume", iChatVolume);
             ExecuteScript("global_speak", oTarget1);
         }
-        if (oTarget2 != OBJECT_INVALID && sSecondChar == "2" && !GetIsPC(oTarget2) || GetIsDM(oPc)) {
+        if (oTarget2 != OBJECT_INVALID && sSecondChar == "2" && !GetIsPC(oTarget2) || oTarget2 != OBJECT_INVALID && sSecondChar == "2" && GetIsDM(oPc)) {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             //AssignCommand(oTarget2, ActionSpeakString(sMessage, iChatVolume));
             sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
@@ -158,7 +158,7 @@ void main() {
             SetLocalInt(oTarget2, "iChatVolume", iChatVolume);
             ExecuteScript("global_speak", oTarget2);
         }
-        if (oTarget3 != OBJECT_INVALID && sSecondChar == "3" && !GetIsPC(oTarget3) || GetIsDM(oPc)) {
+        if (oTarget3 != OBJECT_INVALID && sSecondChar == "3" && !GetIsPC(oTarget3) || oTarget3 != OBJECT_INVALID && sSecondChar == "3" && GetIsDM(oPc)) {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             //AssignCommand(oTarget3, ActionSpeakString(sMessage, iChatVolume));
             sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
@@ -167,7 +167,7 @@ void main() {
             SetLocalInt(oTarget3, "iChatVolume", iChatVolume);
             ExecuteScript("global_speak", oTarget3);
         }
-        if (oTarget4 != OBJECT_INVALID && sSecondChar == "4" && !GetIsPC(oTarget4) || GetIsDM(oPc)) {
+        if (oTarget4 != OBJECT_INVALID && sSecondChar == "4" && !GetIsPC(oTarget4) || oTarget4 != OBJECT_INVALID && sSecondChar == "4" && GetIsDM(oPc)) {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             //AssignCommand(oTarget4, ActionSpeakString(sMessage, iChatVolume));
             sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
@@ -176,7 +176,7 @@ void main() {
             SetLocalInt(oTarget4, "iChatVolume", iChatVolume);
             ExecuteScript("global_speak", oTarget4);
         }
-        if (oTarget5 != OBJECT_INVALID && sSecondChar == "5" && !GetIsPC(oTarget5) || GetIsDM(oPc)) {
+        if (oTarget5 != OBJECT_INVALID && sSecondChar == "5" && !GetIsPC(oTarget5) || oTarget5 != OBJECT_INVALID && sSecondChar == "5" && GetIsDM(oPc)) {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             //AssignCommand(oTarget5, ActionSpeakString(sMessage, iChatVolume));
             sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
@@ -1134,6 +1134,32 @@ void main() {
                 ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectResurrection(), oPc);
                 //ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectHeal(GetMaxHitPoints(oPc)), oPc);
                 RemoveEffects(oPc);
+            // DM Areae/Gebiet Message
+            } else if (GetSubString(sMessage, 0, 3) == "/g ") {
+                sMessage = "<c þ>" + sMessage + "</c>";
+                sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
+                sMessage = ColorStrings(sMessage, "((", "))", "cuuu");
+                if (GetIsDM(oPc)) {
+                    object oTalkTo = GetFirstPC();
+                    while (oTalkTo != OBJECT_INVALID) {
+                        if (GetArea(oTalkTo) == GetArea(oPc)) {
+                            SendMessageToPC(oPc, GetSubString(sMessage, 2, 10000));
+                        }
+                        oTalkTo = GetNextPC();
+                    }
+                }
+            // DM Server Message
+            } else if (GetSubString(sMessage, 0, 3) == "/s ") {
+                sMessage = "<c þ>" + sMessage + "</c>";
+                sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
+                sMessage = ColorStrings(sMessage, "((", "))", "cuuu");
+                if (GetIsDM(oPc)) {
+                    object oTalkTo = GetFirstPC();
+                    while (oTalkTo != OBJECT_INVALID) {
+                        SendMessageToPC(oPc, GetSubString(sMessage, 2, 10000));
+                        oTalkTo = GetNextPC();
+                    }
+                }
             // Info
             } else if (sMessage == "/hilfe") {
                 SendMessageToPC(oPc, "/afk\n" +
@@ -1263,17 +1289,20 @@ void main() {
             SetLocalString(oPc, "sMessage", sMessage);
             SetLocalInt(oPc, "iChatVolume", iChatVolume);
             ExecuteScript("global_speak", oPc);
-        } else if (iChatVolume == 2) {
-            // Rufen
-            sMessage = "<cþ >" + sMessage + "</c>";
+        } else if (iChatVolume == 2) { //
+            // Shout
+            sMessage = "<c þ>" + sMessage + "</c>";
             sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
             sMessage = ColorStrings(sMessage, "((", "))", "cuuu");
+            SendMessageToPC(oPc, sMessage);
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             if (GetIsDM(oPc)) {
-                object oPlayer = GetFirstPC();
-                while(GetIsObjectValid(oPlayer)) {
-                    SendMessageToPC(oPlayer, sMessage);
-                    oPlayer = GetNextPC();
+                object oTalkTo = GetFirstPC();
+                while (oTalkTo != OBJECT_INVALID) {
+                    if (GetArea(oTalkTo) == GetArea(oPc) && GetDistanceBetween(OBJECT_SELF, oPc) < 50.0) {
+                        SendMessageToPC(oTalkTo, sMessage);
+                    }
+                    oTalkTo = GetNextPC();
                 }
             }
         } else if (iChatVolume == 5) {
@@ -1327,7 +1356,4 @@ void main() {
         NWNX_SQL_PreparedString(3, IntToString(NWNX_Time_GetTimeStamp()));
         NWNX_SQL_ExecutePreparedQuery();
     }
-
-    // DMFI
-    //ExecuteScript("dmfi_onplychat",OBJECT_SELF);
 }
