@@ -414,7 +414,7 @@ void main() {
                     //ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(GetMaxHitPoints(oPc) - 1), oPc);
                     // Negative Level
                     if (GetLevelByPosition(0, oPc) + GetLevelByPosition(1, oPc) + GetLevelByPosition(2, oPc) > 1) {
-                        ApplyEffectToObject(DURATION_TYPE_TEMPORARY, EffectNegativeLevel(1), oPc, 600.0f);
+                        ApplyEffectToObject(DURATION_TYPE_TEMPORARY, SupernaturalEffect(EffectNegativeLevel(1)), oPc, 600.0f);
                     }
                     // Apply Speed debuff again after dying
                     // Fackel
