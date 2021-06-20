@@ -1309,6 +1309,25 @@
                           },
                           "NAME": {
                             "type": "cexostring",
+                            "value": "Biene (Haustier)"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "pet_biene"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "CR": {
+                            "type": "float",
+                            "value": 1.0
+                          },
+                          "FACTION": {
+                            "type": "cexostring",
+                            "value": "Fauna"
+                          },
+                          "NAME": {
+                            "type": "cexostring",
                             "value": "Dachs"
                           },
                           "RESREF": {
@@ -1333,6 +1352,25 @@
                           "RESREF": {
                             "type": "resref",
                             "value": "eichhoernchen"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "CR": {
+                            "type": "float",
+                            "value": 1.0
+                          },
+                          "FACTION": {
+                            "type": "cexostring",
+                            "value": "Fauna"
+                          },
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eichhörnchen (Haustier)"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "pet_eichhoernche"
                           }
                         },
                         {
@@ -1548,6 +1586,25 @@
                           "__struct_id": 0,
                           "CR": {
                             "type": "float",
+                            "value": 1.0
+                          },
+                          "FACTION": {
+                            "type": "cexostring",
+                            "value": "Fauna"
+                          },
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Hund (Haustier)"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "pet_hund"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "CR": {
+                            "type": "float",
                             "value": 2.0
                           },
                           "FACTION": {
@@ -1599,6 +1656,25 @@
                           "RESREF": {
                             "type": "resref",
                             "value": "katze2"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "CR": {
+                            "type": "float",
+                            "value": 0.125
+                          },
+                          "FACTION": {
+                            "type": "cexostring",
+                            "value": "Fauna"
+                          },
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Katze (Haustier)"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "pet_katze"
                           }
                         },
                         {
@@ -1731,7 +1807,26 @@
                           },
                           "RESREF": {
                             "type": "resref",
-                            "value": "rabe001"
+                            "value": "moewe"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "CR": {
+                            "type": "float",
+                            "value": 0.125
+                          },
+                          "FACTION": {
+                            "type": "cexostring",
+                            "value": "Fauna"
+                          },
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Möwe (Haustier)"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "pet_moewe"
                           }
                         },
                         {
@@ -1808,6 +1903,25 @@
                           "RESREF": {
                             "type": "resref",
                             "value": "huhn001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "CR": {
+                            "type": "float",
+                            "value": 0.25
+                          },
+                          "FACTION": {
+                            "type": "cexostring",
+                            "value": "Fauna"
+                          },
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Papagei (Haustier)"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "pet_papagei"
                           }
                         },
                         {
@@ -2069,6 +2183,25 @@
                           },
                           "NAME": {
                             "type": "cexostring",
+                            "value": "Spatz (Haustier)"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "pet_spatz"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "CR": {
+                            "type": "float",
+                            "value": 1.0
+                          },
+                          "FACTION": {
+                            "type": "cexostring",
+                            "value": "Fauna"
+                          },
+                          "NAME": {
+                            "type": "cexostring",
                             "value": "Stinktier"
                           },
                           "RESREF": {
@@ -2131,6 +2264,25 @@
                           "RESREF": {
                             "type": "resref",
                             "value": "waschbaer"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "CR": {
+                            "type": "float",
+                            "value": 1.0
+                          },
+                          "FACTION": {
+                            "type": "cexostring",
+                            "value": "Fauna"
+                          },
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Waschbär (Haustier)"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "pet_waschbaer"
                           }
                         },
                         {
@@ -5427,14 +5579,6 @@
             },
             {
               "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 15.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
               "NAME": {
                 "type": "cexostring",
                 "value": "CEP Sample Tinted Creature"

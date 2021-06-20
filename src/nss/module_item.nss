@@ -713,6 +713,10 @@ void main() {
     if (GetTag(oItem) == "SW_Zeit") {
         AssignCommand(oPc, ActionStartConversation(oPc, "sw_zeit", TRUE));
     }
+    // SW Haustier
+    if (GetTag(oItem) == "SW_Haustier") {
+        AssignCommand(oPc, ActionStartConversation(oPc, "sw_haustier", TRUE));
+    }
 
 
 

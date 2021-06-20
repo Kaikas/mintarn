@@ -306,6 +306,8 @@ void main() {
 
                     // Gib den Wunderbeutel
                     CreateItemOnObject("sw_we_wuerfelbeu", oPc);
+                    // Gib das Pet Item
+                    CreateItemOnObject("sw_we_haustier", oPc);
                     // Gib Schurke Fallen
                     if (GetLevelByClass(CLASS_TYPE_ROGUE, oPc) > 0) {
                         CreateItemOnObject("sw_fa_klin1", oPc);

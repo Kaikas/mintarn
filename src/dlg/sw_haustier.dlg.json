@@ -1,0 +1,691 @@
+{
+  "__data_type": "DLG ",
+  "DelayEntry": {
+    "type": "dword",
+    "value": 0
+  },
+  "DelayReply": {
+    "type": "dword",
+    "value": 0
+  },
+  "EndConverAbort": {
+    "type": "resref",
+    "value": "nw_walk_wp"
+  },
+  "EndConversation": {
+    "type": "resref",
+    "value": "nw_walk_wp"
+  },
+  "EntryList": {
+    "type": "list",
+    "value": [
+      {
+        "__struct_id": 0,
+        "ActionParams": {
+          "type": "list",
+          "value": []
+        },
+        "Animation": {
+          "type": "dword",
+          "value": 0
+        },
+        "AnimLoop": {
+          "type": "byte",
+          "value": 1
+        },
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Delay": {
+          "type": "dword",
+          "value": 4294967295
+        },
+        "Quest": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "RepliesList": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "Active": {
+                "type": "resref",
+                "value": ""
+              },
+              "ConditionParams": {
+                "type": "list",
+                "value": []
+              },
+              "Index": {
+                "type": "dword",
+                "value": 7
+              },
+              "IsChild": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 1,
+              "Active": {
+                "type": "resref",
+                "value": ""
+              },
+              "ConditionParams": {
+                "type": "list",
+                "value": []
+              },
+              "Index": {
+                "type": "dword",
+                "value": 6
+              },
+              "IsChild": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 2,
+              "Active": {
+                "type": "resref",
+                "value": ""
+              },
+              "ConditionParams": {
+                "type": "list",
+                "value": []
+              },
+              "Index": {
+                "type": "dword",
+                "value": 5
+              },
+              "IsChild": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 3,
+              "Active": {
+                "type": "resref",
+                "value": ""
+              },
+              "ConditionParams": {
+                "type": "list",
+                "value": []
+              },
+              "Index": {
+                "type": "dword",
+                "value": 4
+              },
+              "IsChild": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 4,
+              "Active": {
+                "type": "resref",
+                "value": ""
+              },
+              "ConditionParams": {
+                "type": "list",
+                "value": []
+              },
+              "Index": {
+                "type": "dword",
+                "value": 3
+              },
+              "IsChild": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 5,
+              "Active": {
+                "type": "resref",
+                "value": ""
+              },
+              "ConditionParams": {
+                "type": "list",
+                "value": []
+              },
+              "Index": {
+                "type": "dword",
+                "value": 2
+              },
+              "IsChild": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 6,
+              "Active": {
+                "type": "resref",
+                "value": ""
+              },
+              "ConditionParams": {
+                "type": "list",
+                "value": []
+              },
+              "Index": {
+                "type": "dword",
+                "value": 1
+              },
+              "IsChild": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 7,
+              "Active": {
+                "type": "resref",
+                "value": ""
+              },
+              "ConditionParams": {
+                "type": "list",
+                "value": []
+              },
+              "Index": {
+                "type": "dword",
+                "value": 0
+              },
+              "IsChild": {
+                "type": "byte",
+                "value": 0
+              }
+            }
+          ]
+        },
+        "Script": {
+          "type": "resref",
+          "value": ""
+        },
+        "Sound": {
+          "type": "resref",
+          "value": ""
+        },
+        "Speaker": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Text": {
+          "type": "cexolocstring",
+          "value": {
+            "0": "Dies ist ihr persönlicher Haustieromat. Welches Haustier darf es denn heute sein?"
+          }
+        }
+      }
+    ]
+  },
+  "NumWords": {
+    "type": "dword",
+    "value": 22
+  },
+  "PreventZoomIn": {
+    "type": "byte",
+    "value": 0
+  },
+  "ReplyList": {
+    "type": "list",
+    "value": [
+      {
+        "__struct_id": 0,
+        "ActionParams": {
+          "type": "list",
+          "value": []
+        },
+        "Animation": {
+          "type": "dword",
+          "value": 0
+        },
+        "AnimLoop": {
+          "type": "byte",
+          "value": 1
+        },
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Delay": {
+          "type": "dword",
+          "value": 4294967295
+        },
+        "EntriesList": {
+          "type": "list",
+          "value": []
+        },
+        "Quest": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Script": {
+          "type": "resref",
+          "value": ""
+        },
+        "Sound": {
+          "type": "resref",
+          "value": ""
+        },
+        "Text": {
+          "type": "cexolocstring",
+          "value": {
+            "0": "Beenden"
+          }
+        }
+      },
+      {
+        "__struct_id": 1,
+        "ActionParams": {
+          "type": "list",
+          "value": []
+        },
+        "Animation": {
+          "type": "dword",
+          "value": 0
+        },
+        "AnimLoop": {
+          "type": "byte",
+          "value": 1
+        },
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Delay": {
+          "type": "dword",
+          "value": 4294967295
+        },
+        "EntriesList": {
+          "type": "list",
+          "value": []
+        },
+        "Quest": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Script": {
+          "type": "resref",
+          "value": "sw_haustier_rem"
+        },
+        "Sound": {
+          "type": "resref",
+          "value": ""
+        },
+        "Text": {
+          "type": "cexolocstring",
+          "value": {
+            "0": "Haustier wieder einpacken."
+          }
+        }
+      },
+      {
+        "__struct_id": 2,
+        "ActionParams": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "Key": {
+                "type": "cexostring",
+                "value": "pet"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "pet_papagei"
+              }
+            }
+          ]
+        },
+        "Animation": {
+          "type": "dword",
+          "value": 0
+        },
+        "AnimLoop": {
+          "type": "byte",
+          "value": 1
+        },
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Delay": {
+          "type": "dword",
+          "value": 4294967295
+        },
+        "EntriesList": {
+          "type": "list",
+          "value": []
+        },
+        "Quest": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Script": {
+          "type": "resref",
+          "value": "sw_haustier"
+        },
+        "Sound": {
+          "type": "resref",
+          "value": ""
+        },
+        "Text": {
+          "type": "cexolocstring",
+          "value": {
+            "0": "Papagei"
+          }
+        }
+      },
+      {
+        "__struct_id": 3,
+        "ActionParams": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "Key": {
+                "type": "cexostring",
+                "value": "pet"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "pet_waschbaer"
+              }
+            }
+          ]
+        },
+        "Animation": {
+          "type": "dword",
+          "value": 0
+        },
+        "AnimLoop": {
+          "type": "byte",
+          "value": 1
+        },
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Delay": {
+          "type": "dword",
+          "value": 4294967295
+        },
+        "EntriesList": {
+          "type": "list",
+          "value": []
+        },
+        "Quest": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Script": {
+          "type": "resref",
+          "value": "sw_haustier"
+        },
+        "Sound": {
+          "type": "resref",
+          "value": ""
+        },
+        "Text": {
+          "type": "cexolocstring",
+          "value": {
+            "0": "Waschbär"
+          }
+        }
+      },
+      {
+        "__struct_id": 4,
+        "ActionParams": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "Key": {
+                "type": "cexostring",
+                "value": "pet"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "pet_eichhoernche"
+              }
+            }
+          ]
+        },
+        "Animation": {
+          "type": "dword",
+          "value": 0
+        },
+        "AnimLoop": {
+          "type": "byte",
+          "value": 1
+        },
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Delay": {
+          "type": "dword",
+          "value": 4294967295
+        },
+        "EntriesList": {
+          "type": "list",
+          "value": []
+        },
+        "Quest": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Script": {
+          "type": "resref",
+          "value": "sw_haustier"
+        },
+        "Sound": {
+          "type": "resref",
+          "value": ""
+        },
+        "Text": {
+          "type": "cexolocstring",
+          "value": {
+            "0": "Eichhörnchen"
+          }
+        }
+      },
+      {
+        "__struct_id": 5,
+        "ActionParams": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "Key": {
+                "type": "cexostring",
+                "value": "pet"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "pet_hund"
+              }
+            }
+          ]
+        },
+        "Animation": {
+          "type": "dword",
+          "value": 0
+        },
+        "AnimLoop": {
+          "type": "byte",
+          "value": 1
+        },
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Delay": {
+          "type": "dword",
+          "value": 4294967295
+        },
+        "EntriesList": {
+          "type": "list",
+          "value": []
+        },
+        "Quest": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Script": {
+          "type": "resref",
+          "value": "sw_haustier"
+        },
+        "Sound": {
+          "type": "resref",
+          "value": ""
+        },
+        "Text": {
+          "type": "cexolocstring",
+          "value": {
+            "0": "Hund"
+          }
+        }
+      },
+      {
+        "__struct_id": 6,
+        "ActionParams": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "Key": {
+                "type": "cexostring",
+                "value": "pet"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "pet_biene"
+              }
+            }
+          ]
+        },
+        "Animation": {
+          "type": "dword",
+          "value": 0
+        },
+        "AnimLoop": {
+          "type": "byte",
+          "value": 1
+        },
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Delay": {
+          "type": "dword",
+          "value": 4294967295
+        },
+        "EntriesList": {
+          "type": "list",
+          "value": []
+        },
+        "Quest": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Script": {
+          "type": "resref",
+          "value": "sw_haustier"
+        },
+        "Sound": {
+          "type": "resref",
+          "value": ""
+        },
+        "Text": {
+          "type": "cexolocstring",
+          "value": {
+            "0": "Biene"
+          }
+        }
+      },
+      {
+        "__struct_id": 7,
+        "ActionParams": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "Key": {
+                "type": "cexostring",
+                "value": "pet"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "pet_katze"
+              }
+            }
+          ]
+        },
+        "Animation": {
+          "type": "dword",
+          "value": 0
+        },
+        "AnimLoop": {
+          "type": "byte",
+          "value": 1
+        },
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Delay": {
+          "type": "dword",
+          "value": 4294967295
+        },
+        "EntriesList": {
+          "type": "list",
+          "value": []
+        },
+        "Quest": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Script": {
+          "type": "resref",
+          "value": "sw_haustier"
+        },
+        "Sound": {
+          "type": "resref",
+          "value": ""
+        },
+        "Text": {
+          "type": "cexolocstring",
+          "value": {
+            "0": "Katze"
+          }
+        }
+      }
+    ]
+  },
+  "StartingList": {
+    "type": "list",
+    "value": [
+      {
+        "__struct_id": 0,
+        "Active": {
+          "type": "resref",
+          "value": ""
+        },
+        "ConditionParams": {
+          "type": "list",
+          "value": []
+        },
+        "Index": {
+          "type": "dword",
+          "value": 0
+        }
+      }
+    ]
+  }
+}

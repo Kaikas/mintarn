@@ -7744,6 +7744,17 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
+                      "value": "Haustieromat"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_we_haustier"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
                       "value": "Holzfälleraxt"
                     },
                     "RESREF": {
