@@ -244,11 +244,11 @@
   },
   "ScriptRested": {
     "type": "resref",
-    "value": "nw_ch_aca"
+    "value": "nw_ch_acani9"
   },
   "ScriptSpawn": {
     "type": "resref",
-    "value": "nw_ch_acani9"
+    "value": "nw_ch_acani9ni9"
   },
   "ScriptSpellAt": {
     "type": "resref",
