@@ -46,7 +46,7 @@ void main() {
         int iWindStrength = GetLocalInt(oModule, "windstrength");
         string sWindDirection = GetLocalString(oModule, "sWindDirection");
         int iRain = GetLocalInt(oModule, "rain");
-        SendMessageToPC(oPlayer, "<cvvv>Es ist der " +
+        SendMessageToPC(oPc, "<cvvv>Es ist der " +
             LeadingZeros(IntToString(GetCalendarDay()), 2) +
             "." + LeadingZeros(IntToString(GetCalendarMonth()), 2) +
             "." + LeadingZeros(IntToString(GetCalendarYear()), 2) +
@@ -56,24 +56,24 @@ void main() {
             LeadingZeros(IntToString(GetTimeMinute()), 2) +
             "Uhr.</c>");
             //+ LeadingZeros(IntToString(GetTimeMinute()), 2) + " Uhr.</c>");
-        //SendMessageToPC(oPlayer, IntToString(GetCalendarDay()) + "." + IntToString(GetCalendarMonth()) + "." + IntToString(GetCalendarYear()) + " - " + IntToString(GetTimeHour()) + ":00 Uhr");
-        SendMessageToPC(oPlayer, "<cvvv>Die Auﬂentemperatur betr‰gt " + IntToString(iTemperatur) + "∞C</c>");
+        //SendMessageToPC(oPc, IntToString(GetCalendarDay()) + "." + IntToString(GetCalendarMonth()) + "." + IntToString(GetCalendarYear()) + " - " + IntToString(GetTimeHour()) + ":00 Uhr");
+        SendMessageToPC(oPc, "<cvvv>Die Auﬂentemperatur betr‰gt " + IntToString(iTemperatur) + "∞C</c>");
         string sWindStrength;
         // Possible: N, NO, O, SO, S, SW, W, NW
         // Sehr stark (5), Strong (4), medium (3), weak (2), windstill (1)
         if (iWindStrength == 1) {
-            SendMessageToPC(oPlayer, "<cvvv>Es ist windstill.</c>");
+            SendMessageToPC(oPc, "<cvvv>Es ist windstill.</c>");
         } else if (iWindStrength == 2) {
-            SendMessageToPC(oPlayer, "<cvvv>Es weht ein schwacher " + sWindDirection + " .</c>");
+            SendMessageToPC(oPc, "<cvvv>Es weht ein schwacher " + sWindDirection + " .</c>");
         } else if (iWindStrength == 3) {
-            SendMessageToPC(oPlayer, "<cvvv>Es weht ein mittelstarker " + sWindDirection + ".</c>");
+            SendMessageToPC(oPc, "<cvvv>Es weht ein mittelstarker " + sWindDirection + ".</c>");
         } else if (iWindStrength == 4) {
-            SendMessageToPC(oPlayer, "<cvvv>Es weht ein starker " + sWindDirection + "</c>");
+            SendMessageToPC(oPc, "<cvvv>Es weht ein starker " + sWindDirection + "</c>");
         } else if (iWindStrength == 5) {
-            SendMessageToPC(oPlayer, "<cvvv>Es weht ein sehr starker " + sWindDirection + ".</c>");
+            SendMessageToPC(oPc, "<cvvv>Es weht ein sehr starker " + sWindDirection + ".</c>");
         }
         if (GetTimeHour() > GetLocalInt(oModule, sDay + "fog_start") && GetTimeHour() < GetLocalInt(oModule, sDay + "fog_end") && iWindStrength < 3 && (iRain == 1 || iRain == 3)) {
-            SendMessageToPC(oPlayer, "<cvvv>Nebel schr‰nkt die Sicht ein.</c>");
+            SendMessageToPC(oPc, "<cvvv>Nebel schr‰nkt die Sicht ein.</c>");
         }
         // Nether
         if (GetTag(OBJECT_SELF) == "AREA_Nether") {
@@ -84,12 +84,12 @@ void main() {
 
         // If first player, fill area
         int iPlayers = 0;
-        object oPlayer = GetFirstPC();
-        while(GetIsObjectValid(oPlayer)) {
-            if (GetTag(GetArea(oPlayer)) ==  GetTag(GetArea(oPc))) {
+        object oPc = GetFirstPC();
+        while(GetIsObjectValid(oPc)) {
+            if (GetTag(GetArea(oPc)) ==  GetTag(GetArea(oPc))) {
                 iPlayers++;
             }
-            oPlayer = GetNextPC();
+            oPc = GetNextPC();
         }
         if (iPlayers < 2) {
             // Set refresh tag
@@ -115,7 +115,7 @@ void main() {
             }
 
             // Create Traps
-            object oObject = GetFirstObjectInArea(OBJECT_SELF);
+            oObject = GetFirstObjectInArea(OBJECT_SELF);
             while(GetIsObjectValid(oObject)) {
                  if(GetTag(oObject) == "TRAP") {
                      DestroyObject(oObject);
