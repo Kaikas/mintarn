@@ -1404,6 +1404,25 @@
                           },
                           "NAME": {
                             "type": "cexostring",
+                            "value": "Eidechse (Haustier)"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "pet_eidechse"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "CR": {
+                            "type": "float",
+                            "value": 1.0
+                          },
+                          "FACTION": {
+                            "type": "cexostring",
+                            "value": "Fauna"
+                          },
+                          "NAME": {
+                            "type": "cexostring",
                             "value": "Esel"
                           },
                           "RESREF": {
@@ -1561,6 +1580,25 @@
                           "RESREF": {
                             "type": "resref",
                             "value": "huhn"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "CR": {
+                            "type": "float",
+                            "value": 1.0
+                          },
+                          "FACTION": {
+                            "type": "cexostring",
+                            "value": "Fauna"
+                          },
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Hummel (Haustier)"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "pet_hummel"
                           }
                         },
                         {
