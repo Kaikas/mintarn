@@ -337,7 +337,8 @@ void main() {
                         GetPCPlayerName(oPc) == "Kane" ||
                         GetPCPlayerName(oPc) == "Mira" ||
                         GetPCPlayerName(oPc) == "Silberfunken73" ||
-                        GetPCPlayerName(oPc) == "Wilbur") {
+                        GetPCPlayerName(oPc) == "Wilbur" ||
+                        GetPCPlayerName(oPc) == "Sanginius") {
                         CreateItemOnObject("sw_we_alpha", oPc);
                     }
                     // Update database
