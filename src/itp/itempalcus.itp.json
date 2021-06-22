@@ -7238,6 +7238,17 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
+                      "value": "Alpha Abzeichen"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_we_alpha"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
                       "value": "Alte Münze"
                     },
                     "RESREF": {

@@ -736,4 +736,11 @@ void main() {
             SendMessageToPC(oPc, "Das könnt ihr hier nicht benutzen!");
         }
     }
+
+    // SW Alpha Badge
+    if (GetTag(oItem) == "SW_Alpha") {
+        ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(SupernaturalEffect(EffectVisualEffect(VFX_DUR_LIGHT_RED_5)), "eff_alphalight"), oPc);
+        DelayCommand(2.0f, RemoveEffectByName(oPc, "eff_alphalight"));
+    }
+
 }
