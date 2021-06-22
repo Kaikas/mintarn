@@ -1148,7 +1148,18 @@ void main() {
                 } else {
                     SendMessageToPC(oPc, "Muss das Format \"/settime 20:00\" haben.");
                 }
-
+            // Initiative
+            } else if (sMessage == "/initiative") {
+                int iInitiativeRoll = d20();
+                sMessage = "<cuuu>Initiative (d20 + Dex): [" +
+                    IntToString(iInitiativeRoll) +
+                    " + " + IntToString(GetAbilityModifier(ABILITY_DEXTERITY, oPc)) +
+                    "] = " +
+                    IntToString(iInitiativeRoll + GetAbilityModifier(ABILITY_DEXTERITY, oPc)) +
+                    "</c>";
+                SetLocalString(oPc, "sMessage", sMessage);
+                SetLocalInt(oPc, "iChatVolume", iChatVolume);
+                ExecuteScript("global_speak", oPc);
             // DM Areae/Gebiet Message
             } else if (GetSubString(sMessage, 0, 3) == "/g ") {
                 sMessage = "<c þ>" + sMessage + "</c>";
@@ -1186,6 +1197,7 @@ void main() {
                                     "/companion\n" +
                                     "/sterben\n" +
                                     "/zeit\n" +
+                                    "/initiative" +
                                     "\nCharakter löschen:\n" +
                                     "/delete\n" +
                                     "\nAussehen editieren:\n" +
