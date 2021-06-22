@@ -35,7 +35,7 @@ void main() {
    if (GetGameDifficulty() ==  GAME_DIFFICULTY_CORE_RULES || GetGameDifficulty() ==  GAME_DIFFICULTY_DIFFICULT) {
         SetModuleSwitch (MODULE_SWITCH_ENABLE_UMD_SCROLLS, TRUE);
    }
-   SetModuleSwitch (MODULE_SWITCH_ENABLE_TAGBASED_SCRIPTS, TRUE);
+   SetModuleSwitch (MODULE_SWITCH_ENABLE_TAGBASED_SCRIPTS, FALSE);
    if (GetModuleSwitchValue (MODULE_SWITCH_ENABLE_TAGBASED_SCRIPTS) == TRUE) {
    }
    if (GetModuleSwitchValue(MODULE_SWITCH_USE_XP2_RESTSYSTEM) == TRUE) {
