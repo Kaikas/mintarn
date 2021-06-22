@@ -391,5 +391,5 @@ void main() {
     }
 
     // Random walk
-    ActionRandomWalk();
+    //ActionRandomWalk();
 }
