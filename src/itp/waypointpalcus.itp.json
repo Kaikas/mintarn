@@ -41,6 +41,22 @@
                 "type": "byte",
                 "value": 1
               },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "FALLE_KLINGE1"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "falle_klinge1"
+                    }
+                  }
+                ]
+              },
               "STRREF": {
                 "type": "dword",
                 "value": 6689

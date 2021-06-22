@@ -1,5 +1,6 @@
 #include "nwnx_sql"
 #include "nw_i0_tool"
+#include "global_money"
 
 void main() {
     object oPc = GetPCSpeaker();
@@ -337,7 +338,24 @@ void main() {
     // Bedürftige
     if (GetScriptParam("item") == "25gold") {
         object oPc = GetPCSpeaker();
-        TakeGold(25, oPc);
+        int nGold  = GetGold(oPc);
+
+        if (!GetLocalInt(oPc, "COIN_DESTRUCTION_PREVENTION")) {
+            MONEY_TurnCoinsIntoGP(oPc);
+            SetLocalInt(oPc, "COIN_DESTRUCTION_PREVENTION", TRUE);
+            DelayCommand(0.1, DeleteLocalInt(oPc, "COIN_DESTRUCTION_PREVENTION"));
+
+            // Remove the coins
+            TakeGold(3, oPc);
+
+            if (!GetIsPC(oPc) || !nGold)
+                return;
+            // Give coin money:
+            MONEY_GiveCoinMoneyWorth(nGold, oPc);
+
+            // Destroy the ingame-gold of the player:
+            TakeGoldFromCreature(nGold, oPc, TRUE);
+        }
     }
     // Bedürftige Pilzragout
     if (GetScriptParam("item") == "sw_we_beduerftige") {

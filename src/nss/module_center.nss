@@ -308,6 +308,10 @@ void main() {
                     CreateItemOnObject("sw_we_wuerfelbeu", oPc);
                     // Gib das Pet Item
                     CreateItemOnObject("sw_we_haustier", oPc);
+                    // Gib drei Rückrufsteine
+                    CreateItemOnObject("sw_we_rueckruf", oPc);
+                    CreateItemOnObject("sw_we_rueckruf", oPc);
+                    CreateItemOnObject("sw_we_rueckruf", oPc);
                     // Gib Schurke Fallen
                     if (GetLevelByClass(CLASS_TYPE_ROGUE, oPc) > 0) {
                         CreateItemOnObject("sw_fa_klin1", oPc);
@@ -338,7 +342,7 @@ void main() {
                     NWNX_SQL_PreparedInt(18, GetAlignmentGoodEvil(oPc));
                     NWNX_SQL_PreparedInt(19, GetAlignmentLawChaos(oPc));
                     NWNX_SQL_PreparedString(20, GenerateToken());
-                    NWNX_SQL_PreparedString(21, IntToString(NWNX_Time_GetTimeStamp()));
+                    NWNX_SQL_PreparedString(21, "0"); //IntToString(NWNX_Time_GetTimeStamp())
                     NWNX_SQL_PreparedInt(22, GetCurrentHitPoints(oPc));
                     NWNX_SQL_PreparedInt(23, GetMaxHitPoints(oPc));
                     NWNX_SQL_PreparedInt(24, 0);

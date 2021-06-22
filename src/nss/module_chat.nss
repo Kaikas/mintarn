@@ -1008,7 +1008,7 @@ void main() {
                     NWNX_SQL_PreparedString(1, sName);
                     NWNX_SQL_ExecutePreparedQuery();
                     NWNX_SQL_ReadNextRow();
-                    SendMessageToPC(oPc, "Um den Charakter unwiderruflich und endgültig zu lÃ¶schen /delete " + NWNX_SQL_ReadDataInActiveRow(0) + " eingeben.");
+                    SendMessageToPC(oPc, "Um den Charakter unwiderruflich und endgültig zu löschen /delete " + NWNX_SQL_ReadDataInActiveRow(0) + " eingeben.");
                 }
             // Unterschlupf /hindurchzwängen
             } else if (sMessage == "/hindurchzwängen") {
@@ -1137,6 +1137,29 @@ void main() {
                 ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectResurrection(), oPc);
                 //ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectHeal(GetMaxHitPoints(oPc)), oPc);
                 RemoveEffects(oPc);
+            // Zeit
+            } else if (sMessage == "/zeit") {
+                SendMessageToPC(oPc, "<cuuu>Es ist " + LeadingZeros(IntToString(GetTimeHour()), 2) + ":" + LeadingZeros(IntToString(GetTimeMinute()), 2)  + " Uhr.</c>");
+            // Zeit
+            } else if (GetSubString(sMessage, 0, 9) == "/settime " && GetIsDM(oPc)) {
+                if (IsANumber(GetSubString(sMessage, 9, 1)) && IsANumber(GetSubString(sMessage, 10, 1)) && IsANumber(GetSubString(sMessage, 12, 1)) && IsANumber(GetSubString(sMessage, 13, 1))) {
+                    SetTime(StringToInt(GetSubString(sMessage, 9, 2)), StringToInt(GetSubString(sMessage, 12, 2)), 0, 0);
+                    SendMessageToPC(oPc, "<cuuu>Es ist " + IntToString(GetTimeHour()) + ":" + IntToString(GetTimeMinute())  + " Uhr.</c>");
+                } else {
+                    SendMessageToPC(oPc, "Muss das Format \"/settime 20:00\" haben.");
+                }
+            // Initiative
+            } else if (sMessage == "/initiative") {
+                int iInitiativeRoll = d20();
+                sMessage = "<cuuu>Initiative (d20 + Dex): [" +
+                    IntToString(iInitiativeRoll) +
+                    " + " + IntToString(GetAbilityModifier(ABILITY_DEXTERITY, oPc)) +
+                    "] = " +
+                    IntToString(iInitiativeRoll + GetAbilityModifier(ABILITY_DEXTERITY, oPc)) +
+                    "</c>";
+                SetLocalString(oPc, "sMessage", sMessage);
+                SetLocalInt(oPc, "iChatVolume", iChatVolume);
+                ExecuteScript("global_speak", oPc);
             // DM Areae/Gebiet Message
             } else if (GetSubString(sMessage, 0, 3) == "/g ") {
                 sMessage = "<c þ>" + sMessage + "</c>";
@@ -1173,6 +1196,8 @@ void main() {
                                     "/familiar\n" +
                                     "/companion\n" +
                                     "/sterben\n" +
+                                    "/zeit\n" +
+                                    "/initiative" +
                                     "\nCharakter löschen:\n" +
                                     "/delete\n" +
                                     "\nAussehen editieren:\n" +
@@ -1308,6 +1333,9 @@ void main() {
                     oTalkTo = GetNextPC();
                 }
             }
+        } else if (iChatVolume == 4) {
+            SendMessageToPC(oPc, "<cuuu>DM: " + sMessage + "</c>");
+            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", NWNX_Util_GetEnvironmentVariable("WEBHOOK_LOGS"), GetPCPlayerName(oPc) + " - " + GetName(oPc) + ": " + sMessage);
         } else if (iChatVolume == 5) {
             // Gruppe
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);

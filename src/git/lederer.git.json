@@ -13142,11 +13142,11 @@
         },
         "OnOpenStore": {
           "type": "resref",
-          "value": ""
+          "value": "global_storeopen"
         },
         "OnStoreClosed": {
           "type": "resref",
-          "value": ""
+          "value": "global_storeclos"
         },
         "ResRef": {
           "type": "resref",
