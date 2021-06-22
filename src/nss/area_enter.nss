@@ -115,18 +115,18 @@ void main() {
             }
 
             // Create Traps
-            object oObject = GetFirstObjectInArea(oArea);
+            object oObject = GetFirstObjectInArea(OBJECT_SELF);
             while(GetIsObjectValid(oObject)) {
                  if(GetTag(oObject) == "TRAP") {
                      DestroyObject(oObject);
                  }
-                 oObject = GetNextObjectInArea(oArea);
+                 oObject = GetNextObjectInArea(OBJECT_SELF);
             }
             while(GetIsObjectValid(oObject)) {
                  if(GetTag(oObject) == "FALLE_KLINGE1") {
                      CreateTrapAtLocation(50, GetLocation(GetNearestObjectByTag("FALLE_KLINGE1")), 1.0f, "TRAP");
                  }
-                 oObject = GetNextObjectInArea(oArea);
+                 oObject = GetNextObjectInArea(OBJECT_SELF);
             }
 
             // Create new ressource
