@@ -46,3 +46,11 @@ jobs:
       # Start the server
       - name: Start the dev server
         run: docker-compose -f ~/nwn/docker-compose.yml up -d
+        
+      # Copy files to download folder
+      - name: Copy files to donwload folder
+        run: |
+          cp Mintarn.mod ~/nwn/website/download/Mintarn.mod
+          cp ~/nwn/server/tlk/mintarn.tlk ~/nwn/website/download/mintarn.tlk
+          cp ~/nwn/server/hak/mintarn.hak ~/nwn/website/download/mintarn.hak
+          
