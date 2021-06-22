@@ -131,7 +131,7 @@ void main() {
                             healPets(oPc);
                         }
                     }
-                    SetLocalInt(oPc, "rast", 0);
+                    return;
                 } else if (GetLocalInt(oPc, "rast") == 2) {
                     // Short break
                     if (CountGoodFood(oPc) > 0) {
@@ -159,6 +159,7 @@ void main() {
                             SetLocalInt(oPc, "rast_short", GetLocalInt(oPc, "rast_short") + 1);
                         }
                     }
+                    return;
                 } else if (GetLocalInt(oPc, "rast") == 0 && GetLocalInt(oPc, "rast_short") > 3) {
                     AssignCommand(oPc, ClearAllActions());
                     DelayCommand(0.0, ExecuteScript("rest_startc2", oPc));

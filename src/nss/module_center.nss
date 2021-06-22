@@ -338,7 +338,7 @@ void main() {
                     NWNX_SQL_PreparedInt(18, GetAlignmentGoodEvil(oPc));
                     NWNX_SQL_PreparedInt(19, GetAlignmentLawChaos(oPc));
                     NWNX_SQL_PreparedString(20, GenerateToken());
-                    NWNX_SQL_PreparedString(21, IntToString(NWNX_Time_GetTimeStamp()));
+                    NWNX_SQL_PreparedString(21, "0"); //IntToString(NWNX_Time_GetTimeStamp())
                     NWNX_SQL_PreparedInt(22, GetCurrentHitPoints(oPc));
                     NWNX_SQL_PreparedInt(23, GetMaxHitPoints(oPc));
                     NWNX_SQL_PreparedInt(24, 0);
