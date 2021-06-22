@@ -308,6 +308,10 @@ void main() {
                     CreateItemOnObject("sw_we_wuerfelbeu", oPc);
                     // Gib das Pet Item
                     CreateItemOnObject("sw_we_haustier", oPc);
+                    // Gib drei Rückrufsteine
+                    CreateItemOnObject("sw_we_rueckruf", oPc);
+                    CreateItemOnObject("sw_we_rueckruf", oPc);
+                    CreateItemOnObject("sw_we_rueckruf", oPc);
                     // Gib Schurke Fallen
                     if (GetLevelByClass(CLASS_TYPE_ROGUE, oPc) > 0) {
                         CreateItemOnObject("sw_fa_klin1", oPc);
