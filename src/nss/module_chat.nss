@@ -1321,6 +1321,9 @@ void main() {
                     oTalkTo = GetNextPC();
                 }
             }
+        } else if (iChatVolume == 4) {
+            SendMessageToPC(oPc, "<cuuu>DM: " + sMessage + "</c>");
+            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", NWNX_Util_GetEnvironmentVariable("WEBHOOK_LOGS"), GetPCPlayerName(oPc) + " - " + GetName(oPc) + ": " + sMessage);
         } else if (iChatVolume == 5) {
             // Gruppe
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
