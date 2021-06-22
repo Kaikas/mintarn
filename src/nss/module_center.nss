@@ -320,6 +320,26 @@ void main() {
                         CreateItemOnObject("sw_fa_klin1", oPc);
                         CreateItemOnObject("sw_fa_klin1", oPc);
                     }
+                    // Gib Alpha Testern ihre Belohnung
+                    if (GetPCPlayerName(oPc) == "Kaikas" ||
+                        GetPCPlayerName(oPc) == "enikross" ||
+                        GetPCPlayerName(oPc) == "Nordwind" ||
+                        GetPCPlayerName(oPc) == "Martermaske" ||
+                        GetPCPlayerName(oPc) == "Sonnenfeuer" ||
+                        GetPCPlayerName(oPc) == "Grashnak1" ||
+                        GetPCPlayerName(oPc) == "Lina" ||
+                        GetPCPlayerName(oPc) == "Victorious" ||
+                        GetPCPlayerName(oPc) == "Morgenstern" ||
+                        GetPCPlayerName(oPc) == "Northeast" ||
+                        GetPCPlayerName(oPc) == "Geonox" ||
+                        GetPCPlayerName(oPc) == "Bolgfred" ||
+                        GetPCPlayerName(oPc) == "Astraios" ||
+                        GetPCPlayerName(oPc) == "Kane" ||
+                        GetPCPlayerName(oPc) == "Mira" ||
+                        GetPCPlayerName(oPc) == "Silberfunken73" ||
+                        GetPCPlayerName(oPc) == "Wilbur") {
+                        CreateItemOnObject("sw_we_alpha", oPc);
+                    }
                     // Update database
                     NWNX_SQL_PreparedString(0, sAccountName);
                     NWNX_SQL_PreparedString(1, sName);
