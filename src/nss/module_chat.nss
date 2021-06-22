@@ -1008,7 +1008,7 @@ void main() {
                     NWNX_SQL_PreparedString(1, sName);
                     NWNX_SQL_ExecutePreparedQuery();
                     NWNX_SQL_ReadNextRow();
-                    SendMessageToPC(oPc, "Um den Charakter unwiderruflich und endgültig zu lÃ¶schen /delete " + NWNX_SQL_ReadDataInActiveRow(0) + " eingeben.");
+                    SendMessageToPC(oPc, "Um den Charakter unwiderruflich und endgültig zu löschen /delete " + NWNX_SQL_ReadDataInActiveRow(0) + " eingeben.");
                 }
             // Unterschlupf /hindurchzwängen
             } else if (sMessage == "/hindurchzwängen") {
