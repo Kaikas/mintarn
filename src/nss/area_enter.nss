@@ -75,11 +75,14 @@ void main() {
         if (GetTimeHour() > GetLocalInt(oModule, sDay + "fog_start") && GetTimeHour() < GetLocalInt(oModule, sDay + "fog_end") && iWindStrength < 3 && (iRain == 1 || iRain == 3)) {
             SendMessageToPC(oPlayer, "<cvvv>Nebel schränkt die Sicht ein.</c>");
         }
+        // Nether
         if (GetTag(OBJECT_SELF) == "AREA_Nether") {
             string sMessage = "Ihr seid gestorben. Wenn ihr betet könnte sich ein Gott eurer annehmen. (( Gebt /beten ein. ))";
             SendMessageToPC(oPc, sMessage);
             return;
         }
+
+        // If first player, fill area
         int iPlayers = 0;
         object oPlayer = GetFirstPC();
         while(GetIsObjectValid(oPlayer)) {
@@ -109,6 +112,21 @@ void main() {
                    DestroyObject(oObject);
                 }
                 oObject = GetNextObjectInArea(OBJECT_SELF);
+            }
+
+            // Create Traps
+            object oObject = GetFirstObjectInArea(oArea);
+            while(GetIsObjectValid(oObject)) {
+                 if(GetTag(oObject) == "TRAP") {
+                     DestroyObject(oObject);
+                 }
+                 oObject = GetNextObjectInArea(oArea);
+            }
+            while(GetIsObjectValid(oObject)) {
+                 if(GetTag(oObject) == "FALLE_KLINGE1") {
+                     CreateTrapAtLocation(50, GetLocation(GetNearestObjectByTag("FALLE_KLINGE1")), 1.0f, "TRAP");
+                 }
+                 oObject = GetNextObjectInArea(oArea);
             }
 
             // Create new ressource
