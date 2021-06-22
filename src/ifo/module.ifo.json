@@ -239,7 +239,7 @@
   },
   "Mod_CustomTlk": {
     "type": "cexostring",
-    "value": "cep260"
+    "value": "mintarn"
   },
   "Mod_CutSceneList": {
     "type": "list",
@@ -273,15 +273,15 @@
   },
   "Mod_Entry_X": {
     "type": "float",
-    "value": 3.6223
+    "value": 3.0
   },
   "Mod_Entry_Y": {
     "type": "float",
-    "value": 24.1712
+    "value": 24.0
   },
   "Mod_Entry_Z": {
     "type": "float",
-    "value": -0.0
+    "value": 0.0
   },
   "Mod_Expan_List": {
     "type": "list",
