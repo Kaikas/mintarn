@@ -121,3 +121,19 @@ float round(float fNumber, int iDecimalPlaces) {
     float mult = IntToFloat(10^iDecimalPlaces);
     return IntToFloat(FloatToInt(fNumber * mult + 0.5)) / mult;
 }
+
+int IsANumber(string sInput) {
+    if (sInput == "0" ||
+        sInput == "1" ||
+        sInput == "2" ||
+        sInput == "3" ||
+        sInput == "4" ||
+        sInput == "5" ||
+        sInput == "6" ||
+        sInput == "7" ||
+        sInput == "8" ||
+        sInput == "9") {
+        return 1;
+    }
+    return 0;
+}
