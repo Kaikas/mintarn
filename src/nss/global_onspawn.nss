@@ -11,6 +11,7 @@ void main() {
         oWp = GetNextWaypoint(oWp, GetTag(OBJECT_SELF));
         if (oWp != OBJECT_INVALID) {
             float fTimer = GetLocalFloat(oWp, "RESTART");
+            fTimer = 60.0f;
             while (GetTag(oWp) != "") {
                 if (GetLocalString(oWp, "ACTION") == "WALK") {
                     ActionMoveToObject(oWp);
