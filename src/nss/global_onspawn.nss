@@ -4,6 +4,7 @@
 #include "nw_i0_generic"
 
 void main() {
+    return;
     // Trigger AI scripts for NPC_ targets
     string sType = GetSubString(GetTag(OBJECT_SELF), 0, 4);
     if (sType == "NPC_") {
