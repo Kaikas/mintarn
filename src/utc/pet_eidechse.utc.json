@@ -2,7 +2,7 @@
   "__data_type": "UTC ",
   "Appearance_Type": {
     "type": "word",
-    "value": 3260
+    "value": 3283
   },
   "BodyBag": {
     "type": "byte",
@@ -107,7 +107,7 @@
     "id": 12457,
     "type": "cexolocstring",
     "value": {
-      "0": "Eichhörnchen (Haustier)"
+      "0": "Eidechse (Haustier)"
     }
   },
   "fortbonus": {
@@ -186,7 +186,7 @@
   },
   "PortraitId": {
     "type": "word",
-    "value": 602
+    "value": 625
   },
   "Race": {
     "type": "byte",
@@ -534,7 +534,7 @@
   },
   "Tag": {
     "type": "cexostring",
-    "value": "PET_Eichhoernchen"
+    "value": "PET_Eidechse"
   },
   "Tail_New": {
     "type": "dword",
@@ -546,7 +546,7 @@
   },
   "TemplateResRef": {
     "type": "resref",
-    "value": "pet_eichhoernche"
+    "value": "pet_eidechse"
   },
   "WalkRate": {
     "type": "int",
