@@ -44189,7 +44189,7 @@
   },
   "Tileset": {
     "type": "resref",
-    "value": "tcm01"
+    "value": "tcm02"
   },
   "Width": {
     "type": "int",
