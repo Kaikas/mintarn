@@ -551,13 +551,13 @@ void main() {
     if (GetTag(oItem) == "CRAFT_RezeptGrosserHeiltrank")
         CraftItem(oPc, 1, "sw_tr_grosseheil", "CRAFT_LeereFlasche", 1, "CRAFT_Chronichinis", 1, "", 0, "Alchemie", "CRAFT_RezeptGrosserHeiltrank", FALSE, 490, "Experte");
     if (GetTag(oItem) == "CRAFT_RezeptTrankDesKlarenVersta")
-        CraftItem(oPc, 1, "sw_tr_klarervers", "CRAFT_LeereFlasche", 1, "CRAFT_Brorkwilb", 1, "", 0, "Alchemie", "CRAFT_RezeptTrankDesKlarenVersta", FALSE, 40, "Lehrling");
+        CraftItem(oPc, 1, "sw_tr_klarervers", "CRAFT_LeereFlasche", 1, "CRAFT_Brorkwilb", 1, "", 0, "Alchemie", "CRAFT_RezeptTrankDesKlarenVersta", FALSE, 90, "Lehrling");
     if (GetTag(oItem) == "CRAFT_RezeptTrankDerUnsichtbarke")
         CraftItem(oPc, 1, "sw_tr_unsichtbar", "CRAFT_LeereFlasche", 1, "CRAFT_Wirselkraut", 1, "", 0, "Alchemie", "CRAFT_RezeptTrankDerUnsichtbarke", FALSE, 990, "Experte");
     if (GetTag(oItem) == "CRAFT_RezeptTrankDerNachtsicht")
         CraftItem(oPc, 1, "sw_tr_nachtsicht", "CRAFT_LeereFlasche", 1, "CRAFT_Carlog", 1, "", 0, "Alchemie", "CRAFT_RezeptTrankDerNachtsicht", FALSE, 490, "Experte");
     if (GetTag(oItem) == "CRAFT_RezeptTrankDesGegenmittels")
-        CraftItem(oPc, 1, "sw_tr_gegenmitte", "CRAFT_LeereFlasche", 1, "CRAFT_Hiradwurz", 1, "", 0, "Alchemie", "CRAFT_RezeptTrankDesGegenmittels", FALSE, 40, "Lehrling");
+        CraftItem(oPc, 1, "sw_tr_gegenmitte", "CRAFT_LeereFlasche", 1, "CRAFT_Hiradwurz", 1, "", 0, "Alchemie", "CRAFT_RezeptTrankDesGegenmittels", FALSE, 90, "Lehrling");
 
     // DM Items
 
