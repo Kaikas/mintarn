@@ -143,8 +143,8 @@ void main() {
         if (oTarget1 != OBJECT_INVALID && sSecondChar == "1" && !GetIsPC(oTarget1) || oTarget1 != OBJECT_INVALID && sSecondChar == "1" && GetIsDM(oPc)) {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             //AssignCommand(oTarget1, ActionSpeakString(sMessage, iChatVolume));
-            sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
-            sMessage = ColorStrings(sMessage, "((", "))", "cuuu");
+            sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
+            sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
             SetLocalString(oTarget1, "sMessage", sMessage);
             SetLocalInt(oTarget1, "iChatVolume", iChatVolume);
             ExecuteScript("global_speak", oTarget1);
@@ -152,8 +152,8 @@ void main() {
         if (oTarget2 != OBJECT_INVALID && sSecondChar == "2" && !GetIsPC(oTarget2) || oTarget2 != OBJECT_INVALID && sSecondChar == "2" && GetIsDM(oPc)) {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             //AssignCommand(oTarget2, ActionSpeakString(sMessage, iChatVolume));
-            sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
-            sMessage = ColorStrings(sMessage, "((", "))", "cuuu");
+            sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
+            sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
             SetLocalString(oTarget2, "sMessage", sMessage);
             SetLocalInt(oTarget2, "iChatVolume", iChatVolume);
             ExecuteScript("global_speak", oTarget2);
@@ -161,8 +161,8 @@ void main() {
         if (oTarget3 != OBJECT_INVALID && sSecondChar == "3" && !GetIsPC(oTarget3) || oTarget3 != OBJECT_INVALID && sSecondChar == "3" && GetIsDM(oPc)) {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             //AssignCommand(oTarget3, ActionSpeakString(sMessage, iChatVolume));
-            sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
-            sMessage = ColorStrings(sMessage, "((", "))", "cuuu");
+            sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
+            sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
             SetLocalString(oTarget3, "sMessage", sMessage);
             SetLocalInt(oTarget3, "iChatVolume", iChatVolume);
             ExecuteScript("global_speak", oTarget3);
@@ -170,8 +170,8 @@ void main() {
         if (oTarget4 != OBJECT_INVALID && sSecondChar == "4" && !GetIsPC(oTarget4) || oTarget4 != OBJECT_INVALID && sSecondChar == "4" && GetIsDM(oPc)) {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             //AssignCommand(oTarget4, ActionSpeakString(sMessage, iChatVolume));
-            sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
-            sMessage = ColorStrings(sMessage, "((", "))", "cuuu");
+            sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
+            sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
             SetLocalString(oTarget4, "sMessage", sMessage);
             SetLocalInt(oTarget4, "iChatVolume", iChatVolume);
             ExecuteScript("global_speak", oTarget4);
@@ -179,8 +179,8 @@ void main() {
         if (oTarget5 != OBJECT_INVALID && sSecondChar == "5" && !GetIsPC(oTarget5) || oTarget5 != OBJECT_INVALID && sSecondChar == "5" && GetIsDM(oPc)) {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             //AssignCommand(oTarget5, ActionSpeakString(sMessage, iChatVolume));
-            sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
-            sMessage = ColorStrings(sMessage, "((", "))", "cuuu");
+            sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
+            sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
             SetLocalString(oTarget5, "sMessage", sMessage);
             SetLocalInt(oTarget5, "iChatVolume", iChatVolume);
             ExecuteScript("global_speak", oTarget5);
@@ -1139,19 +1139,19 @@ void main() {
                 RemoveEffects(oPc);
             // Zeit
             } else if (sMessage == "/zeit") {
-                SendMessageToPC(oPc, "<cuuu>Es ist " + LeadingZeros(IntToString(GetTimeHour()), 2) + ":" + LeadingZeros(IntToString(GetTimeMinute()), 2)  + " Uhr.</c>");
+                SendMessageToPC(oPc, GetToken(102) + "Es ist " + LeadingZeros(IntToString(GetTimeHour()), 2) + ":" + LeadingZeros(IntToString(GetTimeMinute()), 2)  + " Uhr.</c>");
             // Zeit
             } else if (GetSubString(sMessage, 0, 9) == "/settime " && GetIsDM(oPc)) {
                 if (IsANumber(GetSubString(sMessage, 9, 1)) && IsANumber(GetSubString(sMessage, 10, 1)) && IsANumber(GetSubString(sMessage, 12, 1)) && IsANumber(GetSubString(sMessage, 13, 1))) {
                     SetTime(StringToInt(GetSubString(sMessage, 9, 2)), StringToInt(GetSubString(sMessage, 12, 2)), 0, 0);
-                    SendMessageToPC(oPc, "<cuuu>Es ist " + IntToString(GetTimeHour()) + ":" + IntToString(GetTimeMinute())  + " Uhr.</c>");
+                    SendMessageToPC(oPc, GetToken(102) + "Es ist " + IntToString(GetTimeHour()) + ":" + IntToString(GetTimeMinute())  + " Uhr.</c>");
                 } else {
                     SendMessageToPC(oPc, "Muss das Format \"/settime 20:00\" haben.");
                 }
             // Initiative
             } else if (sMessage == "/initiative") {
                 int iInitiativeRoll = d20();
-                sMessage = "<cuuu>Initiative (d20 + Dex): [" +
+                sMessage = GetToken(102) + "Initiative (d20 + Dex): [" +
                     IntToString(iInitiativeRoll) +
                     " + " + IntToString(GetAbilityModifier(ABILITY_DEXTERITY, oPc)) +
                     "] = " +
@@ -1162,9 +1162,9 @@ void main() {
                 ExecuteScript("global_speak", oPc);
             // DM Areae/Gebiet Message
             } else if (GetSubString(sMessage, 0, 3) == "/g ") {
-                sMessage = "<c þ>" + sMessage + "</c>";
-                sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
-                sMessage = ColorStrings(sMessage, "((", "))", "cuuu");
+                sMessage = GetToken(104) + sMessage + "</c>";
+                sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
+                sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
                 if (GetIsDM(oPc)) {
                     object oTalkTo = GetFirstPC();
                     while (oTalkTo != OBJECT_INVALID) {
@@ -1176,9 +1176,9 @@ void main() {
                 }
             // DM Server Message
             } else if (GetSubString(sMessage, 0, 3) == "/s ") {
-                sMessage = "<c þ>" + sMessage + "</c>";
-                sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
-                sMessage = ColorStrings(sMessage, "((", "))", "cuuu");
+                sMessage = GetToken(104) + sMessage + "</c>";
+                sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
+                sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
                 if (GetIsDM(oPc)) {
                     object oTalkTo = GetFirstPC();
                     while (oTalkTo != OBJECT_INVALID) {
@@ -1299,8 +1299,8 @@ void main() {
         if (iChatVolume == 0) {
             // Normal talk
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
-            sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
-            sMessage = ColorStrings(sMessage, "((", "))", "cuuu");
+            sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
+            sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
             //AssignCommand(oPc, ActionSpeakString(sMessage, iChatVolume));
 
             SetLocalString(oPc, "sMessage", sMessage);
@@ -1309,9 +1309,9 @@ void main() {
         } else if (iChatVolume == 1) {
             // Whisper
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
-            sMessage = "<cvvv>" + sMessage + "</c>";
-            sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
-            sMessage = ColorStrings(sMessage, "((", "))", "cuuu");
+            sMessage = GetToken(103) + sMessage + "</c>";
+            sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
+            sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
             //AssignCommand(oPc, ActionSpeakString(sMessage, iChatVolume));
 
             SetLocalString(oPc, "sMessage", sMessage);
@@ -1319,9 +1319,9 @@ void main() {
             ExecuteScript("global_speak", oPc);
         } else if (iChatVolume == 2) { //
             // Shout
-            sMessage = "<c þ>" + sMessage + "</c>";
-            sMessage = ColorStrings(sMessage, "*", "*", "cþf ");
-            sMessage = ColorStrings(sMessage, "((", "))", "cuuu");
+            sMessage = GetToken(104) + sMessage + "</c>";
+            sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
+            sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
             SendMessageToPC(oPc, sMessage);
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             if (GetIsDM(oPc)) {
@@ -1334,12 +1334,12 @@ void main() {
                 }
             }
         } else if (iChatVolume == 4) {
-            SendMessageToPC(oPc, "<cuuu>DM: " + sMessage + "</c>");
+            SendMessageToPC(oPc, GetToken(102) + "DM: " + sMessage + "</c>");
             NWNX_WebHook_SendWebHookHTTPS("discordapp.com", NWNX_Util_GetEnvironmentVariable("WEBHOOK_LOGS"), GetPCPlayerName(oPc) + " - " + GetName(oPc) + ": " + sMessage);
         } else if (iChatVolume == 5) {
             // Gruppe
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
-            sMessage = "<cTÃT>" + sMessage + "</c>";
+            sMessage = GetToken(104) + sMessage + "</c>";
             // Does not work as inteded. Fix incoming
             NWNX_Chat_SendMessage(6, sMessage, oPc, OBJECT_INVALID);
 

@@ -1,3 +1,5 @@
+#include "global_helper"
+
 void main() {
     object oPc = GetLastUsedBy();
     // Prevent spam
@@ -7,7 +9,7 @@ void main() {
 
         string sMessage = "";
         if (GetTag(OBJECT_SELF) == "OBELISK_TAVERNE") {
-            sMessage = "<cuuu>Ein Signal der Götter! " + GetName(oPc) + " hat den Obelisk in Freihafen bei der Taverne \"Zum rettenden Ufer\" benutzt.";
+            sMessage = GetToken(102) + "Ein Signal der Götter! " + GetName(oPc) + " hat den Obelisk in Freihafen bei der Taverne \"Zum rettenden Ufer\" benutzt.</c>";
         }
 
         object oTarget = GetFirstPC();

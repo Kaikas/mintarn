@@ -1,3 +1,5 @@
+#include "global_helper"
+
 location GetLocationAboveAndInFrontOf(object oPC, float fDist, float fHeight)
 {
     float fDistance = -fDist;
@@ -23,7 +25,7 @@ void SmokePipe(object oActivator)
 {
     SendMessageToPC(oActivator, "debug");
 
-    string sEmote1 = "<c٧`>*raucht Pfeife*";
+    string sEmote1 = GetToken(101) + "*raucht Pfeife*";
     float fHeight = 1.7;
     float fDistance = 0.1;
     // Set height based on race and gender
