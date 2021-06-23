@@ -152,7 +152,7 @@
   },
   "PaletteID": {
     "type": "byte",
-    "value": 90
+    "value": 2
   },
   "Plot": {
     "type": "byte",
@@ -160,7 +160,7 @@
   },
   "PortraitId": {
     "type": "word",
-    "value": 10232
+    "value": 0
   },
   "Ref": {
     "type": "byte",

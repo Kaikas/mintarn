@@ -5617,17 +5617,6 @@
             },
             {
               "__struct_id": 0,
-              "NAME": {
-                "type": "cexostring",
-                "value": "CEP Sample Tinted Creature"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "zep_sampletint"
-              }
-            },
-            {
-              "__struct_id": 0,
               "CR": {
                 "type": "float",
                 "value": 2.0
