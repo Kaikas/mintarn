@@ -25,8 +25,8 @@ void main() {
                 }
                 if (GetLocalString(oWp, "ACTION") == "SPEAK") {
                     string sMessage = GetLocalString(oWp, "SPEAK");
-                    sMessage = ColorStrings(sMessage, "*", "*", "٧`");
-                    sMessage = ColorStrings(sMessage, "((", "))", "uuu");
+                    sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
+                    sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
                     ActionDoCommand(SpeakString(sMessage));
                 }
                 if (GetLocalString(oWp, "ACTION") == "EMOTE") {
