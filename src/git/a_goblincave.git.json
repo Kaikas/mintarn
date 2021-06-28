@@ -11279,7 +11279,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "global_switchli2"
+          "value": "u_lights"
         },
         "OnUserDefined": {
           "type": "resref",
@@ -32094,7 +32094,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "global_switchli2"
+          "value": "u_lights"
         },
         "OnUserDefined": {
           "type": "resref",
@@ -73163,7 +73163,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "global_switchli2"
+          "value": "u_lights"
         },
         "OnUserDefined": {
           "type": "resref",

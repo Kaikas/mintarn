@@ -7,7 +7,7 @@
 #include "nwnx_webhook"
 #include "nwnx_events"
 #include "nwnx_skillranks"
-#include "global_lighting"
+#include "g_lights"
 
 // Erstellt metainformationen die auf der webseite und auf hinweisschildern stehen
 void CreateMeta(string tag, string text) {
@@ -451,10 +451,14 @@ void main() {
     NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_ALIGNMENT_AFTER", "e_dmalignme");
 
     // Lighting
-    ReplaceLightWaypoints();
-    ToggleAllLightsWithTag("LIGHT_DAYTIME");
-    ToggleAllLightsWithTag("LIGHT_NIGHTTIME");
-    ToggleAllLightsWithTag("LIGHT_ALWAYS");
-    ToggleDayNightLighting(); // pseudo-heartbeat
+    int iDawn = 7;
+    int iDusk = 17;
+    CreateLightsAtWaypoints();
+    ManipulateAllLightsWithTag("LIGHT_DAYTIME", 1);
+    ManipulateAllLightsWithTag("LIGHT_NIGHTTIME", 0);
+    ManipulateAllLightsWithTag("LIGHT_ALWAYS", 1);
+    ManipulateAllLightsWithTag("LIGHT_Dauerlicht", 1);
+    SetLocalString(GetModule(), "LIGHTS_TIME", "INIT");
+    LightHeartbeat(iDawn, iDusk); // pseudo-heartbeat
 
 }
