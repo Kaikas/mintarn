@@ -79,14 +79,95 @@ void healPets(object oPc) {
     }
 }
 
+// Starts rest conversation
+void RestConversation(object oPc) {
+    AssignCommand(oPc, ClearAllActions());
+    ActionStartConversation(OBJECT_SELF, "rasten", TRUE);
+}
+
+// Start rest conversation without short rest
+void RestConversationNoShort(object oPc) {
+    AssignCommand(oPc, ClearAllActions());
+    ActionStartConversation(OBJECT_SELF, "rasten2", TRUE);
+}
+
+// Full Rest
+void RestFull(object oPc) {
+    string sAccountName = GetPCPlayerName(oPc);
+    string sName = GetName(oPc);
+    string sQuery = "SELECT rest FROM Users WHERE name=? AND charname=?";
+    int iTimeSinceLastRest;
+    if (NWNX_SQL_PrepareQuery(sQuery)) {
+        NWNX_SQL_PreparedString(0, sAccountName);
+        NWNX_SQL_PreparedString(1, sName);
+        NWNX_SQL_ExecutePreparedQuery();
+        NWNX_SQL_ReadNextRow();
+        iTimeSinceLastRest = NWNX_Time_GetTimeStamp() - StringToInt(NWNX_SQL_ReadDataInActiveRow(0));
+    }
+    if (CountFood(oPc) == 0) {
+        SendMessageToPC(oPc, "Ihr habt nicht genug Nahrung um zu Rasten!");
+        AssignCommand(oPc, ClearAllActions());
+    } else {
+        if (iTimeSinceLastRest < 14400) {
+            SendMessageToPC(oPc, "Ihr müsst noch " + 
+                IntToString((1 + (14400 - iTimeSinceLastRest) / 60) / 60) + 
+                " Stunden und " + 
+                IntToString((1 + (14400 - iTimeSinceLastRest) / 60) % 60) + 
+                " Minuten warten bis ihr erneut rasten könnt!");
+            AssignCommand(oPc, ClearAllActions());
+        } else {
+            sQuery = "UPDATE Users SET rest=? WHERE name=? AND charname=?";
+            if (NWNX_SQL_PrepareQuery(sQuery)) {
+                NWNX_SQL_PreparedString(0, IntToString(NWNX_Time_GetTimeStamp()));
+                NWNX_SQL_PreparedString(1, sAccountName);
+                NWNX_SQL_PreparedString(2, sName);
+                NWNX_SQL_ExecutePreparedQuery();
+            }
+            // Refresh short rest
+            SetLocalInt(oPc, "rast_short", 0);
+            SetLocalInt(oPc, "rast", 0);
+            DeleteFood(oPc);
+            healPets(oPc);
+        }
+    }
+}
+
+// Short rest
+void RestShort(object oPc) {
+    if (CountGoodFood(oPc) > 0) {
+        SendMessageToPC(oPc, "Ihr habt hervorragende Nahrung dabei! Eure Rast ist erholsamer.");
+        DeleteGoodFood(oPc);
+        AssignCommand(oPc, ClearAllActions());
+        AssignCommand(oPc, ActionPlayAnimation(ANIMATION_LOOPING_SIT_CROSS, 1.0, 5.0));
+        NWNX_Player_StartGuiTimingBar(oPc, 5.0);
+        effect eRegen = EffectRegenerate(GetMaxHitPoints(oPc) / 5 + 2, 1.0);
+        ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eRegen, oPc, 5.0);
+        SetLocalInt(oPc, "rast", 0);
+        SetLocalInt(oPc, "rast_short", GetLocalInt(oPc, "rast_short") + 1);
+    } else {
+        if (CountFood(oPc) == 0) {
+            SendMessageToPC(oPc, "Ihr habt nicht genug Nahrung um zu Rasten!");
+            AssignCommand(oPc, ClearAllActions());
+        } else {
+            DeleteFood(oPc);
+            AssignCommand(oPc, ClearAllActions());
+            AssignCommand(oPc, ActionPlayAnimation(ANIMATION_LOOPING_SIT_CROSS, 1.0, 5.0));
+            NWNX_Player_StartGuiTimingBar(oPc, 5.0);
+            effect eRegen = EffectRegenerate(GetMaxHitPoints(oPc) / 10 + 2, 1.0);
+            ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eRegen, oPc, 5.0);
+            SetLocalInt(oPc, "rast", 0);
+            SetLocalInt(oPc, "rast_short", GetLocalInt(oPc, "rast_short") + 1);
+        }
+    }
+
+}
+
+
 // Rastsystem
 void main() {
     object oPc = GetLastPCRested();
     int iRestType = GetLastRestEventType();
-    int iTimeSinceLastRest;
     string sQuery;
-    string sAccountName = GetPCPlayerName(oPc);
-    string sName = GetName(oPc);
     if (GetHasEffect(EFFECT_TYPE_NEGATIVELEVEL, oPc)) {
        AssignCommand(oPc, ClearAllActions());
        SendMessageToPC(oPc, "Ihr seid gestorben und könnt noch nicht rasten.");
@@ -94,75 +175,22 @@ void main() {
     switch (iRestType) {
         case REST_EVENTTYPE_REST_STARTED:
             if (GetTag(GetArea(oPc)) == "AREA_UnterDeck") {
-
+              //pass
             } else {
-                if (GetLocalInt(oPc, "rast") == 0 && GetLocalInt(oPc, "rast_short") <= 3) {
-                    AssignCommand(oPc, ClearAllActions());
-                    DelayCommand(0.0, ExecuteScript("rest_startc", oPc));
+                // Start rest conversation
+                if (GetLocalInt(oPc, "rast") == 0 && GetLocalInt(oPc, "rast_short") <= 2) {
+                    RestConversation(oPc);
                     return;
+                // Full rest
                 } else if (GetLocalInt(oPc, "rast") == 1) {
-                    // Full Rest
-                    sQuery = "SELECT rest FROM Users WHERE name=? AND charname=?";
-                    if (NWNX_SQL_PrepareQuery(sQuery)) {
-                        NWNX_SQL_PreparedString(0, sAccountName);
-                        NWNX_SQL_PreparedString(1, sName);
-                        NWNX_SQL_ExecutePreparedQuery();
-                        NWNX_SQL_ReadNextRow();
-                        iTimeSinceLastRest = NWNX_Time_GetTimeStamp() - StringToInt(NWNX_SQL_ReadDataInActiveRow(0));
-                    }
-                    if (CountFood(oPc) == 0) {
-                        SendMessageToPC(oPc, "Ihr habt nicht genug Nahrung um zu Rasten!");
-                        AssignCommand(oPc, ClearAllActions());
-                    } else {
-                        if (iTimeSinceLastRest < 14400) {
-                            SendMessageToPC(oPc, "Ihr müsst noch " + IntToString((1 + (14400 - iTimeSinceLastRest) / 60) / 60) + " Stunden und " + IntToString((1 + (14400 - iTimeSinceLastRest) / 60) % 60) + " Minuten warten bis ihr erneut rasten könnt!");
-                            AssignCommand(oPc, ClearAllActions());
-                        } else {
-                            sQuery = "UPDATE Users SET rest=? WHERE name=? AND charname=?";
-                            if (NWNX_SQL_PrepareQuery(sQuery)) {
-                                NWNX_SQL_PreparedString(0, IntToString(NWNX_Time_GetTimeStamp()));
-                                NWNX_SQL_PreparedString(1, sAccountName);
-                                NWNX_SQL_PreparedString(2, sName);
-                                NWNX_SQL_ExecutePreparedQuery();
-                            }
-                            // Refresh short rest
-                            SetLocalInt(oPc, "rast_short", 0);
-                            DeleteFood(oPc);
-                            healPets(oPc);
-                        }
-                    }
+                    RestFull(oPc);
                     return;
+                // Short rest
                 } else if (GetLocalInt(oPc, "rast") == 2) {
-                    // Short break
-                    if (CountGoodFood(oPc) > 0) {
-                        SendMessageToPC(oPc, "Ihr habt hervorragende Nahrung dabei! Eure Rast ist erholsamer.");
-                        DeleteGoodFood(oPc);
-                        AssignCommand(oPc, ClearAllActions());
-                        AssignCommand(oPc, ActionPlayAnimation(ANIMATION_LOOPING_SIT_CROSS, 1.0, 5.0));
-                        NWNX_Player_StartGuiTimingBar(oPc, 5.0);
-                        effect eRegen = EffectRegenerate(GetMaxHitPoints(oPc) / 5 + 2, 1.0);
-                        ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eRegen, oPc, 5.0);
-                        SetLocalInt(oPc, "rast", 0);
-                        SetLocalInt(oPc, "rast_short", GetLocalInt(oPc, "rast_short") + 1);
-                    } else {
-                        if (CountFood(oPc) == 0) {
-                            SendMessageToPC(oPc, "Ihr habt nicht genug Nahrung um zu Rasten!");
-                            AssignCommand(oPc, ClearAllActions());
-                        } else {
-                            DeleteFood(oPc);
-                            AssignCommand(oPc, ClearAllActions());
-                            AssignCommand(oPc, ActionPlayAnimation(ANIMATION_LOOPING_SIT_CROSS, 1.0, 5.0));
-                            NWNX_Player_StartGuiTimingBar(oPc, 5.0);
-                            effect eRegen = EffectRegenerate(GetMaxHitPoints(oPc) / 10 + 2, 1.0);
-                            ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eRegen, oPc, 5.0);
-                            SetLocalInt(oPc, "rast", 0);
-                            SetLocalInt(oPc, "rast_short", GetLocalInt(oPc, "rast_short") + 1);
-                        }
-                    }
+                    RestShort(oPc);
                     return;
-                } else if (GetLocalInt(oPc, "rast") == 0 && GetLocalInt(oPc, "rast_short") > 3) {
-                    AssignCommand(oPc, ClearAllActions());
-                    DelayCommand(0.0, ExecuteScript("rest_startc2", oPc));
+                } else if (GetLocalInt(oPc, "rast") == 0 && GetLocalInt(oPc, "rast_short") > 2) {
+                    RestConversationNoShort(oPc);
                     return;
                 }
             }
