@@ -237,10 +237,10 @@ void main() {
                 DelayCommand(0.0, AssignCommand(oPc, JumpToLocation(lStart)));
                 // Description
                 string sDescription = NWNX_SQL_ReadDataInActiveRow(14);
-                SendMessageToPC(oPc, sDescription);
+                //SendMessageToPC(oPc, sDescription);
                 StringReplace(sDescription, "<br>", "\n");
                 StringReplace(sDescription, "<br />", "\n");
-                SendMessageToPC(oPc, sDescription);
+                //SendMessageToPC(oPc, sDescription);
                 SetDescription(oPc, sDescription);
                 // Hitpoints
                 //NWNX_Feedback_SetCombatLogMessageHidden(11, 1);
