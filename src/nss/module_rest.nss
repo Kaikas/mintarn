@@ -82,12 +82,14 @@ void healPets(object oPc) {
 // Starts rest conversation
 void RestConversation(object oPc) {
     AssignCommand(oPc, ClearAllActions());
+    SetLocalInt(oPc, "rast", 1);
     ActionStartConversation(OBJECT_SELF, "rasten", TRUE);
 }
 
 // Start rest conversation without short rest
 void RestConversationNoShort(object oPc) {
     AssignCommand(oPc, ClearAllActions());
+    SetLocalInt(oPc, "rast", 2);
     ActionStartConversation(OBJECT_SELF, "rasten2", TRUE);
 }
 
