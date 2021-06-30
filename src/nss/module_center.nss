@@ -12,7 +12,7 @@ float quadratic(float x) {
 
 // Gibt einem Spieler XP
 void GiveXP(object oPc, int iCount, int iSumXp, int iToken) {
-    // Prüft ob genügend Zeit vergangen ist
+    // PrÃ¼ft ob genÃ¼gend Zeit vergangen ist
     if (iToken != GetLocalInt(oPc, "xp_token")) {
         return;
     }
@@ -20,7 +20,7 @@ void GiveXP(object oPc, int iCount, int iSumXp, int iToken) {
     // Checks if the player is over level 15
     if (GetHitDice(oPc) > 14) return;
 
-    // Prüft ob der Spieler in den letzten 5 Minuten etwas geschrieben hat.
+    // PrÃ¼ft ob der Spieler in den letzten 5 Minuten etwas geschrieben hat.
     string sQuery = "SELECT * FROM Chat WHERE name=? AND charname=? ORDER BY id DESC LIMIT 1";
     int iTalked = 0;
     int iCharacters = 0;
@@ -144,13 +144,13 @@ void GiveXP(object oPc, int iCount, int iSumXp, int iToken) {
             //SendMessageToPC(oPc, IntToString(iCount * 10) + " Minuten, " + IntToString(iCount * 10 / 60) + " Stunden : " + IntToString(iSumXp) + "Xp");
             //PrintString(IntToString(iCount * 10) + " Minuten, " + IntToString(iCount * 10 / 60) + " Stunden : " + IntToString(iSumXp) + "Xp");
         //}
-        //SendMessageToPC(oPc, "Für Rollenspiel habt ihr Erfahrung gewonnen.");
+        //SendMessageToPC(oPc, "FÃ¼r Rollenspiel habt ihr Erfahrung gewonnen.");
     }
     DelayCommand(600.0, GiveXP(oPc, iCount, iSumXp, iToken));
 
 }
 
-// Erzeugt einen zufälligen Token
+// Erzeugt einen zufÃ¤lligen Token
 string GenerateToken() {
     string sToken = IntToString(Random(9)) +
     IntToString(Random(9)) +
@@ -314,7 +314,7 @@ void main() {
                     CreateItemOnObject("sw_we_wuerfelbeu", oPc);
                     // Gib das Pet Item
                     CreateItemOnObject("sw_we_haustier", oPc);
-                    // Gib drei Rückrufsteine
+                    // Gib drei RÃ¼ckrufsteine
                     CreateItemOnObject("sw_we_rueckruf", oPc);
                     CreateItemOnObject("sw_we_rueckruf", oPc);
                     CreateItemOnObject("sw_we_rueckruf", oPc);
