@@ -240,6 +240,7 @@ void main() {
                 //SendMessageToPC(oPc, sDescription);
                 StringReplace(sDescription, "<br>", "\n");
                 StringReplace(sDescription, "<br />", "\n");
+                StringReplace(sDescription, "\r", "");
                 //SendMessageToPC(oPc, sDescription);
                 SetDescription(oPc, sDescription);
                 // Hitpoints
