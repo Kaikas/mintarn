@@ -4,6 +4,7 @@
 #include "nwnx_webhook"
 #include "nwnx_feedback"
 #include "global_money"
+#include "x3_inc_string"
 
 float quadratic(float x) {
     return (x/10000) * (x/10000);
@@ -235,7 +236,12 @@ void main() {
                 location lStart = GetLocation(GetObjectByTag("WP_START_OOC"));
                 DelayCommand(0.0, AssignCommand(oPc, JumpToLocation(lStart)));
                 // Description
-                SetDescription(oPc, NWNX_SQL_ReadDataInActiveRow(14));
+                string sDescription = NWNX_SQL_ReadDataInActiveRow(14);
+                SendMessageToPC(oPc, sDescription);
+                StringReplace(sDescription, "<br>", "\n");
+                StringReplace(sDescription, "<br />", "\n");
+                SendMessageToPC(oPc, sDescription);
+                SetDescription(oPc, sDescription);
                 // Hitpoints
                 //NWNX_Feedback_SetCombatLogMessageHidden(11, 1);
                 NWNX_Feedback_SetCombatLogMessageHidden(3, 1, oPc);
