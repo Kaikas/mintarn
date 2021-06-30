@@ -83,14 +83,14 @@ void healPets(object oPc) {
 void RestConversation(object oPc) {
     AssignCommand(oPc, ClearAllActions());
     SetLocalInt(oPc, "rast", 1);
-    ActionStartConversation(oPc, "rasten", TRUE);
+    DelayCommand(0.0, ExecuteScript("rest_startc", oPc));
 }
 
 // Start rest conversation without short rest
 void RestConversationNoShort(object oPc) {
     AssignCommand(oPc, ClearAllActions());
     SetLocalInt(oPc, "rast", 2);
-    ActionStartConversation(oPc, "rasten2", TRUE);
+    DelayCommand(0.0, ExecuteScript("rest_startc2", oPc));
 }
 
 // Full Rest
