@@ -85,7 +85,8 @@ void LightHeartbeat(int iDawn, int iDusk) {
     object oModule = GetModule();
 
     // Check if its night
-    if (GetTimeHour() >= iDusk && GetTimeHour() <= iDawn && (GetLocalString(oModule, "LIGHTS_TIME") == "DAY" || GetLocalString(oModule, "LIGHTS_TIME") == "INIT")) {
+    //if (GetTimeHour() >= iDusk && GetTimeHour() <= iDawn && (GetLocalString(oModule, "LIGHTS_TIME") == "DAY" || GetLocalString(oModule, "LIGHTS_TIME") == "INIT")) {
+    if (GetIsNight() && (GetLocalString(oModule, "LIGHTS_TIME") == "DAY" || GetLocalString(oModule, "LIGHTS_TIME") == "INIT")) {
         // Set Module LIGHTS_TIME
         SetLocalString(oModule, "LIGHTS_TIME", "NIGHT");
         // Switch on all night lighs
@@ -93,7 +94,8 @@ void LightHeartbeat(int iDawn, int iDusk) {
         // Switch off all day lights
         ManipulateAllLightsWithTag("LIGHT_DAYTIME", 0);
     }
-    if (GetTimeHour() > iDawn && GetTimeHour() < iDusk && (GetLocalString(oModule, "LIGHTS_TIME") == "NIGHT" || GetLocalString(oModule, "LIGHTS_TIME") == "INIT")) {
+    //if (GetTimeHour() > iDawn && GetTimeHour() < iDusk && (GetLocalString(oModule, "LIGHTS_TIME") == "NIGHT" || GetLocalString(oModule, "LIGHTS_TIME") == "INIT")) {
+    if (GetIsDay() && (GetLocalString(oModule, "LIGHTS_TIME") == "NIGHT" || GetLocalString(oModule, "LIGHTS_TIME") == "INIT")) {
         // Set Module LIGHTS_TIME
         SetLocalString(oModule, "LIGHTS_TIME", "DAY");
         // Switch on all night lighs
