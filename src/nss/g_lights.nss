@@ -97,9 +97,9 @@ void LightHeartbeat(int iDawn, int iDusk) {
         // Set Module LIGHTS_TIME
         SetLocalString(oModule, "LIGHTS_TIME", "DAY");
         // Switch on all night lighs
-        ManipulateAllLightsWithTag("LIGHT_NIGHTTIME", 1);
+        ManipulateAllLightsWithTag("LIGHT_NIGHTTIME", 0);
         // Switch off all day lights
-        ManipulateAllLightsWithTag("LIGHT_DAYTIME", 0);
+        ManipulateAllLightsWithTag("LIGHT_DAYTIME", 1);
     }
 
     DelayCommand(60.0f, LightHeartbeat(iDawn, iDusk));
