@@ -363,7 +363,7 @@ void main() {
     SetCustomTokenEx(101, "<cþf >"); //Ã™Â§
     SetCustomTokenEx(102, "<cuuu>");
     SetCustomTokenEx(103, "<cvvv>");
-    SetCustomTokenEx(104, "<c þ>");
+    SetCustomTokenEx(104, "<c?v?>");
 
     // Fertigkeits-Talente
     struct NWNX_SkillRanks_SkillFeat skillFeat;
