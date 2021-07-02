@@ -1,3 +1,3 @@
 void main() {
-    DelayCommand(15.0f,ActionCloseDoor(OBJECT_SELF));
+    DelayCommand(60.0f,ActionCloseDoor(OBJECT_SELF));
 }
