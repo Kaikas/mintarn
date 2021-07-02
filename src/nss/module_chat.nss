@@ -1169,20 +1169,20 @@ void main() {
                     object oTalkTo = GetFirstPC();
                     while (oTalkTo != OBJECT_INVALID) {
                         if (GetArea(oTalkTo) == GetArea(oPc)) {
-                            SendMessageToPC(oPc, GetSubString(sMessage, 2, 10000));
+                            SendMessageToPC(oTalkTo, GetSubString(sMessage, 2, 10000));
                         }
                         oTalkTo = GetNextPC();
                     }
                 }
             // DM Server Message
-            } else if (GetSubString(sMessage, 0, 3) == "/s ") {
+            } else if (GetSubString(sMessage, 0, 3) == "/a ") {
                 sMessage = GetToken(104) + sMessage + "</c>";
                 sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
                 sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
                 if (GetIsDM(oPc)) {
                     object oTalkTo = GetFirstPC();
                     while (oTalkTo != OBJECT_INVALID) {
-                        SendMessageToPC(oPc, GetSubString(sMessage, 2, 10000));
+                        SendMessageToPC(oTalkTo, GetSubString(sMessage, 2, 10000));
                         oTalkTo = GetNextPC();
                     }
                 }
@@ -1322,7 +1322,6 @@ void main() {
             sMessage = GetToken(104) + sMessage + "</c>";
             sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
             sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
-            SendMessageToPC(oPc, sMessage);
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             if (GetIsDM(oPc)) {
                 object oTalkTo = GetFirstPC();
