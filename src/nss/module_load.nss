@@ -359,11 +359,11 @@ void main() {
 
 
     // Farben fuer Conversationen
-    SetCustomToken(100, "</c>");
-    SetCustomToken(101, "<cþf >"); //Ã™Â§
-    SetCustomToken(102, "<cuuu>");
-    SetCustomToken(103, "<cvvv>");
-    SetCustomToken(104, "<c þ>");
+    SetCustomTokenEx(100, "</c>");
+    SetCustomTokenEx(101, "<cþf >"); //Ã™Â§
+    SetCustomTokenEx(102, "<cuuu>");
+    SetCustomTokenEx(103, "<cvvv>");
+    SetCustomTokenEx(104, "<c þ>");
 
     // Fertigkeits-Talente
     struct NWNX_SkillRanks_SkillFeat skillFeat;

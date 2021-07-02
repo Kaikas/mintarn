@@ -143,3 +143,13 @@ string GetToken(int iToken) {
     if (iToken <= 0) return "";
     return GetLocalString(GetModule(), "CUSTOM" + IntToString(iToken));
 }
+
+void SetCustomTokenEx(int iToken, string sValue)
+{
+    if (iToken <= 0)
+        return;
+
+    // Change the custom token variable and duplicate it.
+    SetCustomToken(iToken, sValue);
+    SetLocalString(GetModule(), "CUSTOM" + IntToString(iToken), sValue);
+}
