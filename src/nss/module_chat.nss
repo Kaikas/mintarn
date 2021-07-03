@@ -7,6 +7,7 @@
 #include "nwnx_chat"
 #include "x0_i0_position"
 #include "nwnx_webhook"
+#include "nw_i0_plot"
 
 // CUSTOM SKILL CONSTANTS
 // Some constants are predefined in nwscripts.nss
@@ -1169,7 +1170,7 @@ void main() {
                 sMessage = GetToken(105) + sMessage + "</c>";
                 sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
                 sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
-                if (GetIsDM(oPc)) {
+                if (!GetIsPlayerCharacter(oPc)) {
                     object oTalkTo = GetFirstPC();
                     while (oTalkTo != OBJECT_INVALID) {
                         if (GetArea(oTalkTo) == GetArea(oPc)) {
@@ -1184,7 +1185,7 @@ void main() {
                 sMessage = GetToken(105) + sMessage + "</c>";
                 sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
                 sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
-                if (GetIsDM(oPc)) {
+                if (!GetIsPlayerCharacter(oPc)) {
                     object oTalkTo = GetFirstPC();
                     while (oTalkTo != OBJECT_INVALID) {
                         SendMessageToPC(oTalkTo, sMessage);
@@ -1323,7 +1324,6 @@ void main() {
             SetPCChatMessage(sMessage);
         } else if (iChatVolume == 2) { //
             // Shout
-            SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             sMessage = GetToken(105) + sMessage + "</c>";
             sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
             sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
@@ -1338,8 +1338,8 @@ void main() {
                 }
             }
             */
-            if (GetIsDM(oPc)) {
-              SetPCChatVolume(TALKVOLUME_SHOUT);
+            if (GetIsPlayerCharacter(oPc) {
+              SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             }
             SetPCChatMessage(sMessage);
         } else if (iChatVolume == 4) {
