@@ -1313,8 +1313,8 @@ void main() {
             if (!GetIsDM(oPc)) {
               ExecuteScript("global_speak", oPc);
             } else {
-              // Check if we possess someone
-              
+              SetPCChatVolume(TALKVOLUME_TALK);
+              SetPCChatMessage(sMessage);
             }
         } else if (iChatVolume == 1) {
             // Whisper
