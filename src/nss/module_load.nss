@@ -360,10 +360,12 @@ void main() {
 
     // Farben fuer Conversationen
     SetCustomTokenEx(100, "</c>");
-    SetCustomTokenEx(101, "<cþf >"); //Ã™Â§
-    SetCustomTokenEx(102, "<cuuu>");
-    SetCustomTokenEx(103, "<cvvv>");
-    SetCustomTokenEx(104, "<c?v?>");
+    SetCustomTokenEx(101, "<cþf >"); // Orange
+    SetCustomTokenEx(102, "<cuuu>"); // 
+    SetCustomTokenEx(103, "<cvvv>"); // Dark Grey
+    SetCustomTokenEx(104, "<c?v?>"); // Green
+    SetCustomTokenEx(104, "<c?v?>"); // Red
+    SetCustomTokenEx(105, "<cù  >"); // Red
 
     // Fertigkeits-Talente
     struct NWNX_SkillRanks_SkillFeat skillFeat;

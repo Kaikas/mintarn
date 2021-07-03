@@ -1303,7 +1303,7 @@ void main() {
     } else {
         if (iChatVolume == 0) {
             // Normal talk
-            SetPCChatVolume(TALKVOLUME_SILENT_TALK);
+            SetPCChatVolume(TALKVOLUME_TALK);
             sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
             sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
             //AssignCommand(oPc, ActionSpeakString(sMessage, iChatVolume));
@@ -1311,28 +1311,23 @@ void main() {
             SetLocalString(oPc, "sMessage", sMessage);
             SetLocalInt(oPc, "iChatVolume", iChatVolume);
             if (!GetIsDM(oPc)) {
-              ExecuteScript("global_speak", oPc);
+              SetPCChatMessage(sMessage);
             } else {
-              SetPCChatVolume(TALKVOLUME_TALK);
               SetPCChatMessage(sMessage);
             }
         } else if (iChatVolume == 1) {
             // Whisper
-            SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             sMessage = GetToken(103) + sMessage + "</c>";
             sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
             sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
-            //AssignCommand(oPc, ActionSpeakString(sMessage, iChatVolume));
-
-            SetLocalString(oPc, "sMessage", sMessage);
-            SetLocalInt(oPc, "iChatVolume", iChatVolume);
-            ExecuteScript("global_speak", oPc);
+            SetPCChatMessage(sMessage);
         } else if (iChatVolume == 2) { //
             // Shout
-            sMessage = GetToken(104) + sMessage + "</c>";
+            SetPCChatVolume(TALKVOLUME_SILENT_TALK);
+            sMessage = GetToken(105) + sMessage + "</c>";
             sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
             sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
-            SetPCChatVolume(TALKVOLUME_SILENT_TALK);
+            /*
             if (GetIsDM(oPc)) {
                 object oTalkTo = GetFirstPC();
                 while (oTalkTo != OBJECT_INVALID) {
@@ -1342,15 +1337,22 @@ void main() {
                     oTalkTo = GetNextPC();
                 }
             }
+            */
+            if (GetIsDM(oPc)) {
+              SetPCChatVolume(TALKVOLUME_SHOUT);
+            }
+            SetPCChatMessage(sMessage);
         } else if (iChatVolume == 4) {
-            SendMessageToPC(oPc, GetToken(102) + "DM: " + sMessage + "</c>");
-            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", NWNX_Util_GetEnvironmentVariable("WEBHOOK_LOGS"), GetPCPlayerName(oPc) + " - " + GetName(oPc) + ": " + sMessage);
+            if (!GetIsDM(oPc)) {
+              SendMessageToPC(oPc, GetToken(102) + "DM: " + sMessage + "</c>");
+            }
+            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", NWNX_Util_GetEnvironmentVariable("WEBHOOK_DM"), GetPCPlayerName(oPc) + " - " + GetName(oPc) + ": " + sMessage);
         } else if (iChatVolume == 5) {
             // Gruppe
-            SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             sMessage = GetToken(104) + sMessage + "</c>";
+            SetPCChatMessage(sMessage);
             // Does not work as inteded. Fix incoming
-            NWNX_Chat_SendMessage(6, sMessage, oPc, OBJECT_INVALID);
+            //NWNX_Chat_SendMessage(6, sMessage, oPc, OBJECT_INVALID);
 
             // Send tells to everyone in the party then
             //NWNX_Chat_SendMessage(4, sMessage, oPc, oPc);
