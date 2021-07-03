@@ -117,6 +117,9 @@ void applyMask(object oPc, int iVFX) {
 void main() {
     int iChatVolume = GetPCChatVolume();
     object oPc = GetPCChatSpeaker();
+    if(!GetIsPC(oPc)) {
+      SendMessageToPC(oPc, "Error: Not a Player!");
+    }
     string sMessage = GetPCChatMessage();
     string sAccountName = GetPCPlayerName(oPc);
     string sName = GetName(oPc);
@@ -1307,7 +1310,12 @@ void main() {
 
             SetLocalString(oPc, "sMessage", sMessage);
             SetLocalInt(oPc, "iChatVolume", iChatVolume);
-            ExecuteScript("global_speak", oPc);
+            if (!GetIsDM(oPc)) {
+              ExecuteScript("global_speak", oPc);
+            } else {
+              // Check if we possess someone
+              
+            }
         } else if (iChatVolume == 1) {
             // Whisper
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
