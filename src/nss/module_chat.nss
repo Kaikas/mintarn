@@ -1166,7 +1166,7 @@ void main() {
             // DM Areae/Gebiet Message
             } else if (GetSubString(sMessage, 0, 3) == "/g ") {
                 sMessage = GetSubString(sMessage, 2, 10000);
-                sMessage = GetToken(104) + sMessage + "</c>";
+                sMessage = GetToken(105) + sMessage + "</c>";
                 sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
                 sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
                 if (GetIsDM(oPc)) {
@@ -1181,7 +1181,7 @@ void main() {
             // DM Server Message
             } else if (GetSubString(sMessage, 0, 3) == "/a ") {
                 sMessage = GetSubString(sMessage, 2, 10000);
-                sMessage = GetToken(104) + sMessage + "</c>";
+                sMessage = GetToken(105) + sMessage + "</c>";
                 sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
                 sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
                 if (GetIsDM(oPc)) {
