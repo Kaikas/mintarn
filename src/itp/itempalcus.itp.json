@@ -1353,6 +1353,17 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
+                      "value": "Birnenschnaps"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_na_schnaps001"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
                       "value": "Bitter Schwarz"
                     },
                     "RESREF": {
@@ -1380,17 +1391,6 @@
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_na_braten"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Brinenschnaps"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_na_schnaps001"
                     }
                   },
                   {
@@ -1430,7 +1430,7 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Elministers Wahl"
+                      "value": "Elminsters Wahl"
                     },
                     "RESREF": {
                       "type": "resref",
@@ -1474,7 +1474,7 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Iriaeboranischer Nordbier"
+                      "value": "Iriaeboranisches Nordbier"
                     },
                     "RESREF": {
                       "type": "resref",

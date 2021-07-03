@@ -197,17 +197,6 @@
               "__struct_id": 0,
               "ID": {
                 "type": "byte",
-                "value": 99
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810714
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
                 "value": 100
               },
               "LIST": {
@@ -268,11 +257,33 @@
               "__struct_id": 0,
               "ID": {
                 "type": "byte",
+                "value": 99
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810714
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
                 "value": 98
               },
               "STRREF": {
                 "type": "dword",
                 "value": 16810713
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 7
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810716
               }
             },
             {
@@ -300,17 +311,6 @@
               "STRREF": {
                 "type": "dword",
                 "value": 16810712
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 7
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810716
               }
             },
             {
@@ -349,157 +349,351 @@
           "value": [
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 41
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810754
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 42
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810755
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 43
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810756
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 44
-              },
               "LIST": {
                 "type": "list",
                 "value": [
                   {
                     "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Big Rock"
+                    "ID": {
+                      "type": "byte",
+                      "value": 130
                     },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "bigrock"
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810768
                     }
                   },
                   {
                     "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Big Rock 2"
+                    "ID": {
+                      "type": "byte",
+                      "value": 129
                     },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "bigrock2"
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810767
                     }
                   },
                   {
                     "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Boulders"
+                    "ID": {
+                      "type": "byte",
+                      "value": 154
                     },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "foo001"
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810772
                     }
                   },
                   {
                     "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Boulders"
+                    "ID": {
+                      "type": "byte",
+                      "value": 132
                     },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "foo002"
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810770
                     }
                   },
                   {
                     "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Boulders"
+                    "ID": {
+                      "type": "byte",
+                      "value": 131
                     },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "foo003"
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810769
                     }
                   },
                   {
                     "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Boulders"
+                    "ID": {
+                      "type": "byte",
+                      "value": 125
                     },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "foo004"
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Taverne"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "taverne"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Taverne 2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "taverne2"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Taverne 3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "taverne3"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Taverne 4"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "taverne4"
+                          }
+                        }
+                      ]
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810762
                     }
                   },
                   {
                     "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Stein"
+                    "ID": {
+                      "type": "byte",
+                      "value": 133
                     },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "erde001"
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810771
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 128
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810766
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 127
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810765
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 134
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810764
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 126
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810763
                     }
                   }
                 ]
               },
               "STRREF": {
                 "type": "dword",
-                "value": 16810757
+                "value": 16810761
               }
             },
             {
               "__struct_id": 0,
               "ID": {
                 "type": "byte",
-                "value": 45
+                "value": 124
               },
               "STRREF": {
                 "type": "dword",
-                "value": 16810758
+                "value": 16810783
               }
             },
             {
               "__struct_id": 0,
               "ID": {
                 "type": "byte",
-                "value": 46
+                "value": 69
               },
               "STRREF": {
                 "type": "dword",
-                "value": 16810759
+                "value": 16810775
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 63
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810773
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 64
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810774
+              }
+            },
+            {
+              "__struct_id": 0,
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 71
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810777
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 72
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810778
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 73
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810779
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 74
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Seil"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "seil"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Ship"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "ship"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Steuerrad"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "steuerrad"
+                          }
+                        }
+                      ]
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810780
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 75
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810781
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 123
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810782
+                    }
+                  }
+                ]
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810776
               }
             }
           ]
         },
         "STRREF": {
           "type": "dword",
-          "value": 16810753
+          "value": 16810760
         }
       },
       {
@@ -511,89 +705,11 @@
               "__struct_id": 0,
               "ID": {
                 "type": "byte",
-                "value": 94
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810803
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 78
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810802
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
                 "value": 88
               },
               "STRREF": {
                 "type": "dword",
                 "value": 16810796
-              }
-            },
-            {
-              "__struct_id": 0,
-              "LIST": {
-                "type": "list",
-                "value": [
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 50
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810807
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 49
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810806
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 51
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810808
-                    }
-                  }
-                ]
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810805
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 96
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810804
               }
             },
             {
@@ -609,69 +725,13 @@
             },
             {
               "__struct_id": 0,
-              "LIST": {
-                "type": "list",
-                "value": [
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 56
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810822
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 57
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810823
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 53
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810819
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 54
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810820
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 55
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810821
-                    }
-                  }
-                ]
+              "ID": {
+                "type": "byte",
+                "value": 78
               },
               "STRREF": {
                 "type": "dword",
-                "value": 16810818
+                "value": 16810802
               }
             },
             {
@@ -710,100 +770,40 @@
                     "__struct_id": 0,
                     "ID": {
                       "type": "byte",
-                      "value": 35
+                      "value": 49
                     },
                     "STRREF": {
                       "type": "dword",
-                      "value": 16810812
+                      "value": 16810806
                     }
                   },
                   {
                     "__struct_id": 0,
                     "ID": {
                       "type": "byte",
-                      "value": 36
+                      "value": 50
                     },
                     "STRREF": {
                       "type": "dword",
-                      "value": 16810813
+                      "value": 16810807
                     }
                   },
                   {
                     "__struct_id": 0,
                     "ID": {
                       "type": "byte",
-                      "value": 32
+                      "value": 51
                     },
                     "STRREF": {
                       "type": "dword",
-                      "value": 16810810
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 37
-                    },
-                    "LIST": {
-                      "type": "list",
-                      "value": [
-                        {
-                          "__struct_id": 0,
-                          "NAME": {
-                            "type": "cexostring",
-                            "value": "Sessel"
-                          },
-                          "RESREF": {
-                            "type": "resref",
-                            "value": "sessel"
-                          }
-                        }
-                      ]
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810814
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 38
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810815
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 39
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810816
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 34
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810811
+                      "value": 16810808
                     }
                   }
                 ]
               },
               "STRREF": {
                 "type": "dword",
-                "value": 16810809
+                "value": 16810805
               }
             },
             {
@@ -842,6 +842,122 @@
               "STRREF": {
                 "type": "dword",
                 "value": 16810799
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 94
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810803
+              }
+            },
+            {
+              "__struct_id": 0,
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 32
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810810
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 35
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810812
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 37
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Sessel"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sessel"
+                          }
+                        }
+                      ]
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810814
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 34
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810811
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 36
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810813
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 38
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810815
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 39
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810816
+                    }
+                  }
+                ]
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810809
               }
             },
             {
@@ -903,6 +1019,84 @@
                 "type": "dword",
                 "value": 16810817
               }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 96
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810804
+              }
+            },
+            {
+              "__struct_id": 0,
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 53
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810819
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 55
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810821
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 56
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810822
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 57
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810823
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 54
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810820
+                    }
+                  }
+                ]
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810818
+              }
             }
           ]
         },
@@ -920,6 +1114,128 @@
         "STRREF": {
           "type": "dword",
           "value": 6782
+        }
+      },
+      {
+        "__struct_id": 0,
+        "LIST": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 81
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810787
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 136
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810791
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 82
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810788
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 83
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810789
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 79
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810785
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 138
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810793
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 85
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810790
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 47
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810794
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 80
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810786
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 137
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810792
+              }
+            }
+          ]
+        },
+        "STRREF": {
+          "type": "dword",
+          "value": 16810784
         }
       },
       {
@@ -1062,155 +1378,27 @@
               "__struct_id": 0,
               "ID": {
                 "type": "byte",
-                "value": 138
+                "value": 105
+              },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Lagerfeuer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "lagerfeuer001"
+                    }
+                  }
+                ]
               },
               "STRREF": {
                 "type": "dword",
-                "value": 16810793
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 80
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810786
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 136
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810791
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 79
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810785
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 81
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810787
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 47
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810794
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 82
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810788
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 85
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810790
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 83
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810789
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 137
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810792
-              }
-            }
-          ]
-        },
-        "STRREF": {
-          "type": "dword",
-          "value": 16810784
-        }
-      },
-      {
-        "__struct_id": 0,
-        "LIST": {
-          "type": "list",
-          "value": [
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 68
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810738
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 110
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810734
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 109
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810735
+                "value": 16810732
               }
             },
             {
@@ -1250,49 +1438,33 @@
               "__struct_id": 0,
               "ID": {
                 "type": "byte",
-                "value": 104
+                "value": 68
               },
               "STRREF": {
                 "type": "dword",
-                "value": 16810731
+                "value": 16810738
               }
             },
             {
               "__struct_id": 0,
               "ID": {
                 "type": "byte",
-                "value": 105
-              },
-              "LIST": {
-                "type": "list",
-                "value": [
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Lagerfeuer"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "lagerfeuer001"
-                    }
-                  }
-                ]
+                "value": 110
               },
               "STRREF": {
                 "type": "dword",
-                "value": 16810732
+                "value": 16810734
               }
             },
             {
               "__struct_id": 0,
               "ID": {
                 "type": "byte",
-                "value": 108
+                "value": 109
               },
               "STRREF": {
                 "type": "dword",
-                "value": 16810733
+                "value": 16810735
               }
             },
             {
@@ -1308,9 +1480,42 @@
             },
             {
               "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 104
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810731
+              }
+            },
+            {
+              "__struct_id": 0,
               "LIST": {
                 "type": "list",
                 "value": [
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 113
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810718
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 114
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 16810719
+                    }
+                  },
                   {
                     "__struct_id": 0,
                     "ID": {
@@ -1353,22 +1558,22 @@
                     "__struct_id": 0,
                     "ID": {
                       "type": "byte",
-                      "value": 114
+                      "value": 151
                     },
                     "STRREF": {
                       "type": "dword",
-                      "value": 16810719
+                      "value": 16810721
                     }
                   },
                   {
                     "__struct_id": 0,
                     "ID": {
                       "type": "byte",
-                      "value": 113
+                      "value": 117
                     },
                     "STRREF": {
                       "type": "dword",
-                      "value": 16810718
+                      "value": 16810728
                     }
                   },
                   {
@@ -1376,39 +1581,6 @@
                     "LIST": {
                       "type": "list",
                       "value": [
-                        {
-                          "__struct_id": 0,
-                          "ID": {
-                            "type": "byte",
-                            "value": 119
-                          },
-                          "STRREF": {
-                            "type": "dword",
-                            "value": 16810724
-                          }
-                        },
-                        {
-                          "__struct_id": 0,
-                          "ID": {
-                            "type": "byte",
-                            "value": 118
-                          },
-                          "STRREF": {
-                            "type": "dword",
-                            "value": 16810723
-                          }
-                        },
-                        {
-                          "__struct_id": 0,
-                          "ID": {
-                            "type": "byte",
-                            "value": 121
-                          },
-                          "STRREF": {
-                            "type": "dword",
-                            "value": 16810726
-                          }
-                        },
                         {
                           "__struct_id": 0,
                           "ID": {
@@ -1430,6 +1602,39 @@
                             "type": "dword",
                             "value": 16810725
                           }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "ID": {
+                            "type": "byte",
+                            "value": 118
+                          },
+                          "STRREF": {
+                            "type": "dword",
+                            "value": 16810723
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "ID": {
+                            "type": "byte",
+                            "value": 119
+                          },
+                          "STRREF": {
+                            "type": "dword",
+                            "value": 16810724
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "ID": {
+                            "type": "byte",
+                            "value": 121
+                          },
+                          "STRREF": {
+                            "type": "dword",
+                            "value": 16810726
+                          }
                         }
                       ]
                     },
@@ -1437,34 +1642,23 @@
                       "type": "dword",
                       "value": 16810722
                     }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 151
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810721
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 117
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810728
-                    }
                   }
                 ]
               },
               "STRREF": {
                 "type": "dword",
                 "value": 16810717
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 108
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810733
               }
             }
           ]
@@ -1483,11 +1677,11 @@
               "__struct_id": 0,
               "ID": {
                 "type": "byte",
-                "value": 142
+                "value": 141
               },
               "STRREF": {
                 "type": "dword",
-                "value": 16810742
+                "value": 16810741
               }
             },
             {
@@ -1516,22 +1710,22 @@
               "__struct_id": 0,
               "ID": {
                 "type": "byte",
-                "value": 140
+                "value": 142
               },
               "STRREF": {
                 "type": "dword",
-                "value": 16810740
+                "value": 16810742
               }
             },
             {
               "__struct_id": 0,
               "ID": {
                 "type": "byte",
-                "value": 141
+                "value": 140
               },
               "STRREF": {
                 "type": "dword",
-                "value": 16810741
+                "value": 16810740
               }
             }
           ]
@@ -1550,6 +1744,17 @@
         "STRREF": {
           "type": "dword",
           "value": 9122
+        }
+      },
+      {
+        "__struct_id": 0,
+        "ID": {
+          "type": "byte",
+          "value": 15
+        },
+        "STRREF": {
+          "type": "dword",
+          "value": 9128
         }
       },
       {
@@ -2373,17 +2578,6 @@
       },
       {
         "__struct_id": 0,
-        "ID": {
-          "type": "byte",
-          "value": 15
-        },
-        "STRREF": {
-          "type": "dword",
-          "value": 9128
-        }
-      },
-      {
-        "__struct_id": 0,
         "LIST": {
           "type": "list",
           "value": [
@@ -2474,6 +2668,188 @@
               "__struct_id": 0,
               "ID": {
                 "type": "byte",
+                "value": 45
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810758
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 43
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810756
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 46
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810759
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 42
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810755
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 41
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810754
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 44
+              },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Big Rock"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "bigrock"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Big Rock 2"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "bigrock2"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Boulders"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "foo001"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Boulders"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "foo002"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Boulders"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "foo003"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Boulders"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "foo004"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Stein"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "erde001"
+                    }
+                  }
+                ]
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810757
+              }
+            }
+          ]
+        },
+        "STRREF": {
+          "type": "dword",
+          "value": 16810753
+        }
+      },
+      {
+        "__struct_id": 0,
+        "LIST": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 147
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810748
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 145
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16810745
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
                 "value": 153
               },
               "STRREF": {
@@ -2496,22 +2872,11 @@
               "__struct_id": 0,
               "ID": {
                 "type": "byte",
-                "value": 145
+                "value": 146
               },
               "STRREF": {
                 "type": "dword",
-                "value": 16810745
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 13
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810750
+                "value": 16810747
               }
             },
             {
@@ -2529,22 +2894,11 @@
               "__struct_id": 0,
               "ID": {
                 "type": "byte",
-                "value": 147
+                "value": 13
               },
               "STRREF": {
                 "type": "dword",
-                "value": 16810748
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 146
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810747
+                "value": 16810750
               }
             }
           ]
@@ -2623,360 +2977,6 @@
         "STRREF": {
           "type": "dword",
           "value": 66490
-        }
-      },
-      {
-        "__struct_id": 0,
-        "LIST": {
-          "type": "list",
-          "value": [
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 124
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810783
-              }
-            },
-            {
-              "__struct_id": 0,
-              "LIST": {
-                "type": "list",
-                "value": [
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 74
-                    },
-                    "LIST": {
-                      "type": "list",
-                      "value": [
-                        {
-                          "__struct_id": 0,
-                          "NAME": {
-                            "type": "cexostring",
-                            "value": "Seil"
-                          },
-                          "RESREF": {
-                            "type": "resref",
-                            "value": "seil"
-                          }
-                        },
-                        {
-                          "__struct_id": 0,
-                          "NAME": {
-                            "type": "cexostring",
-                            "value": "Ship"
-                          },
-                          "RESREF": {
-                            "type": "resref",
-                            "value": "ship"
-                          }
-                        },
-                        {
-                          "__struct_id": 0,
-                          "NAME": {
-                            "type": "cexostring",
-                            "value": "Steuerrad"
-                          },
-                          "RESREF": {
-                            "type": "resref",
-                            "value": "steuerrad"
-                          }
-                        }
-                      ]
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810780
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 75
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810781
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 73
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810779
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 123
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810782
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 72
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810778
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 71
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810777
-                    }
-                  }
-                ]
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810776
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 63
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810773
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 64
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810774
-              }
-            },
-            {
-              "__struct_id": 0,
-              "LIST": {
-                "type": "list",
-                "value": [
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 129
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810767
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 133
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810771
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 126
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810763
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 154
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810772
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 127
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810765
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 131
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810769
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 132
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810770
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 134
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810764
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 128
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810766
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 125
-                    },
-                    "LIST": {
-                      "type": "list",
-                      "value": [
-                        {
-                          "__struct_id": 0,
-                          "NAME": {
-                            "type": "cexostring",
-                            "value": "Taverne"
-                          },
-                          "RESREF": {
-                            "type": "resref",
-                            "value": "taverne"
-                          }
-                        },
-                        {
-                          "__struct_id": 0,
-                          "NAME": {
-                            "type": "cexostring",
-                            "value": "Taverne 2"
-                          },
-                          "RESREF": {
-                            "type": "resref",
-                            "value": "taverne2"
-                          }
-                        },
-                        {
-                          "__struct_id": 0,
-                          "NAME": {
-                            "type": "cexostring",
-                            "value": "Taverne 3"
-                          },
-                          "RESREF": {
-                            "type": "resref",
-                            "value": "taverne3"
-                          }
-                        },
-                        {
-                          "__struct_id": 0,
-                          "NAME": {
-                            "type": "cexostring",
-                            "value": "Taverne 4"
-                          },
-                          "RESREF": {
-                            "type": "resref",
-                            "value": "taverne4"
-                          }
-                        }
-                      ]
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810762
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 130
-                    },
-                    "STRREF": {
-                      "type": "dword",
-                      "value": 16810768
-                    }
-                  }
-                ]
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810761
-              }
-            },
-            {
-              "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 69
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 16810775
-              }
-            }
-          ]
-        },
-        "STRREF": {
-          "type": "dword",
-          "value": 16810760
         }
       },
       {

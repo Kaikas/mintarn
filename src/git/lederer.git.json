@@ -50,7 +50,7 @@
         "__struct_id": 4,
         "Appearance_Head": {
           "type": "byte",
-          "value": 6
+          "value": 16
         },
         "Appearance_Type": {
           "type": "word",
@@ -199,7 +199,7 @@
         "Description": {
           "type": "cexolocstring",
           "value": {
-            "0": "Ein durchschnittlich großer Halbling mit einem kessen Blick, der durch sein wettergeberbtes Gesicht, die langen Koteletten und den kleinen Kinnbart älter aussieht, als er wahrscheinlich ist. Besonders durch den munteren, frechen Blick und das lockige kurze Haar erweckt er einen spitzbübischen Eindruck.\nSeine Kleidung ist aufwendig gefertigt und in gutem Zustand, die er abseits seines Ladens oftmals um einen Hut oder eine andere ausgefallene Kopfbedeckung ergänzt.",
+            "0": "Ein durchschnittlich großer Halbling mit einem kessen Blick, der durch sein wettergeberbtes Gesicht, die langen Koteletten und den kleinen Kinnbart älter aussieht, als er wahrscheinlich ist. Besonders durch den munteren, frechen Blick und das lockige kurze Haar erweckt er einen spitzbübischen Eindruck.\nSeine Kleidung, die er abseits seines Ladens oftmals um einen Hut oder eine andere ausgefallene Kopfbedeckung ergänzt, ist aufwendig gefertigt und in gutem Zustand.",
             "4": "Ein durchschnittlich großer Halbling mit einem kessen Blick, der durch sein wettergeberbtes Gesicht, die langen Koteletten und den kleinen Kinnbart älter aussieht, als er wahrscheinlich ist. Besonders durch den munteren, frechen Blick und das lockige kurze Haar erweckt er einen spitzbübischen Eindruck.\nSeine Kleidung ist aufwendig gefertigt und in gutem Zustand, die er abseits seines Ladens oftmals um einen Hut oder eine andere ausgefallene Kopfbedeckung ergänzt.",
             "5": "Ein durchschnittlich großer Halbling mit einem kessen Blick, der durch sein wettergeberbtes Gesicht, die langen Koteletten und den kleinen Kinnbart älter aussieht, als er wahrscheinlich ist. Besonders durch den munteren, frechen Blick und das lockige kurze Haar erweckt er einen spitzbübischen Eindruck.\nSeine Kleidung ist aufwendig gefertigt und in gutem Zustand, die er abseits seines Ladens oftmals um einen Hut oder eine andere ausgefallene Kopfbedeckung ergänzt."
           }

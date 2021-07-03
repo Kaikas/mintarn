@@ -1165,7 +1165,7 @@
         },
         "OnOpen": {
           "type": "resref",
-          "value": ""
+          "value": "global_closedoor"
         },
         "OnSpellCastAt": {
           "type": "resref",
