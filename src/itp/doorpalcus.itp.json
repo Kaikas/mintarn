@@ -76,6 +76,44 @@
           "type": "byte",
           "value": 5
         },
+        "LIST": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DLA_Sewer_Breach"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dla_sewer_generi"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DLA_Sewer_Cave"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dla_sewer_cave"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DLA_Sewer_Ladder"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dla_sewer_ladder"
+              }
+            }
+          ]
+        },
         "STRREF": {
           "type": "dword",
           "value": 6734

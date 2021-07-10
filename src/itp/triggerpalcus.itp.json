@@ -811,88 +811,6 @@
                 "type": "byte",
                 "value": 11
               },
-              "LIST": {
-                "type": "list",
-                "value": [
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Deep Pit Trap"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "pittraprug001"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Falling Brick Trap"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "fallingbricktrap"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Razor Wire Trap"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "razorwiretrap"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Rolling Rock Trap"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "rollingrocktrap"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Rug Pit Trap"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "pittraprug"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Swinging Blade Trap"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "rollingrocktr001"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Swinging Rock Trap"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "rollingrocktr002"
-                    }
-                  }
-                ]
-              },
               "STRREF": {
                 "type": "dword",
                 "value": 53181
@@ -903,44 +821,6 @@
               "ID": {
                 "type": "byte",
                 "value": 12
-              },
-              "LIST": {
-                "type": "list",
-                "value": [
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Flood Trap"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "floodtrap"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Wall Blade Trap"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "wallbladetrap"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Whirling Blade Trap"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "whirlingbladetra"
-                    }
-                  }
-                ]
               },
               "STRREF": {
                 "type": "dword",
