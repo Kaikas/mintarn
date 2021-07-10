@@ -2821,6 +2821,77 @@
       },
       {
         "__struct_id": 0,
+        "ID": {
+          "type": "byte",
+          "value": 191
+        },
+        "LIST": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 186
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16777448
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 187
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16777449
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 188
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16777450
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 189
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16777451
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 190
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 16777452
+              }
+            }
+          ]
+        },
+        "STRREF": {
+          "type": "dword",
+          "value": 16777447
+        }
+      },
+      {
+        "__struct_id": 0,
         "LIST": {
           "type": "list",
           "value": [
