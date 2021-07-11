@@ -84,7 +84,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "\"Huuhuu!\"<CUSTOM101>Der Wolf winkt dir zu und lächelt dabei ziemlich debil vor sich hin.<CUSTOM100>\n\"Ich bin ein Wolf und relativ merkwürdig. Ha ha ha!\"<CUSTOM101> Das Tier zuckt ein paar Mal mit dem Kopf als hätte es Schmerzen.<CUSTOM100>\n\n\"Meine Halle ist so ziemlich das allerletzte und allgemein recht merkwürdig. Deshalb mobben mich auch die anderen Tiere. Aber Shen-Long sagt mir immer wieder: ' Komma Klaa'\". <CUSTOM101>Er holt eine Socke mit zwei Knöpfen als Augen aus der Schublade und beginnt sie durch die Luft zu schwingen als würde sie fliegen. <CUSTOM100>\"Swuuusch! Swuusch!\"\n\n<CUSTOM101>Irritiert blickt der Wolf dich erneut an.<CUSTOM100> \" Achja, ich heisse Karneval. Wenn du etwas zu den Fallen wissen willst, frag ruhig. Ist aber echt komisches Zeug hier.\"  <CUSTOM101> Er hebt die Puppe hoch über sich und dreht sie in alle Richtungen als würde er ausschau nach etwas halten. <CUSTOM100>"
+            "0": "\"Grüße!\nHinter mir beginnt die Halle der Reflexe. Damit bin ich ganz offensichtlich der Falke der Reflexe.\nMan könnte aber auch sagen ich wäre der Reflexfalke.\"<CUSTOM101> Er stemmt die Hände in die Hüfte. <CUSTOM101>  Nur bitte, nennt mich nicht Refax.\""
           }
         }
       },
@@ -108,7 +108,7 @@
         },
         "Delay": {
           "type": "dword",
-          "value": 0
+          "value": 4294967295
         },
         "Quest": {
           "type": "cexostring",
@@ -210,7 +210,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "\"Was willst du hier?\" <CUSTOM101> Der Wolf richtet seine Handpuppe auf dich wie eine geladene Waffe. <CUSTOM100>\n\"Das ist ein Überfall! Sag mir womit ich dich überfallen soll!\" <CUSTOM101> Er dreht am KNopf seiner Handpuppe als würde er eine Pistole entsichern.<CUSTOM100>\n\n\"Wie ich bereits sagte, was hinter mir liegt lässt sich nicht wirklich einordnen. Es ist viel Kladderadatsch aus allen Kategorien."
+            "0": "Sehr gerne.\n\nDie Halle der Reflexe bietet die besten Fallen für Reflexwürfe im ganzen Land. Gute Reflexwürfe haben vor allem Klassen mit hohen Geschicklichkteiswerten, also Barden, Schurken, Waldläufer und Bogenschützen, aber überraschenderweise auch Barbaren.\n\nZielgruppe sind also eher alle anderen Klassen, Krieger/Magier/Kleriker, kurzum Keulenschwinger und Akademiker.\n\nDer Schwerpunkt der Reflexfalle liegt vor allem in ihrem hohen Schaden... ... das war's auch schon. Wenn man nicht ordentlich würfelt tut's weh.\n\nWir haben Feuer(links), Blitz(mitte) und Klinge(rechts) im Angebot."
           }
         }
       },
@@ -279,7 +279,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "\"Wenn du kein Zombie bist sind die dir Schnuppe.\nFalls du doch ein Zombie bist, gehst du voll über den Jordan, alter.\"\nDer Wolf hält dir seine Handpuppe ins Gesicht. \" Du bist doch kein Zombie, oder? Das wär voll krass, maaaaaan.\""
+            "0": "Eine Martialische Falle:\nHoher minimalschaden.\nHoher Gesamtschaden.\nKleine Fläche.\nKeine Nebenwirkungen."
           }
         }
       },
@@ -348,7 +348,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "\"Voll giftig sind die. Aber nicht so giftig normal, nein voll toxisch alter.\"<CUSTOM101> Versteckt seine Handpuppe unter dem Arm um sie zu beschützen.<CUSTOM100> \" Es ist einfach immer irgendein Gift und das ist total grün, glaube ich.\"\n\n\nWespengift:\n1d6 Geschick + 1d6 Geschick \nTodesklingengift: \n1d6 Konstitution + 2d6 Konstitution \nFinsterer Tod: \n2d6 Konstitution + 2d6 Konstitution \nSchwarzlotusgift:\n3d6 constitution + 3d6 Konstitution\nChaosnebelgift:\n1d4 Weisheit + 2d6 Weisheit"
+            "0": "Eine Magische Falle:\nGeringer Mindestschaden.\nHoher Gesamtschaden.\nGroße Fläche.\nEine leichte Betäubung."
           }
         }
       },
@@ -417,7 +417,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "\"Da kommen überall Ranken raus und die halten sich dann so an dir fest und du läufst dan nicht mehr und das ist voll schwer da auszuweichen aber das ist nicht so schlimm weil es nur Blumen sind aber wenn es schlimm ist wäre das total krass. Woaaah!\" <CUSTOM101>Er wedelt wild mit der Handpuppe.<CUSTOM100>\n\nKein Schaden.\nGroßer Effektbereich.\nHoher DC,  \nUnbeweglichkeit."
+            "0": "Eine Magische Falle:\nHoher Minimalschaden.\nHoher Gesamtschaden.\nKleine Fläche.\nKeine Nebenwirkungen."
           }
         }
       }
@@ -425,7 +425,7 @@
   },
   "NumWords": {
     "type": "dword",
-    "value": 395
+    "value": 181
   },
   "PreventZoomIn": {
     "type": "byte",
@@ -495,7 +495,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "[Nichts sagen]"
+            "0": "Erzählt mir was über die Halle der Reflexe."
           }
         }
       },
@@ -540,7 +540,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Viel Glück euch beiden...."
+            "0": "Ich habe genug gehört."
           }
         }
       },
@@ -605,7 +605,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Erzähl mir etwas über Heiligfallen"
+            "0": "Erzähl mir etwas über Klingenfallen"
           }
         }
       },
@@ -715,7 +715,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Erzähl mir etwas über Giftfallen"
+            "0": "Erzähl mir etwas über Blitzfallen"
           }
         }
       },
@@ -825,7 +825,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Erzähl mir etwas über Verstrickungsfallen"
+            "0": "Erzähl mir etwas über Feuerfallen"
           }
         }
       },

@@ -84,7 +84,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "\"Hallo! Mein Name ist WIlly Brandt und ich bin ein Waschbär!\""
+            "0": "\"Hallo! Mein Name ist WIlly Brandt und ich bin ein Waschbär!\"<CUSTOM101> Das Tier räuspert sich kruz und stellt sich seine Hinterbeine.<CUSTOM100>\n\n\"In meiner Funktion als Vereinsvorsteher der Halle der Willenskraft, möchte ich das heutige Treffen nutzen um unser Produktportfolio zu vorzustellen\". <<CUSTOM101>Der Waschbär greift in seinen Trench Coat und holt eine Münze, auf der die Ziffer 3 steht, hervor<CUSTOM100>\n\"Drei Mal ist mir ein Amboss auf den Kopf gefallen. Drei Mal!\"<CUSTOM101>Er packt die Münze wieder ein<CUSTOM100>\" Aber hat mir das Geschadet? Nun ja... das ist schwer zu sagen, aber ich will nicht dass es so ist. und darauf kommt es an.\" "
           }
         }
       },
@@ -210,7 +210,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "\"In meiner Funktion als Vereinsvorsteher der Halle der Willenskraft, möchte ich das heutige Treffen nutzen um unser Produktportfolio zu vorzustellen\". <<CUSTOM101>Der Waschbär greift in seinen Trench Coat und holt eine Münze, auf der die Ziffer 3 steht, hervor<CUSTOM100>\n\"Drei Mal ist mir ein Amboss auf den Kopf gefallen. Drei Mal!\"<CUSTOM101>Er packt die Münze wieder ein<CUSTOM100>\" Aber hat mir das Geschadet? Nun ja... das ist schwer zu sagen, aber ich will nicht dass es so ist. und darauf kommt es an.\" \n\n\"Hohe Willenswürfe haben vor allem magische Klassen. also das Gesindel vom Klerus oder Akademiker und Wunderkinder.\nAlle andern haben die halt nicht.  Der Schaden ist eher so Mittel und die Nebenwirkungen eher kurz, aber heftig. Mehr fällt mir dazu nicht ein.\"\n\n<CUSTOM101>Nach einer kurzen Pause fügt er hinzu.<CUSTOM100>\n\"Ach ja, liebe Grüße an den Amboss.\""
+            "0": "\"Hohe Willenswürfe haben vor allem magische Klassen. also das Gesindel vom Klerus oder Akademiker und Wunderkinder.\nAlle andern haben die halt nicht.  Der Schaden ist eher so Mittel und die Nebenwirkungen eher kurz, aber heftig. Mehr fällt mir dazu nicht ein.\"\n\n<CUSTOM101>Nach einer kurzen Pause fügt er hinzu.<CUSTOM100>\n\"Ach ja, liebe Grüße an den Amboss.\""
           }
         }
       },
@@ -425,7 +425,7 @@
   },
   "NumWords": {
     "type": "dword",
-    "value": 204
+    "value": 214
   },
   "PreventZoomIn": {
     "type": "byte",
