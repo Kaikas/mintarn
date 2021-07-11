@@ -60,7 +60,13 @@ void main() {
 
     int iHitPoints = GetCurrentHitPoints(oPc);
     effect eHeal = EffectHeal(abs(iHitPoints));
-    ApplyEffectToObject(DURATION_TYPE_INSTANT, eHeal, oPc);
-    ApplyEffectToObject(DURATION_TYPE_TEMPORARY, EffectEthereal(), oPc, 7.0f);
-    DelayCommand(6.0f, bleed(oPc));
+    if (GetTag(GetArea(oPc)) == "AREA_Testdungeon") {
+        effect eHeal = EffectHeal(10000);
+    } else {
+        int iHitPoints = GetCurrentHitPoints(oPc);
+        effect eHeal = EffectHeal(abs(iHitPoints));
+        ApplyEffectToObject(DURATION_TYPE_INSTANT, eHeal, oPc);
+        ApplyEffectToObject(DURATION_TYPE_TEMPORARY, EffectEthereal(), oPc, 7.0f);
+        DelayCommand(6.0f, bleed(oPc));
+    }
 }
