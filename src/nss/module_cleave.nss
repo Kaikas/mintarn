@@ -22,7 +22,7 @@ void main()
         float fFacing = GetFacingFromLocation(loc);
 
         // Save player location
-        if (GetTag(oArea) != "OOC") {
+        if (GetTag(oArea) != "OOC" && GetTag(oArea) != "AREA_Testdungeon") {
             string sQuery = "UPDATE Users SET facing=?, posx=?, posy=?, posz=?, area=?, gold=?, level1=?, level2=?, level3=?, gender=?, race=?, portrait=?, class1=?, class2=?, class3=?, alignment1=?, alignment2=?, health=?, maxhealth=? WHERE name=? AND charname=?";
             if (NWNX_SQL_PrepareQuery(sQuery)) {
                 NWNX_SQL_PreparedString(0, FloatToString(fFacing));
