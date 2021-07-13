@@ -1321,7 +1321,7 @@ void main() {
                 object oTalkTo = GetFirstPC();
                 while (oTalkTo != OBJECT_INVALID) {
                     if (GetArea(oTalkTo) == GetArea(oPc) && GetDistanceBetween(OBJECT_SELF, oPc) < 50.0) {
-                        NWNX_Chat_SendMessage(1, sMessage, oTalkTo, oTalkTo);
+                        NWNX_Chat_SendMessage(5, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
                     }
                     oTalkTo = GetNextPC();
                 }

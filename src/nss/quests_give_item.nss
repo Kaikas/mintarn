@@ -289,7 +289,7 @@ void main() {
             NWNX_SQL_ExecutePreparedQuery();
         }
         GiveXPToCreature(oPc, 1000);
-        GiveGoldToCreature(oPc, 50);
+        MONEY_GiveCoinMoneyWorth(50, oPc);
         CreateItemOnObject("sw_ro_eisenbarre", oPc);
     }
     // Lederer intro
@@ -318,7 +318,7 @@ void main() {
             NWNX_SQL_ExecutePreparedQuery();
         }
         GiveXPToCreature(oPc, 1000);
-        GiveGoldToCreature(oPc, 50);
+        MONEY_GiveCoinMoneyWorth(50, oPc);
     }
     // Schreiner intro
     if (GetScriptParam("item") == "schreiner_intro") {
@@ -333,7 +333,7 @@ void main() {
             NWNX_SQL_ExecutePreparedQuery();
         }
         GiveXPToCreature(oPc, 1000);
-        GiveGoldToCreature(oPc, 50);
+        MONEY_GiveCoinMoneyWorth(50, oPc);
     }
     // Bedürftige
     if (GetScriptParam("item") == "25gold") {
@@ -344,15 +344,10 @@ void main() {
             MONEY_TurnCoinsIntoGP(oPc);
             SetLocalInt(oPc, "COIN_DESTRUCTION_PREVENTION", TRUE);
             DelayCommand(0.1, DeleteLocalInt(oPc, "COIN_DESTRUCTION_PREVENTION"));
-
             // Remove the coins
             TakeGold(3, oPc);
-
-            if (!GetIsPC(oPc) || !nGold)
-                return;
             // Give coin money:
             MONEY_GiveCoinMoneyWorth(nGold, oPc);
-
             // Destroy the ingame-gold of the player:
             TakeGoldFromCreature(nGold, oPc, TRUE);
         }
@@ -409,7 +404,7 @@ void main() {
             NWNX_SQL_ExecutePreparedQuery();
         }
         GiveXPToCreature(oPc, 1000);
-        GiveGoldToCreature(oPc, 50);
+        MONEY_GiveCoinMoneyWorth(50, oPc);
         RemoveJournalQuestEntry("lebensm", oPc, FALSE, FALSE);
     }
 }
