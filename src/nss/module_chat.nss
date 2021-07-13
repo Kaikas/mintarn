@@ -1325,7 +1325,7 @@ void main() {
                 SendMessageToPC(oPc, "Folgende Spieler im 50 Meter Radius haben euch vernommen:");
                 object oTalkTo = GetFirstPC();
                 while (oTalkTo != OBJECT_INVALID) {
-                    if (GetArea(oTalkTo) == GetArea(oPc) && GetDistanceBetween(OBJECT_SELF, oPc) < 50.0) {
+                    if (GetArea(oTalkTo) == GetArea(oPc) && GetDistanceBetween(oTalkTo, oPc) < 50.0) {
                         NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
                         SendMessageToPC(oPc, GetName(oTalkTo));
                     }
