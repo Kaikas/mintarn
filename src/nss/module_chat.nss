@@ -1300,25 +1300,16 @@ void main() {
     } else {
         if (iChatVolume == 0) {
             // Normal talk
-            SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
             sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
-            //AssignCommand(oPc, ActionSpeakString(sMessage, iChatVolume));
-
-            SetLocalString(oPc, "sMessage", sMessage);
-            SetLocalInt(oPc, "iChatVolume", iChatVolume);
-            ExecuteScript("global_speak", oPc);
+            SetPCChatMessage(sMessage);
         } else if (iChatVolume == 1) {
             // Whisper
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             sMessage = GetToken(103) + sMessage + "</c>";
             sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
             sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
-            //AssignCommand(oPc, ActionSpeakString(sMessage, iChatVolume));
-
-            SetLocalString(oPc, "sMessage", sMessage);
-            SetLocalInt(oPc, "iChatVolume", iChatVolume);
-            ExecuteScript("global_speak", oPc);
+            SetPCChatMessage(sMessage);
         } else if (iChatVolume == 2) { //
             // Shout
             sMessage = GetToken(104) + sMessage + "</c>";
@@ -1329,14 +1320,14 @@ void main() {
                 object oTalkTo = GetFirstPC();
                 while (oTalkTo != OBJECT_INVALID) {
                     if (GetArea(oTalkTo) == GetArea(oPc) && GetDistanceBetween(OBJECT_SELF, oPc) < 50.0) {
-                        SendMessageToPC(oTalkTo, sMessage);
+                        NWNX_Chat_SendMessage(1, sMessage, oTalkTo, oTalkTo);
                     }
                     oTalkTo = GetNextPC();
                 }
             }
         } else if (iChatVolume == 4) {
             SendMessageToPC(oPc, GetToken(102) + "DM: " + sMessage + "</c>");
-            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", NWNX_Util_GetEnvironmentVariable("WEBHOOK_LOGS"), GetPCPlayerName(oPc) + " - " + GetName(oPc) + ": " + sMessage);
+            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", NWNX_Util_GetEnvironmentVariable("WEBHOOK_DM"), GetPCPlayerName(oPc) + " - " + GetName(oPc) + ": " + sMessage);
         } else if (iChatVolume == 5) {
             // Gruppe
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
