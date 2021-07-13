@@ -363,7 +363,9 @@ void main() {
     SetCustomTokenEx(101, "<cþf >"); //Ã™Â§
     SetCustomTokenEx(102, "<cuuu>");
     SetCustomTokenEx(103, "<cvvv>");
-    SetCustomTokenEx(104, "<c?v?>");
+    SetCustomTokenEx(104, "<cL‹ÿ>"); // Blue
+    SetCustomTokenEx(105, "<cÿÓ'>"); // Gold
+    SetCustomTokenEx(106, "<c´$$>"); // Ruby
 
     // Fertigkeits-Talente
     struct NWNX_SkillRanks_SkillFeat skillFeat;
@@ -449,6 +451,9 @@ void main() {
     NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_XP_AFTER", "e_dmxp");
     NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_LEVEL_AFTER", "e_dmlevel");
     NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_ALIGNMENT_AFTER", "e_dmalignme");
+
+    NWNX_Events_SubscribeEvent("NWNX_ON_DM_PLAYERDM_LOGIN_BEFORE", "e_playerdm");
+
 
     // Lighting
     int iDawn = 7;

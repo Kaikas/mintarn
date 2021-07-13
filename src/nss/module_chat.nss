@@ -1166,11 +1166,13 @@ void main() {
                 sMessage = GetToken(104) + sMessage + "</c>";
                 sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
                 sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
+                SendMessageToPC(oPc, "Folgende Spieler haben euch im Gebiet vernommen:");
                 if (GetIsDM(oPc)) {
                     object oTalkTo = GetFirstPC();
                     while (oTalkTo != OBJECT_INVALID) {
                         if (GetArea(oTalkTo) == GetArea(oPc)) {
-                            SendMessageToPC(oTalkTo, sMessage);
+                            NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
+                            SendMessageToPC(oPc, GetName(oTalkTo));
                         }
                         oTalkTo = GetNextPC();
                     }
@@ -1181,10 +1183,12 @@ void main() {
                 sMessage = GetToken(104) + sMessage + "</c>";
                 sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
                 sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
+                SendMessageToPC(oPc, "Folgende Spieler haben euch auf dem Server vernommen:");
                 if (GetIsDM(oPc)) {
                     object oTalkTo = GetFirstPC();
                     while (oTalkTo != OBJECT_INVALID) {
-                        SendMessageToPC(oTalkTo, sMessage);
+                        NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
+                        SendMessageToPC(oPc, GetName(oTalkTo));
                         oTalkTo = GetNextPC();
                     }
                 }
@@ -1300,43 +1304,37 @@ void main() {
     } else {
         if (iChatVolume == 0) {
             // Normal talk
-            SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
             sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
-            //AssignCommand(oPc, ActionSpeakString(sMessage, iChatVolume));
-
-            SetLocalString(oPc, "sMessage", sMessage);
-            SetLocalInt(oPc, "iChatVolume", iChatVolume);
-            ExecuteScript("global_speak", oPc);
+            SetPCChatMessage(sMessage);
         } else if (iChatVolume == 1) {
             // Whisper
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
             sMessage = GetToken(103) + sMessage + "</c>";
             sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
             sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
-            //AssignCommand(oPc, ActionSpeakString(sMessage, iChatVolume));
-
-            SetLocalString(oPc, "sMessage", sMessage);
-            SetLocalInt(oPc, "iChatVolume", iChatVolume);
-            ExecuteScript("global_speak", oPc);
+            SetPCChatMessage(sMessage);
         } else if (iChatVolume == 2) { //
             // Shout
             sMessage = GetToken(104) + sMessage + "</c>";
             sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
             sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
+            //SetPCChatMessage(sMessage);
             if (GetIsDM(oPc)) {
+                SendMessageToPC(oPc, "Folgende Spieler im 50 Meter Radius haben euch vernommen:");
                 object oTalkTo = GetFirstPC();
                 while (oTalkTo != OBJECT_INVALID) {
-                    if (GetArea(oTalkTo) == GetArea(oPc) && GetDistanceBetween(OBJECT_SELF, oPc) < 50.0) {
-                        SendMessageToPC(oTalkTo, sMessage);
+                    if (GetArea(oTalkTo) == GetArea(oPc) && GetDistanceBetween(oTalkTo, oPc) < 50.0) {
+                        NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
+                        SendMessageToPC(oPc, GetName(oTalkTo));
                     }
                     oTalkTo = GetNextPC();
                 }
             }
         } else if (iChatVolume == 4) {
             SendMessageToPC(oPc, GetToken(102) + "DM: " + sMessage + "</c>");
-            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", NWNX_Util_GetEnvironmentVariable("WEBHOOK_LOGS"), GetPCPlayerName(oPc) + " - " + GetName(oPc) + ": " + sMessage);
+            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", NWNX_Util_GetEnvironmentVariable("WEBHOOK_DM"), GetPCPlayerName(oPc) + " - " + GetName(oPc) + ": " + sMessage);
         } else if (iChatVolume == 5) {
             // Gruppe
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
