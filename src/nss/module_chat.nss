@@ -1170,7 +1170,7 @@ void main() {
                     object oTalkTo = GetFirstPC();
                     while (oTalkTo != OBJECT_INVALID) {
                         if (GetArea(oTalkTo) == GetArea(oPc)) {
-                            NWNX_Chat_SendMessage(1, sMessage, oTalkTo, oTalkTo);
+                            NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
                         }
                         oTalkTo = GetNextPC();
                     }
@@ -1184,7 +1184,7 @@ void main() {
                 if (GetIsDM(oPc)) {
                     object oTalkTo = GetFirstPC();
                     while (oTalkTo != OBJECT_INVALID) {
-                        NWNX_Chat_SendMessage(1, sMessage, oTalkTo, oTalkTo);
+                        NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
                         oTalkTo = GetNextPC();
                     }
                 }

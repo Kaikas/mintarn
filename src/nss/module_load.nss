@@ -452,6 +452,9 @@ void main() {
     NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_LEVEL_AFTER", "e_dmlevel");
     NWNX_Events_SubscribeEvent("NWNX_ON_DM_GIVE_ALIGNMENT_AFTER", "e_dmalignme");
 
+    NWNX_Events_SubscribeEvent("NWNX_ON_DM_PLAYERDM_LOGIN_BEFORE", "e_playerdm");
+
+
     // Lighting
     int iDawn = 7;
     int iDusk = 17;
