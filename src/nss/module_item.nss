@@ -3,6 +3,11 @@
 #include "nwnx_sql"
 #include "nwnx_time"
 
+const int SKILL_CRAFT_LEATHERER = 31;
+const int SKILL_CRAFT_SMITH = 32;
+const int SKILL_CRAFT_CARPENTER = 15;
+const int SKILL_CRAFT_ALCHEMIST = 34;
+
 // Zählt die items im Inventar
 int CountItems(object oPc, string sTag) {
     int i = 0;
@@ -90,16 +95,16 @@ void CraftItem(object oPc, int iAmount, string sItem, string sResource1, int iCo
 
     // Add skillpoints
     if (sLocation == "Schreiner") {
-        iXp = iXp + GetSkillRank(23, oPc) * (5 + Random(5));
+        iXp = iXp + GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) * (5 + Random(5));
     }
     if (sLocation == "Lederer") {
-        iXp = iXp + GetSkillRank(19, oPc) * (5 + Random(5));
+        iXp = iXp + GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) * (5 + Random(5));
     }
     if (sLocation == "Schmiede") {
-        iXp = iXp + GetSkillRank(22, oPc) * (5 + Random(5));
+        iXp = iXp + GetSkillRank(SKILL_CRAFT_SMITH, oPc) * (5 + Random(5));
     }
     if (sLocation == "Alchemie") {
-        iXp = iXp + GetSkillRank(24, oPc) * (5 + Random(5));
+        iXp = iXp + GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) * (5 + Random(5));
     }
 
     if (sProficiency == "Geselle") {
@@ -170,116 +175,116 @@ void CraftItem(object oPc, int iAmount, string sItem, string sResource1, int iCo
         // Check if the receipe has to be destroyed after using it
         int iChanceToDestroy = 0;
         if (sLocation == "Schreiner") {
-            if (GetSkillRank(23, oPc) == 1) iChanceToDestroy = 95;
-            if (GetSkillRank(23, oPc) == 2) iChanceToDestroy = 90;
-            if (GetSkillRank(23, oPc) == 3) iChanceToDestroy = 85;
-            if (GetSkillRank(23, oPc) == 4) iChanceToDestroy = 80;
-            if (GetSkillRank(23, oPc) == 5) iChanceToDestroy = 75;
-            if (GetSkillRank(23, oPc) == 6) iChanceToDestroy = 71;
-            if (GetSkillRank(23, oPc) == 7) iChanceToDestroy = 67;
-            if (GetSkillRank(23, oPc) == 8) iChanceToDestroy = 63;
-            if (GetSkillRank(23, oPc) == 9) iChanceToDestroy = 59;
-            if (GetSkillRank(23, oPc) == 10) iChanceToDestroy = 55;
-            if (GetSkillRank(23, oPc) == 11) iChanceToDestroy = 52;
-            if (GetSkillRank(23, oPc) == 12) iChanceToDestroy = 49;
-            if (GetSkillRank(23, oPc) == 13) iChanceToDestroy = 46;
-            if (GetSkillRank(23, oPc) == 14) iChanceToDestroy = 43;
-            if (GetSkillRank(23, oPc) == 15) iChanceToDestroy = 40;
-            if (GetSkillRank(23, oPc) == 16) iChanceToDestroy = 38;
-            if (GetSkillRank(23, oPc) == 17) iChanceToDestroy = 36;
-            if (GetSkillRank(23, oPc) == 18) iChanceToDestroy = 34;
-            if (GetSkillRank(23, oPc) == 19) iChanceToDestroy = 32;
-            if (GetSkillRank(23, oPc) == 20) iChanceToDestroy = 30;
-            if (GetSkillRank(23, oPc) == 21) iChanceToDestroy = 29;
-            if (GetSkillRank(23, oPc) == 22) iChanceToDestroy = 28;
-            if (GetSkillRank(23, oPc) == 23) iChanceToDestroy = 27;
-            if (GetSkillRank(23, oPc) == 24) iChanceToDestroy = 26;
-            if (GetSkillRank(23, oPc) == 25) iChanceToDestroy = 25;
-            if (GetSkillRank(23, oPc) > 25) iChanceToDestroy = 25;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 1) iChanceToDestroy = 95;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 2) iChanceToDestroy = 90;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 3) iChanceToDestroy = 85;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 4) iChanceToDestroy = 80;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 5) iChanceToDestroy = 75;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 6) iChanceToDestroy = 71;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 7) iChanceToDestroy = 67;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 8) iChanceToDestroy = 63;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 9) iChanceToDestroy = 59;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 10) iChanceToDestroy = 55;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 11) iChanceToDestroy = 52;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 12) iChanceToDestroy = 49;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 13) iChanceToDestroy = 46;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 14) iChanceToDestroy = 43;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 15) iChanceToDestroy = 40;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 16) iChanceToDestroy = 38;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 17) iChanceToDestroy = 36;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 18) iChanceToDestroy = 34;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 19) iChanceToDestroy = 32;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 20) iChanceToDestroy = 30;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 21) iChanceToDestroy = 29;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 22) iChanceToDestroy = 28;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 23) iChanceToDestroy = 27;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 24) iChanceToDestroy = 26;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) == 25) iChanceToDestroy = 25;
+            if (GetSkillRank(SKILL_CRAFT_CARPENTER, oPc) > 25) iChanceToDestroy = 25;
         }
         if (sLocation == "Lederer") {
-            if (GetSkillRank(19, oPc) == 1) iChanceToDestroy = 95;
-            if (GetSkillRank(19, oPc) == 2) iChanceToDestroy = 90;
-            if (GetSkillRank(19, oPc) == 3) iChanceToDestroy = 85;
-            if (GetSkillRank(19, oPc) == 4) iChanceToDestroy = 80;
-            if (GetSkillRank(19, oPc) == 5) iChanceToDestroy = 75;
-            if (GetSkillRank(19, oPc) == 6) iChanceToDestroy = 71;
-            if (GetSkillRank(19, oPc) == 7) iChanceToDestroy = 67;
-            if (GetSkillRank(19, oPc) == 8) iChanceToDestroy = 63;
-            if (GetSkillRank(19, oPc) == 9) iChanceToDestroy = 59;
-            if (GetSkillRank(19, oPc) == 10) iChanceToDestroy = 55;
-            if (GetSkillRank(19, oPc) == 11) iChanceToDestroy = 52;
-            if (GetSkillRank(19, oPc) == 12) iChanceToDestroy = 49;
-            if (GetSkillRank(19, oPc) == 13) iChanceToDestroy = 46;
-            if (GetSkillRank(19, oPc) == 14) iChanceToDestroy = 43;
-            if (GetSkillRank(19, oPc) == 15) iChanceToDestroy = 40;
-            if (GetSkillRank(19, oPc) == 16) iChanceToDestroy = 38;
-            if (GetSkillRank(19, oPc) == 17) iChanceToDestroy = 36;
-            if (GetSkillRank(19, oPc) == 18) iChanceToDestroy = 34;
-            if (GetSkillRank(19, oPc) == 19) iChanceToDestroy = 32;
-            if (GetSkillRank(19, oPc) == 20) iChanceToDestroy = 30;
-            if (GetSkillRank(19, oPc) == 21) iChanceToDestroy = 29;
-            if (GetSkillRank(19, oPc) == 22) iChanceToDestroy = 28;
-            if (GetSkillRank(19, oPc) == 23) iChanceToDestroy = 27;
-            if (GetSkillRank(19, oPc) == 24) iChanceToDestroy = 26;
-            if (GetSkillRank(19, oPc) == 25) iChanceToDestroy = 25;
-            if (GetSkillRank(19, oPc) > 25) iChanceToDestroy = 25;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 1) iChanceToDestroy = 95;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 2) iChanceToDestroy = 90;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 3) iChanceToDestroy = 85;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 4) iChanceToDestroy = 80;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 5) iChanceToDestroy = 75;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 6) iChanceToDestroy = 71;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 7) iChanceToDestroy = 67;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 8) iChanceToDestroy = 63;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 9) iChanceToDestroy = 59;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 10) iChanceToDestroy = 55;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 11) iChanceToDestroy = 52;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 12) iChanceToDestroy = 49;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 13) iChanceToDestroy = 46;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 14) iChanceToDestroy = 43;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 15) iChanceToDestroy = 40;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 16) iChanceToDestroy = 38;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 17) iChanceToDestroy = 36;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 18) iChanceToDestroy = 34;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 19) iChanceToDestroy = 32;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 20) iChanceToDestroy = 30;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 21) iChanceToDestroy = 29;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 22) iChanceToDestroy = 28;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 23) iChanceToDestroy = 27;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 24) iChanceToDestroy = 26;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) == 25) iChanceToDestroy = 25;
+            if (GetSkillRank(SKILL_CRAFT_LEATHERER, oPc) > 25) iChanceToDestroy = 25;
         }
         if (sLocation == "Schmiede") {
-            if (GetSkillRank(22, oPc) == 1) iChanceToDestroy = 95;
-            if (GetSkillRank(22, oPc) == 2) iChanceToDestroy = 90;
-            if (GetSkillRank(22, oPc) == 3) iChanceToDestroy = 85;
-            if (GetSkillRank(22, oPc) == 4) iChanceToDestroy = 80;
-            if (GetSkillRank(22, oPc) == 5) iChanceToDestroy = 75;
-            if (GetSkillRank(22, oPc) == 6) iChanceToDestroy = 71;
-            if (GetSkillRank(22, oPc) == 7) iChanceToDestroy = 67;
-            if (GetSkillRank(22, oPc) == 8) iChanceToDestroy = 63;
-            if (GetSkillRank(22, oPc) == 9) iChanceToDestroy = 59;
-            if (GetSkillRank(22, oPc) == 10) iChanceToDestroy = 55;
-            if (GetSkillRank(22, oPc) == 11) iChanceToDestroy = 52;
-            if (GetSkillRank(22, oPc) == 12) iChanceToDestroy = 49;
-            if (GetSkillRank(22, oPc) == 13) iChanceToDestroy = 46;
-            if (GetSkillRank(22, oPc) == 14) iChanceToDestroy = 43;
-            if (GetSkillRank(22, oPc) == 15) iChanceToDestroy = 40;
-            if (GetSkillRank(22, oPc) == 16) iChanceToDestroy = 38;
-            if (GetSkillRank(22, oPc) == 17) iChanceToDestroy = 36;
-            if (GetSkillRank(22, oPc) == 18) iChanceToDestroy = 34;
-            if (GetSkillRank(22, oPc) == 19) iChanceToDestroy = 32;
-            if (GetSkillRank(22, oPc) == 20) iChanceToDestroy = 30;
-            if (GetSkillRank(22, oPc) == 21) iChanceToDestroy = 29;
-            if (GetSkillRank(22, oPc) == 22) iChanceToDestroy = 28;
-            if (GetSkillRank(22, oPc) == 23) iChanceToDestroy = 27;
-            if (GetSkillRank(22, oPc) == 24) iChanceToDestroy = 26;
-            if (GetSkillRank(22, oPc) == 25) iChanceToDestroy = 25;
-            if (GetSkillRank(22, oPc) > 25) iChanceToDestroy = 25;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 1) iChanceToDestroy = 95;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 2) iChanceToDestroy = 90;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 3) iChanceToDestroy = 85;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 4) iChanceToDestroy = 80;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 5) iChanceToDestroy = 75;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 6) iChanceToDestroy = 71;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 7) iChanceToDestroy = 67;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 8) iChanceToDestroy = 63;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 9) iChanceToDestroy = 59;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 10) iChanceToDestroy = 55;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 11) iChanceToDestroy = 52;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 12) iChanceToDestroy = 49;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 13) iChanceToDestroy = 46;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 14) iChanceToDestroy = 43;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 15) iChanceToDestroy = 40;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 16) iChanceToDestroy = 38;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 17) iChanceToDestroy = 36;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 18) iChanceToDestroy = 34;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 19) iChanceToDestroy = 32;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 20) iChanceToDestroy = 30;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 21) iChanceToDestroy = 29;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 22) iChanceToDestroy = 28;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 23) iChanceToDestroy = 27;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 24) iChanceToDestroy = 26;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) == 25) iChanceToDestroy = 25;
+            if (GetSkillRank(SKILL_CRAFT_SMITH, oPc) > 25) iChanceToDestroy = 25;
         }
         if (sLocation == "Alchemie") {
-            if (GetSkillRank(24, oPc) == 1) iChanceToDestroy = 95;
-            if (GetSkillRank(24, oPc) == 2) iChanceToDestroy = 90;
-            if (GetSkillRank(24, oPc) == 3) iChanceToDestroy = 85;
-            if (GetSkillRank(24, oPc) == 4) iChanceToDestroy = 80;
-            if (GetSkillRank(24, oPc) == 5) iChanceToDestroy = 75;
-            if (GetSkillRank(24, oPc) == 6) iChanceToDestroy = 71;
-            if (GetSkillRank(24, oPc) == 7) iChanceToDestroy = 67;
-            if (GetSkillRank(24, oPc) == 8) iChanceToDestroy = 63;
-            if (GetSkillRank(24, oPc) == 9) iChanceToDestroy = 59;
-            if (GetSkillRank(24, oPc) == 10) iChanceToDestroy = 55;
-            if (GetSkillRank(24, oPc) == 11) iChanceToDestroy = 52;
-            if (GetSkillRank(24, oPc) == 12) iChanceToDestroy = 49;
-            if (GetSkillRank(24, oPc) == 13) iChanceToDestroy = 46;
-            if (GetSkillRank(24, oPc) == 14) iChanceToDestroy = 43;
-            if (GetSkillRank(24, oPc) == 15) iChanceToDestroy = 40;
-            if (GetSkillRank(24, oPc) == 16) iChanceToDestroy = 38;
-            if (GetSkillRank(24, oPc) == 17) iChanceToDestroy = 36;
-            if (GetSkillRank(24, oPc) == 18) iChanceToDestroy = 34;
-            if (GetSkillRank(24, oPc) == 19) iChanceToDestroy = 32;
-            if (GetSkillRank(24, oPc) == 20) iChanceToDestroy = 30;
-            if (GetSkillRank(24, oPc) == 21) iChanceToDestroy = 29;
-            if (GetSkillRank(24, oPc) == 22) iChanceToDestroy = 28;
-            if (GetSkillRank(24, oPc) == 23) iChanceToDestroy = 27;
-            if (GetSkillRank(24, oPc) == 24) iChanceToDestroy = 26;
-            if (GetSkillRank(24, oPc) == 25) iChanceToDestroy = 25;
-            if (GetSkillRank(24, oPc) > 25) iChanceToDestroy = 25;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 1) iChanceToDestroy = 95;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 2) iChanceToDestroy = 90;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 3) iChanceToDestroy = 85;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 4) iChanceToDestroy = 80;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 5) iChanceToDestroy = 75;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 6) iChanceToDestroy = 71;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 7) iChanceToDestroy = 67;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 8) iChanceToDestroy = 63;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 9) iChanceToDestroy = 59;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 10) iChanceToDestroy = 55;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 11) iChanceToDestroy = 52;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 12) iChanceToDestroy = 49;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 13) iChanceToDestroy = 46;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 14) iChanceToDestroy = 43;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 15) iChanceToDestroy = 40;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 16) iChanceToDestroy = 38;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 17) iChanceToDestroy = 36;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 18) iChanceToDestroy = 34;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 19) iChanceToDestroy = 32;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 20) iChanceToDestroy = 30;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 21) iChanceToDestroy = 29;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 22) iChanceToDestroy = 28;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 23) iChanceToDestroy = 27;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 24) iChanceToDestroy = 26;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) == 25) iChanceToDestroy = 25;
+            if (GetSkillRank(SKILL_CRAFT_ALCHEMIST, oPc) > 25) iChanceToDestroy = 25;
         }
 
         if (iDestroy) {
