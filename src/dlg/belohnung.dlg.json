@@ -60,7 +60,7 @@
               },
               "Index": {
                 "type": "dword",
-                "value": 3
+                "value": 6
               },
               "IsChild": {
                 "type": "byte",
@@ -79,7 +79,7 @@
               },
               "Index": {
                 "type": "dword",
-                "value": 2
+                "value": 5
               },
               "IsChild": {
                 "type": "byte",
@@ -98,7 +98,7 @@
               },
               "Index": {
                 "type": "dword",
-                "value": 1
+                "value": 4
               },
               "IsChild": {
                 "type": "byte",
@@ -107,6 +107,63 @@
             },
             {
               "__struct_id": 3,
+              "Active": {
+                "type": "resref",
+                "value": ""
+              },
+              "ConditionParams": {
+                "type": "list",
+                "value": []
+              },
+              "Index": {
+                "type": "dword",
+                "value": 3
+              },
+              "IsChild": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 4,
+              "Active": {
+                "type": "resref",
+                "value": ""
+              },
+              "ConditionParams": {
+                "type": "list",
+                "value": []
+              },
+              "Index": {
+                "type": "dword",
+                "value": 2
+              },
+              "IsChild": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 5,
+              "Active": {
+                "type": "resref",
+                "value": ""
+              },
+              "ConditionParams": {
+                "type": "list",
+                "value": []
+              },
+              "Index": {
+                "type": "dword",
+                "value": 1
+              },
+              "IsChild": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 6,
               "Active": {
                 "type": "resref",
                 "value": ""
@@ -141,7 +198,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "In welcher höhe soll der anvisierte Spieler mit XP belohnt werden?"
+            "0": "Spieler belohnen."
           }
         }
       }
@@ -149,7 +206,7 @@
   },
   "NumWords": {
     "type": "dword",
-    "value": 22
+    "value": 19
   },
   "PreventZoomIn": {
     "type": "byte",
@@ -216,7 +273,178 @@
               },
               "Value": {
                 "type": "cexostring",
-                "value": "groß"
+                "value": "mgross"
+              }
+            }
+          ]
+        },
+        "Animation": {
+          "type": "dword",
+          "value": 0
+        },
+        "AnimLoop": {
+          "type": "byte",
+          "value": 1
+        },
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Delay": {
+          "type": "dword",
+          "value": 4294967295
+        },
+        "EntriesList": {
+          "type": "list",
+          "value": []
+        },
+        "Quest": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Script": {
+          "type": "resref",
+          "value": "global_belohnung"
+        },
+        "Sound": {
+          "type": "resref",
+          "value": ""
+        },
+        "Text": {
+          "type": "cexolocstring",
+          "value": {
+            "0": "Große Münzbelohnung."
+          }
+        }
+      },
+      {
+        "__struct_id": 2,
+        "ActionParams": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "Key": {
+                "type": "cexostring",
+                "value": "belohnung"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "mmittel"
+              }
+            }
+          ]
+        },
+        "Animation": {
+          "type": "dword",
+          "value": 0
+        },
+        "AnimLoop": {
+          "type": "byte",
+          "value": 1
+        },
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Delay": {
+          "type": "dword",
+          "value": 4294967295
+        },
+        "EntriesList": {
+          "type": "list",
+          "value": []
+        },
+        "Quest": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Script": {
+          "type": "resref",
+          "value": "global_belohnung"
+        },
+        "Sound": {
+          "type": "resref",
+          "value": ""
+        },
+        "Text": {
+          "type": "cexolocstring",
+          "value": {
+            "0": "Mittlere Münzbelohnung."
+          }
+        }
+      },
+      {
+        "__struct_id": 3,
+        "ActionParams": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "Key": {
+                "type": "cexostring",
+                "value": "belohnung"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "mklein"
+              }
+            }
+          ]
+        },
+        "Animation": {
+          "type": "dword",
+          "value": 0
+        },
+        "AnimLoop": {
+          "type": "byte",
+          "value": 1
+        },
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Delay": {
+          "type": "dword",
+          "value": 4294967295
+        },
+        "EntriesList": {
+          "type": "list",
+          "value": []
+        },
+        "Quest": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Script": {
+          "type": "resref",
+          "value": "global_belohnung"
+        },
+        "Sound": {
+          "type": "resref",
+          "value": ""
+        },
+        "Text": {
+          "type": "cexolocstring",
+          "value": {
+            "0": "Kleine Münzbelohnung."
+          }
+        }
+      },
+      {
+        "__struct_id": 4,
+        "ActionParams": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "Key": {
+                "type": "cexostring",
+                "value": "belohnung"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "gross"
               }
             }
           ]
@@ -261,7 +489,7 @@
         }
       },
       {
-        "__struct_id": 2,
+        "__struct_id": 5,
         "ActionParams": {
           "type": "list",
           "value": [
@@ -318,7 +546,7 @@
         }
       },
       {
-        "__struct_id": 3,
+        "__struct_id": 6,
         "ActionParams": {
           "type": "list",
           "value": [
