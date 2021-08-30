@@ -43,5 +43,5 @@ void main() {
             oPlayer = GetNextPC();
         }
     }
-    DelayCommand(60.0, ExecuteScript("alarm", OBJECT_SELF));
+    DelayCommand(31.0, ExecuteScript("alarm", OBJECT_SELF));
 }
