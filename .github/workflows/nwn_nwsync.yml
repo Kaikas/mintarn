@@ -20,6 +20,15 @@ jobs:
       
       - name: Copy tlk file
         run: cd ~/mintarn-haks && cp mintarn.tlk ~/nwn/server/tlk/mintarn.tlk
+
+      - name: Pull portrait repository
+        run: cd ~/mintarn-portraits && git pull    
+        
+      - name: Pack portraits.hak with nasher
+        run: cd ~/mintarn-portraits && docker run --rm --user 1019:1019 -v ${PWD}:/nasher kaikas/nasher:nwn_production pack hak --default
+
+      - name: Copy potrait hak file
+        run: cd ~/mintarn-portraits && cp portraits.hak ~/nwn/server/hak/portraits.hak
         
       - name: Run nwsync
         run: cd ~/nwn/ && nwsync/nwsync_write --description="Mintarn Development" website/nwsync/ server/modules/Mintarn.mod
@@ -44,6 +53,16 @@ jobs:
       
       - name: Copy tlk file
         run: cd ~/mintarn-haks && cp mintarn.tlk ~/nwn_dev/server/tlk/mintarn.tlk
+
+      - name: Pull portrait repository
+        run: cd ~/mintarn-portraits && git pull    
+        
+      - name: Pack portraits.hak with nasher
+        run: cd ~/mintarn-portraits && docker run --rm --user 1019:1019 -v ${PWD}:/nasher kaikas/nasher:nwn_production pack hak --default
+
+      - name: Copy potrait hak file
+        run: cd ~/mintarn-portraits && cp portraits.hak ~/nwn/server/hak/portraits.hak
+        
         
       - name: Restart dev server
         run: docker-compose -f ~/nwn_dev/docker-compose.yml restart
