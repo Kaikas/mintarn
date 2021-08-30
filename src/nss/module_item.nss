@@ -733,7 +733,11 @@ void main() {
             GetTag(GetArea(oPc)) == "AREA_Wald" ||
             GetTag(GetArea(oPc)) == "AREA_Westmark") {
             AssignCommand(oPc, ClearAllActions());
-            DestroyObject(oItem);
+            if (GetItemStackSize(oItem) < 2) {
+                DestroyObject(oItem);
+            } else {
+                SetItemStackSize(oItem, GetItemStackSize(oItem) - 1);
+            }
             ApplyEffectToObject(DURATION_TYPE_TEMPORARY, EffectCutsceneImmobilize(), oPc, 5.0f);
             AssignCommand(oPc, ActionPlayAnimation(ANIMATION_LOOPING_GET_LOW, 1.0, 5.0f));
             location lRueckruf = GetLocation(GetObjectByTag("WP_RUECKRUF"));
