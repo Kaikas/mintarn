@@ -61,7 +61,7 @@ jobs:
         run: cd ~/mintarn-portraits && docker run --rm --user 1019:1019 -v ${PWD}:/nasher kaikas/nasher:nwn_production pack hak --default
 
       - name: Copy potrait hak file
-        run: cd ~/mintarn-portraits && cp portraits.hak ~/nwn/server/hak/portraits.hak
+        run: cd ~/mintarn-portraits && cp portraits.hak ~/nwn_dev/server/hak/portraits.hak
         
         
       - name: Restart dev server
