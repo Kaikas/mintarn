@@ -263,6 +263,8 @@ void main() {
     // Get Trap DC
     int iDC = GetTrapSetDC(GetTag(oTrap));
 
+    SendMessageToPC(oPc, "Falle stellen: Ihr würfelt " + IntToString(iRoll) + " + " + IntToString(iSkillCheck) + ".");
+    SendMessageToPC(oPc, "Die Falle hatten eine Schwierigkeit von " + IntToString(iDC) + ".");
     // Check if the skillcheck was successful
     if (iSkillCheck >= iDC) {
       // Start a timer progress bar for 5 seconds
@@ -279,5 +281,6 @@ void main() {
       if (iDC - iSkillCheck > 9 && !GetHasFeat(SW_FEAT_SKILL_MASTERY, oPc)) {
         SetTrap(oPc, oTrap, STANDARD_FACTION_HOSTILE);
       }
+      SendMessageToPC(oPc, "Die Falle ging nach hinten los.");
     }
 }
