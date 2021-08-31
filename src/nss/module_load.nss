@@ -440,6 +440,8 @@ void main() {
     NWNX_Events_SubscribeEvent("NWNX_ON_ELC_VALIDATE_CHARACTER_BEFORE", "e_elc");
     NWNX_Events_SubscribeEvent("NWNX_ON_TRAP_SET_BEFORE", "e_settrap");
     NWNX_Events_SubscribeEvent("NWNX_ON_TRAP_RECOVER_BEFORE", "e_rectrap");
+    NWNX_Events_SubscribeEvent("NWNX_ON_TRAP_EXAMINE_BEFORE", "e_extrap");
+    NWNX_Events_SubscribeEvent("NWNX_ON_TRAP_FLAG_BEFORE", "e_flagtrap");
     NWNX_Events_SubscribeEvent("NWNX_ON_USE_SKILL_BEFORE", "e_skill");
     NWNX_Events_SubscribeEvent("NWNX_ON_COMBAT_MODE_ON", "e_cmode");
 
