@@ -55,8 +55,6 @@ void main() {
             ":" +
             LeadingZeros(IntToString(GetTimeMinute()), 2) +
             "Uhr.</c>");
-            //+ LeadingZeros(IntToString(GetTimeMinute()), 2) + " Uhr.</c>");
-        //SendMessageToPC(oPc, IntToString(GetCalendarDay()) + "." + IntToString(GetCalendarMonth()) + "." + IntToString(GetCalendarYear()) + " - " + IntToString(GetTimeHour()) + ":00 Uhr");
         SendMessageToPC(oPc, GetToken(103) + "Die Auﬂentemperatur betr‰gt " + IntToString(iTemperatur) + "∞C</c>");
         string sWindStrength;
         // Possible: N, NO, O, SO, S, SW, W, NW
@@ -93,6 +91,7 @@ void main() {
             }
             oPlayer = GetNextPC();
         }
+        SendMessageToPC(oPc, "DEBUG: Es sind " + IntToString(iPlayers) + " im Gebiet");
         if (iPlayers < 2) {
             // Set refresh tag
             SetLocalInt(GetArea(oPc), "area_enter", NWNX_Time_GetTimeStamp());
@@ -207,6 +206,7 @@ void main() {
                     location locTarget = Location(OBJECT_SELF, vPosition, fFacing);
                     if (Random(100) + 1 > 100 - iChance) {
                         object oCreature = CreateObject(OBJECT_TYPE_CREATURE, sType, locTarget);
+                        SendMessageToPC(oPc, "DEBUG: platziere Gegner");
                         SetLocalInt(oCreature, "id", StringToInt(NWNX_SQL_ReadDataInActiveRow(0)));
                     }
                 }
