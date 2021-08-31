@@ -624,10 +624,15 @@ void main() {
         SetLocalFloat(oPc, "placer_facing", fFacing);
         AssignCommand(oPc, ActionStartConversation(oPc, "placer", TRUE));
     }
-    // Name ändern
+    // Change Name
     if (GetTag(oItem) == "SW_ChangeName") {
         object oTarget = GetItemActivatedTarget();
         SetLocalObject(oPc, "changename", oTarget);
+    }
+    // Change description
+    if (GetTag(oItem) == "SW_ChangeDesc") {
+        object oTarget = GetItemActivatedTarget();
+        SetLocalObject(oPc, "changedesc", oTarget);
     }
     // Feenstaub
     if (GetTag(oItem) == "CRAFT_Feenstaub") {

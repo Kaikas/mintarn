@@ -224,6 +224,12 @@ void main() {
             if (oTarget != OBJECT_INVALID) {
                 SetName(oTarget, GetSubString(sMessage, 11, 1000));
             }
+        } else if (GetSubString(sMessage, 0, 11) == "/changedesc") {
+            SetPCChatVolume(TALKVOLUME_SILENT_TALK);
+            object oTarget = GetLocalObject(oPc, "changedesc");
+            if (oTarget != OBJECT_INVALID) {
+                SetName(oTarget, GetSubString(sMessage, 11, 1000));
+            }
         // Reiten
         } else if (sUnban == "/pferd") {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
