@@ -84,12 +84,14 @@ void main() {
 
         // If first player, fill area
         int iPlayers = 0;
-        object oPc = GetFirstPC();
-        while(GetIsObjectValid(oPc)) {
-            if (GetTag(GetArea(oPc)) ==  GetTag(GetArea(oPc))) {
+        object oPlayer = GetFirstPC();
+        while(GetIsObjectValid(oPlayer)) {
+            if (GetTag(GetArea(oPlayer)) ==  GetTag(GetArea(oPlayer))) {
+              if (!GetIsDM(oPlayer)) {
                 iPlayers++;
+              }
             }
-            oPc = GetNextPC();
+            oPlayer = GetNextPC();
         }
         if (iPlayers < 2) {
             // Set refresh tag
