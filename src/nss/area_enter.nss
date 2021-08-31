@@ -91,7 +91,7 @@ void main() {
             }
             oPlayer = GetNextPC();
         }
-        SendMessageToPC(oPc, "DEBUG: Es sind " + IntToString(iPlayers) + " im Gebiet");
+        //SendMessageToPC(oPc, "DEBUG: Es sind " + IntToString(iPlayers) + " im Gebiet");
         if (iPlayers < 2) {
             // Set refresh tag
             SetLocalInt(GetArea(oPc), "area_enter", NWNX_Time_GetTimeStamp());
@@ -206,7 +206,7 @@ void main() {
                     location locTarget = Location(OBJECT_SELF, vPosition, fFacing);
                     if (Random(100) + 1 > 100 - iChance) {
                         object oCreature = CreateObject(OBJECT_TYPE_CREATURE, sType, locTarget);
-                        SendMessageToPC(oPc, "DEBUG: platziere Gegner");
+                        //SendMessageToPC(oPc, "DEBUG: platziere Gegner");
                         SetLocalInt(oCreature, "id", StringToInt(NWNX_SQL_ReadDataInActiveRow(0)));
                     }
                 }
