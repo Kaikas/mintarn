@@ -22,10 +22,10 @@ void bleed(object oPc) {
         SetLocalInt(oPc, "LIVING_POINTS", GetLocalInt(oPc, "LIVING_POINTS") + 1);
         SendMessageToPC(oPc, "[d20 = " + IntToString(iRoll) + "] Ihr erholt euch! (" + IntToString(GetLocalInt(oPc, "LIVING_POINTS")) + "/3 Erfolge)");
     } else if (iRoll == 20) {
-        SetLocalInt(oPc, "LIVING_POINTS", GetLocalInt(oPc, "LIVING_POINTS") + 3);
+        SetLocalInt(oPc, "LIVING_POINTS", 3);
         SendMessageToPC(oPc, "[d20 = " + IntToString(iRoll) + "] Ihr erholt euch! (" + IntToString(GetLocalInt(oPc, "LIVING_POINTS")) + "/3 Erfolge)");
     } else if (iRoll == 1) {
-        SetLocalInt(oPc, "DYING_POINTS", GetLocalInt(oPc, "DYING_POINTS") + 3);
+        SetLocalInt(oPc, "DYING_POINTS", 3);
         SendMessageToPC(oPc, "[d20 = " + IntToString(iRoll) + "] Ihr kommt dem Tode näher! (" + IntToString(GetLocalInt(oPc, "DYING_POINTS")) + "/3 Misserfolge)");
     }
 
