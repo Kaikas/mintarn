@@ -1080,9 +1080,8 @@ void main() {
             // Masks
             } else if (GetSubString(sMessage, 0, 6) == "/maske") {
                 int iMask = StringToInt(GetSubString(sMessage, 7, 2));
-                if (GetSubString(sMessage, 7, 2) == "") {
-                  removeMask(oPc);
-                } else {
+                removeMask(oPc);
+                if (GetSubString(sMessage, 7, 2) != "") {
                   if (iMask == 0) applyMask(oPc, 8193);
                   if (iMask == 1) applyMask(oPc, 8193);
                   if (iMask == 2) applyMask(oPc, 8215);
@@ -1228,6 +1227,7 @@ void main() {
                                     "/d20\n" +
                                     "\nWeitere Übersichten:\n" +
                                     "/hilfe fertigkeit\n" +
+                                    "/hilfe maske\n" +
                                     "/hilfe animation\n");
             } else if (sMessage == "/hilfe animation") {
                 SendMessageToPC(oPc, "Einmalig:\n" +
@@ -1301,6 +1301,49 @@ void main() {
                                     "/weltliches\n" +
                                     "/überleben\n" +
                                     "/überzeugen\n");
+            } else if (sMessage == "/hilfe maske") {
+                SendMessageToPC(oPc, "/maske 0: brauner Dreispitz\n" +
+                                     "/maske 1: brauner Dreispitz\n" +
+                                     "/maske 2: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 4: Piratenhut\n" +
+                                     "/maske 5: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n" +
             } else {
                 SendMessageToPC(oPc, "Ungültiger Befehl: \"" +
                                      sMessage +
