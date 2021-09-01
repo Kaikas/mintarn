@@ -76,41 +76,40 @@ void RollSkillCheck(string sOutput, int iSkill, int iCheckAbility, int iKeyAbili
     ExecuteScript("global_speak", oPc);
 }
 
+void removeMask(object oPc) {
+  effect eEffect = GetFirstEffect(oPc);
+  while(GetIsEffectValid(eEffect)) {
+      if(GetEffectTag(eEffect) == "eff_maske") {
+          RemoveEffect(oPc, eEffect);
+      }
+      eEffect = GetNextEffect(oPc);
+  }
+
+}
+
 // Applies or removes a mask
 void applyMask(object oPc, int iVFX) {
-    if (GetLocalInt(oPc, "maske") == 1) {
-        SetLocalInt(oPc, "maske", 0);
-        effect eEffect = GetFirstEffect(oPc);
-        while(GetIsEffectValid(eEffect)) {
-            if(GetEffectTag(eEffect) == "eff_maske") {
-                RemoveEffect(oPc, eEffect);
-            }
-            eEffect = GetNextEffect(oPc);
-        }
-    } else {
-        SetLocalInt(oPc, "maske", 1);
-        int iIncBy = 0;
-        int iRace = GetRacialType(oPc);
-        int iGender = GetGender(oPc);
-        int iPheno = GetPhenoType(oPc);
-        string sGender = "Male";
-        string sRace;
-        switch(iRace) {
-            case RACIAL_TYPE_DWARF: iIncBy = 2; sRace = "Dwarf"; break;
-            case RACIAL_TYPE_ELF: iIncBy = 4; sRace = "Elf"; break;
-            case RACIAL_TYPE_GNOME: iIncBy = 6; sRace = "Gnome"; break;
-            case RACIAL_TYPE_HALFLING: iIncBy = 8; sRace = "Halfling"; break;
-            case RACIAL_TYPE_HALFORC: iIncBy = 10; sRace = "Halforc"; break;
-            case RACIAL_TYPE_HALFELF:
-            case RACIAL_TYPE_HUMAN:  break;
-        }
-        if (iGender == GENDER_FEMALE) {
-            iIncBy++;
-            sGender = "Female";
-        }
-        int iVFXNumber = iVFX + iIncBy;
-        ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(EffectVisualEffect(iVFXNumber), "eff_maske"), oPc);
+    int iIncBy = 0;
+    int iRace = GetRacialType(oPc);
+    int iGender = GetGender(oPc);
+    int iPheno = GetPhenoType(oPc);
+    string sGender = "Male";
+    string sRace;
+    switch(iRace) {
+        case RACIAL_TYPE_DWARF: iIncBy = 2; sRace = "Dwarf"; break;
+        case RACIAL_TYPE_ELF: iIncBy = 4; sRace = "Elf"; break;
+        case RACIAL_TYPE_GNOME: iIncBy = 6; sRace = "Gnome"; break;
+        case RACIAL_TYPE_HALFLING: iIncBy = 8; sRace = "Halfling"; break;
+        case RACIAL_TYPE_HALFORC: iIncBy = 10; sRace = "Halforc"; break;
+        case RACIAL_TYPE_HALFELF:
+        case RACIAL_TYPE_HUMAN:  break;
     }
+    if (iGender == GENDER_FEMALE) {
+        iIncBy++;
+        sGender = "Female";
+    }
+    int iVFXNumber = iVFX + iIncBy;
+    ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(EffectVisualEffect(iVFXNumber), "eff_maske"), oPc);
 }
 
 // Chat befehle
@@ -1081,60 +1080,64 @@ void main() {
             // Masks
             } else if (GetSubString(sMessage, 0, 6) == "/maske") {
                 int iMask = StringToInt(GetSubString(sMessage, 7, 2));
-                if (iMask == 0) applyMask(oPc, 8193);
-                if (iMask == 1) applyMask(oPc, 8193);
-                if (iMask == 2) applyMask(oPc, 8215);
-                if (iMask == 3) applyMask(oPc, 8240);
-                if (iMask == 4) applyMask(oPc, 8265);
-                if (iMask == 5) applyMask(oPc, 8290);
-                if (iMask == 6) applyMask(oPc, 8315);
-                if (iMask == 7) applyMask(oPc, 8340);
-                if (iMask == 8) applyMask(oPc, 8365);
-                if (iMask == 9) applyMask(oPc, 8390);
-                if (iMask == 10) applyMask(oPc, 8415);
-                if (iMask == 11) applyMask(oPc, 8440);
-                if (iMask == 12) applyMask(oPc, 8465);
-                if (iMask == 13) applyMask(oPc, 8490);
-                if (iMask == 14) applyMask(oPc, 8515);
-                if (iMask == 15) applyMask(oPc, 8540);
-                if (iMask == 16) applyMask(oPc, 8565);
-                if (iMask == 17) applyMask(oPc, 8590);
-                if (iMask == 18) applyMask(oPc, 8615);
-                if (iMask == 19) applyMask(oPc, 8640);
-                if (iMask == 20) applyMask(oPc, 8665);
-                if (iMask == 21) applyMask(oPc, 8690);
-                if (iMask == 22) applyMask(oPc, 8715);
-                if (iMask == 23) applyMask(oPc, 8740);
-                if (iMask == 24) applyMask(oPc, 8765);
-                if (iMask == 25) applyMask(oPc, 8790);
-                if (iMask == 26) applyMask(oPc, 8815);
-                if (iMask == 27) applyMask(oPc, 8840);
-                if (iMask == 28) applyMask(oPc, 8865);
-                if (iMask == 29) applyMask(oPc, 8890);
-                if (iMask == 30) applyMask(oPc, 8915);
-                if (iMask == 31) applyMask(oPc, 8940);
-                if (iMask == 32) applyMask(oPc, 8965);
-                if (iMask == 33) applyMask(oPc, 8990);
-                if (iMask == 34) applyMask(oPc, 9015);
-                if (iMask == 35) applyMask(oPc, 9040);
-                if (iMask == 36) applyMask(oPc, 9065);
-                if (iMask == 37) applyMask(oPc, 9090);
-                if (iMask == 38) applyMask(oPc, 9115);
-                if (iMask == 39) applyMask(oPc, 9140);
-                if (iMask == 40) applyMask(oPc, 9165);
-                if (iMask == 41) applyMask(oPc, 9190);
-                if (iMask == 42) applyMask(oPc, 9215);
-                if (iMask == 43) applyMask(oPc, 9240);
-                if (iMask == 44) applyMask(oPc, 9265);
-                if (iMask == 45) applyMask(oPc, 9290);
-                if (iMask == 46) applyMask(oPc, 9315);
-                if (iMask == 47) applyMask(oPc, 9340);
-                if (iMask == 48) applyMask(oPc, 9365);
-                if (iMask == 49) applyMask(oPc, 9390);
-                if (iMask == 50) applyMask(oPc, 9415);
-                if (iMask == 51) applyMask(oPc, 9440);
-                if (iMask == 52) applyMask(oPc, 9465);
-                if (iMask == 53) applyMask(oPc, 9490);
+                if (GetSubString(sMessage, 7, 2) == "") {
+                  removeMask(oPc);
+                } else {
+                  if (iMask == 0) applyMask(oPc, 8193);
+                  if (iMask == 1) applyMask(oPc, 8193);
+                  if (iMask == 2) applyMask(oPc, 8215);
+                  if (iMask == 3) applyMask(oPc, 8240);
+                  if (iMask == 4) applyMask(oPc, 8265);
+                  if (iMask == 5) applyMask(oPc, 8290);
+                  if (iMask == 6) applyMask(oPc, 8315);
+                  if (iMask == 7) applyMask(oPc, 8340);
+                  if (iMask == 8) applyMask(oPc, 8365);
+                  if (iMask == 9) applyMask(oPc, 8390);
+                  if (iMask == 10) applyMask(oPc, 8415);
+                  if (iMask == 11) applyMask(oPc, 8440);
+                  if (iMask == 12) applyMask(oPc, 8465);
+                  if (iMask == 13) applyMask(oPc, 8490);
+                  if (iMask == 14) applyMask(oPc, 8515);
+                  if (iMask == 15) applyMask(oPc, 8540);
+                  if (iMask == 16) applyMask(oPc, 8565);
+                  if (iMask == 17) applyMask(oPc, 8590);
+                  if (iMask == 18) applyMask(oPc, 8615);
+                  if (iMask == 19) applyMask(oPc, 8640);
+                  if (iMask == 20) applyMask(oPc, 8665);
+                  if (iMask == 21) applyMask(oPc, 8690);
+                  if (iMask == 22) applyMask(oPc, 8715);
+                  if (iMask == 23) applyMask(oPc, 8740);
+                  if (iMask == 24) applyMask(oPc, 8765);
+                  if (iMask == 25) applyMask(oPc, 8790);
+                  if (iMask == 26) applyMask(oPc, 8815);
+                  if (iMask == 27) applyMask(oPc, 8840);
+                  if (iMask == 28) applyMask(oPc, 8865);
+                  if (iMask == 29) applyMask(oPc, 8890);
+                  if (iMask == 30) applyMask(oPc, 8915);
+                  if (iMask == 31) applyMask(oPc, 8940);
+                  if (iMask == 32) applyMask(oPc, 8965);
+                  if (iMask == 33) applyMask(oPc, 8990);
+                  if (iMask == 34) applyMask(oPc, 9015);
+                  if (iMask == 35) applyMask(oPc, 9040);
+                  if (iMask == 36) applyMask(oPc, 9065);
+                  if (iMask == 37) applyMask(oPc, 9090);
+                  if (iMask == 38) applyMask(oPc, 9115);
+                  if (iMask == 39) applyMask(oPc, 9140);
+                  if (iMask == 40) applyMask(oPc, 9165);
+                  if (iMask == 41) applyMask(oPc, 9190);
+                  if (iMask == 42) applyMask(oPc, 9215);
+                  if (iMask == 43) applyMask(oPc, 9240);
+                  if (iMask == 44) applyMask(oPc, 9265);
+                  if (iMask == 45) applyMask(oPc, 9290);
+                  if (iMask == 46) applyMask(oPc, 9315);
+                  if (iMask == 47) applyMask(oPc, 9340);
+                  if (iMask == 48) applyMask(oPc, 9365);
+                  if (iMask == 49) applyMask(oPc, 9390);
+                  if (iMask == 50) applyMask(oPc, 9415);
+                  if (iMask == 51) applyMask(oPc, 9440);
+                  if (iMask == 52) applyMask(oPc, 9465);
+                  if (iMask == 53) applyMask(oPc, 9490);
+                }
             // Sterben
             } else if (sMessage == "/sterben") {
                 SetLocalInt(oPc, "DYING_FOR_REAL", 0);
