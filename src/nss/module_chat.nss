@@ -1304,46 +1304,58 @@ void main() {
             } else if (sMessage == "/hilfe maske") {
                 SendMessageToPC(oPc, "/maske 0: brauner Dreispitz\n" +
                                      "/maske 1: brauner Dreispitz\n" +
-                                     "/maske 2: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 4: Piratenhut\n" +
-                                     "/maske 5: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n");
+                                     "/maske 2: brauner Piratenhut\n" +
+                                     "/maske 3: schwarzer Dreispitz\n" +
+                                     "/maske 4: schwarzer Piratenhut\n" +
+                                     "/maske 5: hellbrauner Dreispitz\n" +
+                                     "/maske 6: hellbrauner Piratenhut\n" +
+                                     "/maske 7: dunkelrotes Bandana\n" +
+                                     "/maske 8: schwarzes Bandana\n" +
+                                     "/maske 9: blaues Bandana\n" +
+                                     "/maske 10: braunes Bandana\n" +
+                                     "/maske 11: Helm\n" +
+                                     "/maske 12: Helm\n" +
+                                     "/maske 13: Helm\n" +
+                                     "/maske 14: Helm\n" +
+                                     "/maske 15: Helm\n" +
+                                     "/maske 16: Helm\n" +
+                                     "/maske 17: Helm\n" +
+                                     "/maske 18: Helm\n" +
+                                     "/maske 19: Helm\n" +
+                                     "/maske 20: Helm\n" +
+                                     "/maske 21: Helm\n" +
+                                     "/maske 22: Helm\n" +
+                                     "/maske 23: Kapuze\n" +
+                                     "/maske 24: Kapuze\n" +
+                                     "/maske 25: Kapuze\n" +
+                                     "/maske 26: Kapuze\n" +
+                                     "/maske 27: Kapuze\n" +
+                                     "/maske 28: Kapuze\n" +
+                                     "/maske 29: Kapuze\n" +
+                                     "/maske 30: Kapuze\n" +
+                                     "/maske 31: Kapuze\n" +
+                                     "/maske 32: Kapuze\n" +
+                                     "/maske 33: Kapuze\n" +
+                                     "/maske 34: Kapuze\n" +
+                                     "/maske 35: Kapuze\n" +
+                                     "/maske 36: Kapuze\n" +
+                                     "/maske 37: Kapuze\n" +
+                                     "/maske 38: Kapuze\n" +
+                                     "/maske 39: Kapuze\n" +
+                                     "/maske 40: Kapuze\n" +
+                                     "/maske 41: Kapuze\n" +
+                                     "/maske 42: Kapuze\n" +
+                                     "/maske 43: Kapuze\n" +
+                                     "/maske 44: Kapuze\n" +
+                                     "/maske 45: Kapuze\n" +
+                                     "/maske 46: Kapuze\n" +
+                                     "/maske 47: Stirnreif\n" +
+                                     "/maske 48: Stirnreif\n" +
+                                     "/maske 49: Stirnreif\n" +
+                                     "/maske 50: Ballmaske\n" +
+                                     "/maske 51: Ballmaske\n" +
+                                     "/maske 52: Ballmaske\n" +
+                                     "/maske 53: Ballmaske\n");
             } else {
                 SendMessageToPC(oPc, "Ungültiger Befehl: \"" +
                                      sMessage +
