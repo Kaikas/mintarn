@@ -1343,7 +1343,7 @@ void main() {
                                      "/maske 3: Piratenhut\n" +
                                      "/maske 3: Piratenhut\n" +
                                      "/maske 3: Piratenhut\n" +
-                                     "/maske 3: Piratenhut\n" +
+                                     "/maske 3: Piratenhut\n");
             } else {
                 SendMessageToPC(oPc, "Ungültiger Befehl: \"" +
                                      sMessage +
