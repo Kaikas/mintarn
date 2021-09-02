@@ -12,16 +12,18 @@
 // Some constants are predefined in nwscripts.nss
 const int SKILL_ANIMAL_HANDLING = 0;
 // const int SKILL_CONCENTRATION = 1;
+const int SKILL_DISABLE_DEVICE = 2;
 // const int SKILL_HEAL = 4;
 // const int SKILL_HIDE = 5;
 // const int SKILL_LISTEN = 6;
 const int SKILL_KNOW_LORE = 7;
 // const int SKILL_MOVE_SILENTLY = 8;
-const int SKILL_DISABLE_DEVICE = 9;
+const int SKILL_CRAFT_SMITH = 9;
 // const int SKILL_PERFORM = 11;
 // const int SKILL_PERSUADE = 12;
 const int SKILL_SLEIGHT_OF_HAND = 13;
 // int SKILL_SEARCH = 14;
+const int SKILL_CRAFT_CARPENTER = 15;
 const int SKILL_KNOW_ARCANA = 16;
 // int SKILL_SPOT = 17;
 // int SKILL_USE_MAGIC_DEVICE = 19;
@@ -32,11 +34,9 @@ const int SKILL_SENSE_MOTIVE = 28;
 const int SKILL_KNOW_NATURE = 29;
 const int SKILL_KNOW_RELIGION = 30;
 const int SKILL_CRAFT_LEATHERER = 31;
-const int SKILL_CRAFT_SMITH = 32;
-const int SKILL_CRAFT_CARPENTER = 15;
-const int SKILL_CRAFT_ALCHEMIST = 34;
-const int SKILL_ATHLETICS = 35;
-const int SKILL_SURVIVAL = 36;
+const int SKILL_CRAFT_ALCHEMIST = 33;
+const int SKILL_ATHLETICS = 34;
+const int SKILL_SURVIVAL = 35;
 
 // Setzt einen Würfel wurf zusammen
 string PrintRoll(string sValue, int iRand, int iBonus) {

@@ -4,9 +4,9 @@
 #include "nwnx_time"
 
 const int SKILL_CRAFT_LEATHERER = 31;
-const int SKILL_CRAFT_SMITH = 32;
+const int SKILL_CRAFT_SMITH = 9;
 const int SKILL_CRAFT_CARPENTER = 15;
-const int SKILL_CRAFT_ALCHEMIST = 34;
+const int SKILL_CRAFT_ALCHEMIST = 33;
 
 // Zählt die items im Inventar
 int CountItems(object oPc, string sTag) {
