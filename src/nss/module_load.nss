@@ -394,12 +394,12 @@ void main() {
     NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
 
     // Handwerk: Schmied
-    skillFeat.iSkill = 32;
+    skillFeat.iSkill = 9;
     skillFeat.iFeat = 1120;
     NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
 
     // Handwerk: Schreiner
-    skillFeat.iSkill = 33;
+    skillFeat.iSkill = 15;
     skillFeat.iFeat = 1121;
     NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
 
@@ -409,12 +409,12 @@ void main() {
     NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
 
     // Athletik
-    skillFeat.iSkill = 35;
+    skillFeat.iSkill = 34;
     skillFeat.iFeat = 1123;
     NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
 
     // Überleben
-    skillFeat.iSkill = 36;
+    skillFeat.iSkill = 35;
     skillFeat.iFeat = 1124;
     NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
 
