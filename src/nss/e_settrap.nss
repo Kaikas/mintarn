@@ -278,9 +278,11 @@ void main() {
       DelayCommand(5.0f, SetTrap(oPc, oTrap, STANDARD_FACTION_COMMONER));
     } else {
       // Spectacular Failure
-      if (iDC - iSkillCheck > 9 && !GetHasFeat(SW_FEAT_SKILL_MASTERY, oPc)) {
+      if (iDC - iSkillCheck > 15 && !GetHasFeat(SW_FEAT_SKILL_MASTERY, oPc)) {
         SetTrap(oPc, oTrap, STANDARD_FACTION_HOSTILE);
+        SendMessageToPC(oPc, "Kritischer Misserfolg: Die Falle ging nach hinten los.");
+      } else {
+        SendMessageToPC(oPc, "Misserfolg: Die Falle ist kaputt.");
       }
-      SendMessageToPC(oPc, "Die Falle ging nach hinten los.");
     }
 }
