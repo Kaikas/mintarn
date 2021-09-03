@@ -4,9 +4,9 @@
 #include "nwnx_time"
 
 const int SKILL_CRAFT_LEATHERER = 31;
-const int SKILL_CRAFT_SMITH = 32;
+const int SKILL_CRAFT_SMITH = 9;
 const int SKILL_CRAFT_CARPENTER = 15;
-const int SKILL_CRAFT_ALCHEMIST = 34;
+const int SKILL_CRAFT_ALCHEMIST = 33;
 
 // Zählt die items im Inventar
 int CountItems(object oPc, string sTag) {
@@ -738,6 +738,7 @@ void main() {
             GetTag(GetArea(oPc)) == "AREA_Wald" ||
             GetTag(GetArea(oPc)) == "AREA_Westmark") {
             */
+        if (GetTag(GetArea(oPc)) != "AREA_Nether") {
             AssignCommand(oPc, ClearAllActions());
             if (GetItemStackSize(oItem) < 2) {
                 DestroyObject(oItem);
@@ -748,9 +749,9 @@ void main() {
             AssignCommand(oPc, ActionPlayAnimation(ANIMATION_LOOPING_GET_LOW, 1.0, 5.0f));
             location lRueckruf = GetLocation(GetObjectByTag("WP_RUECKRUF"));
             DelayCommand(5.0, AssignCommand(oPc, JumpToLocation(lRueckruf)));
-        /*} else {
+        } else {
             SendMessageToPC(oPc, "Das könnt ihr hier nicht benutzen!");
-        }*/
+        }
     }
 
     // SW Alpha Badge
