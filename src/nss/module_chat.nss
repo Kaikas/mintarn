@@ -76,6 +76,13 @@ void RollSkillCheck(string sOutput, int iSkill, int iCheckAbility, int iKeyAbili
     ExecuteScript("global_speak", oPc);
 }
 
+void PrintSavingThrow(int iBonus, int iRoll, string sThrow, object oPc, int iChatVolume) {
+    string sMessage = "Rettungswurf (" + sThrow + "): " + IntToString(iRoll) + " + " + IntToString(iBonus) + " = " + IntToString(iRoll + iBonus);
+    SetLocalString(oPc, "sMessage", sMessage);
+    SetLocalInt(oPc, "iChatVolume", iChatVolume);
+    ExecuteScript("global_speak", oPc);
+}
+
 void removeMask(object oPc) {
   effect eEffect = GetFirstEffect(oPc);
   while(GetIsEffectValid(eEffect)) {
@@ -495,6 +502,19 @@ void main() {
                 SetLocalString(oPc, "sMessage", sMessage);
                 SetLocalInt(oPc, "iChatVolume", iChatVolume);
                 ExecuteScript("global_speak", oPc);
+            // Rettungswürfe
+            } else if (sMessage == "/reflex") {
+              iBonus = GetReflexSavingThrow(oPc);
+              int iRoll = d20();
+              PrintSavingThrow(iBonus, iRoll, "Reflex", oPc, iChatVolume);
+            } else if (sMessage == "/wille") {
+              iBonus = GetWillSavingThrow(oPc);
+              int iRoll = d20();
+              PrintSavingThrow(iBonus, iRoll, "Wille", oPc, iChatVolume);
+            } else if (sMessage == "/zähigkeit") {
+              iBonus = GetFortitudeSavingThrow(oPc);
+              int iRoll = d20();
+              PrintSavingThrow(iBonus, iRoll, "Zähigkeit", oPc, iChatVolume);
             // Skills
             // Mit Tieren umgehen
             } else if (sMessage == "/mittierenumgehen") {
