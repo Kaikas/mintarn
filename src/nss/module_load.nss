@@ -418,10 +418,7 @@ void main() {
     skillFeat.iFeat = 1124;
     NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
 	
-	//Multi-Fertigkeiten-Talente
-    skillFeat.iModifier = 2;
-	
-	//Silberne Handfläche
+	//Silver Palm
 	skillFeat.iSkill = 14;
     skillFeat.iFeat = 384;
     NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
