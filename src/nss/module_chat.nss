@@ -83,6 +83,7 @@ void RollSkillCheck(string sOutput, int iSkill, int iCheckAbility, int iKeyAbili
 
 void PrintSavingThrow(int iBonus, int iRoll, string sThrow, object oPc, int iChatVolume) {
     string sMessage = "Rettungswurf (" + sThrow + "): " + IntToString(iRoll) + " + " + IntToString(iBonus) + " = " + IntToString(iRoll + iBonus);
+    sMessage = StringToRGBString(sMessage, "333");
     SetLocalString(oPc, "sMessage", sMessage);
     SetLocalInt(oPc, "iChatVolume", iChatVolume);
     ExecuteScript("global_speak", oPc);
