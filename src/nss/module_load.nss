@@ -419,9 +419,7 @@ void main() {
     NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
 	
 	//Multi-Fertigkeiten-Talente
-	struct NWNX_SkillRanks_SkillFeat skillFeat;
     skillFeat.iModifier = 2;
-    skillFeat.iFocusFeat = 1;
 	
 	//Silberne Handfläche
 	skillFeat.iSkill = 14;
