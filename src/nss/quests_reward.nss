@@ -1,4 +1,5 @@
 #include "nwnx_sql"
+#include "global_money"
 
 // Gibt dem Spieler eine Belohnung bei erfolgreichem Quest
 void main() {
@@ -18,7 +19,7 @@ void main() {
         oItem = GetNextItemInInventory(oPc);
     }
     SetXP(oPc, GetXP(oPc) + iXP);
-    GiveGoldToCreature(oPc, iGold);
+    MONEY_GiveCoinMoneyWorth(100, oPc);
     string sQuery = "UPDATE QuestStatus SET stage = ? WHERE name=? AND charname=? AND quest=?";
     if (NWNX_SQL_PrepareQuery(sQuery)) {
         NWNX_SQL_PreparedString(0, "1");
