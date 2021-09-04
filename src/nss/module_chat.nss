@@ -72,7 +72,7 @@ void RollSkillCheck(string sOutput, int iSkill, int iCheckAbility, int iKeyAbili
     int iAbilityBonus = GetAbilityModifier(iCheckAbility, oPc);
     string sMessage;
     if (StringToInt(Get2DAString("skills", "Untrained", iSkill)) == 0 && iBonus == 0) {
-      sMessage = "Fertigkeit nicht untrainiert benutzbar.";
+      sMessage = StringToRGBString("Fertigkeit nicht untrainiert benutzbar.", "333");
     } else {
       sMessage = PrintRollSkill(sOutput, iRand, iBonus - GetAbilityModifier(iKeyAbility, oPc), iAbilityBonus);
     }
