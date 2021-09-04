@@ -27,5 +27,5 @@ void main() {
         NWNX_SQL_PreparedString(3, "stadtwache_intro");
         NWNX_SQL_ExecutePreparedQuery();
     }
-    RemoveJournalQuestEntry("stadtwache", oPc, FALSE, FALSE);
+    RemoveJournalQuestEntry("wache", oPc, FALSE, FALSE);
 }
