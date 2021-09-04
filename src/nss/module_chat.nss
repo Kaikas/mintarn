@@ -70,7 +70,20 @@ void RollSkillCheck(string sOutput, int iSkill, int iCheckAbility, int iKeyAbili
     int iRand = Random(20) + 1;
     int iBonus = GetSkillRank(iSkill, oPc);
     int iAbilityBonus = GetAbilityModifier(iCheckAbility, oPc);
-    string sMessage = PrintRollSkill(sOutput, iRand, iBonus - GetAbilityModifier(iKeyAbility, oPc), iAbilityBonus);
+    string sMessage;
+    if (StringToInt(Get2DAString("skills", "Untrained", iSkill)) == 0 && iBonus == 0) {
+      sMessage = StringToRGBString("Fertigkeit nicht untrainiert benutzbar.", "333");
+    } else {
+      sMessage = PrintRollSkill(sOutput, iRand, iBonus - GetAbilityModifier(iKeyAbility, oPc), iAbilityBonus);
+    }
+    SetLocalString(oPc, "sMessage", sMessage);
+    SetLocalInt(oPc, "iChatVolume", iChatVolume);
+    ExecuteScript("global_speak", oPc);
+}
+
+void PrintSavingThrow(int iBonus, int iRoll, string sThrow, object oPc, int iChatVolume) {
+    string sMessage = "Rettungswurf (" + sThrow + "): " + IntToString(iRoll) + " + " + IntToString(iBonus) + " = " + IntToString(iRoll + iBonus);
+    sMessage = StringToRGBString(sMessage, "333");
     SetLocalString(oPc, "sMessage", sMessage);
     SetLocalInt(oPc, "iChatVolume", iChatVolume);
     ExecuteScript("global_speak", oPc);
@@ -495,6 +508,19 @@ void main() {
                 SetLocalString(oPc, "sMessage", sMessage);
                 SetLocalInt(oPc, "iChatVolume", iChatVolume);
                 ExecuteScript("global_speak", oPc);
+            // Rettungswürfe
+            } else if (sMessage == "/reflex") {
+              iBonus = GetReflexSavingThrow(oPc);
+              int iRoll = d20();
+              PrintSavingThrow(iBonus, iRoll, "Reflex", oPc, iChatVolume);
+            } else if (sMessage == "/wille") {
+              iBonus = GetWillSavingThrow(oPc);
+              int iRoll = d20();
+              PrintSavingThrow(iBonus, iRoll, "Wille", oPc, iChatVolume);
+            } else if (sMessage == "/zähigkeit") {
+              iBonus = GetFortitudeSavingThrow(oPc);
+              int iRoll = d20();
+              PrintSavingThrow(iBonus, iRoll, "Zähigkeit", oPc, iChatVolume);
             // Skills
             // Mit Tieren umgehen
             } else if (sMessage == "/mittierenumgehen") {
@@ -1228,7 +1254,10 @@ void main() {
                                     "\nWeitere Übersichten:\n" +
                                     "/hilfe fertigkeit\n" +
                                     "/hilfe maske\n" +
+                                    "/hilfe rettungswurf\n" +
                                     "/hilfe animation\n");
+            } else if (sMessage == "/hilfe rettungswurf") {
+                SendMessageToPC(oPc, "/reflex\n/wille\n/zähigkeit\n");
             } else if (sMessage == "/hilfe animation") {
                 SendMessageToPC(oPc, "Einmalig:\n" +
                                     "/verbeugen\n" +
@@ -1296,11 +1325,11 @@ void main() {
                                     "/schmied\n" +
                                     "/schreiner\n" +
                                     "/täuschen\n" +
+                                    "/überleben\n" +
+                                    "/überzeugen\n");
                                     "/untersuchen\n" +
                                     "/verstecken\n" +
                                     "/weltliches\n" +
-                                    "/überleben\n" +
-                                    "/überzeugen\n");
             } else if (sMessage == "/hilfe maske") {
                 SendMessageToPC(oPc, "/maske 0: brauner Dreispitz\n" +
                                      "/maske 1: brauner Dreispitz\n" +
