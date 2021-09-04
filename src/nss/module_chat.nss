@@ -1248,7 +1248,10 @@ void main() {
                                     "\nWeitere Übersichten:\n" +
                                     "/hilfe fertigkeit\n" +
                                     "/hilfe maske\n" +
+                                    "/hilfe rettungswurf\n" +
                                     "/hilfe animation\n");
+            } else if (sMessage == "/hilfe rettungswurf") {
+                SendMessageToPC(oPc, "/reflex\n/wille\n/zähigkeit\n");
             } else if (sMessage == "/hilfe animation") {
                 SendMessageToPC(oPc, "Einmalig:\n" +
                                     "/verbeugen\n" +
