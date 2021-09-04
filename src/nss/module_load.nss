@@ -404,7 +404,7 @@ void main() {
     NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
 
     // Handwerk: Alchemist
-    skillFeat.iSkill = 34;
+    skillFeat.iSkill = 33;
     skillFeat.iFeat = 1122;
     NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
 
