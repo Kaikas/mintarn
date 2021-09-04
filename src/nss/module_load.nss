@@ -367,7 +367,7 @@ void main() {
     SetCustomTokenEx(105, "<cÿÓ'>"); // Gold
     SetCustomTokenEx(106, "<c´$$>"); // Ruby
 
-    // Fertigkeits-Talente
+    // Fertigkeitsfokus-Talente
     struct NWNX_SkillRanks_SkillFeat skillFeat;
 
     skillFeat.iModifier = 3;
@@ -416,6 +416,16 @@ void main() {
     // Ãœberleben
     skillFeat.iSkill = 35;
     skillFeat.iFeat = 1124;
+    NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
+	
+	//Multi-Fertigkeiten-Talente
+	struct NWNX_SkillRanks_SkillFeat skillFeat;
+    skillFeat.iModifier = 2;
+    skillFeat.iFocusFeat = 1;
+	
+	//Silberne Handfläche
+	skillFeat.iSkill = 14;
+    skillFeat.iFeat = 384;
     NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
 
     //struct NWNX_SkillRanks_SkillFeat debug_feat = NWNX_SkillRanks_GetSkillFeat(30, 1116);
