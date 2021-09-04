@@ -70,10 +70,11 @@ void RollSkillCheck(string sOutput, int iSkill, int iCheckAbility, int iKeyAbili
     int iRand = Random(20) + 1;
     int iBonus = GetSkillRank(iSkill, oPc);
     int iAbilityBonus = GetAbilityModifier(iCheckAbility, oPc);
-    if (Get2DAString("skills", "Untrained", iSkill) == 0 && iBonus == 0) {
+    string sMessage;
+    if (StringToInt(Get2DAString("skills", "Untrained", iSkill)) == 0 && iBonus == 0) {
       sMessage = "Fertigkeit nicht untrainiert benutzbar.";
     } else {
-      string sMessage = PrintRollSkill(sOutput, iRand, iBonus - GetAbilityModifier(iKeyAbility, oPc), iAbilityBonus);
+      sMessage = PrintRollSkill(sOutput, iRand, iBonus - GetAbilityModifier(iKeyAbility, oPc), iAbilityBonus);
     }
     SetLocalString(oPc, "sMessage", sMessage);
     SetLocalInt(oPc, "iChatVolume", iChatVolume);
