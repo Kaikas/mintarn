@@ -345,6 +345,8 @@ void main() {
                         GetPCPlayerName(oPc) == "Mira" ||
                         GetPCPlayerName(oPc) == "Silberfunken73" ||
                         GetPCPlayerName(oPc) == "Wilbur" ||
+                        GetPCPlayerName(oPc) == "Void" ||
+                        GetPCPlayerName(oPc) == "Darkside" ||
                         GetPCPlayerName(oPc) == "Sanginius") {
                         CreateItemOnObject("sw_we_alpha", oPc);
                     }
