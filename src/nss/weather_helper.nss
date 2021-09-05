@@ -76,7 +76,7 @@ void setWind(object oArea, int iWindStrength) {
   if (sWindDirection == "Südostwind") vDirection = Vector(1.0, -1.0, 0.0);
   if (sWindDirection == "Nordostwind") vDirection = Vector(-1.0, -1.0, 0.0);
   
-  SetAreaWind(oArea, vDirection, IntToFloat(iWindStrength), 100.0, 5.0);
+  SetAreaWind(oArea, vDirection, IntToFloat(iWindStrength), 0.0, 0.0);
 }
 
 void setWindForAreas(int iWindStrength) {
