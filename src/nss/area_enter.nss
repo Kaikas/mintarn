@@ -233,9 +233,9 @@ void SpawnChests() {
           }
           int iTreasure = Random(115);
           if (iTreasure < 10) {
-            CreateItemOnObject("NW_IT_GOLD001", oChest, Random(50) + 450);
+            CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, 450 + Random(50));
           } else {
-            CreateItemOnObject("NW_IT_GOLD001", oChest, Random(50) + 200);
+            CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, 250 + Random(50));
           }
           if (iTreasure == 10) CreateItemOnObject("sw_re_amudex", oChest, 1);
           if (iTreasure == 11) CreateItemOnObject("sw_re_amudexg", oChest, 1);
