@@ -212,7 +212,7 @@ void main() {
       iRoll = 20;
     }
     // Add modifiers
-    int iSkillCheck = iRoll + GetHitDice(oPc);
+    int iSkillCheck = GetHitDice(oPc);
     // Synergy with disable trap
     if (GetSkillRank(SW_SKILL_DISABLE_TRAP, oPc) > 4)
       iSkillCheck = iSkillCheck + 2;
@@ -266,7 +266,7 @@ void main() {
     SendMessageToPC(oPc, "Falle stellen: Ihr würfelt " + IntToString(iRoll) + " + " + IntToString(iSkillCheck) + ".");
     SendMessageToPC(oPc, "Die Falle hatten eine Schwierigkeit von " + IntToString(iDC) + ".");
     // Check if the skillcheck was successful
-    if (iSkillCheck >= iDC) {
+    if (iSkillCheck + iRoll >= iDC) {
       // Start a timer progress bar for 5 seconds
       NWNX_Player_StartGuiTimingBar(oPc, 5.0, "");
       // Block player and play emote
@@ -278,7 +278,7 @@ void main() {
       DelayCommand(5.0f, SetTrap(oPc, oTrap, STANDARD_FACTION_COMMONER));
     } else {
       // Spectacular Failure
-      if (iDC - iSkillCheck > 15 && !GetHasFeat(SW_FEAT_SKILL_MASTERY, oPc)) {
+      if (iDC - iSkillCheck + iRoll > 15 && !GetHasFeat(SW_FEAT_SKILL_MASTERY, oPc)) {
         SetTrap(oPc, oTrap, STANDARD_FACTION_HOSTILE);
         SendMessageToPC(oPc, "Kritischer Misserfolg: Die Falle ging nach hinten los.");
       } else {
