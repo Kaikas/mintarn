@@ -1236,6 +1236,10 @@ void main() {
                             NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
                             SendMessageToPC(oPc, GetName(oTalkTo));
                         }
+                        if (GetIsDM(oTalkTo)) {
+                          SendMessageToPC(sMessage);
+                          NWNX_Chat_SendMessage(20, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
+                        }
                         oTalkTo = GetNextPC();
                     }
                 }
@@ -1251,6 +1255,10 @@ void main() {
                     while (oTalkTo != OBJECT_INVALID) {
                         NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
                         SendMessageToPC(oPc, GetName(oTalkTo));
+                        if (GetIsDM(oTalkTo)) {
+                          SendMessageToPC(sMessage);
+                          NWNX_Chat_SendMessage(20, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
+                        }
                         oTalkTo = GetNextPC();
                     }
                 }
@@ -1449,6 +1457,10 @@ void main() {
                     if (GetArea(oTalkTo) == GetArea(oPc) && GetDistanceBetween(oTalkTo, oPc) < 50.0) {
                         NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
                         SendMessageToPC(oPc, GetName(oTalkTo));
+                    }
+                    if (GetIsDM(oTalkTo)) {
+                      SendMessageToPC(sMessage);
+                      NWNX_Chat_SendMessage(20, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
                     }
                     oTalkTo = GetNextPC();
                 }
