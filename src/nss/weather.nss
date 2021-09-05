@@ -61,6 +61,18 @@ int temperature(int iTemperatur) {
     return iTemperatur;
 }
 
+void setWind(object oArea, int iWindStrength, string sWindDirection) {
+  vector vDirection = [1.0, 1.0, 0.0];
+  if (sWindDirection == "Südwestwind") vDirection = [1.0, 1.0, 0.0];
+  if (sWindDirection == "Westwind") vDirection = [1.0, 1.0, 0.0];
+  if (sWindDirection == "Nordwestwind") vDirection = [1.0, 1.0, 0.0];
+  if (sWindDirection == "Südostwind") vDirection = [1.0, 1.0, 0.0];
+  if (sWindDirection == "Ostwind") vDirection = [1.0, 1.0, 0.0];
+  if (sWindDirection == "Nordostwind") vDirection = [1.0, 1.0, 0.0];
+  
+  SetAreaWind(oArea, vDirection, IntToFloat(iWindStrength), 100.0, 5.0);
+
+}
 
 // Set fog for an area
 void setFog(string sDay, string sDayBefore, int iTemperatur, int iHeight, int iWindStrength, int iRain, object oModule, object oArea) {
@@ -170,9 +182,13 @@ void weather() {
     }
     SetLocalString(oModule, "sWindDirection", sWindDirection);
 
-    // Currently no real effect on trees or our tileset water, so this is skipped for now
-    //vector vDirection = [1.0, 1.0, 0.0];
-    //SetAreaWind(GetObjectByTag("AREA_Freihafen"), vDirection, IntToFloat(iWindStrength), 100.0, 5.0);
+    setWind(GetObjectByTag("AREA_Freihafen"), iWindStrength, sWindDirection);
+    setWind(GetObjectByTag("AREA_Insel"), iWindStrength, sWindDirection);
+    setWind(GetObjectByTag("AREA_Banditenfestung"), iWindStrength, sWindDirection);
+    setWind(GetObjectByTag("AREA_Hgelland"), iWindStrength, sWindDirection);
+    setWind(GetObjectByTag("AREA_Banditenfestung"), iWindStrength, sWindDirection);
+    setWind(GetObjectByTag("AREA_versteckterHain"), iWindStrength, sWindDirection);
+    setWind(GetObjectByTag("AREA_Westmark"), iWindStrength, sWindDirection);
 
 
     //////////////////////////
@@ -226,31 +242,6 @@ void weather() {
     setFog(sDay, sDayBefore, iTemperatur, iHeight, iWindStrength, iRain, oModule, GetObjectByTag("AREA_Hgelland"));
     setFog(sDay, sDayBefore, iTemperatur, iHeight, iWindStrength, iRain, oModule, GetObjectByTag("AREA_versteckterHain"));
     setFog(sDay, sDayBefore, iTemperatur, iHeight, iWindStrength, iRain, oModule, GetObjectByTag("AREA_Westmark"));
-
-    // Send message to players
-    //object oPlayer = GetFirstPC();
-    //while(GetIsObjectValid(oPlayer)) {
-    //    //SendMessageToPC(oPlayer, IntToString(GetCalendarDay()) + "." + IntToString(GetCalendarMonth()) + "." + IntToString(GetCalendarYear()) + " - " + IntToString(GetTimeHour()) + ":00 Uhr");
-    //    SendMessageToPC(oPlayer, "<cvvv>Die Außentemperatur beträgt " + IntToString(iTemperatur) + "°C</c>");
-    //    string sWindStrength;
-    //    // Possible: N, NO, O, SO, S, SW, W, NW
-    //    // Sehr stark (5), Strong (4), medium (3), weak (2), windstill (1)
-    //    if (iWindStrength == 1) {
-    //        SendMessageToPC(oPlayer, "<cvvv>Es ist windstill.</c>");
-    //    } else if (iWindStrength == 2) {
-    //        SendMessageToPC(oPlayer, "<cvvv>Es weht ein schwacher " + sWindDirection + " .</c>");
-    //    } else if (iWindStrength == 3) {
-    //        SendMessageToPC(oPlayer, "<cvvv>Es weht ein mittelstarker " + sWindDirection + ".</c>");
-    //    } else if (iWindStrength == 4) {
-    //        SendMessageToPC(oPlayer, "<cvvv>Es weht ein starker " + sWindDirection + "</c>");
-    //    } else if (iWindStrength == 5) {
-    //        SendMessageToPC(oPlayer, "<cvvv>Es weht ein sehr starker " + sWindDirection + ".</c>");
-    //    }
-    //    if (GetTimeHour() > GetLocalInt(oModule, sDay + "fog_start") && GetTimeHour() < GetLocalInt(oModule, sDay + "fog_end") && iWindStrength < 3 && (iRain == 1 || iRain == 3)) {
-    //        SendMessageToPC(oPlayer, "<cvvv>Nebel schränkt die Sicht ein.</c>");
-    //    }
-    //    oPlayer = GetNextPC();
-    //}
 
     //SetTime(Random(24), 0, 0, 0);
     DelayCommand(504.0, weather());

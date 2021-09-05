@@ -1326,10 +1326,10 @@ void main() {
                                     "/schreiner\n" +
                                     "/täuschen\n" +
                                     "/überleben\n" +
-                                    "/überzeugen\n");
+                                    "/überzeugen\n" +
                                     "/untersuchen\n" +
                                     "/verstecken\n" +
-                                    "/weltliches\n" +
+                                    "/weltliches\n");
             } else if (sMessage == "/hilfe maske") {
                 SendMessageToPC(oPc, "/maske 0: brauner Dreispitz\n" +
                                      "/maske 1: brauner Dreispitz\n" +
