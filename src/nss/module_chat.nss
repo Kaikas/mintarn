@@ -134,11 +134,13 @@ int setWindFromChat(string sMessage) {
     SendMessageToPC(oPc, "Format: /setwind 5 NO");
     string sWindStrength = GetSubString(sMessage, 9, 1);
     string sWindDirection = GetSubString(sMessage, 11, 2);
-    if (sWindDirection == "SW") sWindDirection = "Südwestwind";
+    if (sWindDirection == "N") sWindDirection = "Nordwind";
+    if (sWindDirection == "O") sWindDirection = "Ostwind";
+    if (sWindDirection == "S") sWindDirection = "Südwind";
     if (sWindDirection == "W") sWindDirection = "Westwind";
+    if (sWindDirection == "SW") sWindDirection = "Südwestwind";
     if (sWindDirection == "NW") sWindDirection = "Nordwestwind";
     if (sWindDirection == "SO") sWindDirection = "Südostwind";
-    if (sWindDirection == "O") sWindDirection = "Ostwind";
     if (sWindDirection == "NO") sWindDirection = "Nordostwind";
     SendMessageToPC(oPc, "Setze Wind auf " + sWindDirection + " mit Stärke " + sWindStrength);
     SetLocalString(oModule, "sWindDirection", sWindDirection);
