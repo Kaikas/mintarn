@@ -61,14 +61,15 @@ int temperature(int iTemperatur) {
 }
 
 void setWind(object oArea, int iWindStrength) {
+  // Direction [North, East, Ground]
   vector vDirection = [1.0, 1.0, 0.0];
   string sWindDirection = GetLocalString(oModule, "sWindDirection");
   if (sWindDirection == "Südwestwind") vDirection = [1.0, 1.0, 0.0];
-  if (sWindDirection == "Westwind") vDirection = [1.0, 1.0, 0.0];
-  if (sWindDirection == "Nordwestwind") vDirection = [1.0, 1.0, 0.0];
-  if (sWindDirection == "Südostwind") vDirection = [1.0, 1.0, 0.0];
-  if (sWindDirection == "Ostwind") vDirection = [1.0, 1.0, 0.0];
-  if (sWindDirection == "Nordostwind") vDirection = [1.0, 1.0, 0.0];
+  if (sWindDirection == "Westwind") vDirection = [0.0, 1.0, 0.0];
+  if (sWindDirection == "Nordwestwind") vDirection = [-1.0, 1.0, 0.0];
+  if (sWindDirection == "Südostwind") vDirection = [1.0, -1.0, 0.0];
+  if (sWindDirection == "Ostwind") vDirection = [0.0, 1.0, 0.0];
+  if (sWindDirection == "Nordostwind") vDirection = [-1.0, -1.0, 0.0];
   
   SetAreaWind(oArea, vDirection, IntToFloat(iWindStrength), 100.0, 5.0);
 }
