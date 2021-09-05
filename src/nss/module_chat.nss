@@ -142,6 +142,7 @@ int setWindFromChat(string sMessage) {
     if (sWindDirection == "NO") sWindDirection = "Nordostwind";
     SendMessageToPC(oPc, "Setze Wind auf " + sWindDirection + " mit Stärke " + sWindStrength);
     SetLocalString(oModule, "sWindDirection", sWindDirection);
+    SetLocalInt(oModule, "windstrength", StringToInt(sWindStrength));
     setWindForAreas(StringToInt(sWindStrength));
     return 1;
   }
