@@ -418,9 +418,16 @@ void main() {
     skillFeat.iFeat = 1124;
     NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
 	
+	//Multi-Fertigkeitstalente:
+	
 	//Silver Palm
+	skillFeat.iModifier = 2;
+    skillFeat.iFocusFeat = 1;
+	skillFeat.iSkill = 12;
+    skillFeat.iFeat = 1127;
+    NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
 	skillFeat.iSkill = 14;
-    skillFeat.iFeat = 384;
+    skillFeat.iFeat = 1127;
     NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
 
     //struct NWNX_SkillRanks_SkillFeat debug_feat = NWNX_SkillRanks_GetSkillFeat(30, 1116);
