@@ -130,12 +130,19 @@ void applyMask(object oPc, int iVFX) {
 
 int setWindFromChat(string sMessage) {
   if (GetSubString(sMessage, 0, 8) == "/setwind") {
-    SendMessageToPC(oPc, "Format: /setwind 5 NO\n Setze wind auf Nordostwind mit Stärke 5.");
+    SetPCChatVolume(TALKVOLUME_SILENT_TALK);
+    SendMessageToPC(oPc, "Format: /setwind 5 NO");
     string sWindStrength = GetSubString(sMessage, 9, 1);
     string sWindDirection = GetSubString(sMessage, 11, 2);
+    if (sWindDirection == "SW") sWindDirection = "Südwestwind";
+    if (sWindDirection == "W") sWindDirection = "Westwind";
+    if (sWindDirection == "NW") sWindDirection = "Nordwestwind";
+    if (sWindDirection == "SO") sWindDirection = "Südostwind";
+    if (sWindDirection == "O") sWindDirection = "Ostwind";
+    if (sWindDirection == "NO") sWindDirection = "Nordostwind";
     SendMessageToPC(oPc, "Setze Wind auf " + sWindDirection + " mit Stärke " + sWindStrength);
-    //SetLocalString(oModule, "sWindDirection", sWindDirection);
-    //setWindForAreas(int iWindStrength, string sWindDirection) {
+    SetLocalString(oModule, "sWindDirection", sWindDirection);
+    setWindForAreas(StringToInt(sWindStrength));
     return 1;
   }
   return 0;
