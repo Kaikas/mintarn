@@ -6,6 +6,7 @@ object oPc = GetEnteringObject();
 string sAccountName = GetPCPlayerName(oPc);
 string sName = GetName(oPc);
 object oModule = GetModule();
+string sQuery;
 
 void Freihafen() {
   if (GetTag(OBJECT_SELF) == "AREA_Freihafen") {
@@ -104,7 +105,7 @@ void Delete() {
 
 void SpawnTraps() {
   // Create Traps
-  oObject = GetFirstObjectInArea(OBJECT_SELF);
+  object oObject = GetFirstObjectInArea(OBJECT_SELF);
   while(GetIsObjectValid(oObject)) {
     if(GetTag(oObject) == "TRAP") {
       DestroyObject(oObject);
@@ -346,7 +347,6 @@ void SpawnChests() {
     }
   }
 }
-}
 
 void Spawn() {
   // If first player, fill area
@@ -370,17 +370,15 @@ void Spawn() {
     SpawnMobs();
     SpawnChests();
   }
+}
 
-  // Spawnt Ressourcen und Encounter
-  void main() {
-    string sQuery;
-
-    // Prüfe ob ein anderer Spieler im Gebiet ist
-    if (GetIsPC(oPc) || GetIsDM(oPc)) {
-      Freihafen();
-      Weather();
-      Nether();
-    }
-
+// Spawnt Ressourcen und Encounter
+void main() {
+  if (GetIsPC(oPc) || GetIsDM(oPc)) {
+    Freihafen();
+    Weather();
+    Nether();
+    Spawn();
   }
+
 }
