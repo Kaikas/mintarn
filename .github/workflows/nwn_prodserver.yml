@@ -40,11 +40,11 @@ jobs:
         run: cp Mintarn.mod ~/nwn/server/modules/
         
       # Stop the server
-      - name: Stop the dev server
+      - name: Stop the prod server
         run: docker-compose -f ~/nwn/docker-compose.yml down
 
       # Start the server
-      - name: Start the dev server
+      - name: Start the prod server
         run: docker-compose -f ~/nwn/docker-compose.yml up -d
         
       # Copy files to download folder
