@@ -420,6 +420,8 @@ void main() {
   /////////////////////////////////////
   // KISTEN
   /////////////////////////////////////
+  // See area_enter!
+  /*
   if (GetTag(OBJECT_SELF) == "CHEST_Small") {
     CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, 450 + Random(50));
     CreateItemOnObject("sw_tr_kleineheil", OBJECT_SELF, 1);
@@ -724,6 +726,7 @@ void main() {
       CreateItemOnObject("sw_re_zweistrg.uti", OBJECT_SELF, 1);
     }
   }
+  */
 
   // Random walk
   ActionRandomWalk();
