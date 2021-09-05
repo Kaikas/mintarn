@@ -7,6 +7,7 @@
 #include "nwnx_chat"
 #include "x0_i0_position"
 #include "nwnx_webhook"
+#include "weather_helper"
 
 // CUSTOM SKILL CONSTANTS
 // Some constants are predefined in nwscripts.nss
@@ -37,6 +38,8 @@ const int SKILL_CRAFT_LEATHERER = 31;
 const int SKILL_CRAFT_ALCHEMIST = 33;
 const int SKILL_ATHLETICS = 34;
 const int SKILL_SURVIVAL = 35;
+
+object oPc = GetPCChatSpeaker();
 
 // Setzt einen Würfel wurf zusammen
 string PrintRoll(string sValue, int iRand, int iBonus) {
@@ -125,10 +128,22 @@ void applyMask(object oPc, int iVFX) {
     ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(EffectVisualEffect(iVFXNumber), "eff_maske"), oPc);
 }
 
+int setWindFromChat(string sMessage) {
+  if (GetSubString(sMessage, 0, 8) == "/setwind") {
+    SendMessageToPC(oPc, "Format: /setwind 5 NO\n Setze wind auf Nordostwind mit Stärke 5.");
+    string sWindStrength = GetSubString(sMessage, 9, 1);
+    string sWindDirection = GetSubString(sMessage, 11, 2);
+    SendMessageToPC(oPc, "Setze Wind auf " + sWindDirection + " mit Stärke " + sWindStrength);
+    //SetLocalString(oModule, "sWindDirection", sWindDirection);
+    //setWindForAreas(int iWindStrength, string sWindDirection) {
+    return 1;
+  }
+  return 0;
+}
+
 // Chat befehle
 void main() {
     int iChatVolume = GetPCChatVolume();
-    object oPc = GetPCChatSpeaker();
     string sMessage = GetPCChatMessage();
     string sAccountName = GetPCPlayerName(oPc);
     string sName = GetName(oPc);
@@ -294,6 +309,9 @@ void main() {
               GetSubString(sMessage, 7, 300);
             NWNX_WebHook_SendWebHookHTTPS("discordapp.com", NWNX_Util_GetEnvironmentVariable("WEBHOOK_FEHLER"), sLogMessage, "Mintarn", 0);
             SendMessageToPC(oPc, "Vielen Dank für die Fehlermeldung. Sie ist im Discord angekommen und wird von uns so bald wie möglich bearbeitet.");
+        // setWindFromChat
+        } else if (GetIsDM(oPc) && setWindFromChat(sMessage)) {
+          
         // Delete Characters
         } else if (GetSubString(sMessage, 0, 8) == "/delete ") {
             SetPCChatVolume(TALKVOLUME_SILENT_TALK);
