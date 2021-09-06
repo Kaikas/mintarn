@@ -159,6 +159,7 @@ void SendMessageToPossessingDMs(string sMessage) {
     object oObject = GetFirstObjectInArea(oArea);
     while(GetIsObjectValid(oObject)) {
       SendMessageToPC(GetMaster(oObject), sMessage);
+      SendMessageToPC(GetMaster(GetMaster(oObject)), sMessage);
       if (GetIsDMPossessed(oObject)) {
         NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), GetMaster(oObject));
       }
