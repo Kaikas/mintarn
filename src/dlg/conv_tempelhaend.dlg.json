@@ -241,7 +241,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Eine einfache Wundheilung für 50 Goldstücke oder eine vollständige Heilung für 250 Goldstücke?"
+            "0": "Eine einfache Wundheilung für 50 Kupfer oder eine vollständige Heilung für 250 Kupfer?"
           }
         }
       },

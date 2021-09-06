@@ -560,7 +560,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "1000 Gold spenden."
+            "0": "1000 Kupfer spenden."
           }
         }
       },
@@ -641,7 +641,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "500 Gold spenden."
+            "0": "500 Kupfer spenden."
           }
         }
       },
@@ -722,7 +722,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "50 Gold spenden."
+            "0": "50 Kupfer spenden."
           }
         }
       },
@@ -799,7 +799,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "5 Gold spenden."
+            "0": "5 Kupfer spenden."
           }
         }
       }
