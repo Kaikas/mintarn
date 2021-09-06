@@ -1228,9 +1228,9 @@ void main() {
         sMessage = GetToken(104) + sMessage + "</c>";
         sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
         sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
-        if (GetIsDM(oPc)) {
+        if (GetIsDM(oPc) || GetIsDM(GetMaster(oPc)) || GetIsDMPossessed(oPc)) {
           SendMessageToPC(oPc, "Folgende Spieler haben euch im Gebiet vernommen:");
-          SendMessageToAllDMs("Erzähler: " + sMessage);
+          SendMessageToAllDMs("Erzähler (/g)[" + GetTag(GetArea(oPc)) + "]: " + sMessage);
           object oTalkTo = GetFirstPC();
           while (oTalkTo != OBJECT_INVALID) {
             if (GetArea(oTalkTo) == GetArea(oPc)) {
@@ -1241,7 +1241,6 @@ void main() {
             }
             oTalkTo = GetNextPC();
           }
-          SendMessageToPossessingDMs(sMessage);
         }
         // DM Server Message
       } else if (GetSubString(sMessage, 0, 3) == "/a ") {
@@ -1251,7 +1250,7 @@ void main() {
         sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
         if (GetIsDM(oPc) || GetIsDM(GetMaster(oPc)) || GetIsDMPossessed(oPc)) {
           SendMessageToPC(oPc, "Folgende Spieler haben euch auf dem Server vernommen:");
-          SendMessageToAllDMs("Erzähler: " + sMessage);
+          SendMessageToAllDMs("Erzähler (/a): " + sMessage);
           object oTalkTo = GetFirstPC();
           while (oTalkTo != OBJECT_INVALID) {
             if (!GetIsDM(oTalkTo)) {
@@ -1260,7 +1259,6 @@ void main() {
             SendMessageToPC(oPc, GetName(oTalkTo));
             oTalkTo = GetNextPC();
           }
-          SendMessageToPossessingDMs(sMessage);
         }
         // Info
       } else if (sMessage == "/hilfe") {
@@ -1450,9 +1448,9 @@ void main() {
       sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
       SetPCChatVolume(TALKVOLUME_SILENT_TALK);
       //SetPCChatMessage(sMessage);
-      if (GetIsDM(oPc)) {
+      if (GetIsDM(oPc) || GetIsDM(GetMaster(oPc)) || GetIsDMPossessed(oPc)) {
         SendMessageToPC(oPc, "Folgende Spieler im 50 Meter Radius haben euch vernommen:");
-        SendMessageToAllDMs("Erzähler: " + sMessage);
+        SendMessageToAllDMs("Erzähler (/s)[" + GetTag(GetArea(oPc)) + "]: " + sMessage);
         object oTalkTo = GetFirstPC();
         while (oTalkTo != OBJECT_INVALID) {
           if (GetArea(oTalkTo) == GetArea(oPc) && GetDistanceBetween(oTalkTo, oPc) < 50.0) {
@@ -1462,7 +1460,6 @@ void main() {
             SendMessageToPC(oPc, GetName(oTalkTo));
           }
           oTalkTo = GetNextPC();
-        SendMessageToPossessingDMs(sMessage);
         }
       }
     } else if (iChatVolume == 4) {
