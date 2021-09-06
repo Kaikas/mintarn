@@ -66,15 +66,15 @@ void setWind(object oArea, int iWindStrength) {
   string sWindDirection = GetLocalString(oModule, "sWindDirection");
   float fNegative = 1.0;
 
-  if (sWindDirection == "Nordwind") vDirection = Vector(0.0, 1.0, 0.0);
-  if (sWindDirection == "Ostwind") vDirection = Vector(1.0, 0.0, 0.0);
-  if (sWindDirection == "Südwind") vDirection = Vector(0.0, -1.0, 0.0);
-  if (sWindDirection == "Westwind") vDirection = Vector(-1.0, 0.0, 0.0);
+  if (sWindDirection == "Südwind") vDirection = Vector(0.0, 1.0, 0.0);
+  if (sWindDirection == "Westwind") vDirection = Vector(1.0, 0.0, 0.0);
+  if (sWindDirection == "Nordwind") vDirection = Vector(0.0, -1.0, 0.0);
+  if (sWindDirection == "Ostwind") vDirection = Vector(-1.0, 0.0, 0.0);
 
-  if (sWindDirection == "Südwestwind") vDirection = Vector(-1.0, -1.0, 0.0);
-  if (sWindDirection == "Nordwestwind") vDirection = Vector(-1.0, 1.0, 0.0);
-  if (sWindDirection == "Südostwind") vDirection = Vector(1.0, -1.0, 0.0);
-  if (sWindDirection == "Nordostwind") vDirection = Vector(1.0, 1.0, 0.0);
+  if (sWindDirection == "Nordostwind") vDirection = Vector(-1.0, -1.0, 0.0);
+  if (sWindDirection == "Südostwind") vDirection = Vector(-1.0, 1.0, 0.0);
+  if (sWindDirection == "Nordwestwind") vDirection = Vector(1.0, -1.0, 0.0);
+  if (sWindDirection == "Südwestwind") vDirection = Vector(1.0, 1.0, 0.0);
   
   SetAreaWind(oArea, vDirection, IntToFloat(iWindStrength), 50.0, 1.0);
 }
