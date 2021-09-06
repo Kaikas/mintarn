@@ -151,24 +151,6 @@ int setWindFromChat(string sMessage) {
   return 0;
 }
 
-void SendMessageToPossessingDMs(string sMessage) {
-  SendMessageToAllDMs(sMessage);
-  MessageAll("DEBUG");
-  object oArea = GetFirstArea();
-  while (GetIsObjectValid(oArea)) {
-    object oObject = GetFirstObjectInArea(oArea);
-    while(GetIsObjectValid(oObject)) {
-      SendMessageToPC(GetMaster(oObject), sMessage);
-      SendMessageToPC(GetMaster(GetMaster(oObject)), sMessage);
-      if (GetIsDMPossessed(oObject)) {
-        NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), GetMaster(oObject));
-      }
-      oObject = GetNextObjectInArea(oArea);
-    }
-    oArea = GetNextArea();
-  }
-}
-
 // Chat befehle
 void main() {
   int iChatVolume = GetPCChatVolume();
@@ -1251,7 +1233,11 @@ void main() {
           object oTalkTo = GetFirstPC();
           while (oTalkTo != OBJECT_INVALID) {
             if (GetArea(oTalkTo) == GetArea(oPc)) {
-              NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
+              if (GetIsPC(oTalkTo)) {
+                NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
+              } else {
+                SendMessageToAllDMs("Erzähler: " + sMessage);
+              }
               SendMessageToPC(oPc, GetName(oTalkTo));
             }
             oTalkTo = GetNextPC();
@@ -1268,7 +1254,11 @@ void main() {
           SendMessageToPC(oPc, "Folgende Spieler haben euch auf dem Server vernommen:");
           object oTalkTo = GetFirstPC();
           while (oTalkTo != OBJECT_INVALID) {
-            NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
+            if (GetIsPC(oTalkTo)) {
+              NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
+            } else {
+              SendMessageToAllDMs("Erzähler: " + sMessage);
+            }
             SendMessageToPC(oPc, GetName(oTalkTo));
             oTalkTo = GetNextPC();
           }
@@ -1467,7 +1457,11 @@ void main() {
         object oTalkTo = GetFirstPC();
         while (oTalkTo != OBJECT_INVALID) {
           if (GetArea(oTalkTo) == GetArea(oPc) && GetDistanceBetween(oTalkTo, oPc) < 50.0) {
-            NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
+            if (GetIsPC(oTalkTo)) {
+              NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
+            } else {
+              SendMessageToAllDMs("Erzähler: " + sMessage);
+            }
             SendMessageToPC(oPc, GetName(oTalkTo));
           }
           oTalkTo = GetNextPC();
