@@ -153,6 +153,7 @@ int setWindFromChat(string sMessage) {
 
 void SendMessageToPossessingDMs(string sMessage) {
   SendMessageToAllDMs(sMessage);
+  MessageAll("DEBUG");
   object oArea = GetFirstArea();
   while (GetIsObjectValid(oArea)) {
     object oObject = GetFirstObjectInArea(oArea);
