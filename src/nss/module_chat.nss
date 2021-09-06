@@ -1246,8 +1246,8 @@ void main() {
         sMessage = GetToken(104) + sMessage + "</c>";
         sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
         sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
-        SendMessageToPC(oPc, "Folgende Spieler haben euch im Gebiet vernommen:");
         if (GetIsDM(oPc)) {
+          SendMessageToPC(oPc, "Folgende Spieler haben euch im Gebiet vernommen:");
           object oTalkTo = GetFirstPC();
           while (oTalkTo != OBJECT_INVALID) {
             if (GetArea(oTalkTo) == GetArea(oPc)) {
@@ -1264,8 +1264,8 @@ void main() {
         sMessage = GetToken(104) + sMessage + "</c>";
         sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
         sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
-        SendMessageToPC(oPc, "Folgende Spieler haben euch auf dem Server vernommen:");
-        if (GetIsDM(oPc)) {
+        if (GetIsDM(oPc) || GetIsDM(GetMaster(oPc))) {
+          SendMessageToPC(oPc, "Folgende Spieler haben euch auf dem Server vernommen:");
           object oTalkTo = GetFirstPC();
           while (oTalkTo != OBJECT_INVALID) {
             NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
