@@ -1264,7 +1264,7 @@ void main() {
         sMessage = GetToken(104) + sMessage + "</c>";
         sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
         sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
-        if (GetIsDM(oPc) || GetIsDM(GetMaster(oPc))) {
+        if (GetIsDM(oPc) || GetIsDM(GetMaster(oPc)) || GetIsDMPossessed(oPc)) {
           SendMessageToPC(oPc, "Folgende Spieler haben euch auf dem Server vernommen:");
           object oTalkTo = GetFirstPC();
           while (oTalkTo != OBJECT_INVALID) {
