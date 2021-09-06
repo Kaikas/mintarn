@@ -1230,13 +1230,12 @@ void main() {
         sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
         if (GetIsDM(oPc)) {
           SendMessageToPC(oPc, "Folgende Spieler haben euch im Gebiet vernommen:");
+          SendMessageToAllDMs("Erzähler: " + sMessage);
           object oTalkTo = GetFirstPC();
           while (oTalkTo != OBJECT_INVALID) {
             if (GetArea(oTalkTo) == GetArea(oPc)) {
-              if (GetIsPC(oTalkTo)) {
+              if (!GetIsDM(oTalkTo)) {
                 NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
-              } else {
-                SendMessageToAllDMs("Erzähler: " + sMessage);
               }
               SendMessageToPC(oPc, GetName(oTalkTo));
             }
@@ -1252,12 +1251,11 @@ void main() {
         sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
         if (GetIsDM(oPc) || GetIsDM(GetMaster(oPc)) || GetIsDMPossessed(oPc)) {
           SendMessageToPC(oPc, "Folgende Spieler haben euch auf dem Server vernommen:");
+          SendMessageToAllDMs("Erzähler: " + sMessage);
           object oTalkTo = GetFirstPC();
           while (oTalkTo != OBJECT_INVALID) {
-            if (GetIsPC(oTalkTo)) {
+            if (!GetIsDM(oTalkTo)) {
               NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
-            } else {
-              SendMessageToAllDMs("Erzähler: " + sMessage);
             }
             SendMessageToPC(oPc, GetName(oTalkTo));
             oTalkTo = GetNextPC();
@@ -1454,13 +1452,12 @@ void main() {
       //SetPCChatMessage(sMessage);
       if (GetIsDM(oPc)) {
         SendMessageToPC(oPc, "Folgende Spieler im 50 Meter Radius haben euch vernommen:");
+        SendMessageToAllDMs("Erzähler: " + sMessage);
         object oTalkTo = GetFirstPC();
         while (oTalkTo != OBJECT_INVALID) {
           if (GetArea(oTalkTo) == GetArea(oPc) && GetDistanceBetween(oTalkTo, oPc) < 50.0) {
-            if (GetIsPC(oTalkTo)) {
+            if (!GetIsDM(oTalkTo)) {
               NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
-            } else {
-              SendMessageToAllDMs("Erzähler: " + sMessage);
             }
             SendMessageToPC(oPc, GetName(oTalkTo));
           }
