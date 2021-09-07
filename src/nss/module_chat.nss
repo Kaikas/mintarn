@@ -1360,6 +1360,445 @@ int token(string sMessage) {
   return 0;
 }
 
+int hindurchzwaengen(string sMessage) {
+  if (sMessage == "/hindurchzwängen") {
+    if (GetTag(GetArea(oPc)) == "AREA_Unterschlupf") {
+      location lUnterschlupf = GetLocation(GetObjectByTag("WP_UNTERSCHLUPF"));
+      DelayCommand(0.0, AssignCommand(oPc, JumpToLocation(lUnterschlupf)));
+      return 1;
+    }
+  }
+  return 0;
+}
+
+int phenotype(string sMessage) {
+  if (sMessage == "/phenotype 0") {
+    SetPhenoType(0, oPc);
+    return 1;
+  } else if (sMessage == "/phenotype 1") {
+    SetPhenoType(1, oPc);
+    return 1;
+  }
+  return 0;
+}
+
+int afk(string sMessage) {
+  if (sMessage == "/afk") {
+    if (GetLocalInt(oPc, "afk") == 1) {
+      SetLocalInt(oPc, "afk", 0);
+      effect eEffect = GetFirstEffect(oPc);
+      while(GetIsEffectValid(eEffect)) {
+        if(GetEffectTag(eEffect) == "eff_afk") {
+          RemoveEffect(oPc, eEffect);
+        }
+        eEffect = GetNextEffect(oPc);
+      }
+    } else {
+      SetLocalInt(oPc, "afk", 1);
+      ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(EffectVisualEffect(8192), "eff_afk"), oPc);
+    }
+    return 1;
+  }
+  return 0;
+}
+
+int ghost(string sMessage) {
+  if (sMessage == "/geist" || sMessage == "/ghost") {
+    effect eGhost = EffectCutsceneGhost();
+    ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(SupernaturalEffect(eGhost), "GHOST"), oPc);
+    SendMessageToPC(oPc, "Geist Modus für eine Minute angeschaltet.");
+    DelayCommand(60.0f, RemoveEffectByName(oPc, "GHOST"));
+    return 1;
+  }
+  return 0;
+}
+
+int climb(string sMessage) {
+  if (sMessage == "/klettern" || sMessage == "/climb") {
+    if (GetTag(GetArea(oPc)) == "AREA_Freihafen" && GetDistanceBetween(oPc, GetObjectByTag("KLETTERN_Tempel")) < 2.0) {
+      location lLocation = GetLocation(GetObjectByTag("KLETTERN_Tempel2"));
+      DelayCommand(1.0, AssignCommand(oPc, JumpToLocation(lLocation)));
+    }
+    if (GetTag(GetArea(oPc)) == "AREA_Freihafen" && GetDistanceBetween(oPc, GetObjectByTag("KLETTERN_Tempel2")) < 2.0) {
+      location lLocation = GetLocation(GetObjectByTag("KLETTERN_Tempel"));
+      DelayCommand(1.0, AssignCommand(oPc, JumpToLocation(lLocation)));
+    }
+    return 1;
+  }
+  return 0;
+}
+
+int backpack(string sMessage) {
+  if (sMessage == "/rucksack" || sMessage == "/backpack") {
+    if (GetLocalInt(oPc, "backpack") == 1) {
+      SetLocalInt(oPc, "backpack", 0);
+      effect eEffect = GetFirstEffect(oPc);
+      while(GetIsEffectValid(eEffect)) {
+        if(GetEffectTag(eEffect) == "eff_backpack") {
+          RemoveEffect(oPc, eEffect);
+        }
+        eEffect = GetNextEffect(oPc);
+      }
+    } else {
+      SetLocalInt(oPc, "backpack", 1);
+      int iRace = GetRacialType(oPc);
+      ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(EffectVisualEffect(9515), "eff_backpack"), oPc);
+    }
+    return 0;
+  }
+  return 1;
+}
+
+int masks(string sMessage) {
+  if (GetSubString(sMessage, 0, 6) == "/maske") {
+    int iMask = StringToInt(GetSubString(sMessage, 7, 2));
+    removeMask(oPc);
+    if (GetSubString(sMessage, 7, 2) != "") {
+      if (iMask == 0) applyMask(oPc, 8193);
+      if (iMask == 1) applyMask(oPc, 8193);
+      if (iMask == 2) applyMask(oPc, 8215);
+      if (iMask == 3) applyMask(oPc, 8240);
+      if (iMask == 4) applyMask(oPc, 8265);
+      if (iMask == 5) applyMask(oPc, 8290);
+      if (iMask == 6) applyMask(oPc, 8315);
+      if (iMask == 7) applyMask(oPc, 8340);
+      if (iMask == 8) applyMask(oPc, 8365);
+      if (iMask == 9) applyMask(oPc, 8390);
+      if (iMask == 10) applyMask(oPc, 8415);
+      if (iMask == 11) applyMask(oPc, 8440);
+      if (iMask == 12) applyMask(oPc, 8465);
+      if (iMask == 13) applyMask(oPc, 8490);
+      if (iMask == 14) applyMask(oPc, 8515);
+      if (iMask == 15) applyMask(oPc, 8540);
+      if (iMask == 16) applyMask(oPc, 8565);
+      if (iMask == 17) applyMask(oPc, 8590);
+      if (iMask == 18) applyMask(oPc, 8615);
+      if (iMask == 19) applyMask(oPc, 8640);
+      if (iMask == 20) applyMask(oPc, 8665);
+      if (iMask == 21) applyMask(oPc, 8690);
+      if (iMask == 22) applyMask(oPc, 8715);
+      if (iMask == 23) applyMask(oPc, 8740);
+      if (iMask == 24) applyMask(oPc, 8765);
+      if (iMask == 25) applyMask(oPc, 8790);
+      if (iMask == 26) applyMask(oPc, 8815);
+      if (iMask == 27) applyMask(oPc, 8840);
+      if (iMask == 28) applyMask(oPc, 8865);
+      if (iMask == 29) applyMask(oPc, 8890);
+      if (iMask == 30) applyMask(oPc, 8915);
+      if (iMask == 31) applyMask(oPc, 8940);
+      if (iMask == 32) applyMask(oPc, 8965);
+      if (iMask == 33) applyMask(oPc, 8990);
+      if (iMask == 34) applyMask(oPc, 9015);
+      if (iMask == 35) applyMask(oPc, 9040);
+      if (iMask == 36) applyMask(oPc, 9065);
+      if (iMask == 37) applyMask(oPc, 9090);
+      if (iMask == 38) applyMask(oPc, 9115);
+      if (iMask == 39) applyMask(oPc, 9140);
+      if (iMask == 40) applyMask(oPc, 9165);
+      if (iMask == 41) applyMask(oPc, 9190);
+      if (iMask == 42) applyMask(oPc, 9215);
+      if (iMask == 43) applyMask(oPc, 9240);
+      if (iMask == 44) applyMask(oPc, 9265);
+      if (iMask == 45) applyMask(oPc, 9290);
+      if (iMask == 46) applyMask(oPc, 9315);
+      if (iMask == 47) applyMask(oPc, 9340);
+      if (iMask == 48) applyMask(oPc, 9365);
+      if (iMask == 49) applyMask(oPc, 9390);
+      if (iMask == 50) applyMask(oPc, 9415);
+      if (iMask == 51) applyMask(oPc, 9440);
+      if (iMask == 52) applyMask(oPc, 9465);
+      if (iMask == 53) applyMask(oPc, 9490);
+    }
+    return 1;
+  }
+  return 0;
+}
+
+int die(string sMessage) {
+  if (sMessage == "/sterben") {
+    SetLocalInt(oPc, "DYING_FOR_REAL", 0);
+    location lStart = GetLocation(GetObjectByTag("WP_DEATH"));
+    AssignCommand(oPc, JumpToLocation(lStart));
+    ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectResurrection(), oPc);
+    RemoveEffects(oPc);
+    return 1;
+  }
+  return 0;
+}
+
+int time(string sMessage) {
+  if (sMessage == "/zeit") {
+    SendMessageToPC(oPc, GetToken(102) + "Es ist " + LeadingZeros(IntToString(GetTimeHour()), 2) + ":" + LeadingZeros(IntToString(GetTimeMinute()), 2)  + " Uhr.</c>");
+    return 1;
+  }
+  return 0;
+}
+
+int settime(string sMessage) {
+  if (GetSubString(sMessage, 0, 9) == "/settime " && GetIsDM(oPc)) {
+    if (IsANumber(GetSubString(sMessage, 9, 1)) && IsANumber(GetSubString(sMessage, 10, 1)) && IsANumber(GetSubString(sMessage, 12, 1)) && IsANumber(GetSubString(sMessage, 13, 1))) {
+      SetTime(StringToInt(GetSubString(sMessage, 9, 2)), StringToInt(GetSubString(sMessage, 12, 2)), 0, 0);
+      SendMessageToPC(oPc, GetToken(102) + "Es ist " + LeadingZeros(IntToString(GetTimeHour()), 2) + ":" + LeadingZeros(IntToString(GetTimeMinute()), 2)  + " Uhr.</c>");
+    } else {
+      SendMessageToPC(oPc, "Muss das Format \"/settime 20:00\" haben.");
+    }
+    return 1;
+  }
+  return 0;
+}
+
+int initiative(string sMessage) {
+  if (sMessage == "/initiative") {
+    int iInitiativeRoll = d20();
+    sMessage = GetToken(102) + "Initiative (d20 + Dex): [" +
+      IntToString(iInitiativeRoll) +
+      " + " + IntToString(GetAbilityModifier(ABILITY_DEXTERITY, oPc)) +
+      "] = " +
+      IntToString(iInitiativeRoll + GetAbilityModifier(ABILITY_DEXTERITY, oPc)) +
+      "</c>";
+    speak(oPc, sMessage);
+    return 1;
+  }
+  return 0;
+}
+
+int speakDMArea(string sMessage) {
+  if (GetSubString(sMessage, 0, 3) == "/g ") {
+    sMessage = GetSubString(sMessage, 2, 10000);
+    sMessage = GetToken(104) + sMessage + "</c>";
+    sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
+    sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
+    if (GetIsDM(oPc) || GetIsDM(GetMaster(oPc)) || GetIsDMPossessed(oPc)) {
+      SendMessageToPC(oPc, "Folgende Spieler haben euch im Gebiet vernommen:");
+      SendMessageToAllDMs("Erzähler (/g)[" + GetTag(GetArea(oPc)) + "]: " + sMessage);
+      object oTalkTo = GetFirstPC();
+      while (oTalkTo != OBJECT_INVALID) {
+        if (GetArea(oTalkTo) == GetArea(oPc)) {
+          if (!GetIsDM(oTalkTo)) {
+            NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
+          }
+          SendMessageToPC(oPc, GetName(oTalkTo));
+        }
+        oTalkTo = GetNextPC();
+      }
+    }
+    return 1;
+  }
+  return 0;
+}
+
+int speakDMServer(string sMessage) {
+  if (GetSubString(sMessage, 0, 3) == "/a ") {
+    sMessage = GetSubString(sMessage, 2, 10000);
+    sMessage = GetToken(104) + sMessage + "</c>";
+    sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
+    sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
+    if (GetIsDM(oPc) || GetIsDM(GetMaster(oPc)) || GetIsDMPossessed(oPc)) {
+      SendMessageToPC(oPc, "Folgende Spieler haben euch auf dem Server vernommen:");
+      SendMessageToAllDMs("Erzähler (/a): " + sMessage);
+      object oTalkTo = GetFirstPC();
+      while (oTalkTo != OBJECT_INVALID) {
+        if (!GetIsDM(oTalkTo)) {
+          NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
+        }
+        SendMessageToPC(oPc, GetName(oTalkTo));
+        oTalkTo = GetNextPC();
+      }
+    }
+    return 1;
+  }
+  return 0;
+}
+
+int help(string sMessage) {
+  if (sMessage == "/hilfe") {
+    SendMessageToPC(oPc, "/afk\n" +
+        "/geist\n" +
+        "/unstuck\n" +
+        "/report\n" +
+        "/token\n" +
+        "/familiar\n" +
+        "/companion\n" +
+        "/sterben\n" +
+        "/zeit\n" +
+        "/initiative" +
+        "\nCharakter löschen:\n" +
+        "/delete\n" +
+        "\nAussehen editieren:\n" +
+        "/aussehen\n" +
+        "/rucksack\n" +
+        "/maske 0-53\n" +
+        "/pferd 1-4\n" +
+        "\nWürfel:\n" +
+        "/d4\n" +
+        "/d6\n" +
+        "/d8\n" +
+        "/d10\n" +
+        "/d20\n" +
+        "\nWeitere Übersichten:\n" +
+        "/hilfe fertigkeit\n" +
+        "/hilfe maske\n" +
+        "/hilfe rettungswurf\n" +
+        "/hilfe animation\n");
+    return 1;
+  }
+  return 0;
+}
+
+int helpSavingThrows(string sMessage) {
+  if (sMessage == "/hilfe rettungswurf") {
+    SendMessageToPC(oPc, "/reflex\n/wille\n/zähigkeit\n");
+    return 1;
+  }
+  return 0;
+}
+
+int helpAnimation(string sMessage) {
+  if (sMessage == "/hilfe animation") {
+    SendMessageToPC(oPc, "Einmalig:\n" +
+        "/verbeugen\n" +
+        "/ausweichen\n" +
+        "/ducken\n" +
+        "/trinken\n" +
+        "/winken\n" +
+        "/strecken\n" +
+        "/kratzen\n" +
+        "/lesen\n" +
+        "/salutieren\n" +
+        "/jubeln\n" +
+        "/freuen\n" +
+        "/anfeuern\n" +
+        "/zucken\n" +
+        "/stehlen\n" +
+        "/nicken\n" +
+        "/herausfordern\n" +
+        "\n" +
+        "Dauerhaft:\n" +
+        "/sitzen\n" +
+        "/beten\n" +
+        "/zaubern\n" +
+        "/zaubern2\n" +
+        "/liegen rücken\n" +
+        "/liegen bauch\n" +
+        "/aufheben\n" +
+        "/interagieren\n" +
+        "/spähen\n" +
+        "/schwanken\n" +
+        "/schimpfen\n" +
+        "/lachen\n" +
+        "/flehen\n" +
+        "/reden\n" +
+        "/anbeten\n" +
+        "\n" +
+        "Abfolge:\n" +
+        "/tanzen\n" +
+        "/feiern\n" +
+        "\n" +
+        "VFX:\n" +
+        "/rauchen");
+    return 1;
+  }
+  return 0;
+}
+
+int helpSkills(string sMessage) {
+  if (sMessage == "/hilfe fertigkeit") {
+    SendMessageToPC(oPc, "Fertigkeiten können mit beliebigen Attributen gewürfelt werden indem man das entsprechede Kürzel anhängt, zum Beispiel '/akrobatik str'\n\n"+
+        "Fertigkeiten:\n" +
+        "/akrobatik\n" +
+        "/alchemist\n" +
+        "/arkanes\n" +
+        "/athletik\n" +
+        "/auftreten\n" +
+        "/bardenwissen\n" +
+        "/einschüchtern\n" +
+        "/entdecken\n" +
+        "/fingerfertigkeit\n" +
+        "/heilkunde\n" +
+        "/konzentration\n" +
+        "/lauschen\n" +
+        "/lederer\n" +
+        "/leisebewegen\n" +
+        "/magischengegenstandbenutzen\n" +
+        "/mechanismusausschalten\n" +
+        "/mittierenumgehen\n" +
+        "/motiverkennen\n" +
+        "/natur\n" +
+        "/religion\n" +
+        "/schmied\n" +
+        "/schreiner\n" +
+        "/täuschen\n" +
+        "/überleben\n" +
+        "/überzeugen\n" +
+        "/untersuchen\n" +
+        "/verstecken\n" +
+        "/weltliches\n");
+    return 1;
+  }
+  return 0;
+}
+
+int helpMasks(string sMessage) {
+  if (sMessage == "/hilfe maske") {
+    SendMessageToPC(oPc, "/maske 0: brauner Dreispitz\n" +
+        "/maske 1: brauner Dreispitz\n" +
+        "/maske 2: brauner Piratenhut\n" +
+        "/maske 3: schwarzer Dreispitz\n" +
+        "/maske 4: schwarzer Piratenhut\n" +
+        "/maske 5: hellbrauner Dreispitz\n" +
+        "/maske 6: hellbrauner Piratenhut\n" +
+        "/maske 7: dunkelrotes Bandana\n" +
+        "/maske 8: schwarzes Bandana\n" +
+        "/maske 9: blaues Bandana\n" +
+        "/maske 10: braunes Bandana\n" +
+        "/maske 11: Helm\n" +
+        "/maske 12: Helm\n" +
+        "/maske 13: Helm\n" +
+        "/maske 14: Helm\n" +
+        "/maske 15: Helm\n" +
+        "/maske 16: Helm\n" +
+        "/maske 17: Helm\n" +
+        "/maske 18: Helm\n" +
+        "/maske 19: Helm\n" +
+        "/maske 20: Helm\n" +
+        "/maske 21: Helm\n" +
+        "/maske 22: Helm\n" +
+        "/maske 23: Kapuze\n" +
+        "/maske 24: Kapuze\n" +
+        "/maske 25: Kapuze\n" +
+        "/maske 26: Kapuze\n" +
+        "/maske 27: Kapuze\n" +
+        "/maske 28: Kapuze\n" +
+        "/maske 29: Kapuze\n" +
+        "/maske 30: Kapuze\n" +
+        "/maske 31: Kapuze\n" +
+        "/maske 32: Kapuze\n" +
+        "/maske 33: Kapuze\n" +
+        "/maske 34: Kapuze\n" +
+        "/maske 35: Kapuze\n" +
+        "/maske 36: Kapuze\n" +
+        "/maske 37: Kapuze\n" +
+        "/maske 38: Kapuze\n" +
+        "/maske 39: Kapuze\n" +
+        "/maske 40: Kapuze\n" +
+        "/maske 41: Kapuze\n" +
+        "/maske 42: Kapuze\n" +
+        "/maske 43: Kapuze\n" +
+        "/maske 44: Kapuze\n" +
+        "/maske 45: Kapuze\n" +
+        "/maske 46: Kapuze\n" +
+        "/maske 47: Stirnreif\n" +
+        "/maske 48: Stirnreif\n" +
+        "/maske 49: Stirnreif\n" +
+        "/maske 50: Ballmaske\n" +
+        "/maske 51: Ballmaske\n" +
+        "/maske 52: Ballmaske\n" +
+        "/maske 53: Ballmaske\n");
+    return 1;
+  }
+  return 0;
+}
+
 // Chat befehle
 void main() {
   string sMessage = GetPCChatMessage();
@@ -1371,480 +1810,142 @@ void main() {
   string sUnban = GetSubString(sMessage, 0, 6);
   string sPferd= GetSubString(sMessage, 0, 4);
 
-
-  // DM speak as char
-  if (speakAsChar(sMessage) ||
-      speakOOC(sMessage) || 
-      banPlayer(sMessage) ||
-      unbanPlayer(sMessage) ||
-      listCDKeys(sMessage) ||
-      listBannedPlayers(sMessage) ||
-      changeName(sMessage) ||
-      changeDescription(sMessage) ||
-      ride(sMessage) ||
-      unstuck(sMessage) ||
-      report(sMessage) ||
-      setWindFromChat(sMessage) ||
-      deleteHint(sMessage) ||
-      delete(sMessage) ||
-      emotes(sMessage) ||
-      aussehen(sMessage) ||
-      attributes(sMessage) ||
-      savingThrows(sMessage) ||
-      skills(sMessage) ||
-      rolls(sMessage) ||
-      familiar(sMessage) ||
-      companion(sMessage) ||
-      token(sMessage)) {
-    if (0) { 
-      if (0) {
-        //SetDeity(oPc, "foo");
-        //SendMessageToPC(oPc, GetDeity(oPc));
-        // Unterschlupf /hindurchzwängen
-      } else if (sMessage == "/hindurchzwängen") {
-        if (GetTag(GetArea(oPc)) == "AREA_Unterschlupf") {
-          location lUnterschlupf = GetLocation(GetObjectByTag("WP_UNTERSCHLUPF"));
-          DelayCommand(0.0, AssignCommand(oPc, JumpToLocation(lUnterschlupf)));
-        }
-        // Phenotype 0
-      } else if (sMessage == "/phenotype 0") {
-        SetPhenoType(0, oPc);
-        // Phenotype 1
-      } else if (sMessage == "/phenotype 1") {
-        SetPhenoType(1, oPc);
-      } else if (sMessage == "/afk") {
-        if (GetLocalInt(oPc, "afk") == 1) {
-          SetLocalInt(oPc, "afk", 0);
-          effect eEffect = GetFirstEffect(oPc);
-          while(GetIsEffectValid(eEffect)) {
-            if(GetEffectTag(eEffect) == "eff_afk") {
-              RemoveEffect(oPc, eEffect);
-            }
-            eEffect = GetNextEffect(oPc);
-          }
-        } else {
-          SetLocalInt(oPc, "afk", 1);
-          ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(EffectVisualEffect(8192), "eff_afk"), oPc);
-        }
-        // Remove Collision
-      } else if (sMessage == "/geist" || sMessage == "/ghost") {
-        effect eGhost = EffectCutsceneGhost();
-        ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(SupernaturalEffect(eGhost), "GHOST"), oPc);
-        SendMessageToPC(oPc, "Geist Modus für eine Minute angeschaltet.");
-        DelayCommand(60.0f, RemoveEffectByName(oPc, "GHOST"));
-        // Climb
-      } else if (sMessage == "/klettern" || sMessage == "/climb") {
-        if (GetTag(GetArea(oPc)) == "AREA_Freihafen" && GetDistanceBetween(oPc, GetObjectByTag("KLETTERN_Tempel")) < 2.0) {
-          location lLocation = GetLocation(GetObjectByTag("KLETTERN_Tempel2"));
-          DelayCommand(1.0, AssignCommand(oPc, JumpToLocation(lLocation)));
-        }
-        if (GetTag(GetArea(oPc)) == "AREA_Freihafen" && GetDistanceBetween(oPc, GetObjectByTag("KLETTERN_Tempel2")) < 2.0) {
-          location lLocation = GetLocation(GetObjectByTag("KLETTERN_Tempel"));
-          DelayCommand(1.0, AssignCommand(oPc, JumpToLocation(lLocation)));
-        }
-        // Backpack
-      } else if (sMessage == "/rucksack" || sMessage == "/backpack") {
-        if (GetLocalInt(oPc, "backpack") == 1) {
-          SetLocalInt(oPc, "backpack", 0);
-          effect eEffect = GetFirstEffect(oPc);
-          while(GetIsEffectValid(eEffect)) {
-            if(GetEffectTag(eEffect) == "eff_backpack") {
-              RemoveEffect(oPc, eEffect);
-            }
-            eEffect = GetNextEffect(oPc);
-          }
-        } else {
-          SetLocalInt(oPc, "backpack", 1);
-          int iRace = GetRacialType(oPc);
-          ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(EffectVisualEffect(9515), "eff_backpack"), oPc);
-        }
-        // PvP
-      } else if (sMessage == "/pvp") {
-        SetLocalInt(oPc, "pvp", 1);
-        SendMessageToPC(oPc, "Ihr hab PvP (Spieler gegen Spieler) aktiviert und könnt nun angegriffen werden!");
-        // Masks
-      } else if (GetSubString(sMessage, 0, 6) == "/maske") {
-        int iMask = StringToInt(GetSubString(sMessage, 7, 2));
-        removeMask(oPc);
-        if (GetSubString(sMessage, 7, 2) != "") {
-          if (iMask == 0) applyMask(oPc, 8193);
-          if (iMask == 1) applyMask(oPc, 8193);
-          if (iMask == 2) applyMask(oPc, 8215);
-          if (iMask == 3) applyMask(oPc, 8240);
-          if (iMask == 4) applyMask(oPc, 8265);
-          if (iMask == 5) applyMask(oPc, 8290);
-          if (iMask == 6) applyMask(oPc, 8315);
-          if (iMask == 7) applyMask(oPc, 8340);
-          if (iMask == 8) applyMask(oPc, 8365);
-          if (iMask == 9) applyMask(oPc, 8390);
-          if (iMask == 10) applyMask(oPc, 8415);
-          if (iMask == 11) applyMask(oPc, 8440);
-          if (iMask == 12) applyMask(oPc, 8465);
-          if (iMask == 13) applyMask(oPc, 8490);
-          if (iMask == 14) applyMask(oPc, 8515);
-          if (iMask == 15) applyMask(oPc, 8540);
-          if (iMask == 16) applyMask(oPc, 8565);
-          if (iMask == 17) applyMask(oPc, 8590);
-          if (iMask == 18) applyMask(oPc, 8615);
-          if (iMask == 19) applyMask(oPc, 8640);
-          if (iMask == 20) applyMask(oPc, 8665);
-          if (iMask == 21) applyMask(oPc, 8690);
-          if (iMask == 22) applyMask(oPc, 8715);
-          if (iMask == 23) applyMask(oPc, 8740);
-          if (iMask == 24) applyMask(oPc, 8765);
-          if (iMask == 25) applyMask(oPc, 8790);
-          if (iMask == 26) applyMask(oPc, 8815);
-          if (iMask == 27) applyMask(oPc, 8840);
-          if (iMask == 28) applyMask(oPc, 8865);
-          if (iMask == 29) applyMask(oPc, 8890);
-          if (iMask == 30) applyMask(oPc, 8915);
-          if (iMask == 31) applyMask(oPc, 8940);
-          if (iMask == 32) applyMask(oPc, 8965);
-          if (iMask == 33) applyMask(oPc, 8990);
-          if (iMask == 34) applyMask(oPc, 9015);
-          if (iMask == 35) applyMask(oPc, 9040);
-          if (iMask == 36) applyMask(oPc, 9065);
-          if (iMask == 37) applyMask(oPc, 9090);
-          if (iMask == 38) applyMask(oPc, 9115);
-          if (iMask == 39) applyMask(oPc, 9140);
-          if (iMask == 40) applyMask(oPc, 9165);
-          if (iMask == 41) applyMask(oPc, 9190);
-          if (iMask == 42) applyMask(oPc, 9215);
-          if (iMask == 43) applyMask(oPc, 9240);
-          if (iMask == 44) applyMask(oPc, 9265);
-          if (iMask == 45) applyMask(oPc, 9290);
-          if (iMask == 46) applyMask(oPc, 9315);
-          if (iMask == 47) applyMask(oPc, 9340);
-          if (iMask == 48) applyMask(oPc, 9365);
-          if (iMask == 49) applyMask(oPc, 9390);
-          if (iMask == 50) applyMask(oPc, 9415);
-          if (iMask == 51) applyMask(oPc, 9440);
-          if (iMask == 52) applyMask(oPc, 9465);
-          if (iMask == 53) applyMask(oPc, 9490);
-        }
-        // Sterben
-      } else if (sMessage == "/sterben") {
-        SetLocalInt(oPc, "DYING_FOR_REAL", 0);
-        location lStart = GetLocation(GetObjectByTag("WP_DEATH"));
-        AssignCommand(oPc, JumpToLocation(lStart));
-        ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectResurrection(), oPc);
-        //ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectHeal(GetMaxHitPoints(oPc)), oPc);
-        RemoveEffects(oPc);
-        // Zeit
-      } else if (sMessage == "/zeit") {
-        SendMessageToPC(oPc, GetToken(102) + "Es ist " + LeadingZeros(IntToString(GetTimeHour()), 2) + ":" + LeadingZeros(IntToString(GetTimeMinute()), 2)  + " Uhr.</c>");
-        // Zeit
-      } else if (GetSubString(sMessage, 0, 9) == "/settime " && GetIsDM(oPc)) {
-        if (IsANumber(GetSubString(sMessage, 9, 1)) && IsANumber(GetSubString(sMessage, 10, 1)) && IsANumber(GetSubString(sMessage, 12, 1)) && IsANumber(GetSubString(sMessage, 13, 1))) {
-          SetTime(StringToInt(GetSubString(sMessage, 9, 2)), StringToInt(GetSubString(sMessage, 12, 2)), 0, 0);
-          SendMessageToPC(oPc, GetToken(102) + "Es ist " + IntToString(GetTimeHour()) + ":" + IntToString(GetTimeMinute())  + " Uhr.</c>");
-        } else {
-          SendMessageToPC(oPc, "Muss das Format \"/settime 20:00\" haben.");
-        }
-        // Initiative
-      } else if (sMessage == "/initiative") {
-        int iInitiativeRoll = d20();
-        sMessage = GetToken(102) + "Initiative (d20 + Dex): [" +
-          IntToString(iInitiativeRoll) +
-          " + " + IntToString(GetAbilityModifier(ABILITY_DEXTERITY, oPc)) +
-          "] = " +
-          IntToString(iInitiativeRoll + GetAbilityModifier(ABILITY_DEXTERITY, oPc)) +
-          "</c>";
-        SetLocalString(oPc, "sMessage", sMessage);
-        SetLocalInt(oPc, "iChatVolume", iChatVolume);
-        ExecuteScript("global_speak", oPc);
-        // DM Areae/Gebiet Message
-      } else if (GetSubString(sMessage, 0, 3) == "/g ") {
-        sMessage = GetSubString(sMessage, 2, 10000);
-        sMessage = GetToken(104) + sMessage + "</c>";
-        sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
-        sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
-        if (GetIsDM(oPc) || GetIsDM(GetMaster(oPc)) || GetIsDMPossessed(oPc)) {
-          SendMessageToPC(oPc, "Folgende Spieler haben euch im Gebiet vernommen:");
-          SendMessageToAllDMs("Erzähler (/g)[" + GetTag(GetArea(oPc)) + "]: " + sMessage);
-          object oTalkTo = GetFirstPC();
-          while (oTalkTo != OBJECT_INVALID) {
-            if (GetArea(oTalkTo) == GetArea(oPc)) {
-              if (!GetIsDM(oTalkTo)) {
-                NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
-              }
-              SendMessageToPC(oPc, GetName(oTalkTo));
-            }
-            oTalkTo = GetNextPC();
-          }
-        }
-        // DM Server Message
-      } else if (GetSubString(sMessage, 0, 3) == "/a ") {
-        sMessage = GetSubString(sMessage, 2, 10000);
-        sMessage = GetToken(104) + sMessage + "</c>";
-        sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
-        sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
-        if (GetIsDM(oPc) || GetIsDM(GetMaster(oPc)) || GetIsDMPossessed(oPc)) {
-          SendMessageToPC(oPc, "Folgende Spieler haben euch auf dem Server vernommen:");
-          SendMessageToAllDMs("Erzähler (/a): " + sMessage);
-          object oTalkTo = GetFirstPC();
-          while (oTalkTo != OBJECT_INVALID) {
-            if (!GetIsDM(oTalkTo)) {
-              NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
-            }
-            SendMessageToPC(oPc, GetName(oTalkTo));
-            oTalkTo = GetNextPC();
-          }
-        }
-        // Info
-      } else if (sMessage == "/hilfe") {
-        SendMessageToPC(oPc, "/afk\n" +
-            "/geist\n" +
-            "/unstuck\n" +
-            "/report\n" +
-            "/token\n" +
-            "/familiar\n" +
-            "/companion\n" +
-            "/sterben\n" +
-            "/zeit\n" +
-            "/initiative" +
-            "\nCharakter löschen:\n" +
-            "/delete\n" +
-            "\nAussehen editieren:\n" +
-            "/aussehen\n" +
-            "/rucksack\n" +
-            "/maske 0-53\n" +
-            "/pferd 1-4\n" +
-            "\nWürfel:\n" +
-            "/d4\n" +
-            "/d6\n" +
-            "/d8\n" +
-            "/d10\n" +
-            "/d20\n" +
-            "\nWeitere Übersichten:\n" +
-            "/hilfe fertigkeit\n" +
-            "/hilfe maske\n" +
-            "/hilfe rettungswurf\n" +
-            "/hilfe animation\n");
-      } else if (sMessage == "/hilfe rettungswurf") {
-        SendMessageToPC(oPc, "/reflex\n/wille\n/zähigkeit\n");
-      } else if (sMessage == "/hilfe animation") {
-        SendMessageToPC(oPc, "Einmalig:\n" +
-            "/verbeugen\n" +
-            "/ausweichen\n" +
-            "/ducken\n" +
-            "/trinken\n" +
-            "/winken\n" +
-            "/strecken\n" +
-            "/kratzen\n" +
-            "/lesen\n" +
-            "/salutieren\n" +
-            "/jubeln\n" +
-            "/freuen\n" +
-            "/anfeuern\n" +
-            "/zucken\n" +
-            "/stehlen\n" +
-            "/nicken\n" +
-            "/herausfordern\n" +
-            "\n" +
-            "Dauerhaft:\n" +
-            "/sitzen\n" +
-            "/beten\n" +
-            "/zaubern\n" +
-            "/zaubern2\n" +
-            "/liegen rücken\n" +
-            "/liegen bauch\n" +
-            "/aufheben\n" +
-            "/interagieren\n" +
-            "/spähen\n" +
-            "/schwanken\n" +
-            "/schimpfen\n" +
-            "/lachen\n" +
-            "/flehen\n" +
-            "/reden\n" +
-            "/anbeten\n" +
-            "\n" +
-            "Abfolge:\n" +
-            "/tanzen\n" +
-            "/feiern\n" +
-            "\n" +
-            "VFX:\n" +
-            "/rauchen");
-      } else if (sMessage == "/hilfe fertigkeit") {
-        SendMessageToPC(oPc, "Fertigkeiten können mit beliebigen Attributen gewürfelt werden indem man das entsprechede Kürzel anhängt, zum Beispiel '/akrobatik str'\n\n"+
-            "Fertigkeiten:\n" +
-            "/akrobatik\n" +
-            "/alchemist\n" +
-            "/arkanes\n" +
-            "/athletik\n" +
-            "/auftreten\n" +
-            "/einschüchtern\n" +
-            "/entdecken\n" +
-            "/fingerfertigkeit\n" +
-            "/heilkunde\n" +
-            "/konzentration\n" +
-            "/lauschen\n" +
-            "/lederer\n" +
-            "/leisebewegen\n" +
-            "/magischengegenstandbenutzen\n" +
-            "/mechanismusausschalten\n" +
-            "/mittierenumgehen\n" +
-            "/motiverkennen\n" +
-            "/natur\n" +
-            "/religion\n" +
-            "/schmied\n" +
-            "/schreiner\n" +
-            "/täuschen\n" +
-            "/überleben\n" +
-            "/überzeugen\n" +
-            "/untersuchen\n" +
-            "/verstecken\n" +
-            "/weltliches\n");
-      } else if (sMessage == "/hilfe maske") {
-        SendMessageToPC(oPc, "/maske 0: brauner Dreispitz\n" +
-            "/maske 1: brauner Dreispitz\n" +
-            "/maske 2: brauner Piratenhut\n" +
-            "/maske 3: schwarzer Dreispitz\n" +
-            "/maske 4: schwarzer Piratenhut\n" +
-            "/maske 5: hellbrauner Dreispitz\n" +
-            "/maske 6: hellbrauner Piratenhut\n" +
-            "/maske 7: dunkelrotes Bandana\n" +
-            "/maske 8: schwarzes Bandana\n" +
-            "/maske 9: blaues Bandana\n" +
-            "/maske 10: braunes Bandana\n" +
-            "/maske 11: Helm\n" +
-            "/maske 12: Helm\n" +
-            "/maske 13: Helm\n" +
-            "/maske 14: Helm\n" +
-            "/maske 15: Helm\n" +
-            "/maske 16: Helm\n" +
-            "/maske 17: Helm\n" +
-            "/maske 18: Helm\n" +
-            "/maske 19: Helm\n" +
-            "/maske 20: Helm\n" +
-            "/maske 21: Helm\n" +
-            "/maske 22: Helm\n" +
-            "/maske 23: Kapuze\n" +
-            "/maske 24: Kapuze\n" +
-            "/maske 25: Kapuze\n" +
-            "/maske 26: Kapuze\n" +
-            "/maske 27: Kapuze\n" +
-            "/maske 28: Kapuze\n" +
-            "/maske 29: Kapuze\n" +
-            "/maske 30: Kapuze\n" +
-            "/maske 31: Kapuze\n" +
-            "/maske 32: Kapuze\n" +
-            "/maske 33: Kapuze\n" +
-            "/maske 34: Kapuze\n" +
-            "/maske 35: Kapuze\n" +
-            "/maske 36: Kapuze\n" +
-            "/maske 37: Kapuze\n" +
-            "/maske 38: Kapuze\n" +
-            "/maske 39: Kapuze\n" +
-            "/maske 40: Kapuze\n" +
-            "/maske 41: Kapuze\n" +
-            "/maske 42: Kapuze\n" +
-            "/maske 43: Kapuze\n" +
-            "/maske 44: Kapuze\n" +
-            "/maske 45: Kapuze\n" +
-            "/maske 46: Kapuze\n" +
-            "/maske 47: Stirnreif\n" +
-            "/maske 48: Stirnreif\n" +
-            "/maske 49: Stirnreif\n" +
-            "/maske 50: Ballmaske\n" +
-            "/maske 51: Ballmaske\n" +
-            "/maske 52: Ballmaske\n" +
-            "/maske 53: Ballmaske\n");
-      } else {
-        SendMessageToPC(oPc, "Ungültiger Befehl: \"" +
-            sMessage +
-            "\" \n\n" +
-            "/hilfe \n" +
-            "/hilfe animation \n" +
-            "/hilfe fertigkeit \n");
-      }
-    }
+  if (GetSubString(sMessage, 0, 1) == ":" || GetSubString(sMessage, 0, 1) == "/") {
+    if (speakAsChar(sMessage) ||
+        speakOOC(sMessage) || 
+        banPlayer(sMessage) ||
+        unbanPlayer(sMessage) ||
+        listCDKeys(sMessage) ||
+        listBannedPlayers(sMessage) ||
+        changeName(sMessage) ||
+        changeDescription(sMessage) ||
+        ride(sMessage) ||
+        unstuck(sMessage) ||
+        report(sMessage) ||
+        setWindFromChat(sMessage) ||
+        deleteHint(sMessage) ||
+        delete(sMessage) ||
+        emotes(sMessage) ||
+        aussehen(sMessage) ||
+        attributes(sMessage) ||
+        savingThrows(sMessage) ||
+        skills(sMessage) ||
+        rolls(sMessage) ||
+        familiar(sMessage) ||
+        companion(sMessage) ||
+        token(sMessage) ||
+        hindurchzwaengen(sMessage) ||
+        phenotype(sMessage) ||
+        afk(sMessage) ||
+        ghost(sMessage) ||
+        climb(sMessage) ||
+        backpack(sMessage) ||
+        masks(sMessage) ||
+        die(sMessage) ||
+        time(sMessage) ||
+        settime(sMessage) ||
+        initiative(sMessage) ||
+        speakDMArea(sMessage) ||
+        speakDMServer(sMessage) ||
+        help(sMessage) ||
+        helpSavingThrows(sMessage) ||
+        helpAnimation(sMessage) ||
+        helpSkills(sMessage) ||
+        helpMasks(sMessage)) {
   } else {
-    if (iChatVolume == 0) {
-      // Normal talk
-      sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
-      sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
-      SetPCChatMessage(sMessage);
-    } else if (iChatVolume == 1) {
-      // Whisper
-      SetPCChatVolume(TALKVOLUME_SILENT_TALK);
-      sMessage = GetToken(103) + sMessage + "</c>";
-      sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
-      sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
-      SetPCChatMessage(sMessage);
-    } else if (iChatVolume == 2) { //
-      // Shout
-      sMessage = GetToken(104) + sMessage + "</c>";
-      sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
-      sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
-      SetPCChatVolume(TALKVOLUME_SILENT_TALK);
-      //SetPCChatMessage(sMessage);
-      if (GetIsDM(oPc) || GetIsDM(GetMaster(oPc)) || GetIsDMPossessed(oPc)) {
-        SendMessageToPC(oPc, "Folgende Spieler im 50 Meter Radius haben euch vernommen:");
-        SendMessageToAllDMs("Erzähler (/s)[" + GetTag(GetArea(oPc)) + "]: " + sMessage);
-        object oTalkTo = GetFirstPC();
-        while (oTalkTo != OBJECT_INVALID) {
-          if (GetArea(oTalkTo) == GetArea(oPc) && GetDistanceBetween(oTalkTo, oPc) < 50.0) {
-            if (!GetIsDM(oTalkTo)) {
-              NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
-            }
-            SendMessageToPC(oPc, GetName(oTalkTo));
+    SendMessageToPC(oPc, "Ungültiger Befehl: \"" +
+        sMessage +
+        "\" \n\n" +
+        "/hilfe \n" +
+        "/hilfe animation \n" +
+        "/hilfe fertigkeit \n");
+  }
+} else {
+  if (iChatVolume == 0) {
+    // Normal talk
+    sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
+    sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
+    SetPCChatMessage(sMessage);
+  } else if (iChatVolume == 1) {
+    // Whisper
+    SetPCChatVolume(TALKVOLUME_SILENT_TALK);
+    sMessage = GetToken(103) + sMessage + "</c>";
+    sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
+    sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
+    SetPCChatMessage(sMessage);
+  } else if (iChatVolume == 2) { //
+    // Shout
+    sMessage = GetToken(104) + sMessage + "</c>";
+    sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
+    sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
+    SetPCChatVolume(TALKVOLUME_SILENT_TALK);
+    //SetPCChatMessage(sMessage);
+    if (GetIsDM(oPc) || GetIsDM(GetMaster(oPc)) || GetIsDMPossessed(oPc)) {
+      SendMessageToPC(oPc, "Folgende Spieler im 50 Meter Radius haben euch vernommen:");
+      SendMessageToAllDMs("Erzähler (/s)[" + GetTag(GetArea(oPc)) + "]: " + sMessage);
+      object oTalkTo = GetFirstPC();
+      while (oTalkTo != OBJECT_INVALID) {
+        if (GetArea(oTalkTo) == GetArea(oPc) && GetDistanceBetween(oTalkTo, oPc) < 50.0) {
+          if (!GetIsDM(oTalkTo)) {
+            NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
           }
-          oTalkTo = GetNextPC();
+          SendMessageToPC(oPc, GetName(oTalkTo));
         }
+        oTalkTo = GetNextPC();
       }
-    } else if (iChatVolume == 4) {
-      SendMessageToPC(oPc, GetToken(102) + "DM: " + sMessage + "</c>");
-      NWNX_WebHook_SendWebHookHTTPS("discordapp.com", NWNX_Util_GetEnvironmentVariable("WEBHOOK_DM"), GetPCPlayerName(oPc) + " - " + GetName(oPc) + ": " + sMessage);
-    } else if (iChatVolume == 5) {
-      // Gruppe
-      SetPCChatVolume(TALKVOLUME_SILENT_TALK);
-      sMessage = GetToken(104) + sMessage + "</c>";
-      // Does not work as inteded. Fix incoming
-      NWNX_Chat_SendMessage(6, sMessage, oPc, OBJECT_INVALID);
-
-      // Send tells to everyone in the party then
-      //NWNX_Chat_SendMessage(4, sMessage, oPc, oPc);
-      //object oPartyMember = GetFirstFactionMember(oPc, TRUE);
-      //while(GetIsObjectValid(oPartyMember) == TRUE) {
-      //    NWNX_Chat_SendMessage(4, sMessage, oPc, oPartyMember);
-      //    oPartyMember = GetNextFactionMember(oPc, TRUE);
-      //}
-
-      // Send message to DMs
-      //object oPlayer = GetFirstPC();
-      //while(GetIsObjectValid(oPlayer)) {
-      //    if (GetIsDM(oPlayer)) {
-      //        NWNX_Chat_SendMessage(4, "(Gruppe): " + sMessage, oPc, oPlayer);
-      //    }
-      //    oPlayer = GetNextPC();
-      //}
     }
+  } else if (iChatVolume == 4) {
+    SendMessageToPC(oPc, GetToken(102) + "DM: " + sMessage + "</c>");
+    NWNX_WebHook_SendWebHookHTTPS("discordapp.com", NWNX_Util_GetEnvironmentVariable("WEBHOOK_DM"), GetPCPlayerName(oPc) + " - " + GetName(oPc) + ": " + sMessage);
+  } else if (iChatVolume == 5) {
+    // Gruppe
+    SetPCChatVolume(TALKVOLUME_SILENT_TALK);
+    sMessage = GetToken(104) + sMessage + "</c>";
+    // Does not work as inteded. Fix incoming
+    NWNX_Chat_SendMessage(6, sMessage, oPc, OBJECT_INVALID);
+
+    // Send tells to everyone in the party then
+    //NWNX_Chat_SendMessage(4, sMessage, oPc, oPc);
+    //object oPartyMember = GetFirstFactionMember(oPc, TRUE);
+    //while(GetIsObjectValid(oPartyMember) == TRUE) {
+    //    NWNX_Chat_SendMessage(4, sMessage, oPc, oPartyMember);
+    //    oPartyMember = GetNextFactionMember(oPc, TRUE);
+    //}
+
+    // Send message to DMs
+    //object oPlayer = GetFirstPC();
+    //while(GetIsObjectValid(oPlayer)) {
+    //    if (GetIsDM(oPlayer)) {
+    //        NWNX_Chat_SendMessage(4, "(Gruppe): " + sMessage, oPc, oPlayer);
+    //    }
+    //    oPlayer = GetNextPC();
+    //}
   }
+}
 
-  sQuery = "INSERT INTO Chat (name, charname, text, datetime) VALUES (?, ?, ?, ?)";
-  if (NWNX_SQL_PrepareQuery(sQuery)) {
-    NWNX_SQL_PreparedString(0, sAccountName);
-    NWNX_SQL_PreparedString(1, sName);
-    if (sFirstChar == ":" && sSecondChar == "1") {
-      NWNX_SQL_PreparedString(2, "(" + GetName(GetLocalObject(oPc, "dmspeak1")) + ")" + sMessage);
-    } else if (sFirstChar == ":" && sSecondChar == "2") {
-      NWNX_SQL_PreparedString(2, "(" + GetName(GetLocalObject(oPc, "dmspeak2")) + ")" + sMessage);
-    } else if (sFirstChar == ":" && sSecondChar == "3") {
-      NWNX_SQL_PreparedString(2, "(" + GetName(GetLocalObject(oPc, "dmspeak3")) + ")" + sMessage);
-    } else if (sFirstChar == ":" && sSecondChar == "4") {
-      NWNX_SQL_PreparedString(2, "(" + GetName(GetLocalObject(oPc, "dmspeak4")) + ")" + sMessage);
-    } else if (sFirstChar == ":" && sSecondChar == "5") {
-      NWNX_SQL_PreparedString(2, "(" + GetName(GetLocalObject(oPc, "dmspeak5")) + ")" + sMessage);
-    } else {
-      // Mark group chat, and DM chat
-      if (iChatVolume == 5) {
-        sMessage = "//(Gruppe): " + sMessage;
-      }
-      NWNX_SQL_PreparedString(2, sMessage);
-
+sQuery = "INSERT INTO Chat (name, charname, text, datetime) VALUES (?, ?, ?, ?)";
+if (NWNX_SQL_PrepareQuery(sQuery)) {
+  NWNX_SQL_PreparedString(0, sAccountName);
+  NWNX_SQL_PreparedString(1, sName);
+  if (sFirstChar == ":" && sSecondChar == "1") {
+    NWNX_SQL_PreparedString(2, "(" + GetName(GetLocalObject(oPc, "dmspeak1")) + ")" + sMessage);
+  } else if (sFirstChar == ":" && sSecondChar == "2") {
+    NWNX_SQL_PreparedString(2, "(" + GetName(GetLocalObject(oPc, "dmspeak2")) + ")" + sMessage);
+  } else if (sFirstChar == ":" && sSecondChar == "3") {
+    NWNX_SQL_PreparedString(2, "(" + GetName(GetLocalObject(oPc, "dmspeak3")) + ")" + sMessage);
+  } else if (sFirstChar == ":" && sSecondChar == "4") {
+    NWNX_SQL_PreparedString(2, "(" + GetName(GetLocalObject(oPc, "dmspeak4")) + ")" + sMessage);
+  } else if (sFirstChar == ":" && sSecondChar == "5") {
+    NWNX_SQL_PreparedString(2, "(" + GetName(GetLocalObject(oPc, "dmspeak5")) + ")" + sMessage);
+  } else {
+    // Mark group chat, and DM chat
+    if (iChatVolume == 5) {
+      sMessage = "//(Gruppe): " + sMessage;
     }
-    NWNX_SQL_PreparedString(3, IntToString(NWNX_Time_GetTimeStamp()));
-    NWNX_SQL_ExecutePreparedQuery();
+    NWNX_SQL_PreparedString(2, sMessage);
+
   }
+  NWNX_SQL_PreparedString(3, IntToString(NWNX_Time_GetTimeStamp()));
+  NWNX_SQL_ExecutePreparedQuery();
+}
 }
