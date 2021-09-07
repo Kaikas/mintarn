@@ -27,7 +27,7 @@
   "DescIdentified": {
     "type": "cexolocstring",
     "value": {
-      "0": "Ziel anvisieren dann mit /changename name den neuen Namen eingeben."
+      "0": "Ziel anvisieren dann mit /changedesc beschreibung die neue Beschreibung eingeben."
     }
   },
   "Description": {
