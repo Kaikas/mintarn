@@ -104,7 +104,6 @@ void Delete() {
 }
 
 void SpawnTraps() {
-  SendMessageToPC(oPc, "Debug: Traps placed.");
   object oObject = GetFirstObjectInArea(OBJECT_SELF);
   while(GetIsObjectValid(oObject)) {
     if(GetTag(oObject) == "TRAP") {
@@ -112,6 +111,7 @@ void SpawnTraps() {
     }
     oObject = GetNextObjectInArea(OBJECT_SELF);
   }
+  oObject = GetFirstObjectInArea(OBJECT_SELF);
   while(GetIsObjectValid(oObject)) {
     if(GetTag(oObject) == "FALLE_KLINGE1") {
       CreateTrapAtLocation(50, GetLocation(GetNearestObjectByTag("FALLE_KLINGE1")), 1.0f, "TRAP");
