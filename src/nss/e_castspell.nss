@@ -1,3 +1,6 @@
+#include "nwnx_events"
+#include "nwnx_player"
+
 void SpellFailureForBards(object oPc, int SpellID) {
   int iBardLevel = GetLevelByClass(CLASS_TYPE_BARD, oPc);
   int iWizardLevel = GetLevelByClass(CLASS_TYPE_WIZARD, oPc);
@@ -9,5 +12,6 @@ void SpellFailureForBards(object oPc, int SpellID) {
 }
 
 void main() {
-  SpellFailureForBards(OBJECT_SELF);
+  int iSpellID = StringToInt(NWNX_Events_GetEventData("SPELL_ID"));
+  SpellFailureForBards(OBJECT_SELF, iSpellID);
 }
