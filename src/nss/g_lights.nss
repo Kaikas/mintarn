@@ -26,10 +26,10 @@ void CreateLightsAtWaypoints() {
 // Turn on a single light source.
 void TurnOnLight(object oLight) {
   if (iNewSystem) {
-    int lighttype = "dl_blue_12";
-    if (GetLocalInt(oLight, "lighttype") != 0) lighttype = GetLocalInt(oLight, "lighttype");
+    string lighttype = "dl_blue_12";
+    if (GetLocalString(oLight, "lighttype") != "") lighttype = GetLocalString(oLight, "lighttype");
     object oTarget = GetNearestObjectByTag("WP_LIGHT", oLight);
-    oLightSource = CreateObject(OBJECT_TYPE_PLACEABLE, lighttype, GetLocation(oTarget), FALSE, "NEW_LIGHT");
+    object oLightSource = CreateObject(OBJECT_TYPE_PLACEABLE, lighttype, GetLocation(oTarget), FALSE, "NEW_LIGHT");
   } else {
     SetLocalInt(oLight, "light", 1);
 
