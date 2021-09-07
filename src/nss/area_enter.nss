@@ -7,11 +7,12 @@ string sAccountName = GetPCPlayerName(oPc);
 string sName = GetName(oPc);
 object oModule = GetModule();
 string sQuery;
+object oArea = OBJECT_SELF;
 
 void Freihafen() {
-  if (GetTag(OBJECT_SELF) == "AREA_Freihafen") {
+  if (GetTag(oArea) == "AREA_Freihafen") {
     // Make area visible
-    ExploreAreaForPlayer(OBJECT_SELF, oPc);
+    ExploreAreaForPlayer(oArea, oPc);
     // Anfänger Quest
     sQuery = "SELECT * FROM QuestStatus WHERE name=? AND charname=? AND quest=?";
     if (NWNX_SQL_PrepareQuery(sQuery)) {
@@ -76,14 +77,14 @@ void Weather() {
 
 void Nether() {
   // Nether
-  if (GetTag(OBJECT_SELF) == "AREA_Nether") {
+  if (GetTag(oArea) == "AREA_Nether") {
     string sMessage = "Ihr seid gestorben. Wenn ihr betet könnte sich ein Gott eurer annehmen. (( Gebt /beten ein. ))";
     SendMessageToPC(oPc, sMessage);
   }
 }
 
 void Delete() {
-  object oObject = GetFirstObjectInArea(OBJECT_SELF);
+  object oObject = GetFirstObjectInArea(oArea);
   string sFirstChars;
   while(GetIsObjectValid(oObject)) {
     sFirstChars = GetSubString(GetTag(oObject), 0, 6);
@@ -99,26 +100,26 @@ void Delete() {
     if (sFirstChars == "CHEST_") {
       DestroyObject(oObject);
     }
-    oObject = GetNextObjectInArea(OBJECT_SELF);
+    oObject = GetNextObjectInArea(oArea);
   }
 }
 
 void SpawnTraps() {
-  object oObject = GetFirstObjectInArea(OBJECT_SELF);
+  object oObject = GetFirstObjectInArea(oArea);
   while(GetIsObjectValid(oObject)) {
     if(GetTag(oObject) == "TRAP") {
       DestroyObject(oObject);
     }
-    oObject = GetNextObjectInArea(OBJECT_SELF);
+    oObject = GetNextObjectInArea(oArea);
   }
-  oObject = GetFirstObjectInArea(OBJECT_SELF);
+  oObject = GetFirstObjectInArea(oArea);
   while(GetIsObjectValid(oObject)) {
     if(GetTag(oObject) == "FALLE_KLINGE1") {
       // Schwache Klingendfalle=50, location, size=1.0f, TAG=TRAP
       CreateTrapAtLocation(50, GetLocation(oObject), 1.0f, "TRAP");
       SendMessageToPC(oPc, "Debug: Trap placed.");
     }
-    oObject = GetNextObjectInArea(OBJECT_SELF);
+    oObject = GetNextObjectInArea(oArea);
   }
 }
 
@@ -126,7 +127,7 @@ void SpawnRessources() {
   // Create new ressource
   sQuery = "SELECT * FROM Ressources WHERE area=?";
   if (NWNX_SQL_PrepareQuery(sQuery)) {
-    NWNX_SQL_PreparedString(0, GetTag(OBJECT_SELF));
+    NWNX_SQL_PreparedString(0, GetTag(oArea));
     NWNX_SQL_ExecutePreparedQuery();
 
     vector vPosition;
@@ -144,7 +145,7 @@ void SpawnRessources() {
 
       int iRand = Random(100);
       int iRandRessource;
-      location locTarget = Location(OBJECT_SELF, vPosition, fFacing);
+      location locTarget = Location(oArea, vPosition, fFacing);
       if (iRand < 90 && iRand > 30) {
         // Tier 1
         iRandRessource = Random(5);
@@ -183,7 +184,7 @@ void SpawnMobs() {
   // Create new mob/boss
   sQuery = "SELECT * FROM Encounter WHERE area=?";
   if (NWNX_SQL_PrepareQuery(sQuery)) {
-    NWNX_SQL_PreparedString(0, GetTag(OBJECT_SELF));
+    NWNX_SQL_PreparedString(0, GetTag(oArea));
     NWNX_SQL_ExecutePreparedQuery();
 
     vector vPosition;
@@ -199,7 +200,7 @@ void SpawnMobs() {
       fFacing = StringToFloat(NWNX_SQL_ReadDataInActiveRow(5));
       sType = NWNX_SQL_ReadDataInActiveRow(6);
       int iChance = StringToInt(NWNX_SQL_ReadDataInActiveRow(7));
-      location locTarget = Location(OBJECT_SELF, vPosition, fFacing);
+      location locTarget = Location(oArea, vPosition, fFacing);
       if (Random(100) + 1 > 100 - iChance) {
         object oCreature = CreateObject(OBJECT_TYPE_CREATURE, sType, locTarget);
         //SendMessageToPC(oPc, "DEBUG: platziere Gegner");
@@ -213,7 +214,7 @@ void SpawnChests() {
   // Create new chests
   sQuery = "SELECT * FROM Chests WHERE area=?";
   if (NWNX_SQL_PrepareQuery(sQuery)) {
-    NWNX_SQL_PreparedString(0, GetTag(OBJECT_SELF));
+    NWNX_SQL_PreparedString(0, GetTag(oArea));
     NWNX_SQL_ExecutePreparedQuery();
     vector vPosition;
     float fFacing;
@@ -226,7 +227,7 @@ void SpawnChests() {
       fFacing = StringToFloat(NWNX_SQL_ReadDataInActiveRow(5));
       string sTier = NWNX_SQL_ReadDataInActiveRow(6);
 
-      location locTarget = Location(OBJECT_SELF, vPosition, fFacing);
+      location locTarget = Location(oArea, vPosition, fFacing);
       if (sTier == "1") {
         if (Random(50) == 0) {
           object oChest = CreateObject(OBJECT_TYPE_PLACEABLE, "kiste", locTarget);
@@ -235,9 +236,9 @@ void SpawnChests() {
           }
           int iTreasure = Random(115);
           if (iTreasure < 10) {
-            CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, 450 + Random(50));
+            CreateItemOnObject("sw_we_kupfer", oArea, 450 + Random(50));
           } else {
-            CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, 250 + Random(50));
+            CreateItemOnObject("sw_we_kupfer", oArea, 250 + Random(50));
           }
           if (iTreasure == 10) CreateItemOnObject("sw_re_amudex", oChest, 1);
           if (iTreasure == 11) CreateItemOnObject("sw_re_amudexg", oChest, 1);
