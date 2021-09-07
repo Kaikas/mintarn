@@ -200,8 +200,7 @@ int speakOOC(string sMessage) {
 }
 
 int banPlayer(string sMessage) {
-  string sBanCommand = GetSubString(sMessage, 0, 4);
-  if (sBanCommand == "/ban" && GetIsDM(oPc)) {
+  if (GetSubString(sMessage, 0, 5) == "/ban " && GetIsDM(oPc)) {
     SetPCChatVolume(TALKVOLUME_SILENT_TALK);
     string sBanPlayer = GetSubString(sMessage, 5, 1000);
     NWNX_Administration_AddBannedCDKey(sBanPlayer);
