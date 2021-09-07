@@ -104,7 +104,7 @@ void Delete() {
 }
 
 void SpawnTraps() {
-  // Create Traps
+  SendMessageToPC(oPc, "Debug: Traps placed.");
   object oObject = GetFirstObjectInArea(OBJECT_SELF);
   while(GetIsObjectValid(oObject)) {
     if(GetTag(oObject) == "TRAP") {
