@@ -468,6 +468,10 @@ void main() {
 
     NWNX_Events_SubscribeEvent("NWNX_ON_DM_PLAYERDM_LOGIN_BEFORE", "e_playerdm");
 
+    NWNX_Events_SubscribeEvent("NWNX_ON_CAST_SPELL_BEFORE", "e_castspell");
+    NWNX_Events_SubscribeEvent("NWNX_ON_CAST_SPELL_AFTER", "e_castspella");
+    
+
 
     // Lighting
     int iDawn = 7;
