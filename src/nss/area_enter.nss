@@ -114,7 +114,8 @@ void SpawnTraps() {
   oObject = GetFirstObjectInArea(OBJECT_SELF);
   while(GetIsObjectValid(oObject)) {
     if(GetTag(oObject) == "FALLE_KLINGE1") {
-      CreateTrapAtLocation(50, GetLocation(GetNearestObjectByTag("FALLE_KLINGE1")), 1.0f, "TRAP");
+      // Schwache Klingendfalle=50, location, size=1.0f, TAG=TRAP
+      CreateTrapAtLocation(50, GetLocation(oObject), 1.0f, "TRAP");
       SendMessageToPC(oPc, "Debug: Trap placed.");
     }
     oObject = GetNextObjectInArea(OBJECT_SELF);
