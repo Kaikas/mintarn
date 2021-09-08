@@ -35,6 +35,7 @@ void main() {
             CreateItemOnObject("sw_ro_onyx", oTarget, 1);
         }
         CreateItemOnObject(sItem, oTarget, iCount);
+        DelayCommand(2700.0, respawn(GetLocation(OBJECT_SELF), GetResRef(OBJECT_SELF), GetTag(OBJECT_SELF), GetArea(OBJECT_SELF)));
         DestroyObject(OBJECT_SELF);
     } else {
         SpeakString("Ihr müsst eine Spitzhacke in Händen halten um dies abzubauen.");

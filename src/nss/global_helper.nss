@@ -1,6 +1,5 @@
-// Global helper methods
-
 #include "x3_inc_string"
+#include "nwnx_time"
 
 // Checks if a player has an item with tag sItem
 int iHasItem(string sItem, object oPc) {
@@ -152,4 +151,12 @@ void SetCustomTokenEx(int iToken, string sValue)
     // Change the custom token variable and duplicate it.
     SetCustomToken(iToken, sValue);
     SetLocalString(GetModule(), "CUSTOM" + IntToString(iToken), sValue);
+}
+
+// Respawn the Ressource at his last location
+void respawn(location lLocation, string sResRef, string sTag, object oArea) {
+    // Check if we have already been respawned
+    if (GetLocalInt(oArea, "area_enter") > NWNX_Time_GetTimeStamp() - 2700) {
+        CreateObject(OBJECT_TYPE_PLACEABLE, sResRef, lLocation, FALSE, sTag);
+    }
 }
