@@ -16,13 +16,23 @@ int ChestArmourIsLightOrLess(object oPc) {
   return 1;
 }
 
+int HasNoShieldEquipped(object oPc) {
+  object oItem = GetItemInSlot(INVENTORY_SLOT_CHEST, oPc);
+  if(GetBaseItemType(oItem) == BASE_ITEM_LARGE_SHIELD ||
+      GetBaseItemType(oItem) == BASE_ITEM_SMALL_SHIELD ||
+      GetBaseItemType(oItem) == BASE_ITEM_TOWER_SHIELD) {
+      return 0;
+  }
+  return 1;
+}
+
 void SpellFailureForBards(object oPc, int iSpellID) {
   int iBardLevel = GetLevelByClass(CLASS_TYPE_BARD, oPc);
   int iWizardLevel = GetLevelByClass(CLASS_TYPE_WIZARD, oPc);
   int iSorcererLevel = GetLevelByClass(CLASS_TYPE_SORCERER, oPc);
   int iCharLevel = GetHitDice(oPc);
   if (iBardLevel > 0 && iWizardLevel == 0 && iSorcererLevel == 0) {
-    if (ChestArmourIsLightOrLess(oPc))  {
+    if (ChestArmourIsLightOrLess(oPc) && HasNoShieldEquipped(oPc)) {
       object oItem = GetItemInSlot(INVENTORY_SLOT_CARMOUR, oPc);
       if (!GetIsObjectValid(oItem)) return;
       int nModLevel = IP_CONST_ARCANE_SPELL_FAILURE_MINUS_50_PERCENT;
