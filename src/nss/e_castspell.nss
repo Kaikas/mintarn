@@ -49,6 +49,8 @@ void SpellFailureForBards(object oPc, int iSpellID) {
 }
 
 void main() {
+  object oPc = OBJECT_SELF;
+  SendMessageToPC(oPc, "DEBUG: Cast On Spell Hook");
   int iSpellID = StringToInt(NWNX_Events_GetEventData("SPELL_ID"));
-  SpellFailureForBards(OBJECT_SELF, iSpellID);
+  SpellFailureForBards(oPc, iSpellID);
 }
