@@ -38,8 +38,14 @@ void SpellFailureForBards(object oPc, int iSpellID) {
       int nModLevel = IP_CONST_ARCANE_SPELL_FAILURE_MINUS_50_PERCENT;
       itemproperty ipAdd = ItemPropertyArcaneSpellFailure(nModLevel);
       IPSafeAddItemProperty(oItem, ipAdd);
+      SendMessageToPC(oPc, "Set ASF to -50 on Hide.");
+    } else {
+      SendMessageToPC(oPc, "Something with the AC went wrong");
     }
+  } else {
+    SendMessageToPC(oPc, "Something with the Bard Levels went wrong");
   }
+
 }
 
 void main() {
