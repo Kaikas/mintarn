@@ -51,6 +51,5 @@ void SpellFailureForBards(object oPc, int iSpellID) {
 void main() {
   object oPc = OBJECT_SELF;
   int iSpellID = StringToInt(NWNX_Events_GetEventData("SPELL_ID"));
-  int iSpellID = 0;
   SpellFailureForBards(oPc, iSpellID);
 }
