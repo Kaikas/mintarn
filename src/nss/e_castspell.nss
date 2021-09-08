@@ -1,6 +1,7 @@
 #include "x2_inc_itemprop"
 #include "nwnx_events"
 #include "nwnx_player"
+#include "x3_inc_skin"
 
 int ChestArmourIsLightOrLess(object oPc) {
   object oItem = GetItemInSlot(INVENTORY_SLOT_CHEST, oPc);
@@ -27,26 +28,22 @@ int HasNoShieldEquipped(object oPc) {
 }
 
 void SpellFailureForBards(object oPc, int iSpellID) {
-  SendMessageToPC(oPc, "DEBUG: Cast On Spell Hook");
   int iBardLevel = GetLevelByClass(CLASS_TYPE_BARD, oPc);
   int iWizardLevel = GetLevelByClass(CLASS_TYPE_WIZARD, oPc);
   int iSorcererLevel = GetLevelByClass(CLASS_TYPE_SORCERER, oPc);
   int iCharLevel = GetHitDice(oPc);
   if (iBardLevel > 0 && iWizardLevel == 0 && iSorcererLevel == 0) {
     if (ChestArmourIsLightOrLess(oPc) && HasNoShieldEquipped(oPc)) {
-      object oItem = GetItemInSlot(INVENTORY_SLOT_CARMOUR, oPc);
-      if (!GetIsObjectValid(oItem)) return;
+      object oItem = SKIN_SupportGetSkin(oPc);
+      if (!GetIsObjectValid(oItem)) {
+        SendMessageToPC(oPc, "FAIL: No Hide equipped");
+        return;
+      }
       int nModLevel = IP_CONST_ARCANE_SPELL_FAILURE_MINUS_50_PERCENT;
       itemproperty ipAdd = ItemPropertyArcaneSpellFailure(nModLevel);
       IPSafeAddItemProperty(oItem, ipAdd);
-      SendMessageToPC(oPc, "DEBUG: Set ASF to -50 on Hide.");
-    } else {
-      SendMessageToPC(oPc, "DEBUG: AC too high or shield.");
     }
-  } else {
-    SendMessageToPC(oPc, "DEBUG: Not a pure bard.");
   }
-  SendMessageToPC(oPc, "DEBUG: Cast On Spell Hook 2");
 }
 
 void main() {
