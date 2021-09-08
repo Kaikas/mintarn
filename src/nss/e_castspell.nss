@@ -18,9 +18,9 @@ int ChestArmourIsLightOrLess(object oPc) {
 
 int HasNoShieldEquipped(object oPc) {
   object oItem = GetItemInSlot(INVENTORY_SLOT_CHEST, oPc);
-  if(GetBaseItemType(oItem) == BASE_ITEM_LARGE_SHIELD ||
-      GetBaseItemType(oItem) == BASE_ITEM_SMALL_SHIELD ||
-      GetBaseItemType(oItem) == BASE_ITEM_TOWER_SHIELD) {
+  if(GetBaseItemType(oItem) == BASE_ITEM_LARGESHIELD ||
+      GetBaseItemType(oItem) == BASE_ITEM_SMALLSHIELD ||
+      GetBaseItemType(oItem) == BASE_ITEM_TOWERSHIELD) {
       return 0;
   }
   return 1;
