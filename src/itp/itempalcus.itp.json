@@ -4645,6 +4645,17 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
+                      "value": "Creature Item: Dretch"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_ru_troll002"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
                       "value": "Creature Item: Düsterwolf"
                     },
                     "RESREF": {
@@ -4661,6 +4672,17 @@
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_ru_eber"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Creature Item: Glabrezu"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_ru_troll001"
                     }
                   },
                   {
@@ -8140,7 +8162,7 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "SW Beschreibung"
+                      "value": "SW Beschreibung ändern"
                     },
                     "RESREF": {
                       "type": "resref",

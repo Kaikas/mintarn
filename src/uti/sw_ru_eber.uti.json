@@ -18,7 +18,7 @@
   },
   "Cost": {
     "type": "dword",
-    "value": 2250
+    "value": 1000
   },
   "Cursed": {
     "type": "byte",
@@ -82,11 +82,11 @@
         },
         "PropertyName": {
           "type": "word",
-          "value": 12
+          "value": 26
         },
         "Subtype": {
           "type": "word",
-          "value": 6
+          "value": 0
         }
       }
     ]

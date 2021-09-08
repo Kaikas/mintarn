@@ -11,6 +11,13 @@
         "__struct_id": 6,
         "Area_Name": {
           "type": "resref",
+          "value": "a_goblincave"
+        }
+      },
+      {
+        "__struct_id": 6,
+        "Area_Name": {
+          "type": "resref",
           "value": "alchemist"
         }
       },
@@ -26,13 +33,6 @@
         "Area_Name": {
           "type": "resref",
           "value": "aufsee"
-        }
-      },
-      {
-        "__struct_id": 6,
-        "Area_Name": {
-          "type": "resref",
-          "value": "a_goblincave"
         }
       },
       {
@@ -172,6 +172,13 @@
         "__struct_id": 6,
         "Area_Name": {
           "type": "resref",
+          "value": "testdungeon"
+        }
+      },
+      {
+        "__struct_id": 6,
+        "Area_Name": {
+          "type": "resref",
           "value": "trollhoehle"
         }
       },
@@ -229,13 +236,6 @@
         "Area_Name": {
           "type": "resref",
           "value": "zumrettendenufer"
-        }
-      },
-      {
-        "__struct_id": 6,
-        "Area_Name": {
-          "type": "resref",
-          "value": "testdungeon"
         }
       }
     ]

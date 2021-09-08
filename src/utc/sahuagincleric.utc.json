@@ -246,6 +246,21 @@
               "__struct_id": 3,
               "Spell": {
                 "type": "word",
+                "value": 434
+              },
+              "SpellFlags": {
+                "type": "byte",
+                "value": 1
+              },
+              "SpellMetaMagic": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 3,
+              "Spell": {
+                "type": "word",
                 "value": 91
               },
               "SpellFlags": {
@@ -277,21 +292,6 @@
               "Spell": {
                 "type": "word",
                 "value": 147
-              },
-              "SpellFlags": {
-                "type": "byte",
-                "value": 1
-              },
-              "SpellMetaMagic": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 3,
-              "Spell": {
-                "type": "word",
-                "value": 434
               },
               "SpellFlags": {
                 "type": "byte",
@@ -689,7 +689,7 @@
   },
   "Race": {
     "type": "byte",
-    "value": 8
+    "value": 15
   },
   "refbonus": {
     "type": "short",

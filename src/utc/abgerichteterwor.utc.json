@@ -14,7 +14,7 @@
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 3.0
+    "value": 4.0
   },
   "ClassList": {
     "type": "list",
@@ -186,7 +186,7 @@
   },
   "Race": {
     "type": "byte",
-    "value": 8
+    "value": 9
   },
   "refbonus": {
     "type": "short",
