@@ -15,7 +15,6 @@ void SpellFailureForBards(object oPc, int SpellID) {
       if (GetItemPropertyType(ipLoop) == IP_CONST_ARCANE_SPELL_FAILURE_MINUS_50_PERCENT) {
         RemoveItemProperty(oItem, ipLoop);
       }
-      SendMessageToPC(oPc, IntToString(GetItemPropertyType(ipLoop)));
       ipLoop=GetNextItemProperty(oItem);
     }
   }
