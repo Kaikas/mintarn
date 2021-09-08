@@ -25,14 +25,17 @@ void CreateLightsAtWaypoints() {
 
 // Turn on a single light source.
 void TurnOnLight(object oLight) {
+  SetLocalInt(oLight, "light", 1);
+
+  // Play light animation
+  AssignCommand(oLight, ActionPlayAnimation(ANIMATION_PLACEABLE_ACTIVATE));
+
   if (iNewSystem) {
-    string lighttype = "dl_blue_12";
+    string lighttype = "dl_brown_09";
     if (GetLocalString(oLight, "lighttype") != "") lighttype = GetLocalString(oLight, "lighttype");
     object oTarget = GetNearestObjectByTag("WP_LIGHT", oLight);
-    object oLightSource = CreateObject(OBJECT_TYPE_PLACEABLE, lighttype, GetLocation(oTarget), FALSE, "NEW_LIGHT");
+    object oLightSource = CreateObject(OBJECT_TYPE_PLACEABLE, "dl_brown_09", GetLocation(oTarget), FALSE, "NEW_LIGHT");
   } else {
-    SetLocalInt(oLight, "light", 1);
-
     // Determine lighting effect type
     int lighttype = VFX_DUR_LIGHT_YELLOW_15;
     if (GetLocalInt(oLight, "lighttype") != 0) lighttype = GetLocalInt(oLight, "lighttype");
@@ -40,20 +43,20 @@ void TurnOnLight(object oLight) {
     // Apply light effect to closest INVISIBLE_LIGHT object
     object oTarget = GetNearestObjectByTag("INVISIBLE_LIGHT", oLight);
     ApplyEffectToObject(DURATION_TYPE_PERMANENT, EffectVisualEffect(lighttype), oTarget);
-
-    // Play light animation
-    AssignCommand(oLight, ActionPlayAnimation(ANIMATION_PLACEABLE_ACTIVATE));
   }
 }
 
 // Turn off a single light source.
 void TurnOffLight(object oLight) {
+  SetLocalInt(oLight, "light", 0);
+
+  // Play light animation
+  AssignCommand(oLight, ActionPlayAnimation(ANIMATION_PLACEABLE_DEACTIVATE));
+
   if (iNewSystem) {
     object oTarget = GetNearestObjectByTag("NEW_LIGHT", oLight);
     DestroyObject(oTarget);
   } else {
-    SetLocalInt(oLight, "light", 0);
-
     // Remove light effects from closes INVISIBLE_LIGHT object
     object oTarget = GetNearestObjectByTag("INVISIBLE_LIGHT", oLight);
     effect eLoop=GetFirstEffect(oTarget);
@@ -61,9 +64,6 @@ void TurnOffLight(object oLight) {
       RemoveEffect(oTarget, eLoop);
       eLoop=GetNextEffect(oTarget);
     }
-
-    // Play light animation
-    AssignCommand(oLight, ActionPlayAnimation(ANIMATION_PLACEABLE_DEACTIVATE));
  }
 }
 
@@ -76,14 +76,14 @@ void ToggleLight(object oLight) {
   }
 }
 
-/* 
+/*
    Manipulates lights with specific tag.
    sTag is the tag of all objects to be manipulated
    sType is the type of action to be done:
 0: off
 1: on
 2: toggle
- */  
+ */
 void ManipulateAllLightsWithTag(string sTag, int iType) {
   int i = 0;
   object oLight = GetObjectByTag(sTag, 0);

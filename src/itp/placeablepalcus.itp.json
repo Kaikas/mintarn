@@ -1275,6 +1275,1199 @@
                 "type": "byte",
                 "value": 190
               },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_blue_01"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_blue_01"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_blue_03"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_blue_03"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_blue_06"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_blue_06"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_blue_09"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_blue_09"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_blue_12"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_blue_12"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_blue_15"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_blue_15"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_blue_d_01"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_blue_d_01"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_blue_d_03"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_blue_d_03"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_blue_d_06"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_blue_d_06"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_blue_d_09"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_blue_d_09"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_blue_d_12"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_blue_d_12"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_blue_d_15"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_blue_d_15"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_blue_l_01"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_blue_l_01"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_blue_l_03"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_blue_l_03"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_blue_l_06"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_blue_l_06"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_blue_l_09"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_blue_l_09"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_blue_l_12"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_blue_l_12"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_blue_l_15"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_blue_l_15"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_brown_01"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_brown_01"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_brown_03"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_brown_03"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_brown_06"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_brown_06"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_brown_09"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_brown_09"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_brown_12"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_brown_12"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_brown_15"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_brown_15"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_cyan_01"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_cyan_01"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_cyan_03"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_cyan_03"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_cyan_06"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_cyan_06"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_cyan_09"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_cyan_09"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_cyan_12"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_cyan_12"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_cyan_15"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_cyan_15"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_green_01"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_green_01"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_green_03"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_green_03"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_green_06"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_green_06"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_green_09"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_green_09"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_green_12"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_green_12"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_green_15"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_green_15"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_green_d_01"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_green_d_01"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_green_d_03"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_green_d_03"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_green_d_06"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_green_d_06"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_green_d_09"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_green_d_09"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_green_d_12"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_green_d_12"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_green_d_15"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_green_d_15"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_green_l_01"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_green_l_01"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_green_l_03"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_green_l_03"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_green_l_06"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_green_l_06"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_green_l_09"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_green_l_09"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_green_l_12"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_green_l_12"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_green_l_15"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_green_l_15"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_magenta_01"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_magenta_01"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_magenta_03"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_magenta_03"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_magenta_06"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_magenta_06"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_magenta_09"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_magenta_09"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_magenta_12"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_magenta_12"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_magenta_15"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_magenta_15"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_orange_01"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_orange_01"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_orange_03"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_orange_03"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_orange_06"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_orange_06"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_orange_09"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_orange_09"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_orange_12"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_orange_12"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_orange_15"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_orange_15"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_purple_01"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_purple_01"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_purple_03"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_purple_03"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_purple_06"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_purple_06"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_purple_09"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_purple_09"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_purple_12"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_purple_12"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_purple_15"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_purple_15"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_red_01"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_red_01"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_red_03"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_red_03"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_red_06"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_red_06"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_red_09"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_red_09"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_red_12"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_red_12"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_red_15"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_red_15"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_red_d_01"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_red_d_01"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_red_d_03"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_red_d_03"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_red_d_06"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_red_d_06"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_red_d_09"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_red_d_09"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_red_d_12"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_red_d_12"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_red_d_15"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_red_d_15"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_red_l_01"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_red_l_01"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_red_l_03"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_red_l_03"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_red_l_06"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_red_l_06"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_red_l_09"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_red_l_09"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_red_l_12"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_red_l_12"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_red_l_15"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_red_l_15"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_white_01"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_white_01"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_white_03"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_white_03"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_white_06"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_white_06"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_white_09"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_white_09"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_white_12"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_white_12"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_white_15"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_white_15"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_yellow_01"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_yellow_01"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_yellow_03"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_yellow_03"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_yellow_06"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_yellow_06"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_yellow_09"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_yellow_09"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_yellow_12"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_yellow_12"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_yellow_15"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_yellow_15"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_yellow_d_01"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_yellow_d_01"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_yellow_d_03"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_yellow_d_03"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_yellow_d_06"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_yellow_d_06"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_yellow_d_09"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_yellow_d_09"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_yellow_d_12"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_yellow_d_12"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_yellow_d_15"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_yellow_d_15"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_yellow_l_01"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_yellow_l_01"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_yellow_l_03"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_yellow_l_03"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_yellow_l_06"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_yellow_l_06"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_yellow_l_09"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_yellow_l_09"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_yellow_l_12"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_yellow_l_12"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "dl_yellow_l_15"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dl_yellow_l_15"
+                    }
+                  }
+                ]
+              },
               "STRREF": {
                 "type": "dword",
                 "value": 16777446
