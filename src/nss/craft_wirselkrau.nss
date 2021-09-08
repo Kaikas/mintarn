@@ -1,3 +1,5 @@
+#include "global_helper"
+
 // Gibt dem Spieler crafting items
 void main() {
     object oPc = GetLastUsedBy();
