@@ -7,6 +7,8 @@ void SpellFailureForBards(object oPc, int SpellID) {
   int iSorcererLevel = GetLevelByClass(CLASS_TYPE_SORCERER, oPc);
   int iCharLevel = GetHitDice(oPc);
   if (iBardLevel > 0 && iWizardLevel == 0 && iSorcererLevel == 0) {
+    // Get AC of Chest armour
+    object oArmour = GetItemInSlot(INVENTORY_SLOT_CHEST, oPc);
     object oItem = GetItemInSlot(INVENTORY_SLOT_CARMOUR, oPc);
     itemproperty ipLoop=GetFirstItemProperty(oItem);
     while (GetIsItemPropertyValid(ipLoop)) {
