@@ -7,7 +7,15 @@ void SpellFailureForBards(object oPc, int SpellID) {
   int iSorcererLevel = GetLevelByClass(CLASS_TYPE_SORCERER, oPc);
   int iCharLevel = GetHitDice(oPc);
   if (iBardLevel > 0 && iWizardLevel == 0 && iSorcererLevel == 0) {
-    
+    object oItem = GetItemInSlot(INVENTORY_SLOT_CARMOUR, oPc);
+    itemproperty ipLoop=GetFirstItemProperty(oItem);
+    while (GetIsItemPropertyValid(ipLoop)) {
+      if (GetItemPropertyType(ipLoop) == IP_CONST_ARCANE_SPELL_FAILURE_MINUS_50_PERCENT) {
+        RemoveItemProperty(oItem, ipLoop);
+      }
+      SendMessageToPC(oPc, IntToString(GetItemPropertyType(ipLoop)));
+      ipLoop=GetNextItemProperty(oItem);
+    }
   }
 }
 
