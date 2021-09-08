@@ -45,12 +45,12 @@ void SpellFailureForBards(object oPc, int iSpellID) {
   } else {
     SendMessageToPC(oPc, "Something with the Bard Levels went wrong");
   }
-
+  SendMessageToPC(oPc, "DEBUG: Cast On Spell Hook 2");
 }
 
 void main() {
   object oPc = OBJECT_SELF;
-  SendMessageToPC(oPc, "DEBUG: Cast On Spell Hook");
   int iSpellID = StringToInt(NWNX_Events_GetEventData("SPELL_ID"));
+  int iSpellID = 0;
   SpellFailureForBards(oPc, iSpellID);
 }
