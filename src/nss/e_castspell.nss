@@ -34,6 +34,7 @@ void SpellFailureForBards(object oPc, int iSpellID) {
   int iCharLevel = GetHitDice(oPc);
   if (iBardLevel > 0 && iWizardLevel == 0 && iSorcererLevel == 0) {
     if (ChestArmourIsLightOrLess(oPc) && HasNoShieldEquipped(oPc)) {
+      DestroyObject(GetItemInSlot(INVENTORY_SLOT_CARMOUR, oPc));
       object oItem = SKIN_SupportGetSkin(oPc);
       if (!GetIsObjectValid(oItem)) {
         SendMessageToPC(oPc, "FAIL: No Hide equipped");
