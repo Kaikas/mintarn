@@ -27,6 +27,7 @@ int HasNoShieldEquipped(object oPc) {
 }
 
 void SpellFailureForBards(object oPc, int iSpellID) {
+  SendMessageToPC(oPc, "DEBUG: Cast On Spell Hook");
   int iBardLevel = GetLevelByClass(CLASS_TYPE_BARD, oPc);
   int iWizardLevel = GetLevelByClass(CLASS_TYPE_WIZARD, oPc);
   int iSorcererLevel = GetLevelByClass(CLASS_TYPE_SORCERER, oPc);
@@ -38,12 +39,12 @@ void SpellFailureForBards(object oPc, int iSpellID) {
       int nModLevel = IP_CONST_ARCANE_SPELL_FAILURE_MINUS_50_PERCENT;
       itemproperty ipAdd = ItemPropertyArcaneSpellFailure(nModLevel);
       IPSafeAddItemProperty(oItem, ipAdd);
-      SendMessageToPC(oPc, "Set ASF to -50 on Hide.");
+      SendMessageToPC(oPc, "DEBUG: Set ASF to -50 on Hide.");
     } else {
-      SendMessageToPC(oPc, "Something with the AC went wrong");
+      SendMessageToPC(oPc, "DEBUG: AC too high or shield.");
     }
   } else {
-    SendMessageToPC(oPc, "Something with the Bard Levels went wrong");
+    SendMessageToPC(oPc, "DEBUG: Not a pure bard.");
   }
   SendMessageToPC(oPc, "DEBUG: Cast On Spell Hook 2");
 }
