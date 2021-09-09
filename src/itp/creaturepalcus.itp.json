@@ -411,6 +411,25 @@
                           "__struct_id": 0,
                           "CR": {
                             "type": "float",
+                            "value": 9.0
+                          },
+                          "FACTION": {
+                            "type": "cexostring",
+                            "value": "Hostile"
+                          },
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Baubau"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "babau"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "CR": {
+                            "type": "float",
                             "value": 5.0
                           },
                           "FACTION": {
@@ -423,7 +442,7 @@
                           },
                           "RESREF": {
                             "type": "resref",
-                            "value": "glabrezu001"
+                            "value": "dretch"
                           }
                         },
                         {
@@ -785,6 +804,101 @@
                           "RESREF": {
                             "type": "resref",
                             "value": "oger"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "CR": {
+                            "type": "float",
+                            "value": 8.0
+                          },
+                          "FACTION": {
+                            "type": "cexostring",
+                            "value": "Hostile"
+                          },
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Ork Anführer"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "orkanfuehrer"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "CR": {
+                            "type": "float",
+                            "value": 7.0
+                          },
+                          "FACTION": {
+                            "type": "cexostring",
+                            "value": "Hostile"
+                          },
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Ork Berserker"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "orkkrieger003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "CR": {
+                            "type": "float",
+                            "value": 5.0
+                          },
+                          "FACTION": {
+                            "type": "cexostring",
+                            "value": "Hostile"
+                          },
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Ork Krieger"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "orkkrieger"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "CR": {
+                            "type": "float",
+                            "value": 7.0
+                          },
+                          "FACTION": {
+                            "type": "cexostring",
+                            "value": "Hostile"
+                          },
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Ork Schamane"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "orkkrieger004"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "CR": {
+                            "type": "float",
+                            "value": 5.0
+                          },
+                          "FACTION": {
+                            "type": "cexostring",
+                            "value": "Hostile"
+                          },
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Ork Schütze"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "orkkrieger001"
                           }
                         },
                         {
