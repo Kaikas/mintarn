@@ -94,7 +94,9 @@ void Delete() {
     }
     // Mobs and bosses
     if (sFirstChars == "ENEMY_") {
-      DestroyObject(oObject);
+      if (GetLocalInt(oObject, "id") != 0) {
+        DestroyObject(oObject);
+      }
     }
     // Chests
     if (sFirstChars == "CHEST_") {
