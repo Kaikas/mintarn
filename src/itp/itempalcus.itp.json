@@ -6232,6 +6232,17 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
+                      "value": "Creature Item: Babau"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_wa_wolf001"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
                       "value": "Creature Item: Düsterwolf"
                     },
                     "RESREF": {
