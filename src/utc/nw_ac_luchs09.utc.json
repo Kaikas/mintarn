@@ -14,7 +14,7 @@
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 5.0
+    "value": 6.0
   },
   "ClassList": {
     "type": "list",
@@ -27,7 +27,7 @@
         },
         "ClassLevel": {
           "type": "short",
-          "value": 8
+          "value": 9
         }
       }
     ]
@@ -50,7 +50,7 @@
   },
   "CurrentHitPoints": {
     "type": "short",
-    "value": 38
+    "value": 42
   },
   "DecayTime": {
     "type": "dword",
@@ -82,7 +82,7 @@
         "__struct_id": 65536,
         "EquippedRes": {
           "type": "resref",
-          "value": "nw_it_crewps005"
+          "value": "nw_it_crewps010"
         }
       }
     ]
@@ -131,7 +131,7 @@
   },
   "HitPoints": {
     "type": "short",
-    "value": 38
+    "value": 42
   },
   "Int": {
     "type": "byte",
@@ -163,7 +163,7 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 54
+    "value": 60
   },
   "NaturalAC": {
     "type": "byte",
@@ -531,7 +531,7 @@
   },
   "Str": {
     "type": "byte",
-    "value": 17
+    "value": 18
   },
   "Subrace": {
     "type": "cexostring",
@@ -539,7 +539,7 @@
   },
   "Tag": {
     "type": "cexostring",
-    "value": "NW_AC_LUCHS08"
+    "value": "NW_AC_LUCHS09"
   },
   "Tail_New": {
     "type": "dword",
@@ -551,7 +551,7 @@
   },
   "TemplateResRef": {
     "type": "resref",
-    "value": "c_ac_luchs008"
+    "value": "nw_ac_luchs09"
   },
   "WalkRate": {
     "type": "int",

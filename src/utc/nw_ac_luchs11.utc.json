@@ -14,7 +14,7 @@
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 12.0
+    "value": 7.0
   },
   "ClassList": {
     "type": "list",
@@ -27,7 +27,7 @@
         },
         "ClassLevel": {
           "type": "short",
-          "value": 18
+          "value": 11
         }
       }
     ]
@@ -38,7 +38,7 @@
   },
   "Con": {
     "type": "byte",
-    "value": 12
+    "value": 14
   },
   "Conversation": {
     "type": "resref",
@@ -50,7 +50,7 @@
   },
   "CurrentHitPoints": {
     "type": "short",
-    "value": 96
+    "value": 50
   },
   "DecayTime": {
     "type": "dword",
@@ -69,7 +69,7 @@
   },
   "Dex": {
     "type": "byte",
-    "value": 22
+    "value": 18
   },
   "Disarmable": {
     "type": "byte",
@@ -82,7 +82,7 @@
         "__struct_id": 65536,
         "EquippedRes": {
           "type": "resref",
-          "value": "nw_it_crewps012"
+          "value": "nw_it_crewps010"
         }
       }
     ]
@@ -131,7 +131,7 @@
   },
   "HitPoints": {
     "type": "short",
-    "value": 96
+    "value": 50
   },
   "Int": {
     "type": "byte",
@@ -163,11 +163,11 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 114
+    "value": 72
   },
   "NaturalAC": {
     "type": "byte",
-    "value": 7
+    "value": 5
   },
   "NoPermDeath": {
     "type": "byte",
@@ -302,7 +302,7 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 8
+          "value": 6
         }
       },
       {
@@ -379,7 +379,7 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 8
+          "value": 6
         }
       },
       {
@@ -531,7 +531,7 @@
   },
   "Str": {
     "type": "byte",
-    "value": 24
+    "value": 18
   },
   "Subrace": {
     "type": "cexostring",
@@ -539,7 +539,7 @@
   },
   "Tag": {
     "type": "cexostring",
-    "value": "NW_AC_LUCHS18"
+    "value": "NW_AC_LUCHS11"
   },
   "Tail_New": {
     "type": "dword",
@@ -551,7 +551,7 @@
   },
   "TemplateResRef": {
     "type": "resref",
-    "value": "c_ac_luchs018"
+    "value": "nw_ac_luchs11"
   },
   "WalkRate": {
     "type": "int",

@@ -14,7 +14,7 @@
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 11.0
+    "value": 12.0
   },
   "ClassList": {
     "type": "list",
@@ -27,7 +27,7 @@
         },
         "ClassLevel": {
           "type": "short",
-          "value": 16
+          "value": 17
         }
       }
     ]
@@ -50,7 +50,7 @@
   },
   "CurrentHitPoints": {
     "type": "short",
-    "value": 86
+    "value": 91
   },
   "DecayTime": {
     "type": "dword",
@@ -131,7 +131,7 @@
   },
   "HitPoints": {
     "type": "short",
-    "value": 86
+    "value": 91
   },
   "Int": {
     "type": "byte",
@@ -163,7 +163,7 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 102
+    "value": 108
   },
   "NaturalAC": {
     "type": "byte",
@@ -295,28 +295,14 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 2
+          "value": 3
         }
       },
       {
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 7
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 2
+          "value": 8
         }
       },
       {
@@ -330,7 +316,7 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 0
+          "value": 3
         }
       },
       {
@@ -379,7 +365,21 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 7
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 8
         }
       },
       {
@@ -539,7 +539,7 @@
   },
   "Tag": {
     "type": "cexostring",
-    "value": "NW_AC_LUCHS16"
+    "value": "NW_AC_LUCHS17"
   },
   "Tail_New": {
     "type": "dword",
@@ -551,7 +551,7 @@
   },
   "TemplateResRef": {
     "type": "resref",
-    "value": "c_ac_luchs016"
+    "value": "nw_ac_luchs17"
   },
   "WalkRate": {
     "type": "int",

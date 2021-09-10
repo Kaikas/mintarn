@@ -14,7 +14,7 @@
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 13.0
+    "value": 1.0
   },
   "ClassList": {
     "type": "list",
@@ -27,7 +27,7 @@
         },
         "ClassLevel": {
           "type": "short",
-          "value": 19
+          "value": 1
         }
       }
     ]
@@ -38,7 +38,7 @@
   },
   "Con": {
     "type": "byte",
-    "value": 12
+    "value": 14
   },
   "Conversation": {
     "type": "resref",
@@ -50,7 +50,7 @@
   },
   "CurrentHitPoints": {
     "type": "short",
-    "value": 101
+    "value": 10
   },
   "DecayTime": {
     "type": "dword",
@@ -69,7 +69,7 @@
   },
   "Dex": {
     "type": "byte",
-    "value": 22
+    "value": 14
   },
   "Disarmable": {
     "type": "byte",
@@ -82,7 +82,7 @@
         "__struct_id": 65536,
         "EquippedRes": {
           "type": "resref",
-          "value": "nw_it_crewps012"
+          "value": "nw_it_crewps002"
         }
       }
     ]
@@ -94,13 +94,6 @@
   "FeatList": {
     "type": "list",
     "value": [
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
-          "value": 206
-        }
-      },
       {
         "__struct_id": 1,
         "Feat": {
@@ -131,7 +124,7 @@
   },
   "HitPoints": {
     "type": "short",
-    "value": 101
+    "value": 10
   },
   "Int": {
     "type": "byte",
@@ -163,11 +156,11 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 120
+    "value": 12
   },
   "NaturalAC": {
     "type": "byte",
-    "value": 7
+    "value": 2
   },
   "NoPermDeath": {
     "type": "byte",
@@ -199,7 +192,7 @@
   },
   "refbonus": {
     "type": "short",
-    "value": 0
+    "value": 1
   },
   "ScriptAttacked": {
     "type": "resref",
@@ -295,28 +288,14 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 3
+          "value": 1
         }
       },
       {
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 8
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 3
+          "value": 2
         }
       },
       {
@@ -330,7 +309,7 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 0
+          "value": 1
         }
       },
       {
@@ -379,7 +358,21 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 8
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 2
         }
       },
       {
@@ -531,7 +524,7 @@
   },
   "Str": {
     "type": "byte",
-    "value": 24
+    "value": 12
   },
   "Subrace": {
     "type": "cexostring",
@@ -539,7 +532,7 @@
   },
   "Tag": {
     "type": "cexostring",
-    "value": "NW_AC_LUCHS19"
+    "value": "NW_AC_LUCHS01"
   },
   "Tail_New": {
     "type": "dword",
@@ -551,7 +544,7 @@
   },
   "TemplateResRef": {
     "type": "resref",
-    "value": "c_ac_luchs019"
+    "value": "nw_ac_luchs01"
   },
   "WalkRate": {
     "type": "int",

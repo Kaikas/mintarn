@@ -14,7 +14,7 @@
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 7.0
+    "value": 13.0
   },
   "ClassList": {
     "type": "list",
@@ -27,7 +27,7 @@
         },
         "ClassLevel": {
           "type": "short",
-          "value": 11
+          "value": 19
         }
       }
     ]
@@ -38,7 +38,7 @@
   },
   "Con": {
     "type": "byte",
-    "value": 14
+    "value": 12
   },
   "Conversation": {
     "type": "resref",
@@ -50,7 +50,7 @@
   },
   "CurrentHitPoints": {
     "type": "short",
-    "value": 50
+    "value": 101
   },
   "DecayTime": {
     "type": "dword",
@@ -69,7 +69,7 @@
   },
   "Dex": {
     "type": "byte",
-    "value": 18
+    "value": 22
   },
   "Disarmable": {
     "type": "byte",
@@ -82,7 +82,7 @@
         "__struct_id": 65536,
         "EquippedRes": {
           "type": "resref",
-          "value": "nw_it_crewps010"
+          "value": "nw_it_crewps012"
         }
       }
     ]
@@ -119,7 +119,7 @@
   },
   "fortbonus": {
     "type": "short",
-    "value": 0
+    "value": 1
   },
   "Gender": {
     "type": "byte",
@@ -131,7 +131,7 @@
   },
   "HitPoints": {
     "type": "short",
-    "value": 50
+    "value": 101
   },
   "Int": {
     "type": "byte",
@@ -163,11 +163,11 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 72
+    "value": 120
   },
   "NaturalAC": {
     "type": "byte",
-    "value": 5
+    "value": 7
   },
   "NoPermDeath": {
     "type": "byte",
@@ -302,7 +302,7 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 6
+          "value": 8
         }
       },
       {
@@ -379,7 +379,7 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 6
+          "value": 8
         }
       },
       {
@@ -531,7 +531,7 @@
   },
   "Str": {
     "type": "byte",
-    "value": 18
+    "value": 24
   },
   "Subrace": {
     "type": "cexostring",
@@ -539,7 +539,7 @@
   },
   "Tag": {
     "type": "cexostring",
-    "value": "NW_AC_LUCHS11"
+    "value": "NW_AC_LUCHS19"
   },
   "Tail_New": {
     "type": "dword",
@@ -551,7 +551,7 @@
   },
   "TemplateResRef": {
     "type": "resref",
-    "value": "c_ac_luchs011"
+    "value": "nw_ac_luchs19"
   },
   "WalkRate": {
     "type": "int",
