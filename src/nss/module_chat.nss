@@ -1450,9 +1450,9 @@ int backpack(string sMessage) {
       int iRace = GetRacialType(oPc);
       ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(EffectVisualEffect(9515), "eff_backpack"), oPc);
     }
-    return 0;
+    return 1;
   }
-  return 1;
+  return 0;
 }
 
 int masks(string sMessage) {
