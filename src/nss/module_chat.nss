@@ -185,6 +185,7 @@ int speakAsChar(string sMessage) {
 
       } else {
         speak(oTarget, colorText(sSpokenText));
+        SendMessageToPC(oPc, "(" + sSpokenText + ")");
       }
       return 1;
     }
