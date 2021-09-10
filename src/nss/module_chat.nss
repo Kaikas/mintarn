@@ -47,6 +47,9 @@ int iRand = Random(20) + 1;
 
 int skills(string sMessage, object oPc);
 int rolls(string sMessage, object oTarget);
+int attributes(string sMessage, object oTarget);
+int savingThrows(string sMessage, object oTarget);
+int emotes(string sMessage, object oTarget);
 
 // Setzt einen Würfel wurf zusammen
 string printRoll(string sValue, int iRand, int iBonus) {
@@ -184,7 +187,10 @@ int speakAsChar(string sMessage) {
         || sSecondChar == "5") {
       object oTarget = GetLocalObject(oPc, "dmspeak" + sSecondChar);
       if (!skills(sSpokenText, oTarget) &&
-          !rolls(sSpokenText, oTarget)) {
+          !rolls(sSpokenText, oTarget) &&
+          !attributes(sMessage, oTarget) &&
+          !emotes(sMessage, oTarget) &&
+          !savingThrows(sMessage, oTarget)) {
         speak(oTarget, colorText(sSpokenText));
       }
       return 1;
@@ -426,143 +432,143 @@ int delete(string sMessage) {
   return 0;
 }
 
-int emotes(string sMessage) {
+int emotes(string sMessage, object oTarget) {
   SetPCChatVolume(TALKVOLUME_SILENT_TALK);
   // Emotes
   if (sMessage == "/sit" || sMessage == "/sitzen") {
-    AssignCommand( oPc, ActionPlayAnimation(ANIMATION_LOOPING_SIT_CROSS, 1.0, 60000.0));
+    AssignCommand( oTarget, ActionPlayAnimation(ANIMATION_LOOPING_SIT_CROSS, 1.0, 60000.0));
     return 1;
   } else if (sMessage == "/dance" || sMessage == "/tanzen") {
-    AssignCommand(oPc,ActionPlayAnimation( ANIMATION_FIREFORGET_VICTORY2,1.0));
-    AssignCommand(oPc,ActionDoCommand(PlayVoiceChat(VOICE_CHAT_LAUGH,oPc)));
-    AssignCommand(oPc,ActionPlayAnimation( ANIMATION_LOOPING_TALK_LAUGHING, 2.0, 2.0));
-    AssignCommand(oPc,ActionPlayAnimation( ANIMATION_FIREFORGET_VICTORY1,1.0));
-    AssignCommand(oPc,ActionPlayAnimation( ANIMATION_FIREFORGET_VICTORY3,2.0));
-    AssignCommand(oPc,ActionPlayAnimation( ANIMATION_LOOPING_GET_MID, 3.0, 1.0));
-    AssignCommand(oPc,ActionPlayAnimation( ANIMATION_LOOPING_TALK_FORCEFUL,1.0));
-    AssignCommand(oPc,ActionPlayAnimation( ANIMATION_FIREFORGET_VICTORY2,1.0));
-    AssignCommand(oPc,ActionDoCommand(PlayVoiceChat(VOICE_CHAT_LAUGH,oPc)));
-    AssignCommand(oPc,ActionPlayAnimation( ANIMATION_LOOPING_TALK_LAUGHING, 2.0, 2.0));
-    AssignCommand(oPc,ActionPlayAnimation( ANIMATION_FIREFORGET_VICTORY1,1.0));
-    AssignCommand(oPc,ActionPlayAnimation( ANIMATION_FIREFORGET_VICTORY3,2.0));
-    AssignCommand(oPc,ActionDoCommand(PlayVoiceChat(VOICE_CHAT_LAUGH,oPc)));
-    AssignCommand(oPc,ActionPlayAnimation( ANIMATION_LOOPING_GET_MID, 3.0, 1.0));
-    AssignCommand(oPc,ActionPlayAnimation( ANIMATION_FIREFORGET_VICTORY2,1.0));
+    AssignCommand(oTarget,ActionPlayAnimation( ANIMATION_FIREFORGET_VICTORY2,1.0));
+    AssignCommand(oTarget,ActionDoCommand(PlayVoiceChat(VOICE_CHAT_LAUGH,oTarget)));
+    AssignCommand(oTarget,ActionPlayAnimation( ANIMATION_LOOPING_TALK_LAUGHING, 2.0, 2.0));
+    AssignCommand(oTarget,ActionPlayAnimation( ANIMATION_FIREFORGET_VICTORY1,1.0));
+    AssignCommand(oTarget,ActionPlayAnimation( ANIMATION_FIREFORGET_VICTORY3,2.0));
+    AssignCommand(oTarget,ActionPlayAnimation( ANIMATION_LOOPING_GET_MID, 3.0, 1.0));
+    AssignCommand(oTarget,ActionPlayAnimation( ANIMATION_LOOPING_TALK_FORCEFUL,1.0));
+    AssignCommand(oTarget,ActionPlayAnimation( ANIMATION_FIREFORGET_VICTORY2,1.0));
+    AssignCommand(oTarget,ActionDoCommand(PlayVoiceChat(VOICE_CHAT_LAUGH,oTarget)));
+    AssignCommand(oTarget,ActionPlayAnimation( ANIMATION_LOOPING_TALK_LAUGHING, 2.0, 2.0));
+    AssignCommand(oTarget,ActionPlayAnimation( ANIMATION_FIREFORGET_VICTORY1,1.0));
+    AssignCommand(oTarget,ActionPlayAnimation( ANIMATION_FIREFORGET_VICTORY3,2.0));
+    AssignCommand(oTarget,ActionDoCommand(PlayVoiceChat(VOICE_CHAT_LAUGH,oTarget)));
+    AssignCommand(oTarget,ActionPlayAnimation( ANIMATION_LOOPING_GET_MID, 3.0, 1.0));
+    AssignCommand(oTarget,ActionPlayAnimation( ANIMATION_FIREFORGET_VICTORY2,1.0));
     return 1;
   } else if (sMessage == "/worship" || sMessage == "/anbeten") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_LOOPING_WORSHIP, 1.0, 60000.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_LOOPING_WORSHIP, 1.0, 60000.0));
     return 1;
   } else if (sMessage == "/bow" || sMessage == "/verbeugen") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_FIREFORGET_BOW, 1.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_FIREFORGET_BOW, 1.0));
     return 1;
   } else if (sMessage == "/dodge" || sMessage == "/ausweichen") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_FIREFORGET_DODGE_SIDE, 1.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_FIREFORGET_DODGE_SIDE, 1.0));
     return 1;
   } else if (sMessage == "/duck" || sMessage == "/ducken") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_FIREFORGET_DODGE_DUCK, 1.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_FIREFORGET_DODGE_DUCK, 1.0));
     return 1;
   } else if (sMessage == "/drink" || sMessage == "/trinken") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_FIREFORGET_DRINK, 1.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_FIREFORGET_DRINK, 1.0));
     return 1;
   } else if (sMessage == "/greet" || sMessage == "/winken" || sMessage == "/grüÃŸen") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_FIREFORGET_GREETING, 1.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_FIREFORGET_GREETING, 1.0));
     return 1;
   } else if (sMessage == "/bored" || sMessage == "/strecken") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_FIREFORGET_PAUSE_BORED, 1.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_FIREFORGET_PAUSE_BORED, 1.0));
     return 1;
   } else if (sMessage == "/scratch" || sMessage == "/kratzen") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_FIREFORGET_PAUSE_SCRATCH_HEAD, 1.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_FIREFORGET_PAUSE_SCRATCH_HEAD, 1.0));
     return 1;
   } else if (sMessage == "/read" || sMessage == "/lesen") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_FIREFORGET_READ, 1.0, 60000.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_FIREFORGET_READ, 1.0, 60000.0));
     return 1;
   } else if (sMessage == "/salute" || sMessage == "/salutieren") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_FIREFORGET_SALUTE, 1.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_FIREFORGET_SALUTE, 1.0));
     return 1;
   } else if (sMessage == "/spasm" || sMessage == "/zucken") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_FIREFORGET_SPASM, 1.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_FIREFORGET_SPASM, 1.0));
     return 1;
   } else if (sMessage == "/steal" || sMessage == "/stehlen") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_FIREFORGET_STEAL, 1.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_FIREFORGET_STEAL, 1.0));
     return 1;
   } else if (sMessage == "/taunt" || sMessage == "/provozieren" || sMessage == "/herausfordern") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_FIREFORGET_TAUNT, 1.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_FIREFORGET_TAUNT, 1.0));
     return 1;
   } else if (sMessage == "/victory" || sMessage == "/feiern") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_FIREFORGET_VICTORY1, 1.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_FIREFORGET_VICTORY1, 1.0));
     return 1;
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_FIREFORGET_VICTORY2, 1.0));
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_FIREFORGET_VICTORY3, 1.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_FIREFORGET_VICTORY2, 1.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_FIREFORGET_VICTORY3, 1.0));
     return 1;
   } else if (sMessage == "/victory1" || sMessage == "/jubeln" || sMessage == "/freuen1") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_FIREFORGET_VICTORY1, 1.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_FIREFORGET_VICTORY1, 1.0));
     return 1;
   } else if (sMessage == "/victory2" || sMessage == "/freuen") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_FIREFORGET_VICTORY2, 1.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_FIREFORGET_VICTORY2, 1.0));
     return 1;
   } else if (sMessage == "/cheer" || sMessage == "/anfeuern") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_FIREFORGET_VICTORY3, 1.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_FIREFORGET_VICTORY3, 1.0));
     return 1;
   } else if (sMessage == "/conjure" || sMessage == "/zaubern" || sMessage == "/zaubern1") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_LOOPING_CONJURE1, 1.0, 60000.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_LOOPING_CONJURE1, 1.0, 60000.0));
     return 1;
   } else if (sMessage == "/conjure2" || sMessage == "/zaubern2") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_LOOPING_CONJURE2, 1.0, 60000.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_LOOPING_CONJURE2, 1.0, 60000.0));
     return 1;
   } else if (sMessage == "/lieback" || sMessage == "/liegen rücken") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_LOOPING_DEAD_BACK, 1.0, 60000.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_LOOPING_DEAD_BACK, 1.0, 60000.0));
     return 1;
   } else if (sMessage == "/feigndeath" || sMessage == "/liegen bauch") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_LOOPING_DEAD_FRONT, 1.0, 60000.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_LOOPING_DEAD_FRONT, 1.0, 60000.0));
     return 1;
   } else if (sMessage == "/lift" || sMessage == "/aufheben") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_LOOPING_GET_LOW, 1.0, 60000.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_LOOPING_GET_LOW, 1.0, 60000.0));
     return 1;
   } else if (sMessage == "/grab" || sMessage == "/interagieren") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_LOOPING_GET_MID, 1.0, 60000.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_LOOPING_GET_MID, 1.0, 60000.0));
     return 1;
   } else if (sMessage == "/listen" || sMessage == "/nicken") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_LOOPING_LISTEN, 1.0, 60000.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_LOOPING_LISTEN, 1.0, 60000.0));
     return 1;
   } else if (sMessage == "/look" || sMessage == "/spähen") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_LOOPING_LOOK_FAR, 1.0, 60000.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_LOOPING_LOOK_FAR, 1.0, 60000.0));
     return 1;
   } else if (sMessage == "/drunk" || sMessage == "/schwanken") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_LOOPING_PAUSE_DRUNK, 1.0, 60000.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_LOOPING_PAUSE_DRUNK, 1.0, 60000.0));
     return 1;
   } else if (sMessage == "/shout" || sMessage == "/schimpfen") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_LOOPING_TALK_FORCEFUL, 1.0, 60000.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_LOOPING_TALK_FORCEFUL, 1.0, 60000.0));
     return 1;
   } else if (sMessage == "/laugh" || sMessage == "/lachen") {
-    AssignCommand(oPc,ActionDoCommand(PlayVoiceChat(VOICE_CHAT_LAUGH,oPc)));
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_LOOPING_TALK_LAUGHING, 1.0, 60000.0));
+    AssignCommand(oTarget,ActionDoCommand(PlayVoiceChat(VOICE_CHAT_LAUGH,oTarget)));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_LOOPING_TALK_LAUGHING, 1.0, 60000.0));
     return 1;
   } else if (sMessage == "/plead" || sMessage == "/flehen") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_LOOPING_TALK_PLEADING, 1.0, 60000.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_LOOPING_TALK_PLEADING, 1.0, 60000.0));
     return 1;
   } else if (sMessage == "/talk" || sMessage == "/reden") {
-    AssignCommand(oPc, ActionPlayAnimation(ANIMATION_LOOPING_TALK_NORMAL, 1.0, 60000.0));
+    AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_LOOPING_TALK_NORMAL, 1.0, 60000.0));
     return 1;
   } else if (sMessage == "/smoke" || sMessage == "/rauchen") {
-    SmokePipe(oPc);
+    SmokePipe(oTarget);
     return 1;
   } else if (sMessage == "/pray" || sMessage == "/beten") {
-    if (GetTag(GetArea(oPc)) == "AREA_Nether") {
+    if (GetTag(GetArea(oTarget)) == "AREA_Nether") {
       location lTempel = GetLocation(GetObjectByTag("WP_TEMPEL"));
-      AssignCommand(oPc, JumpToLocation(lTempel));
+      AssignCommand(oTarget, JumpToLocation(lTempel));
       string sMessage = "Nach der Reinigung eurer Wunden hat man euch im 'Saal der Klagenden' der Selbstreflektion überlassen; auf dass euer Weg kein weiteres mal hierher führen möge.";
-      SendMessageToPC(oPc, sMessage);
+      SendMessageToPC(oTarget, sMessage);
       // Health
-      //ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectHeal(GetMaxHitPoints(oPc)), oPc);
-      //ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(GetMaxHitPoints(oPc) - 1), oPc);
+      //ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectHeal(GetMaxHitPoints(oTarget)), oTarget);
+      //ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(GetMaxHitPoints(oTarget) - 1), oTarget);
       // Negative Level
-      if (GetLevelByPosition(0, oPc) + GetLevelByPosition(1, oPc) + GetLevelByPosition(2, oPc) > 1) {
-        ApplyEffectToObject(DURATION_TYPE_TEMPORARY, SupernaturalEffect(EffectNegativeLevel(1)), oPc, 600.0f);
+      if (GetLevelByPosition(0, oTarget) + GetLevelByPosition(1, oTarget) + GetLevelByPosition(2, oTarget) > 1) {
+        ApplyEffectToObject(DURATION_TYPE_TEMPORARY, SupernaturalEffect(EffectNegativeLevel(1)), oTarget, 600.0f);
       }
       // Apply Speed debuff again after dying
       // Fackel
       if (GetTag(GetItemInSlot(INVENTORY_SLOT_RIGHTHAND)) == "CRAFT_Fackel" || GetTag(GetItemInSlot(INVENTORY_SLOT_LEFTHAND)) == "CRAFT_Fackel") {
-        ApplyEffectToObject(DURATION_TYPE_PERMANENT, EffectVisualEffect(VFX_DUR_LIGHT_YELLOW_15), oPc);
+        ApplyEffectToObject(DURATION_TYPE_PERMANENT, EffectVisualEffect(VFX_DUR_LIGHT_YELLOW_15), oTarget);
       }
       // Rüstung
       if(GetBaseItemType(GetItemInSlot(INVENTORY_SLOT_CHEST)) == BASE_ITEM_ARMOR){
@@ -576,14 +582,14 @@ int emotes(string sMessage) {
         //End Copy
 
         if(nAC == 4 || nAC == 5) {
-          ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(SupernaturalEffect(EffectMovementSpeedDecrease(5)), "eff_armorslow"), oPc);
+          ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(SupernaturalEffect(EffectMovementSpeedDecrease(5)), "eff_armorslow"), oTarget);
         } else if (nAC > 5) {
-          ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(SupernaturalEffect(EffectMovementSpeedDecrease(10)), "eff_armorslow"), oPc);
+          ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(SupernaturalEffect(EffectMovementSpeedDecrease(10)), "eff_armorslow"), oTarget);
         }
       }
-      AssignCommand(oPc, ActionPlayAnimation(ANIMATION_LOOPING_DEAD_BACK, 1.0, 60000.0));
+      AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_LOOPING_DEAD_BACK, 1.0, 60000.0));
     } else {
-      AssignCommand(oPc, ActionPlayAnimation(ANIMATION_LOOPING_MEDITATE, 1.0, 60000.0));
+      AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_LOOPING_MEDITATE, 1.0, 60000.0));
     }
     return 1;
   }
@@ -598,56 +604,56 @@ int aussehen(string sMessage) {
   return 0;
 }
 
-int attributes(string sMessage) {
+int attributes(string sMessage, object oTarget) {
   if (sMessage == "/charisma" || sMessage == "/cha") {
-    iBonus = GetAbilityModifier(ABILITY_CHARISMA, oPc);
+    iBonus = GetAbilityModifier(ABILITY_CHARISMA, oTarget);
     sMessage = printRoll("Charisma", iRand, iBonus);
-    speak(oPc, sMessage);
+    speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/constitution" || sMessage == "/konstitution" || sMessage == "/kon" || sMessage == "/con") {
-    iBonus = GetAbilityModifier(ABILITY_CONSTITUTION, oPc);
+    iBonus = GetAbilityModifier(ABILITY_CONSTITUTION, oTarget);
     sMessage = printRoll("Konstitution", iRand, iBonus);
-    speak(oPc, sMessage);
+    speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/dexterity" || sMessage == "/geschicklichkeit" || sMessage == "/ges" || sMessage == "/dex") {
-    iBonus = GetAbilityModifier(ABILITY_DEXTERITY, oPc);
+    iBonus = GetAbilityModifier(ABILITY_DEXTERITY, oTarget);
     sMessage = printRoll("Geschicklichkeit", iRand, iBonus);
-    speak(oPc, sMessage);
+    speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/intelligence" || sMessage == "/intelligenz" || sMessage == "/int") {
-    iBonus = GetAbilityModifier(ABILITY_INTELLIGENCE, oPc);
+    iBonus = GetAbilityModifier(ABILITY_INTELLIGENCE, oTarget);
     sMessage = printRoll("Intelligenz", iRand, iBonus);
-    speak(oPc, sMessage);
+    speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/strength" || sMessage == "/stärke" || sMessage == "/str") {
-    iBonus = GetAbilityModifier(ABILITY_STRENGTH, oPc);
+    iBonus = GetAbilityModifier(ABILITY_STRENGTH, oTarget);
     sMessage = printRoll("Stärke", iRand, iBonus);
-    speak(oPc, sMessage);
+    speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/wisdom" || sMessage == "/weisheit" || sMessage == "/wis") {
-    iBonus = GetAbilityModifier(ABILITY_WISDOM, oPc);
+    iBonus = GetAbilityModifier(ABILITY_WISDOM, oTarget);
     sMessage = printRoll("Weisheit", iRand, iBonus);
-    speak(oPc, sMessage);
+    speak(oTarget, sMessage);
     return 1;
   }
   return 0;
 }
 
-int savingThrows(string sMessage) {
+int savingThrows(string sMessage, object oTarget) {
   if (sMessage == "/reflex") {
-    iBonus = GetReflexSavingThrow(oPc);
+    iBonus = GetReflexSavingThrow(oTarget);
     int iRoll = d20();
-    PrintSavingThrow(iBonus, iRoll, "Reflex", oPc, iChatVolume);
+    PrintSavingThrow(iBonus, iRoll, "Reflex", oTarget, iChatVolume);
     return 1;
   } else if (sMessage == "/wille") {
-    iBonus = GetWillSavingThrow(oPc);
+    iBonus = GetWillSavingThrow(oTarget);
     int iRoll = d20();
-    PrintSavingThrow(iBonus, iRoll, "Wille", oPc, iChatVolume);
+    PrintSavingThrow(iBonus, iRoll, "Wille", oTarget, iChatVolume);
     return 1;
   } else if (sMessage == "/zähigkeit") {
-    iBonus = GetFortitudeSavingThrow(oPc);
+    iBonus = GetFortitudeSavingThrow(oTarget);
     int iRoll = d20();
-    PrintSavingThrow(iBonus, iRoll, "Zähigkeit", oPc, iChatVolume);
+    PrintSavingThrow(iBonus, iRoll, "Zähigkeit", oTarget, iChatVolume);
     return 1;
   }
   return 0;
@@ -1832,10 +1838,10 @@ void main() {
         setWindFromChat(sMessage) ||
         deleteHint(sMessage) ||
         delete(sMessage) ||
-        emotes(sMessage) ||
+        emotes(sMessage, oPc) ||
         aussehen(sMessage) ||
-        attributes(sMessage) ||
-        savingThrows(sMessage) ||
+        attributes(sMessage, oPc) ||
+        savingThrows(sMessage, oPc) ||
         skills(sMessage, oPc) ||
         rolls(sMessage, oPc) ||
         familiar(sMessage) ||
