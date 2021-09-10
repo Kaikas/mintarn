@@ -46,6 +46,7 @@ int iBonus;
 int iRand = Random(20) + 1;
 
 int skills(string sMessage, object oPc);
+int rolls(string sMessage, object oTarget);
 
 // Setzt einen Würfel wurf zusammen
 string printRoll(string sValue, int iRand, int iBonus) {
