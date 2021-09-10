@@ -45,6 +45,8 @@ string sQuery;
 int iBonus;
 int iRand = Random(20) + 1;
 
+int skills(string sMessage, object oPc);
+
 // Setzt einen Würfel wurf zusammen
 string printRoll(string sValue, int iRand, int iBonus) {
   return StringToRGBString("[" +
@@ -179,7 +181,11 @@ int speakAsChar(string sMessage) {
         || sSecondChar == "4"
         || sSecondChar == "5") {
       object oTarget = GetLocalObject(oPc, "dmspeak" + sSecondChar);
-      speak(oTarget, colorText(sSpokenText));
+      if (skills(sSpokenText, oTarget)) {
+
+      } else {
+        speak(oTarget, colorText(sSpokenText));
+      }
       return 1;
     }
   }
@@ -646,7 +652,7 @@ int savingThrows(string sMessage) {
   return 0;
 }
 
-int skills(string sMessage) {
+int skills(string sMessage, object oPc) {
   int iAbilityBonus;
   // Mit Tieren umgehen
   if (sMessage == "/mittierenumgehen") {
@@ -1829,7 +1835,7 @@ void main() {
         aussehen(sMessage) ||
         attributes(sMessage) ||
         savingThrows(sMessage) ||
-        skills(sMessage) ||
+        skills(sMessage, oPc) ||
         rolls(sMessage) ||
         familiar(sMessage) ||
         companion(sMessage) ||
