@@ -171,6 +171,7 @@ void speak(object oSpeaker, string sMessage) {
 }
 
 int speakAsChar(string sMessage) {
+  SetPCChatVolume(TALKVOLUME_SILENT_TALK);
   string sFirstChar = GetSubString(sMessage, 0, 1);
   string sSecondChar = GetSubString(sMessage, 1, 1);
   string sSpokenText = GetSubString(sMessage, 3, 10000);
