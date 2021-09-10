@@ -75,27 +75,27 @@ string printRollSkill(string sValue, int iRand, int iBonus, int iAbilityBonus) {
       "]", "333");
 }
 
-void rollSkillsCheck(string sOutput, int iSkill, int iCheckAbility, int iKeyAbility, int iChatVolume, object oPc) {
+void rollSkillsCheck(string sOutput, int iSkill, int iCheckAbility, int iKeyAbility, int iChatVolume, object oTarget) {
   int iRand = Random(20) + 1;
-  int iBonus = GetSkillRank(iSkill, oPc);
-  int iAbilityBonus = GetAbilityModifier(iCheckAbility, oPc);
+  int iBonus = GetSkillRank(iSkill, oTarget);
+  int iAbilityBonus = GetAbilityModifier(iCheckAbility, oTarget);
   string sMessage;
-  if (StringToInt(Get2DAString("skills", "Untrained", iSkill)) == 0 && iBonus == 0) {
+  if (StringToInt(Get2DAString("skills", "Untrained", iSkill)) == 0 && iBonus - GetAbilityModifier(iKeyAbility) < 1) {
     sMessage = StringToRGBString("Fertigkeit nicht untrainiert benutzbar.", "333");
   } else {
-    sMessage = printRollSkill(sOutput, iRand, iBonus - GetAbilityModifier(iKeyAbility, oPc), iAbilityBonus);
+    sMessage = printRollSkill(sOutput, iRand, iBonus - GetAbilityModifier(iKeyAbility, oTarget), iAbilityBonus);
   }
-  SetLocalString(oPc, "sMessage", sMessage);
-  SetLocalInt(oPc, "iChatVolume", iChatVolume);
-  ExecuteScript("global_speak", oPc);
+  SetLocalString(oTarget, "sMessage", sMessage);
+  SetLocalInt(oTarget, "iChatVolume", iChatVolume);
+  ExecuteScript("global_speak", oTarget);
 }
 
-void PrintSavingThrow(int iBonus, int iRoll, string sThrow, object oPc, int iChatVolume) {
+void PrintSavingThrow(int iBonus, int iRoll, string sThrow, object oTarget, int iChatVolume) {
   string sMessage = "Rettungswurf (" + sThrow + "): " + IntToString(iRoll) + " + " + IntToString(iBonus) + " = " + IntToString(iRoll + iBonus);
   sMessage = StringToRGBString(sMessage, "333");
-  SetLocalString(oPc, "sMessage", sMessage);
-  SetLocalInt(oPc, "iChatVolume", iChatVolume);
-  ExecuteScript("global_speak", oPc);
+  SetLocalString(oTarget, "sMessage", sMessage);
+  SetLocalInt(oTarget, "iChatVolume", iChatVolume);
+  ExecuteScript("global_speak", oTarget);
 }
 
 void removeMask(object oPc) {
@@ -171,18 +171,19 @@ void speak(object oSpeaker, string sMessage) {
 }
 
 int speakAsChar(string sMessage) {
-  SetPCChatVolume(TALKVOLUME_SILENT_TALK);
   string sFirstChar = GetSubString(sMessage, 0, 1);
   string sSecondChar = GetSubString(sMessage, 1, 1);
   string sSpokenText = GetSubString(sMessage, 3, 10000);
   if (sFirstChar == ":") {
+    SetPCChatVolume(TALKVOLUME_SILENT_TALK);
     if (sSecondChar == "1"
         || sSecondChar == "2"
         || sSecondChar == "3"
         || sSecondChar == "4"
         || sSecondChar == "5") {
       object oTarget = GetLocalObject(oPc, "dmspeak" + sSecondChar);
-      if (!skills(sSpokenText, oTarget)) {
+      if (!skills(sSpokenText, oTarget) &&
+          !rolls(sSpokenText, oTarget)) {
         speak(oTarget, colorText(sSpokenText));
       }
       return 1;
@@ -1307,26 +1308,26 @@ int skills(string sMessage, object oTarget) {
   return 0;
 }
 
-int rolls(string sMessage) {
+int rolls(string sMessage, object oTarget) {
   if (sMessage == "/d4") {
     sMessage = printRoll("d4", Random(4) + 1, 0);
-    speak(oPc, sMessage);
+    speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/d6") {
     sMessage = printRoll("d6", Random(6) + 1, 0);
-    speak(oPc, sMessage);
+    speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/d8") {
     sMessage = printRoll("d8", Random(8) + 1, 0);
-    speak(oPc, sMessage);
+    speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/d10") {
     sMessage = printRoll("d10", Random(10) + 1, 0);
-    speak(oPc, sMessage);
+    speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/d20") {
     sMessage = printRoll("d20", Random(20) + 1, 0);
-    speak(oPc, sMessage);
+    speak(oTarget, sMessage);
     return 1;
   }
   return 0;
@@ -1835,7 +1836,7 @@ void main() {
         attributes(sMessage) ||
         savingThrows(sMessage) ||
         skills(sMessage, oPc) ||
-        rolls(sMessage) ||
+        rolls(sMessage, oPc) ||
         familiar(sMessage) ||
         companion(sMessage) ||
         token(sMessage) ||
