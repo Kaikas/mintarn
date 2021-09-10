@@ -173,7 +173,7 @@ void speak(object oSpeaker, string sMessage) {
 int speakAsChar(string sMessage) {
   string sFirstChar = GetSubString(sMessage, 0, 1);
   string sSecondChar = GetSubString(sMessage, 1, 1);
-  string sSpokenText = GetSubString(sMessage, 2, 10000);
+  string sSpokenText = GetSubString(sMessage, 3, 10000);
   if (sFirstChar == ":") {
     if (sSecondChar == "1"
         || sSecondChar == "2"
@@ -181,11 +181,8 @@ int speakAsChar(string sMessage) {
         || sSecondChar == "4"
         || sSecondChar == "5") {
       object oTarget = GetLocalObject(oPc, "dmspeak" + sSecondChar);
-      if (skills(sSpokenText, oTarget)) {
-
-      } else {
+      if (!skills(sSpokenText, oTarget)) {
         speak(oTarget, colorText(sSpokenText));
-        SendMessageToPC(oPc, "(" + sSpokenText + ")");
       }
       return 1;
     }
