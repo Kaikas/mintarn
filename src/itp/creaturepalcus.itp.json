@@ -8051,6 +8051,386 @@
               "__struct_id": 0,
               "CR": {
                 "type": "float",
+                "value": 1.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Dobermann"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_doberman01"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 2.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Dobermann"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_doberman02"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 3.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Dobermann"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_doberman03"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 3.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Dobermann"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_doberman04"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 4.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Dobermann"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_doberman05"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 5.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Dobermann"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_doberman06"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 6.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Dobermann"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_doberman07"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 7.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Dobermann"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_doberman08"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 7.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Dobermann"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_doberman09"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 8.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Dobermann"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_doberman10"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 9.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Dobermann"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_doberman11"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 9.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Dobermann"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_doberman12"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 10.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Dobermann"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_doberman13"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 11.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Dobermann"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_doberman14"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 12.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Dobermann"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_doberman15"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 12.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Dobermann"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_doberman16"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 13.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Dobermann"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_doberman17"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 13.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Dobermann"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_doberman18"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 14.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Dobermann"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_doberman19"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 15.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Dobermann"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_doberman20"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
                 "value": 2.0
               },
               "FACTION": {
