@@ -3453,6 +3453,386 @@
               "__struct_id": 0,
               "CR": {
                 "type": "float",
+                "value": 1.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Adler"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_adler01"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 2.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Adler"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_adler02"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 3.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Adler"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_adler03"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 3.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Adler"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_adler04"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 4.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Adler"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_adler05"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 5.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Adler"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_adler06"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 5.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Adler"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_adler07"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 6.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Adler"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_adler08"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 6.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Adler"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_adler09"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 7.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Adler"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_adler10"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 8.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Adler"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_adler11"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 9.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Adler"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_adler12"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 10.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Adler"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_adler13"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 10.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Adler"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_adler14"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 11.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Adler"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_adler15"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 12.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Adler"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_adler16"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 13.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Adler"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_adler17"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 15.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Adler"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_adler18"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 15.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Adler"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_adler19"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 16.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Adler"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_adler20"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
                 "value": 2.0
               },
               "FACTION": {
