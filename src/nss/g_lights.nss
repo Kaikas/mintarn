@@ -34,7 +34,7 @@ void TurnOnLight(object oLight) {
     string lighttype = "dl_brown_09";
     if (GetLocalString(oLight, "lighttype") != "") lighttype = GetLocalString(oLight, "lighttype");
     object oTarget = GetNearestObjectByTag("WP_LIGHT", oLight);
-    object oLightSource = CreateObject(OBJECT_TYPE_PLACEABLE, "dl_brown_09", GetLocation(oTarget), FALSE, "NEW_LIGHT");
+    object oLightSource = CreateObject(OBJECT_TYPE_PLACEABLE, lighttype, GetLocation(oTarget), FALSE, "NEW_LIGHT");
   } else {
     // Determine lighting effect type
     int lighttype = VFX_DUR_LIGHT_YELLOW_15;
@@ -55,7 +55,9 @@ void TurnOffLight(object oLight) {
 
   if (iNewSystem) {
     object oTarget = GetNearestObjectByTag("NEW_LIGHT", oLight);
-    DestroyObject(oTarget);
+    if (GetDistanceBetween(oLight, oTarget) <= 5.0) {
+        DestroyObject(oTarget);
+    }
   } else {
     // Remove light effects from closes INVISIBLE_LIGHT object
     object oTarget = GetNearestObjectByTag("INVISIBLE_LIGHT", oLight);
@@ -92,8 +94,8 @@ void ManipulateAllLightsWithTag(string sTag, int iType) {
     if (iType == 0) TurnOffLight(oLight);
     if (iType == 1) TurnOnLight(oLight);
     if (iType == 2) ToggleLight(oLight);
-    oLight = GetObjectByTag(sTag, i);
     i++;
+    oLight = GetObjectByTag(sTag, i);
   }
 }
 

@@ -11356,11 +11356,11 @@
               },
               "Type": {
                 "type": "dword",
-                "value": 1
+                "value": 3
               },
               "Value": {
-                "type": "int",
-                "value": 170
+                "type": "cexostring",
+                "value": "dl_brown_06"
               }
             }
           ]
@@ -72995,11 +72995,11 @@
               },
               "Type": {
                 "type": "dword",
-                "value": 1
+                "value": 3
               },
               "Value": {
-                "type": "int",
-                "value": 161
+                "type": "cexostring",
+                "value": "dl_purple_03"
               }
             }
           ]
@@ -73240,11 +73240,11 @@
               },
               "Type": {
                 "type": "dword",
-                "value": 1
+                "value": 3
               },
               "Value": {
-                "type": "int",
-                "value": 171
+                "type": "cexostring",
+                "value": "dl_brown_06"
               }
             }
           ]

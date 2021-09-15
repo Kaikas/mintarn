@@ -11932,13 +11932,6 @@
         "__struct_id": 9,
         "Comment": {
           "type": "cexostring",
-          "value": "on; scripted light effect and switch with \"off\" model\r\nuseable, plot\r\nAnimation State: activated\r\nScript Set: p_light.ini\r\nint CEP_L_AMION=1\r\nstring CEP_L_LIGHTCONST=\"YE15\"\r\nstring CEP_L_LIGHTSWAP=\"p_zep01566_uu\""
-        }
-      },
-      {
-        "__struct_id": 9,
-        "Comment": {
-          "type": "cexostring",
           "value": "on; scripted light effect and switch with \"off\" model\r\nuseable, plot\r\nAnimation State: activated\r\nScript Set: p_light.ini\r\nint CEP_L_AMION=1\r\nstring CEP_L_LIGHTCONST=\"YE10\"\r\nstring CEP_L_LIGHTSWAP=\"p_zep02503_uu\""
         }
       },
@@ -20277,13 +20270,6 @@
         "Comment": {
           "type": "cexostring",
           "value": ""
-        }
-      },
-      {
-        "__struct_id": 9,
-        "Comment": {
-          "type": "cexostring",
-          "value": "Lamp Post"
         }
       },
       {
@@ -39038,6 +39024,13 @@
           "type": "cexostring",
           "value": ""
         }
+      },
+      {
+        "__struct_id": 9,
+        "Comment": {
+          "type": "cexostring",
+          "value": "on; scripted light effect and switch with \"off\" model\r\nuseable, plot\r\nAnimation State: activated\r\nScript Set: p_light.ini\r\nint CEP_L_AMION=1\r\nstring CEP_L_LIGHTCONST=\"YE15\"\r\nstring CEP_L_LIGHTSWAP=\"p_zep01566_uu\""
+        }
       }
     ]
   },
@@ -40385,20 +40378,6 @@
         "__struct_id": 5,
         "Comment": {
           "type": "cexostring",
-          "value": ""
-        }
-      },
-      {
-        "__struct_id": 5,
-        "Comment": {
-          "type": "cexostring",
-          "value": ""
-        }
-      },
-      {
-        "__struct_id": 5,
-        "Comment": {
-          "type": "cexostring",
           "value": "On the Advanced tab, replace <Place text here> with whatever information you wish to appear on the Map of an area."
         }
       },
@@ -40540,6 +40519,20 @@
         "Comment": {
           "type": "cexostring",
           "value": "On the Advanced tab, replace <Place text here> with whatever information you wish to appear on the Map of an area."
+        }
+      },
+      {
+        "__struct_id": 5,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 5,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
         }
       }
     ]
