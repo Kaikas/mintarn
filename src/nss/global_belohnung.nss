@@ -1,3 +1,5 @@
+#include "global_money"
+
 void main() {
     object oPc = GetPCSpeaker();
     object oTarget = GetLocalObject(oPc, "target");
@@ -18,5 +20,20 @@ void main() {
         SendMessageToPC(oPc, "Außerordentliche Belohnung and " + GetName(oTarget) + " vergeben");
         SendMessageToPC(oTarget, "Ihr habt eine außerordenliche Belohnung erhalten.");
         SetXP(oTarget, GetXP(oTarget) + iRequiredXp / 100 * 3);
+    }
+    if (GetScriptParam("belohnung") == "goldklein") {
+        SendMessageToPC(oPc, "10 Kupfer an " + GetName(oTarget) + " vergeben");
+        SendMessageToPC(oTarget, "Ihr habt ein paar Münzen erhalten.");
+        MONEY_GiveCoinMoneyWorth(10, oTarget);
+    }
+    if (GetScriptParam("belohnung") == "goldmittel") {
+        SendMessageToPC(oPc, "5 Silber an " + GetName(oTarget) + " vergeben");
+        SendMessageToPC(oTarget, "Ihr habt ein paar Münzen erhalten.");
+        MONEY_GiveCoinMoneyWorth(50, oTarget);
+    }
+    if (GetScriptParam("belohnung") == "goldgross") {
+        SendMessageToPC(oPc, "1 Gold an " + GetName(oTarget) + " vergeben");
+        SendMessageToPC(oTarget, "Ihr habt ein paar Münzen erhalten.");
+        MONEY_GiveCoinMoneyWorth(100, oTarget);
     }
 }
