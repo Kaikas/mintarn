@@ -429,6 +429,17 @@ void main() {
 	skillFeat.iSkill = 14;
     skillFeat.iFeat = 1127;
     NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
+	
+	//Klassen-Fertigkeitstalente:
+	
+	//Naturgespuer
+	skillFeat.iSkill = 29;
+    skillFeat.iFeat = 1129;
+    NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
+	skillFeat.iSkill = 35;
+    skillFeat.iFeat = 1129;
+    NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
+	
 
     //struct NWNX_SkillRanks_SkillFeat debug_feat = NWNX_SkillRanks_GetSkillFeat(30, 1116);
     //WriteTimestampedLogEntry("Skill Feat: " + debug_feat.iSkill + " - " + debug_feat.iFeat + " - " + debug_feat.iModifier + " " + debug_feat.iFocusFeat);
