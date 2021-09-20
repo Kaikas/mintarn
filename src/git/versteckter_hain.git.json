@@ -87522,11 +87522,11 @@
               },
               "Type": {
                 "type": "dword",
-                "value": 1
+                "value": 3
               },
               "Value": {
-                "type": "int",
-                "value": 168
+                "type": "cexostring",
+                "value": "dl_red_06"
               }
             }
           ]
