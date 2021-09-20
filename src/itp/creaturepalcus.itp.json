@@ -14891,6 +14891,44 @@
               "__struct_id": 0,
               "CR": {
                 "type": "float",
+                "value": 1.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Luchs"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_luchs01"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 2.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Luchs"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_luchs02"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
                 "value": 2.0
               },
               "FACTION": {
@@ -15227,44 +15265,6 @@
               "RESREF": {
                 "type": "resref",
                 "value": "nw_ac_luchs20"
-              }
-            },
-            {
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 1.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Luchs"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_luchs01"
-              }
-            },
-            {
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 2.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Luchs"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_luchs02"
               }
             },
             {

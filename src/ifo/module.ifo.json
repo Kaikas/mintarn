@@ -11,13 +11,6 @@
         "__struct_id": 6,
         "Area_Name": {
           "type": "resref",
-          "value": "a_goblincave"
-        }
-      },
-      {
-        "__struct_id": 6,
-        "Area_Name": {
-          "type": "resref",
           "value": "alchemist"
         }
       },
@@ -32,7 +25,28 @@
         "__struct_id": 6,
         "Area_Name": {
           "type": "resref",
+          "value": "aufdersee"
+        }
+      },
+      {
+        "__struct_id": 6,
+        "Area_Name": {
+          "type": "resref",
+          "value": "aufderseepiraten"
+        }
+      },
+      {
+        "__struct_id": 6,
+        "Area_Name": {
+          "type": "resref",
           "value": "aufsee"
+        }
+      },
+      {
+        "__struct_id": 6,
+        "Area_Name": {
+          "type": "resref",
+          "value": "a_goblincave"
         }
       },
       {
@@ -47,6 +61,13 @@
         "Area_Name": {
           "type": "resref",
           "value": "echsenhhle"
+        }
+      },
+      {
+        "__struct_id": 6,
+        "Area_Name": {
+          "type": "resref",
+          "value": "einfachehutte"
         }
       },
       {
@@ -82,6 +103,13 @@
         "Area_Name": {
           "type": "resref",
           "value": "goblindungeon"
+        }
+      },
+      {
+        "__struct_id": 6,
+        "Area_Name": {
+          "type": "resref",
+          "value": "hainhutte"
         }
       },
       {
@@ -158,14 +186,14 @@
         "__struct_id": 6,
         "Area_Name": {
           "type": "resref",
-          "value": "slgebiet"
+          "value": "schiffinneres"
         }
       },
       {
         "__struct_id": 6,
         "Area_Name": {
           "type": "resref",
-          "value": "stadtwache"
+          "value": "slgebiet"
         }
       },
       {
@@ -242,35 +270,7 @@
         "__struct_id": 6,
         "Area_Name": {
           "type": "resref",
-          "value": "aufdersee"
-        }
-      },
-      {
-        "__struct_id": 6,
-        "Area_Name": {
-          "type": "resref",
-          "value": "aufderseepiraten"
-        }
-      },
-      {
-        "__struct_id": 6,
-        "Area_Name": {
-          "type": "resref",
-          "value": "einfachehutte"
-        }
-      },
-      {
-        "__struct_id": 6,
-        "Area_Name": {
-          "type": "resref",
-          "value": "schiffinneres"
-        }
-      },
-      {
-        "__struct_id": 6,
-        "Area_Name": {
-          "type": "resref",
-          "value": "hainhutte"
+          "value": "rathaus"
         }
       }
     ]
@@ -307,23 +307,23 @@
   },
   "Mod_Entry_Dir_X": {
     "type": "float",
-    "value": 0.0
+    "value": 0.6152
   },
   "Mod_Entry_Dir_Y": {
     "type": "float",
-    "value": 1.0
+    "value": 0.7883
   },
   "Mod_Entry_X": {
     "type": "float",
-    "value": 3.0
+    "value": 4.5372
   },
   "Mod_Entry_Y": {
     "type": "float",
-    "value": 24.0
+    "value": 24.7525
   },
   "Mod_Entry_Z": {
     "type": "float",
-    "value": 0.0
+    "value": -0.0
   },
   "Mod_Expan_List": {
     "type": "list",
