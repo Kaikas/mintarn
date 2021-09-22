@@ -2321,6 +2321,39 @@
                           "__struct_id": 0,
                           "NAME": {
                             "type": "cexostring",
+                            "value": "Rezept: Brustpanzer"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sw_re_brustpanze"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Rezept: Gepolsterte Rüstung"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sw_re_gepolstert"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Rezept: Kettenhemd"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sw_re_kettenhemd"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
                             "value": "Rezept: Kettenpanzer"
                           },
                           "RESREF": {
@@ -2348,6 +2381,28 @@
                           "RESREF": {
                             "type": "resref",
                             "value": "sw_re_plattenhar"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Rezept: Schuppenpanzer"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sw_re_schuppenpa"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Rezept: Verstärkte Lederrüstung"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "sw_re_vlederru"
                           }
                         }
                       ]
