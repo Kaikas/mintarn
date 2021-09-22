@@ -404,12 +404,23 @@ void main() {
         CraftItem(oPc, 1, "sw_wa_kompositbo", "CRAFT_Birkenholz", 5, "CRAFT_Holzrohling", 1, "", 0, "Schreiner", "CRAFT_RezeptKompositbogen", TRUE, 40, "Lehrling");
 
     // Rüstungen
-    if (GetTag(oItem) == "CRAFT_RezeptKettenpanzer")
-        CraftItem(oPc, 1, "sw_ru_kettenpanz", "CRAFT_Eisenbarren", 5, "CRAFT_Schmiederohling", 1, "", 0, "Schmiede", "CRAFT_RezeptKettenpanzer", FALSE, 190, "Lehrling");
+    if (GetTag(oItem) == "CRAFT_RezeptGepolstert")
+        CraftItem(oPc, 1, "sw_ru_gepolstert", "CRAFT_Eisenbarren", 5, "CRAFT_Schmiederohling", 1, "", 0, "Schmiede", "CRAFT_RezeptKettenpanzer", FALSE, 190, "Lehrling");
     if (GetTag(oItem) == "CRAFT_RezeptLederruestung")
         CraftItem(oPc, 1, "sw_ru_lederruest", "CRAFT_Leder", 25, "CRAFT_Gerbstoff", 1, "", 0, "Lederer", "CRAFT_RezeptLederruestung", FALSE, 190, "Lehrling");
+    if (GetTag(oItem) == "CRAFT_RezeptVerstaerkteLeder")
+        CraftItem(oPc, 1, "sw_ru_verleder", "CRAFT_Eisenbarren", 5, "CRAFT_Schmiederohling", 1, "", 0, "Schmiede", "CRAFT_RezeptKettenpanzer", FALSE, 190, "Lehrling");
+    if (GetTag(oItem) == "CRAFT_RezeptKettenhemd")
+        CraftItem(oPc, 1, "sw_ru_kettenhemd", "CRAFT_Eisenbarren", 5, "CRAFT_Schmiederohling", 1, "", 0, "Schmiede", "CRAFT_RezeptKettenpanzer", FALSE, 190, "Lehrling");
+    if (GetTag(oItem) == "CRAFT_RezeptKettenpanzer")
+        CraftItem(oPc, 1, "sw_ru_kettenpanz", "CRAFT_Eisenbarren", 5, "CRAFT_Schmiederohling", 1, "", 0, "Schmiede", "CRAFT_RezeptKettenpanzer", FALSE, 190, "Lehrling");
+    if (GetTag(oItem) == "CRAFT_RezeptBrustpanzer")
+        CraftItem(oPc, 1, "sw_ru_brustpanze", "CRAFT_Eisenbarren", 5, "CRAFT_Schmiederohling", 1, "", 0, "Schmiede", "CRAFT_RezeptKettenpanzer", FALSE, 190, "Lehrling");
+    if (GetTag(oItem) == "CRAFT_RezeptSchuppenpanzer")
+        CraftItem(oPc, 1, "sw_ru_schuppenpa", "CRAFT_Eisenbarren", 5, "CRAFT_Schmiederohling", 1, "", 0, "Schmiede", "CRAFT_RezeptKettenpanzer", FALSE, 190, "Lehrling");
     if (GetTag(oItem) == "CRAFT_RezeptPlattenharnisch")
         CraftItem(oPc, 1, "sw_ru_plattenhar", "CRAFT_Eisenbarren", 10, "CRAFT_Schmiederohling", 1, "", 0, "Schmiede", "CRAFT_RezeptPlattenharnisch", FALSE, 390, "Lehrling");
+
     // Schilde
     if (GetTag(oItem) == "CRAFT_RezeptGrosserSchild")
         CraftItem(oPc, 1, "sw_sc_grossersch", "CRAFT_Birkenholz", 5, "CRAFT_Holzrohling", 1, "", 0, "Schreiner", "CRAFT_RezeptGrosserSchild", FALSE, 40, "Lehrling");
