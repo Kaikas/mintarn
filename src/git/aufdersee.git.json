@@ -122,11 +122,11 @@
         },
         "LinkedTo": {
           "type": "cexostring",
-          "value": ""
+          "value": "WP_MarielleUnterdeckToMarielle"
         },
         "LinkedToFlags": {
           "type": "byte",
-          "value": 0
+          "value": 2
         },
         "LoadScreenID": {
           "type": "word",
@@ -207,7 +207,7 @@
         },
         "Plot": {
           "type": "byte",
-          "value": 0
+          "value": 1
         },
         "PortraitId": {
           "type": "word",
@@ -219,7 +219,7 @@
         },
         "Tag": {
           "type": "cexostring",
-          "value": "WallDoor"
+          "value": "MarielleToMarielleUnterDeck"
         },
         "TemplateResRef": {
           "type": "resref",
