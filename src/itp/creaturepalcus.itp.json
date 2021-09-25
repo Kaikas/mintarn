@@ -110,6 +110,25 @@
                           "__struct_id": 0,
                           "CR": {
                             "type": "float",
+                            "value": 13.0
+                          },
+                          "FACTION": {
+                            "type": "cexostring",
+                            "value": "Hostile"
+                          },
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Hügelriese"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "huegelriese"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "CR": {
+                            "type": "float",
                             "value": 11.0
                           },
                           "FACTION": {
@@ -538,6 +557,44 @@
                           "RESREF": {
                             "type": "resref",
                             "value": "echsenmenschscha"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "CR": {
+                            "type": "float",
+                            "value": 10.0
+                          },
+                          "FACTION": {
+                            "type": "cexostring",
+                            "value": "Hostile"
+                          },
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Gedankenschinder"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "gedankenschinder"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "CR": {
+                            "type": "float",
+                            "value": 15.0
+                          },
+                          "FACTION": {
+                            "type": "cexostring",
+                            "value": "Hostile"
+                          },
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Gedankenschinder Meister"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "gedankenschin001"
                           }
                         },
                         {

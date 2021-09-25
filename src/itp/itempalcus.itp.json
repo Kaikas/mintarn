@@ -4733,6 +4733,17 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
+                      "value": "Creature Item: Gedankenschinder"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_ru_gedanken"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
                       "value": "Creature Item: Glabrezu"
                     },
                     "RESREF": {
@@ -6303,6 +6314,17 @@
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_wa_dwolf"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Creature Item: Gedankenschinder"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_wa_gedanken"
                     }
                   },
                   {
