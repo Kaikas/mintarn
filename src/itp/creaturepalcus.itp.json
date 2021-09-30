@@ -9248,6 +9248,386 @@
               "__struct_id": 0,
               "CR": {
                 "type": "float",
+                "value": 1.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Eule"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_eule01"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 2.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Eule"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_eule02"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 3.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Eule"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_eule03"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 3.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Eule"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_eule04"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 4.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Eule"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_eule05"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 5.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Eule"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_eule06"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 5.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Eule"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_eule07"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 6.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Eule"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_eule08"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 6.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Eule"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_eule09"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 7.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Eule"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_eule10"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 8.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Eule"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_eule11"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 9.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Eule"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_eule12"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 10.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Eule"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_eule13"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 10.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Eule"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_eule14"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 11.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Eule"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_eule15"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 12.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Eule"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_eule16"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 13.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Eule"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_eule17"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 15.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Eule"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_eule18"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 15.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Eule"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_eule19"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 16.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Eule"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_eule20"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
                 "value": 2.0
               },
               "FACTION": {
@@ -13823,7 +14203,7 @@
                 "value": "nw_ac_dog01"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
@@ -13842,7 +14222,26 @@
                 "value": "nw_ac_dog02"
               }
             },
-			{
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 2.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Hund"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_dog03"
+              }
+            },
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
@@ -13858,10 +14257,10 @@
               },
               "RESREF": {
                 "type": "resref",
-                "value": "nw_ac_dog03"
+                "value": "nw_ac_dog04"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
@@ -13877,10 +14276,29 @@
               },
               "RESREF": {
                 "type": "resref",
-                "value": "nw_ac_dog04"
+                "value": "nw_ac_dog05"
               }
             },
-			{
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 4.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Hund"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_dog06"
+              }
+            },
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
@@ -13896,10 +14314,29 @@
               },
               "RESREF": {
                 "type": "resref",
-                "value": "nw_ac_dog05"
+                "value": "nw_ac_dog07"
               }
             },
-			{
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 5.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Hund"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_dog08"
+              }
+            },
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
@@ -13915,10 +14352,10 @@
               },
               "RESREF": {
                 "type": "resref",
-                "value": "nw_ac_dog06"
+                "value": "nw_ac_dog09"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
@@ -13934,10 +14371,29 @@
               },
               "RESREF": {
                 "type": "resref",
-                "value": "nw_ac_dog07"
+                "value": "nw_ac_dog10"
               }
             },
-			{
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 7.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Hund"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_dog11"
+              }
+            },
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
@@ -13953,10 +14409,10 @@
               },
               "RESREF": {
                 "type": "resref",
-                "value": "nw_ac_dog08"
+                "value": "nw_ac_dog12"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
@@ -13972,10 +14428,10 @@
               },
               "RESREF": {
                 "type": "resref",
-                "value": "nw_ac_dog09"
+                "value": "nw_ac_dog13"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
@@ -13991,10 +14447,29 @@
               },
               "RESREF": {
                 "type": "resref",
-                "value": "nw_ac_dog10"
+                "value": "nw_ac_dog14"
               }
             },
-			{
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 10.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Hund"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_dog15"
+              }
+            },
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
@@ -14010,10 +14485,10 @@
               },
               "RESREF": {
                 "type": "resref",
-                "value": "nw_ac_dog11"
+                "value": "nw_ac_dog16"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
@@ -14029,10 +14504,29 @@
               },
               "RESREF": {
                 "type": "resref",
-                "value": "nw_ac_dog12"
+                "value": "nw_ac_dog17"
               }
             },
-			{
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 12.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Hund"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "nw_ac_dog18"
+              }
+            },
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
@@ -14048,128 +14542,14 @@
               },
               "RESREF": {
                 "type": "resref",
-                "value": "nw_ac_dog13"
+                "value": "nw_ac_dog19"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
                 "value": 14.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Hund"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_dog14"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 15.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Hund"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_dog15"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 16.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Hund"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_dog16"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 17.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Hund"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_dog17"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 18.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Hund"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_dog18"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 19.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Hund"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_dog19"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 20.0
               },
               "FACTION": {
                 "type": "cexostring",
@@ -19903,7 +20283,7 @@
                 "value": 12548
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
@@ -19922,7 +20302,7 @@
                 "value": "nw_ac_bbear01"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
@@ -19941,7 +20321,7 @@
                 "value": "nw_ac_bbear02"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
@@ -19960,11 +20340,11 @@
                 "value": "nw_ac_bbear03"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
-                "value": 4.0
+                "value": 3.0
               },
               "FACTION": {
                 "type": "cexostring",
@@ -19979,11 +20359,11 @@
                 "value": "nw_ac_bbear04"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
-                "value": 5.0
+                "value": 4.0
               },
               "FACTION": {
                 "type": "cexostring",
@@ -19998,11 +20378,11 @@
                 "value": "nw_ac_bbear05"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
-                "value": 6.0
+                "value": 5.0
               },
               "FACTION": {
                 "type": "cexostring",
@@ -20017,11 +20397,11 @@
                 "value": "nw_ac_bbear06"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
-                "value": 7.0
+                "value": 6.0
               },
               "FACTION": {
                 "type": "cexostring",
@@ -20036,11 +20416,11 @@
                 "value": "nw_ac_bbear07"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
-                "value": 8.0
+                "value": 7.0
               },
               "FACTION": {
                 "type": "cexostring",
@@ -20055,11 +20435,11 @@
                 "value": "nw_ac_bbear08"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
-                "value": 9.0
+                "value": 7.0
               },
               "FACTION": {
                 "type": "cexostring",
@@ -20074,11 +20454,11 @@
                 "value": "nw_ac_bbear09"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
-                "value": 10.0
+                "value": 8.0
               },
               "FACTION": {
                 "type": "cexostring",
@@ -20093,11 +20473,11 @@
                 "value": "nw_ac_bbear10"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
-                "value": 11.0
+                "value": 9.0
               },
               "FACTION": {
                 "type": "cexostring",
@@ -20112,11 +20492,11 @@
                 "value": "nw_ac_bbear11"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
-                "value": 12.0
+                "value": 9.0
               },
               "FACTION": {
                 "type": "cexostring",
@@ -20131,11 +20511,11 @@
                 "value": "nw_ac_bbear12"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
-                "value": 13.0
+                "value": 10.0
               },
               "FACTION": {
                 "type": "cexostring",
@@ -20150,11 +20530,11 @@
                 "value": "nw_ac_bbear13"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
-                "value": 14.0
+                "value": 11.0
               },
               "FACTION": {
                 "type": "cexostring",
@@ -20169,11 +20549,11 @@
                 "value": "nw_ac_bbear14"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
-                "value": 15.0
+                "value": 12.0
               },
               "FACTION": {
                 "type": "cexostring",
@@ -20188,11 +20568,11 @@
                 "value": "nw_ac_bbear15"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
-                "value": 16.0
+                "value": 12.0
               },
               "FACTION": {
                 "type": "cexostring",
@@ -20207,11 +20587,11 @@
                 "value": "nw_ac_bbear16"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
-                "value": 17.0
+                "value": 13.0
               },
               "FACTION": {
                 "type": "cexostring",
@@ -20226,11 +20606,11 @@
                 "value": "nw_ac_bbear17"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
-                "value": 18.0
+                "value": 13.0
               },
               "FACTION": {
                 "type": "cexostring",
@@ -20245,11 +20625,11 @@
                 "value": "nw_ac_bbear18"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
-                "value": 19.0
+                "value": 14.0
               },
               "FACTION": {
                 "type": "cexostring",
@@ -20264,11 +20644,11 @@
                 "value": "nw_ac_bbear19"
               }
             },
-			{
+            {
               "__struct_id": 0,
               "CR": {
                 "type": "float",
-                "value": 20.0
+                "value": 15.0
               },
               "FACTION": {
                 "type": "cexostring",
@@ -20281,386 +20661,6 @@
               "RESREF": {
                 "type": "resref",
                 "value": "nw_ac_bbear20"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 1.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Eule"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_eule01"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 2.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Eule"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_eule02"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 3.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Eule"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_eule03"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 4.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Eule"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_eule04"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 5.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Eule"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_eule05"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 6.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Eule"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_eule06"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 7.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Eule"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_eule07"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 8.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Eule"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_eule08"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 9.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Eule"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_eule09"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 10.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Eule"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_eule10"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 11.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Eule"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_eule11"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 12.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Eule"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_eule12"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 13.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Eule"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_eule13"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 14.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Eule"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_eule14"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 15.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Eule"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_eule15"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 16.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Eule"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_eule16"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 17.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Eule"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_eule17"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 18.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Eule"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_eule18"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 19.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Eule"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_eule19"
-              }
-            },
-			{
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 20.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Eule"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "nw_ac_eule20"
               }
             },
             {

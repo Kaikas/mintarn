@@ -179,6 +179,13 @@
         "__struct_id": 6,
         "Area_Name": {
           "type": "resref",
+          "value": "rathaus"
+        }
+      },
+      {
+        "__struct_id": 6,
+        "Area_Name": {
+          "type": "resref",
           "value": "rittersaal"
         }
       },
@@ -187,6 +194,13 @@
         "Area_Name": {
           "type": "resref",
           "value": "schiffinneres"
+        }
+      },
+      {
+        "__struct_id": 6,
+        "Area_Name": {
+          "type": "resref",
+          "value": "schlossmintarn"
         }
       },
       {
@@ -264,13 +278,6 @@
         "Area_Name": {
           "type": "resref",
           "value": "zumrettendenufer"
-        }
-      },
-      {
-        "__struct_id": 6,
-        "Area_Name": {
-          "type": "resref",
-          "value": "rathaus"
         }
       }
     ]
@@ -652,7 +659,7 @@
   },
   "Mod_MinGameVer": {
     "type": "cexostring",
-    "value": "1.83"
+    "value": "1.85"
   },
   "Mod_MinPerHour": {
     "type": "byte",

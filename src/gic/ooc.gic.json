@@ -136,13 +136,6 @@
         "__struct_id": 9,
         "Comment": {
           "type": "cexostring",
-          "value": "Maps"
-        }
-      },
-      {
-        "__struct_id": 9,
-        "Comment": {
-          "type": "cexostring",
           "value": "Flower Vase"
         }
       },
@@ -340,6 +333,13 @@
         "Comment": {
           "type": "cexostring",
           "value": ""
+        }
+      },
+      {
+        "__struct_id": 9,
+        "Comment": {
+          "type": "cexostring",
+          "value": "Maps"
         }
       }
     ]

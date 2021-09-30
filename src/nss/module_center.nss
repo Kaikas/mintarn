@@ -169,6 +169,9 @@ void main() {
 
     object oPc = GetEnteringObject();
 
+    // Start nui
+    ExecuteScript("nui_test", oPc);
+
     // Send branch info
     string branch = NWNX_Util_GetEnvironmentVariable("BRANCH");
     SendMessageToPC(oPc, "Willkommen auf Mintarn. Aktueller Branch: " + branch);
