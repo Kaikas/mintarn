@@ -171,6 +171,7 @@ void main() {
 
     // Start nui
     ExecuteScript("nui_test", oPc);
+    //ExecuteScript("nui_dice", oPc);
 
     // Send branch info
     string branch = NWNX_Util_GetEnvironmentVariable("BRANCH");
