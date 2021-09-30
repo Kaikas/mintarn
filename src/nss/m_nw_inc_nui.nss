@@ -47,8 +47,7 @@ const float NUI_STYLE_ROW_HEIGHT           = 25.0;
 // * Set the window title to JsonBool(FALSE), Collapse to JsonBool(FALSE) and bClosable to FALSE
 //   to hide the title bar.
 //   Note: You MUST provide a way to close the window some other way, or the user will be stuck with it.
-json                     // Window
-NuiWindow(
+json NuiWindow(
   json jRoot,            // Layout-ish (NuiRow, NuiCol, NuiGroup)
   json jTitle,           // Bind:String
   json jGeometry,        // Bind:Rect        Set x&y to -1.0 to center window
