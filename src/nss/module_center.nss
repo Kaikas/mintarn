@@ -170,7 +170,7 @@ void main() {
     object oPc = GetEnteringObject();
 
     // Start nui
-    ExecuteScript("nui_test", oPc);
+    //ExecuteScript("nui_test", oPc);
     //ExecuteScript("nui_dice", oPc);
 
     // Send branch info
