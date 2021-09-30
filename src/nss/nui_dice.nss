@@ -1,4 +1,4 @@
-#include "nw_inc_nui"
+#include "m_nw_inc_nui"
 
 void main() {
     object oPc = OBJECT_SELF;
