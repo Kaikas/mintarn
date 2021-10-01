@@ -5,6 +5,7 @@
 #include "nwnx_feedback"
 #include "global_money"
 #include "x3_inc_string"
+#include "nwnx_chat"
 
 float quadratic(float x) {
     return (x/10000) * (x/10000);
@@ -553,6 +554,7 @@ void main() {
     "in dem ihr eure Portraits hochladen könnt, damit sie allen zur Verfügung gestellt werden können." +
     "\n\nBesucht und auf https://mintarn.de oder im Discord https://discord.gg/Tp2qyYp!";
     SendMessageToPC(oPc, sBeta);
+    NWNX_Chat_SendMessage(4, sBeta, GetObjectByTag("ERZAEHLER"), oPc);
 
     // Give XP every few seconds
     SetLocalInt(oPc, "xp_token", Random(1000000));
