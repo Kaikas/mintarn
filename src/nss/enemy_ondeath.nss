@@ -15,6 +15,8 @@ float quadratic(float x) {
     return (x/10000) * (x/10000);
 }
 
+
+
 // Gives xp to all creatures close to it
 void main() {
     int iXpPenalty = -1;
@@ -22,7 +24,7 @@ void main() {
     int iDatetime = 0;
     object oPc = GetFirstPC();
     while (oPc != OBJECT_INVALID && GetHitDice(oPc) < 15) {
-        if (GetArea(oPc) == GetArea(OBJECT_SELF)) {
+        if (GetArea(oPc) == GetArea(OBJECT_SELF) && !GetIsDM(oPc)) {
             if (GetDistanceBetween(OBJECT_SELF, oPc) < 50.0) {
                 // Get old xp
                 string sQuery = "SELECT * FROM Experience WHERE name=? AND charname=? AND type=?";
