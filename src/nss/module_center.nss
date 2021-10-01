@@ -538,6 +538,10 @@ void main() {
         AddJournalQuestEntry("wache", 1, oPc, FALSE, FALSE, TRUE);
     }
 
+    // Give XP every few seconds
+    SetLocalInt(oPc, "xp_token", Random(1000000));
+    DelayCommand(600.0, GiveXP(oPc, 1, 0, GetLocalInt(oPc, "xp_token")));
+
     // Start nui
     //ExecuteScript("nui_test", oPc);
     //ExecuteScript("nui_dice", oPc);
@@ -556,7 +560,4 @@ void main() {
     SendMessageToPC(oPc, sBeta);
     NWNX_Chat_SendMessage(4, sBeta, GetObjectByTag("ERZAEHLER"), oPc);
 
-    // Give XP every few seconds
-    SetLocalInt(oPc, "xp_token", Random(1000000));
-    DelayCommand(600.0, GiveXP(oPc, 1, 0, GetLocalInt(oPc, "xp_token")));
 }
