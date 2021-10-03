@@ -7,6 +7,8 @@ void main() {
     int iRequiredXp = ((iLevel + 1) * (iLevel) / 2) * 1000;
     if (iRequiredXp == 0) iRequiredXp = 3000;
 
+    int iGivenXP;
+
     if (GetScriptParam("belohnung") == "klein") {
     	iGivenXP = 1000;
         SendMessageToPC(oPc, "Kleine Belohnung (1000EP) an " + GetName(oTarget) + " vergeben");
@@ -15,13 +17,13 @@ void main() {
     }
     if (GetScriptParam("belohnung") == "mittel") {
     	iGivenXP = 2500 + iRequiredXp / 200;
-        SendMessageToPC(oPc, "Groﬂe Belohnung (" + StringToInt(iGivenXP) + ") an " + GetName(oTarget) + " vergeben");
+        SendMessageToPC(oPc, "Groﬂe Belohnung (" + IntToString(iGivenXP) + ") an " + GetName(oTarget) + " vergeben");
         SendMessageToPC(oTarget, "Ihr habt eine groﬂe Belohnung erhalten.");
         SetXP(oTarget, GetXP(oTarget) + iGivenXP);
     }
     if (GetScriptParam("belohnung") == "groﬂ") {
     	iGivenXP = 5000 + iRequiredXp / 100;
-        SendMessageToPC(oPc, "Auﬂerordentliche Belohnung (" + StringToInt(iGivenXP) + ") an " + GetName(oTarget) + " vergeben");
+        SendMessageToPC(oPc, "Auﬂerordentliche Belohnung (" + IntToString(iGivenXP) + ") an " + GetName(oTarget) + " vergeben");
         SendMessageToPC(oTarget, "Ihr habt eine auﬂerordenliche Belohnung erhalten.");
         SetXP(oTarget, GetXP(oTarget) + iGivenXP);
     }
