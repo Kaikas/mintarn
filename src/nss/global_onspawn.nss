@@ -42,7 +42,7 @@ void main() {
                 }
                 oWp = GetNextWaypoint(oWp, GetTag(OBJECT_SELF));
             }
-            DelayCommand(fTimer, ExecuteScript("global_onspawn", OBJECT_SELF));
+            //DelayCommand(fTimer, ExecuteScript("global_onspawn", OBJECT_SELF));
         }
     }
     // Sizes
