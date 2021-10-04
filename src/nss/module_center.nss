@@ -176,6 +176,13 @@ void main() {
 
     // Set to commoner faction
     ChangeToStandardFaction(oPc, STANDARD_FACTION_COMMONER);
+    // Reputation
+    AdjustReputation(oPc, GetObjectByTag("FACTION_MERCHANT"), 100);
+    AdjustReputation(oPc, GetObjectByTag("FACTION_COMMONER"), 100);
+    AdjustReputation(oPc, GetObjectByTag("FACTION_DEFENDER"), 100);
+    AdjustReputation(oPc, GetObjectByTag("FACTION_TIERE"), 100);
+    AdjustReputation(oPc, GetObjectByTag("FACTION_ENTS"), 100);
+    AdjustReputation(oPc, GetObjectByTag("FACTION_HOSTILE"), -100);
 
     // Failsafe
     if (GetIsDM(oPc) || GetIsPC(oPc) == FALSE) {
