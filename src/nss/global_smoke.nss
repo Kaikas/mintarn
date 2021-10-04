@@ -23,8 +23,6 @@ location GetLocationAboveAndInFrontOf(object oPC, float fDist, float fHeight)
 
 void SmokePipe(object oActivator)
 {
-    SendMessageToPC(oActivator, "debug");
-
     string sEmote1 = GetToken(101) + "*raucht Pfeife*";
     float fHeight = 1.7;
     float fDistance = 0.1;
