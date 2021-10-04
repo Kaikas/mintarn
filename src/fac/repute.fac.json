@@ -380,7 +380,7 @@
         },
         "FactionRep": {
           "type": "dword",
-          "value": 50
+          "value": 100
         }
       },
       {
@@ -410,7 +410,7 @@
         },
         "FactionRep": {
           "type": "dword",
-          "value": 50
+          "value": 100
         }
       },
       {
@@ -470,7 +470,7 @@
         },
         "FactionRep": {
           "type": "dword",
-          "value": 50
+          "value": 100
         }
       },
       {
@@ -515,7 +515,7 @@
         },
         "FactionRep": {
           "type": "dword",
-          "value": 50
+          "value": 100
         }
       },
       {
@@ -530,7 +530,7 @@
         },
         "FactionRep": {
           "type": "dword",
-          "value": 50
+          "value": 100
         }
       },
       {
@@ -560,7 +560,7 @@
         },
         "FactionRep": {
           "type": "dword",
-          "value": 50
+          "value": 100
         }
       },
       {
@@ -605,7 +605,7 @@
         },
         "FactionRep": {
           "type": "dword",
-          "value": 50
+          "value": 100
         }
       },
       {
@@ -620,7 +620,7 @@
         },
         "FactionRep": {
           "type": "dword",
-          "value": 50
+          "value": 100
         }
       },
       {
@@ -665,7 +665,7 @@
         },
         "FactionRep": {
           "type": "dword",
-          "value": 50
+          "value": 100
         }
       },
       {
@@ -680,7 +680,7 @@
         },
         "FactionRep": {
           "type": "dword",
-          "value": 50
+          "value": 100
         }
       },
       {
@@ -695,7 +695,7 @@
         },
         "FactionRep": {
           "type": "dword",
-          "value": 50
+          "value": 100
         }
       },
       {
@@ -725,7 +725,7 @@
         },
         "FactionRep": {
           "type": "dword",
-          "value": 50
+          "value": 100
         }
       },
       {
@@ -785,7 +785,7 @@
         },
         "FactionRep": {
           "type": "dword",
-          "value": 50
+          "value": 100
         }
       },
       {
@@ -815,7 +815,7 @@
         },
         "FactionRep": {
           "type": "dword",
-          "value": 50
+          "value": 100
         }
       },
       {
