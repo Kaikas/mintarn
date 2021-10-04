@@ -8,7 +8,7 @@
 #include "nwnx_chat"
 
 float quadratic(float x) {
-    return (x/10000) * (x/10000);
+    return (x/5000) * (x/5000);
 }
 
 // Gibt einem Spieler XP
@@ -44,12 +44,12 @@ void GiveXP(object oPc, int iCount, int iSumXp, int iToken) {
         }
     }
     // Basisexp
-    int iXp = 400;
-    if (iCharacters > 30) iXp = 420;
-    if (iCharacters > 60) iXp = 440;
-    if (iCharacters > 90) iXp = 460;
-    if (iCharacters > 120) iXp = 480;
-    if (iCharacters > 150) iXp = 500;
+    int iXp = 200;
+    if (iCharacters > 30) iXp = 220;
+    if (iCharacters > 60) iXp = 240;
+    if (iCharacters > 90) iXp = 260;
+    if (iCharacters > 120) iXp = 280;
+    if (iCharacters > 150) iXp = 300;
 
     // Player has spoken, give XP
     if (iTalked > 0) {
@@ -118,7 +118,7 @@ void GiveXP(object oPc, int iCount, int iSumXp, int iToken) {
         //} else {
         //    iXp = Random(5);
         //}
-        if (iXpPenalty > 10000) {
+        if (iXpPenalty > 5000) {
             iXp = FloatToInt(IntToFloat(iXp) / quadratic(IntToFloat(iXpPenalty)));
         }
         // failsafe
