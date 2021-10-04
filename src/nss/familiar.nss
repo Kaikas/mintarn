@@ -21,6 +21,7 @@ void spawn(object oPc, object oPet) {
             }
         }
     }
+    SendMessageToPC(oPc, "Pet: " + GetTag(oPet) + IntToString(iHitPoints));
     // Entry not found, create
     if (iFound == 0) {
         // Check if entry already exists
