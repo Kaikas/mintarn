@@ -1345,7 +1345,7 @@ int familiar(string sMessage) {
   if (sMessage == "/familiar" || sMessage == "/vertrauter") {
     SummonFamiliar(oPc);
     object oFamiliar = GetAssociate(ASSOCIATE_TYPE_FAMILIAR, oPc);
-    spawn(oPc, oFamiliar);
+    DelayCommand(1.0f, spawn(oPc, oFamiliar));
     return 1;
   }
   return 0;
@@ -1355,7 +1355,7 @@ int companion(string sMessage) {
   if (sMessage == "/companion" || sMessage == "/begleiter") {
     SummonAnimalCompanion(oPc);
     object oCompanion = GetAssociate(ASSOCIATE_TYPE_ANIMALCOMPANION, oPc);
-    spawn(oPc, oCompanion);
+    DelayCommand(1.0f, spawn(oPc, oCompanion));
     return 1;
   }
   return 0;
