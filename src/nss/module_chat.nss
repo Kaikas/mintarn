@@ -1341,11 +1341,20 @@ int rolls(string sMessage, object oTarget) {
   return 0;
 }
 
+void spawnFamiliar(object oPc) {
+    object oFamiliar = GetAssociate(ASSOCIATE_TYPE_FAMILIAR, oPc);
+    spawn(oPc, oFamiliar);
+}
+
+void spawnCompanion(object oPc) {
+    object oCompanion = GetAssociate(ASSOCIATE_TYPE_ANIMALCOMPANION, oPc);
+    spawn(oPc, oCompanion);
+}
+
 int familiar(string sMessage) {
   if (sMessage == "/familiar" || sMessage == "/vertrauter") {
     SummonFamiliar(oPc);
-    object oFamiliar = GetAssociate(ASSOCIATE_TYPE_FAMILIAR, oPc);
-    DelayCommand(1.0f, spawn(oPc, oFamiliar));
+    spawnFamiliar(oPc);
     return 1;
   }
   return 0;
@@ -1354,8 +1363,7 @@ int familiar(string sMessage) {
 int companion(string sMessage) {
   if (sMessage == "/companion" || sMessage == "/begleiter") {
     SummonAnimalCompanion(oPc);
-    object oCompanion = GetAssociate(ASSOCIATE_TYPE_ANIMALCOMPANION, oPc);
-    DelayCommand(1.0f, spawn(oPc, oCompanion));
+    DelayCommand(1.0f, spawnCompanion(oPc));
     return 1;
   }
   return 0;
