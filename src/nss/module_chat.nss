@@ -1342,13 +1342,13 @@ int rolls(string sMessage, object oTarget) {
 }
 
 void spawnFamiliar(object oPc) {
-    object oFamiliar = GetAssociate(ASSOCIATE_TYPE_FAMILIAR, oPc);
-    spawn(oPc, oFamiliar);
+  object oFamiliar = GetAssociate(ASSOCIATE_TYPE_FAMILIAR, oPc);
+  spawn(oPc, oFamiliar);
 }
 
 void spawnCompanion(object oPc) {
-    object oCompanion = GetAssociate(ASSOCIATE_TYPE_ANIMALCOMPANION, oPc);
-    spawn(oPc, oCompanion);
+  object oCompanion = GetAssociate(ASSOCIATE_TYPE_ANIMALCOMPANION, oPc);
+  spawn(oPc, oCompanion);
 }
 
 int familiar(string sMessage) {
@@ -1836,145 +1836,142 @@ void main() {
   string sUnban = GetSubString(sMessage, 0, 6);
   string sPferd= GetSubString(sMessage, 0, 4);
 
-  if (iChatVolume != 2) {
-    if (GetSubString(sMessage, 0, 1) == ":" || GetSubString(sMessage, 0, 1) == "/") {
-        if (speakAsChar(sMessage) ||
-            speakOOC(sMessage) ||
-            banPlayer(sMessage) ||
-            unbanPlayer(sMessage) ||
-            listCDKeys(sMessage) ||
-            listBannedPlayers(sMessage) ||
-            changeName(sMessage) ||
-            changeDescription(sMessage) ||
-            ride(sMessage) ||
-            unstuck(sMessage) ||
-            report(sMessage) ||
-            setWindFromChat(sMessage) ||
-            deleteHint(sMessage) ||
-            delete(sMessage) ||
-            emotes(sMessage, oPc) ||
-            aussehen(sMessage) ||
-            attributes(sMessage, oPc) ||
-            savingThrows(sMessage, oPc) ||
-            skills(sMessage, oPc) ||
-            rolls(sMessage, oPc) ||
-            familiar(sMessage) ||
-            companion(sMessage) ||
-            token(sMessage) ||
-            hindurchzwaengen(sMessage) ||
-            phenotype(sMessage) ||
-            afk(sMessage) ||
-            ghost(sMessage) ||
-            climb(sMessage) ||
-            backpack(sMessage) ||
-            masks(sMessage) ||
-            die(sMessage) ||
-            time(sMessage) ||
-            settime(sMessage) ||
-            initiative(sMessage) ||
-            speakDMArea(sMessage) ||
-            speakDMServer(sMessage) ||
-            help(sMessage) ||
-            helpSavingThrows(sMessage) ||
-            helpAnimation(sMessage) ||
-            helpSkills(sMessage) ||
-            helpMasks(sMessage)) {
-      } else {
-        SendMessageToPC(oPc, "Ungültiger Befehl: \"" +
-            sMessage +
-            "\" \n\n" +
-            "/hilfe \n" +
-            "/hilfe animation \n" +
-            "/hilfe fertigkeit \n");
-      }
-    }
-} else {
-  if (iChatVolume == 0) {
-    // Normal talk
-    sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
-    sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
-    SetPCChatMessage(sMessage);
-  } else if (iChatVolume == 1) {
-    // Whisper
-    SetPCChatVolume(TALKVOLUME_SILENT_TALK);
-    sMessage = GetToken(103) + sMessage + "</c>";
-    sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
-    sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
-    SetPCChatMessage(sMessage);
-  } else if (iChatVolume == 2) { //
-    // Shout
-    sMessage = GetToken(104) + sMessage + "</c>";
-    sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
-    sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
-    SetPCChatVolume(TALKVOLUME_SILENT_TALK);
-    //SetPCChatMessage(sMessage);
-    if (GetIsDM(oPc) || GetIsDM(GetMaster(oPc)) || GetIsDMPossessed(oPc)) {
-      SendMessageToPC(oPc, "Folgende Spieler im 50 Meter Radius haben euch vernommen:");
-      SendMessageToAllDMs("Erzähler (/s)[" + GetTag(GetArea(oPc)) + "]: " + sMessage);
-      object oTalkTo = GetFirstPC();
-      while (oTalkTo != OBJECT_INVALID) {
-        if (GetArea(oTalkTo) == GetArea(oPc) && GetDistanceBetween(oTalkTo, oPc) < 50.0) {
-          if (!GetIsDM(oTalkTo)) {
-            NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
-          }
-          SendMessageToPC(oPc, GetName(oTalkTo));
+  if (GetSubString(sMessage, 0, 1) == ":" || GetSubString(sMessage, 0, 1) == "/") {
+    if (speakAsChar(sMessage) ||
+        speakOOC(sMessage) ||
+        banPlayer(sMessage) ||
+        unbanPlayer(sMessage) ||
+        listCDKeys(sMessage) ||
+        listBannedPlayers(sMessage) ||
+        changeName(sMessage) ||
+        changeDescription(sMessage) ||
+        ride(sMessage) ||
+        unstuck(sMessage) ||
+        report(sMessage) ||
+        setWindFromChat(sMessage) ||
+        deleteHint(sMessage) ||
+        delete(sMessage) ||
+        emotes(sMessage, oPc) ||
+        aussehen(sMessage) ||
+        attributes(sMessage, oPc) ||
+        savingThrows(sMessage, oPc) ||
+        skills(sMessage, oPc) ||
+        rolls(sMessage, oPc) ||
+        familiar(sMessage) ||
+        companion(sMessage) ||
+        token(sMessage) ||
+        hindurchzwaengen(sMessage) ||
+        phenotype(sMessage) ||
+        afk(sMessage) ||
+        ghost(sMessage) ||
+        climb(sMessage) ||
+        backpack(sMessage) ||
+        masks(sMessage) ||
+        die(sMessage) ||
+        time(sMessage) ||
+        settime(sMessage) ||
+        initiative(sMessage) ||
+        speakDMArea(sMessage) ||
+        speakDMServer(sMessage) ||
+        help(sMessage) ||
+        helpSavingThrows(sMessage) ||
+        helpAnimation(sMessage) ||
+        helpSkills(sMessage) ||
+        helpMasks(sMessage)) {
+        } else {
+          SendMessageToPC(oPc, "Ung¿ltiger Befehl: \"" +
+              sMessage +
+              "\" \n\n" +
+              "/hilfe \n" +
+              "/hilfe animation \n" +
+              "/hilfe fertigkeit \n");
         }
-        oTalkTo = GetNextPC();
-      }
-    }
-  } else if (iChatVolume == 4) {
-    SendMessageToPC(oPc, GetToken(102) + "DM: " + sMessage + "</c>");
-    NWNX_WebHook_SendWebHookHTTPS("discordapp.com", NWNX_Util_GetEnvironmentVariable("WEBHOOK_DM"), GetPCPlayerName(oPc) + " - " + GetName(oPc) + ": " + sMessage);
-  } else if (iChatVolume == 5) {
-    // Gruppe
-    SetPCChatVolume(TALKVOLUME_SILENT_TALK);
-    sMessage = GetToken(104) + sMessage + "</c>";
-    // Does not work as inteded. Fix incoming
-    NWNX_Chat_SendMessage(6, sMessage, oPc, OBJECT_INVALID);
-
-    // Send tells to everyone in the party then
-    //NWNX_Chat_SendMessage(4, sMessage, oPc, oPc);
-    //object oPartyMember = GetFirstFactionMember(oPc, TRUE);
-    //while(GetIsObjectValid(oPartyMember) == TRUE) {
-    //    NWNX_Chat_SendMessage(4, sMessage, oPc, oPartyMember);
-    //    oPartyMember = GetNextFactionMember(oPc, TRUE);
-    //}
-
-    // Send message to DMs
-    //object oPlayer = GetFirstPC();
-    //while(GetIsObjectValid(oPlayer)) {
-    //    if (GetIsDM(oPlayer)) {
-    //        NWNX_Chat_SendMessage(4, "(Gruppe): " + sMessage, oPc, oPlayer);
-    //    }
-    //    oPlayer = GetNextPC();
-    //}
-  }
-}
-
-sQuery = "INSERT INTO Chat (name, charname, text, datetime) VALUES (?, ?, ?, ?)";
-if (NWNX_SQL_PrepareQuery(sQuery)) {
-  NWNX_SQL_PreparedString(0, sAccountName);
-  NWNX_SQL_PreparedString(1, sName);
-  if (sFirstChar == ":" && sSecondChar == "1") {
-    NWNX_SQL_PreparedString(2, "(" + GetName(GetLocalObject(oPc, "dmspeak1")) + ")" + sMessage);
-  } else if (sFirstChar == ":" && sSecondChar == "2") {
-    NWNX_SQL_PreparedString(2, "(" + GetName(GetLocalObject(oPc, "dmspeak2")) + ")" + sMessage);
-  } else if (sFirstChar == ":" && sSecondChar == "3") {
-    NWNX_SQL_PreparedString(2, "(" + GetName(GetLocalObject(oPc, "dmspeak3")) + ")" + sMessage);
-  } else if (sFirstChar == ":" && sSecondChar == "4") {
-    NWNX_SQL_PreparedString(2, "(" + GetName(GetLocalObject(oPc, "dmspeak4")) + ")" + sMessage);
-  } else if (sFirstChar == ":" && sSecondChar == "5") {
-    NWNX_SQL_PreparedString(2, "(" + GetName(GetLocalObject(oPc, "dmspeak5")) + ")" + sMessage);
   } else {
-    // Mark group chat, and DM chat
-    if (iChatVolume == 5) {
-      sMessage = "//(Gruppe): " + sMessage;
+    if (iChatVolume == 0) {
+      // Normal talk
+      sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
+      sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
+      SetPCChatMessage(sMessage);
+    } else if (iChatVolume == 1) {
+      // Whisper
+      SetPCChatVolume(TALKVOLUME_SILENT_TALK);
+      sMessage = GetToken(103) + sMessage + "</c>";
+      sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
+      sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
+      SetPCChatMessage(sMessage);
+    } else if (iChatVolume == 2) { //
+      // Shout
+      sMessage = GetToken(104) + sMessage + "</c>";
+      sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
+      sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
+      SetPCChatVolume(TALKVOLUME_SILENT_TALK);
+      //SetPCChatMessage(sMessage);
+      if (GetIsDM(oPc) || GetIsDM(GetMaster(oPc)) || GetIsDMPossessed(oPc)) {
+        SendMessageToPC(oPc, "Folgende Spieler im 50 Meter Radius haben euch vernommen:");
+        SendMessageToAllDMs("Erz¿hler (/s)[" + GetTag(GetArea(oPc)) + "]: " + sMessage);
+        object oTalkTo = GetFirstPC();
+        while (oTalkTo != OBJECT_INVALID) {
+          if (GetArea(oTalkTo) == GetArea(oPc) && GetDistanceBetween(oTalkTo, oPc) < 50.0) {
+            if (!GetIsDM(oTalkTo)) {
+              NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
+            }
+            SendMessageToPC(oPc, GetName(oTalkTo));
+          }
+          oTalkTo = GetNextPC();
+        }
+      }
+    } else if (iChatVolume == 4) {
+      SendMessageToPC(oPc, GetToken(102) + "DM: " + sMessage + "</c>");
+      NWNX_WebHook_SendWebHookHTTPS("discordapp.com", NWNX_Util_GetEnvironmentVariable("WEBHOOK_DM"), GetPCPlayerName(oPc) + " - " + GetName(oPc) + ": " + sMessage);
+    } else if (iChatVolume == 5) {
+      // Gruppe
+      SetPCChatVolume(TALKVOLUME_SILENT_TALK);
+      sMessage = GetToken(104) + sMessage + "</c>";
+      // Does not work as inteded. Fix incoming
+      NWNX_Chat_SendMessage(6, sMessage, oPc, OBJECT_INVALID);
+
+      // Send tells to everyone in the party then
+      //NWNX_Chat_SendMessage(4, sMessage, oPc, oPc);
+      //object oPartyMember = GetFirstFactionMember(oPc, TRUE);
+      //while(GetIsObjectValid(oPartyMember) == TRUE) {
+      //    NWNX_Chat_SendMessage(4, sMessage, oPc, oPartyMember);
+      //    oPartyMember = GetNextFactionMember(oPc, TRUE);
+      //}
+
+      // Send message to DMs
+      //object oPlayer = GetFirstPC();
+      //while(GetIsObjectValid(oPlayer)) {
+      //    if (GetIsDM(oPlayer)) {
+      //        NWNX_Chat_SendMessage(4, "(Gruppe): " + sMessage, oPc, oPlayer);
+      //    }
+      //    oPlayer = GetNextPC();
+      //}
     }
-    NWNX_SQL_PreparedString(2, sMessage);
-
   }
-  NWNX_SQL_PreparedString(3, IntToString(NWNX_Time_GetTimeStamp()));
-  NWNX_SQL_ExecutePreparedQuery();
-}
-}
 
+  sQuery = "INSERT INTO Chat (name, charname, text, datetime) VALUES (?, ?, ?, ?)";
+  if (NWNX_SQL_PrepareQuery(sQuery)) {
+    NWNX_SQL_PreparedString(0, sAccountName);
+    NWNX_SQL_PreparedString(1, sName);
+    if (sFirstChar == ":" && sSecondChar == "1") {
+      NWNX_SQL_PreparedString(2, "(" + GetName(GetLocalObject(oPc, "dmspeak1")) + ")" + sMessage);
+    } else if (sFirstChar == ":" && sSecondChar == "2") {
+      NWNX_SQL_PreparedString(2, "(" + GetName(GetLocalObject(oPc, "dmspeak2")) + ")" + sMessage);
+    } else if (sFirstChar == ":" && sSecondChar == "3") {
+      NWNX_SQL_PreparedString(2, "(" + GetName(GetLocalObject(oPc, "dmspeak3")) + ")" + sMessage);
+    } else if (sFirstChar == ":" && sSecondChar == "4") {
+      NWNX_SQL_PreparedString(2, "(" + GetName(GetLocalObject(oPc, "dmspeak4")) + ")" + sMessage);
+    } else if (sFirstChar == ":" && sSecondChar == "5") {
+      NWNX_SQL_PreparedString(2, "(" + GetName(GetLocalObject(oPc, "dmspeak5")) + ")" + sMessage);
+    } else {
+      // Mark group chat, and DM chat
+      if (iChatVolume == 5) {
+        sMessage = "//(Gruppe): " + sMessage;
+      }
+      NWNX_SQL_PreparedString(2, sMessage);
+
+    }
+    NWNX_SQL_PreparedString(3, IntToString(NWNX_Time_GetTimeStamp()));
+    NWNX_SQL_ExecutePreparedQuery();
+  }
+}
