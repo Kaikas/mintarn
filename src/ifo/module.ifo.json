@@ -172,7 +172,7 @@
         "__struct_id": 6,
         "Area_Name": {
           "type": "resref",
-          "value": "ooc"
+          "value": "rathaus"
         }
       },
       {
@@ -279,6 +279,21 @@
           "type": "resref",
           "value": "zumrettendenufer"
         }
+      },
+      {
+        "__struct_id": 6,
+        "Area_Name": {
+          "type": "resref",
+          "value": "ooc"
+        }
+      },
+      {
+        "__struct_id": 6,
+        "Area_Name": {
+          "type": "resref",
+          "value": "ooc"
+        }
+
       }
     ]
   },
@@ -322,11 +337,11 @@
   },
   "Mod_Entry_X": {
     "type": "float",
-    "value": 4.5372
+    "value": 4.1455
   },
   "Mod_Entry_Y": {
     "type": "float",
-    "value": 24.7525
+    "value": 4.5859
   },
   "Mod_Entry_Z": {
     "type": "float",
