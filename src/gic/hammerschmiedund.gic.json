@@ -1151,63 +1151,56 @@
         "__struct_id": 9,
         "Comment": {
           "type": "cexostring",
-          "value": "on; scripted light effect and switch with \"off\" model\r\nuseable, plot\r\nAnimation State: activated\r\nScript Set: p_light.ini\r\nint CEP_L_AMION=1\r\nstring CEP_L_LIGHTCONST=\"YE15\"\r\nstring CEP_L_LIGHTSWAP=\"p_zep02244_uu\""
+          "value": ""
         }
       },
       {
         "__struct_id": 9,
         "Comment": {
           "type": "cexostring",
-          "value": "on; scripted light effect and switch with \"off\" model\r\nuseable, plot\r\nAnimation State: activated\r\nScript Set: p_light.ini\r\nint CEP_L_AMION=1\r\nstring CEP_L_LIGHTCONST=\"YE15\"\r\nstring CEP_L_LIGHTSWAP=\"p_zep02244_uu\""
+          "value": ""
         }
       },
       {
         "__struct_id": 9,
         "Comment": {
           "type": "cexostring",
-          "value": "on; scripted light effect and switch with \"off\" model\r\nuseable, plot\r\nAnimation State: activated\r\nScript Set: p_light.ini\r\nint CEP_L_AMION=1\r\nstring CEP_L_LIGHTCONST=\"YE15\"\r\nstring CEP_L_LIGHTSWAP=\"p_zep02244_uu\""
+          "value": ""
         }
       },
       {
         "__struct_id": 9,
         "Comment": {
           "type": "cexostring",
-          "value": "on; scripted light effect and switch with \"off\" model\r\nuseable, plot\r\nAnimation State: activated\r\nScript Set: p_light.ini\r\nint CEP_L_AMION=1\r\nstring CEP_L_LIGHTCONST=\"YE15\"\r\nstring CEP_L_LIGHTSWAP=\"p_zep02244_uu\""
+          "value": ""
         }
       },
       {
         "__struct_id": 9,
         "Comment": {
           "type": "cexostring",
-          "value": "on; scripted light effect and switch with \"off\" model\r\nuseable, plot\r\nAnimation State: activated\r\nScript Set: p_light.ini\r\nint CEP_L_AMION=1\r\nstring CEP_L_LIGHTCONST=\"YE15\"\r\nstring CEP_L_LIGHTSWAP=\"p_zep02244_uu\""
+          "value": ""
         }
       },
       {
         "__struct_id": 9,
         "Comment": {
           "type": "cexostring",
-          "value": "on; scripted light effect and switch with \"off\" model\r\nuseable, plot\r\nAnimation State: activated\r\nScript Set: p_light.ini\r\nint CEP_L_AMION=1\r\nstring CEP_L_LIGHTCONST=\"YE15\"\r\nstring CEP_L_LIGHTSWAP=\"p_zep02244_uu\""
+          "value": ""
         }
       },
       {
         "__struct_id": 9,
         "Comment": {
           "type": "cexostring",
-          "value": "on; scripted light effect and switch with \"off\" model\r\nuseable, plot\r\nAnimation State: activated\r\nScript Set: p_light.ini\r\nint CEP_L_AMION=1\r\nstring CEP_L_LIGHTCONST=\"YE15\"\r\nstring CEP_L_LIGHTSWAP=\"p_zep02244_uu\""
+          "value": ""
         }
       },
       {
         "__struct_id": 9,
         "Comment": {
           "type": "cexostring",
-          "value": "on; scripted light effect and switch with \"off\" model\r\nuseable, plot\r\nAnimation State: activated\r\nScript Set: p_light.ini\r\nint CEP_L_AMION=1\r\nstring CEP_L_LIGHTCONST=\"YE15\"\r\nstring CEP_L_LIGHTSWAP=\"p_zep02244_uu\""
-        }
-      },
-      {
-        "__struct_id": 9,
-        "Comment": {
-          "type": "cexostring",
-          "value": "on; scripted light effect and switch with \"off\" model\r\nuseable, plot\r\nAnimation State: activated\r\nScript Set: p_light.ini\r\nint CEP_L_AMION=1\r\nstring CEP_L_LIGHTCONST=\"YE15\"\r\nstring CEP_L_LIGHTSWAP=\"p_zep02244_uu\""
+          "value": ""
         }
       },
       {
@@ -1233,6 +1226,63 @@
   },
   "WaypointList": {
     "type": "list",
-    "value": []
+    "value": [
+      {
+        "__struct_id": 5,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 5,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 5,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 5,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 5,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 5,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 5,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 5,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      }
+    ]
   }
 }
