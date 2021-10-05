@@ -8,6 +8,7 @@
 #include "x0_i0_position"
 #include "nwnx_webhook"
 #include "weather_helper"
+#include "familiar"
 
 // CUSTOM SKILL CONSTANTS
 // Some constants are predefined in nwscripts.nss
@@ -1340,9 +1341,20 @@ int rolls(string sMessage, object oTarget) {
   return 0;
 }
 
+void spawnFamiliar(object oPc) {
+    object oFamiliar = GetAssociate(ASSOCIATE_TYPE_FAMILIAR, oPc);
+    spawn(oPc, oFamiliar);
+}
+
+void spawnCompanion(object oPc) {
+    object oCompanion = GetAssociate(ASSOCIATE_TYPE_ANIMALCOMPANION, oPc);
+    spawn(oPc, oCompanion);
+}
+
 int familiar(string sMessage) {
   if (sMessage == "/familiar" || sMessage == "/vertrauter") {
     SummonFamiliar(oPc);
+    spawnFamiliar(oPc);
     return 1;
   }
   return 0;
@@ -1351,6 +1363,7 @@ int familiar(string sMessage) {
 int companion(string sMessage) {
   if (sMessage == "/companion" || sMessage == "/begleiter") {
     SummonAnimalCompanion(oPc);
+    DelayCommand(1.0f, spawnCompanion(oPc));
     return 1;
   }
   return 0;
@@ -1825,7 +1838,7 @@ void main() {
 
   if (GetSubString(sMessage, 0, 1) == ":" || GetSubString(sMessage, 0, 1) == "/") {
     if (speakAsChar(sMessage) ||
-        speakOOC(sMessage) || 
+        speakOOC(sMessage) ||
         banPlayer(sMessage) ||
         unbanPlayer(sMessage) ||
         listCDKeys(sMessage) ||

@@ -32,7 +32,7 @@ jobs:
 
       # Runs nasher to pack the module
       - name: Run nasher pack to build Mintarn.mod
-        run: docker run --rm -v ${PWD}:/nasher kaikas/nasher:nwn_develop pack
+        run: docker run --rm -v ${PWD}:/nasher kaikas/nasher:nwn_develop pack --default
       
       # Set branch name
       - name: Set branch name

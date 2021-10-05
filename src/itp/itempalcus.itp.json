@@ -5858,6 +5858,17 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
+                      "value": "Alchemistenfeuer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_firebomb"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
                       "value": "Außergewöhnliche Handaxt"
                     },
                     "RESREF": {
@@ -7161,6 +7172,17 @@
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_wa_saebel"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Säureflasche"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_wa_acidbomb"
                     }
                   },
                   {

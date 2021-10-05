@@ -12,7 +12,7 @@ void respawn(location lLocation, string sResRef, string sTag, object oArea) {
 }
 
 float quadratic(float x) {
-    return (x/10000) * (x/10000);
+    return (x/5000) * (x/5000);
 }
 
 // Gives xp to all creatures close to it
@@ -21,8 +21,8 @@ void main() {
     int iRpEp = 0;
     int iDatetime = 0;
     object oPc = GetFirstPC();
-    while (oPc != OBJECT_INVALID && GetHitDice(oPc) < 15) {
-        if (GetArea(oPc) == GetArea(OBJECT_SELF)) {
+    while (oPc != OBJECT_INVALID) {
+        if (GetArea(oPc) == GetArea(OBJECT_SELF) && GetHitDice(oPc) < 15 && !GetIsDM(oPc)) {
             if (GetDistanceBetween(OBJECT_SELF, oPc) < 50.0) {
                 // Get old xp
                 string sQuery = "SELECT * FROM Experience WHERE name=? AND charname=? AND type=?";
@@ -79,7 +79,7 @@ void main() {
                 }
 
                 // Base XP
-                int iXp = 250;
+                int iXp = 50;
                 // Reduce xp by level over CR
                 int iLevel = GetLevelByPosition(1, oPc) + GetLevelByPosition(2, oPc) + GetLevelByPosition(3, oPc);
                 int iDiff = iLevel - FloatToInt(GetChallengeRating(OBJECT_SELF));
@@ -89,7 +89,7 @@ void main() {
                     iXp = iXp - 40;
                 }
                 // Reduce XP by cap
-                if (iXpPenalty > 10000) {
+                if (iXpPenalty > 5000) {
                     iXp = FloatToInt(IntToFloat(iXp) / quadratic(IntToFloat(iXpPenalty)));
                 }
                 // failsafe
