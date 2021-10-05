@@ -1977,3 +1977,4 @@ if (NWNX_SQL_PrepareQuery(sQuery)) {
   NWNX_SQL_ExecutePreparedQuery();
 }
 }
+
