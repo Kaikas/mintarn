@@ -1836,56 +1836,58 @@ void main() {
   string sUnban = GetSubString(sMessage, 0, 6);
   string sPferd= GetSubString(sMessage, 0, 4);
 
-  if (GetSubString(sMessage, 0, 1) == ":" || GetSubString(sMessage, 0, 1) == "/") {
-    if (speakAsChar(sMessage) ||
-        speakOOC(sMessage) ||
-        banPlayer(sMessage) ||
-        unbanPlayer(sMessage) ||
-        listCDKeys(sMessage) ||
-        listBannedPlayers(sMessage) ||
-        changeName(sMessage) ||
-        changeDescription(sMessage) ||
-        ride(sMessage) ||
-        unstuck(sMessage) ||
-        report(sMessage) ||
-        setWindFromChat(sMessage) ||
-        deleteHint(sMessage) ||
-        delete(sMessage) ||
-        emotes(sMessage, oPc) ||
-        aussehen(sMessage) ||
-        attributes(sMessage, oPc) ||
-        savingThrows(sMessage, oPc) ||
-        skills(sMessage, oPc) ||
-        rolls(sMessage, oPc) ||
-        familiar(sMessage) ||
-        companion(sMessage) ||
-        token(sMessage) ||
-        hindurchzwaengen(sMessage) ||
-        phenotype(sMessage) ||
-        afk(sMessage) ||
-        ghost(sMessage) ||
-        climb(sMessage) ||
-        backpack(sMessage) ||
-        masks(sMessage) ||
-        die(sMessage) ||
-        time(sMessage) ||
-        settime(sMessage) ||
-        initiative(sMessage) ||
-        speakDMArea(sMessage) ||
-        speakDMServer(sMessage) ||
-        help(sMessage) ||
-        helpSavingThrows(sMessage) ||
-        helpAnimation(sMessage) ||
-        helpSkills(sMessage) ||
-        helpMasks(sMessage)) {
-  } else {
-    SendMessageToPC(oPc, "Ungültiger Befehl: \"" +
-        sMessage +
-        "\" \n\n" +
-        "/hilfe \n" +
-        "/hilfe animation \n" +
-        "/hilfe fertigkeit \n");
-  }
+  if (iChatVolume != 2) {
+    if (GetSubString(sMessage, 0, 1) == ":" || GetSubString(sMessage, 0, 1) == "/") {
+        if (speakAsChar(sMessage) ||
+            speakOOC(sMessage) ||
+            banPlayer(sMessage) ||
+            unbanPlayer(sMessage) ||
+            listCDKeys(sMessage) ||
+            listBannedPlayers(sMessage) ||
+            changeName(sMessage) ||
+            changeDescription(sMessage) ||
+            ride(sMessage) ||
+            unstuck(sMessage) ||
+            report(sMessage) ||
+            setWindFromChat(sMessage) ||
+            deleteHint(sMessage) ||
+            delete(sMessage) ||
+            emotes(sMessage, oPc) ||
+            aussehen(sMessage) ||
+            attributes(sMessage, oPc) ||
+            savingThrows(sMessage, oPc) ||
+            skills(sMessage, oPc) ||
+            rolls(sMessage, oPc) ||
+            familiar(sMessage) ||
+            companion(sMessage) ||
+            token(sMessage) ||
+            hindurchzwaengen(sMessage) ||
+            phenotype(sMessage) ||
+            afk(sMessage) ||
+            ghost(sMessage) ||
+            climb(sMessage) ||
+            backpack(sMessage) ||
+            masks(sMessage) ||
+            die(sMessage) ||
+            time(sMessage) ||
+            settime(sMessage) ||
+            initiative(sMessage) ||
+            speakDMArea(sMessage) ||
+            speakDMServer(sMessage) ||
+            help(sMessage) ||
+            helpSavingThrows(sMessage) ||
+            helpAnimation(sMessage) ||
+            helpSkills(sMessage) ||
+            helpMasks(sMessage)) {
+      } else {
+        SendMessageToPC(oPc, "Ungültiger Befehl: \"" +
+            sMessage +
+            "\" \n\n" +
+            "/hilfe \n" +
+            "/hilfe animation \n" +
+            "/hilfe fertigkeit \n");
+      }
+    }
 } else {
   if (iChatVolume == 0) {
     // Normal talk
