@@ -172,7 +172,7 @@
         "__struct_id": 6,
         "Area_Name": {
           "type": "resref",
-          "value": "rathaus"
+          "value": "ooc"
         }
       },
       {
@@ -279,21 +279,6 @@
           "type": "resref",
           "value": "zumrettendenufer"
         }
-      },
-      {
-        "__struct_id": 6,
-        "Area_Name": {
-          "type": "resref",
-          "value": "ooc"
-        }
-      },
-      {
-        "__struct_id": 6,
-        "Area_Name": {
-          "type": "resref",
-          "value": "ooc"
-        }
-
       }
     ]
   },
