@@ -383,7 +383,9 @@ void main() {
     Freihafen();
     Weather();
     Nether();
-    Spawn();
+    if (!GetIsDM(oPc)) {
+      Spawn();
+    }
   }
 
 }
