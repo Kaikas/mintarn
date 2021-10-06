@@ -4700,6 +4700,17 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
+                      "value": "Creature Item: Bandit"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_ru_bandit"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
                       "value": "Creature Item: Dretch"
                     },
                     "RESREF": {
