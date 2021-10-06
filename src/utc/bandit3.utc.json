@@ -551,111 +551,6 @@
           "type": "word",
           "value": 0
         }
-      },
-      {
-        "__struct_id": 2,
-        "InventoryRes": {
-          "type": "resref",
-          "value": "nw_it_mpotion001"
-        },
-        "Repos_PosX": {
-          "type": "word",
-          "value": 3
-        },
-        "Repos_Posy": {
-          "type": "word",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 3,
-        "InventoryRes": {
-          "type": "resref",
-          "value": "nw_it_mpotion001"
-        },
-        "Repos_PosX": {
-          "type": "word",
-          "value": 4
-        },
-        "Repos_Posy": {
-          "type": "word",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 4,
-        "InventoryRes": {
-          "type": "resref",
-          "value": "nw_it_mpotion001"
-        },
-        "Repos_PosX": {
-          "type": "word",
-          "value": 5
-        },
-        "Repos_Posy": {
-          "type": "word",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 5,
-        "InventoryRes": {
-          "type": "resref",
-          "value": "nw_it_sparscr102"
-        },
-        "Repos_PosX": {
-          "type": "word",
-          "value": 6
-        },
-        "Repos_Posy": {
-          "type": "word",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 6,
-        "InventoryRes": {
-          "type": "resref",
-          "value": "nw_it_sparscr105"
-        },
-        "Repos_PosX": {
-          "type": "word",
-          "value": 7
-        },
-        "Repos_Posy": {
-          "type": "word",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 7,
-        "InventoryRes": {
-          "type": "resref",
-          "value": "nw_it_sparscr108"
-        },
-        "Repos_PosX": {
-          "type": "word",
-          "value": 8
-        },
-        "Repos_Posy": {
-          "type": "word",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 8,
-        "InventoryRes": {
-          "type": "resref",
-          "value": "nw_it_sparscr109"
-        },
-        "Repos_PosX": {
-          "type": "word",
-          "value": 9
-        },
-        "Repos_Posy": {
-          "type": "word",
-          "value": 0
-        }
       }
     ]
   },
@@ -1036,6 +931,21 @@
   "SpecAbilityList": {
     "type": "list",
     "value": [
+      {
+        "__struct_id": 4,
+        "Spell": {
+          "type": "word",
+          "value": 430
+        },
+        "SpellCasterLevel": {
+          "type": "byte",
+          "value": 15
+        },
+        "SpellFlags": {
+          "type": "byte",
+          "value": 1
+        }
+      },
       {
         "__struct_id": 4,
         "Spell": {
