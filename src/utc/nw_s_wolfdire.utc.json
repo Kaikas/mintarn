@@ -117,13 +117,6 @@
         "__struct_id": 1,
         "Feat": {
           "type": "word",
-          "value": 23
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
           "value": 28
         }
       },
@@ -233,7 +226,7 @@
   },
   "NaturalAC": {
     "type": "byte",
-    "value": 8
+    "value": 4
   },
   "NoPermDeath": {
     "type": "byte",
