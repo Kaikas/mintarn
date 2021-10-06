@@ -1353,18 +1353,22 @@ void spawnCompanion(object oPc) {
 
 int familiar(string sMessage) {
   if (sMessage == "/familiar" || sMessage == "/vertrauter") {
-    SummonFamiliar(oPc);
-    spawnFamiliar(oPc);
-    return 1;
+    if (!GetIsInCombat(oPc)) {
+      SummonFamiliar(oPc);
+      spawnFamiliar(oPc);
+      return 1;
+    }
   }
   return 0;
 }
 
 int companion(string sMessage) {
   if (sMessage == "/companion" || sMessage == "/begleiter") {
-    SummonAnimalCompanion(oPc);
-    DelayCommand(1.0f, spawnCompanion(oPc));
-    return 1;
+    if (!GetIsInCombat(oPc)) {
+      SummonAnimalCompanion(oPc);
+      DelayCommand(1.0f, spawnCompanion(oPc));
+      return 1;
+    }
   }
   return 0;
 }
