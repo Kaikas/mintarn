@@ -17153,143 +17153,6 @@
                     "__struct_id": 0,
                     "AddCost": {
                       "type": "dword",
-                      "value": 100
-                    },
-                    "BaseItem": {
-                      "type": "int",
-                      "value": 203
-                    },
-                    "Charges": {
-                      "type": "byte",
-                      "value": 0
-                    },
-                    "Cost": {
-                      "type": "dword",
-                      "value": 100
-                    },
-                    "Cursed": {
-                      "type": "byte",
-                      "value": 0
-                    },
-                    "DescIdentified": {
-                      "type": "cexolocstring",
-                      "value": {
-                        "0": "Mit diesem Rückrufstein könnt ihr nach Freihafen zurückkehren. Bei der Verwendung löst sich der Rückrufstein auf. Ihr könnt neue Rückrufsteine beim Alchemisten kaufen."
-                      }
-                    },
-                    "Description": {
-                      "type": "cexolocstring",
-                      "value": {
-                        "0": ""
-                      }
-                    },
-                    "Identified": {
-                      "type": "byte",
-                      "value": 1
-                    },
-                    "Infinite": {
-                      "type": "byte",
-                      "value": 1
-                    },
-                    "LocalizedName": {
-                      "type": "cexolocstring",
-                      "value": {
-                        "0": "Rückrufstein"
-                      }
-                    },
-                    "ModelPart1": {
-                      "type": "byte",
-                      "value": 10
-                    },
-                    "Plot": {
-                      "type": "byte",
-                      "value": 0
-                    },
-                    "PropertiesList": {
-                      "type": "list",
-                      "value": [
-                        {
-                          "__struct_id": 0,
-                          "ChanceAppear": {
-                            "type": "byte",
-                            "value": 100
-                          },
-                          "CostTable": {
-                            "type": "byte",
-                            "value": 3
-                          },
-                          "CostValue": {
-                            "type": "word",
-                            "value": 13
-                          },
-                          "Param1": {
-                            "type": "byte",
-                            "value": 255
-                          },
-                          "Param1Value": {
-                            "type": "byte",
-                            "value": 0
-                          },
-                          "PropertyName": {
-                            "type": "word",
-                            "value": 15
-                          },
-                          "Subtype": {
-                            "type": "word",
-                            "value": 329
-                          }
-                        }
-                      ]
-                    },
-                    "Repos_PosX": {
-                      "type": "word",
-                      "value": 0
-                    },
-                    "Repos_Posy": {
-                      "type": "word",
-                      "value": 0
-                    },
-                    "StackSize": {
-                      "type": "word",
-                      "value": 1
-                    },
-                    "Stolen": {
-                      "type": "byte",
-                      "value": 0
-                    },
-                    "Tag": {
-                      "type": "cexostring",
-                      "value": "SW_Rueckruf"
-                    },
-                    "TemplateResRef": {
-                      "type": "resref",
-                      "value": "sw_we_rueckruf"
-                    },
-                    "XOrientation": {
-                      "type": "float",
-                      "value": 0.0
-                    },
-                    "XPosition": {
-                      "type": "float",
-                      "value": -1.0
-                    },
-                    "YOrientation": {
-                      "type": "float",
-                      "value": 1.0
-                    },
-                    "YPosition": {
-                      "type": "float",
-                      "value": -1.0
-                    },
-                    "ZPosition": {
-                      "type": "float",
-                      "value": -1.0
-                    }
-                  },
-                  {
-                    "__struct_id": 1,
-                    "AddCost": {
-                      "type": "dword",
                       "value": 20
                     },
                     "BaseItem": {
@@ -17407,7 +17270,7 @@
                     },
                     "Repos_PosX": {
                       "type": "word",
-                      "value": 1
+                      "value": 0
                     },
                     "Repos_Posy": {
                       "type": "word",
@@ -17451,7 +17314,7 @@
                     }
                   },
                   {
-                    "__struct_id": 2,
+                    "__struct_id": 1,
                     "AddCost": {
                       "type": "dword",
                       "value": 20
@@ -17574,7 +17437,7 @@
                     },
                     "Repos_PosX": {
                       "type": "word",
-                      "value": 3
+                      "value": 2
                     },
                     "Repos_Posy": {
                       "type": "word",
@@ -17618,7 +17481,7 @@
                     }
                   },
                   {
-                    "__struct_id": 3,
+                    "__struct_id": 2,
                     "AddCost": {
                       "type": "dword",
                       "value": 20
@@ -17741,7 +17604,7 @@
                     },
                     "Repos_PosX": {
                       "type": "word",
-                      "value": 5
+                      "value": 4
                     },
                     "Repos_Posy": {
                       "type": "word",
@@ -17785,7 +17648,7 @@
                     }
                   },
                   {
-                    "__struct_id": 4,
+                    "__struct_id": 3,
                     "AddCost": {
                       "type": "dword",
                       "value": 20
@@ -17908,7 +17771,7 @@
                     },
                     "Repos_PosX": {
                       "type": "word",
-                      "value": 7
+                      "value": 6
                     },
                     "Repos_Posy": {
                       "type": "word",
@@ -17952,7 +17815,7 @@
                     }
                   },
                   {
-                    "__struct_id": 5,
+                    "__struct_id": 4,
                     "AddCost": {
                       "type": "dword",
                       "value": 20
@@ -18075,11 +17938,11 @@
                     },
                     "Repos_PosX": {
                       "type": "word",
-                      "value": 0
+                      "value": 8
                     },
                     "Repos_Posy": {
                       "type": "word",
-                      "value": 2
+                      "value": 0
                     },
                     "StackSize": {
                       "type": "word",
@@ -18119,7 +17982,7 @@
                     }
                   },
                   {
-                    "__struct_id": 6,
+                    "__struct_id": 5,
                     "AddCost": {
                       "type": "dword",
                       "value": 20
@@ -18242,7 +18105,7 @@
                     },
                     "Repos_PosX": {
                       "type": "word",
-                      "value": 2
+                      "value": 0
                     },
                     "Repos_Posy": {
                       "type": "word",
@@ -18286,7 +18149,7 @@
                     }
                   },
                   {
-                    "__struct_id": 7,
+                    "__struct_id": 6,
                     "AddCost": {
                       "type": "dword",
                       "value": 20
@@ -18409,7 +18272,7 @@
                     },
                     "Repos_PosX": {
                       "type": "word",
-                      "value": 4
+                      "value": 2
                     },
                     "Repos_Posy": {
                       "type": "word",
@@ -18453,7 +18316,7 @@
                     }
                   },
                   {
-                    "__struct_id": 8,
+                    "__struct_id": 7,
                     "AddCost": {
                       "type": "dword",
                       "value": 20
@@ -18576,7 +18439,7 @@
                     },
                     "Repos_PosX": {
                       "type": "word",
-                      "value": 6
+                      "value": 4
                     },
                     "Repos_Posy": {
                       "type": "word",
@@ -18620,7 +18483,7 @@
                     }
                   },
                   {
-                    "__struct_id": 9,
+                    "__struct_id": 8,
                     "AddCost": {
                       "type": "dword",
                       "value": 20
@@ -18743,7 +18606,7 @@
                     },
                     "Repos_PosX": {
                       "type": "word",
-                      "value": 8
+                      "value": 6
                     },
                     "Repos_Posy": {
                       "type": "word",
@@ -18787,7 +18650,7 @@
                     }
                   },
                   {
-                    "__struct_id": 10,
+                    "__struct_id": 9,
                     "AddCost": {
                       "type": "dword",
                       "value": 20
@@ -18910,11 +18773,11 @@
                     },
                     "Repos_PosX": {
                       "type": "word",
-                      "value": 0
+                      "value": 8
                     },
                     "Repos_Posy": {
                       "type": "word",
-                      "value": 4
+                      "value": 2
                     },
                     "StackSize": {
                       "type": "word",
@@ -18954,7 +18817,7 @@
                     }
                   },
                   {
-                    "__struct_id": 11,
+                    "__struct_id": 10,
                     "AddCost": {
                       "type": "dword",
                       "value": 20
@@ -19077,7 +18940,7 @@
                     },
                     "Repos_PosX": {
                       "type": "word",
-                      "value": 2
+                      "value": 0
                     },
                     "Repos_Posy": {
                       "type": "word",
