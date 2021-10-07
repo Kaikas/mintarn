@@ -40,7 +40,7 @@ void main() {
       CreateItemOnObject("sw_qu_goblintali", OBJECT_SELF, 1);
     }
     if (Random(4) == 0) {
-      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
+      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(3));
     }
     if (Random(100) == 0) {
       CreateItemOnObject("sw_we_zerfruestu", OBJECT_SELF, 1);
@@ -62,7 +62,7 @@ void main() {
     }
     iTreasure = Random(6);
     if (iTreasure == 0) {
-      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
+      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(3));
     }
   }
 
@@ -78,7 +78,7 @@ void main() {
     }
     iTreasure = Random(6);
     if (iTreasure == 0) {
-      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
+      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(3));
     }
     iTreasure = Random(100);
     if (iTreasure == 0) {
@@ -102,7 +102,7 @@ void main() {
     }
     iTreasure = Random(6);
     if (iTreasure == 0) {
-      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
+      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(3));
     }
     iTreasure = Random(100);
     if (iTreasure == 0) {
@@ -134,7 +134,7 @@ void main() {
     }
     iTreasure = Random(6);
     if (iTreasure == 0) {
-      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
+      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(3));
     }
     iTreasure = Random(100);
     if (iTreasure == 0) {
@@ -158,7 +158,7 @@ void main() {
     }
     iTreasure = Random(6);
     if (iTreasure == 0) {
-      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
+      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(3));
     }
     iTreasure = Random(100);
     if (iTreasure == 0) {
@@ -182,7 +182,7 @@ void main() {
     }
     iTreasure = Random(6);
     if (iTreasure == 0) {
-      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
+      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(3));
     }
     iTreasure = Random(100);
     if (iTreasure == 0) {
@@ -206,7 +206,7 @@ void main() {
     }
     iTreasure = Random(6);
     if (iTreasure == 0) {
-      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
+      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(3));
     }
   }
 
@@ -222,7 +222,7 @@ void main() {
     }
     iTreasure = Random(6);
     if (iTreasure == 0) {
-      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
+      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(3));
     }
   }
 
@@ -257,7 +257,7 @@ void main() {
     }
     iTreasure = Random(6);
     if (iTreasure == 0) {
-      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
+      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(3));
     }
     iTreasure = Random(100);
     if (iTreasure == 0) {
@@ -285,11 +285,11 @@ void main() {
       GetTag(OBJECT_SELF) == "ENEMY_SahuaginSchamane") {
     iTreasure = Random(6);
     if (iTreasure == 0) {
-      CreateItemOnObject("sw_we_muenze", OBJECT_SELF, Random(5));
+      CreateItemOnObject("sw_we_muenze", OBJECT_SELF, Random(2));
     }
     iTreasure = Random(6);
     if (iTreasure == 0) {
-      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
+      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(3));
     }
     iTreasure = Random(100);
     if (iTreasure == 0) {
@@ -316,7 +316,7 @@ void main() {
     }
     iTreasure = Random(6);
     if (iTreasure == 0) {
-      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(20));
+      CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(3));
     }
     iTreasure = Random(6);
     if (iTreasure == 0) {
@@ -342,6 +342,7 @@ void main() {
     if (Random(4) == 0) {
       CreateItemOnObject("sw_ro_fleisch", OBJECT_SELF, 1);
     }
+    /*
     iTreasure = Random(7);
     if (iTreasure == 0) {
       CreateItemOnObject("sw_re_beutel", OBJECT_SELF, 1);
@@ -364,12 +365,13 @@ void main() {
     if (iTreasure == 6) {
       CreateItemOnObject("sw_re_amucha", OBJECT_SELF, 1);
     }
-
+    */
   }
 
   // Kriegsmeister (Goblins)
   if (GetTag(OBJECT_SELF) == "ENEMY_Kriegsmeister") {
-    CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, 50 + Random(50));
+    CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, 10 + Random(10));
+    /*
     iTreasure = Random(5);
     if (iTreasure == 0) {
       CreateItemOnObject("sw_re_guertelele", OBJECT_SELF, 1);
@@ -386,14 +388,16 @@ void main() {
     if (iTreasure == 4) {
       CreateItemOnObject("sw_re_guertelver", OBJECT_SELF, 1);
     }
+    */
     // Size
     SetObjectVisualTransform(OBJECT_SELF, OBJECT_VISUAL_TRANSFORM_SCALE, 1.2);
   }
 
   // Leichenfresser (Krypta)
   if (GetTag(OBJECT_SELF) == "ENEMY_Leichenfresser") {
-    CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, 50 + Random(50));
+    CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, 10 + Random(10));
     CreateItemOnObject("sw_tr_kleineheil", OBJECT_SELF, 1);
+    /*
     iTreasure = Random(6);
     if (iTreasure == 0) {
       CreateItemOnObject("sw_re_kugelg", OBJECT_SELF, 1);
@@ -413,6 +417,7 @@ void main() {
     if (iTreasure == 5) {
       CreateItemOnObject("sw_re_turmschils", OBJECT_SELF, 1);
     }
+    */
     // Size
     SetObjectVisualTransform(OBJECT_SELF, OBJECT_VISUAL_TRANSFORM_SCALE, 1.2);
   }

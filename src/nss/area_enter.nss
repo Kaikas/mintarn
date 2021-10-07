@@ -373,7 +373,7 @@ void Spawn() {
     SpawnTraps();
     SpawnRessources();
     SpawnMobs();
-    SpawnChests();
+    //SpawnChests();
   }
 }
 
