@@ -312,6 +312,7 @@ void main() {
     location oLocation = GetItemActivatedTargetLocation();
 
     // Weiteres
+    /*
     if (GetTag(oItem) == "CRAFT_RezeptMagischerBeutel")
         CraftItem(oPc, 1, "sw_we_beutel", "CRAFT_GutesLeder", 5, "CRAFT_Gerbstoff", 1, "", 0, "Lederer", "CRAFT_RezeptMagischerBeutel", TRUE, 90, "Geselle");
     if (GetTag(oItem) == "CRAFT_RezeptFackel")
@@ -574,6 +575,7 @@ void main() {
         CraftItem(oPc, 1, "sw_tr_nachtsicht", "CRAFT_LeereFlasche", 1, "CRAFT_Carlog", 1, "", 0, "Alchemie", "CRAFT_RezeptTrankDerNachtsicht", FALSE, 490, "Experte");
     if (GetTag(oItem) == "CRAFT_RezeptTrankDesGegenmittels")
         CraftItem(oPc, 1, "sw_tr_gegenmitte", "CRAFT_LeereFlasche", 1, "CRAFT_Hiradwurz", 1, "", 0, "Alchemie", "CRAFT_RezeptTrankDesGegenmittels", FALSE, 90, "Lehrling");
+    */
 
     // DM Items
 
