@@ -14,7 +14,7 @@
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 13.0
+    "value": 14.0
   },
   "ClassList": {
     "type": "list",
@@ -79,7 +79,7 @@
         "__struct_id": 2,
         "EquippedRes": {
           "type": "resref",
-          "value": "nw_aarcl001"
+          "value": "nw_aarcl002"
         }
       },
       {
@@ -165,6 +165,13 @@
         "__struct_id": 1,
         "Feat": {
           "type": "word",
+          "value": 42
+        }
+      },
+      {
+        "__struct_id": 1,
+        "Feat": {
+          "type": "word",
           "value": 50
         }
       }
@@ -215,7 +222,7 @@
         "__struct_id": 0,
         "InventoryRes": {
           "type": "resref",
-          "value": "nw_it_torch001"
+          "value": "nw_it_mpotion008"
         },
         "Repos_PosX": {
           "type": "word",
@@ -230,7 +237,7 @@
         "__struct_id": 1,
         "InventoryRes": {
           "type": "resref",
-          "value": "nw_it_picks001"
+          "value": "nw_it_mpotion008"
         },
         "Repos_PosX": {
           "type": "word",
@@ -245,7 +252,7 @@
         "__struct_id": 2,
         "InventoryRes": {
           "type": "resref",
-          "value": "nw_wswdg001"
+          "value": "nw_it_mpotion003"
         },
         "Repos_PosX": {
           "type": "word",
@@ -260,7 +267,7 @@
         "__struct_id": 3,
         "InventoryRes": {
           "type": "resref",
-          "value": "nw_it_mpotion001"
+          "value": "nw_aarcl002"
         },
         "Repos_PosX": {
           "type": "word",
@@ -275,41 +282,11 @@
         "__struct_id": 4,
         "InventoryRes": {
           "type": "resref",
-          "value": "nw_it_mpotion001"
-        },
-        "Repos_PosX": {
-          "type": "word",
-          "value": 4
-        },
-        "Repos_Posy": {
-          "type": "word",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 5,
-        "InventoryRes": {
-          "type": "resref",
-          "value": "nw_it_mpotion001"
+          "value": "nw_aarcl002"
         },
         "Repos_PosX": {
           "type": "word",
           "value": 5
-        },
-        "Repos_Posy": {
-          "type": "word",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 6,
-        "InventoryRes": {
-          "type": "resref",
-          "value": "nw_it_trap001"
-        },
-        "Repos_PosX": {
-          "type": "word",
-          "value": 6
         },
         "Repos_Posy": {
           "type": "word",
@@ -726,7 +703,7 @@
   },
   "WalkRate": {
     "type": "int",
-    "value": 7
+    "value": 5
   },
   "willbonus": {
     "type": "short",

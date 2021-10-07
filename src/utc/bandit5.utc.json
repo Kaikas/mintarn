@@ -14,7 +14,7 @@
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 12.0
+    "value": 13.0
   },
   "ClassList": {
     "type": "list",
@@ -27,7 +27,7 @@
         },
         "ClassLevel": {
           "type": "short",
-          "value": 8
+          "value": 9
         },
         "MemorizedList1": {
           "type": "list",
@@ -36,7 +36,7 @@
               "__struct_id": 3,
               "Spell": {
                 "type": "word",
-                "value": 32
+                "value": 365
               },
               "SpellFlags": {
                 "type": "byte",
@@ -56,7 +56,7 @@
               "__struct_id": 3,
               "Spell": {
                 "type": "word",
-                "value": 420
+                "value": 81
               },
               "SpellFlags": {
                 "type": "byte",
@@ -78,7 +78,7 @@
   },
   "Con": {
     "type": "byte",
-    "value": 13
+    "value": 14
   },
   "Conversation": {
     "type": "resref",
@@ -119,14 +119,21 @@
         "__struct_id": 2,
         "EquippedRes": {
           "type": "resref",
-          "value": "nw_aarcl001"
+          "value": "nw_aarcl012"
         }
       },
       {
         "__struct_id": 16,
         "EquippedRes": {
           "type": "resref",
-          "value": "nw_wswls001"
+          "value": "nw_wswss001"
+        }
+      },
+      {
+        "__struct_id": 32,
+        "EquippedRes": {
+          "type": "resref",
+          "value": "nw_wswss001"
         }
       },
       {
@@ -184,14 +191,28 @@
         "__struct_id": 1,
         "Feat": {
           "type": "word",
-          "value": 273
+          "value": 265
         }
       },
       {
         "__struct_id": 1,
         "Feat": {
           "type": "word",
-          "value": 275
+          "value": 264
+        }
+      },
+      {
+        "__struct_id": 1,
+        "Feat": {
+          "type": "word",
+          "value": 266
+        }
+      },
+      {
+        "__struct_id": 1,
+        "Feat": {
+          "type": "word",
+          "value": 267
         }
       },
       {
@@ -335,41 +356,11 @@
         "__struct_id": 3,
         "InventoryRes": {
           "type": "resref",
-          "value": "nw_it_mpotion001"
+          "value": "nw_aarcl001"
         },
         "Repos_PosX": {
           "type": "word",
           "value": 4
-        },
-        "Repos_Posy": {
-          "type": "word",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 4,
-        "InventoryRes": {
-          "type": "resref",
-          "value": "nw_it_mpotion001"
-        },
-        "Repos_PosX": {
-          "type": "word",
-          "value": 5
-        },
-        "Repos_Posy": {
-          "type": "word",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 5,
-        "InventoryRes": {
-          "type": "resref",
-          "value": "nw_it_mpotion001"
-        },
-        "Repos_PosX": {
-          "type": "word",
-          "value": 6
         },
         "Repos_Posy": {
           "type": "word",
@@ -394,7 +385,7 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 104
+    "value": 114
   },
   "NaturalAC": {
     "type": "byte",
@@ -798,6 +789,6 @@
   },
   "Wis": {
     "type": "byte",
-    "value": 13
+    "value": 14
   }
 }
