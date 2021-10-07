@@ -349,6 +349,13 @@
           "type": "resref",
           "value": "nw_wswmgs002"
         }
+      },
+      {
+        "__struct_id": 131072,
+        "EquippedRes": {
+          "type": "resref",
+          "value": "sw_ru_leichenfre"
+        }
       }
     ]
   },

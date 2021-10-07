@@ -76,6 +76,13 @@
     "type": "list",
     "value": [
       {
+        "__struct_id": 2,
+        "EquippedRes": {
+          "type": "resref",
+          "value": "nw_aarcl010"
+        }
+      },
+      {
         "__struct_id": 16,
         "EquippedRes": {
           "type": "resref",
@@ -105,6 +112,13 @@
   "FeatList": {
     "type": "list",
     "value": [
+      {
+        "__struct_id": 1,
+        "Feat": {
+          "type": "word",
+          "value": 4
+        }
+      },
       {
         "__struct_id": 1,
         "Feat": {

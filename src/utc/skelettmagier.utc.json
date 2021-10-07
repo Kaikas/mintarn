@@ -27,7 +27,7 @@
         },
         "ClassLevel": {
           "type": "short",
-          "value": 5
+          "value": 6
         }
       }
     ]
@@ -50,7 +50,7 @@
   },
   "CurrentHitPoints": {
     "type": "short",
-    "value": 15
+    "value": 13
   },
   "DecayTime": {
     "type": "dword",
@@ -112,7 +112,7 @@
   },
   "HitPoints": {
     "type": "short",
-    "value": 15
+    "value": 13
   },
   "Int": {
     "type": "byte",
@@ -250,7 +250,7 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 0
+          "value": 10
         }
       },
       {
@@ -511,11 +511,11 @@
         "__struct_id": 4,
         "Spell": {
           "type": "word",
-          "value": 36
+          "value": 54
         },
         "SpellCasterLevel": {
           "type": "byte",
-          "value": 3
+          "value": 5
         },
         "SpellFlags": {
           "type": "byte",
@@ -530,7 +530,7 @@
         },
         "SpellCasterLevel": {
           "type": "byte",
-          "value": 3
+          "value": 5
         },
         "SpellFlags": {
           "type": "byte",
@@ -545,7 +545,7 @@
         },
         "SpellCasterLevel": {
           "type": "byte",
-          "value": 3
+          "value": 5
         },
         "SpellFlags": {
           "type": "byte",
@@ -560,7 +560,7 @@
         },
         "SpellCasterLevel": {
           "type": "byte",
-          "value": 3
+          "value": 5
         },
         "SpellFlags": {
           "type": "byte",
