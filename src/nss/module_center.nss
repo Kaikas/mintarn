@@ -44,12 +44,12 @@ void GiveXP(object oPc, int iCount, int iSumXp, int iToken) {
         }
     }
     // Basisexp
-    int iXp = 200;
-    if (iCharacters > 30) iXp = 220;
-    if (iCharacters > 60) iXp = 240;
-    if (iCharacters > 90) iXp = 260;
-    if (iCharacters > 120) iXp = 280;
-    if (iCharacters > 150) iXp = 300;
+    int iXp = 400;
+    if (iCharacters > 30) iXp = 420;
+    if (iCharacters > 60) iXp = 440;
+    if (iCharacters > 90) iXp = 460;
+    if (iCharacters > 120) iXp = 480;
+    if (iCharacters > 150) iXp = 500;
 
     // Player has spoken, give XP
     if (iTalked > 0) {
@@ -107,17 +107,16 @@ void GiveXP(object oPc, int iCount, int iSumXp, int iToken) {
                     NWNX_SQL_PreparedString(2, "rp");
                     NWNX_SQL_ExecutePreparedQuery();
                 }
+                sQuery = "DELETE FROM Experience WHERE name=? AND charname=? AND type=?";
+                if (NWNX_SQL_PrepareQuery(sQuery)) {
+                    NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
+                    NWNX_SQL_PreparedString(1, GetName(oPc));
+                    NWNX_SQL_PreparedString(2, "moschen");
+                    NWNX_SQL_ExecutePreparedQuery();
+                }
             }
         }
 
-        //if (iXpPenalty < 5000) {
-        //    // Change nothing
-        //} else if (iXpPenalty >= 5000 && iXpPenalty < 16000) {
-        //    //iXp = iXp * (5000 / iXpPenalty) ^5;
-        //    iXp = FloatToInt(IntToFloat(iXp) / quadratic(IntToFloat(iXpPenalty)));
-        //} else {
-        //    iXp = Random(5);
-        //}
         if (iXpPenalty > 5000) {
             iXp = FloatToInt(IntToFloat(iXp) / quadratic(IntToFloat(iXpPenalty)));
         }
@@ -549,16 +548,16 @@ void main() {
     //ExecuteScript("nui_test", oPc);
     //ExecuteScript("nui_dice", oPc);
     string sBeta = "Wir freuen uns euch mitzuteilen, dass die Beta von Mintarn am 1.10.2021 gestartet ist.\n\n" +
-    "In der Beta erstellte Charaktere werden nicht mehr gelÃ¶scht. Wir haben noch zahlreiche Ideen, die wir umsetzen wollen und " +
-    "es werden sicherlich auch Fehler wÃ¤hrend der Beta auftauchen, die angegangen werden mÃ¼ssen. Im GroÃŸen und Ganzen sind wir " +
-    "aber fÃ¼r einen Regelbetrieb bereit und freuen uns auf eine belebte persistente Welt.\n\n" +
-    "Es kann passieren, dass man innerhalb der Beta aus technischen GrÃ¼nden Charaktere neu erstellen bzw. neu leveln muss. " +
-    "Dies kann zum Beispiel erforderlich werden, wenn wir Ã„nderungen an Fertigkeiten, Talenten oder Klassen vornehmen. " +
-    "Die Erfahrungspunkte und GegenstÃ¤nde bleiben euch aber nach MÃ¶glichkeit erhalten. Eure Errungenschaften im Rollenspiel bleiben auf jeden Fall unangetastet.\n\n" +
-    "Bitte meldet uns aufgetretene Fehler oder Ungereimtheiten im Discord im Kanal fehler-meldungen oder im Spiel Ã¼ber /report. FÃ¼r eure Ideen, WÃ¼nsche oder einfach nur " +
-    "Feedback stehen diverse KanÃ¤le im Discord bereit. Konkrete VorschlÃ¤ge sind in ideen-und-vorschlÃ¤ge gern gesehen.\n\n" +
-    "Damit ihr euren Charakter auch individuell gestalten kÃ¶nnt, haben wir im Discord einen Kanal eingerichtet, " +
-    "in dem ihr eure Portraits hochladen kÃ¶nnt, damit sie allen zur VerfÃ¼gung gestellt werden kÃ¶nnen." +
+    "In der Beta erstellte Charaktere werden nicht mehr gelöscht. Wir haben noch zahlreiche Ideen, die wir umsetzen wollen und " +
+    "es werden sicherlich auch Fehler während der Beta auftauchen, die angegangen werden müssen. Im Großen und Ganzen sind wir " +
+    "aber für einen Regelbetrieb bereit und freuen uns auf eine belebte persistente Welt.\n\n" +
+    "Es kann passieren, dass man innerhalb der Beta aus technischen Gründen Charaktere neu erstellen bzw. neu leveln muss. " +
+    "Dies kann zum Beispiel erforderlich werden, wenn wir Änderungen an Fertigkeiten, Talenten oder Klassen vornehmen. " +
+    "Die Erfahrungspunkte und Gegenstände bleiben euch aber nach Möglichkeit erhalten. Eure Errungenschaften im Rollenspiel bleiben auf jeden Fall unangetastet.\n\n" +
+    "Bitte meldet uns aufgetretene Fehler oder Ungereimtheiten im Discord im Kanal fehler-meldungen oder im Spiel über /report. Für eure Ideen, Wünsche oder einfach nur " +
+    "Feedback stehen diverse Kanäle im Discord bereit. Konkrete Vorschläge sind in ideen-und-vorschläge gern gesehen.\n\n" +
+    "Damit ihr euren Charakter auch individuell gestalten könnt, haben wir im Discord einen Kanal eingerichtet, " +
+    "in dem ihr eure Portraits hochladen könnt, damit sie allen zur Verfügung gestellt werden können." +
     "\n\nBesucht und auf https://mintarn.de oder im Discord https://discord.gg/Tp2qyYp!";
     SendMessageToPC(oPc, sBeta);
     NWNX_Chat_SendMessage(4, sBeta, GetObjectByTag("ERZAEHLER"), oPc);

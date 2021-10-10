@@ -75,11 +75,18 @@ void main() {
                             NWNX_SQL_PreparedString(2, "moschen");
                             NWNX_SQL_ExecutePreparedQuery();
                         }
+                        sQuery = "DELETE FROM Experience WHERE name=? AND charname=? AND type=?";
+                        if (NWNX_SQL_PrepareQuery(sQuery)) {
+                            NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
+                            NWNX_SQL_PreparedString(1, GetName(oPc));
+                            NWNX_SQL_PreparedString(2, "rp");
+                            NWNX_SQL_ExecutePreparedQuery();
+                        }
                     }
                 }
 
                 // Base XP
-                int iXp = 50;
+                int iXp = 250;
                 // Reduce xp by level over CR
                 int iLevel = GetLevelByPosition(1, oPc) + GetLevelByPosition(2, oPc) + GetLevelByPosition(3, oPc);
                 int iDiff = iLevel - FloatToInt(GetChallengeRating(OBJECT_SELF));
