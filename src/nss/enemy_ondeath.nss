@@ -93,7 +93,7 @@ void main() {
                 //SendMessageToPC(oPc, "Level: " + IntToString(iLevel) + " Diff: " + IntToString(iDiff) + " CR: " + IntToString(FloatToInt(GetChallengeRating(OBJECT_SELF))));
                 int i;
                 for (i = 0; i < iDiff; i++) {
-                    iXp = iXp - 40;
+                    iXp = iXp - 20;
                 }
                 // Reduce XP by cap
                 if (iXpPenalty > 5000) {
