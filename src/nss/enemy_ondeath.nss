@@ -86,7 +86,7 @@ void main() {
                 }
 
                 // Base XP
-                int iXp = 250;
+                int iXp = 100;
                 // Reduce xp by level over CR
                 int iLevel = GetLevelByPosition(1, oPc) + GetLevelByPosition(2, oPc) + GetLevelByPosition(3, oPc);
                 int iDiff = iLevel - FloatToInt(GetChallengeRating(OBJECT_SELF));
