@@ -61,7 +61,7 @@ void main()
     effect eLink = EffectLinkEffects(eSave, eDur);
 
     //Apply the bonus effect and VFX impact
-    ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eLink, oTarget, Mintarn_HourSpellToSeconds(nDuration));
+    ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eLink, oTarget, Mintarn_10MinuteSpellToSeconds(nDuration));
     ApplyEffectToObject(DURATION_TYPE_INSTANT, eVis2, oTarget);
     DelayCommand(0.3f,ApplyEffectToObject(DURATION_TYPE_INSTANT, eVis, oTarget));
 }

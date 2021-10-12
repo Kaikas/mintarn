@@ -64,7 +64,7 @@ void main()
     //Apply the armor bonuses and the VFX impact
     if(nRacial == RACIAL_TYPE_UNDEAD)
     {
-        ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eLink, oTarget, Mintarn_HourSpellToSeconds(nDuration));
+        ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eLink, oTarget, Mintarn_10MinuteSpellToSeconds(nDuration));
         ApplyEffectToObject(DURATION_TYPE_INSTANT, eVis, oTarget);
     }
     else

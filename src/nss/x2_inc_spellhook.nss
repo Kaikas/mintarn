@@ -75,8 +75,22 @@ int X2RunUserDefinedSpellScript();
 
 float Mintarn_HourSpellToSeconds(int iLevel);
 
+int Mintarn_24HourSpellToSeconds();
+
+float Mintarn_10MinuteSpellToSeconds(int iLevel);
+
 float Mintarn_HourSpellToSeconds(int iLevel){
     int MinutesForASpell = 5;
+    return IntToFloat(iLevel * MinutesForASpell * 60);
+}
+
+int Mintarn_24HourSpellToSeconds(){
+    int MinutesForASpell = 42;
+    return MinutesForASpell * 60;
+}
+
+float Mintarn_10MinuteSpellToSeconds(int iLevel){
+    int MinutesForASpell = 10;
     return IntToFloat(iLevel * MinutesForASpell * 60);
 }
 
