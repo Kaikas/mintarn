@@ -453,7 +453,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Ja, nur zu. (10 Gold)"
+            "0": "Ja, nur zu. (1 Silber)"
           }
         }
       }
@@ -494,4 +494,5 @@
       }
     ]
   }
-}
+
+  --no-color     Disable color output (automatic if n}
