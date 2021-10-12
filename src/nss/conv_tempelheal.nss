@@ -1,4 +1,5 @@
 #include "global_helper"
+#include "global_money"
 
 void healstep(object oPc, object oHealer) {
     if (GetMaxHitPoints(oPc) == GetCurrentHitPoints(oPc)) {
@@ -96,16 +97,10 @@ void healstep(object oPc, object oHealer) {
 }
 
 void main() {
-    int iGold = 10;
     object oPc = GetPCSpeaker();
-
-    if (GetGold(oPc) >= iGold) {
-        TakeGoldFromCreature(iGold, oPc);
-        AssignCommand(OBJECT_SELF, ActionSpeakString(GetToken(101) + "*Die Halborkin winkt euch auf ihren \"Operationstisch\" zu und schnallt euch daran fest. Dann nimmt sie Nadel und Faden zur Hand und beginnt damit eure Wunden zu nähen*</c>", TALKVOLUME_TALK));
-        ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(SupernaturalEffect(EffectDazed()), "eff_dazed"), oPc);
-        ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(SupernaturalEffect(EffectCutsceneImmobilize()), "eff_immobilize"), oPc);
-        healstep(oPc, OBJECT_SELF);
-    } else {
-        SendMessageToPC(oPc, "Ihr könnt euch das nicht leisten.");
-    }
+    MONEY_TakeCoinMoneyWorth(10, oPc);
+    AssignCommand(OBJECT_SELF, ActionSpeakString(GetToken(101) + "*Die Halborkin winkt euch auf ihren \"Operationstisch\" zu und schnallt euch daran fest. Dann nimmt sie Nadel und Faden zur Hand und beginnt damit eure Wunden zu nähen*</c>", TALKVOLUME_TALK));
+    ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(SupernaturalEffect(EffectDazed()), "eff_dazed"), oPc);
+    ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(SupernaturalEffect(EffectCutsceneImmobilize()), "eff_immobilize"), oPc);
+    healstep(oPc, OBJECT_SELF);
 }
