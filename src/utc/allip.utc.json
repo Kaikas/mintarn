@@ -14,7 +14,7 @@
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 4.0
+    "value": 2.0
   },
   "ClassList": {
     "type": "list",
@@ -27,7 +27,7 @@
         },
         "ClassLevel": {
           "type": "short",
-          "value": 8
+          "value": 6
         }
       }
     ]
@@ -66,7 +66,7 @@
   },
   "Dex": {
     "type": "byte",
-    "value": 12
+    "value": 20
   },
   "Disarmable": {
     "type": "byte",
@@ -98,6 +98,48 @@
   "FeatList": {
     "type": "list",
     "value": [
+      {
+        "__struct_id": 1,
+        "Feat": {
+          "type": "word",
+          "value": 748
+        }
+      },
+      {
+        "__struct_id": 1,
+        "Feat": {
+          "type": "word",
+          "value": 749
+        }
+      },
+      {
+        "__struct_id": 1,
+        "Feat": {
+          "type": "word",
+          "value": 750
+        }
+      },
+      {
+        "__struct_id": 1,
+        "Feat": {
+          "type": "word",
+          "value": 751
+        }
+      },
+      {
+        "__struct_id": 1,
+        "Feat": {
+          "type": "word",
+          "value": 752
+        }
+      },
+      {
+        "__struct_id": 1,
+        "Feat": {
+          "type": "word",
+          "value": 42
+        }
+      },
       {
         "__struct_id": 1,
         "Feat": {
@@ -165,7 +207,7 @@
   },
   "NaturalAC": {
     "type": "byte",
-    "value": 7
+    "value": 1
   },
   "NoPermDeath": {
     "type": "byte",
@@ -529,7 +571,7 @@
   },
   "Str": {
     "type": "byte",
-    "value": 16
+    "value": 14
   },
   "Subrace": {
     "type": "cexostring",

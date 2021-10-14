@@ -10,11 +10,11 @@
   },
   "Cha": {
     "type": "byte",
-    "value": 11
+    "value": 3
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 4.0
+    "value": 5.0
   },
   "ClassList": {
     "type": "list",
@@ -27,7 +27,18 @@
         },
         "ClassLevel": {
           "type": "short",
-          "value": 6
+          "value": 1
+        }
+      },
+      {
+        "__struct_id": 2,
+        "Class": {
+          "type": "int",
+          "value": 4
+        },
+        "ClassLevel": {
+          "type": "short",
+          "value": 5
         }
       }
     ]
@@ -38,7 +49,7 @@
   },
   "Con": {
     "type": "byte",
-    "value": 12
+    "value": 14
   },
   "Conversation": {
     "type": "resref",
@@ -50,7 +61,7 @@
   },
   "CurrentHitPoints": {
     "type": "short",
-    "value": 19
+    "value": 28
   },
   "DecayTime": {
     "type": "dword",
@@ -86,14 +97,14 @@
         "__struct_id": 16,
         "EquippedRes": {
           "type": "resref",
-          "value": "nw_wswss001"
+          "value": "nw_wswsc001"
         }
       },
       {
         "__struct_id": 32,
         "EquippedRes": {
           "type": "resref",
-          "value": "nw_ashsw001"
+          "value": "nw_ashto001"
         }
       },
       {
@@ -123,7 +134,21 @@
         "__struct_id": 1,
         "Feat": {
           "type": "word",
+          "value": 67
+        }
+      },
+      {
+        "__struct_id": 1,
+        "Feat": {
+          "type": "word",
           "value": 32
+        }
+      },
+      {
+        "__struct_id": 1,
+        "Feat": {
+          "type": "word",
+          "value": 105
         }
       },
       {
@@ -155,7 +180,7 @@
   },
   "HitPoints": {
     "type": "short",
-    "value": 19
+    "value": 28
   },
   "Int": {
     "type": "byte",
@@ -189,7 +214,7 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 25
+    "value": 40
   },
   "NaturalAC": {
     "type": "byte",
@@ -557,7 +582,7 @@
   },
   "Str": {
     "type": "byte",
-    "value": 14
+    "value": 18
   },
   "Subrace": {
     "type": "cexostring",
@@ -581,7 +606,7 @@
   },
   "WalkRate": {
     "type": "int",
-    "value": 4
+    "value": 5
   },
   "willbonus": {
     "type": "short",
