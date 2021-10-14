@@ -77,7 +77,7 @@
   },
   "Dex": {
     "type": "byte",
-    "value": 10
+    "value": 12
   },
   "Disarmable": {
     "type": "byte",
@@ -104,7 +104,7 @@
         "__struct_id": 32,
         "EquippedRes": {
           "type": "resref",
-          "value": "nw_ashsw001"
+          "value": "nw_ashto001"
         }
       },
       {
