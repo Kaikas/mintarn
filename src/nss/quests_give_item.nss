@@ -365,7 +365,7 @@ void main() {
             NWNX_SQL_ExecutePreparedQuery();
             while (NWNX_SQL_ReadyToReadNextRow()) {
                 NWNX_SQL_ReadNextRow();
-                iStage = StringToInt(NWNX_SQL_ReadDataInActiveRow(3));
+                iStage = StringToInt(NWNX_SQL_ReadDataInActiveRow(4));
             }
         }
         if (iStage == 0) {

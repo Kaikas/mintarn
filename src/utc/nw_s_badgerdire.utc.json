@@ -54,7 +54,7 @@
   },
   "DecayTime": {
     "type": "dword",
-    "value": 5000
+    "value": 0
   },
   "Deity": {
     "type": "cexostring",
@@ -227,7 +227,7 @@
   },
   "NaturalAC": {
     "type": "byte",
-    "value": 1
+    "value": 3
   },
   "NoPermDeath": {
     "type": "byte",

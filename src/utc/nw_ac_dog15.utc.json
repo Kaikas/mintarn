@@ -23,7 +23,7 @@
         "__struct_id": 2,
         "Class": {
           "type": "int",
-          "value": 23
+          "value": 12
         },
         "ClassLevel": {
           "type": "short",
@@ -195,7 +195,7 @@
   },
   "Race": {
     "type": "byte",
-    "value": 19
+    "value": 8
   },
   "refbonus": {
     "type": "short",
@@ -527,7 +527,7 @@
   },
   "StartingPackage": {
     "type": "byte",
-    "value": 85
+    "value": 74
   },
   "Str": {
     "type": "byte",
