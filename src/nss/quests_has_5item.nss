@@ -27,7 +27,6 @@ int StartingConditional() {
         while (NWNX_SQL_ReadyToReadNextRow()) {
             NWNX_SQL_ReadNextRow();
             iStage = StringToInt(NWNX_SQL_ReadDataInActiveRow(4));
-            SpeakString(IntToString(iStage));
         }
     }
     int iResult = 0;
