@@ -405,6 +405,9 @@ void main() {
             NWNX_SQL_ExecutePreparedQuery();
             while (NWNX_SQL_ReadyToReadNextRow()) {
                 NWNX_SQL_ReadNextRow();
+                SpeakString(NWNX_SQL_ReadDataInActiveRow(0));
+                SpeakString(NWNX_SQL_ReadDataInActiveRow(1));
+                SpeakString(NWNX_SQL_ReadDataInActiveRow(2));
                 SpeakString(NWNX_SQL_ReadDataInActiveRow(3));}}
     }
 }
