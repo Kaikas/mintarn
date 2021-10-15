@@ -408,6 +408,9 @@ void main() {
                 SpeakString(NWNX_SQL_ReadDataInActiveRow(0));
                 SpeakString(NWNX_SQL_ReadDataInActiveRow(1));
                 SpeakString(NWNX_SQL_ReadDataInActiveRow(2));
-                SpeakString(NWNX_SQL_ReadDataInActiveRow(3));}}
+                SpeakString(NWNX_SQL_ReadDataInActiveRow(3));
+                SpeakString(NWNX_SQL_ReadDataInActiveRow(4));
+                SpeakString(NWNX_SQL_ReadDataInActiveRow(5));
+                SpeakString(NWNX_SQL_ReadDataInActiveRow(6));}}
     }
 }
