@@ -14,7 +14,7 @@
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 5.0
+    "value": 3.0
   },
   "ClassList": {
     "type": "list",
@@ -27,7 +27,7 @@
         },
         "ClassLevel": {
           "type": "short",
-          "value": 7
+          "value": 4
         }
       }
     ]
@@ -50,11 +50,11 @@
   },
   "CurrentHitPoints": {
     "type": "short",
-    "value": 33
+    "value": 15
   },
   "DecayTime": {
     "type": "dword",
-    "value": 0
+    "value": 5000
   },
   "Deity": {
     "type": "cexostring",
@@ -80,7 +80,7 @@
         "__struct_id": 65536,
         "EquippedRes": {
           "type": "resref",
-          "value": "nw_it_crewps010"
+          "value": "nw_it_crewps002"
         }
       }
     ]
@@ -120,7 +120,7 @@
   },
   "HitPoints": {
     "type": "short",
-    "value": 33
+    "value": 15
   },
   "Int": {
     "type": "byte",
@@ -152,11 +152,11 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 33
+    "value": 15
   },
   "NaturalAC": {
     "type": "byte",
-    "value": 6
+    "value": 4
   },
   "NoPermDeath": {
     "type": "byte",

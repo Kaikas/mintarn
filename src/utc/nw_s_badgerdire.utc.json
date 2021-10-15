@@ -14,7 +14,7 @@
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 3.0
+    "value": 2.0
   },
   "ClassList": {
     "type": "list",
@@ -50,7 +50,7 @@
   },
   "CurrentHitPoints": {
     "type": "short",
-    "value": 22
+    "value": 7
   },
   "DecayTime": {
     "type": "dword",
@@ -80,21 +80,21 @@
         "__struct_id": 16384,
         "EquippedRes": {
           "type": "resref",
-          "value": "nw_it_crewpsp026"
+          "value": "nw_it_crewpp001"
         }
       },
       {
         "__struct_id": 32768,
         "EquippedRes": {
           "type": "resref",
-          "value": "nw_it_crewpsp026"
+          "value": "nw_it_crewpsp001"
         }
       },
       {
         "__struct_id": 65536,
         "EquippedRes": {
           "type": "resref",
-          "value": "nw_it_crewps005"
+          "value": "nw_it_crewps001"
         }
       }
     ]
@@ -141,7 +141,7 @@
   },
   "HitPoints": {
     "type": "short",
-    "value": 22
+    "value": 7
   },
   "Int": {
     "type": "byte",
@@ -159,56 +159,6 @@
     "type": "byte",
     "value": 0
   },
-  "ItemList": {
-    "type": "list",
-    "value": [
-      {
-        "__struct_id": 0,
-        "InventoryRes": {
-          "type": "resref",
-          "value": "nw_it_crewpp001"
-        },
-        "Repos_PosX": {
-          "type": "word",
-          "value": 0
-        },
-        "Repos_Posy": {
-          "type": "word",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 1,
-        "InventoryRes": {
-          "type": "resref",
-          "value": "nw_it_crewpsp001"
-        },
-        "Repos_PosX": {
-          "type": "word",
-          "value": 2
-        },
-        "Repos_Posy": {
-          "type": "word",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 2,
-        "InventoryRes": {
-          "type": "resref",
-          "value": "nw_it_crewps001"
-        },
-        "Repos_PosX": {
-          "type": "word",
-          "value": 4
-        },
-        "Repos_Posy": {
-          "type": "word",
-          "value": 0
-        }
-      }
-    ]
-  },
   "LastName": {
     "type": "cexolocstring",
     "value": {}
@@ -223,11 +173,11 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 25
+    "value": 10
   },
   "NaturalAC": {
     "type": "byte",
-    "value": 3
+    "value": 1
   },
   "NoPermDeath": {
     "type": "byte",

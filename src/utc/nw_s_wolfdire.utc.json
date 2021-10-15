@@ -80,7 +80,7 @@
         "__struct_id": 65536,
         "EquippedRes": {
           "type": "resref",
-          "value": "nw_it_crewps015"
+          "value": "nw_it_crewps005"
         }
       }
     ]
@@ -96,35 +96,7 @@
         "__struct_id": 1,
         "Feat": {
           "type": "word",
-          "value": 6
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
-          "value": 292
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
-          "value": 240
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
-          "value": 28
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
-          "value": 178
+          "value": 190
         }
       },
       {
@@ -138,7 +110,14 @@
         "__struct_id": 1,
         "Feat": {
           "type": "word",
-          "value": 190
+          "value": 178
+        }
+      },
+      {
+        "__struct_id": 1,
+        "Feat": {
+          "type": "word",
+          "value": 240
         }
       },
       {
@@ -152,21 +131,7 @@
         "__struct_id": 1,
         "Feat": {
           "type": "word",
-          "value": 291
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
           "value": 289
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
-          "value": 290
         }
       }
     ]
@@ -174,7 +139,9 @@
   "FirstName": {
     "id": 12779,
     "type": "cexolocstring",
-    "value": {}
+    "value": {
+      "0": "Summoned Dire Wolf"
+    }
   },
   "fortbonus": {
     "type": "short",
@@ -590,7 +557,7 @@
   },
   "Str": {
     "type": "byte",
-    "value": 21
+    "value": 16
   },
   "Subrace": {
     "type": "cexostring",
