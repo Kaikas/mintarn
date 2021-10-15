@@ -159,13 +159,6 @@
         "__struct_id": 8,
         "Comment": {
           "type": "cexostring",
-          "value": "Door Medium\r\n\r\nHardness DC: 15"
-        }
-      },
-      {
-        "__struct_id": 8,
-        "Comment": {
-          "type": "cexostring",
           "value": "Strong Door"
         }
       }
@@ -50328,15 +50321,7 @@
   },
   "TriggerList": {
     "type": "list",
-    "value": [
-      {
-        "__struct_id": 1,
-        "Comment": {
-          "type": "cexostring",
-          "value": ""
-        }
-      }
-    ]
+    "value": []
   },
   "WaypointList": {
     "type": "list",
