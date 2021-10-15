@@ -356,8 +356,7 @@ void main() {
             }
             oItem = GetNextItemInInventory(oPc);
         }
-        int iStage = 2;
-        SpeakString(IntToString(iStage));
+        int iStage;
         string sQuery = "SELECT * FROM QuestStatus WHERE name=? AND charname=? AND quest=?";
         if (NWNX_SQL_PrepareQuery(sQuery)) {
             NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
@@ -366,8 +365,7 @@ void main() {
             NWNX_SQL_ExecutePreparedQuery();
             while (NWNX_SQL_ReadyToReadNextRow()) {
                 NWNX_SQL_ReadNextRow();
-                iStage = StringToInt(NWNX_SQL_ReadDataInActiveRow(3));
-                SpeakString(IntToString(iStage));
+                iStage = StringToInt(NWNX_SQL_ReadDataInActiveRow(4));
             }
         }
         if (iStage == 0) {
@@ -396,21 +394,5 @@ void main() {
         GiveXPToCreature(oPc, 1000);
         MONEY_GiveCoinMoneyWorth(50, oPc);
         RemoveJournalQuestEntry("lebensm", oPc, FALSE, FALSE);
-
-        string sQuery = "SELECT * FROM QuestStatus WHERE name=? AND charname=? AND quest=?";
-        if (NWNX_SQL_PrepareQuery(sQuery)) {
-            NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
-            NWNX_SQL_PreparedString(1, GetName(oPc));
-            NWNX_SQL_PreparedString(2, "lebensmittel_intro");
-            NWNX_SQL_ExecutePreparedQuery();
-            while (NWNX_SQL_ReadyToReadNextRow()) {
-                NWNX_SQL_ReadNextRow();
-                SpeakString(NWNX_SQL_ReadDataInActiveRow(0));
-                SpeakString(NWNX_SQL_ReadDataInActiveRow(1));
-                SpeakString(NWNX_SQL_ReadDataInActiveRow(2));
-                SpeakString(NWNX_SQL_ReadDataInActiveRow(3));
-                SpeakString(NWNX_SQL_ReadDataInActiveRow(4));
-                SpeakString(NWNX_SQL_ReadDataInActiveRow(5));
-                SpeakString(NWNX_SQL_ReadDataInActiveRow(6));}}
     }
 }
