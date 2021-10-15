@@ -356,7 +356,8 @@ void main() {
             }
             oItem = GetNextItemInInventory(oPc);
         }
-        int iStage;
+        int iStage = 2;
+        SpeakString(IntToString(iStage));
         string sQuery = "SELECT * FROM QuestStatus WHERE name=? AND charname=? AND quest=?";
         if (NWNX_SQL_PrepareQuery(sQuery)) {
             NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
@@ -366,6 +367,7 @@ void main() {
             while (NWNX_SQL_ReadyToReadNextRow()) {
                 NWNX_SQL_ReadNextRow();
                 iStage = StringToInt(NWNX_SQL_ReadDataInActiveRow(3));
+                SpeakString(IntToString(iStage));
             }
         }
         if (iStage == 0) {
