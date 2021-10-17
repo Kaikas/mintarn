@@ -81,13 +81,6 @@
         "__struct_id": 6,
         "Area_Name": {
           "type": "resref",
-          "value": "freihafen"
-        }
-      },
-      {
-        "__struct_id": 6,
-        "Area_Name": {
-          "type": "resref",
           "value": "friedhof002"
         }
       },
@@ -279,6 +272,13 @@
           "type": "resref",
           "value": "zumrettendenufer"
         }
+      },
+      {
+        "__struct_id": 6,
+        "Area_Name": {
+          "type": "resref",
+          "value": "freihafen001"
+        }
       }
     ]
   },
@@ -310,27 +310,27 @@
   },
   "Mod_Entry_Area": {
     "type": "resref",
-    "value": "ooc"
+    "value": "freihafen001"
   },
   "Mod_Entry_Dir_X": {
     "type": "float",
-    "value": 0.6152
+    "value": 0.0
   },
   "Mod_Entry_Dir_Y": {
     "type": "float",
-    "value": 0.7883
+    "value": 1.0
   },
   "Mod_Entry_X": {
     "type": "float",
-    "value": 4.1455
+    "value": 206.9619
   },
   "Mod_Entry_Y": {
     "type": "float",
-    "value": 4.5859
+    "value": 63.533
   },
   "Mod_Entry_Z": {
     "type": "float",
-    "value": -0.0
+    "value": 5.0
   },
   "Mod_Expan_List": {
     "type": "list",
