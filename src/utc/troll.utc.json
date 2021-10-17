@@ -102,13 +102,6 @@
         "__struct_id": 1,
         "Feat": {
           "type": "word",
-          "value": 5
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
           "value": 6
         }
       },
@@ -124,13 +117,6 @@
         "Feat": {
           "type": "word",
           "value": 391
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
-          "value": 23
         }
       },
       {
