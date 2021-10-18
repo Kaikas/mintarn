@@ -1551,6 +1551,10 @@ int die(string sMessage) {
     AssignCommand(oPc, JumpToLocation(lStart));
     ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectResurrection(), oPc);
     RemoveEffects(oPc);
+
+    SetLocalInt(oPc, "DYING_POINTS", 0);
+    SetLocalInt(oPc, "LIVING_POINTS", 0);
+
     return 1;
   }
   return 0;

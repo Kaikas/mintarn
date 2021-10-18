@@ -3,6 +3,11 @@
 // Teleportiert den Spieler an seine letzte bekannte Position
 void main() {
     object oPc = GetLastUsedBy();
+    
+    //Until this has a better place to be: Reset death fails and successes
+    SetLocalInt(oPc, "DYING_POINTS", 0);
+    SetLocalInt(oPc, "LIVING_POINTS", 0);
+
     // Destroy equipped items
     object oItem;
     int nSlot;
