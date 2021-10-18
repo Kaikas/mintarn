@@ -1554,6 +1554,16 @@ int die(string sMessage) {
 
     SetLocalInt(oPc, "DYING_POINTS", 0);
     SetLocalInt(oPc, "LIVING_POINTS", 0);
+    effect eEffect = GetFirstEffect(oPc);
+    while(GetIsEffectValid(eEffect))
+        {
+            //this might break something ,so we'd rather leave that out.
+            if (GetEffectType(eEffect) != EFFECT_TYPE_RUNSCRIPT)
+                {
+                    RemoveEffect(oPC, eEffect);
+                }
+            eBad = GetNextEffect(oPc);
+        }
 
     return 1;
   }
