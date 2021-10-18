@@ -20,7 +20,7 @@ void main() {
         int nAC = StringToInt(Get2DAString("parts_chest", "ACBONUS", nAppearance));
         // Return the given AC value (0 to 8)
         //End Copy
-
+        ApplyEffectToObject(DURATION_TYPE_TEMPORARY, EffectEthereal(), oPc, 14.0f);
         if(nAC == 4 || nAC == 5) {
             ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(SupernaturalEffect(EffectMovementSpeedDecrease(5)), "eff_armorslow"), oPc);
         } else if (nAC > 5) {
