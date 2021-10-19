@@ -1562,7 +1562,7 @@ int die(string sMessage) {
                 {
                     RemoveEffect(oPC, eEffect);
                 }
-            eBad = GetNextEffect(oPc);
+            eEffect = GetNextEffect(oPc);
         }
 
     return 1;
