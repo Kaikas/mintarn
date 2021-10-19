@@ -1547,23 +1547,13 @@ int masks(string sMessage) {
 int die(string sMessage) {
   if (sMessage == "/sterben") {
     SetLocalInt(oPc, "DYING_FOR_REAL", 0);
+    ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectResurrection(), oPc);
+    ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectResurrection(), oPc);
     location lStart = GetLocation(GetObjectByTag("WP_DEATH"));
     AssignCommand(oPc, JumpToLocation(lStart));
-    ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectResurrection(), oPc);
-    RemoveEffects(oPc);
 
     SetLocalInt(oPc, "DYING_POINTS", 0);
     SetLocalInt(oPc, "LIVING_POINTS", 0);
-    effect eEffect = GetFirstEffect(oPc);
-    while(GetIsEffectValid(eEffect))
-        {
-            //this might break something ,so we'd rather leave that out.
-            if (GetEffectType(eEffect) != EFFECT_TYPE_RUNSCRIPT)
-                {
-                    RemoveEffect(oPC, eEffect);
-                }
-            eEffect = GetNextEffect(oPc);
-        }
 
     return 1;
   }
