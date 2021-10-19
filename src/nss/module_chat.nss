@@ -1547,7 +1547,7 @@ int masks(string sMessage) {
 int die(string sMessage) {
   if (sMessage == "/sterben") {
     SetLocalInt(oPc, "DYING_FOR_REAL", 0);
-    ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectResurrection(), oPc);
+    ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDeath(), oPc);
     ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectResurrection(), oPc);
     location lStart = GetLocation(GetObjectByTag("WP_DEATH"));
     AssignCommand(oPc, JumpToLocation(lStart));
