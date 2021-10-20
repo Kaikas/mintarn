@@ -128,6 +128,8 @@ void RestFull(object oPc) {
             // Refresh short rest
             SetLocalInt(oPc, "rast_short", 0);
             DeleteFood(oPc);
+            SetLocalInt(oPc, "DYING_POINTS", 0);
+            SetLocalInt(oPc, "LIVING_POINTS", 0);
             healPets(oPc);
         }
     }
