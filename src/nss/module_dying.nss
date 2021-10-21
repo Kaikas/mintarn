@@ -41,7 +41,6 @@ void bleed(object oPc) {
         if (totalLevels > 1) {
         ApplyEffectToObject(DURATION_TYPE_TEMPORARY, SupernaturalEffect(EffectNegativeLevel(totalLevels/2)), oPc, 140000.0f);
         }
-        ApplyEffectToObject(DURATION_TYPE_INSTANT, eDamage, oPc);
         return;
     }
 
