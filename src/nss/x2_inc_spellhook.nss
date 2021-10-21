@@ -80,7 +80,7 @@ int Mintarn_24HourSpellToSeconds();
 float Mintarn_10MinuteSpellToSeconds(int iLevel);
 
 float Mintarn_HourSpellToSeconds(int iLevel){
-    int MinutesForASpell = 5;
+    int MinutesForASpell = 15;
     return IntToFloat(iLevel * MinutesForASpell * 60);
 }
 
