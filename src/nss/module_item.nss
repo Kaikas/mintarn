@@ -618,6 +618,11 @@ void main() {
         SetLocalObject(oPc, "dmspeak5", oTarget);
         SendMessageToPC(oPc, ":5 spricht nun als " + GetName(oTarget));
     }
+    if (GetTag(oItem) == "SW_GottAlter") {
+        object oTarget = GetItemActivatedTarget();
+        SendMessageToPC(oPc, "Gott: " + GetDeity(oTarget));
+        SendMessageToPC(oPc, "Alter: " + GetAge(oTarget));
+    }
     // Fraktion ändern
     if (GetTag(oItem) == "SW_FraktionAendern") {
         object oTarget = GetItemActivatedTarget();
