@@ -706,7 +706,7 @@ void main() {
         object oArea = GetObjectByTag("AREA_Freihafen");
         SetFogAmount(FOG_TYPE_SUN, GetLocalInt(oArea, "fog_sun"), oArea);
         SetFogAmount(FOG_TYPE_MOON, GetLocalInt(oArea, "fog_moon"), oArea);
-        object oArea = GetObjectByTag("AREA_FreihafenWest");
+        oArea = GetObjectByTag("AREA_FreihafenWest");
         SetFogAmount(FOG_TYPE_SUN, GetLocalInt(oArea, "fog_sun"), oArea);
         SetFogAmount(FOG_TYPE_MOON, GetLocalInt(oArea, "fog_moon"), oArea);
         oArea = GetObjectByTag("AREA_Banditenfestung");
