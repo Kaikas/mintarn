@@ -7,6 +7,7 @@
 void main() {
     // Save initial fog for all outside areas
     saveFog(GetObjectByTag("AREA_Freihafen"));
+    saveFog(GetObjectByTag("AREA_FreihafenWest"));
     saveFog(GetObjectByTag("AREA_Insel"));
     saveFog(GetObjectByTag("AREA_Banditenfestung"));
     saveFog(GetObjectByTag("AREA_Hgelland"));

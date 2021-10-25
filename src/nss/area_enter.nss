@@ -10,7 +10,7 @@ string sQuery;
 object oArea = OBJECT_SELF;
 
 void Freihafen() {
-  if (GetTag(oArea) == "AREA_Freihafen") {
+  if (GetTag(oArea) == "AREA_Freihafen" || GetTag(oArea) == "AREA_FreihafenWest") {
     // Make area visible
     ExploreAreaForPlayer(oArea, oPc);
     // Anfänger Quest
@@ -21,7 +21,7 @@ void Freihafen() {
       NWNX_SQL_PreparedInt(2, 0);
       NWNX_SQL_ExecutePreparedQuery();
       NWNX_SQL_ReadNextRow();
-      if (NWNX_SQL_ReadDataInActiveRow(4) == "0") {
+      if (NWNX_SQL_ReadDataInActiveRow(4) == "0" && GetTag(oArea) == "AREA_Freihafen") {
         sQuery = "UPDATE QuestStatus SET stage=? WHERE name=? AND charname=? AND quest=?";
         if (NWNX_SQL_PrepareQuery(sQuery)) {
           NWNX_SQL_PreparedString(0, "1");

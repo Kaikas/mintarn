@@ -82,6 +82,7 @@ void setWind(object oArea, int iWindStrength) {
 
 void setWindForAreas(int iWindStrength) {
     setWind(GetObjectByTag("AREA_Freihafen"), iWindStrength);
+    setWind(GetObjectByTag("AREA_FreihafenWest"), iWindStrength);
     setWind(GetObjectByTag("AREA_Insel"), iWindStrength);
     setWind(GetObjectByTag("AREA_Banditenfestung"), iWindStrength);
     setWind(GetObjectByTag("AREA_Hgelland"), iWindStrength);
@@ -248,6 +249,7 @@ void weather() {
     // Set fog for the right areas
     int iHeight = Random(2);
     setFog(sDay, sDayBefore, iTemperatur, iHeight, iWindStrength, iRain, oModule, GetObjectByTag("AREA_Freihafen"));
+    setFog(sDay, sDayBefore, iTemperatur, iHeight, iWindStrength, iRain, oModule, GetObjectByTag("AREA_FreihafenWest"));
     setFog(sDay, sDayBefore, iTemperatur, iHeight, iWindStrength, iRain, oModule, GetObjectByTag("AREA_Banditenfestung"));
     setFog(sDay, sDayBefore, iTemperatur, iHeight, iWindStrength, iRain, oModule, GetObjectByTag("AREA_Insel"));
     setFog(sDay, sDayBefore, iTemperatur, iHeight, iWindStrength, iRain, oModule, GetObjectByTag("AREA_Hgelland"));

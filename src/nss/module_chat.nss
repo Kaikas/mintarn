@@ -1446,11 +1446,11 @@ int ghost(string sMessage) {
 
 int climb(string sMessage) {
   if (sMessage == "/klettern" || sMessage == "/climb") {
-    if (GetTag(GetArea(oPc)) == "AREA_Freihafen" && GetDistanceBetween(oPc, GetObjectByTag("KLETTERN_Tempel")) < 2.0) {
+    if (GetTag(GetArea(oPc)) == "AREA_FreihafenWest" && GetDistanceBetween(oPc, GetObjectByTag("KLETTERN_Tempel")) < 2.0) {
       location lLocation = GetLocation(GetObjectByTag("KLETTERN_Tempel2"));
       DelayCommand(1.0, AssignCommand(oPc, JumpToLocation(lLocation)));
     }
-    if (GetTag(GetArea(oPc)) == "AREA_Freihafen" && GetDistanceBetween(oPc, GetObjectByTag("KLETTERN_Tempel2")) < 2.0) {
+    if (GetTag(GetArea(oPc)) == "AREA_FreihafenWest" && GetDistanceBetween(oPc, GetObjectByTag("KLETTERN_Tempel2")) < 2.0) {
       location lLocation = GetLocation(GetObjectByTag("KLETTERN_Tempel"));
       DelayCommand(1.0, AssignCommand(oPc, JumpToLocation(lLocation)));
     }
