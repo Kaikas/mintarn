@@ -621,7 +621,7 @@ void main() {
     if (GetTag(oItem) == "SW_GottAlter") {
         object oTarget = GetItemActivatedTarget();
         SendMessageToPC(oPc, "Gott: " + GetDeity(oTarget));
-        SendMessageToPC(oPc, "Alter: " + GetAge(oTarget));
+        SendMessageToPC(oPc, "Alter: " + IntToString(GetAge(oTarget)));
     }
     // Fraktion ändern
     if (GetTag(oItem) == "SW_FraktionAendern") {
