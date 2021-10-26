@@ -81,6 +81,20 @@
         "__struct_id": 6,
         "Area_Name": {
           "type": "resref",
+          "value": "freihafen_ost"
+        }
+      },
+      {
+        "__struct_id": 6,
+        "Area_Name": {
+          "type": "resref",
+          "value": "freihafen_west"
+        }
+      },
+      {
+        "__struct_id": 6,
+        "Area_Name": {
+          "type": "resref",
           "value": "friedhof002"
         }
       },
@@ -278,20 +292,6 @@
         "Area_Name": {
           "type": "resref",
           "value": "zumrettendenufer"
-        }
-      },
-      {
-        "__struct_id": 6,
-        "Area_Name": {
-          "type": "resref",
-          "value": "freihafen_ost"
-        }
-      },
-      {
-        "__struct_id": 6,
-        "Area_Name": {
-          "type": "resref",
-          "value": "freihafen_west"
         }
       }
     ]

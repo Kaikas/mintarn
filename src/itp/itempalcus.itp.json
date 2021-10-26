@@ -8294,6 +8294,17 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
+                      "value": "SW Charinfo"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_we_charinfo"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
                       "value": "SW Fraktion ändern"
                     },
                     "RESREF": {
