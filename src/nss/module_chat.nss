@@ -565,7 +565,7 @@ int emotes(string sMessage, object oTarget) {
       // Negative Level
       int totalLevels = GetLevelByPosition(0, oTarget) + GetLevelByPosition(1, oTarget) + GetLevelByPosition(2, oTarget);
       if (totalLevels > 1) {
-        ApplyEffectToObject(DURATION_TYPE_TEMPORARY, SupernaturalEffect(EffectNegativeLevel(totalLevels/2)), oTarget, 140000.0f);
+        ApplyEffectToObject(DURATION_TYPE_TEMPORARY, SupernaturalEffect(EffectNegativeLevel(totalLevels/2)), oTarget, HoursToSeconds(4));
       }
       // Apply Speed debuff again after dying
       // Fackel
