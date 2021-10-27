@@ -541,8 +541,10 @@ void main() {
     }
 
     // Give XP every few seconds
+    AssignCommand(oPc, ActionSpeakString(IntToString(GetLocalInt(oPc, "xp_token"))));
+    if(GetLocalInt(oPc, "xp_token") == 0){
     SetLocalInt(oPc, "xp_token", Random(1000000));
-    DelayCommand(600.0, GiveXP(oPc, 1, 0, GetLocalInt(oPc, "xp_token")));
+    DelayCommand(600.0, GiveXP(oPc, 1, 0, GetLocalInt(oPc, "xp_token")));}
 
     // Start nui
     //ExecuteScript("nui_test", oPc);
