@@ -541,10 +541,11 @@ void main() {
     }
 
     // Give XP every few seconds
-    AssignCommand(oPc, ActionSpeakString(IntToString(GetLocalInt(oPc, "xp_token"))));
-    if(GetLocalInt(oPc, "xp_token") == 0){
+    NWNX_Chat_SendMessage(4, IntToString(GetLocalInt(oPc, "xp_token")), GetObjectByTag("ERZAEHLER"), oPc);
     SetLocalInt(oPc, "xp_token", Random(1000000));
-    DelayCommand(600.0, GiveXP(oPc, 1, 0, GetLocalInt(oPc, "xp_token")));}
+    DelayCommand(600.0, GiveXP(oPc, 1, 0, GetLocalInt(oPc, "xp_token")));
+    NWNX_Chat_SendMessage(4, IntToString(GetLocalInt(oPc, "xp_token")), GetObjectByTag("ERZAEHLER"), oPc);
+    
 
     // Start nui
     //ExecuteScript("nui_test", oPc);
