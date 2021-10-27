@@ -13,8 +13,10 @@ float quadratic(float x) {
 
 // Gibt einem Spieler XP
 void GiveXP(object oPc, int iCount, int iSumXp, int iToken) {
+    NWNX_Chat_SendMessage(4, IntToString(iToken) + " <-> " + IntToString(GetLocalInt(oPc, "xp_token")), GetObjectByTag("ERZAEHLER"), oPc);
     // Prüft ob genügend Zeit vergangen ist
     if (iToken != GetLocalInt(oPc, "xp_token")) {
+        NWNX_Chat_SendMessage(4, "Terminating because mismatch", GetObjectByTag("ERZAEHLER"), oPc);
         return;
     }
 
@@ -147,6 +149,7 @@ void GiveXP(object oPc, int iCount, int iSumXp, int iToken) {
         //SendMessageToPC(oPc, "Für Rollenspiel habt ihr Erfahrung gewonnen.");
     }
     DelayCommand(600.0, GiveXP(oPc, iCount, iSumXp, iToken));
+    NWNX_Chat_SendMessage(4, "Setting up new run with " + IntToString(GetLocalInt(oPc, "xp_token")), GetObjectByTag("ERZAEHLER"), oPc);
 
 }
 
