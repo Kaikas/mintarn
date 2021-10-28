@@ -543,11 +543,10 @@ void main() {
         AddJournalQuestEntry("wache", 1, oPc, FALSE, FALSE, TRUE);
     }
 
-    // Give XP every few seconds
-    NWNX_Chat_SendMessage(4, IntToString(GetLocalInt(oPc, "xp_token")), GetObjectByTag("ERZAEHLER"), oPc);
-    SetLocalInt(oPc, "xp_token", Random(1000000));
-    DelayCommand(600.0, GiveXP(oPc, 1, 0, GetLocalInt(oPc, "xp_token")));
-    NWNX_Chat_SendMessage(4, IntToString(GetLocalInt(oPc, "xp_token")), GetObjectByTag("ERZAEHLER"), oPc);
+    // Give XP every 10 Minutes
+    int nSeed = Random(1000000);
+    SetLocalInt(oPc, "xp_token", nSeed);
+    DelayCommand(600.0, GiveXP(oPc, 1, 0, nSeed));
     
 
     // Start nui
