@@ -130,13 +130,48 @@ void torsoprevious(object oPc) {
     }
 }
 
+string Get2DAArmorTypeFile(int iType) {
+    string sRet;
+    switch(iType) {
+        case ITEM_APPR_ARMOR_MODEL_BELT: sRet = "parts_belt";
+        case ITEM_APPR_ARMOR_MODEL_LBICEP: sRet = "parts_bicep";
+        case ITEM_APPR_ARMOR_MODEL_LFOOT: sRet = "parts_foot";
+        case ITEM_APPR_ARMOR_MODEL_LFOREARM: sRet = "parts_forearm";
+        case ITEM_APPR_ARMOR_MODEL_LHAND: sRet = "parts_hand";
+        case ITEM_APPR_ARMOR_MODEL_LSHIN: sRet = "parts_shin";
+        case ITEM_APPR_ARMOR_MODEL_LSHOULDER: sRet = "parts_shoulder";
+        case ITEM_APPR_ARMOR_MODEL_LTHIGH: sRet = "parts_legs";
+        case ITEM_APPR_ARMOR_MODEL_NECK: sRet = "parts_neck";
+        case ITEM_APPR_ARMOR_MODEL_PELVIS: sRet = "parts_pelvis";
+        case ITEM_APPR_ARMOR_MODEL_RBICEP: sRet = "parts_bicep";
+        case ITEM_APPR_ARMOR_MODEL_RFOOT: sRet = "parts_foot";
+        case ITEM_APPR_ARMOR_MODEL_RFOREARM: sRet = "parts_forearm";
+        case ITEM_APPR_ARMOR_MODEL_RHAND: sRet = "parts_hand";
+        case ITEM_APPR_ARMOR_MODEL_ROBE: sRet = "parts_robe";
+        case ITEM_APPR_ARMOR_MODEL_RSHIN: sRet = "parts_shin";
+        case ITEM_APPR_ARMOR_MODEL_RSHOULDER: sRet = "parts_shoulder";
+        case ITEM_APPR_ARMOR_MODEL_RTHIGH: sRet = "parts_legs";
+    }
+    return sRet;
+}
 
 // Changes the appearance of a part to the next available one
 void armornext(object oPc, int iType, int iMax) {
     object oArmor = GetItemInSlot(INVENTORY_SLOT_CHEST, oPc);
+    string sTypeFileName = Get2DAArmorTypeFile(iType);
+
     int iAppearanceNumber = GetItemAppearance(oArmor, ITEM_APPR_TYPE_ARMOR_MODEL, iType);
     iAppearanceNumber = iAppearanceNumber + 1;
-    if (iAppearanceNumber > iMax) iAppearanceNumber = 1;
+
+    int iHasArmor = StringToInt(Get2DAString(sTypeFileName, "HASMODEL", iAppearanceNumber));
+    while (iHasArmor != 1) {
+        iAppearanceNumber = iAppearanceNumber + 1;
+        iHasArmor = StringToInt(Get2DAString(sTypeFileName, "HASMODEL", iAppearanceNumber));
+        if (iAppearanceNumber > iMax) iAppearanceNumber = 1;
+    }
+
+
+
     object oNewArmor = CopyItemAndModify(oArmor, ITEM_APPR_TYPE_ARMOR_MODEL, iType, iAppearanceNumber, FALSE);
     if (oNewArmor != OBJECT_INVALID) {
         TransferItemProperties(oArmor, oNewArmor);
@@ -151,9 +186,19 @@ void armornext(object oPc, int iType, int iMax) {
 // Changes the appearance of a part to the previous available one
 void armorprevious(object oPc, int iType, int iMax) {
     object oArmor = GetItemInSlot(INVENTORY_SLOT_CHEST, oPc);
+    string sTypeFileName = Get2DAArmorTypeFile(iType);
+
     int iAppearanceNumber = GetItemAppearance(oArmor, ITEM_APPR_TYPE_ARMOR_MODEL, iType);
     iAppearanceNumber = iAppearanceNumber - 1;
-    if (iAppearanceNumber < 1) iAppearanceNumber = iMax;
+
+    int iHasArmor = StringToInt(Get2DAString(sTypeFileName, "HASMODEL", iAppearanceNumber));
+    while (iHasArmor != 1) {
+        iAppearanceNumber = iAppearanceNumber - 1;
+        iHasArmor = StringToInt(Get2DAString(sTypeFileName, "HASMODEL", iAppearanceNumber));
+        if (iAppearanceNumber < 1) iAppearanceNumber = iMax;
+    }
+
+
     object oNewArmor = CopyItemAndModify(oArmor, ITEM_APPR_TYPE_ARMOR_MODEL, iType, iAppearanceNumber, FALSE);
     if (oNewArmor != OBJECT_INVALID) {
         TransferItemProperties(oArmor, oNewArmor);
@@ -879,42 +924,53 @@ void main() {
     if (GetScriptParam("action") == "portraitback") portraitback(oPc);
     if (GetScriptParam("action") == "torsonext") torsonext(oPc);
     if (GetScriptParam("action") == "torsoprevious") torsoprevious(oPc);
-    if (GetScriptParam("action") == "robenext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_ROBE, 250);
-    if (GetScriptParam("action") == "robeprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_ROBE, 250);
-    if (GetScriptParam("action") == "bizepslinksnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_LBICEP, 250);
-    if (GetScriptParam("action") == "bizepslinksprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_LBICEP, 250);
-    if (GetScriptParam("action") == "bizepsrechtsnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_RBICEP, 250);
-    if (GetScriptParam("action") == "bizepsrechtsprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_RBICEP, 250);
-    if (GetScriptParam("action") == "unterarmlinksnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_LFOREARM, 250);
-    if (GetScriptParam("action") == "unterarmlinksprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_LFOREARM, 250);
-    if (GetScriptParam("action") == "unterarmrechtsnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_RFOREARM, 250);
-    if (GetScriptParam("action") == "unterarmrechtsprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_RFOREARM, 250);
-    if (GetScriptParam("action") == "schulterrechtsnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_RSHOULDER, 250);
-    if (GetScriptParam("action") == "schulterrechtsprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_RSHOULDER, 250);
-    if (GetScriptParam("action") == "schulterlinksnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_LSHOULDER, 250);
-    if (GetScriptParam("action") == "schulterlinksprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_LSHOULDER, 250);
-    if (GetScriptParam("action") == "guertelnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_BELT, 250);
-    if (GetScriptParam("action") == "guertelprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_BELT, 250);
-    if (GetScriptParam("action") == "beckennext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_PELVIS, 250);
-    if (GetScriptParam("action") == "beckenprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_PELVIS, 250);
-    if (GetScriptParam("action") == "fusslinksnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_LFOOT, 250);
-    if (GetScriptParam("action") == "fusslinksprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_LFOOT, 250);
-    if (GetScriptParam("action") == "fussrechtsnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_RFOOT, 250);
-    if (GetScriptParam("action") == "fussrechtsprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_RFOOT, 250);
-    if (GetScriptParam("action") == "halsnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_NECK, 250);
-    if (GetScriptParam("action") == "halsprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_NECK, 250);
-    if (GetScriptParam("action") == "schienbeinlinksnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_LSHIN, 250);
-    if (GetScriptParam("action") == "schienbeinlinksprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_LSHIN, 250);
-    if (GetScriptParam("action") == "schienbeinrechtsnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_RSHIN, 250);
-    if (GetScriptParam("action") == "schienbeinrechtsprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_RSHIN, 250);
-    if (GetScriptParam("action") == "handlinksnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_LHAND, 250);
-    if (GetScriptParam("action") == "handlinksprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_LHAND, 250);
-    if (GetScriptParam("action") == "handrechtsnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_RHAND, 250);
-    if (GetScriptParam("action") == "handrechtsprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_RHAND, 250);
-    if (GetScriptParam("action") == "oberschenkellinksnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_LTHIGH, 250);
-    if (GetScriptParam("action") == "oberschenkellinksprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_LTHIGH, 250);
-    if (GetScriptParam("action") == "oberschenkelrechtsnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_RTHIGH, 250);
-    if (GetScriptParam("action") == "oberschenkelrechtsprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_RTHIGH, 250);
+
+    if (GetScriptParam("action") == "robenext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_ROBE, 202);
+    if (GetScriptParam("action") == "robeprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_ROBE, 202);
+
+    if (GetScriptParam("action") == "bizepslinksnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_LBICEP, 215);
+    if (GetScriptParam("action") == "bizepslinksprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_LBICEP, 215);
+    if (GetScriptParam("action") == "bizepsrechtsnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_RBICEP, 215);
+    if (GetScriptParam("action") == "bizepsrechtsprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_RBICEP, 215);
+
+    if (GetScriptParam("action") == "unterarmlinksnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_LFOREARM, 221);
+    if (GetScriptParam("action") == "unterarmlinksprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_LFOREARM, 221);
+    if (GetScriptParam("action") == "unterarmrechtsnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_RFOREARM, 221);
+    if (GetScriptParam("action") == "unterarmrechtsprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_RFOREARM, 221);
+
+    if (GetScriptParam("action") == "schulterrechtsnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_RSHOULDER, 221);
+    if (GetScriptParam("action") == "schulterrechtsprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_RSHOULDER, 221);
+    if (GetScriptParam("action") == "schulterlinksnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_LSHOULDER, 221);
+    if (GetScriptParam("action") == "schulterlinksprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_LSHOULDER, 221);
+
+    if (GetScriptParam("action") == "guertelnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_BELT, 221);
+    if (GetScriptParam("action") == "guertelprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_BELT, 221);
+
+    if (GetScriptParam("action") == "beckennext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_PELVIS, 186);
+    if (GetScriptParam("action") == "beckenprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_PELVIS, 186);
+
+    if (GetScriptParam("action") == "fusslinksnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_LFOOT, 190);
+    if (GetScriptParam("action") == "fusslinksprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_LFOOT, 190);
+    if (GetScriptParam("action") == "fussrechtsnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_RFOOT, 190);
+    if (GetScriptParam("action") == "fussrechtsprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_RFOOT, 190);
+
+    if (GetScriptParam("action") == "halsnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_NECK, 211);
+    if (GetScriptParam("action") == "halsprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_NECK, 211);
+
+    if (GetScriptParam("action") == "schienbeinlinksnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_LSHIN, 221);
+    if (GetScriptParam("action") == "schienbeinlinksprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_LSHIN, 221);
+    if (GetScriptParam("action") == "schienbeinrechtsnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_RSHIN, 221);
+    if (GetScriptParam("action") == "schienbeinrechtsprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_RSHIN, 221);
+
+    if (GetScriptParam("action") == "handlinksnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_LHAND, 215);
+    if (GetScriptParam("action") == "handlinksprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_LHAND, 215);
+    if (GetScriptParam("action") == "handrechtsnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_RHAND, 215);
+    if (GetScriptParam("action") == "handrechtsprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_RHAND, 215);
+
+    if (GetScriptParam("action") == "oberschenkellinksnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_LTHIGH, 186);
+    if (GetScriptParam("action") == "oberschenkellinksprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_LTHIGH, 186);
+    if (GetScriptParam("action") == "oberschenkelrechtsnext") armornext(oPc, ITEM_APPR_ARMOR_MODEL_RTHIGH, 186);
+    if (GetScriptParam("action") == "oberschenkelrechtsprevious") armorprevious(oPc, ITEM_APPR_ARMOR_MODEL_RTHIGH, 186);
     // Helmets
     if (GetScriptParam("action") == "helmnext") itemnext(oPc, INVENTORY_SLOT_HEAD, 124);
     if (GetScriptParam("action") == "helmprevious") itemprevious(oPc, INVENTORY_SLOT_HEAD, 124);
