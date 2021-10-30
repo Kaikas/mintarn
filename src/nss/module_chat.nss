@@ -163,19 +163,35 @@ int setWindFromChat(string sMessage) {
 }
 
 int setmodulefog(string sMessage) {
-  if (sMessage == "/setfog" && GetIsDM(oPc)) {
-    string sDay = IntToString(GetCalendarYear()) + "." + IntToString(GetCalendarMonth()) + "." + IntToString(GetCalendarDay());
-    int iFogStart = GetTimeHour();
-    object oModule = GetModule();
-    SetLocalInt(oModule, sDay + "fog_start", iFogStart);
-    SetLocalInt(oModule, sDay + "fog_end", 24);
-    setFog(sDay, "", 5, 1, 1, 1, oModule, GetObjectByTag("AREA_Freihafen"));
-    setFog(sDay, "", 5, 1, 1, 1, oModule, GetObjectByTag("AREA_FreihafenWest"));
-    setFog(sDay, "", 5, 1, 1, 1, oModule, GetObjectByTag("AREA_Banditenfestung"));
-    setFog(sDay, "", 5, 1, 1, 1, oModule, GetObjectByTag("AREA_Insel"));
-    setFog(sDay, "", 5, 1, 1, 1, oModule, GetObjectByTag("AREA_Hgelland"));
-    setFog(sDay, "", 5, 1, 1, 1, oModule, GetObjectByTag("AREA_versteckterHain"));
-    setFog(sDay, "", 5, 1, 1, 1, oModule, GetObjectByTag("AREA_Westmark"));
+  if (GetSubString(sMessage, 0, 7) == "/setfog" && GetIsDM(oPc)) {
+  SendMessageToPC(oPc, "Format: /setfog x y - x = 0|1, y = 0|1|2");
+  SendMessageToPC(oPc, sMessage);
+  int iTemperatur = StringToInt(GetSubString(sMessage, 7, 1));
+  int iHeight = StringToInt(GetSubString(sMessage, 9, 1));
+  SendMessageToPC(oPc, IntToString(iTemperatur));
+  SendMessageToPC(oPc, IntToString(iHeight));
+  object oArea = GetArea(oPc);
+     if (GetTag(oArea) != "AREA_versteckterHain") {
+            SetFogAmount(FOG_TYPE_SUN, 200, oArea);
+            SetFogAmount(FOG_TYPE_MOON, 200, oArea);
+        }
+        int i, j;
+        for (i = 0; i < 300; i = i + 30) {
+            for (j = 0; j < 300; j = j + 30) {
+                float z = GetGroundHeight(Location(oArea, Vector(IntToFloat(i), IntToFloat(j), 0.0), 0.0));
+                vector vPosition = Vector(IntToFloat(i), IntToFloat(j), z);
+                if (iTemperatur > 0) {
+                    if (iHeight == 0) CreateObject(OBJECT_TYPE_PLACEABLE, "weather_foglow", Location(oArea, vPosition, 0.0), FALSE, "WEATHER_FOG");
+                    if (iHeight == 1) CreateObject(OBJECT_TYPE_PLACEABLE, "weather_fogmid", Location(oArea, vPosition, 0.0), FALSE, "WEATHER_FOG");
+                    if (iHeight == 2) CreateObject(OBJECT_TYPE_PLACEABLE, "weather_foghigh", Location(oArea, vPosition, 0.0), FALSE, "WEATHER_FOG");
+                 } else {
+                    if (iHeight == 0) CreateObject(OBJECT_TYPE_PLACEABLE, "weather_fogilow", Location(oArea, vPosition, 0.0), FALSE, "WEATHER_FOG");
+                    if (iHeight == 1) CreateObject(OBJECT_TYPE_PLACEABLE, "weather_fogimid", Location(oArea, vPosition, 0.0), FALSE, "WEATHER_FOG");
+                    if (iHeight == 2) CreateObject(OBJECT_TYPE_PLACEABLE, "weather_fogihigh", Location(oArea, vPosition, 0.0), FALSE, "WEATHER_FOG");
+                }
+            }
+        }
+        SetLocalInt(oArea, "fog", 1);
     return 1;
   }
   return 0;
