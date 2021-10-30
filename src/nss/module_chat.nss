@@ -167,9 +167,7 @@ int setmodulefog(string sMessage) {
   SendMessageToPC(oPc, "Format: /setfog x y || x = 0|1, y = 0|1|2. Only sets fog in CURRENT AREA");
   int iTemperatur = StringToInt(GetSubString(sMessage, 8, 1));
   int iHeight = StringToInt(GetSubString(sMessage, 10, 1));
-  SendMessageToPC(oPc, sMessage + "->" + IntToString(iTemperatur) + " " + StringToInt(GetSubString(sMessage, 10, 1));
-  SendMessageToPC(oPc, );
-  SendMessageToPC(oPc, IntToString(iHeight));
+  SendMessageToPC(oPc, sMessage + "->" + IntToString(iTemperatur) + " " + IntToString(iHeight));
   object oArea = GetArea(oPc);
      if (GetTag(oArea) != "AREA_versteckterHain") {
             SetFogAmount(FOG_TYPE_SUN, 200, oArea);
