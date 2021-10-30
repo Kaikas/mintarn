@@ -164,11 +164,11 @@ int setWindFromChat(string sMessage) {
 
 int setmodulefog(string sMessage) {
   if (GetSubString(sMessage, 0, 7) == "/setfog" && GetIsDM(oPc)) {
-  SendMessageToPC(oPc, "Format: /setfog x y - x = 0|1, y = 0|1|2");
-  SendMessageToPC(oPc, sMessage);
-  int iTemperatur = StringToInt(GetSubString(sMessage, 7, 1));
-  int iHeight = StringToInt(GetSubString(sMessage, 9, 1));
-  SendMessageToPC(oPc, IntToString(iTemperatur));
+  SendMessageToPC(oPc, "Format: /setfog x y || x = 0|1, y = 0|1|2. Only sets fog in CURRENT AREA");
+  int iTemperatur = StringToInt(GetSubString(sMessage, 8, 1));
+  int iHeight = StringToInt(GetSubString(sMessage, 10, 1));
+  SendMessageToPC(oPc, sMessage + "->" + IntToString(iTemperatur) + " " + StringToInt(GetSubString(sMessage, 10, 1));
+  SendMessageToPC(oPc, );
   SendMessageToPC(oPc, IntToString(iHeight));
   object oArea = GetArea(oPc);
      if (GetTag(oArea) != "AREA_versteckterHain") {
