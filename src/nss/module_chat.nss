@@ -162,16 +162,22 @@ int setWindFromChat(string sMessage) {
   return 0;
 }
 
-int setfog(string sMessage) {
-  if (sMessage == "/setfog " && GetIsDM(oPc)) {
+int setmodulefog(string sMessage) {
+  if (sMessage == "/setfog" && GetIsDM(oPc)) {
     string sDay = IntToString(GetCalendarYear()) + "." + IntToString(GetCalendarMonth()) + "." + IntToString(GetCalendarDay());
     int iFogStart = GetTimeHour();
+    object oModule = GetModule();
     SetLocalInt(oModule, sDay + "fog_start", iFogStart);
     SetLocalInt(oModule, sDay + "fog_end", 24);
-    SendMessageToPC(oPc, "Nebel startet beim nächsten Wettertick.");
+    setFog(sDay, "", 5, 1, 1, 1, oModule, GetObjectByTag("AREA_Freihafen"));
+    setFog(sDay, "", 5, 1, 1, 1, oModule, GetObjectByTag("AREA_FreihafenWest"));
+    setFog(sDay, "", 5, 1, 1, 1, oModule, GetObjectByTag("AREA_Banditenfestung"));
+    setFog(sDay, "", 5, 1, 1, 1, oModule, GetObjectByTag("AREA_Insel"));
+    setFog(sDay, "", 5, 1, 1, 1, oModule, GetObjectByTag("AREA_Hgelland"));
+    setFog(sDay, "", 5, 1, 1, 1, oModule, GetObjectByTag("AREA_versteckterHain"));
+    setFog(sDay, "", 5, 1, 1, 1, oModule, GetObjectByTag("AREA_Westmark"));
     return 1;
   }
-  SendMessageToPC(oPc, "Du bist kein EL!");
   return 0;
 }
 
@@ -1881,7 +1887,7 @@ void main() {
         rolls(sMessage, oPc) ||
         familiar(sMessage) ||
         companion(sMessage) ||
-        setfog(sMessage) ||
+        setmodulefog(sMessage) ||
         token(sMessage) ||
         hindurchzwaengen(sMessage) ||
         phenotype(sMessage) ||
