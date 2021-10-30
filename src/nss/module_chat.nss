@@ -162,6 +162,19 @@ int setWindFromChat(string sMessage) {
   return 0;
 }
 
+int setfog(string sMessage) {
+  if (sMessage == "/setfog " && GetIsDM(oPc)) {
+    string sDay = IntToString(GetCalendarYear()) + "." + IntToString(GetCalendarMonth()) + "." + IntToString(GetCalendarDay());
+    int iFogStart = GetTimeHour();
+    SetLocalInt(oModule, sDay + "fog_start", iFogStart);
+    SetLocalInt(oModule, sDay + "fog_end", 24);
+    SendMessageToPC(oPc, "Nebel startet beim nächsten Wettertick.");
+    return 1;
+  }
+  SendMessageToPC(oPc, "Du bist kein EL!");
+  return 0;
+}
+
 string colorText(string sMessage) {
   sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
   sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
@@ -1868,6 +1881,7 @@ void main() {
         rolls(sMessage, oPc) ||
         familiar(sMessage) ||
         companion(sMessage) ||
+        setfog(sMessage) ||
         token(sMessage) ||
         hindurchzwaengen(sMessage) ||
         phenotype(sMessage) ||
