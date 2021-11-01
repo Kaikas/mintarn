@@ -122,11 +122,11 @@
         },
         "LinkedTo": {
           "type": "cexostring",
-          "value": ""
+          "value": "WP_HAIN_HUT_EXIT"
         },
         "LinkedToFlags": {
           "type": "byte",
-          "value": 0
+          "value": 2
         },
         "LoadScreenID": {
           "type": "word",
