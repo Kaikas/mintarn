@@ -16,6 +16,456 @@
               "__struct_id": 0,
               "ID": {
                 "type": "byte",
+                "value": 210
+              },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 236
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Bastardschwerter"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 225
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Beile"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 219
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Dolche"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 222
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Doppeläxte"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 216
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Doppelklingenschwerter"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 215
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Hellebarden"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 226
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Kamas"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 244
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Kampfstäbe"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 227
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Katanas"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 220
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Keulen"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 237
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Kriegsäxte"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 238
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Kriegshämmer"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 231
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Krummsäbel"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 228
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Kukri"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 242
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Kurzbögen"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 211
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Kurzschwerter"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 248
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Kurzspeere"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 241
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Langbögen"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 212
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Langschwerter"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 240
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Leichte Armbrüste"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 213
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Leichte Flegel"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 224
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Leichte Hämmer"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 214
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Leichte Streitkolben"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 229
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Morgensterne"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 235
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Peitschen"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 230
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Rapiere"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 246
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Schleudern"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 221
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Schreckensstreitkolben"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 239
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Schwere Armbrüste"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 223
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Schwere Flegel"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 232
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Sensen"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 245
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Shuriken"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 233
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Sicheln"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 247
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Wurfäxte"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 243
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Wurfpfeile"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 218
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Zwehändige Äxte"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 217
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Zweihänder"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 234
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Zwergische Kriegsäxte"
+                    }
+                  }
+                ]
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Waffen"
+              }
+            }
+          ]
+        },
+        "NAME": {
+          "type": "cexostring",
+          "value": "SW"
+        }
+      },
+      {
+        "__struct_id": 0,
+        "ID": {
+          "type": "byte",
+          "value": 201
+        },
+        "LIST": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
                 "value": 183
               },
               "LIST": {
@@ -1633,17 +2083,6 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Tabakschachtel für den Tempel"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_qu_tabaktempe"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Tabakschachtel für die Lebensmittelhändlerin"
                     },
                     "RESREF": {
@@ -1660,6 +2099,17 @@
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_qu_tabakwache"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Tabakschachtel für die Verwaltung von Waukeens Hospitium"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_qu_tabaktempe"
                     }
                   }
                 ]
@@ -7365,7 +7815,7 @@
               },
               "NAME": {
                 "type": "cexostring",
-                "value": "Waffen"
+                "value": "Waffen (deprecated)"
               }
             },
             {

@@ -116,7 +116,7 @@
   },
   "ResRef": {
     "type": "resref",
-    "value": "freihafen001"
+    "value": "freihafen_ost"
   },
   "ShadowOpacity": {
     "type": "byte",

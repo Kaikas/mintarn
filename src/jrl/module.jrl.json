@@ -25,7 +25,7 @@
               "Text": {
                 "type": "cexolocstring",
                 "value": {
-                  "0": "Der Lederer hat euch gebeten ihm eine Fackel herzustellen. Lest dazu das Rezept das er euch gegeben hat, findet die nötigen Rohstoffe und fertigt ihm eine an."
+                  "0": "Der Lederer hat euch gebeten, ihm eine Fackel herzustellen. Lest dazu das Rezept das er euch gegeben hat, findet die nötigen Rohstoffe und fertigt ihm eine an. Oder kauft einfach eine wo anders."
                 }
               }
             }
@@ -127,7 +127,7 @@
               "Text": {
                 "type": "cexolocstring",
                 "value": {
-                  "0": "Die Lebensmittelhändlerin hat euch gebeten fünf Pilzragout unter den Bedürftigen im Tempel zu verteilen und danach zu ihr zurück zu kehren."
+                  "0": "Die Lebensmittelhändlerin hat euch gebeten, fünf Pilzragout unter den Bedürftigen im Tempel (Waukeens Hospitium) zu verteilen und danach zu ihr zurück zu kehren."
                 }
               }
             }
@@ -399,7 +399,7 @@
               "Text": {
                 "type": "cexolocstring",
                 "value": {
-                  "0": "Bringt das Paket zum Wirt in der Taverne. Werft einen Blick auf die Karte um die Taverne zu finden."
+                  "0": "Bringt das Paket zum Wirt Fileon im Gasthaus \"Zum Rettenden Ufer\". Werft einen Blick auf die Karte, um die es zu finden."
                 }
               }
             },
@@ -416,7 +416,7 @@
               "Text": {
                 "type": "cexolocstring",
                 "value": {
-                  "0": "Ihr habt Tabakschachteln für verschiedene wichtige Personen in der Stadt bekommen. Bringt sie ihnen und seht ob sie weitere Aufgaben für euch haben."
+                  "0": "Ihr habt Tabakschachteln für verschiedene wichtige Personen in der Stadt bekommen. Bringt sie ihnen und seht, ob sie weitere Aufgaben für euch haben."
                 }
               }
             }
