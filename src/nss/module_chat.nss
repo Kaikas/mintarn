@@ -1778,7 +1778,6 @@ int helpSkills(string sMessage) {
         "/arkanes\n" +
         "/athletik\n" +
         "/auftreten\n" +
-        "/bardenwissen\n" +
         "/einschüchtern\n" +
         "/entdecken\n" +
         "/fingerfertigkeit\n" +
