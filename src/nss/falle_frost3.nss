@@ -1,36 +1,49 @@
 //::///////////////////////////////////////////////
-// starke Frostfalle
+// Starke Frostfalle
 //:://////////////////////////////////////////////
 #include "NW_I0_SPELLS"
 
 void main()
 {
-  int bValid;
+
+  // Variablen_Stufe
+  int nDamage = 8;
+  int nSaveDC = 16;
+  float eDauer = RoundsToSeconds(5);
+  float fSize = RADIUS_SIZE_MEDIUM;
+
+  //Variablen_Fallentyp
+  int nSave = SAVING_THROW_FORT;
+  int nDamageType = DAMAGE_TYPE_COLD;
+  effect eStatus = EffectSlow();
+  effect eVis = EffectVisualEffect(VFX_IMP_FROST_L);
+
+
+
+  //:://////////////////////////////////////////////
+  // Ab hier keine Anpassungen.
+  //:://////////////////////////////////////////////
+
+  // Konstanten
+  effect eDam = EffectDamage(nDamage, nDamageType);
   object oTarget = GetEnteringObject();
   location lTarget = GetLocation(oTarget);
-  int nDamage;
-  effect eVis = EffectVisualEffect(VFX_IMP_FROST_L);
-  effect eSlow = EffectSlow();
-  effect eDam;
+  int bValid;
 
-
-  int nSaveDC = 18;
 
   //Get first object in the target area
-  oTarget = GetFirstObjectInShape(SHAPE_SPHERE, RADIUS_SIZE_SMALL, lTarget);
+  oTarget = GetFirstObjectInShape(SHAPE_SPHERE, fSize, lTarget);
   //Cycle through the target area until all object have been targeted
   while(GetIsObjectValid(oTarget))
   {
     if(!GetIsReactionTypeFriendly(oTarget))
     {
-      //Roll damage
-      nDamage = d8(6);
-      // Rettungswurf Verlangsamung
-      if(!MySavingThrow(SAVING_THROW_FORT, oTarget, nSaveDC, SAVING_THROW_TYPE_TRAP))
+      // Rettungswurf Statuseffekt
+      if(!MySavingThrow(nSave, oTarget, nSaveDC, SAVING_THROW_TYPE_TRAP))
       {
-        ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eSlow, oTarget, RoundsToSeconds(10));
+        ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eStatus, oTarget, eDauer);
       }
-      //Adjust the trap damage based on the feats of the target
+      //Rettungswurf Schaden
       if(!MySavingThrow(SAVING_THROW_REFLEX, oTarget, nSaveDC, SAVING_THROW_TYPE_TRAP))
       {
         if (GetHasFeat(FEAT_IMPROVED_EVASION, oTarget))
@@ -48,18 +61,12 @@ void main()
       }
       if (nDamage > 0)
       {
-        //Set damage effect
-        eDam = EffectDamage(nDamage, DAMAGE_TYPE_COLD);
-        if (nDamage > 0)
-        {
-          //Apply effects to the target.
-          eDam = EffectDamage(nDamage, DAMAGE_TYPE_COLD);
-          ApplyEffectToObject(DURATION_TYPE_INSTANT, eVis, oTarget);
-          DelayCommand(0.0, ApplyEffectToObject(DURATION_TYPE_INSTANT, eDam, oTarget));
-        }
+        //Apply effects to the target.
+        ApplyEffectToObject(DURATION_TYPE_INSTANT, eVis, oTarget);
+        DelayCommand(0.0, ApplyEffectToObject(DURATION_TYPE_INSTANT, eDam, oTarget));
       }
     }
     //Get next target in shape
-    oTarget = GetNextObjectInShape(SHAPE_SPHERE, RADIUS_SIZE_SMALL, lTarget);
+    oTarget = GetNextObjectInShape(SHAPE_SPHERE, fSize, lTarget);
   }
 }

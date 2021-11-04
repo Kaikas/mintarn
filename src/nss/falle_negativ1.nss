@@ -7,8 +7,8 @@ void main()
 {
 
   // Variablen_Stufe
-  int nDamage = d10(1);
-  int nSaveDC = 12;
+  int nDamage = d2(2);
+  int nSaveDC = 11;
   float eDauer = RoundsToSeconds(100);
   float fSize = RADIUS_SIZE_SMALL;
 

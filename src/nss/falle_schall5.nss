@@ -7,15 +7,17 @@ void main()
 {
 
   // Variablen_Stufe
-  int nDamage = d4(9);
-  int nSaveDC = 24;
-  float eDauer = RoundsToSeconds(5);
-  float fSize = RADIUS_SIZE_GARGANTUAN;
+  int nDamage = d12(1);
+  int nSaveDC = 18;
+  float eDauer = RoundsToSeconds(10);
+  float fSize = RADIUS_SIZE_LARGE;
 
   //Variablen_Fallentyp
   int nSave = SAVING_THROW_WILL;
   int nDamageType = DAMAGE_TYPE_SONIC;
   effect eStatus = EffectDeaf();
+  effect eStatus2 = EffectDazed();
+  float eDauer2 = RoundsToSeconds(1);
   effect eVis = EffectVisualEffect(VFX_FNF_SOUND_BURST);
 
 
@@ -42,7 +44,7 @@ void main()
       if(!MySavingThrow(nSave, oTarget, nSaveDC, SAVING_THROW_TYPE_TRAP))
       {
         ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eStatus, oTarget, eDauer);
-        ApplyEffectToObject(DURATION_TYPE_TEMPORARY, EffectDeaf(), oTarget, RoundsToSeconds(5));
+        ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eStatus2, oTarget, eDauer2);
       }
       //Rettungswurf Schaden
       if(!MySavingThrow(SAVING_THROW_REFLEX, oTarget, nSaveDC, SAVING_THROW_TYPE_TRAP))

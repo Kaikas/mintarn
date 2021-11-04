@@ -42,7 +42,8 @@
     "id": 13700,
     "type": "cexolocstring",
     "value": {
-      "0": "Tödliche Feuerfalle"
+      "0": "Tödliche Feuerfalle",
+      "4": "Tödliche Feuerfalle"
     }
   },
   "ModelPart1": {
@@ -88,7 +89,7 @@
         },
         "Subtype": {
           "type": "word",
-          "value": 0
+          "value": 3
         }
       },
       {

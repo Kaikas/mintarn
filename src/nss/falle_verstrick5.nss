@@ -7,9 +7,9 @@ void main()
 {
 
   // Variablen_Stufe
-  int nSaveDC = 24;
+  int nSaveDC = 20;
   float eDauer = RoundsToSeconds(10);
-  float fSize = RADIUS_SIZE_GARGANTUAN;
+  float fSize = RADIUS_SIZE_LARGE;
 
   // Variablen_Fallentyp
   int nSave = SAVING_THROW_FORT;

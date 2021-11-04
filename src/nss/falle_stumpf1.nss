@@ -7,13 +7,13 @@ void main()
 {
 
   // Variablen_Stufe
-  int nDamage = d2(6);
-  int nSaveDC = 12;
+  int nDamage = d2(4);
+  int nSaveDC = 11;
   float eDauer = RoundsToSeconds(2);
   float fSize = RADIUS_SIZE_SMALL;
 
   //Variablen_Fallentyp
-  int nSave = SAVING_THROW_FORT;
+  int nSave = SAVING_THROW_WILL;
   int nDamageType = DAMAGE_TYPE_BLUDGEONING;
   effect eStatus = EffectStunned();
   effect eVis = EffectVisualEffect(VFX_IMP_STUN);

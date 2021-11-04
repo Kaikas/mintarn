@@ -42,7 +42,8 @@
     "id": 13700,
     "type": "cexolocstring",
     "value": {
-      "0": "Schwache Wuchtfalle"
+      "0": "Schwache Wuchtfalle",
+      "4": "Schwache Wuchtfalle"
     }
   },
   "ModelPart1": {

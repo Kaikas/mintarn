@@ -7,15 +7,15 @@ void main()
 {
 
   // Variablen_Stufe
-  int nDamage = d2(40);
-  int nSaveDC = 16;
-  float eDauer = RoundsToSeconds(1);
+  int nDamage = d4(5);
+  int nSaveDC = 12;
+  float eDauer = RoundsToSeconds(5);
   float fSize = RADIUS_SIZE_SMALL;
 
   //Variablen_Fallentyp
   int nSave = SAVING_THROW_REFLEX;
   int nDamageType = DAMAGE_TYPE_PIERCING;
-  effect eStatus = EffectSlow();
+  effect eStatus = EffectAbilityDecrease(1,6);
   effect eVis = EffectVisualEffect(VFX_IMP_SPIKE_TRAP);
 
 

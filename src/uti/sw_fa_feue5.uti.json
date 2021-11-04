@@ -42,7 +42,8 @@
     "id": 13700,
     "type": "cexolocstring",
     "value": {
-      "0": "Professionelle Feuerfalle"
+      "0": "Professionelle Feuerfalle",
+      "4": "Professionelle Feuerfalle"
     }
   },
   "ModelPart1": {
@@ -88,7 +89,7 @@
         },
         "Subtype": {
           "type": "word",
-          "value": 0
+          "value": 4
         }
       },
       {

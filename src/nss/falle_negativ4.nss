@@ -7,8 +7,8 @@ void main()
 {
 
   // Variablen_Stufe
-  int nDamage = d10(4);
-  int nSaveDC = 22;
+  int nDamage = d2(11);
+  int nSaveDC = 16;
   float eDauer = RoundsToSeconds(100);
   float fSize = RADIUS_SIZE_SMALL;
 
@@ -35,7 +35,7 @@ void main()
   oTarget = GetFirstObjectInShape(SHAPE_SPHERE, fSize, lTarget);
   //Cycle through the target area until all object have been targeted
   while(GetIsObjectValid(oTarget))
-  {   
+  {
     if ( GetRacialType(oTarget) == RACIAL_TYPE_UNDEAD )
     {
       effect eVisHeal = EffectVisualEffect(VFX_IMP_HEALING_M);

@@ -7,10 +7,10 @@ void main()
 {
 
   // Variablen_Stufe
-  int nDamage = d8(15);
-  int nSaveDC = 24;
-  float eDauer = RoundsToSeconds(3);
-  float fSize = RADIUS_SIZE_HUGE;
+  int nDamage = d4(8);
+  int nSaveDC = 18;
+  float eDauer = RoundsToSeconds(5);
+  float fSize = RADIUS_SIZE_SMALL;
 
   //Variablen_Fallentyp
   int nSave = SAVING_THROW_FORT;

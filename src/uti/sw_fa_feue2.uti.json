@@ -42,7 +42,8 @@
     "id": 13700,
     "type": "cexolocstring",
     "value": {
-      "0": "Gewöhnliche Feuerfalle"
+      "0": "Gewöhnliche Feuerfalle",
+      "4": "Gewöhnliche Feuerfalle"
     }
   },
   "ModelPart1": {
@@ -88,7 +89,7 @@
         },
         "Subtype": {
           "type": "word",
-          "value": 0
+          "value": 1
         }
       },
       {

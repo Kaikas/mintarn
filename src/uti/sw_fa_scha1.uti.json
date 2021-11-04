@@ -42,7 +42,8 @@
     "id": 13700,
     "type": "cexolocstring",
     "value": {
-      "0": "Schwache Schallfalle"
+      "0": "Schwache Schallfalle",
+      "4": "Schwache Schallfalle"
     }
   },
   "ModelPart1": {
@@ -72,7 +73,7 @@
         },
         "CostValue": {
           "type": "word",
-          "value": 5
+          "value": 10
         },
         "Param1": {
           "type": "byte",

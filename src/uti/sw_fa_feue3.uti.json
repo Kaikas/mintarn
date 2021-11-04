@@ -39,7 +39,8 @@
   "LocalizedName": {
     "type": "cexolocstring",
     "value": {
-      "0": "Schwache elektrische Falle"
+      "0": "Schwache elektrische Falle",
+      "4": "Starke Feuerfalle"
     }
   },
   "ModelPart1": {
@@ -85,7 +86,7 @@
         },
         "Subtype": {
           "type": "word",
-          "value": 0
+          "value": 2
         }
       },
       {

@@ -39,7 +39,8 @@
   "LocalizedName": {
     "type": "cexolocstring",
     "value": {
-      "0": "Gewöhnliche elektrische Falle"
+      "0": "Gewöhnliche Blitzfalle",
+      "4": "Schwache Blitzfalle"
     }
   },
   "ModelPart1": {
@@ -69,7 +70,7 @@
         },
         "CostValue": {
           "type": "word",
-          "value": 5
+          "value": 6
         },
         "Param1": {
           "type": "byte",

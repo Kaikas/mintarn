@@ -31,7 +31,8 @@
   "Description": {
     "type": "cexolocstring",
     "value": {
-      "0": ""
+      "0": "",
+      "4": ""
     }
   },
   "Identified": {
@@ -42,7 +43,8 @@
     "id": 13700,
     "type": "cexolocstring",
     "value": {
-      "0": "Tödliche Wuchtfalle"
+      "0": "Tödliche Wuchtfalle",
+      "4": "Tödliche Wuchtfalle"
     }
   },
   "ModelPart1": {
@@ -72,7 +74,7 @@
         },
         "CostValue": {
           "type": "word",
-          "value": 5
+          "value": 1
         },
         "Param1": {
           "type": "byte",
@@ -88,7 +90,7 @@
         },
         "Subtype": {
           "type": "word",
-          "value": 0
+          "value": 3
         }
       },
       {

@@ -42,7 +42,8 @@
     "id": 13700,
     "type": "cexolocstring",
     "value": {
-      "0": "Schwache Säurefalle"
+      "0": "Schwache Säurefalle",
+      "4": "Schwache Säurefalle"
     }
   },
   "ModelPart1": {
@@ -72,7 +73,7 @@
         },
         "CostValue": {
           "type": "word",
-          "value": 5
+          "value": 9
         },
         "Param1": {
           "type": "byte",

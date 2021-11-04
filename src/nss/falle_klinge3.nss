@@ -7,15 +7,15 @@ void main()
 {
 
   // Variablen_Stufe
-  int nDamage = d4(18);
-  int nSaveDC = 18;
-  //	float eDauer = null;
+  int nDamage = d4(8);
+  int nSaveDC = 15;
+  //    float eDauer = null;
   float fSize = RADIUS_SIZE_MEDIUM;
 
   //Variablen_Fallentyp
-  //	int nSave = SAVING_THROW_REFLEX;
+  //    int nSave = SAVING_THROW_REFLEX;
   int nDamageType = DAMAGE_TYPE_SLASHING;
-  //	effect eStatus = null;
+  //    effect eStatus = null;
   effect eVis = EffectVisualEffect(VFX_IMP_WALLSPIKE);
 
 

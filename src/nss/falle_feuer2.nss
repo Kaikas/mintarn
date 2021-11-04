@@ -7,15 +7,15 @@ void main()
 {
 
   // Variablen_Stufe
-  int nDamage = d12(4);
-  int nSaveDC = 16;
-  //	float eDauer = RoundsToSeconds(0);
+  int nDamage = d2(10);
+  int nSaveDC = 12;
+  //    float eDauer = RoundsToSeconds(0);
   float fSize = RADIUS_SIZE_SMALL;
 
   //Variablen_Fallentyp
-  //	int nSave = null;
+  //    int nSave = null;
   int nDamageType = DAMAGE_TYPE_FIRE;
-  //	effect eStatus = null;
+  //    effect eStatus = null;
   effect eVis = EffectVisualEffect(VFX_IMP_FLAME_M);
 
 

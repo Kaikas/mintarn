@@ -42,7 +42,8 @@
     "id": 13700,
     "type": "cexolocstring",
     "value": {
-      "0": "Professionelle Frostfalle"
+      "0": "Professionelle Frostfalle",
+      "4": "Professionelle Frostfalle"
     }
   },
   "ModelPart1": {
@@ -72,7 +73,7 @@
         },
         "CostValue": {
           "type": "word",
-          "value": 5
+          "value": 8
         },
         "Param1": {
           "type": "byte",
@@ -88,7 +89,7 @@
         },
         "Subtype": {
           "type": "word",
-          "value": 0
+          "value": 4
         }
       },
       {
