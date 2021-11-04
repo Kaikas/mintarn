@@ -8,8 +8,8 @@ void main() {
         DelayCommand(600.0f, SetLocalInt(oPc, "KUNDGEBUNG", 0));
 
         string sMessage = "";
-        if (GetTag(OBJECT_SELF) == "OBELISK_TAVERNE") {
-            sMessage = GetToken(102) + "Ein Signal der Götter! " + GetName(oPc) + " hat den Obelisk in Freihafen bei der Taverne \"Zum rettenden Ufer\" benutzt.</c>";
+        if (GetTag(OBJECT_SELF) == "RP_ZumRettendenUfer") {
+            sMessage = GetToken(102) + GetName(oPc) + " sucht bei der Taverne \"Zum Rettenden Ufer\" nach Rollenspiel.</c>";
         }
 
         object oTarget = GetFirstPC();
@@ -19,3 +19,4 @@ void main() {
         }
     }
 }
+
