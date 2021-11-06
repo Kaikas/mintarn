@@ -584,6 +584,15 @@ void main() {
         effect eEffect = EffectVisualEffect(VFX_DUR_CUTSCENE_INVISIBILITY);
         ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eEffect, oPc, 180.0f);
     }
+    // Geasitem
+    if (GetTag(oItem) == "SW_Geas") {
+        int nDamage = d6(3);
+        effect eDamage = EffectDamage(nDamage);
+        ApplyEffectToObject(DURATION_TYPE_INSTANT, eDamage, oPc, 0.0f);
+        if(FortitudeSave(oPc, 19, SAVING_THROW_TYPE_SPELL) == 0){
+            ApplyEffectToObject(DURATION_TYPE_TEMPORARY, SupernaturalEffect(EffectNegativeLevel(2)), oPc, HoursToSeconds(4));
+        }
+    }
     // Belohnungsitem
     if (GetTag(oItem) == "SW_Belohnung") {
         object oTarget = GetItemActivatedTarget();

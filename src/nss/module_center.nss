@@ -194,6 +194,7 @@ void main() {
     if (GetIsDM(oPc)) {
         CreateItemOnObject("sw_we_placer", oPc);
         CreateItemOnObject("sw_we_belohnung", oPc);
+        CreateItemOnObject("sw_we_charinfo", oPc);
         CreateItemOnObject("sw_we_changename", oPc);
         CreateItemOnObject("sw_we_sprichals", oPc);
         CreateItemOnObject("sw_we_sprichals2", oPc);
@@ -543,7 +544,7 @@ void main() {
     int nSeed = Random(1000000);
     SetLocalInt(oPc, "xp_token", nSeed);
     DelayCommand(600.0, GiveXP(oPc, 1, 0, nSeed));
-    
+
 
     // Start nui
     //ExecuteScript("nui_test", oPc);
