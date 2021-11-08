@@ -1548,8 +1548,6 @@ int companion(string sMessage) {
   if (GetSubString(sMessage,0,10) == "/companion" || GetSubString(sMessage,0,10) == "/begleiter") {
     string sCompName = GetAnimalCompanionName(oPc);
     object oCreature = GetFirstObjectInArea();
-    speak(oPc, GetSubString(sMessage,0,10));
-    speak(oPc, sCompName);
     while(oCreature != OBJECT_INVALID){
         speak(oPc, GetName(oCreature));
         if(GetName(oCreature) == sCompName){
