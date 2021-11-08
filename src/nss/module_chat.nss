@@ -1521,12 +1521,12 @@ void spawnCompanion(object oPc) {
 int familiar(string sMessage) {
    if (GetSubString(sMessage,0,9) == "/familiar" || GetSubString(sMessage,0,11) == "/vertrauter") {
     string sCompName = GetFamiliarName(oPc);
-    object oCreature = GetFirstFactionMember(oPc);
+    object oCreature = GetFirstObjectInArea();
     while(oCreature != OBJECT_INVALID){
         if(GetName(oCreature) == sCompName){
         break;
         }
-    oCreature = GetNextFactionMember(oPc);
+    oCreature = GetNextObjectInArea();
     }
     if (!GetIsInCombat(oPc) && GetName(oCreature) != sCompName) {
       SummonFamiliar(oPc);
@@ -1538,16 +1538,16 @@ int familiar(string sMessage) {
       sMessage = GetSubString(sMessage, 10, 300);}
       else{sMessage = GetSubString(sMessage, 12, 300);}
       speak(oCreature, sMessage);
+      return 1;
     }
   }
   return 0;
 }
 
 int companion(string sMessage) {
-
   if (GetSubString(sMessage,0,10) == "/companion" || GetSubString(sMessage,0,10) == "/begleiter") {
     string sCompName = GetAnimalCompanionName(oPc);
-    object oCreature = GetFirstFactionMember(oPc);
+    object oCreature = GetFirstObjectInArea();
     speak(oPc, GetSubString(sMessage,0,10));
     speak(oPc, sCompName);
     while(oCreature != OBJECT_INVALID){
@@ -1555,7 +1555,7 @@ int companion(string sMessage) {
         if(GetName(oCreature) == sCompName){
         break;
         }
-    oCreature = GetNextFactionMember(oPc);
+    oCreature = GetNextObjectInArea();
     }
     if (!GetIsInCombat(oPc) && GetName(oCreature) != sCompName) {
       SummonAnimalCompanion(oPc);
@@ -1565,7 +1565,7 @@ int companion(string sMessage) {
     else{
       sMessage = GetSubString(sMessage, 11, 300);
       speak(oCreature, sMessage);
-
+      return 1;
     }
   }
   return 0;
