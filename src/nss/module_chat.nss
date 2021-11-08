@@ -1544,7 +1544,7 @@ int familiar(string sMessage) {
 }
 
 int companion(string sMessage) {
-  speak(oPC, GetSubString(sMessage,0,10));
+  speak(oPc, GetSubString(sMessage,0,10));
   if (GetSubString(sMessage,0,10) == "/companion" || GetSubString(sMessage,0,10) == "/begleiter") {
     string sCompName = GetAnimalCompanionName(oPc);
     object oCreature = GetFirstFactionMember(oPc);
