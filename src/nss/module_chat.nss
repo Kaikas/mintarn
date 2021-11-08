@@ -294,8 +294,8 @@ int listCDKeys(string sMessage) {
           "): " +
           GetPCPublicCDKey(oPlayer));
       oPlayer = GetNextPC();
-      return 1;
     }
+    return 1;
   }
   return 0;
 }
