@@ -1544,11 +1544,14 @@ int familiar(string sMessage) {
 }
 
 int companion(string sMessage) {
-  speak(oPc, GetSubString(sMessage,0,10));
+
   if (GetSubString(sMessage,0,10) == "/companion" || GetSubString(sMessage,0,10) == "/begleiter") {
     string sCompName = GetAnimalCompanionName(oPc);
     object oCreature = GetFirstFactionMember(oPc);
+    speak(oPc, GetSubString(sMessage,0,10));
+    speak(oPc, sCompName);
     while(oCreature != OBJECT_INVALID){
+        speak(oPc, GetName(oCreature));
         if(GetName(oCreature) == sCompName){
         break;
         }
