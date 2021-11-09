@@ -590,7 +590,10 @@ void main() {
         effect eDamage = EffectDamage(nDamage);
         ApplyEffectToObject(DURATION_TYPE_INSTANT, eDamage, oPc, 0.0f);
         if(FortitudeSave(oPc, 19, SAVING_THROW_TYPE_SPELL) == 0){
-            ApplyEffectToObject(DURATION_TYPE_TEMPORARY, SupernaturalEffect(EffectNegativeLevel(2)), oPc, HoursToSeconds(4));
+             effect eVis = EffectVisualEffect(VFX_IMP_REDUCE_ABILITY_SCORE);
+             effect eCurse = EffectCurse(2, 2, 2, 2, 2, 2);
+            ApplyEffectToObject(DURATION_TYPE_TEMPORARY, SupernaturalEffect(eCurse), oPc, HoursToSeconds(24));
+            ApplyEffectToObject(DURATION_TYPE_INSTANT, eVis, oPc);
         }
     }
     // Belohnungsitem
