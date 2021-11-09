@@ -51,6 +51,9 @@ int rolls(string sMessage, object oTarget);
 int attributes(string sMessage, object oTarget);
 int savingThrows(string sMessage, object oTarget);
 int emotes(string sMessage, object oTarget);
+int speakOOC(string sMessage, object oTarget);
+int phenotype(string sMessage, object oTarget);
+int initiative(string sMessage, object oTarget);
 
 // Setzt einen Würfel wurf zusammen
 string printRoll(string sValue, int iRand, int iBonus) {
@@ -203,37 +206,6 @@ void speak(object oSpeaker, string sMessage) {
   SetLocalInt(oSpeaker, "iChatVolume", iChatVolume);
   ExecuteScript("global_speak", oSpeaker);
 }
-
-int speakAsChar(string sMessage) {
-  string sFirstChar = GetSubString(sMessage, 0, 1);
-  string sSecondChar = GetSubString(sMessage, 1, 1);
-  string sSpokenText = GetSubString(sMessage, 3, 10000);
-  if (sFirstChar == ":") {
-    SetPCChatVolume(TALKVOLUME_SILENT_TALK);
-    if (sSecondChar == "1"
-        || sSecondChar == "2"
-        || sSecondChar == "3"
-        || sSecondChar == "4"
-        || sSecondChar == "5") {
-      object oTarget = GetLocalObject(oPc, "dmspeak" + sSecondChar);
-      if (
-      !skills(sSpokenText, oTarget) &&
-      !speakOOC(sSpokenText, oTarget) &&
-      !rolls(sSpokenText, oTarget) &&
-      !attributes(sSpokenText, oTarget) &&
-      !emotes(sSpokenText, oTarget) &&
-      !phenotype(sSpokenText, oTarget) &&
-      !initiative(sSpokenText, oTarget) &&
-      !savingThrows(sSpokenText, oTarget)
-          ) {
-        speak(oTarget, colorText(sSpokenText));
-      }
-      return 1;
-    }
-  }
-  return 0;
-}
-
 
 int speakOOC(string sMessage, object oTarget) {
   string sFirstChar = GetSubString(sMessage, 0, 1);
@@ -2032,6 +2004,36 @@ int helpMasks(string sMessage) {
   return 0;
 }
 
+int speakAsChar(string sMessage) {
+  string sFirstChar = GetSubString(sMessage, 0, 1);
+  string sSecondChar = GetSubString(sMessage, 1, 1);
+  string sSpokenText = GetSubString(sMessage, 3, 10000);
+  if (sFirstChar == ":") {
+    SetPCChatVolume(TALKVOLUME_SILENT_TALK);
+    if (sSecondChar == "1"
+        || sSecondChar == "2"
+        || sSecondChar == "3"
+        || sSecondChar == "4"
+        || sSecondChar == "5") {
+      object oTarget = GetLocalObject(oPc, "dmspeak" + sSecondChar);
+      if (
+      !skills(sSpokenText, oTarget) &&
+      !speakOOC(sSpokenText, oTarget) &&
+      !rolls(sSpokenText, oTarget) &&
+      !attributes(sSpokenText, oTarget) &&
+      !emotes(sSpokenText, oTarget) &&
+      !phenotype(sSpokenText, oTarget) &&
+      !initiative(sSpokenText, oTarget) &&
+      !savingThrows(sSpokenText, oTarget)
+          ) {
+        speak(oTarget, colorText(sSpokenText));
+      }
+      return 1;
+    }
+  }
+  return 0;
+}
+
 // Chat befehle
 void main() {
   string sMessage = GetPCChatMessage();
@@ -2087,7 +2089,7 @@ void main() {
         helpSkills(sMessage) ||
         helpMasks(sMessage)) {
         } else {
-          SendMessageToPC(oPc, "Ung¿ltiger Befehl: \"" +
+          SendMessageToPC(oPc, "Ungültiger Befehl: \"" +
               sMessage +
               "\" \n\n" +
               "/hilfe \n" +
