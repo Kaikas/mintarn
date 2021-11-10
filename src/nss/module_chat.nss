@@ -46,6 +46,13 @@ string sQuery;
 int iBonus;
 int iRand = Random(20) + 1;
 
+void speak(object oSpeaker, string sMessage) {
+  SetPCChatVolume(TALKVOLUME_SILENT_TALK);
+  SetLocalString(oSpeaker, "sMessage", sMessage);
+  SetLocalInt(oSpeaker, "iChatVolume", iChatVolume);
+  ExecuteScript("global_speak", oSpeaker);
+}
+
 // Setzt einen WÃ¼rfel wurf zusammen
 string printRoll(string sValue, int iRand, int iBonus) {
   return StringToRGBString("[" +
@@ -209,13 +216,6 @@ string colorText(string sMessage) {
   sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
   sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
   return sMessage;
-}
-
-void speak(object oSpeaker, string sMessage) {
-  SetPCChatVolume(TALKVOLUME_SILENT_TALK);
-  SetLocalString(oSpeaker, "sMessage", sMessage);
-  SetLocalInt(oSpeaker, "iChatVolume", iChatVolume);
-  ExecuteScript("global_speak", oSpeaker);
 }
 
 int speakOOC(string sMessage, object oTarget) {
@@ -2056,7 +2056,7 @@ void main() {
   string sBan = GetSubString(sMessage, 0, 4);
   string sUnban = GetSubString(sMessage, 0, 6);
   string sPferd= GetSubString(sMessage, 0, 4);
-  speak(oTarget, "entering chat-check");
+  speak(oPc, "entering chat-check");
   if (GetSubString(sMessage, 0, 1) == ":" || GetSubString(sMessage, 0, 1) == "/") {
     if (speakAsChar(sMessage) ||
         speakOOC(sMessage, oPc) ||
@@ -2101,7 +2101,7 @@ void main() {
         helpAnimation(sMessage) ||
         helpSkills(sMessage) ||
         helpMasks(sMessage)) {
-        speak(oTarget, "parsed");
+        speak(oPc, "parsed");
         } else {
           SendMessageToPC(oPc, "UngÃ¼ltiger Befehl: \"" +
               sMessage +
@@ -2111,7 +2111,7 @@ void main() {
               "/hilfe fertigkeit \n");
         }
   } else {
-  speak(oTarget, "nothing to parse");
+  speak(oPc, "nothing to parse");
     if (iChatVolume == 0) {
       // Normal talk
       sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
