@@ -46,6 +46,16 @@ string sQuery;
 int iBonus;
 int iRand = Random(20) + 1;
 
+int skills(string sMessage, object oPc);
+int rolls(string sMessage, object oTarget);
+int attributes(string sMessage, object oTarget);
+int savingThrows(string sMessage, object oTarget);
+int emotes(string sMessage, object oTarget);
+int speakOOC(string sMessage, object oTarget);
+int phenotype(string sMessage, object oTarget);
+int initiative(string sMessage, object oTarget);
+int doChatDamage(string sMessage, object oTarget);
+
 void speak(object oSpeaker, string sMessage) {
   SetPCChatVolume(TALKVOLUME_SILENT_TALK);
   SetLocalString(oSpeaker, "sMessage", sMessage);
@@ -81,11 +91,22 @@ string printRollSkill(string sValue, int iRand, int iBonus, int iAbilityBonus) {
       "]", "333");
 }
 
-int doDamage(string sMessage, object oTarget){
+//My mother told me
+//Someday I will buy
+//a galley with good oars
+//sail to distant shores
+//stand up on the Prow
+//Noble barge i steer 
+//steady course to the haven 
+//hew many foeman 
+//hew many foeman 
+//https://www.youtube.com/watch?v=3Hg5bXroHbg
+int doChatDamage(string sMessage, object oTarget){
   if(GetSubString(sMessage, 0, 4) == "/dmg"){
     if(GetSubString(sMessage, 5,6) == "%"){
       int nDamage = StringToInt(GetSubString(sMessage,6,10));
-      ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(GetCurrentHitPoints(oTarget)/nDamage), oTarget);
+      int nHP = GetCurrentHitPoints(oTarget);
+      ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nHP/100*nDamage), oTarget);
       return 1;
     }
     else{
@@ -2024,7 +2045,7 @@ int speakAsChar(string sMessage) {
         || sSecondChar == "5") {
       object oTarget = GetLocalObject(oPc, "dmspeak" + sSecondChar);
       if (
-      !doDamage(sSpokenText, oTarget) &&
+      !doChatDamage(sSpokenText, oTarget) &&
       !skills(sSpokenText, oTarget) &&
       !speakOOC(sSpokenText, oTarget) &&
       !rolls(sSpokenText, oTarget) &&
@@ -2062,12 +2083,12 @@ void main() {
         changeName(sMessage) ||
         changeDescription(sMessage) ||
         ride(sMessage) ||
+        doChatDamage(sMessage, oPc) ||
         unstuck(sMessage) ||
         report(sMessage) ||
         setWindFromChat(sMessage) ||
         deleteHint(sMessage) ||
         delete(sMessage) ||
-        doDamage(sMessage, oPc) ||
         emotes(sMessage, oPc) ||
         aussehen(sMessage) ||
         attributes(sMessage, oPc) ||
