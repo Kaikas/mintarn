@@ -577,6 +577,26 @@ void main() {
         CraftItem(oPc, 1, "sw_tr_gegenmitte", "CRAFT_LeereFlasche", 1, "CRAFT_Hiradwurz", 1, "", 0, "Alchemie", "CRAFT_RezeptTrankDesGegenmittels", FALSE, 90, "Lehrling");
     */
 
+    //Geas Item (for Martermaske/Char Emil)
+    if (GetTag(oItem) == "SW_Geas") {
+        int nDamage = d6(3);
+        effect eDamage = EffectDamage(nDamage);
+        ApplyEffectToObject(DURATION_TYPE_INSTANT, eDamage, oPc, 0.0f);
+        if(FortitudeSave(oPc, 19, SAVING_THROW_TYPE_SPELL) == 0){
+             effect eVis = EffectVisualEffect(VFX_IMP_REDUCE_ABILITY_SCORE);
+
+             effect eCurse = EffectLinkEffects(EffectAbilityDecrease(ABILITY_DEXTERITY,2),EffectAbilityDecrease(ABILITY_STRENGTH,2));
+             eCurse = EffectLinkEffects(EffectAbilityDecrease(ABILITY_CONSTITUTION,2), eCurse);
+             eCurse = EffectLinkEffects(EffectAbilityDecrease(ABILITY_WISDOM,2), eCurse);
+             eCurse = EffectLinkEffects(EffectAbilityDecrease(ABILITY_INTELLIGENCE,2), eCurse);
+             eCurse = EffectLinkEffects( EffectAbilityDecrease(ABILITY_CHARISMA,2), eCurse);
+
+            ApplyEffectToObject(DURATION_TYPE_TEMPORARY, SupernaturalEffect(eCurse), oPc, HoursToSeconds(24));
+            ApplyEffectToObject(DURATION_TYPE_INSTANT, eVis, oPc);
+        }
+    }
+
+
     // DM Items
 
     // Unsichtbarkeitsitem
@@ -584,18 +604,7 @@ void main() {
         effect eEffect = EffectVisualEffect(VFX_DUR_CUTSCENE_INVISIBILITY);
         ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eEffect, oPc, 180.0f);
     }
-    // Geasitem
-    if (GetTag(oItem) == "SW_Geas") {
-        int nDamage = d6(3);
-        effect eDamage = EffectDamage(nDamage);
-        ApplyEffectToObject(DURATION_TYPE_INSTANT, eDamage, oPc, 0.0f);
-        if(FortitudeSave(oPc, 19, SAVING_THROW_TYPE_SPELL) == 0){
-             effect eVis = EffectVisualEffect(VFX_IMP_REDUCE_ABILITY_SCORE);
-             effect eCurse = EffectCurse(2, 2, 2, 2, 2, 2);
-            ApplyEffectToObject(DURATION_TYPE_TEMPORARY, SupernaturalEffect(eCurse), oPc, HoursToSeconds(24));
-            ApplyEffectToObject(DURATION_TYPE_INSTANT, eVis, oPc);
-        }
-    }
+    
     // Belohnungsitem
     if (GetTag(oItem) == "SW_Belohnung") {
         object oTarget = GetItemActivatedTarget();
