@@ -75,9 +75,9 @@ string printRollSkill(string sValue, int iRand, int iBonus, int iAbilityBonus) {
 }
 
 int doDamage(string sMessage, object oTarget){
-SendMessageToPC(oPc, "checking dodamage");
+speak(oTarget, "checking dodamage");
   if(GetSubString(sMessage, 0, 4) == "/dmg"){
-  SendMessageToPC(oPc, "entered dodamage");
+  speak(oTarget,  "entered dodamage");
     if(GetSubString(sMessage, 5,6) == "%"){
       int nDamage = StringToInt(GetSubString(sMessage,6,10));
       ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(GetCurrentHitPoints(oTarget)/nDamage), oTarget);
@@ -88,9 +88,9 @@ SendMessageToPC(oPc, "checking dodamage");
       ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nDamage), oTarget);
       return 1;
     }
-    SendMessageToPC(oPc, "shouldnt be able to get here");
+    speak(oTarget, "shouldnt be able to get here");
   }
-  SendMessageToPC(oPc, "Return 0");
+ speak(oTarget, "Return 0");
   return 0;
 }
 
@@ -2056,7 +2056,7 @@ void main() {
   string sBan = GetSubString(sMessage, 0, 4);
   string sUnban = GetSubString(sMessage, 0, 6);
   string sPferd= GetSubString(sMessage, 0, 4);
-  SendMessageToPC(oPc, "entering chat-check");
+  speak(oTarget, "entering chat-check");
   if (GetSubString(sMessage, 0, 1) == ":" || GetSubString(sMessage, 0, 1) == "/") {
     if (speakAsChar(sMessage) ||
         speakOOC(sMessage, oPc) ||
@@ -2101,7 +2101,7 @@ void main() {
         helpAnimation(sMessage) ||
         helpSkills(sMessage) ||
         helpMasks(sMessage)) {
-        SendMessageToPC(oPc, "parsed");
+        speak(oTarget, "parsed");
         } else {
           SendMessageToPC(oPc, "UngÃ¼ltiger Befehl: \"" +
               sMessage +
@@ -2111,7 +2111,7 @@ void main() {
               "/hilfe fertigkeit \n");
         }
   } else {
-  SendMessageToPC(oPc, "nothing to parse");
+  speak(oTarget, "nothing to parse");
     if (iChatVolume == 0) {
       // Normal talk
       sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
