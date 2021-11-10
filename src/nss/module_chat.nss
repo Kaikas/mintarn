@@ -46,7 +46,7 @@ string sQuery;
 int iBonus;
 int iRand = Random(20) + 1;
 
-// Setzt einen Würfel wurf zusammen
+// Setzt einen WÃ¼rfel wurf zusammen
 string printRoll(string sValue, int iRand, int iBonus) {
   return StringToRGBString("[" +
       sValue +
@@ -59,7 +59,7 @@ string printRoll(string sValue, int iRand, int iBonus) {
       "]", "333");
 }
 
-// Setzt einen Würfel wurf für einen skill zusammen
+// Setzt einen WÃ¼rfel wurf fÃ¼r einen skill zusammen
 string printRollSkill(string sValue, int iRand, int iBonus, int iAbilityBonus) {
   return StringToRGBString("[" +
       sValue +
@@ -75,18 +75,22 @@ string printRollSkill(string sValue, int iRand, int iBonus, int iAbilityBonus) {
 }
 
 int doDamage(string sMessage, object oTarget){
+SendMessageToPC(oPc, "checking dodamage");
   if(GetSubString(sMessage, 0, 4) == "/dmg"){
-    if(GetSubString(sMessage, 5,1) == "%"){
-      int nDamage = StringToInt(GetSubString(sMessage, 7,2));
-      int nHP = GetCurrentHitPoints(oTarget);
-      ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nHP/100*nDamage), oTarget);
+  SendMessageToPC(oPc, "entered dodamage");
+    if(GetSubString(sMessage, 5,6) == "%"){
+      int nDamage = StringToInt(GetSubString(sMessage,6,10));
+      ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(GetCurrentHitPoints(oTarget)/nDamage), oTarget);
+      return 1;
     }
     else{
-      int nDamage = StringToInt(GetSubString(sMessage, 5,10));
+      int nDamage = StringToInt(GetSubString(sMessage, 6,10));
       ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nDamage), oTarget);
+      return 1;
     }
-    return 1;
+    SendMessageToPC(oPc, "shouldnt be able to get here");
   }
+  SendMessageToPC(oPc, "Return 0");
   return 0;
 }
 
@@ -153,13 +157,13 @@ int setWindFromChat(string sMessage) {
     string sWindDirection = GetSubString(sMessage, 11, 2);
     if (sWindDirection == "N") sWindDirection = "Nordwind";
     if (sWindDirection == "O") sWindDirection = "Ostwind";
-    if (sWindDirection == "S") sWindDirection = "Südwind";
+    if (sWindDirection == "S") sWindDirection = "SÃ¼dwind";
     if (sWindDirection == "W") sWindDirection = "Westwind";
-    if (sWindDirection == "SW") sWindDirection = "Südwestwind";
+    if (sWindDirection == "SW") sWindDirection = "SÃ¼dwestwind";
     if (sWindDirection == "NW") sWindDirection = "Nordwestwind";
-    if (sWindDirection == "SO") sWindDirection = "Südostwind";
+    if (sWindDirection == "SO") sWindDirection = "SÃ¼dostwind";
     if (sWindDirection == "NO") sWindDirection = "Nordostwind";
-    SendMessageToPC(oPc, "Setze Wind auf " + sWindDirection + " mit Stärke " + sWindStrength);
+    SendMessageToPC(oPc, "Setze Wind auf " + sWindDirection + " mit StÃ¤rke " + sWindStrength);
     SetLocalString(oModule, "sWindDirection", sWindDirection);
     SetLocalInt(oModule, "windstrength", StringToInt(sWindStrength));
     setWindForAreas(StringToInt(sWindStrength));
@@ -375,8 +379,8 @@ int report(string sMessage) {
       GetSubString(sMessage, 7, 300);
     NWNX_WebHook_SendWebHookHTTPS("discordapp.com",
         NWNX_Util_GetEnvironmentVariable("WEBHOOK_FEHLER"), sLogMessage, "Mintarn", 0);
-    SendMessageToPC(oPc, "Vielen Dank für die Fehlermeldung. " +
-        "Sie ist im Discord angekommen und wird von uns so bald wie möglich bearbeitet.");
+    SendMessageToPC(oPc, "Vielen Dank fÃ¼r die Fehlermeldung. " +
+        "Sie ist im Discord angekommen und wird von uns so bald wie mÃ¶glich bearbeitet.");
     return 1;
   }
   return 0;
@@ -392,7 +396,7 @@ int deleteHint(string sMessage) {
       NWNX_SQL_PreparedString(1, sName);
       NWNX_SQL_ExecutePreparedQuery();
       NWNX_SQL_ReadNextRow();
-      SendMessageToPC(oPc, "Um den Charakter unwiderruflich und endgültig zu löschen /delete " +
+      SendMessageToPC(oPc, "Um den Charakter unwiderruflich und endgÃ¼ltig zu lÃ¶schen /delete " +
           NWNX_SQL_ReadDataInActiveRow(0) + " eingeben.");
     }
     return 1;
@@ -483,7 +487,7 @@ int emotes(string sMessage, object oTarget) {
   } else if (sMessage == "/drink" || sMessage == "/trinken") {
     AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_FIREFORGET_DRINK, 1.0));
     return 1;
-  } else if (sMessage == "/greet" || sMessage == "/winken" || sMessage == "/grüÃŸen") {
+  } else if (sMessage == "/greet" || sMessage == "/winken" || sMessage == "/grÃ¼ÃƒÅ¸en") {
     AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_FIREFORGET_GREETING, 1.0));
     return 1;
   } else if (sMessage == "/bored" || sMessage == "/strecken") {
@@ -528,7 +532,7 @@ int emotes(string sMessage, object oTarget) {
   } else if (sMessage == "/conjure2" || sMessage == "/zaubern2") {
     AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_LOOPING_CONJURE2, 1.0, 60000.0));
     return 1;
-  } else if (sMessage == "/lieback" || sMessage == "/liegen rücken") {
+  } else if (sMessage == "/lieback" || sMessage == "/liegen rÃ¼cken") {
     AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_LOOPING_DEAD_BACK, 1.0, 60000.0));
     return 1;
   } else if (sMessage == "/feigndeath" || sMessage == "/liegen bauch") {
@@ -543,7 +547,7 @@ int emotes(string sMessage, object oTarget) {
   } else if (sMessage == "/listen" || sMessage == "/nicken") {
     AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_LOOPING_LISTEN, 1.0, 60000.0));
     return 1;
-  } else if (sMessage == "/look" || sMessage == "/spähen") {
+  } else if (sMessage == "/look" || sMessage == "/spÃ¤hen") {
     AssignCommand(oTarget, ActionPlayAnimation(ANIMATION_LOOPING_LOOK_FAR, 1.0, 60000.0));
     return 1;
   } else if (sMessage == "/drunk" || sMessage == "/schwanken") {
@@ -569,7 +573,7 @@ int emotes(string sMessage, object oTarget) {
     if (GetTag(GetArea(oTarget)) == "AREA_Nether") {
       location lTempel = GetLocation(GetObjectByTag("WP_TEMPEL"));
       AssignCommand(oTarget, JumpToLocation(lTempel));
-      string sMessage = "Nach der Reinigung eurer Wunden hat man euch im 'Saal der Klagenden' der Selbstreflektion überlassen; auf dass euer Weg kein weiteres mal hierher führen möge.";
+      string sMessage = "Nach der Reinigung eurer Wunden hat man euch im 'Saal der Klagenden' der Selbstreflektion Ã¼berlassen; auf dass euer Weg kein weiteres mal hierher fÃ¼hren mÃ¶ge.";
       SendMessageToPC(oTarget, sMessage);
       // Health
       //ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectHeal(GetMaxHitPoints(oTarget)), oTarget);
@@ -584,7 +588,7 @@ int emotes(string sMessage, object oTarget) {
       if (GetTag(GetItemInSlot(INVENTORY_SLOT_RIGHTHAND)) == "CRAFT_Fackel" || GetTag(GetItemInSlot(INVENTORY_SLOT_LEFTHAND)) == "CRAFT_Fackel") {
         ApplyEffectToObject(DURATION_TYPE_PERMANENT, EffectVisualEffect(VFX_DUR_LIGHT_YELLOW_15), oTarget);
       }
-      // Rüstung
+      // RÃ¼stung
       if(GetBaseItemType(GetItemInSlot(INVENTORY_SLOT_CHEST)) == BASE_ITEM_ARMOR){
         // copied from: https://nwnlexicon.com/index.php?title=GetItemACValue
         // Get the appearance of the torso slot
@@ -639,9 +643,9 @@ int attributes(string sMessage, object oTarget) {
     sMessage = printRoll("Intelligenz", iRand, iBonus);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/strength" || sMessage == "/stärke" || sMessage == "/str") {
+  } else if (sMessage == "/strength" || sMessage == "/stÃ¤rke" || sMessage == "/str") {
     iBonus = GetAbilityModifier(ABILITY_STRENGTH, oTarget);
-    sMessage = printRoll("Stärke", iRand, iBonus);
+    sMessage = printRoll("StÃ¤rke", iRand, iBonus);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/wisdom" || sMessage == "/weisheit" || sMessage == "/wis") {
@@ -666,10 +670,10 @@ int savingThrows(string sMessage, object oTarget) {
     sMessage = PrintSavingThrow(iBonus, iRoll, "Wille");
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/zähigkeit" || sMessage == "/fort") {
+  } else if (sMessage == "/zÃ¤higkeit" || sMessage == "/fort") {
     iBonus = GetFortitudeSavingThrow(oTarget);
     int iRoll = d20();
-    sMessage = PrintSavingThrow(iBonus, iRoll, "Zähigkeit");
+    sMessage = PrintSavingThrow(iBonus, iRoll, "ZÃ¤higkeit");
     speak(oTarget, sMessage);
     return 1;
   }
@@ -683,8 +687,8 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Mit Tieren umgehen", SKILL_ANIMAL_HANDLING, ABILITY_CHARISMA, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/mittierenumgehen stärke" || sMessage == "/mittierenumgehen stä" || sMessage == "/mittierenumgehen str") {
-    sMessage = rollSkillsCheck("Mit Tieren umgehen (Stärke)", SKILL_ANIMAL_HANDLING, ABILITY_STRENGTH, ABILITY_CHARISMA, oTarget);
+  } else if (sMessage == "/mittierenumgehen stÃ¤rke" || sMessage == "/mittierenumgehen stÃ¤" || sMessage == "/mittierenumgehen str") {
+    sMessage = rollSkillsCheck("Mit Tieren umgehen (StÃ¤rke)", SKILL_ANIMAL_HANDLING, ABILITY_STRENGTH, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/mittierenumgehen geschicklichkeit" || sMessage == "/mittierenumgehen ges" || sMessage == "/mittierenumgehen dex") {
@@ -712,8 +716,8 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Konzentration", SKILL_CONCENTRATION, ABILITY_CONSTITUTION, ABILITY_CONSTITUTION, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/konzentration stärke" || sMessage == "/konzentration stä" || sMessage == "/konzentration str") {
-    sMessage = rollSkillsCheck("Konzentration (Stärke)", SKILL_CONCENTRATION, ABILITY_STRENGTH, ABILITY_CONSTITUTION, oTarget);
+  } else if (sMessage == "/konzentration stÃ¤rke" || sMessage == "/konzentration stÃ¤" || sMessage == "/konzentration str") {
+    sMessage = rollSkillsCheck("Konzentration (StÃ¤rke)", SKILL_CONCENTRATION, ABILITY_STRENGTH, ABILITY_CONSTITUTION, oTarget);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/konzentration geschicklichkeit" || sMessage == "/konzentration ges" || sMessage == "/konzentration dex") {
@@ -741,8 +745,8 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Motiv erkennen", SKILL_SENSE_MOTIVE, ABILITY_WISDOM, ABILITY_WISDOM, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/motiverkennen stärke" || sMessage == "/motiverkennen stä" || sMessage == "/motiverkennen str") {
-    sMessage = rollSkillsCheck("Motiv erkennen (Stärke)", SKILL_SENSE_MOTIVE, ABILITY_STRENGTH, ABILITY_WISDOM, oTarget);
+  } else if (sMessage == "/motiverkennen stÃ¤rke" || sMessage == "/motiverkennen stÃ¤" || sMessage == "/motiverkennen str") {
+    sMessage = rollSkillsCheck("Motiv erkennen (StÃ¤rke)", SKILL_SENSE_MOTIVE, ABILITY_STRENGTH, ABILITY_WISDOM, oTarget);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/motiverkennen geschicklichkeit" || sMessage == "/motiverkennen ges" || sMessage == "/motiverkennen dex") {
@@ -770,8 +774,8 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Heilkunde", SKILL_HEAL, ABILITY_WISDOM, ABILITY_WISDOM, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/heilkunde stärke" || sMessage == "/heilkunde stä" || sMessage == "/heilkunde str") {
-    sMessage = rollSkillsCheck("Heilkunde (Stärke)", SKILL_HEAL, ABILITY_STRENGTH, ABILITY_WISDOM, oTarget);
+  } else if (sMessage == "/heilkunde stÃ¤rke" || sMessage == "/heilkunde stÃ¤" || sMessage == "/heilkunde str") {
+    sMessage = rollSkillsCheck("Heilkunde (StÃ¤rke)", SKILL_HEAL, ABILITY_STRENGTH, ABILITY_WISDOM, oTarget);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/heilkunde geschicklichkeit" || sMessage == "/heilkunde ges" || sMessage == "/heilkunde dex") {
@@ -799,8 +803,8 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Verstecken", SKILL_HIDE, ABILITY_DEXTERITY, ABILITY_DEXTERITY, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/verstecken stärke" || sMessage == "/verstecken stä" || sMessage == "/verstecken str") {
-    sMessage = rollSkillsCheck("Verstecken (Stärke)", SKILL_HIDE, ABILITY_STRENGTH, ABILITY_DEXTERITY, oTarget);
+  } else if (sMessage == "/verstecken stÃ¤rke" || sMessage == "/verstecken stÃ¤" || sMessage == "/verstecken str") {
+    sMessage = rollSkillsCheck("Verstecken (StÃ¤rke)", SKILL_HIDE, ABILITY_STRENGTH, ABILITY_DEXTERITY, oTarget);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/verstecken geschicklichkeit" || sMessage == "/verstecken ges" || sMessage == "/verstecken dex") {
@@ -828,8 +832,8 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Lauschen", SKILL_LISTEN, ABILITY_WISDOM, ABILITY_WISDOM, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/lauschen stärke" || sMessage == "/lauschen stä" || sMessage == "/lauschen str") {
-    sMessage = rollSkillsCheck("Lauschen (Stärke)", SKILL_LISTEN, ABILITY_STRENGTH, ABILITY_WISDOM, oTarget);
+  } else if (sMessage == "/lauschen stÃ¤rke" || sMessage == "/lauschen stÃ¤" || sMessage == "/lauschen str") {
+    sMessage = rollSkillsCheck("Lauschen (StÃ¤rke)", SKILL_LISTEN, ABILITY_STRENGTH, ABILITY_WISDOM, oTarget);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/lauschen geschicklichkeit" || sMessage == "/lauschen ges" || sMessage == "/lauschen dex") {
@@ -857,8 +861,8 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Weltliches", SKILL_KNOW_LORE, ABILITY_INTELLIGENCE, ABILITY_INTELLIGENCE, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/weltliches stärke" || sMessage == "/weltliches stä" || sMessage == "/weltliches str") {
-    sMessage = rollSkillsCheck("Weltliches (Stärke)", SKILL_KNOW_LORE, ABILITY_STRENGTH, ABILITY_INTELLIGENCE, oTarget);
+  } else if (sMessage == "/weltliches stÃ¤rke" || sMessage == "/weltliches stÃ¤" || sMessage == "/weltliches str") {
+    sMessage = rollSkillsCheck("Weltliches (StÃ¤rke)", SKILL_KNOW_LORE, ABILITY_STRENGTH, ABILITY_INTELLIGENCE, oTarget);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/weltliches geschicklichkeit" || sMessage == "/weltliches ges" || sMessage == "/weltliches dex") {
@@ -886,8 +890,8 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Leise bewegen", SKILL_MOVE_SILENTLY, ABILITY_DEXTERITY, ABILITY_DEXTERITY, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/leisebewegen stärke" || sMessage == "/leisebewegen stä" || sMessage == "/leisebewegen str") {
-    sMessage = rollSkillsCheck("Leise bewegen (Stärke)", SKILL_MOVE_SILENTLY, ABILITY_STRENGTH, ABILITY_DEXTERITY, oTarget);
+  } else if (sMessage == "/leisebewegen stÃ¤rke" || sMessage == "/leisebewegen stÃ¤" || sMessage == "/leisebewegen str") {
+    sMessage = rollSkillsCheck("Leise bewegen (StÃ¤rke)", SKILL_MOVE_SILENTLY, ABILITY_STRENGTH, ABILITY_DEXTERITY, oTarget);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/leisebewegen geschicklichkeit" || sMessage == "/leisebewegen ges" || sMessage == "/leisebewegen dex") {
@@ -915,8 +919,8 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Mechanismus ausschalten", SKILL_DISABLE_DEVICE, ABILITY_DEXTERITY, ABILITY_DEXTERITY, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/mechanismusausschalten stärke" || sMessage == "/mechanismusausschalten stä" || sMessage == "/mechanismusausschalten str") {
-    sMessage = rollSkillsCheck("Mechanismus ausschalten (Stärke)", SKILL_DISABLE_DEVICE, ABILITY_STRENGTH, ABILITY_DEXTERITY, oTarget);
+  } else if (sMessage == "/mechanismusausschalten stÃ¤rke" || sMessage == "/mechanismusausschalten stÃ¤" || sMessage == "/mechanismusausschalten str") {
+    sMessage = rollSkillsCheck("Mechanismus ausschalten (StÃ¤rke)", SKILL_DISABLE_DEVICE, ABILITY_STRENGTH, ABILITY_DEXTERITY, oTarget);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/mechanismusausschalten geschicklichkeit" || sMessage == "/mechanismusausschalten ges" || sMessage == "/mechanismusausschalten dex") {
@@ -944,8 +948,8 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Auftreten", SKILL_PERFORM, ABILITY_CHARISMA, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/auftreten stärke" || sMessage == "/auftreten stä" || sMessage == "/auftreten str") {
-    sMessage = rollSkillsCheck("Auftreten (Stärke)", SKILL_PERFORM, ABILITY_STRENGTH, ABILITY_CHARISMA, oTarget);
+  } else if (sMessage == "/auftreten stÃ¤rke" || sMessage == "/auftreten stÃ¤" || sMessage == "/auftreten str") {
+    sMessage = rollSkillsCheck("Auftreten (StÃ¤rke)", SKILL_PERFORM, ABILITY_STRENGTH, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/auftreten geschicklichkeit" || sMessage == "/auftreten ges" || sMessage == "/auftreten dex") {
@@ -968,33 +972,33 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Auftreten (Charisma)", SKILL_PERFORM, ABILITY_CHARISMA, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
-    // Überzeugen
-  } else if (sMessage == "/überzeugen") {
-    sMessage = rollSkillsCheck("Überzeugen", SKILL_PERSUADE, ABILITY_CHARISMA, ABILITY_CHARISMA, oTarget);
+    // Ãœberzeugen
+  } else if (sMessage == "/Ã¼berzeugen") {
+    sMessage = rollSkillsCheck("Ãœberzeugen", SKILL_PERSUADE, ABILITY_CHARISMA, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/überzeugen stärke" || sMessage == "/überzeugen stä" || sMessage == "/überzeugen str") {
-    sMessage = rollSkillsCheck("Überzeugen (Stärke)", SKILL_PERSUADE, ABILITY_STRENGTH, ABILITY_CHARISMA, oTarget);
+  } else if (sMessage == "/Ã¼berzeugen stÃ¤rke" || sMessage == "/Ã¼berzeugen stÃ¤" || sMessage == "/Ã¼berzeugen str") {
+    sMessage = rollSkillsCheck("Ãœberzeugen (StÃ¤rke)", SKILL_PERSUADE, ABILITY_STRENGTH, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/überzeugen geschicklichkeit" || sMessage == "/überzeugen ges" || sMessage == "/überzeugen dex") {
-    sMessage = rollSkillsCheck("Überzeugen (Gechicklichkeit)", SKILL_PERSUADE, ABILITY_DEXTERITY, ABILITY_CHARISMA, oTarget);
+  } else if (sMessage == "/Ã¼berzeugen geschicklichkeit" || sMessage == "/Ã¼berzeugen ges" || sMessage == "/Ã¼berzeugen dex") {
+    sMessage = rollSkillsCheck("Ãœberzeugen (Gechicklichkeit)", SKILL_PERSUADE, ABILITY_DEXTERITY, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/überzeugen konstitution" || sMessage == "/überzeugen kon" || sMessage == "/überzeugen con") {
-    sMessage = rollSkillsCheck("Überzeugen (Konstitution)", SKILL_PERSUADE, ABILITY_CONSTITUTION, ABILITY_CHARISMA, oTarget);
+  } else if (sMessage == "/Ã¼berzeugen konstitution" || sMessage == "/Ã¼berzeugen kon" || sMessage == "/Ã¼berzeugen con") {
+    sMessage = rollSkillsCheck("Ãœberzeugen (Konstitution)", SKILL_PERSUADE, ABILITY_CONSTITUTION, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/überzeugen intelligenz" || sMessage == "/überzeugen int") {
-    sMessage = rollSkillsCheck("Überzeugen (Intelligenz)", SKILL_PERSUADE, ABILITY_INTELLIGENCE, ABILITY_CHARISMA, oTarget);
+  } else if (sMessage == "/Ã¼berzeugen intelligenz" || sMessage == "/Ã¼berzeugen int") {
+    sMessage = rollSkillsCheck("Ãœberzeugen (Intelligenz)", SKILL_PERSUADE, ABILITY_INTELLIGENCE, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/überzeugen weisheit" || sMessage == "/überzeugen wei" || sMessage == "/überzeugen wis") {
-    sMessage = rollSkillsCheck("Überzeugen (Weisheit)", SKILL_PERSUADE, ABILITY_WISDOM, ABILITY_CHARISMA, oTarget);
+  } else if (sMessage == "/Ã¼berzeugen weisheit" || sMessage == "/Ã¼berzeugen wei" || sMessage == "/Ã¼berzeugen wis") {
+    sMessage = rollSkillsCheck("Ãœberzeugen (Weisheit)", SKILL_PERSUADE, ABILITY_WISDOM, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/überzeugen charisma" || sMessage == "/überzeugen cha") {
-    sMessage = rollSkillsCheck("Überzeugen (Charisma)", SKILL_PERSUADE, ABILITY_CHARISMA, ABILITY_CHARISMA, oTarget);
+  } else if (sMessage == "/Ã¼berzeugen charisma" || sMessage == "/Ã¼berzeugen cha") {
+    sMessage = rollSkillsCheck("Ãœberzeugen (Charisma)", SKILL_PERSUADE, ABILITY_CHARISMA, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
     // Fingerfertigkeit
@@ -1002,8 +1006,8 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Fingerfertigkeit", SKILL_SLEIGHT_OF_HAND, ABILITY_DEXTERITY, ABILITY_DEXTERITY, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/fingerfertigkeit stärke" || sMessage == "/fingerfertigkeit stä" || sMessage == "/fingerfertigkeit str") {
-    sMessage = rollSkillsCheck("Fingerfertigkeit (Stärke)", SKILL_SLEIGHT_OF_HAND, ABILITY_STRENGTH, ABILITY_DEXTERITY, oTarget);
+  } else if (sMessage == "/fingerfertigkeit stÃ¤rke" || sMessage == "/fingerfertigkeit stÃ¤" || sMessage == "/fingerfertigkeit str") {
+    sMessage = rollSkillsCheck("Fingerfertigkeit (StÃ¤rke)", SKILL_SLEIGHT_OF_HAND, ABILITY_STRENGTH, ABILITY_DEXTERITY, oTarget);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/fingerfertigkeit geschicklichkeit" || sMessage == "/fingerfertigkeit ges" || sMessage == "/fingerfertigkeit dex") {
@@ -1031,8 +1035,8 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Untersuchen", SKILL_SEARCH, ABILITY_INTELLIGENCE, ABILITY_INTELLIGENCE, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/untersuchen stärke" || sMessage == "/untersuchen stä" || sMessage == "/untersuchen str") {
-    sMessage = rollSkillsCheck("Untersuchen (Stärke)", SKILL_SEARCH, ABILITY_STRENGTH, ABILITY_INTELLIGENCE, oTarget);
+  } else if (sMessage == "/untersuchen stÃ¤rke" || sMessage == "/untersuchen stÃ¤" || sMessage == "/untersuchen str") {
+    sMessage = rollSkillsCheck("Untersuchen (StÃ¤rke)", SKILL_SEARCH, ABILITY_STRENGTH, ABILITY_INTELLIGENCE, oTarget);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/untersuchen geschicklichkeit" || sMessage == "/untersuchen ges" || sMessage == "/untersuchen dex") {
@@ -1060,8 +1064,8 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Natur", SKILL_KNOW_NATURE, ABILITY_INTELLIGENCE, ABILITY_INTELLIGENCE, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/natur stärke" || sMessage == "/natur stä" || sMessage == "/natur str") {
-    sMessage = rollSkillsCheck("Natur (Stärke)", SKILL_KNOW_NATURE, ABILITY_STRENGTH, ABILITY_INTELLIGENCE, oTarget);
+  } else if (sMessage == "/natur stÃ¤rke" || sMessage == "/natur stÃ¤" || sMessage == "/natur str") {
+    sMessage = rollSkillsCheck("Natur (StÃ¤rke)", SKILL_KNOW_NATURE, ABILITY_STRENGTH, ABILITY_INTELLIGENCE, oTarget);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/natur geschicklichkeit" || sMessage == "/natur ges" || sMessage == "/natur dex") {
@@ -1089,8 +1093,8 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Arkanes", SKILL_KNOW_ARCANA, ABILITY_INTELLIGENCE, ABILITY_INTELLIGENCE, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/arkanes stärke" || sMessage == "/arkanes stä" || sMessage == "/arkanes str") {
-    sMessage = rollSkillsCheck("Arkanes (Stärke)", SKILL_KNOW_ARCANA, ABILITY_STRENGTH, ABILITY_INTELLIGENCE, oTarget);
+  } else if (sMessage == "/arkanes stÃ¤rke" || sMessage == "/arkanes stÃ¤" || sMessage == "/arkanes str") {
+    sMessage = rollSkillsCheck("Arkanes (StÃ¤rke)", SKILL_KNOW_ARCANA, ABILITY_STRENGTH, ABILITY_INTELLIGENCE, oTarget);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/arkanes geschicklichkeit" || sMessage == "/arkanes ges" || sMessage == "/arkanes dex") {
@@ -1118,8 +1122,8 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Entdecken", SKILL_SPOT, ABILITY_WISDOM, ABILITY_WISDOM, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/entdecken stärke" || sMessage == "/entdecken stä" || sMessage == "/entdecken str") {
-    sMessage = rollSkillsCheck("Entdecken (Stärke)", SKILL_SPOT, ABILITY_STRENGTH, ABILITY_WISDOM, oTarget);
+  } else if (sMessage == "/entdecken stÃ¤rke" || sMessage == "/entdecken stÃ¤" || sMessage == "/entdecken str") {
+    sMessage = rollSkillsCheck("Entdecken (StÃ¤rke)", SKILL_SPOT, ABILITY_STRENGTH, ABILITY_WISDOM, oTarget);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/entdecken geschicklichkeit" || sMessage == "/entdecken ges" || sMessage == "/entdecken dex") {
@@ -1147,8 +1151,8 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Magischen Gegenstand benutzen", SKILL_USE_MAGIC_DEVICE, ABILITY_CHARISMA, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/magischengegenstandbenutzen stärke" || sMessage == "/magischengegenstandbenutzen stä" || sMessage == "/magischengegenstandbenutzen str") {
-    sMessage = rollSkillsCheck("Magischen Gegenstand benutzen (Stärke)", SKILL_USE_MAGIC_DEVICE, ABILITY_STRENGTH, ABILITY_CHARISMA, oTarget);
+  } else if (sMessage == "/magischengegenstandbenutzen stÃ¤rke" || sMessage == "/magischengegenstandbenutzen stÃ¤" || sMessage == "/magischengegenstandbenutzen str") {
+    sMessage = rollSkillsCheck("Magischen Gegenstand benutzen (StÃ¤rke)", SKILL_USE_MAGIC_DEVICE, ABILITY_STRENGTH, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/magischengegenstandbenutzen geschicklichkeit" || sMessage == "/magischengegenstandbenutzen ges" || sMessage == "/magischengegenstandbenutzen dex") {
@@ -1176,8 +1180,8 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Religion", SKILL_KNOW_RELIGION, ABILITY_INTELLIGENCE, ABILITY_INTELLIGENCE, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/religion stärke" || sMessage == "/religion stä" || sMessage == "/religion str") {
-    sMessage = rollSkillsCheck("Religion (Stärke)", SKILL_KNOW_RELIGION, ABILITY_STRENGTH, ABILITY_INTELLIGENCE, oTarget);
+  } else if (sMessage == "/religion stÃ¤rke" || sMessage == "/religion stÃ¤" || sMessage == "/religion str") {
+    sMessage = rollSkillsCheck("Religion (StÃ¤rke)", SKILL_KNOW_RELIGION, ABILITY_STRENGTH, ABILITY_INTELLIGENCE, oTarget);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/religion geschicklichkeit" || sMessage == "/religion ges" || sMessage == "/religion dex") {
@@ -1205,8 +1209,8 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Akrobatik", SKILL_ACROBATICS, ABILITY_DEXTERITY, ABILITY_DEXTERITY, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/akrobatik stärke" || sMessage == "/akrobatik stä" || sMessage == "/akrobatik str") {
-    sMessage = rollSkillsCheck("Akrobatik (Stärke)", SKILL_ACROBATICS, ABILITY_STRENGTH, ABILITY_DEXTERITY, oTarget);
+  } else if (sMessage == "/akrobatik stÃ¤rke" || sMessage == "/akrobatik stÃ¤" || sMessage == "/akrobatik str") {
+    sMessage = rollSkillsCheck("Akrobatik (StÃ¤rke)", SKILL_ACROBATICS, ABILITY_STRENGTH, ABILITY_DEXTERITY, oTarget);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/akrobatik geschicklichkeit" || sMessage == "/akrobatik ges" || sMessage == "/akrobatik dex") {
@@ -1234,8 +1238,8 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Lederer", SKILL_CRAFT_LEATHERER, ABILITY_DEXTERITY, ABILITY_DEXTERITY, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/lederer stärke" || sMessage == "/lederer stä" || sMessage == "/lederer str") {
-    sMessage = rollSkillsCheck("Lederer (Stärke)", SKILL_CRAFT_LEATHERER, ABILITY_STRENGTH, ABILITY_DEXTERITY, oTarget);
+  } else if (sMessage == "/lederer stÃ¤rke" || sMessage == "/lederer stÃ¤" || sMessage == "/lederer str") {
+    sMessage = rollSkillsCheck("Lederer (StÃ¤rke)", SKILL_CRAFT_LEATHERER, ABILITY_STRENGTH, ABILITY_DEXTERITY, oTarget);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/lederer geschicklichkeit" || sMessage == "/lederer ges" || sMessage == "/lederer dex") {
@@ -1258,62 +1262,62 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Lederer (Charisma)", SKILL_CRAFT_LEATHERER, ABILITY_CHARISMA, ABILITY_DEXTERITY, oTarget);
     speak(oTarget, sMessage);
     return 1;
-    // Täuschen
-  } else if (sMessage == "/täuschen") {
-    sMessage = rollSkillsCheck("Täuschen", SKILL_DECEPTION, ABILITY_CHARISMA, ABILITY_CHARISMA, oTarget);
+    // TÃ¤uschen
+  } else if (sMessage == "/tÃ¤uschen") {
+    sMessage = rollSkillsCheck("TÃ¤uschen", SKILL_DECEPTION, ABILITY_CHARISMA, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/täuschen stärke" || sMessage == "/täuschen stä" || sMessage == "/täuschen str") {
-    sMessage = rollSkillsCheck("Täuschen (Stärke)", SKILL_DECEPTION, ABILITY_STRENGTH, ABILITY_CHARISMA, oTarget);
+  } else if (sMessage == "/tÃ¤uschen stÃ¤rke" || sMessage == "/tÃ¤uschen stÃ¤" || sMessage == "/tÃ¤uschen str") {
+    sMessage = rollSkillsCheck("TÃ¤uschen (StÃ¤rke)", SKILL_DECEPTION, ABILITY_STRENGTH, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/täuschen geschicklichkeit" || sMessage == "/täuschen ges" || sMessage == "/täuschen dex") {
-    sMessage = rollSkillsCheck("Täuschen (Gechicklichkeit)", SKILL_DECEPTION, ABILITY_DEXTERITY, ABILITY_CHARISMA, oTarget);
+  } else if (sMessage == "/tÃ¤uschen geschicklichkeit" || sMessage == "/tÃ¤uschen ges" || sMessage == "/tÃ¤uschen dex") {
+    sMessage = rollSkillsCheck("TÃ¤uschen (Gechicklichkeit)", SKILL_DECEPTION, ABILITY_DEXTERITY, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/täuschen konstitution" || sMessage == "/täuschen kon" || sMessage == "/täuschen con") {
-    sMessage = rollSkillsCheck("Täuschen (Konstitution)", SKILL_DECEPTION, ABILITY_CONSTITUTION, ABILITY_CHARISMA, oTarget);
+  } else if (sMessage == "/tÃ¤uschen konstitution" || sMessage == "/tÃ¤uschen kon" || sMessage == "/tÃ¤uschen con") {
+    sMessage = rollSkillsCheck("TÃ¤uschen (Konstitution)", SKILL_DECEPTION, ABILITY_CONSTITUTION, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/täuschen intelligenz" || sMessage == "/täuschen int") {
-    sMessage = rollSkillsCheck("Täuschen (Intelligenz)", SKILL_DECEPTION, ABILITY_INTELLIGENCE, ABILITY_CHARISMA, oTarget);
+  } else if (sMessage == "/tÃ¤uschen intelligenz" || sMessage == "/tÃ¤uschen int") {
+    sMessage = rollSkillsCheck("TÃ¤uschen (Intelligenz)", SKILL_DECEPTION, ABILITY_INTELLIGENCE, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/täuschen weisheit" || sMessage == "/täuschen wei" || sMessage == "/täuschen wis") {
-    sMessage = rollSkillsCheck("Täuschen (Weisheit)", SKILL_DECEPTION, ABILITY_WISDOM, ABILITY_CHARISMA, oTarget);
+  } else if (sMessage == "/tÃ¤uschen weisheit" || sMessage == "/tÃ¤uschen wei" || sMessage == "/tÃ¤uschen wis") {
+    sMessage = rollSkillsCheck("TÃ¤uschen (Weisheit)", SKILL_DECEPTION, ABILITY_WISDOM, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/täuschen charisma" || sMessage == "/täuschen cha") {
-    sMessage = rollSkillsCheck("Täuschen (Charisma)", SKILL_DECEPTION, ABILITY_CHARISMA, ABILITY_CHARISMA, oTarget);
+  } else if (sMessage == "/tÃ¤uschen charisma" || sMessage == "/tÃ¤uschen cha") {
+    sMessage = rollSkillsCheck("TÃ¤uschen (Charisma)", SKILL_DECEPTION, ABILITY_CHARISMA, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
-    // Einschüchtern
-  } else if (sMessage == "/einschüchtern") {
-    sMessage = rollSkillsCheck("Einschüchtern", SKILL_INTIMIDATE, ABILITY_CHARISMA, ABILITY_CHARISMA, oTarget);
+    // EinschÃ¼chtern
+  } else if (sMessage == "/einschÃ¼chtern") {
+    sMessage = rollSkillsCheck("EinschÃ¼chtern", SKILL_INTIMIDATE, ABILITY_CHARISMA, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/einschüchtern stärke" || sMessage == "/einschüchtern stä" || sMessage == "/einschüchtern str") {
-    sMessage = rollSkillsCheck("Einschüchtern (Stärke)", SKILL_INTIMIDATE, ABILITY_STRENGTH, ABILITY_CHARISMA, oTarget);
+  } else if (sMessage == "/einschÃ¼chtern stÃ¤rke" || sMessage == "/einschÃ¼chtern stÃ¤" || sMessage == "/einschÃ¼chtern str") {
+    sMessage = rollSkillsCheck("EinschÃ¼chtern (StÃ¤rke)", SKILL_INTIMIDATE, ABILITY_STRENGTH, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/einschüchtern geschicklichkeit" || sMessage == "/einschüchtern ges" || sMessage == "/einschüchtern dex") {
-    sMessage = rollSkillsCheck("Einschüchtern (Gechicklichkeit)", SKILL_INTIMIDATE, ABILITY_DEXTERITY, ABILITY_CHARISMA, oTarget);
+  } else if (sMessage == "/einschÃ¼chtern geschicklichkeit" || sMessage == "/einschÃ¼chtern ges" || sMessage == "/einschÃ¼chtern dex") {
+    sMessage = rollSkillsCheck("EinschÃ¼chtern (Gechicklichkeit)", SKILL_INTIMIDATE, ABILITY_DEXTERITY, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/einschüchtern konstitution" || sMessage == "/einschüchtern kon" || sMessage == "/einschüchtern con") {
-    sMessage = rollSkillsCheck("Einschüchtern (Konstitution)", SKILL_INTIMIDATE, ABILITY_CONSTITUTION, ABILITY_CHARISMA, oTarget);
+  } else if (sMessage == "/einschÃ¼chtern konstitution" || sMessage == "/einschÃ¼chtern kon" || sMessage == "/einschÃ¼chtern con") {
+    sMessage = rollSkillsCheck("EinschÃ¼chtern (Konstitution)", SKILL_INTIMIDATE, ABILITY_CONSTITUTION, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/einschüchtern intelligenz" || sMessage == "/einschüchtern int") {
-    sMessage = rollSkillsCheck("Einschüchtern (Intelligenz)", SKILL_INTIMIDATE, ABILITY_INTELLIGENCE, ABILITY_CHARISMA, oTarget);
+  } else if (sMessage == "/einschÃ¼chtern intelligenz" || sMessage == "/einschÃ¼chtern int") {
+    sMessage = rollSkillsCheck("EinschÃ¼chtern (Intelligenz)", SKILL_INTIMIDATE, ABILITY_INTELLIGENCE, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/einschüchtern weisheit" || sMessage == "/einschüchtern wei" || sMessage == "/einschüchtern wis") {
-    sMessage = rollSkillsCheck("Einschüchtern (Weisheit)", SKILL_INTIMIDATE, ABILITY_WISDOM, ABILITY_CHARISMA, oTarget);
+  } else if (sMessage == "/einschÃ¼chtern weisheit" || sMessage == "/einschÃ¼chtern wei" || sMessage == "/einschÃ¼chtern wis") {
+    sMessage = rollSkillsCheck("EinschÃ¼chtern (Weisheit)", SKILL_INTIMIDATE, ABILITY_WISDOM, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/einschüchtern charisma" || sMessage == "/einschüchtern cha") {
-    sMessage = rollSkillsCheck("Einschüchtern (Charisma)", SKILL_INTIMIDATE, ABILITY_CHARISMA, ABILITY_CHARISMA, oTarget);
+  } else if (sMessage == "/einschÃ¼chtern charisma" || sMessage == "/einschÃ¼chtern cha") {
+    sMessage = rollSkillsCheck("EinschÃ¼chtern (Charisma)", SKILL_INTIMIDATE, ABILITY_CHARISMA, ABILITY_CHARISMA, oTarget);
     speak(oTarget, sMessage);
     return 1;
     // Handwerk: Schmied
@@ -1321,8 +1325,8 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Schmied", SKILL_CRAFT_SMITH, ABILITY_STRENGTH, ABILITY_STRENGTH, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/schmied stärke" || sMessage == "/schmied stä" || sMessage == "/schmied str") {
-    sMessage = rollSkillsCheck("Schmied (Stärke)", SKILL_CRAFT_SMITH, ABILITY_STRENGTH, ABILITY_STRENGTH, oTarget);
+  } else if (sMessage == "/schmied stÃ¤rke" || sMessage == "/schmied stÃ¤" || sMessage == "/schmied str") {
+    sMessage = rollSkillsCheck("Schmied (StÃ¤rke)", SKILL_CRAFT_SMITH, ABILITY_STRENGTH, ABILITY_STRENGTH, oTarget);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/schmied geschicklichkeit" || sMessage == "/schmied ges" || sMessage == "/schmied dex") {
@@ -1350,8 +1354,8 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Schreiner", SKILL_CRAFT_CARPENTER, ABILITY_DEXTERITY, ABILITY_DEXTERITY, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/schreiner stärke" || sMessage == "/schreiner stä" || sMessage == "/schreiner str") {
-    sMessage = rollSkillsCheck("Schreiner (Stärke)", SKILL_CRAFT_CARPENTER, ABILITY_STRENGTH, ABILITY_DEXTERITY, oTarget);
+  } else if (sMessage == "/schreiner stÃ¤rke" || sMessage == "/schreiner stÃ¤" || sMessage == "/schreiner str") {
+    sMessage = rollSkillsCheck("Schreiner (StÃ¤rke)", SKILL_CRAFT_CARPENTER, ABILITY_STRENGTH, ABILITY_DEXTERITY, oTarget);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/schreiner geschicklichkeit" || sMessage == "/schreiner ges" || sMessage == "/schreiner dex") {
@@ -1379,8 +1383,8 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Alchemie", SKILL_CRAFT_ALCHEMIST, ABILITY_INTELLIGENCE, ABILITY_INTELLIGENCE, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/alchemist stärke" || sMessage == "/alchemist stä" || sMessage == "/alchemist str") {
-    sMessage = rollSkillsCheck("Alchemie (Stärke)", SKILL_CRAFT_ALCHEMIST, ABILITY_STRENGTH, ABILITY_INTELLIGENCE, oTarget);
+  } else if (sMessage == "/alchemist stÃ¤rke" || sMessage == "/alchemist stÃ¤" || sMessage == "/alchemist str") {
+    sMessage = rollSkillsCheck("Alchemie (StÃ¤rke)", SKILL_CRAFT_ALCHEMIST, ABILITY_STRENGTH, ABILITY_INTELLIGENCE, oTarget);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/alchemist geschicklichkeit" || sMessage == "/alchemist ges" || sMessage == "/alchemist dex") {
@@ -1408,8 +1412,8 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Athletik", SKILL_ATHLETICS, ABILITY_STRENGTH, ABILITY_STRENGTH, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/athletik stärke" || sMessage == "/athletik stä" || sMessage == "/athletik str") {
-    sMessage = rollSkillsCheck("Athletik (Stärke)", SKILL_ATHLETICS, ABILITY_STRENGTH, ABILITY_STRENGTH, oTarget);
+  } else if (sMessage == "/athletik stÃ¤rke" || sMessage == "/athletik stÃ¤" || sMessage == "/athletik str") {
+    sMessage = rollSkillsCheck("Athletik (StÃ¤rke)", SKILL_ATHLETICS, ABILITY_STRENGTH, ABILITY_STRENGTH, oTarget);
     speak(oTarget, sMessage);
     return 1;
   } else if (sMessage == "/athletik geschicklichkeit" || sMessage == "/athletik ges" || sMessage == "/athletik dex") {
@@ -1432,33 +1436,33 @@ int skills(string sMessage, object oTarget) {
     sMessage = rollSkillsCheck("Athletik (Charisma)", SKILL_ATHLETICS, ABILITY_CHARISMA, ABILITY_STRENGTH, oTarget);
     speak(oTarget, sMessage);
     return 1;
-    // Überleben
-  } else if (sMessage == "/überleben") {
-    sMessage = rollSkillsCheck("Überleben", SKILL_SURVIVAL, ABILITY_WISDOM, ABILITY_WISDOM, oTarget);
+    // Ãœberleben
+  } else if (sMessage == "/Ã¼berleben") {
+    sMessage = rollSkillsCheck("Ãœberleben", SKILL_SURVIVAL, ABILITY_WISDOM, ABILITY_WISDOM, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/überleben stärke" || sMessage == "/Überleben stä" || sMessage == "/Überleben str") {
-    sMessage = rollSkillsCheck("Überleben (Stärke)", SKILL_SURVIVAL, ABILITY_STRENGTH, ABILITY_WISDOM, oTarget);
+  } else if (sMessage == "/Ã¼berleben stÃ¤rke" || sMessage == "/Ãœberleben stÃ¤" || sMessage == "/Ãœberleben str") {
+    sMessage = rollSkillsCheck("Ãœberleben (StÃ¤rke)", SKILL_SURVIVAL, ABILITY_STRENGTH, ABILITY_WISDOM, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/überleben geschicklichkeit" || sMessage == "/Überleben ges" || sMessage == "/Überleben dex") {
-    sMessage = rollSkillsCheck("Überleben (Gechicklichkeit)", SKILL_SURVIVAL, ABILITY_DEXTERITY, ABILITY_WISDOM, oTarget);
+  } else if (sMessage == "/Ã¼berleben geschicklichkeit" || sMessage == "/Ãœberleben ges" || sMessage == "/Ãœberleben dex") {
+    sMessage = rollSkillsCheck("Ãœberleben (Gechicklichkeit)", SKILL_SURVIVAL, ABILITY_DEXTERITY, ABILITY_WISDOM, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/überleben konstitution" || sMessage == "/Überleben kon" || sMessage == "/Überleben con") {
-    sMessage = rollSkillsCheck("Überleben (Konstitution)", SKILL_SURVIVAL, ABILITY_CONSTITUTION, ABILITY_WISDOM, oTarget);
+  } else if (sMessage == "/Ã¼berleben konstitution" || sMessage == "/Ãœberleben kon" || sMessage == "/Ãœberleben con") {
+    sMessage = rollSkillsCheck("Ãœberleben (Konstitution)", SKILL_SURVIVAL, ABILITY_CONSTITUTION, ABILITY_WISDOM, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/überleben intelligenz" || sMessage == "/Überleben int") {
-    sMessage = rollSkillsCheck("Überleben (Intelligenz)", SKILL_SURVIVAL, ABILITY_INTELLIGENCE, ABILITY_WISDOM, oTarget);
+  } else if (sMessage == "/Ã¼berleben intelligenz" || sMessage == "/Ãœberleben int") {
+    sMessage = rollSkillsCheck("Ãœberleben (Intelligenz)", SKILL_SURVIVAL, ABILITY_INTELLIGENCE, ABILITY_WISDOM, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/überleben weisheit" || sMessage == "/Überleben wei" || sMessage == "/Überleben wis") {
-    sMessage = rollSkillsCheck("Überleben (Weisheit)", SKILL_SURVIVAL, ABILITY_WISDOM, ABILITY_WISDOM, oTarget);
+  } else if (sMessage == "/Ã¼berleben weisheit" || sMessage == "/Ãœberleben wei" || sMessage == "/Ãœberleben wis") {
+    sMessage = rollSkillsCheck("Ãœberleben (Weisheit)", SKILL_SURVIVAL, ABILITY_WISDOM, ABILITY_WISDOM, oTarget);
     speak(oTarget, sMessage);
     return 1;
-  } else if (sMessage == "/überleben charisma" || sMessage == "/Überleben cha") {
-    sMessage = rollSkillsCheck("Überleben (Charisma)", SKILL_SURVIVAL, ABILITY_CHARISMA, ABILITY_WISDOM, oTarget);
+  } else if (sMessage == "/Ã¼berleben charisma" || sMessage == "/Ãœberleben cha") {
+    sMessage = rollSkillsCheck("Ãœberleben (Charisma)", SKILL_SURVIVAL, ABILITY_CHARISMA, ABILITY_WISDOM, oTarget);
     speak(oTarget, sMessage);
     return 1;
   }
@@ -1570,7 +1574,7 @@ int token(string sMessage) {
 }
 
 int hindurchzwaengen(string sMessage) {
-  if (sMessage == "/hindurchzwängen") {
+  if (sMessage == "/hindurchzwÃ¤ngen") {
     if (GetTag(GetArea(oPc)) == "AREA_Unterschlupf") {
       location lUnterschlupf = GetLocation(GetObjectByTag("WP_UNTERSCHLUPF"));
       DelayCommand(0.0, AssignCommand(oPc, JumpToLocation(lUnterschlupf)));
@@ -1615,7 +1619,7 @@ int ghost(string sMessage) {
   if (sMessage == "/geist" || sMessage == "/ghost") {
     effect eGhost = EffectCutsceneGhost();
     ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(SupernaturalEffect(eGhost), "GHOST"), oPc);
-    SendMessageToPC(oPc, "Geist Modus für eine Minute angeschaltet.");
+    SendMessageToPC(oPc, "Geist Modus fÃ¼r eine Minute angeschaltet.");
     DelayCommand(60.0f, RemoveEffectByName(oPc, "GHOST"));
     return 1;
   }
@@ -1783,7 +1787,7 @@ int speakDMArea(string sMessage) {
     sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
     if (GetIsDM(oPc) || GetIsDM(GetMaster(oPc)) || GetIsDMPossessed(oPc)) {
       SendMessageToPC(oPc, "Folgende Spieler haben euch im Gebiet vernommen:");
-      SendMessageToAllDMs("Erzähler (/g)[" + GetTag(GetArea(oPc)) + "]: " + sMessage);
+      SendMessageToAllDMs("ErzÃ¤hler (/g)[" + GetTag(GetArea(oPc)) + "]: " + sMessage);
       object oTalkTo = GetFirstPC();
       while (oTalkTo != OBJECT_INVALID) {
         if (GetArea(oTalkTo) == GetArea(oPc)) {
@@ -1808,7 +1812,7 @@ int speakDMServer(string sMessage) {
     sMessage = ColorStrings(sMessage, "((", "))", GetToken(102));
     if (GetIsDM(oPc) || GetIsDM(GetMaster(oPc)) || GetIsDMPossessed(oPc)) {
       SendMessageToPC(oPc, "Folgende Spieler haben euch auf dem Server vernommen:");
-      SendMessageToAllDMs("Erzähler (/a): " + sMessage);
+      SendMessageToAllDMs("ErzÃ¤hler (/a): " + sMessage);
       object oTalkTo = GetFirstPC();
       while (oTalkTo != OBJECT_INVALID) {
         if (!GetIsDM(oTalkTo)) {
@@ -1835,20 +1839,20 @@ int help(string sMessage) {
         "/sterben\n" +
         "/zeit\n" +
         "/initiative" +
-        "\nCharakter löschen:\n" +
+        "\nCharakter lÃ¶schen:\n" +
         "/delete\n" +
         "\nAussehen editieren:\n" +
         "/aussehen\n" +
         "/rucksack\n" +
         "/maske 0-53\n" +
         "/pferd 1-4\n" +
-        "\nWürfel:\n" +
+        "\nWÃ¼rfel:\n" +
         "/d4\n" +
         "/d6\n" +
         "/d8\n" +
         "/d10\n" +
         "/d20\n" +
-        "\nWeitere Übersichten:\n" +
+        "\nWeitere Ãœbersichten:\n" +
         "/hilfe fertigkeit\n" +
         "/hilfe maske\n" +
         "/hilfe rettungswurf\n" +
@@ -1860,7 +1864,7 @@ int help(string sMessage) {
 
 int helpSavingThrows(string sMessage) {
   if (sMessage == "/hilfe rettungswurf") {
-    SendMessageToPC(oPc, "/reflex || /ref\n/wille || /wil\n/zähigkeit || /fort\n");
+    SendMessageToPC(oPc, "/reflex || /ref\n/wille || /wil\n/zÃ¤higkeit || /fort\n");
     return 1;
   }
   return 0;
@@ -1891,11 +1895,11 @@ int helpAnimation(string sMessage) {
         "/beten\n" +
         "/zaubern\n" +
         "/zaubern2\n" +
-        "/liegen rücken\n" +
+        "/liegen rÃ¼cken\n" +
         "/liegen bauch\n" +
         "/aufheben\n" +
         "/interagieren\n" +
-        "/spähen\n" +
+        "/spÃ¤hen\n" +
         "/schwanken\n" +
         "/schimpfen\n" +
         "/lachen\n" +
@@ -1916,14 +1920,14 @@ int helpAnimation(string sMessage) {
 
 int helpSkills(string sMessage) {
   if (sMessage == "/hilfe fertigkeit") {
-    SendMessageToPC(oPc, "Fertigkeiten können mit beliebigen Attributen gewürfelt werden indem man das entsprechede Kürzel anhängt, zum Beispiel '/akrobatik str'\n\n"+
+    SendMessageToPC(oPc, "Fertigkeiten kÃ¶nnen mit beliebigen Attributen gewÃ¼rfelt werden indem man das entsprechede KÃ¼rzel anhÃ¤ngt, zum Beispiel '/akrobatik str'\n\n"+
         "Fertigkeiten:\n" +
         "/akrobatik\n" +
         "/alchemist\n" +
         "/arkanes\n" +
         "/athletik\n" +
         "/auftreten\n" +
-        "/einschüchtern\n" +
+        "/einschÃ¼chtern\n" +
         "/entdecken\n" +
         "/fingerfertigkeit\n" +
         "/heilkunde\n" +
@@ -1939,9 +1943,9 @@ int helpSkills(string sMessage) {
         "/religion\n" +
         "/schmied\n" +
         "/schreiner\n" +
-        "/täuschen\n" +
-        "/überleben\n" +
-        "/überzeugen\n" +
+        "/tÃ¤uschen\n" +
+        "/Ã¼berleben\n" +
+        "/Ã¼berzeugen\n" +
         "/untersuchen\n" +
         "/verstecken\n" +
         "/weltliches\n");
@@ -2052,7 +2056,7 @@ void main() {
   string sBan = GetSubString(sMessage, 0, 4);
   string sUnban = GetSubString(sMessage, 0, 6);
   string sPferd= GetSubString(sMessage, 0, 4);
-
+  SendMessageToPC(oPc, "entering chat-check");
   if (GetSubString(sMessage, 0, 1) == ":" || GetSubString(sMessage, 0, 1) == "/") {
     if (speakAsChar(sMessage) ||
         speakOOC(sMessage, oPc) ||
@@ -2097,8 +2101,9 @@ void main() {
         helpAnimation(sMessage) ||
         helpSkills(sMessage) ||
         helpMasks(sMessage)) {
+        SendMessageToPC(oPc, "parsed");
         } else {
-          SendMessageToPC(oPc, "Ungültiger Befehl: \"" +
+          SendMessageToPC(oPc, "UngÃ¼ltiger Befehl: \"" +
               sMessage +
               "\" \n\n" +
               "/hilfe \n" +
@@ -2106,6 +2111,7 @@ void main() {
               "/hilfe fertigkeit \n");
         }
   } else {
+  SendMessageToPC(oPc, "nothing to parse");
     if (iChatVolume == 0) {
       // Normal talk
       sMessage = ColorStrings(sMessage, "*", "*", GetToken(101));
@@ -2127,7 +2133,7 @@ void main() {
       //SetPCChatMessage(sMessage);
       if (GetIsDM(oPc) || GetIsDM(GetMaster(oPc)) || GetIsDMPossessed(oPc)) {
         SendMessageToPC(oPc, "Folgende Spieler im 50 Meter Radius haben euch vernommen:");
-        SendMessageToAllDMs("Erz¿hler (/s)[" + GetTag(GetArea(oPc)) + "]: " + sMessage);
+        SendMessageToAllDMs("ErzÂ¿hler (/s)[" + GetTag(GetArea(oPc)) + "]: " + sMessage);
         object oTalkTo = GetFirstPC();
         while (oTalkTo != OBJECT_INVALID) {
           if (GetArea(oTalkTo) == GetArea(oPc) && GetDistanceBetween(oTalkTo, oPc) < 50.0) {
