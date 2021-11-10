@@ -46,15 +46,6 @@ string sQuery;
 int iBonus;
 int iRand = Random(20) + 1;
 
-int skills(string sMessage, object oPc);
-int rolls(string sMessage, object oTarget);
-int attributes(string sMessage, object oTarget);
-int savingThrows(string sMessage, object oTarget);
-int emotes(string sMessage, object oTarget);
-int speakOOC(string sMessage, object oTarget);
-int phenotype(string sMessage, object oTarget);
-int initiative(string sMessage, object oTarget);
-
 // Setzt einen Würfel wurf zusammen
 string printRoll(string sValue, int iRand, int iBonus) {
   return StringToRGBString("[" +
@@ -81,6 +72,22 @@ string printRollSkill(string sValue, int iRand, int iBonus, int iAbilityBonus) {
       ") = " +
       IntToString(iRand + iAbilityBonus + iBonus) +
       "]", "333");
+}
+
+int doDamage(string sMessage, object oTarget){
+  if(GetSubString(sMessage, 0, 4) == "/dmg"){
+    if(GetSubString(sMessage, 5,6) == "%"){
+      int nDamage = StringToInt(GetSubString(sMessage,6,10));
+      ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(GetCurrentHitPoints(oTarget)/nDamage), oTarget);
+      return 1;
+    }
+    else{
+      int nDamage = StringToInt(GetSubString(sMessage, 6,10));
+      ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nDamage), oTarget);
+      return 1;
+    }
+  }
+  return 0;
 }
 
 string rollSkillsCheck(string sOutput, int iSkill, int iCheckAbility, int iKeyAbility, object oTarget) {
@@ -2017,6 +2024,7 @@ int speakAsChar(string sMessage) {
         || sSecondChar == "5") {
       object oTarget = GetLocalObject(oPc, "dmspeak" + sSecondChar);
       if (
+      !doDamage(sSpokenText, oTarget) &&
       !skills(sSpokenText, oTarget) &&
       !speakOOC(sSpokenText, oTarget) &&
       !rolls(sSpokenText, oTarget) &&
@@ -2060,6 +2068,7 @@ void main() {
         setWindFromChat(sMessage) ||
         deleteHint(sMessage) ||
         delete(sMessage) ||
+        doDamage(sMessage, oPc) ||
         emotes(sMessage, oPc) ||
         aussehen(sMessage) ||
         attributes(sMessage, oPc) ||
