@@ -91,26 +91,26 @@ string printRollSkill(string sValue, int iRand, int iBonus, int iAbilityBonus) {
       "]", "333");
 }
 
-//My mother told me
-//Someday I will buy
-//a galley with good oars
-//sail to distant shores
-//stand up on the Prow
-//Noble barge i steer 
-//steady course to the haven 
-//hew many foeman 
-//hew many foeman 
-//https://www.youtube.com/watch?v=3Hg5bXroHbg
 int doChatDamage(string sMessage, object oTarget){
+speak(oTarget, GetSubString(sMessage, 0, 1));
+speak(oTarget, GetSubString(sMessage, 1, 1));
+speak(oTarget, GetSubString(sMessage, 2, 1));
+speak(oTarget, GetSubString(sMessage, 3, 1));
+speak(oTarget, GetSubString(sMessage, 4, 1));
+speak(oTarget, GetSubString(sMessage, 5, 1));
+speak(oTarget, GetSubString(sMessage, 6, 1));
+speak(oTarget, GetSubString(sMessage, 7, 1));
+speak(oTarget, GetSubString(sMessage, 8, 1));
+speak(oTarget, GetSubString(sMessage, 9, 1));
   if(GetSubString(sMessage, 0, 4) == "/dmg"){
-    if(GetSubString(sMessage, 5,6) == "%"){
-      int nDamage = StringToInt(GetSubString(sMessage,6,10));
+    if(GetSubString(sMessage, 6,1) == "%"){
+      int nDamage = StringToInt(GetSubString(sMessage,8,10));
       int nHP = GetCurrentHitPoints(oTarget);
       ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nHP/100*nDamage), oTarget);
       return 1;
     }
     else{
-      int nDamage = StringToInt(GetSubString(sMessage, 6,10));
+      int nDamage = StringToInt(GetSubString(sMessage, 5,10));
       ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nDamage), oTarget);
       return 1;
     }
