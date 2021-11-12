@@ -2024,7 +2024,7 @@ int speakAsChar(string sMessage) {
         || sSecondChar == "5") {
       object oTarget = GetLocalObject(oPc, "dmspeak" + sSecondChar);
       if (
-      !doDamage(sSpokenText, oTarget) &&
+      !doChatDamage(sSpokenText, oTarget) &&
       !skills(sSpokenText, oTarget) &&
       !speakOOC(sSpokenText, oTarget) &&
       !rolls(sSpokenText, oTarget) &&
