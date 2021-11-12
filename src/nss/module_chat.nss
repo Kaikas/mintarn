@@ -74,15 +74,15 @@ string printRollSkill(string sValue, int iRand, int iBonus, int iAbilityBonus) {
       "]", "333");
 }
 
-int doDamage(string sMessage, object oTarget){
+int doChatDamage(string sMessage, object oTarget){
   if(GetSubString(sMessage, 0, 4) == "/dmg"){
-    if(GetSubString(sMessage, 5,6) == "%"){
-      int nDamage = StringToInt(GetSubString(sMessage,6,10));
+    if(GetSubString(sMessage, 5,1) == "%"){
+      int nDamage = StringToInt(GetSubString(sMessage,7,10));
       ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(GetCurrentHitPoints(oTarget)/nDamage), oTarget);
       return 1;
     }
     else{
-      int nDamage = StringToInt(GetSubString(sMessage, 6,10));
+      int nDamage = StringToInt(GetSubString(sMessage, 5,10));
       ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nDamage), oTarget);
       return 1;
     }
@@ -2068,7 +2068,7 @@ void main() {
         setWindFromChat(sMessage) ||
         deleteHint(sMessage) ||
         delete(sMessage) ||
-        doDamage(sMessage, oPc) ||
+        doChatDamage(sMessage, oPc) ||
         emotes(sMessage, oPc) ||
         aussehen(sMessage) ||
         attributes(sMessage, oPc) ||
