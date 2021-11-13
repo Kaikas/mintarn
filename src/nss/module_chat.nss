@@ -78,14 +78,13 @@ int doChatDamage(string sMessage, object oTarget){
   if(GetSubString(sMessage, 0, 4) == "/dmg"){
     if(GetSubString(sMessage, 5,1) == "%"){
       int nDamage = StringToInt(GetSubString(sMessage,7,10));
-      ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(GetCurrentHitPoints(oTarget)/nDamage), oTarget);
-      return 1;
+      ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(GetCurrentHitPoints(oTarget)/100*nDamage), oTarget);
     }
     else{
       int nDamage = StringToInt(GetSubString(sMessage, 5,10));
       ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nDamage), oTarget);
-      return 1;
     }
+    return 1;
   }
   return 0;
 }
