@@ -6,7 +6,8 @@
 void main() {
     // Trigger AI scripts for NPC_ targets
     string sType = GetSubString(GetTag(OBJECT_SELF), 0, 4);
-    if (sType == "NPC_") {
+    int nEnabled = 0;
+    if (sType == "NPC_" && nEnabled == 1) {
         object oWp;
         oWp = GetNextWaypoint(oWp, GetTag(OBJECT_SELF));
         if (oWp != OBJECT_INVALID) {
