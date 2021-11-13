@@ -604,7 +604,7 @@ void main() {
         effect eEffect = EffectVisualEffect(VFX_DUR_CUTSCENE_INVISIBILITY);
         ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eEffect, oPc, 180.0f);
     }
-    
+
     // Belohnungsitem
     if (GetTag(oItem) == "SW_Belohnung") {
         object oTarget = GetItemActivatedTarget();
@@ -639,10 +639,11 @@ void main() {
         SetLocalObject(oPc, "dmspeak5", oTarget);
         SendMessageToPC(oPc, ":5 spricht nun als " + GetName(oTarget));
     }
-    if (GetTag(oItem) == "SW_GottAlter") {
+    if (GetTag(oItem) == "SW_Charinfo") {
         object oTarget = GetItemActivatedTarget();
         SendMessageToPC(oPc, "Gott: " + GetDeity(oTarget));
         SendMessageToPC(oPc, "Alter: " + IntToString(GetAge(oTarget)));
+        SendMessageToPC(oPc, "XP: " + IntToString(GetXP(oTarget)));
     }
     // Fraktion ändern
     if (GetTag(oItem) == "SW_FraktionAendern") {
