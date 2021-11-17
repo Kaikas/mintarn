@@ -138,7 +138,7 @@
         },
         "ChallengeRating": {
           "type": "float",
-          "value": 10.0
+          "value": 7.0
         },
         "ClassList": {
           "type": "list",
@@ -147,29 +147,18 @@
               "__struct_id": 2,
               "Class": {
                 "type": "int",
-                "value": 8
-              },
-              "ClassLevel": {
-                "type": "short",
-                "value": 10
-              }
-            },
-            {
-              "__struct_id": 2,
-              "Class": {
-                "type": "int",
                 "value": 4
               },
               "ClassLevel": {
                 "type": "short",
-                "value": 5
+                "value": 10
               }
             }
           ]
         },
         "Color_Hair": {
           "type": "byte",
-          "value": 11
+          "value": 62
         },
         "Color_Skin": {
           "type": "byte",
@@ -210,9 +199,9 @@
         "Description": {
           "type": "cexolocstring",
           "value": {
-            "0": "Ründlicher in einen Wappenrock der Stadtwache gekleideter älterer Mann, der um die 40 Sommer auf dem Buckel hat. Sein Bart ist stets gepflegt und auch die blonden Haare wirken sauber. Wer Zeit findet auf seinen Gang zu achten, wird bemerken, das er sein linkes Bein etwas mitzieht.",
-            "4": "Ründlicher in einen Wappenrock der Stadtwache gekleideter älterer Mann, der um die 40 Sommer auf dem Buckel hat. Sein Bart ist stets gepflegt und auch die blonden Haare wirken sauber. Wer Zeit findet auf seinen Gang zu achten, wird bemerken, das er sein linkes Bein etwas mitzieht.",
-            "5": "Ründlicher in einen Wappenrock der Stadtwache gekleideter älterer Mann, der um die 40 Sommer auf dem Buckel hat. Sein Bart ist stets gepflegt und auch die blonden Haare wirken sauber. Wer Zeit findet auf seinen Gang zu achten, wird bemerken, das er sein linkes Bein etwas mitzieht."
+            "0": "Ein Mann in einem Wappenrock der Stadtwache gekleidet, der um die 60 Sommer auf dem Buckel hat und ein kleines Altersbäuchlein ansetzt. Sein Bart ist stets gepflegt und auch die weiß werdenden Haare wirken sauber. Wer Zeit findet auf seinen Gang zu achten, wird bemerken, das er sein linkes Bein etwas mitzieht.",
+            "4": "Ein Mann in einem Wappenrock der Stadtwache gekleidet, der um die 60 Sommer auf dem Buckel hat und ein kleines Altersbäuchlein ansetzt. Sein Bart ist stets gepflegt und auch die weiß werdenden Haare wirken sauber. Wer Zeit findet auf seinen Gang zu achten, wird bemerken, das er sein linkes Bein etwas mitzieht.",
+            "5": "Ein Mann in einem Wappenrock der Stadtwache gekleidet, der um die 60 Sommer auf dem Buckel hat und ein kleines Altersbäuchlein ansetzt. Sein Bart ist stets gepflegt und auch die weiß werdenden Haare wirken sauber. Wer Zeit findet auf seinen Gang zu achten, wird bemerken, das er sein linkes Bein etwas mitzieht."
           }
         },
         "Dex": {
@@ -426,6 +415,13 @@
               "__struct_id": 1,
               "Feat": {
                 "type": "word",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 1,
+              "Feat": {
+                "type": "word",
                 "value": 2
               }
             },
@@ -441,13 +437,6 @@
               "Feat": {
                 "type": "word",
                 "value": 4
-              }
-            },
-            {
-              "__struct_id": 1,
-              "Feat": {
-                "type": "word",
-                "value": 5
               }
             },
             {
@@ -476,13 +465,6 @@
               "Feat": {
                 "type": "word",
                 "value": 68
-              }
-            },
-            {
-              "__struct_id": 1,
-              "Feat": {
-                "type": "word",
-                "value": 23
               }
             },
             {
@@ -525,6 +507,13 @@
               "Feat": {
                 "type": "word",
                 "value": 392
+              }
+            },
+            {
+              "__struct_id": 1,
+              "Feat": {
+                "type": "word",
+                "value": 753
               }
             },
             {
@@ -602,7 +591,7 @@
               "__struct_id": 0,
               "AddCost": {
                 "type": "dword",
-                "value": 0
+                "value": 25
               },
               "BaseItem": {
                 "type": "int",
@@ -614,7 +603,7 @@
               },
               "Cost": {
                 "type": "dword",
-                "value": 20
+                "value": 25
               },
               "Cursed": {
                 "type": "byte",
@@ -630,7 +619,7 @@
               },
               "Identified": {
                 "type": "byte",
-                "value": 1
+                "value": 0
               },
               "LocalizedName": {
                 "type": "cexolocstring",
@@ -656,7 +645,39 @@
               },
               "PropertiesList": {
                 "type": "list",
-                "value": []
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "ChanceAppear": {
+                      "type": "byte",
+                      "value": 100
+                    },
+                    "CostTable": {
+                      "type": "byte",
+                      "value": 21
+                    },
+                    "CostValue": {
+                      "type": "word",
+                      "value": 50
+                    },
+                    "Param1": {
+                      "type": "byte",
+                      "value": 255
+                    },
+                    "Param1Value": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "PropertyName": {
+                      "type": "word",
+                      "value": 155
+                    },
+                    "Subtype": {
+                      "type": "word",
+                      "value": 0
+                    }
+                  }
+                ]
               },
               "Repos_PosX": {
                 "type": "word",
@@ -707,7 +728,7 @@
               "__struct_id": 1,
               "AddCost": {
                 "type": "dword",
-                "value": 0
+                "value": 25
               },
               "BaseItem": {
                 "type": "int",
@@ -719,7 +740,7 @@
               },
               "Cost": {
                 "type": "dword",
-                "value": 100
+                "value": 25
               },
               "Cursed": {
                 "type": "byte",
@@ -735,7 +756,7 @@
               },
               "Identified": {
                 "type": "byte",
-                "value": 1
+                "value": 0
               },
               "LocalizedName": {
                 "type": "cexolocstring",
@@ -761,7 +782,39 @@
               },
               "PropertiesList": {
                 "type": "list",
-                "value": []
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "ChanceAppear": {
+                      "type": "byte",
+                      "value": 100
+                    },
+                    "CostTable": {
+                      "type": "byte",
+                      "value": 21
+                    },
+                    "CostValue": {
+                      "type": "word",
+                      "value": 50
+                    },
+                    "Param1": {
+                      "type": "byte",
+                      "value": 255
+                    },
+                    "Param1Value": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "PropertyName": {
+                      "type": "word",
+                      "value": 155
+                    },
+                    "Subtype": {
+                      "type": "word",
+                      "value": 0
+                    }
+                  }
+                ]
               },
               "Repos_PosX": {
                 "type": "word",
@@ -1028,7 +1081,7 @@
         },
         "MaxHitPoints": {
           "type": "short",
-          "value": 104
+          "value": 89
         },
         "NaturalAC": {
           "type": "byte",
@@ -1128,28 +1181,7 @@
               "__struct_id": 0,
               "Rank": {
                 "type": "byte",
-                "value": 1
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
                 "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 11
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 11
               }
             },
             {
@@ -1170,7 +1202,7 @@
               "__struct_id": 0,
               "Rank": {
                 "type": "byte",
-                "value": 1
+                "value": 10
               }
             },
             {
@@ -1184,14 +1216,14 @@
               "__struct_id": 0,
               "Rank": {
                 "type": "byte",
-                "value": 0
+                "value": 10
               }
             },
             {
               "__struct_id": 0,
               "Rank": {
                 "type": "byte",
-                "value": 11
+                "value": 13
               }
             },
             {
@@ -1226,6 +1258,48 @@
               "__struct_id": 0,
               "Rank": {
                 "type": "byte",
+                "value": 5
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 10
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 10
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
                 "value": 0
               }
             },
@@ -1261,49 +1335,14 @@
               "__struct_id": 0,
               "Rank": {
                 "type": "byte",
-                "value": 0
+                "value": 13
               }
             },
             {
               "__struct_id": 0,
               "Rank": {
                 "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 1
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 1
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 2
+                "value": 13
               }
             },
             {
@@ -1360,6 +1399,20 @@
               "Rank": {
                 "type": "byte",
                 "value": 0
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 10
               }
             },
             {
@@ -1381,7 +1434,7 @@
         },
         "StartingPackage": {
           "type": "byte",
-          "value": 8
+          "value": 4
         },
         "Str": {
           "type": "byte",
@@ -1532,11 +1585,11 @@
         },
         "Cha": {
           "type": "byte",
-          "value": 9
+          "value": 12
         },
         "ChallengeRating": {
           "type": "float",
-          "value": 10.0
+          "value": 8.0
         },
         "ClassList": {
           "type": "list",
@@ -1545,22 +1598,11 @@
               "__struct_id": 2,
               "Class": {
                 "type": "int",
-                "value": 8
-              },
-              "ClassLevel": {
-                "type": "short",
-                "value": 10
-              }
-            },
-            {
-              "__struct_id": 2,
-              "Class": {
-                "type": "int",
                 "value": 4
               },
               "ClassLevel": {
                 "type": "short",
-                "value": 5
+                "value": 9
               }
             }
           ]
@@ -1583,7 +1625,7 @@
         },
         "Con": {
           "type": "byte",
-          "value": 16
+          "value": 14
         },
         "Conversation": {
           "type": "resref",
@@ -1595,7 +1637,7 @@
         },
         "CurrentHitPoints": {
           "type": "short",
-          "value": 59
+          "value": 90
         },
         "DecayTime": {
           "type": "dword",
@@ -1608,12 +1650,14 @@
         "Description": {
           "type": "cexolocstring",
           "value": {
-            "0": "Drahtiger in einen Wappenrock der Stadtwache gekleideter Mann, der beinah 40 Sommer auf dem Buckel hat. Er ist stets rasiert und die lockigen blonden Haare wirken gut gepflegt. Die Ausrüstung die er bei sich trägt insbesondere seine beiden Schwerter in ihren Halterungen sind immer sauber und poliert. Selbst die festen Stiefel sind immer frisch poliert."
+            "0": "Drahtiger, in einen Wappenrock der Stadtwache gekleideter Mann, der beinah 40 Sommer auf dem Buckel hat. Er ist stets rasiert und die lockigen blonden Haare wirken gut gepflegt. Die Ausrüstung die er bei sich trägt, insbesondere seine beiden Schwerter in ihren Halterungen, sind immer sauber und poliert. Selbst die festen Stiefel glänzen.",
+            "4": "Drahtiger, in einen Wappenrock der Stadtwache gekleideter Mann, der beinah 40 Sommer auf dem Buckel hat. Er ist stets rasiert und die lockigen blonden Haare wirken gut gepflegt. Die Ausrüstung die er bei sich trägt, insbesondere seine beiden Schwerter in ihren Halterungen, sind immer sauber und poliert. Selbst die festen Stiefel glänzen.",
+            "5": "Drahtiger, in einen Wappenrock der Stadtwache gekleideter Mann, der beinah 40 Sommer auf dem Buckel hat. Er ist stets rasiert und die lockigen blonden Haare wirken gut gepflegt. Die Ausrüstung die er bei sich trägt, insbesondere seine beiden Schwerter in ihren Halterungen, sind immer sauber und poliert. Selbst die festen Stiefel glänzen."
           }
         },
         "Dex": {
           "type": "byte",
-          "value": 13
+          "value": 12
         },
         "Disarmable": {
           "type": "byte",
@@ -1790,7 +1834,7 @@
               },
               "XOrientation": {
                 "type": "float",
-                "value": -0.0
+                "value": 0.0
               },
               "XPosition": {
                 "type": "float",
@@ -1969,15 +2013,15 @@
         },
         "GoodEvil": {
           "type": "byte",
-          "value": 50
+          "value": 100
         },
         "HitPoints": {
           "type": "short",
-          "value": 59
+          "value": 90
         },
         "Int": {
           "type": "byte",
-          "value": 10
+          "value": 12
         },
         "Interruptable": {
           "type": "byte",
@@ -1998,7 +2042,7 @@
               "__struct_id": 0,
               "AddCost": {
                 "type": "dword",
-                "value": 0
+                "value": 25
               },
               "BaseItem": {
                 "type": "int",
@@ -2010,7 +2054,7 @@
               },
               "Cost": {
                 "type": "dword",
-                "value": 20
+                "value": 25
               },
               "Cursed": {
                 "type": "byte",
@@ -2026,7 +2070,7 @@
               },
               "Identified": {
                 "type": "byte",
-                "value": 1
+                "value": 0
               },
               "LocalizedName": {
                 "type": "cexolocstring",
@@ -2052,7 +2096,39 @@
               },
               "PropertiesList": {
                 "type": "list",
-                "value": []
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "ChanceAppear": {
+                      "type": "byte",
+                      "value": 100
+                    },
+                    "CostTable": {
+                      "type": "byte",
+                      "value": 21
+                    },
+                    "CostValue": {
+                      "type": "word",
+                      "value": 50
+                    },
+                    "Param1": {
+                      "type": "byte",
+                      "value": 255
+                    },
+                    "Param1Value": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "PropertyName": {
+                      "type": "word",
+                      "value": 155
+                    },
+                    "Subtype": {
+                      "type": "word",
+                      "value": 0
+                    }
+                  }
+                ]
               },
               "Repos_PosX": {
                 "type": "word",
@@ -2080,7 +2156,7 @@
               },
               "XOrientation": {
                 "type": "float",
-                "value": 0.0
+                "value": -0.0
               },
               "XPosition": {
                 "type": "float",
@@ -2103,7 +2179,7 @@
               "__struct_id": 1,
               "AddCost": {
                 "type": "dword",
-                "value": 0
+                "value": 25
               },
               "BaseItem": {
                 "type": "int",
@@ -2115,7 +2191,7 @@
               },
               "Cost": {
                 "type": "dword",
-                "value": 100
+                "value": 25
               },
               "Cursed": {
                 "type": "byte",
@@ -2131,7 +2207,7 @@
               },
               "Identified": {
                 "type": "byte",
-                "value": 1
+                "value": 0
               },
               "LocalizedName": {
                 "type": "cexolocstring",
@@ -2157,7 +2233,39 @@
               },
               "PropertiesList": {
                 "type": "list",
-                "value": []
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "ChanceAppear": {
+                      "type": "byte",
+                      "value": 100
+                    },
+                    "CostTable": {
+                      "type": "byte",
+                      "value": 21
+                    },
+                    "CostValue": {
+                      "type": "word",
+                      "value": 50
+                    },
+                    "Param1": {
+                      "type": "byte",
+                      "value": 255
+                    },
+                    "Param1Value": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "PropertyName": {
+                      "type": "word",
+                      "value": 155
+                    },
+                    "Subtype": {
+                      "type": "word",
+                      "value": 0
+                    }
+                  }
+                ]
               },
               "Repos_PosX": {
                 "type": "word",
@@ -2424,7 +2532,7 @@
         },
         "MaxHitPoints": {
           "type": "short",
-          "value": 104
+          "value": 108
         },
         "NaturalAC": {
           "type": "byte",
@@ -2524,28 +2632,7 @@
               "__struct_id": 0,
               "Rank": {
                 "type": "byte",
-                "value": 1
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
                 "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 11
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 11
               }
             },
             {
@@ -2566,7 +2653,7 @@
               "__struct_id": 0,
               "Rank": {
                 "type": "byte",
-                "value": 1
+                "value": 8
               }
             },
             {
@@ -2580,14 +2667,14 @@
               "__struct_id": 0,
               "Rank": {
                 "type": "byte",
-                "value": 0
+                "value": 8
               }
             },
             {
               "__struct_id": 0,
               "Rank": {
                 "type": "byte",
-                "value": 11
+                "value": 10
               }
             },
             {
@@ -2622,7 +2709,7 @@
               "__struct_id": 0,
               "Rank": {
                 "type": "byte",
-                "value": 0
+                "value": 12
               }
             },
             {
@@ -2636,42 +2723,7 @@
               "__struct_id": 0,
               "Rank": {
                 "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 1
+                "value": 8
               }
             },
             {
@@ -2692,14 +2744,7 @@
               "__struct_id": 0,
               "Rank": {
                 "type": "byte",
-                "value": 1
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 2
+                "value": 8
               }
             },
             {
@@ -2741,6 +2786,55 @@
               "__struct_id": 0,
               "Rank": {
                 "type": "byte",
+                "value": 5
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 10
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 10
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
                 "value": 0
               }
             },
@@ -2756,6 +2850,20 @@
               "Rank": {
                 "type": "byte",
                 "value": 0
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 12
               }
             },
             {
@@ -2777,11 +2885,11 @@
         },
         "StartingPackage": {
           "type": "byte",
-          "value": 8
+          "value": 4
         },
         "Str": {
           "type": "byte",
-          "value": 18
+          "value": 20
         },
         "Subrace": {
           "type": "cexostring",
@@ -2817,7 +2925,7 @@
         },
         "Wis": {
           "type": "byte",
-          "value": 10
+          "value": 12
         },
         "XOrientation": {
           "type": "float",

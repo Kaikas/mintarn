@@ -90,7 +90,7 @@
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 10.0
+    "value": 7.0
   },
   "ClassList": {
     "type": "list",
@@ -99,29 +99,18 @@
         "__struct_id": 2,
         "Class": {
           "type": "int",
-          "value": 8
-        },
-        "ClassLevel": {
-          "type": "short",
-          "value": 10
-        }
-      },
-      {
-        "__struct_id": 2,
-        "Class": {
-          "type": "int",
           "value": 4
         },
         "ClassLevel": {
           "type": "short",
-          "value": 5
+          "value": 10
         }
       }
     ]
   },
   "Color_Hair": {
     "type": "byte",
-    "value": 11
+    "value": 62
   },
   "Color_Skin": {
     "type": "byte",
@@ -137,7 +126,7 @@
   },
   "Comment": {
     "type": "cexostring",
-    "value": "Ründlicher in einen Wappenrock der Stadtwache gekleideter älterer Mann, der um die 40 Sommer auf dem Buckel hat. Sein Bart ist stets gepflegt und auch die blonden Haare wirken sauber. Wer Zeit findet auf seinen Gang zu achten, wird bemerken, das er sein linkes Bein etwas mitzieht."
+    "value": "Ein Mann in einem Wappenrock der Stadtwache gekleidet, der um die 60 Sommer auf dem Buckel hat und ein kleines Altersbäuchlein ansetzt. Sein Bart ist stets gepflegt und auch die weiß werdenden Haare wirken sauber. Wer Zeit findet auf seinen Gang zu achten, wird bemerken, das er sein linkes Bein etwas mitzieht."
   },
   "Con": {
     "type": "byte",
@@ -166,9 +155,9 @@
   "Description": {
     "type": "cexolocstring",
     "value": {
-      "0": "Ründlicher in einen Wappenrock der Stadtwache gekleideter älterer Mann, der um die 40 Sommer auf dem Buckel hat. Sein Bart ist stets gepflegt und auch die blonden Haare wirken sauber. Wer Zeit findet auf seinen Gang zu achten, wird bemerken, das er sein linkes Bein etwas mitzieht.",
-      "4": "Ründlicher in einen Wappenrock der Stadtwache gekleideter älterer Mann, der um die 40 Sommer auf dem Buckel hat. Sein Bart ist stets gepflegt und auch die blonden Haare wirken sauber. Wer Zeit findet auf seinen Gang zu achten, wird bemerken, das er sein linkes Bein etwas mitzieht.",
-      "5": "Ründlicher in einen Wappenrock der Stadtwache gekleideter älterer Mann, der um die 40 Sommer auf dem Buckel hat. Sein Bart ist stets gepflegt und auch die blonden Haare wirken sauber. Wer Zeit findet auf seinen Gang zu achten, wird bemerken, das er sein linkes Bein etwas mitzieht."
+      "0": "Ein Mann in einem Wappenrock der Stadtwache gekleidet, der um die 60 Sommer auf dem Buckel hat und ein kleines Altersbäuchlein ansetzt. Sein Bart ist stets gepflegt und auch die weiß werdenden Haare wirken sauber. Wer Zeit findet auf seinen Gang zu achten, wird bemerken, das er sein linkes Bein etwas mitzieht.",
+      "4": "Ein Mann in einem Wappenrock der Stadtwache gekleidet, der um die 60 Sommer auf dem Buckel hat und ein kleines Altersbäuchlein ansetzt. Sein Bart ist stets gepflegt und auch die weiß werdenden Haare wirken sauber. Wer Zeit findet auf seinen Gang zu achten, wird bemerken, das er sein linkes Bein etwas mitzieht.",
+      "5": "Ein Mann in einem Wappenrock der Stadtwache gekleidet, der um die 60 Sommer auf dem Buckel hat und ein kleines Altersbäuchlein ansetzt. Sein Bart ist stets gepflegt und auch die weiß werdenden Haare wirken sauber. Wer Zeit findet auf seinen Gang zu achten, wird bemerken, das er sein linkes Bein etwas mitzieht."
     }
   },
   "Dex": {
@@ -202,6 +191,13 @@
         "__struct_id": 1,
         "Feat": {
           "type": "word",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 1,
+        "Feat": {
+          "type": "word",
           "value": 2
         }
       },
@@ -217,13 +213,6 @@
         "Feat": {
           "type": "word",
           "value": 4
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
-          "value": 5
         }
       },
       {
@@ -252,13 +241,6 @@
         "Feat": {
           "type": "word",
           "value": 68
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
-          "value": 23
         }
       },
       {
@@ -301,6 +283,13 @@
         "Feat": {
           "type": "word",
           "value": 392
+        }
+      },
+      {
+        "__struct_id": 1,
+        "Feat": {
+          "type": "word",
+          "value": 753
         }
       },
       {
@@ -452,7 +441,7 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 104
+    "value": 89
   },
   "NaturalAC": {
     "type": "byte",
@@ -556,28 +545,7 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
           "value": 0
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 11
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 11
         }
       },
       {
@@ -598,7 +566,7 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 1
+          "value": 10
         }
       },
       {
@@ -612,14 +580,14 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 0
+          "value": 10
         }
       },
       {
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 11
+          "value": 13
         }
       },
       {
@@ -654,6 +622,48 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
+          "value": 5
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 10
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 10
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
           "value": 0
         }
       },
@@ -689,49 +699,14 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 0
+          "value": 13
         }
       },
       {
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 2
+          "value": 13
         }
       },
       {
@@ -788,6 +763,20 @@
         "Rank": {
           "type": "byte",
           "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 10
         }
       },
       {
@@ -809,7 +798,7 @@
   },
   "StartingPackage": {
     "type": "byte",
-    "value": 8
+    "value": 4
   },
   "Str": {
     "type": "byte",

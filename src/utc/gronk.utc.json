@@ -155,7 +155,9 @@
   "Description": {
     "type": "cexolocstring",
     "value": {
-      "0": "Ein wirklich beeindruckend großer Halb Ork mit grimmiger Miene. Unter dem abgewetzten Plattenpanzer zeichnen sich Muskelberge ab. Wer ihn kennt stellt fest, dass der Halb Ork nicht zu den schlausten aber den entschlossendsten Gefährten gehört."
+      "0": "Ein wirklich beeindruckend großer Halb-Ork mit grimmiger Miene. Dort wo er nicht von seinem abgewetzten Plattenpanzer bedeckt ist zeichnen sich Muskelberge ab. Wer ihn kennt stellt fest, dass der Halb-Ork zwar nicht zu den schlausten aber dafür den entschlossendsten Gefährten zählt.",
+      "4": "Ein wirklich beeindruckend großer Halb-Ork mit grimmiger Miene. Dort wo er nicht von seinem abgewetzten Plattenpanzer bedeckt ist zeichnen sich Muskelberge ab. Wer ihn kennt stellt fest, dass der Halb-Ork zwar nicht zu den schlausten aber dafür den entschlossendsten Gefährten zählt.",
+      "5": "Ein wirklich beeindruckend großer Halb-Ork mit grimmiger Miene. Dort wo er nicht von seinem abgewetzten Plattenpanzer bedeckt ist zeichnen sich Muskelberge ab. Wer ihn kennt stellt fest, dass der Halb-Ork zwar nicht zu den schlausten aber dafür den entschlossendsten Gefährten zählt."
     }
   },
   "Dex": {
@@ -210,20 +212,6 @@
         "__struct_id": 1,
         "Feat": {
           "type": "word",
-          "value": 363
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
-          "value": 197
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
           "value": 233
         }
       },
@@ -245,21 +233,7 @@
         "__struct_id": 1,
         "Feat": {
           "type": "word",
-          "value": 871
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
           "value": 228
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
-          "value": 423
         }
       },
       {
@@ -274,13 +248,6 @@
         "Feat": {
           "type": "word",
           "value": 230
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
-          "value": 424
         }
       },
       {
@@ -430,7 +397,7 @@
   },
   "LawfulChaotic": {
     "type": "byte",
-    "value": 100
+    "value": 50
   },
   "Lootable": {
     "type": "byte",

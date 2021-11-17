@@ -86,11 +86,11 @@
   },
   "Cha": {
     "type": "byte",
-    "value": 17
+    "value": 18
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 5.0
+    "value": 9.0
   },
   "ClassList": {
     "type": "list",
@@ -99,22 +99,11 @@
         "__struct_id": 2,
         "Class": {
           "type": "int",
-          "value": 14
+          "value": 20
         },
         "ClassLevel": {
           "type": "short",
-          "value": 5
-        }
-      },
-      {
-        "__struct_id": 2,
-        "Class": {
-          "type": "int",
-          "value": 23
-        },
-        "ClassLevel": {
-          "type": "short",
-          "value": 1
+          "value": 7
         }
       }
     ]
@@ -141,7 +130,7 @@
   },
   "Con": {
     "type": "byte",
-    "value": 14
+    "value": 12
   },
   "Conversation": {
     "type": "resref",
@@ -153,7 +142,7 @@
   },
   "CurrentHitPoints": {
     "type": "short",
-    "value": 37
+    "value": 70
   },
   "DecayTime": {
     "type": "dword",
@@ -173,7 +162,7 @@
   },
   "Dex": {
     "type": "byte",
-    "value": 14
+    "value": 12
   },
   "Disarmable": {
     "type": "byte",
@@ -307,7 +296,7 @@
         "__struct_id": 1,
         "Feat": {
           "type": "word",
-          "value": 234
+          "value": 237
         }
       },
       {
@@ -349,15 +338,15 @@
   },
   "GoodEvil": {
     "type": "byte",
-    "value": 100
+    "value": 50
   },
   "HitPoints": {
     "type": "short",
-    "value": 37
+    "value": 70
   },
   "Int": {
     "type": "byte",
-    "value": 12
+    "value": 14
   },
   "Interruptable": {
     "type": "byte",
@@ -379,7 +368,7 @@
   },
   "LawfulChaotic": {
     "type": "byte",
-    "value": 100
+    "value": 50
   },
   "Lootable": {
     "type": "byte",
@@ -387,7 +376,7 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 49
+    "value": 77
   },
   "NaturalAC": {
     "type": "byte",
@@ -491,6 +480,118 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 5
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 5
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 10
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 10
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 5
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 5
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 5
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 2
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
           "value": 10
         }
       },
@@ -505,42 +606,7 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 11
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
+          "value": 2
         }
       },
       {
@@ -554,28 +620,7 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 11
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 10
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
+          "value": 5
         }
       },
       {
@@ -589,63 +634,7 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 10
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
+          "value": 5
         }
       },
       {
@@ -680,7 +669,21 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 0
+          "value": 5
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 5
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 5
         }
       },
       {
@@ -708,21 +711,7 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 0
+          "value": 2
         }
       },
       {
@@ -744,11 +733,11 @@
   },
   "StartingPackage": {
     "type": "byte",
-    "value": 76
+    "value": 82
   },
   "Str": {
     "type": "byte",
-    "value": 12
+    "value": 10
   },
   "Subrace": {
     "type": "cexostring",

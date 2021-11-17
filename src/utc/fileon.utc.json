@@ -86,11 +86,11 @@
   },
   "Cha": {
     "type": "byte",
-    "value": 17
+    "value": 18
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 4.0
+    "value": 15.0
   },
   "ClassList": {
     "type": "list",
@@ -99,18 +99,18 @@
         "__struct_id": 2,
         "Class": {
           "type": "int",
-          "value": 14
+          "value": 20
         },
         "ClassLevel": {
           "type": "short",
-          "value": 5
+          "value": 17
         }
       }
     ]
   },
   "Color_Hair": {
     "type": "byte",
-    "value": 134
+    "value": 17
   },
   "Color_Skin": {
     "type": "byte",
@@ -130,7 +130,7 @@
   },
   "Con": {
     "type": "byte",
-    "value": 14
+    "value": 16
   },
   "Conversation": {
     "type": "resref",
@@ -142,7 +142,7 @@
   },
   "CurrentHitPoints": {
     "type": "short",
-    "value": 37
+    "value": 102
   },
   "DecayTime": {
     "type": "dword",
@@ -155,7 +155,9 @@
   "Description": {
     "type": "cexolocstring",
     "value": {
-      "0": "Der stämmige und auf den ersten Blick etwas grießgrämig wirkende Wirt des Gasthauses \"Zum rettenden Ufer\" trägt eine Schürze an der er ein Glas reinigt. Man sieht ihn häufig eine alte, verwitterte Pfeife rauchen, wobei ein lieblicher Duft aufsteigt. Gelegentlich verschränkt er seine vernarbten, kräftigen Arme vor der Brust. Dann kann man eine alte Seemannstätowierung and seinem linken Arm feststellen. Ein Kompass der statt einer Nadel einen Anker hat."
+      "0": "Der ergraute, stämmige und auf den ersten Blick etwas grießgrämig wirkende Wirt des Gasthauses \"Zum rettenden Ufer\" trägt eine Schürze, mit der er oftmals seine Gläser reinigt. Man sieht ihn gelegentlich eine alte, verwitterte Pfeife rauchen, wobei ein lieblicher Duft aufsteigt. Gelegentlich verschränkt er seine vernarbten, kräftigen Arme vor der Brust. Dann kann man eine alte Seemannstätowierung and seinem linken Arm feststellen - ein Kompass der statt einer Nadel einen Anker hat.",
+      "4": "Der ergraute, stämmige und auf den ersten Blick etwas grießgrämig wirkende Wirt des Gasthauses \"Zum rettenden Ufer\" trägt eine Schürze, mit der er oftmals seine Gläser reinigt. Man sieht ihn gelegentlich eine alte, verwitterte Pfeife rauchen, wobei ein lieblicher Duft aufsteigt. Gelegentlich verschränkt er seine vernarbten, kräftigen Arme vor der Brust. Dann kann man eine alte Seemannstätowierung and seinem linken Arm feststellen - ein Kompass der statt einer Nadel einen Anker hat.",
+      "5": "Der ergraute, stämmige und auf den ersten Blick etwas grießgrämig wirkende Wirt des Gasthauses \"Zum rettenden Ufer\" trägt eine Schürze, mit der er oftmals seine Gläser reinigt. Man sieht ihn gelegentlich eine alte, verwitterte Pfeife rauchen, wobei ein lieblicher Duft aufsteigt. Gelegentlich verschränkt er seine vernarbten, kräftigen Arme vor der Brust. Dann kann man eine alte Seemannstätowierung and seinem linken Arm feststellen - ein Kompass der statt einer Nadel einen Anker hat."
     }
   },
   "Dex": {
@@ -340,7 +342,7 @@
   },
   "HitPoints": {
     "type": "short",
-    "value": 37
+    "value": 102
   },
   "Int": {
     "type": "byte",
@@ -366,7 +368,7 @@
   },
   "LawfulChaotic": {
     "type": "byte",
-    "value": 100
+    "value": 50
   },
   "Lootable": {
     "type": "byte",
@@ -374,7 +376,7 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 47
+    "value": 153
   },
   "NaturalAC": {
     "type": "byte",
@@ -478,91 +480,7 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 10
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 11
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 11
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 10
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
+          "value": 5
         }
       },
       {
@@ -577,6 +495,34 @@
         "Rank": {
           "type": "byte",
           "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 5
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 12
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 12
         }
       },
       {
@@ -597,42 +543,56 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 1
+          "value": 0
         }
       },
       {
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 1
+          "value": 5
         }
       },
       {
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 1
+          "value": 10
         }
       },
       {
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 1
+          "value": 10
         }
       },
       {
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 1
+          "value": 0
         }
       },
       {
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 1
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 10
         }
       },
       {
@@ -674,7 +634,7 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 0
+          "value": 5
         }
       },
       {
@@ -709,7 +669,49 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
+          "value": 10
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 5
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 5
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
           "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 5
         }
       },
       {
@@ -731,7 +733,7 @@
   },
   "StartingPackage": {
     "type": "byte",
-    "value": 76
+    "value": 82
   },
   "Str": {
     "type": "byte",
