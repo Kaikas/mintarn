@@ -4733,6 +4733,17 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
+                      "value": "Creature Item: Düsterwolf_Boss"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_ru_dwolfboss"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
                       "value": "Creature Item: Eber"
                     },
                     "RESREF": {
