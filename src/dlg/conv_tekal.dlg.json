@@ -321,7 +321,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Ah, sehr gut. Habt dank und richtet dem Wirt Grüße aus.\n\nSagt, wollt ihr euch ein paar Münzen verdienen? In der Westmark belagern Goblins die Straße. Bringt mir fünf ihrer Talismane und ich werde euch entlohnen."
+            "0": "Ah, neu auf der Insel, ja? Sehr gut. Wenn ihr euch schlau machen wollt was unsere Gesetze angeht, links vor dem Rathaus in dem ihr grade seid steht eine Tafel dazu.\nHabt dank jedenfalls - und, ach, richtet dem Wirt Grüße aus. \n\nSagt, wollt ihr euch ein paar Münzen verdienen? In der Westmark belagern Goblins die Straße. Bringt mir fünf ihrer Talismane und ich werde euch entlohnen."
           }
         }
       }
@@ -329,7 +329,7 @@
   },
   "NumWords": {
     "type": "dword",
-    "value": 72
+    "value": 103
   },
   "PreventZoomIn": {
     "type": "byte",
