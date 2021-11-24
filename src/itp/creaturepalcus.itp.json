@@ -829,25 +829,6 @@
                           "__struct_id": 0,
                           "CR": {
                             "type": "float",
-                            "value": 6.0
-                          },
-                          "FACTION": {
-                            "type": "cexostring",
-                            "value": "Hostile"
-                          },
-                          "NAME": {
-                            "type": "cexostring",
-                            "value": "Mumie"
-                          },
-                          "RESREF": {
-                            "type": "resref",
-                            "value": "mumie"
-                          }
-                        },
-                        {
-                          "__struct_id": 0,
-                          "CR": {
-                            "type": "float",
                             "value": 8.0
                           },
                           "FACTION": {
@@ -1247,7 +1228,7 @@
                           "__struct_id": 0,
                           "CR": {
                             "type": "float",
-                            "value": 5.0
+                            "value": 6.0
                           },
                           "FACTION": {
                             "type": "cexostring",
@@ -1266,7 +1247,7 @@
                           "__struct_id": 0,
                           "CR": {
                             "type": "float",
-                            "value": 6.0
+                            "value": 7.0
                           },
                           "FACTION": {
                             "type": "cexostring",
@@ -2906,6 +2887,44 @@
                     },
                     "NAME": {
                       "type": "cexostring",
+                      "value": "Bettler"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_bettler"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "CR": {
+                      "type": "float",
+                      "value": 4.0
+                    },
+                    "FACTION": {
+                      "type": "cexostring",
+                      "value": "Commoner"
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Bettlerin"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_bettlerin"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "CR": {
+                      "type": "float",
+                      "value": 4.0
+                    },
+                    "FACTION": {
+                      "type": "cexostring",
+                      "value": "Commoner"
+                    },
+                    "NAME": {
+                      "type": "cexostring",
                       "value": "Bürger"
                     },
                     "RESREF": {
@@ -3139,6 +3158,44 @@
                     "RESREF": {
                       "type": "resref",
                       "value": "ent3"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "CR": {
+                      "type": "float",
+                      "value": 4.0
+                    },
+                    "FACTION": {
+                      "type": "cexostring",
+                      "value": "Commoner"
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Gauner"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "gauner"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "CR": {
+                      "type": "float",
+                      "value": 4.0
+                    },
+                    "FACTION": {
+                      "type": "cexostring",
+                      "value": "Commoner"
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Gaunerin"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_gaunerin"
                     }
                   },
                   {
@@ -20920,13 +20977,13 @@
                 "type": "cexostring",
                 "value": "Commoner"
               },
+              "NAME": {
+                "type": "cexostring",
+                "value": "Summoned Dire Wolf"
+              },
               "RESREF": {
                 "type": "resref",
                 "value": "nw_s_wolfdire"
-              },
-              "STRREF": {
-                "type": "dword",
-                "value": 12779
               }
             },
             {

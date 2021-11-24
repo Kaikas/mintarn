@@ -14,7 +14,7 @@
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 5.0
+    "value": 6.0
   },
   "ClassList": {
     "type": "list",
@@ -27,7 +27,7 @@
         },
         "ClassLevel": {
           "type": "short",
-          "value": 6
+          "value": 8
         }
       }
     ]
@@ -38,7 +38,7 @@
   },
   "Con": {
     "type": "byte",
-    "value": 20
+    "value": 22
   },
   "Conversation": {
     "type": "resref",
@@ -50,7 +50,7 @@
   },
   "CurrentHitPoints": {
     "type": "short",
-    "value": 45
+    "value": 52
   },
   "DecayTime": {
     "type": "dword",
@@ -62,11 +62,15 @@
   },
   "Description": {
     "type": "cexolocstring",
-    "value": {}
+    "value": {
+      "0": "Ein Troll, überwuchert mit Gestrüpp und Astwerk, als würden auf ihm die Pflanzen gedeihen.",
+      "4": "Ein Troll, überwuchert mit Gestrüpp und Astwerk, als würden auf ihm die Pflanzen gedeihen.",
+      "5": "Ein Troll, überwuchert mit Gestrüpp und Astwerk, als würden auf ihm die Pflanzen gedeihen."
+    }
   },
   "Dex": {
     "type": "byte",
-    "value": 8
+    "value": 16
   },
   "Disarmable": {
     "type": "byte",
@@ -102,6 +106,20 @@
         "__struct_id": 1,
         "Feat": {
           "type": "word",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 1,
+        "Feat": {
+          "type": "word",
+          "value": 408
+        }
+      },
+      {
+        "__struct_id": 1,
+        "Feat": {
+          "type": "word",
           "value": 6
         }
       },
@@ -109,28 +127,7 @@
         "__struct_id": 1,
         "Feat": {
           "type": "word",
-          "value": 10
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
-          "value": 391
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
-          "value": 26
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
-          "value": 28
+          "value": 332
         }
       },
       {
@@ -138,6 +135,13 @@
         "Feat": {
           "type": "word",
           "value": 289
+        }
+      },
+      {
+        "__struct_id": 1,
+        "Feat": {
+          "type": "word",
+          "value": 290
         }
       }
     ]
@@ -158,11 +162,11 @@
   },
   "GoodEvil": {
     "type": "byte",
-    "value": 50
+    "value": 0
   },
   "HitPoints": {
     "type": "short",
-    "value": 45
+    "value": 52
   },
   "Int": {
     "type": "byte",
@@ -174,7 +178,7 @@
   },
   "IsImmortal": {
     "type": "byte",
-    "value": 0
+    "value": 1
   },
   "IsPC": {
     "type": "byte",
@@ -188,7 +192,7 @@
   },
   "LawfulChaotic": {
     "type": "byte",
-    "value": 50
+    "value": 0
   },
   "Lootable": {
     "type": "byte",
@@ -196,11 +200,11 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 75
+    "value": 100
   },
   "NaturalAC": {
     "type": "byte",
-    "value": 0
+    "value": 4
   },
   "NoPermDeath": {
     "type": "byte",
@@ -314,56 +318,7 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 9
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
           "value": 0
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 8
         }
       },
       {
@@ -462,6 +417,55 @@
         "Rank": {
           "type": "byte",
           "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 6
         }
       },
       {
