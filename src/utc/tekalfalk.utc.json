@@ -367,7 +367,7 @@
         "__struct_id": 0,
         "InventoryRes": {
           "type": "resref",
-          "value": "sw_wa_hellebarde"
+          "value": "sw_wa_schwarmbru"
         },
         "Repos_PosX": {
           "type": "word",
@@ -382,7 +382,7 @@
         "__struct_id": 1,
         "InventoryRes": {
           "type": "resref",
-          "value": "sw_wa_schwarmbru"
+          "value": "sw_mu_bolzen"
         },
         "Repos_PosX": {
           "type": "word",
@@ -397,11 +397,11 @@
         "__struct_id": 2,
         "InventoryRes": {
           "type": "resref",
-          "value": "sw_mu_bolzen"
+          "value": "sw_we_fackel"
         },
         "Repos_PosX": {
           "type": "word",
-          "value": 4
+          "value": 3
         },
         "Repos_Posy": {
           "type": "word",
@@ -412,11 +412,11 @@
         "__struct_id": 3,
         "InventoryRes": {
           "type": "resref",
-          "value": "sw_we_fackel"
+          "value": "nw_wswmls010"
         },
         "Repos_PosX": {
           "type": "word",
-          "value": 5
+          "value": 4
         },
         "Repos_Posy": {
           "type": "word",
