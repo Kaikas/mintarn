@@ -27,7 +27,7 @@
         },
         "ClassLevel": {
           "type": "short",
-          "value": 8
+          "value": 6
         }
       }
     ]
@@ -83,7 +83,7 @@
         "__struct_id": 16384,
         "EquippedRes": {
           "type": "resref",
-          "value": "nw_it_crewpsp010"
+          "value": "nw_it_crewpsp026"
         }
       },
       {
@@ -127,13 +127,6 @@
         "__struct_id": 1,
         "Feat": {
           "type": "word",
-          "value": 332
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
           "value": 289
         }
       },
@@ -141,7 +134,14 @@
         "__struct_id": 1,
         "Feat": {
           "type": "word",
-          "value": 290
+          "value": 46
+        }
+      },
+      {
+        "__struct_id": 1,
+        "Feat": {
+          "type": "word",
+          "value": 47
         }
       }
     ]
@@ -200,7 +200,7 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 100
+    "value": 88
   },
   "NaturalAC": {
     "type": "byte",
@@ -561,7 +561,7 @@
   },
   "Str": {
     "type": "byte",
-    "value": 22
+    "value": 20
   },
   "Subrace": {
     "type": "cexostring",

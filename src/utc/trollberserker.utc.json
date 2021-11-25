@@ -14,7 +14,7 @@
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 7.0
+    "value": 6.0
   },
   "ClassList": {
     "type": "list",
@@ -38,7 +38,7 @@
         },
         "ClassLevel": {
           "type": "short",
-          "value": 3
+          "value": 1
         }
       }
     ]
@@ -117,21 +117,7 @@
         "__struct_id": 1,
         "Feat": {
           "type": "word",
-          "value": 293
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
           "value": 6
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
-          "value": 334
         }
       },
       {
@@ -211,7 +197,7 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 114
+    "value": 102
   },
   "NaturalAC": {
     "type": "byte",
@@ -569,7 +555,7 @@
         "__struct_id": 4,
         "Spell": {
           "type": "word",
-          "value": 299
+          "value": 301
         },
         "SpellCasterLevel": {
           "type": "byte",
@@ -588,7 +574,7 @@
   },
   "Str": {
     "type": "byte",
-    "value": 22
+    "value": 20
   },
   "Subrace": {
     "type": "cexostring",
