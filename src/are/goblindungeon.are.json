@@ -34,7 +34,7 @@
   },
   "FogClipDist": {
     "type": "float",
-    "value": 500.0
+    "value": 30.0
   },
   "Height": {
     "type": "int",

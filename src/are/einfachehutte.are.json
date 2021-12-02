@@ -34,7 +34,7 @@
   },
   "FogClipDist": {
     "type": "float",
-    "value": 500.0
+    "value": 45.0
   },
   "Height": {
     "type": "int",
@@ -116,7 +116,7 @@
   },
   "ResRef": {
     "type": "resref",
-    "value": "einfachehutte"
+    "value": "area001"
   },
   "ShadowOpacity": {
     "type": "byte",

@@ -34,7 +34,7 @@
   },
   "FogClipDist": {
     "type": "float",
-    "value": 500.0
+    "value": 300.0
   },
   "Height": {
     "type": "int",
@@ -74,7 +74,7 @@
   },
   "MoonFogAmount": {
     "type": "byte",
-    "value": 0
+    "value": 25
   },
   "MoonFogColor": {
     "type": "dword",
