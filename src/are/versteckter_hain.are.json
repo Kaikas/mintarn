@@ -34,7 +34,7 @@
   },
   "FogClipDist": {
     "type": "float",
-    "value": 40.0
+    "value": 500.0
   },
   "Height": {
     "type": "int",
@@ -74,7 +74,7 @@
   },
   "MoonFogAmount": {
     "type": "byte",
-    "value": 24
+    "value": 0
   },
   "MoonFogColor": {
     "type": "dword",
@@ -124,7 +124,7 @@
   },
   "SkyBox": {
     "type": "byte",
-    "value": 50
+    "value": 0
   },
   "SunAmbientColor": {
     "type": "dword",
@@ -136,7 +136,7 @@
   },
   "SunFogAmount": {
     "type": "byte",
-    "value": 7
+    "value": 0
   },
   "SunFogColor": {
     "type": "dword",
