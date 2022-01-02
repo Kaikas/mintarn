@@ -8,7 +8,8 @@ void main() {
         NWNX_SQL_PreparedString(0, "description");
         NWNX_SQL_ExecutePreparedQuery();
         NWNX_SQL_ReadNextRow();
-        SendMessageToPC(oPc, NWNX_SQL_ReadDataInActiveRow(0));
+        //SendMessageToPC(oPc, NWNX_SQL_ReadDataInActiveRow(0));
+        SendMessageToPC(oPc, "Öffnet http://old.mintarn.de/character.php und gebt folgenden Token ein:");
     }
     sQuery = "SELECT token FROM Users WHERE name=? AND charname=?";
     string sAccountName = GetPCPlayerName(oPc);
