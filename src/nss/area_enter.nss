@@ -356,6 +356,7 @@ void SpawnChests() {
 void Spawn() {
   // If first player, fill area
   int iPlayers = 0;
+
   object oPlayer = GetFirstPC();
   while(GetIsObjectValid(oPlayer)) {
     if (GetTag(GetArea(oPlayer)) ==  GetTag(GetArea(oPc))) {
@@ -366,14 +367,22 @@ void Spawn() {
     oPlayer = GetNextPC();
   }
   if (iPlayers < 2) {
+    int iLastSpawnAt = 0;
+    int iCurrentTime = 0;
+
+    iLastSpawnAt = GetLocalInt(GetArea(oPc), "area_enter");
+    iCurrentTime = SQLite_GetTimeStamp();
+
+    if(iLastSpawnAt == 0||(iCurrentTime - iLastSpawnAt > 1800)){
     // Set refresh tag
-    SetLocalInt(GetArea(oPc), "area_enter", NWNX_Time_GetTimeStamp());
+    SetLocalInt(GetArea(oPc), "area_enter", iCurrentTime);
 
     Delete();
     SpawnTraps();
     SpawnRessources();
     SpawnMobs();
     //SpawnChests();
+    }
   }
 }
 
