@@ -9,6 +9,143 @@
           "type": "byte",
           "value": 5
         },
+        "LIST": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Alchemist (Alerikson)"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "store001"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Blumen"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "store010"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Lebensmittel (Pina)"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "store012"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Lederer (Wilhelm)"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "store004"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Musik"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "store008"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "OOC"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "store011"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Schmied (Jarnfried)"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "store009"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Schreibwaren"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "store005"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Schreiner (Ronja)"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "store007"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Tabak"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "store006"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Tempel (Londor)"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "store003"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Wirt (Fileon)"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "store002"
+              }
+            }
+          ]
+        },
         "STRREF": {
           "type": "dword",
           "value": 6789
