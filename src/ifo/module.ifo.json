@@ -314,23 +314,23 @@
   },
   "Mod_Entry_Dir_X": {
     "type": "float",
-    "value": 0.6152
+    "value": 0.0
   },
   "Mod_Entry_Dir_Y": {
     "type": "float",
-    "value": 0.7883
+    "value": 1.0
   },
   "Mod_Entry_X": {
     "type": "float",
-    "value": 4.1455
+    "value": 3.4736
   },
   "Mod_Entry_Y": {
     "type": "float",
-    "value": 4.5859
+    "value": 3.7509
   },
   "Mod_Entry_Z": {
     "type": "float",
-    "value": -0.0
+    "value": 0.0
   },
   "Mod_Expan_List": {
     "type": "list",
@@ -659,7 +659,7 @@
   },
   "Mod_MinGameVer": {
     "type": "cexostring",
-    "value": "1.85"
+    "value": "1.86"
   },
   "Mod_MinPerHour": {
     "type": "byte",
