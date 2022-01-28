@@ -5,28 +5,16 @@
     "value": [
       {
         "__struct_id": 0,
-        "ID": {
-          "type": "byte",
-          "value": 201
-        },
         "LIST": {
           "type": "list",
           "value": [
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 212
-              },
               "LIST": {
                 "type": "list",
                 "value": [
                   {
                     "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 214
-                    },
                     "LIST": {
                       "type": "list",
                       "value": [
@@ -267,10 +255,6 @@
                   },
                   {
                     "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 215
-                    },
                     "LIST": {
                       "type": "list",
                       "value": [
@@ -1461,10 +1445,6 @@
                   },
                   {
                     "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 216
-                    },
                     "LIST": {
                       "type": "list",
                       "value": [
@@ -2567,10 +2547,6 @@
             },
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 217
-              },
               "LIST": {
                 "type": "list",
                 "value": [
@@ -2868,10 +2844,6 @@
             },
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 213
-              },
               "LIST": {
                 "type": "list",
                 "value": [
@@ -3499,10 +3471,6 @@
       },
       {
         "__struct_id": 0,
-        "ID": {
-          "type": "byte",
-          "value": 46
-        },
         "LIST": {
           "type": "list",
           "value": [

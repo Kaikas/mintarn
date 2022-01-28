@@ -83,7 +83,7 @@ void main() {
     object oPc = OBJECT_SELF;
     SendMessageToPC(oPc, "test");
 
-    MakeSpreadsheet(oPc);
+    //MakeSpreadsheet(oPc);
 }
 
 

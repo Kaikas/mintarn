@@ -5,19 +5,11 @@
     "value": [
       {
         "__struct_id": 0,
-        "ID": {
-          "type": "byte",
-          "value": 201
-        },
         "LIST": {
           "type": "list",
           "value": [
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 183
-              },
               "LIST": {
                 "type": "list",
                 "value": [
@@ -228,10 +220,6 @@
             },
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 184
-              },
               "LIST": {
                 "type": "list",
                 "value": [
@@ -849,10 +837,6 @@
             },
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 185
-              },
               "LIST": {
                 "type": "list",
                 "value": [
@@ -1030,10 +1014,6 @@
             },
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 186
-              },
               "LIST": {
                 "type": "list",
                 "value": [
@@ -1090,10 +1070,6 @@
             },
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 187
-              },
               "NAME": {
                 "type": "cexostring",
                 "value": "Handwerksmaterialien"
@@ -1101,10 +1077,6 @@
             },
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 188
-              },
               "LIST": {
                 "type": "list",
                 "value": [
@@ -1183,10 +1155,6 @@
             },
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 189
-              },
               "LIST": {
                 "type": "list",
                 "value": [
@@ -1298,10 +1266,6 @@
             },
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 121
-              },
               "LIST": {
                 "type": "list",
                 "value": [
@@ -1567,10 +1531,6 @@
             },
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 199
-              },
               "LIST": {
                 "type": "list",
                 "value": [
@@ -1671,19 +1631,11 @@
             },
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 200
-              },
               "LIST": {
                 "type": "list",
                 "value": [
                   {
                     "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 150
-                    },
                     "LIST": {
                       "type": "list",
                       "value": [
@@ -1894,10 +1846,6 @@
                   },
                   {
                     "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 166
-                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Fallen"
@@ -1905,10 +1853,6 @@
                   },
                   {
                     "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 165
-                    },
                     "LIST": {
                       "type": "list",
                       "value": [
@@ -2086,10 +2030,6 @@
                   },
                   {
                     "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 153
-                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Handschuhe"
@@ -2097,10 +2037,6 @@
                   },
                   {
                     "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 154
-                    },
                     "LIST": {
                       "type": "list",
                       "value": [
@@ -2146,10 +2082,6 @@
                   },
                   {
                     "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 155
-                    },
                     "LIST": {
                       "type": "list",
                       "value": [
@@ -2261,10 +2193,6 @@
                   },
                   {
                     "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 156
-                    },
                     "LIST": {
                       "type": "list",
                       "value": [
@@ -2299,10 +2227,6 @@
                   },
                   {
                     "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 167
-                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Ringe"
@@ -2310,10 +2234,6 @@
                   },
                   {
                     "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 158
-                    },
                     "LIST": {
                       "type": "list",
                       "value": [
@@ -2414,10 +2334,6 @@
                   },
                   {
                     "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 159
-                    },
                     "LIST": {
                       "type": "list",
                       "value": [
@@ -2529,10 +2445,6 @@
                   },
                   {
                     "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 160
-                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Schuhe"
@@ -2540,10 +2452,6 @@
                   },
                   {
                     "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 161
-                    },
                     "LIST": {
                       "type": "list",
                       "value": [
@@ -2633,10 +2541,6 @@
                   },
                   {
                     "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 162
-                    },
                     "LIST": {
                       "type": "list",
                       "value": [
@@ -2660,10 +2564,6 @@
                   },
                   {
                     "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 163
-                    },
                     "LIST": {
                       "type": "list",
                       "value": [
@@ -3523,10 +3423,6 @@
                   },
                   {
                     "__struct_id": 0,
-                    "ID": {
-                      "type": "byte",
-                      "value": 164
-                    },
                     "LIST": {
                       "type": "list",
                       "value": [
@@ -3601,10 +3497,6 @@
             },
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 205
-              },
               "LIST": {
                 "type": "list",
                 "value": [
@@ -3782,10 +3674,6 @@
             },
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 203
-              },
               "LIST": {
                 "type": "list",
                 "value": [
@@ -4139,10 +4027,6 @@
             },
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 202
-              },
               "LIST": {
                 "type": "list",
                 "value": [
@@ -5409,10 +5293,6 @@
             },
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 204
-              },
               "LIST": {
                 "type": "list",
                 "value": [
@@ -5535,10 +5415,6 @@
             },
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 193
-              },
               "NAME": {
                 "type": "cexostring",
                 "value": "Schriftrollen"
@@ -5546,10 +5422,6 @@
             },
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 120
-              },
               "LIST": {
                 "type": "list",
                 "value": [
@@ -5639,10 +5511,6 @@
             },
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 123
-              },
               "LIST": {
                 "type": "list",
                 "value": [
@@ -5743,10 +5611,6 @@
             },
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 196
-              },
               "LIST": {
                 "type": "list",
                 "value": [
@@ -5858,10 +5722,6 @@
             },
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 197
-              },
               "LIST": {
                 "type": "list",
                 "value": [
@@ -7370,10 +7230,6 @@
             },
             {
               "__struct_id": 0,
-              "ID": {
-                "type": "byte",
-                "value": 198
-              },
               "LIST": {
                 "type": "list",
                 "value": [
@@ -8603,10 +8459,6 @@
       },
       {
         "__struct_id": 0,
-        "ID": {
-          "type": "byte",
-          "value": 53
-        },
         "STRREF": {
           "type": "dword",
           "value": 6732
