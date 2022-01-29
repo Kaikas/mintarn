@@ -32,7 +32,7 @@ jobs:
 
       # Runs nasher to pack the module
       - name: Run nasher pack to build Mintarn.mod
-        run: nasher pack --default
+        run: echo $NWN_ROOT && echo $NWN_HOME && which nasher && nasher pack --default
           #docker run --rm -v ${PWD}:/nasher -v "/home/nwn_develop/.steam/steamapps/common/Neverwinter Nights/data":/nwn/data/data -v ${PWD}:/nasher -v "/home/nwn_develop/.steam/steamapps/common/Neverwinter Nights/":/nwn/ -e NWN_ROOT="/nwn/" kaikas/nasher:nwn_develop pack --default --verbose
       
       # Set branch name
