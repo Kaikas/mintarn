@@ -9826,7 +9826,7 @@
         },
         "Faction": {
           "type": "dword",
-          "value": 4294967295
+          "value": 2147483647
         },
         "Fort": {
           "type": "byte",
