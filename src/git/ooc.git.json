@@ -10964,6 +10964,235 @@
           "type": "float",
           "value": -0.0
         }
+      },
+      {
+        "__struct_id": 9,
+        "AnimationState": {
+          "type": "byte",
+          "value": 0
+        },
+        "Appearance": {
+          "type": "dword",
+          "value": 8
+        },
+        "AutoRemoveKey": {
+          "type": "byte",
+          "value": 0
+        },
+        "Bearing": {
+          "type": "float",
+          "value": -1.5217
+        },
+        "BodyBag": {
+          "type": "byte",
+          "value": 0
+        },
+        "CloseLockDC": {
+          "type": "byte",
+          "value": 0
+        },
+        "Conversation": {
+          "type": "resref",
+          "value": ""
+        },
+        "CurrentHP": {
+          "type": "short",
+          "value": 15
+        },
+        "Description": {
+          "id": 14595,
+          "type": "cexolocstring",
+          "value": {
+            "0": "Strange runes and pictographs, likely arcane in nature, have been scorched into the sides of this hide-covered strongbox."
+          }
+        },
+        "DisarmDC": {
+          "type": "byte",
+          "value": 15
+        },
+        "Faction": {
+          "type": "dword",
+          "value": 1
+        },
+        "Fort": {
+          "type": "byte",
+          "value": 16
+        },
+        "Hardness": {
+          "type": "byte",
+          "value": 10
+        },
+        "HasInventory": {
+          "type": "byte",
+          "value": 1
+        },
+        "HP": {
+          "type": "short",
+          "value": 15
+        },
+        "Interruptable": {
+          "type": "byte",
+          "value": 0
+        },
+        "KeyName": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "KeyRequired": {
+          "type": "byte",
+          "value": 0
+        },
+        "Lockable": {
+          "type": "byte",
+          "value": 0
+        },
+        "Locked": {
+          "type": "byte",
+          "value": 0
+        },
+        "LocName": {
+          "id": 5348,
+          "type": "cexolocstring",
+          "value": {
+            "0": "Spielertruhe"
+          }
+        },
+        "OnClick": {
+          "type": "resref",
+          "value": ""
+        },
+        "OnClosed": {
+          "type": "resref",
+          "value": "pchest_close"
+        },
+        "OnDamaged": {
+          "type": "resref",
+          "value": ""
+        },
+        "OnDeath": {
+          "type": "resref",
+          "value": ""
+        },
+        "OnDisarm": {
+          "type": "resref",
+          "value": ""
+        },
+        "OnHeartbeat": {
+          "type": "resref",
+          "value": ""
+        },
+        "OnInvDisturbed": {
+          "type": "resref",
+          "value": ""
+        },
+        "OnLock": {
+          "type": "resref",
+          "value": ""
+        },
+        "OnMeleeAttacked": {
+          "type": "resref",
+          "value": ""
+        },
+        "OnOpen": {
+          "type": "resref",
+          "value": "pchest_open"
+        },
+        "OnSpellCastAt": {
+          "type": "resref",
+          "value": ""
+        },
+        "OnTrapTriggered": {
+          "type": "resref",
+          "value": ""
+        },
+        "OnUnlock": {
+          "type": "resref",
+          "value": ""
+        },
+        "OnUsed": {
+          "type": "resref",
+          "value": ""
+        },
+        "OnUserDefined": {
+          "type": "resref",
+          "value": ""
+        },
+        "OpenLockDC": {
+          "type": "byte",
+          "value": 18
+        },
+        "Plot": {
+          "type": "byte",
+          "value": 1
+        },
+        "PortraitId": {
+          "type": "word",
+          "value": 366
+        },
+        "Ref": {
+          "type": "byte",
+          "value": 0
+        },
+        "Static": {
+          "type": "byte",
+          "value": 0
+        },
+        "Tag": {
+          "type": "cexostring",
+          "value": "PERSITANT_CHEST"
+        },
+        "TemplateResRef": {
+          "type": "resref",
+          "value": "x2_easy_chest2"
+        },
+        "TrapDetectable": {
+          "type": "byte",
+          "value": 1
+        },
+        "TrapDetectDC": {
+          "type": "byte",
+          "value": 0
+        },
+        "TrapDisarmable": {
+          "type": "byte",
+          "value": 1
+        },
+        "TrapFlag": {
+          "type": "byte",
+          "value": 0
+        },
+        "TrapOneShot": {
+          "type": "byte",
+          "value": 1
+        },
+        "TrapType": {
+          "type": "byte",
+          "value": 0
+        },
+        "Type": {
+          "type": "byte",
+          "value": 0
+        },
+        "Useable": {
+          "type": "byte",
+          "value": 1
+        },
+        "Will": {
+          "type": "byte",
+          "value": 0
+        },
+        "X": {
+          "type": "float",
+          "value": 17.5702
+        },
+        "Y": {
+          "type": "float",
+          "value": 5.4003
+        },
+        "Z": {
+          "type": "float",
+          "value": -0.0
+        }
       }
     ]
   },
@@ -11251,7 +11480,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 1
+                      "value": 100
                     },
                     "Cursed": {
                       "type": "byte",
@@ -11448,7 +11677,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 50
+                      "value": 545
                     },
                     "Cursed": {
                       "type": "byte",
@@ -11645,7 +11874,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 100
+                      "value": 1090
                     },
                     "Cursed": {
                       "type": "byte",
@@ -11842,7 +12071,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 250
+                      "value": 20050
                     },
                     "Cursed": {
                       "type": "byte",
@@ -12039,7 +12268,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 300
+                      "value": 10200
                     },
                     "Cursed": {
                       "type": "byte",
@@ -12184,7 +12413,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 50
+                      "value": 5000
                     },
                     "Cursed": {
                       "type": "byte",
@@ -12285,7 +12514,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 9
+                      "value": 900
                     },
                     "Cursed": {
                       "type": "byte",
@@ -12386,7 +12615,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 100
+                      "value": 10000
                     },
                     "Cursed": {
                       "type": "byte",
@@ -12495,7 +12724,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 70
+                      "value": 3500
                     },
                     "Cursed": {
                       "type": "byte",
@@ -12604,7 +12833,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 4
+                      "value": 200
                     },
                     "Cursed": {
                       "type": "byte",
@@ -12713,7 +12942,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 2
+                      "value": 30
                     },
                     "Cursed": {
                       "type": "byte",
@@ -12822,7 +13051,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 16
+                      "value": 800
                     },
                     "Cursed": {
                       "type": "byte",
@@ -12931,7 +13160,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 100
+                      "value": 5000
                     },
                     "Cursed": {
                       "type": "byte",
@@ -13040,7 +13269,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 2
+                      "value": 100
                     },
                     "Cursed": {
                       "type": "byte",
@@ -13149,7 +13378,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 12
+                      "value": 600
                     },
                     "Cursed": {
                       "type": "byte",
@@ -13258,7 +13487,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 20
+                      "value": 1000
                     },
                     "Cursed": {
                       "type": "byte",
@@ -13367,7 +13596,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 4
+                      "value": 200
                     },
                     "Cursed": {
                       "type": "byte",
@@ -13476,7 +13705,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 80
+                      "value": 4000
                     },
                     "Cursed": {
                       "type": "byte",
@@ -13585,7 +13814,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 2
+                      "value": 0
                     },
                     "Cursed": {
                       "type": "byte",
@@ -13694,7 +13923,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 3350
+                      "value": 7700
                     },
                     "Cursed": {
                       "type": "byte",
@@ -13866,7 +14095,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 20
+                      "value": 1000
                     },
                     "Cursed": {
                       "type": "byte",
@@ -13975,7 +14204,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 24
+                      "value": 1200
                     },
                     "Cursed": {
                       "type": "byte",
@@ -14084,7 +14313,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 24
+                      "value": 1200
                     },
                     "Cursed": {
                       "type": "byte",
@@ -14189,7 +14418,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 16
+                      "value": 800
                     },
                     "Cursed": {
                       "type": "byte",
@@ -14298,7 +14527,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 60
+                      "value": 3000
                     },
                     "Cursed": {
                       "type": "byte",
@@ -14407,7 +14636,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 20
+                      "value": 1000
                     },
                     "Cursed": {
                       "type": "byte",
@@ -14516,7 +14745,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 150
+                      "value": 7500
                     },
                     "Cursed": {
                       "type": "byte",
@@ -14625,7 +14854,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 30
+                      "value": 1500
                     },
                     "Cursed": {
                       "type": "byte",
@@ -14734,7 +14963,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 70
+                      "value": 3500
                     },
                     "Cursed": {
                       "type": "byte",
@@ -14843,7 +15072,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 16
+                      "value": 800
                     },
                     "Cursed": {
                       "type": "byte",
@@ -14952,7 +15181,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 2
+                      "value": 100
                     },
                     "Cursed": {
                       "type": "byte",
@@ -15093,7 +15322,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 40
+                      "value": 2000
                     },
                     "Cursed": {
                       "type": "byte",
@@ -15202,7 +15431,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 30
+                      "value": 1500
                     },
                     "Cursed": {
                       "type": "byte",
@@ -15311,7 +15540,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 2
+                      "value": 100
                     },
                     "Cursed": {
                       "type": "byte",
@@ -15412,7 +15641,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 100
+                      "value": 5000
                     },
                     "Cursed": {
                       "type": "byte",
@@ -15521,7 +15750,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 30
+                      "value": 1500
                     },
                     "Cursed": {
                       "type": "byte",
@@ -15630,7 +15859,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 36
+                      "value": 1800
                     },
                     "Cursed": {
                       "type": "byte",
@@ -15739,7 +15968,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 0
+                      "value": 250
                     },
                     "Cursed": {
                       "type": "byte",
@@ -15840,7 +16069,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 12
+                      "value": 600
                     },
                     "Cursed": {
                       "type": "byte",
@@ -15949,7 +16178,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 2
+                      "value": 100
                     },
                     "Cursed": {
                       "type": "byte",
@@ -16058,7 +16287,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 2
+                      "value": 100
                     },
                     "Cursed": {
                       "type": "byte",
@@ -16167,7 +16396,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 10
+                      "value": 500
                     },
                     "Cursed": {
                       "type": "byte",
@@ -16276,7 +16505,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 0
+                      "value": 250
                     },
                     "Cursed": {
                       "type": "byte",
@@ -16385,7 +16614,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 0
+                      "value": 50
                     },
                     "Cursed": {
                       "type": "byte",
@@ -16486,7 +16715,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 40
+                      "value": 2000
                     },
                     "Cursed": {
                       "type": "byte",
@@ -16597,7 +16826,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 60
+                      "value": 6000
                     },
                     "Cursed": {
                       "type": "byte",
@@ -16706,7 +16935,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 80
+                      "value": 8000
                     },
                     "Cursed": {
                       "type": "byte",
@@ -16815,7 +17044,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 200
+                      "value": 10000
                     },
                     "Cursed": {
                       "type": "byte",
@@ -16924,7 +17153,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 0
+                      "value": 990
                     },
                     "Cursed": {
                       "type": "byte",
@@ -17033,7 +17262,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 0
+                      "value": 99
                     },
                     "Cursed": {
                       "type": "byte",
@@ -17134,7 +17363,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 0
+                      "value": 495
                     },
                     "Cursed": {
                       "type": "byte",
