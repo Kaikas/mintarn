@@ -15,12 +15,12 @@ void LoadItemsFromDatabase(object oChest, object oPc) {
 
             while (NWNX_SQL_ReadyToReadNextRow()) {
                 NWNX_SQL_ReadNextRow();
-                sResRef = NWNX_SQL_ReadDataInActiveRow(3);
-                iAmount = StringToInt(NWNX_SQL_ReadDataInActiveRow(4));
-                sDescription = NWNX_SQL_ReadDataInActiveRow(5);
+                sResRef = NWNX_SQL_ReadDataInActiveRow(4);
+                iAmount = StringToInt(NWNX_SQL_ReadDataInActiveRow(5));
+                sDescription = NWNX_SQL_ReadDataInActiveRow(6);
                 oItem = CreateItemOnObject(sResRef, oChest, iAmount);
                 SetDescription(oItem, sDescription);
-                SendMessageToPC(oPc, "Item created: " + GetResRef(oItem) + " " + sResRef + " " + IntToString(iAmount));
+                //SendMessageToPC(oPc, "Item created: " + GetResRef(oItem) + " " + sResRef + " " + IntToString(iAmount));
             }
         }
 }
