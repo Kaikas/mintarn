@@ -11111,7 +11111,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": ""
+          "value": "pchest_used"
         },
         "OnUserDefined": {
           "type": "resref",
@@ -11183,11 +11183,11 @@
         },
         "X": {
           "type": "float",
-          "value": 17.5702
+          "value": 17.5196
         },
         "Y": {
           "type": "float",
-          "value": 5.4003
+          "value": 5.4247
         },
         "Z": {
           "type": "float",
