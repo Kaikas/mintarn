@@ -494,6 +494,7 @@ void main() {
     NWNX_Events_SubscribeEvent("NWNX_ON_CAST_SPELL_BEFORE", "e_castspell");
     NWNX_Events_SubscribeEvent("NWNX_ON_CAST_SPELL_AFTER", "e_castspella");
 
+        NWNX_Events_SubscribeEvent("NWNX_ON_CLIENT_DISCONNECT_BEFORE", "e_disconnect");
 
 
     // Lighting
