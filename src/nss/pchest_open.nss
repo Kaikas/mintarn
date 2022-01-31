@@ -1,7 +1,7 @@
 #include "nw_o2_coninclude"
 #include "nwnx_sql"
 
-void LoadItemsFromDatabase(object Chest, object oPc) {
+void LoadItemsFromDatabase(object oChest, object oPc) {
     object oItem;
     string sResRef;
     int iAmount;
@@ -18,7 +18,7 @@ void LoadItemsFromDatabase(object Chest, object oPc) {
                 sResRef = NWNX_SQL_ReadDataInActiveRow(3);
                 iAmount = StringToInt(NWNX_SQL_ReadDataInActiveRow(4));
                 sDescription = NWNX_SQL_ReadDataInActiveRow(5);
-                oItem = CreateItemOnObject(sResRef, oPc, iAmount);
+                oItem = CreateItemOnObject(sResRef, oChest, iAmount);
                 SetDescription(oItem, sDescription);
             }
         }
