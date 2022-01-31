@@ -40,10 +40,12 @@ void main() {
 
     if (GetLocalInt(OBJECT_SELF, "OPEN") == 1) {
         SendMessageToPC(oOpener, "Die Kiste wird gerade benutzt");
-    }
-    SetLocalInt(OBJECT_SELF, "OPEN", 1);
-    SetLocalString(OBJECT_SELF, "OPENEDBY", PlayerID);
+        ExecuteScript("pchest_clear", oOpener);
+    } else {
+        SetLocalInt(OBJECT_SELF, "OPEN", 1);
+        SetLocalString(OBJECT_SELF, "OPENEDBY", PlayerID);
 
-    DestroyAllObjectsInInventory(OBJECT_SELF);
-    LoadItemsFromDatabase(OBJECT_SELF, oOpener);
+        DestroyAllObjectsInInventory(OBJECT_SELF);
+        LoadItemsFromDatabase(OBJECT_SELF, oOpener);
+    }
 }
