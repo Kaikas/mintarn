@@ -1,5 +1,15 @@
 #include "nwnx_sql"
 
+void DropAllItemsFromDatabase(object Chest, object oPc) {
+    string sQuery = "DELETE FROM Playerchests WHERE name=? AND charname=? AND cdkey=?";
+    if (NWNX_SQL_PrepareQuery(sQuery)) {
+        NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
+        NWNX_SQL_PreparedString(1, GetName(oPc));
+        NWNX_SQL_PreparedString(2, GetPCPublicCDKey(oPc));
+        NWNX_SQL_ExecutePreparedQuery();
+    }
+}
+
 void SaveItemsInDatabase(object Chest, object oPc) {
     object oItem = GetFirstItemInInventory(Chest);
     while (oItem != OBJECT_INVALID) {
@@ -33,6 +43,7 @@ void main() {
         SetLocalInt(OBJECT_SELF, "OPEN", 0);
     }
 
+    DropAllItemsFromDatabase(OBJECT_SELF, oCloser);
     SaveItemsInDatabase(OBJECT_SELF, oCloser);
     DestroyAllObjectsInInventory(OBJECT_SELF);
 }
