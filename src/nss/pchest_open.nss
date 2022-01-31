@@ -20,7 +20,7 @@ void LoadItemsFromDatabase(object oChest, object oPc) {
                 sDescription = NWNX_SQL_ReadDataInActiveRow(5);
                 oItem = CreateItemOnObject(sResRef, oChest, iAmount);
                 SetDescription(oItem, sDescription);
-                SendMessageToPC(oPc, "Item created: " + GetResRef(oItem));
+                SendMessageToPC(oPc, "Item created: " + GetResRef(oItem) + " " + sResRef + " " + IntToString(iAmount));
             }
         }
 }
