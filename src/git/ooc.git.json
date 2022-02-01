@@ -11139,7 +11139,7 @@
         },
         "Tag": {
           "type": "cexostring",
-          "value": "PERSITANT_CHEST"
+          "value": "PERSITENT_CHEST"
         },
         "TemplateResRef": {
           "type": "resref",
