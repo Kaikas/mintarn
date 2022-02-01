@@ -1,5 +1,6 @@
 #include "nwnx_webhook"
 #include "nwnx_util"
+#include "nwnx_sql"
 
 void DestroyAllObjectsInInventory(object Chest) {
     object oItem = GetFirstItemInInventory(Chest);
