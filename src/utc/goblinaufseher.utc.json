@@ -10,7 +10,7 @@
   },
   "Cha": {
     "type": "byte",
-    "value": 8
+    "value": 10
   },
   "ChallengeRating": {
     "type": "float",
@@ -27,29 +27,7 @@
         },
         "ClassLevel": {
           "type": "short",
-          "value": 2
-        }
-      },
-      {
-        "__struct_id": 2,
-        "Class": {
-          "type": "int",
-          "value": 8
-        },
-        "ClassLevel": {
-          "type": "short",
-          "value": 2
-        }
-      },
-      {
-        "__struct_id": 2,
-        "Class": {
-          "type": "int",
-          "value": 0
-        },
-        "ClassLevel": {
-          "type": "short",
-          "value": 1
+          "value": 4
         }
       }
     ]
@@ -60,7 +38,7 @@
   },
   "Con": {
     "type": "byte",
-    "value": 14
+    "value": 10
   },
   "Conversation": {
     "type": "resref",
@@ -68,11 +46,11 @@
   },
   "CRAdjust": {
     "type": "int",
-    "value": 0
+    "value": 1
   },
   "CurrentHitPoints": {
     "type": "short",
-    "value": 22
+    "value": 15
   },
   "DecayTime": {
     "type": "dword",
@@ -88,7 +66,7 @@
   },
   "Dex": {
     "type": "byte",
-    "value": 16
+    "value": 18
   },
   "Disarmable": {
     "type": "byte",
@@ -226,11 +204,11 @@
   },
   "HitPoints": {
     "type": "short",
-    "value": 22
+    "value": 15
   },
   "Int": {
     "type": "byte",
-    "value": 8
+    "value": 10
   },
   "Interruptable": {
     "type": "byte",
@@ -260,7 +238,7 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 32
+    "value": 15
   },
   "NaturalAC": {
     "type": "byte",
@@ -621,7 +599,7 @@
   },
   "Str": {
     "type": "byte",
-    "value": 14
+    "value": 12
   },
   "Subrace": {
     "type": "cexostring",
@@ -657,6 +635,6 @@
   },
   "Wis": {
     "type": "byte",
-    "value": 11
+    "value": 10
   }
 }
