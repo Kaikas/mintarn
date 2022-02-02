@@ -76,6 +76,7 @@ string printRollSkill(string sValue, int iRand, int iBonus, int iAbilityBonus) {
 
 int doChatDamage(string sMessage, object oTarget){
   if(GetSubString(sMessage, 0, 4) == "/dmg"){
+    SetPCChatVolume(TALKVOLUME_SILENT_TALK);
     if(GetSubString(sMessage, 5,1) == "%"){
       int nDamage = StringToInt(GetSubString(sMessage,7,10));
       ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(GetCurrentHitPoints(oTarget)/100*nDamage), oTarget);
