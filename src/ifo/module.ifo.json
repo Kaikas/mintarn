@@ -324,7 +324,7 @@
   },
   "Mod_Entry_Area": {
     "type": "resref",
-    "value": "slgebiet"
+    "value": "freihafen_west"
   },
   "Mod_Entry_Dir_X": {
     "type": "float",
@@ -336,15 +336,15 @@
   },
   "Mod_Entry_X": {
     "type": "float",
-    "value": 90.03959999999999
+    "value": 97.57420000000001
   },
   "Mod_Entry_Y": {
     "type": "float",
-    "value": 19.9999
+    "value": 149.6542
   },
   "Mod_Entry_Z": {
     "type": "float",
-    "value": 0.0
+    "value": 5.0
   },
   "Mod_Expan_List": {
     "type": "list",

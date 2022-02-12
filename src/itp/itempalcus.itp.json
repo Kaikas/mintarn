@@ -60,6 +60,517 @@
                       "type": "byte",
                       "value": 16
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Angel"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh028_soc_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Baby"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh314_soc_006"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Bierkrug"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh202_soc_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Bierkrug"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh202_soc_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Bierkrug"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh202_soc_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Bierkrug"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh202_soc_004"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Buch"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh314_soc_008"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Buch"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh314_soc_009"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Buch"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh314_soc_010"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Buch"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh314_soc_011"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Buch"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh314_soc_012"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Buch"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh314_soc_013"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eisenstab"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh028_soc_012"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eisenstab"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh028_soc_016"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Fächer"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh314_soc_004"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Fächer"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh314_soc_005"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Fächer"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh314_soc_020"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Fächer"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh314_soc_021"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Fächer"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh314_soc_022"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Fisch"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh028_soc_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Fisch"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh028_soc_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flasche"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh028_soc_004"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flasche"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh028_soc_005"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flasche"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh028_soc_006"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flasche"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh028_soc_007"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flasche"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh028_soc_008"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flasche"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh028_soc_009"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flasche"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh028_soc_010"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flasche"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh028_soc_011"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Geigenbogen"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh314_soc_019"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Gitarre"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh314_soc_018"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Harfe"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh314_soc_015"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Holzstab"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh028_soc_013"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Holzstab"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh028_soc_014"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Holzstab"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh028_soc_015"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kugel"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh314_soc_007"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Laute"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh314_soc_016"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Panflöte"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh314_soc_017"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Schirm"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh314_soc_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Schirm"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh314_soc_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Schirm"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh314_soc_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Tamburin"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh314_soc_014"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Übungsschwert"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh028_soc_017"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Übungsschwert"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh028_soc_018"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Übungsschwert"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh028_soc_019"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Übungsschwert"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh028_soc_020"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Haupthand"
@@ -81,6 +592,1276 @@
                     "ID": {
                       "type": "byte",
                       "value": 17
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Blitz"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_020"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Brennender Schädel"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_123"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Bronzene Statuette"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_052"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Edler Gehstock"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_006"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Fackel"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Fackel"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Fackel"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_118"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_072"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_073"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_074"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_075"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_076"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_077"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_078"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_079"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_080"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_081"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_082"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_083"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_084"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_085"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_086"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_087"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_130"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_131"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_132"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_133"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: ???"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_036"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: ???"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_057"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: ???"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_061"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: Affe"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_037"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: Azuth"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_059"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: Bane"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_056"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: Cyric"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_067"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: Drache"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_030"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: Hahn"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_034"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: Helm"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_068"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: Kult des Drachen"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_064"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: Lathander"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_060"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: Loviatar"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_058"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: Mystra"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_063"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: Pferd"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_033"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: Schlange"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_031"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: Stier"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_035"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: Sune"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_065"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: Tempus"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_069"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: Tiger"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_032"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: Torm"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_070"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: Tymora"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_066"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: Tyr"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_071"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flagge: Waukeen"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_062"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Flamme"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_115"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Gehstock"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_009"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Goldene Statuette"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_050"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Goldkelch"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_043"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Goldkelch"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_044"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Goldkelch"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_045"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Grüne Statuette"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_054"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Heiliges Symbol: ??"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_191"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Heiliges Symbol: Bane"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_154"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Heiliges Symbol: Kreuz"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_011"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Heiliges Symbol: Kreuz"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_014"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Heiliges Symbol: Lathander"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_173"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Heiliges Symbol: Mystra"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_181"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Heiliges Symbol: Tempus"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_196"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Heiliges Symbol: Tyr"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_200"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Heiliges Symbol: Waukeen"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_206"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kerze"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kerze"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_113"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kerze"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_119"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kerze"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_120"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kerzenleuchter"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_112"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kerzenleuchter"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_114"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kerzenleuchter"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_117"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kreuz"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_010"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kreuz"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_012"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kreuz"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_013"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kreuz"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_015"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kristallstab"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_021"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kristallstab"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_022"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kristallstab"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_023"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kristallstab"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_024"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kristallstab"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_025"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kristallstab"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_026"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kristallstab"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_027"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kristallstab"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_028"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kristallstab"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_029"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Laterne"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_116"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Laterne"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_121"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Laterne"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_122"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Laterne"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_125"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Laterne"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_126"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Laterne"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_127"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Leuchtender Kürbis"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_124"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Pentragramm"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_019"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Rote Statuette"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_055"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Schädekerze"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_111"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Schädelkelch"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_049"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Schädelspieß"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_017"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Schädelstab"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_038"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Schädelstab"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_039"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Silberkelch"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_046"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Silberkelch"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_047"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Silberkelch"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_048"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Silberne Statuette"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_051"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Steinernde Statuette"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_053"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Tablett"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_128"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Tablett"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_129"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Trompete"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_040"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Tyr-Symbol"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_018"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Violine (F)"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_041"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Violine (M)"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_042"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zauberstab"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_007"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zauberstab"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_008"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zauberstab"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_nh015_tor_016"
+                          }
+                        }
+                      ]
                     },
                     "NAME": {
                       "type": "cexostring",
@@ -131,6 +1912,66 @@
                       "type": "byte",
                       "value": 3
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafter Waffenrock"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_l1_led_00m"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Waffenrock"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_l1_led_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Waffenrock +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_l1_led_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Waffenrock +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_l1_led_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Waffenrock +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_l1_led_003"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Leicht (RK 1)"
@@ -141,6 +1982,66 @@
                     "ID": {
                       "type": "byte",
                       "value": 4
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Lederrüstung"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_l2_led_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Lederrüstung +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_l2_led_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Lederrüstung +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_l2_led_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Lederrüstung +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_l2_led_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafte Lederrüstung"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_l2_led_00m"
+                          }
+                        }
+                      ]
                     },
                     "NAME": {
                       "type": "cexostring",
@@ -153,6 +2054,66 @@
                       "type": "byte",
                       "value": 5
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Beschlagene Lederrüstung"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_l3_led_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Beschlagene Lederrüstung +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_l3_led_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Beschlagene Lederrüstung +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_l3_led_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Beschlagene Lederrüstung +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_l3_led_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafte Beschlagene Lederrüstung"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_l3_led_00m"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Leicht (RK 3)"
@@ -163,6 +2124,66 @@
                     "ID": {
                       "type": "byte",
                       "value": 6
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eisernes Kettenhemd"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_m4_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eisernes Kettenhemd +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_m4_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eisernes Kettenhemd +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_m4_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eisernes Kettenhemd +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_m4_eis_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhaftes Eisernes Kettenhemd"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_m4_eis_00m"
+                          }
+                        }
+                      ]
                     },
                     "NAME": {
                       "type": "cexostring",
@@ -175,6 +2196,66 @@
                       "type": "byte",
                       "value": 7
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eiserne Brustplatte"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_m5_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eiserne Brustplatte +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_m5_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eiserne Brustplatte +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_m5_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eiserne Brustplatte +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_m5_eis_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafte Eiserne Brustplatte"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_m5_eis_00m"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Mittel (RK 5)"
@@ -185,6 +2266,66 @@
                     "ID": {
                       "type": "byte",
                       "value": 8
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eiserner Schienenpanzer"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_m6_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eiserner Schienenpanzer +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_m6_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eiserner Schienenpanzer +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_m6_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eiserner Schienenpanzer +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_m6_eis_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafter Eiserner Schienenpanzer"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_m6_eis_00m"
+                          }
+                        }
+                      ]
                     },
                     "NAME": {
                       "type": "cexostring",
@@ -197,6 +2338,66 @@
                       "type": "byte",
                       "value": 9
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eiserne Plattenpanzer"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_s7_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eiserne Plattenpanzer +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_s7_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eiserne Plattenpanzer +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_s7_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eiserne Plattenpanzer +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_s7_eis_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafter Eiserner Plattenpanzer"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_s7_eis_00m"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Schwer (RK 7)"
@@ -207,6 +2408,66 @@
                     "ID": {
                       "type": "byte",
                       "value": 10
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eiserne Ritterrüstung"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_s8_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eiserne Ritterrüstung +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_s8_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eiserne Ritterrüstung +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_s8_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Eiserne Ritterrüstung +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_s8_eis_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafte Eiserne Ritterrüstung"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_ru_s8_eis_00m"
+                          }
+                        }
+                      ]
                     },
                     "NAME": {
                       "type": "cexostring",
@@ -235,6 +2496,66 @@
                       "type": "byte",
                       "value": 12
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kleiner Schild"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_sh_kl_hol_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kleiner Schild +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_sh_kl_hol_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kleiner Schild +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_sh_kl_hol_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kleiner Schild +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_sh_kl_hol_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafter Kleiner Schild"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_sh_kl_hol_00m"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Leichte Schilde"
@@ -246,6 +2567,66 @@
                       "type": "byte",
                       "value": 13
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Großer Schild"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_sh_gr_hol_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Großer Schild +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_sh_gr_hol_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Großer Schild +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_sh_gr_hol_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Großer Schild +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_sh_gr_hol_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafter Großer Schild"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_sh_gr_hol_00m"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Schwere Schilde"
@@ -256,6 +2637,66 @@
                     "ID": {
                       "type": "byte",
                       "value": 14
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafter Turmschild"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_sh_tu_hol_00m"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Turmschild"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_sh_tu_hol_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Turmschild +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_sh_tu_hol_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Turmschild +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_sh_tu_hol_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Turmschild +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_sh_tu_hol_003"
+                          }
+                        }
+                      ]
                     },
                     "NAME": {
                       "type": "cexostring",
@@ -284,6 +2725,66 @@
                       "type": "byte",
                       "value": 236
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Bastardschwert"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh003_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Bastardschwert +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh003_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Bastardschwert +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh003_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Bastardschwert +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh003_eis_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhaftes Bastardschwert"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh003_eis_00m"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Bastardschwerter"
@@ -294,6 +2795,66 @@
                     "ID": {
                       "type": "byte",
                       "value": 225
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Beil"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh038_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Beil +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh038_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Beil +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh038_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Beil +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh038_eis_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhaftes Beil"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh038_eis_00m"
+                          }
+                        }
+                      ]
                     },
                     "NAME": {
                       "type": "cexostring",
@@ -306,6 +2867,66 @@
                       "type": "byte",
                       "value": 219
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Dolch"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh022_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Dolch +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh022_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Dolch +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh022_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Dolch +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh022_eis_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafter Dolch"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh022_eis_00m"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Dolche"
@@ -316,6 +2937,66 @@
                     "ID": {
                       "type": "byte",
                       "value": 222
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafte Zweiseitige Axt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh033_eis_00m"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zweiseitige Axt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh033_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zweiseitige Axt +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh033_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zweiseitige Axt +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh033_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zweiseitige Axt +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh033_eis_003"
+                          }
+                        }
+                      ]
                     },
                     "NAME": {
                       "type": "cexostring",
@@ -328,6 +3009,66 @@
                       "type": "byte",
                       "value": 216
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhaftes Zweiseitiges Schwert"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh012_eis_00m"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zweiseitiges Schwert"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh012_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zweiseitiges Schwert +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh012_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zweiseitiges Schwert +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh012_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zweiseitiges Schwert +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh012_eis_003"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Doppelklingenschwerter"
@@ -338,6 +3079,66 @@
                     "ID": {
                       "type": "byte",
                       "value": 215
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Hellebarde"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh010_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Hellebarde +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh010_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Hellebarde +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh010_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Hellebarde +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh010_eis_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafte Hellebarde"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh010_eis_00m"
+                          }
+                        }
+                      ]
                     },
                     "NAME": {
                       "type": "cexostring",
@@ -350,6 +3151,66 @@
                       "type": "byte",
                       "value": 226
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kama"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh040_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kama +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh040_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kama +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh040_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kama +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh040_eis_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhaftes Kama"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh040_eis_00m"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Kamas"
@@ -360,6 +3221,66 @@
                     "ID": {
                       "type": "byte",
                       "value": 244
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kampfstab"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh050_hol_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kampfstab +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh050_hol_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kampfstab +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh050_hol_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kampfstab +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh050_hol_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafter Kampfstab"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh050_hol_00m"
+                          }
+                        }
+                      ]
                     },
                     "NAME": {
                       "type": "cexostring",
@@ -372,6 +3293,66 @@
                       "type": "byte",
                       "value": 227
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Katana"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh041_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Katana +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh041_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Katana +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh041_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Katana +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh041_eis_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhaftes Katana"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh041_eis_00m"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Katanas"
@@ -382,6 +3363,22 @@
                     "ID": {
                       "type": "byte",
                       "value": 220
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafte Keule"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh028_eis_00m"
+                          }
+                        }
+                      ]
                     },
                     "NAME": {
                       "type": "cexostring",
@@ -394,6 +3391,66 @@
                       "type": "byte",
                       "value": 237
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafte Streitaxt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh002_eis_00m"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Streitaxt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh002_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Streitaxt +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh002_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Streitaxt +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh002_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Streitaxt +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh002_eis_003"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Kriegsäxte"
@@ -404,6 +3461,66 @@
                     "ID": {
                       "type": "byte",
                       "value": 238
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafter Streithammer"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh005_eis_00m"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Streithammer"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh005_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Streithammer +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh005_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Streithammer +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh005_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Streithammer +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh005_eis_003"
+                          }
+                        }
+                      ]
                     },
                     "NAME": {
                       "type": "cexostring",
@@ -416,6 +3533,66 @@
                       "type": "byte",
                       "value": 231
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafter Säbel"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh053_eis_00m"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Säbel"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh053_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Säbel +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh053_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Säbel +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh053_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Säbel +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh053_eis_003"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Krummsäbel"
@@ -426,6 +3603,66 @@
                     "ID": {
                       "type": "byte",
                       "value": 228
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kukri"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh042_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kukri +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh042_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kukri +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh042_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kukri +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh042_eis_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhaftes Kukri"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh042_eis_00m"
+                          }
+                        }
+                      ]
                     },
                     "NAME": {
                       "type": "cexostring",
@@ -438,6 +3675,66 @@
                       "type": "byte",
                       "value": 242
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kurzbogen"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh011_hol_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kurzbogen +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh011_hol_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kurzbogen +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh011_hol_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kurzbogen +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh011_hol_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafter Kurzbogen"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh011_hol_00m"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Kurzbögen"
@@ -448,6 +3745,66 @@
                     "ID": {
                       "type": "byte",
                       "value": 211
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kurzschwert"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh000_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kurzschwert +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh000_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kurzschwert +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh000_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Kurzschwert +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh000_eis_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhaftes Kurzschwert"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh000_eis_00m"
+                          }
+                        }
+                      ]
                     },
                     "NAME": {
                       "type": "cexostring",
@@ -460,6 +3817,66 @@
                       "type": "byte",
                       "value": 248
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafter Speer"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh058_hol_00m"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Speer"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh058_hol_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Speer +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh058_hol_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Speer +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh058_hol_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Speer +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh058_hol_003"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Kurzspeere"
@@ -470,6 +3887,66 @@
                     "ID": {
                       "type": "byte",
                       "value": 241
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Langbogen"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh008_hol_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Langbogen +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh008_hol_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Langbogen +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh008_hol_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Langbogen +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh008_hol_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafter Langbogen"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh008_hol_00m"
+                          }
+                        }
+                      ]
                     },
                     "NAME": {
                       "type": "cexostring",
@@ -482,6 +3959,66 @@
                       "type": "byte",
                       "value": 212
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Langschwert"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh001_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Langschwert +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh001_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Langschwert +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh001_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Langschwert +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh001_eis_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhaftes Langschwert"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh001_eis_00m"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Langschwerter"
@@ -492,6 +4029,77 @@
                     "ID": {
                       "type": "byte",
                       "value": 240
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Leichte Armbrust"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh007_hol_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Leichte Armbrust +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh007_hol_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Leichte Armbrust +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh007_hol_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Leichte Armbrust +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh007_hol_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Leichte Übungsarmbrust"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh007_hol_004"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafte Leichte Armbrust"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh007_hol_00m"
+                          }
+                        }
+                      ]
                     },
                     "NAME": {
                       "type": "cexostring",
@@ -504,6 +4112,66 @@
                       "type": "byte",
                       "value": 213
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Leichter Flegel"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh004_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Leichter Flegel +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh004_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Leichter Flegel +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh004_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Leichter Flegel +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh004_eis_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafter Leichter Flegel"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh004_eis_00m"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Leichte Flegel"
@@ -514,6 +4182,66 @@
                     "ID": {
                       "type": "byte",
                       "value": 224
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Leichter Hammer"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh037_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Leichter Hammer +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh037_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Leichter Hammer +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh037_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Leichter Hammer +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh037_eis_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafter Leichter Hammer"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh037_eis_00m"
+                          }
+                        }
+                      ]
                     },
                     "NAME": {
                       "type": "cexostring",
@@ -526,6 +4254,66 @@
                       "type": "byte",
                       "value": 214
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafter Streitkolben"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh009_eis_00m"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Streitkolben"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh009_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Streitkolben +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh009_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Streitkolben +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh009_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Streitkolben +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh009_eis_003"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Leichte Streitkolben"
@@ -536,6 +4324,66 @@
                     "ID": {
                       "type": "byte",
                       "value": 229
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafter Morgenstern"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh047_eis_00m"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Morgenstern"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh047_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Morgenstern +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh047_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Morgenstern +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh047_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Morgenstern +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh047_eis_003"
+                          }
+                        }
+                      ]
                     },
                     "NAME": {
                       "type": "cexostring",
@@ -548,6 +4396,66 @@
                       "type": "byte",
                       "value": 235
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafte Peitsche"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh111_eis_00m"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Peitsche"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh111_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Peitsche +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh111_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Peitsche +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh111_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Peitsche +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh111_eis_003"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Peitschen"
@@ -558,6 +4466,66 @@
                     "ID": {
                       "type": "byte",
                       "value": 230
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafter Rapier"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh051_eis_00m"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Rapier"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh051_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Rapier +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh051_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Rapier +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh051_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Rapier +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh051_eis_003"
+                          }
+                        }
+                      ]
                     },
                     "NAME": {
                       "type": "cexostring",
@@ -570,6 +4538,66 @@
                       "type": "byte",
                       "value": 246
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafte Schleuder"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh061_led_m"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Schleuder"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh061_led_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Schleuder +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh061_led_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Schleuder +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh061_led_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Schleuder +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh061_led_003"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Schleudern"
@@ -580,6 +4608,55 @@
                     "ID": {
                       "type": "byte",
                       "value": 221
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zweiseitiger Streitkolben"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh032_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zweiseitiger Streitkolben +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh032_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zweiseitiger Streitkolben +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh032_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zweiseitiger Streitkolben +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh032_eis_003"
+                          }
+                        }
+                      ]
                     },
                     "NAME": {
                       "type": "cexostring",
@@ -592,6 +4669,77 @@
                       "type": "byte",
                       "value": 239
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafte Schwere Armbrust"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh006_hol_00m"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Schwere Armbrust"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh006_hol_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Schwere Armbrust +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh006_hol_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Schwere Armbrust +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh006_hol_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Schwere Armbrust +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh006_hol_003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Schwere Übungsarmbrust"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh006_hol_004"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Schwere Armbrüste"
@@ -603,6 +4751,66 @@
                       "type": "byte",
                       "value": 223
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafter Schwerer Flegel"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh035_eis_00m"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Schwerer Flegel"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh035_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Schwerer Flegel +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh035_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Schwerer Flegel +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh035_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Schwerer Flegel +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh035_eis_003"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Schwere Flegel"
@@ -613,6 +4821,66 @@
                     "ID": {
                       "type": "byte",
                       "value": 232
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafte Sense"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh055_eis_00m"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Sense"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh055_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Sense +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh055_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Sense +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh055_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Sense +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh055_eis_003"
+                          }
+                        }
+                      ]
                     },
                     "NAME": {
                       "type": "cexostring",
@@ -635,6 +4903,66 @@
                     "ID": {
                       "type": "byte",
                       "value": 233
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafte Sichel"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh060_eis_00m"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Sichel"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh060_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Sichel +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh060_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Sichel +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh060_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Sichel +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh060_eis_003"
+                          }
+                        }
+                      ]
                     },
                     "NAME": {
                       "type": "cexostring",
@@ -669,6 +4997,66 @@
                       "type": "byte",
                       "value": 218
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafte Zweihändige Axt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh018_eis_00m"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zweihändige Axt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh018_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zweihändige Axt +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh018_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zweihändige Axt +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh018_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zweihändige Axt +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh018_eis_003"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Zwehändige Äxte"
@@ -680,6 +5068,66 @@
                       "type": "byte",
                       "value": 217
                     },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafter Zweihänder"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh013_eis_00m"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zweihänder"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh013_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zweihänder +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh013_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zweihänder +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh013_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zweihänder +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh013_eis_003"
+                          }
+                        }
+                      ]
+                    },
                     "NAME": {
                       "type": "cexostring",
                       "value": "Zweihänder"
@@ -690,6 +5138,66 @@
                     "ID": {
                       "type": "byte",
                       "value": 234
+                    },
+                    "LIST": {
+                      "type": "list",
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Meisterhafte Zwergenaxt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh108_eis_00m"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zwergenaxt"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh108_eis_000"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zwergenaxt +1"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh108_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zwergenaxt +2"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh108_eis_002"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zwergenaxt +3"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh108_eis_003"
+                          }
+                        }
+                      ]
                     },
                     "NAME": {
                       "type": "cexostring",
@@ -9346,6 +13854,22 @@
         "ID": {
           "type": "byte",
           "value": 53
+        },
+        "LIST": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "aaaa"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "aaaa"
+              }
+            }
+          ]
         },
         "STRREF": {
           "type": "dword",
