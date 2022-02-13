@@ -36,9 +36,7 @@ void main() {
       GetTag(OBJECT_SELF) == "ENEMY_GoblinKrieger" ||
       GetTag(OBJECT_SELF) == "ENEMY_GoblinSchamane" ||
       GetTag(OBJECT_SELF) == "ENEMY_Hobgoblin") {
-    if (Random(2) == 0) {
-      CreateItemOnObject("sw_qu_goblintali", OBJECT_SELF, 1);
-    }
+
     if (Random(4) == 0) {
       CreateItemOnObject("sw_we_kupfer", OBJECT_SELF, Random(3));
     }
