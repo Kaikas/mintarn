@@ -39,7 +39,7 @@
         },
         "Delay": {
           "type": "dword",
-          "value": 2147483647
+          "value": 0
         },
         "Quest": {
           "type": "cexostring",
@@ -234,7 +234,7 @@
         },
         "Delay": {
           "type": "dword",
-          "value": 2147483647
+          "value": 0
         },
         "Quest": {
           "type": "cexostring",
@@ -303,7 +303,7 @@
         },
         "Delay": {
           "type": "dword",
-          "value": 2147483647
+          "value": 0
         },
         "Quest": {
           "type": "cexostring",
@@ -372,7 +372,7 @@
         },
         "Delay": {
           "type": "dword",
-          "value": 2147483647
+          "value": 0
         },
         "Quest": {
           "type": "cexostring",
@@ -454,7 +454,7 @@
         },
         "Delay": {
           "type": "dword",
-          "value": 2147483647
+          "value": 0
         },
         "EntriesList": {
           "type": "list",
@@ -519,7 +519,7 @@
         },
         "Delay": {
           "type": "dword",
-          "value": 2147483647
+          "value": 0
         },
         "EntriesList": {
           "type": "list",
@@ -564,7 +564,7 @@
         },
         "Delay": {
           "type": "dword",
-          "value": 2147483647
+          "value": 0
         },
         "EntriesList": {
           "type": "list",
@@ -629,7 +629,7 @@
         },
         "Delay": {
           "type": "dword",
-          "value": 2147483647
+          "value": 0
         },
         "EntriesList": {
           "type": "list",
@@ -674,7 +674,7 @@
         },
         "Delay": {
           "type": "dword",
-          "value": 2147483647
+          "value": 0
         },
         "EntriesList": {
           "type": "list",
@@ -739,7 +739,7 @@
         },
         "Delay": {
           "type": "dword",
-          "value": 2147483647
+          "value": 0
         },
         "EntriesList": {
           "type": "list",
@@ -784,7 +784,7 @@
         },
         "Delay": {
           "type": "dword",
-          "value": 2147483647
+          "value": 0
         },
         "EntriesList": {
           "type": "list",
@@ -849,7 +849,7 @@
         },
         "Delay": {
           "type": "dword",
-          "value": 2147483647
+          "value": 0
         },
         "EntriesList": {
           "type": "list",
