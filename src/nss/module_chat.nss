@@ -2042,6 +2042,11 @@ int speakAsChar(string sMessage) {
   return 0;
 }
 
+int openDowntime() {
+    ExecuteScript("nui_downtime", oPc);
+    return 1;
+}
+
 // Chat befehle
 void main() {
   string sMessage = GetPCChatMessage();
@@ -2096,6 +2101,7 @@ void main() {
         helpSavingThrows(sMessage) ||
         helpAnimation(sMessage) ||
         helpSkills(sMessage) ||
+        openDowntime() ||
         helpMasks(sMessage)) {
         } else {
           SendMessageToPC(oPc, "Ungültiger Befehl: \"" +
