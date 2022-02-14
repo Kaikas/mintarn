@@ -1,113 +1,113 @@
 {
-    "__data_type": "UTI ",
-    "AddCost": {
-        "type": "dword",
-        "value": 700
-    },
-    "BaseItem": {
-        "type": "int",
-        "value": 15
-    },
-    "Charges": {
-        "type": "byte",
-        "value": 0
-    },
-    "Cost": {
-        "type": "dword",
-        "value": 0
-    },
-    "Comment": {
-        "type": "cexostring",
-        "value": ""
-    },
-    "Cursed": {
-        "type": "byte",
-        "value": 0
-    },
-    "DescIdentified": {
-        "type": "cexolocstring",
-        "value": {
-            "0": ""
-        }
-    },
-    "Description": {
-        "type": "cexolocstring",
-        "value": {
-            "0": ""
-        }
-    },
-    "Identified": {
-        "type": "byte",
-        "value": 1
-    },
-    "LocalizedName": {
-        "type": "cexolocstring",
-        "value": {
-            "0": "Laterne"
-        }
-    },
-    "ModelPart1": {
-        "type": "byte",
-        "value": 116
-    },
-    "PaletteID": {
-        "type": "byte",
-        "value": 17
-    },
-    "Plot": {
-        "type": "byte",
-        "value": 0
-    },
-    "PropertiesList": {
-        "type": "list",
-        "value": [
-            {
-                "__struct_id": 0,
-                "ChanceAppear": {
-                    "type": "byte",
-                    "value": 100
-                },
-                "CostTable": {
-                    "type": "byte",
-                    "value": 18
-                },
-                "CostValue": {
-                    "type": "word",
-                    "value": 4
-                },
-                "Param1": {
-                    "type": "byte",
-                    "value": 9
-                },
-                "Param1Value": {
-                    "type": "byte",
-                    "value": 1
-                },
-                "PropertyName": {
-                    "type": "word",
-                    "value": 44
-                },
-                "Subtype": {
-                    "type": "word",
-                    "value": 0
-                }
-            }
-        ]
-    },
-    "StackSize": {
-        "type": "word",
-        "value": 1
-    },
-    "Stolen": {
-        "type": "byte",
-        "value": 0
-    },
-    "Tag": {
-        "type": "cexostring",
-        "value": "MIN_Leuchte"
-    },
-    "TemplateResRef": {
-        "type": "resref",
-        "value": "mn_nh015_tor_116"
+  "__data_type": "UTI ",
+  "AddCost": {
+    "type": "dword",
+    "value": 700
+  },
+  "BaseItem": {
+    "type": "int",
+    "value": 15
+  },
+  "Charges": {
+    "type": "byte",
+    "value": 0
+  },
+  "Comment": {
+    "type": "cexostring",
+    "value": ""
+  },
+  "Cost": {
+    "type": "dword",
+    "value": 700
+  },
+  "Cursed": {
+    "type": "byte",
+    "value": 0
+  },
+  "DescIdentified": {
+    "type": "cexolocstring",
+    "value": {
+      "0": ""
     }
+  },
+  "Description": {
+    "type": "cexolocstring",
+    "value": {
+      "0": ""
+    }
+  },
+  "Identified": {
+    "type": "byte",
+    "value": 1
+  },
+  "LocalizedName": {
+    "type": "cexolocstring",
+    "value": {
+      "0": "Laterne"
+    }
+  },
+  "ModelPart1": {
+    "type": "byte",
+    "value": 116
+  },
+  "PaletteID": {
+    "type": "byte",
+    "value": 17
+  },
+  "Plot": {
+    "type": "byte",
+    "value": 0
+  },
+  "PropertiesList": {
+    "type": "list",
+    "value": [
+      {
+        "__struct_id": 0,
+        "ChanceAppear": {
+          "type": "byte",
+          "value": 100
+        },
+        "CostTable": {
+          "type": "byte",
+          "value": 18
+        },
+        "CostValue": {
+          "type": "word",
+          "value": 4
+        },
+        "Param1": {
+          "type": "byte",
+          "value": 9
+        },
+        "Param1Value": {
+          "type": "byte",
+          "value": 1
+        },
+        "PropertyName": {
+          "type": "word",
+          "value": 44
+        },
+        "Subtype": {
+          "type": "word",
+          "value": 0
+        }
+      }
+    ]
+  },
+  "StackSize": {
+    "type": "word",
+    "value": 1
+  },
+  "Stolen": {
+    "type": "byte",
+    "value": 0
+  },
+  "Tag": {
+    "type": "cexostring",
+    "value": "MIN_Leuchte"
+  },
+  "TemplateResRef": {
+    "type": "resref",
+    "value": "mn_nh015_tor_116"
+  }
 }
