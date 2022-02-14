@@ -14,7 +14,7 @@
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 2.0
+    "value": 5.0
   },
   "ClassList": {
     "type": "list",
@@ -38,76 +38,11 @@
         },
         "ClassLevel": {
           "type": "short",
-          "value": 3
-        },
-        "KnownList0": {
-          "type": "list",
-          "value": [
-            {
-              "__struct_id": 3,
-              "Spell": {
-                "type": "word",
-                "value": 37
-              },
-              "SpellFlags": {
-                "type": "byte",
-                "value": 1
-              },
-              "SpellMetaMagic": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 3,
-              "Spell": {
-                "type": "word",
-                "value": 144
-              },
-              "SpellFlags": {
-                "type": "byte",
-                "value": 1
-              },
-              "SpellMetaMagic": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 3,
-              "Spell": {
-                "type": "word",
-                "value": 151
-              },
-              "SpellFlags": {
-                "type": "byte",
-                "value": 1
-              },
-              "SpellMetaMagic": {
-                "type": "byte",
-                "value": 0
-              }
-            }
-          ]
+          "value": 2
         },
         "KnownList1": {
           "type": "list",
           "value": [
-            {
-              "__struct_id": 3,
-              "Spell": {
-                "type": "word",
-                "value": 10
-              },
-              "SpellFlags": {
-                "type": "byte",
-                "value": 1
-              },
-              "SpellMetaMagic": {
-                "type": "byte",
-                "value": 0
-              }
-            },
             {
               "__struct_id": 3,
               "Spell": {
@@ -127,7 +62,7 @@
               "__struct_id": 3,
               "Spell": {
                 "type": "word",
-                "value": 107
+                "value": 66
               },
               "SpellFlags": {
                 "type": "byte",
@@ -149,7 +84,7 @@
   },
   "Con": {
     "type": "byte",
-    "value": 14
+    "value": 8
   },
   "Conversation": {
     "type": "resref",
@@ -157,11 +92,11 @@
   },
   "CRAdjust": {
     "type": "int",
-    "value": 0
+    "value": 3
   },
   "CurrentHitPoints": {
     "type": "short",
-    "value": 1
+    "value": 7
   },
   "DecayTime": {
     "type": "dword",
@@ -177,7 +112,7 @@
   },
   "Dex": {
     "type": "byte",
-    "value": 14
+    "value": 9
   },
   "Disarmable": {
     "type": "byte",
@@ -266,7 +201,7 @@
   },
   "HitPoints": {
     "type": "short",
-    "value": 1
+    "value": 7
   },
   "Int": {
     "type": "byte",
@@ -380,7 +315,7 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 9
+    "value": 4
   },
   "NaturalAC": {
     "type": "byte",
@@ -741,7 +676,7 @@
   },
   "Str": {
     "type": "byte",
-    "value": 12
+    "value": 10
   },
   "Subrace": {
     "type": "cexostring",

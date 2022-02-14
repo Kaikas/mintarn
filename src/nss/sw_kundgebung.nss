@@ -1,4 +1,5 @@
 #include "global_helper"
+#include "nwnx_webhook"
 
 void main() {
     object oPc = GetLastUsedBy();
@@ -11,6 +12,9 @@ void main() {
         if (GetTag(OBJECT_SELF) == "RP_ZumRettendenUfer") {
             sMessage = GetToken(102) + GetName(oPc) + " sucht bei der Taverne \"Zum Rettenden Ufer\" nach Rollenspiel.</c>";
         }
+
+        string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_OOC");
+        NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, GetName(oPc) + " sucht bei der Taverne \"Zum Rettenden Ufer\" nach Rollenspiel.");
 
         object oTarget = GetFirstPC();
         while (oTarget != OBJECT_INVALID) {

@@ -492,99 +492,7 @@
   },
   "List": {
     "type": "list",
-    "value": [
-      {
-        "__struct_id": 0,
-        "AddCost": {
-          "type": "dword",
-          "value": 1
-        },
-        "BaseItem": {
-          "type": "int",
-          "value": 109
-        },
-        "Charges": {
-          "type": "byte",
-          "value": 0
-        },
-        "Cost": {
-          "type": "dword",
-          "value": 1
-        },
-        "Cursed": {
-          "type": "byte",
-          "value": 0
-        },
-        "DescIdentified": {
-          "type": "cexolocstring",
-          "value": {
-            "0": ""
-          }
-        },
-        "Description": {
-          "type": "cexolocstring",
-          "value": {}
-        },
-        "Identified": {
-          "type": "byte",
-          "value": 1
-        },
-        "LocalizedName": {
-          "type": "cexolocstring",
-          "value": {
-            "0": "Birkenholz"
-          }
-        },
-        "ModelPart1": {
-          "type": "byte",
-          "value": 114
-        },
-        "Plot": {
-          "type": "byte",
-          "value": 0
-        },
-        "PropertiesList": {
-          "type": "list",
-          "value": []
-        },
-        "StackSize": {
-          "type": "word",
-          "value": 1
-        },
-        "Stolen": {
-          "type": "byte",
-          "value": 0
-        },
-        "Tag": {
-          "type": "cexostring",
-          "value": "CRAFT_Birkenholz"
-        },
-        "TemplateResRef": {
-          "type": "resref",
-          "value": "sw_ro_birkenholz"
-        },
-        "XOrientation": {
-          "type": "float",
-          "value": 0.0
-        },
-        "XPosition": {
-          "type": "float",
-          "value": 7.3341
-        },
-        "YOrientation": {
-          "type": "float",
-          "value": 1.0
-        },
-        "YPosition": {
-          "type": "float",
-          "value": 10.5488
-        },
-        "ZPosition": {
-          "type": "float",
-          "value": -0.0
-        }
-      }
-    ]
+    "value": []
   },
   "Placeable List": {
     "type": "list",
@@ -859,7 +767,7 @@
         },
         "Faction": {
           "type": "dword",
-          "value": 4294967295
+          "value": 2147483647
         },
         "Fort": {
           "type": "byte",
@@ -1084,7 +992,7 @@
         },
         "Faction": {
           "type": "dword",
-          "value": 4294967295
+          "value": 2147483647
         },
         "Fort": {
           "type": "byte",
@@ -5154,7 +5062,7 @@
         },
         "Faction": {
           "type": "dword",
-          "value": 4294967295
+          "value": 2147483647
         },
         "Fort": {
           "type": "byte",
@@ -5606,7 +5514,7 @@
         },
         "Faction": {
           "type": "dword",
-          "value": 4294967295
+          "value": 2147483647
         },
         "Fort": {
           "type": "byte",
@@ -6956,7 +6864,7 @@
         },
         "Faction": {
           "type": "dword",
-          "value": 4294967295
+          "value": 2147483647
         },
         "Fort": {
           "type": "byte",
