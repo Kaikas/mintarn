@@ -3,14 +3,6 @@
 #include "nwnx_feedback"
 #include "nwnx_time"
 
-// Respawn the enemy at his death location
-void respawn(location lLocation, string sResRef, string sTag, object oArea) {
-    // Check if we have already been respawned
-    if (GetLocalInt(oArea, "area_enter") > NWNX_Time_GetTimeStamp() - 2700) {
-        CreateObject(OBJECT_TYPE_CREATURE, sResRef, lLocation, FALSE, sTag);
-    }
-}
-
 float quadratic(float x) {
     return (x/5000) * (x/5000);
 }
@@ -119,12 +111,33 @@ void main() {
                 GiveXPToCreature(oPc, iXp);
                 //NWNX_Feedback_SetFeedbackMessageHidden(182, 0, oPc);
                 //SendMessageToPC(oPc, "Ihr habt an Erfahrung gewonnen.");
+
+                //Goblin-Talisman quest: Give Person on quest Talisman if near goblin
+                string sTag = GetTag(OBJECT_SELF);
+                if (sTag == "ENEMY_Goblin" ||
+                    sTag == "ENEMY_GoblinHaeutpling" ||
+                    sTag == "ENEMY_GoblinJger" ||
+                    sTag == "ENEMY_GoblinKrieger" ||
+                    sTag == "ENEMY_GoblinSchamane"){
+                         int iStage;
+                        string sQuery = "SELECT * FROM QuestStatus WHERE name=? AND charname=? AND quest=?";
+                        if (NWNX_SQL_PrepareQuery(sQuery)) {
+                            NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
+                            NWNX_SQL_PreparedString(1, GetName(oPc));
+                            NWNX_SQL_PreparedString(2, "stadtwache_intro");
+                            NWNX_SQL_ExecutePreparedQuery();
+                            while (NWNX_SQL_ReadyToReadNextRow()) {
+                                NWNX_SQL_ReadNextRow();
+                                iStage = StringToInt(NWNX_SQL_ReadDataInActiveRow(4));
+                            }
+                        }
+                        if(iStage == 1){
+                            CreateItemOnObject("sw_qu_goblintali", oPc, 1);
+                        }
+                    }
             }
         }
         oPc = GetNextPC();
     }
-
-    // Respawn in 30 Minutes
-    DelayCommand(2700.0, respawn(GetLocation(OBJECT_SELF), GetResRef(OBJECT_SELF), GetTag(OBJECT_SELF), GetArea(OBJECT_SELF)));
 }
 

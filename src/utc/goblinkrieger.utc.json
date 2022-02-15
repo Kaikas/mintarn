@@ -14,7 +14,7 @@
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 0.5
+    "value": 4.0
   },
   "ClassList": {
     "type": "list",
@@ -27,7 +27,7 @@
         },
         "ClassLevel": {
           "type": "short",
-          "value": 2
+          "value": 4
         }
       }
     ]
@@ -46,11 +46,11 @@
   },
   "CRAdjust": {
     "type": "int",
-    "value": 0
+    "value": 2
   },
   "CurrentHitPoints": {
     "type": "short",
-    "value": 2
+    "value": 4
   },
   "DecayTime": {
     "type": "dword",
@@ -66,7 +66,7 @@
   },
   "Dex": {
     "type": "byte",
-    "value": 10
+    "value": 9
   },
   "Disarmable": {
     "type": "byte",
@@ -148,7 +148,7 @@
   },
   "HitPoints": {
     "type": "short",
-    "value": 2
+    "value": 4
   },
   "Int": {
     "type": "byte",
@@ -182,7 +182,7 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 4
+    "value": 8
   },
   "NaturalAC": {
     "type": "byte",
