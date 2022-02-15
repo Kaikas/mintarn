@@ -131,6 +131,7 @@ void main() {
                                 iStage = StringToInt(NWNX_SQL_ReadDataInActiveRow(4));
                             }
                         }
+                        SpeakString(IntToString(iStage));
                         if(iStage == 1){
                             CreateItemOnObject("sw_qu_goblintali", oPc, 1);
                         }
