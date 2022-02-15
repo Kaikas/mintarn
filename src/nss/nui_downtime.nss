@@ -14,22 +14,31 @@ void main() {
     jButtonAbort = NuiId(jButtonAbort, "button_abort");
 
     // Dropdown
-    json jDropdownbox = JsonArray();
-    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Arbeiten", 0));
-    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Eine Zauberschriftrolle herstellen", 1));
-    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Einen Gegenstand herstellen", 2));
-    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Einen magischen Gegenstand kaufen", 3));
-    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Einen magischen Gegenstand verkaufen", 4));
-    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Entspannung", 5));
-    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Glücksspiel", 6));
-    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Gottesdienste", 7));
-    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Grubenkämpfe", 8));
-    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Recherche", 9));
-    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Training", 10));
-    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Verbrechen", 11));
-    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Zechen", 12));
+    json jDropdownboxElement = JsonArray();
 
-    jRow = JsonArrayInsert(jRow, NuiCombo(NuiBind("dropdownbox"), NuiBind("dropdownbox_selected")));
+    json jComboEntryWork = NuiComboEntry("Arbeiten", 0);
+    //jComboEntryWork = NuiId(jComboEntryWork, "select_work");
+
+    jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, jComboEntryWork);
+    jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Eine Zauberschriftrolle herstellen", 1));
+    jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Einen Gegenstand herstellen", 2));
+    jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Einen magischen Gegenstand kaufen", 3));
+    jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Einen magischen Gegenstand verkaufen", 4));
+    jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Entspannung", 5));
+    jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Glücksspiel", 6));
+    jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Gottesdienste", 7));
+    jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Grubenkämpfe", 8));
+    jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Recherche", 9));
+    jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Training", 10));
+    jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Verbrechen", 11));
+    jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Zechen", 12));
+
+    json jDropdownbox = NuiCombo(NuiBind("dropdownbox"), NuiBind("dropdownbox_selected"));
+    //jDropdownbox = NuiWidth(jDropdownbox, 35);
+    jDropdownbox = NuiId(jDropdownbox, "select_downtime");
+    //NuiSetBindWatch
+
+    jRow = JsonArrayInsert(jRow, jDropdownbox);
 
     jCol = JsonArrayInsert(JsonArray(), jText);
     jCol2 = JsonArrayInsert(JsonArray(), jButtonSelect);
@@ -51,6 +60,7 @@ void main() {
         JsonBool(TRUE));
     int token = NuiCreate(oPc, jWindow, "downtime");
 
-    NuiSetBind(oPc, token, "dropdownbox", jDropdownbox);
+    NuiSetBind(oPc, token, "dropdownbox", jDropdownboxElement);
     NuiSetBind(oPc, token, "dropdownbox_selected", NuiBind("dropdownbox"));
+    //NuiSetBindWatch(oPc, token, "select_downtime", TRUE);
 }

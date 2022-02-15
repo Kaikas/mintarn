@@ -11,10 +11,13 @@ void main()
     SendMessageToPC(oPc, "(" + IntToString(nToken) + ":" + sWindowId + ") T: " + sType + ", E: " + sElement + ", AI: " + IntToString(nArrayIndex) + ", P: " + JsonDump(jPayload));
 
     if (sWindowId == "downtime") {
-        //PC_HandleNUIEvents(oPc, nToken, sType, sElement, nArrayIndex);
+        SendMessageToPC(oPc, "SELECTED: \n\n" + JsonGetString(NuiGetBind(oPc, nToken, "select_downtime")) + "\n");
         if (sType == "click") {
             if (sElement == "button_abort") {
                 NuiDestroy(oPc, nToken);
+            }
+            if (sElement == "select_work") {
+                SendMessageToPC(oPc, "WORK");
             }
         }
     }
