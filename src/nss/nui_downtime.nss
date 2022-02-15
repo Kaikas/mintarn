@@ -13,14 +13,24 @@ void main() {
 
     // Dropdown
     json jDropdownbox = JsonArray();
-    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("name", 0));
-    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("foo", 1));
-    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("bar", 2));
+    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Arbeiten", 0));
+    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Eine Zauberschriftrolle herstellen", 1));
+    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Einen Gegenstand herstellen", 2));
+    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Einen magischen Gegenstand kaufen", 3));
+    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Einen magischen Gegenstand verkaufen", 4));
+    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Entspannung", 5));
+    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Glücksspiel", 6));
+    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Gottesdienste", 7));
+    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Grubenkämpfe", 8));
+    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Recherche", 9));
+    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Training", 10));
+    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Verbrechen", 11));
+    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("Zechen", 12));
+
     jRow = JsonArrayInsert(jRow, NuiCombo(NuiBind("dropdownbox"), NuiBind("dropdownbox_selected")));
 
     jCol = JsonArrayInsert(JsonArray(), jText);
     jCol2 = JsonArrayInsert(JsonArray(), jButtonJob);
-    jCol2 = JsonArrayInsert(jCol2, jButtonItem);
     jCol2 = JsonArrayInsert(jCol2, jButtonItem);
     jRow = JsonArrayInsert(jRow, NuiRow(jCol));
     jRow = JsonArrayInsert(jRow, NuiRow(jCol2));
@@ -31,7 +41,7 @@ void main() {
 
     json jWindow = NuiWindow(jRoot,
         JsonString("Aktivitäten"),
-        NuiRect(-1.0, -1.0, 800.0, 600.0),
+        NuiRect(-1.0, -1.0, 330.0, 300.0),
         JsonBool(FALSE),
         JsonBool(FALSE),
         JsonBool(TRUE),
