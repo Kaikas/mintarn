@@ -324,27 +324,27 @@
   },
   "Mod_Entry_Area": {
     "type": "resref",
-    "value": "freihafen_west"
+    "value": "ooc"
   },
   "Mod_Entry_Dir_X": {
     "type": "float",
-    "value": 0.0
+    "value": 0.6716
   },
   "Mod_Entry_Dir_Y": {
     "type": "float",
-    "value": 1.0
+    "value": 0.741
   },
   "Mod_Entry_X": {
     "type": "float",
-    "value": 97.57420000000001
+    "value": 4.753
   },
   "Mod_Entry_Y": {
     "type": "float",
-    "value": 149.6542
+    "value": 5.3689
   },
   "Mod_Entry_Z": {
     "type": "float",
-    "value": 5.0
+    "value": -0.0
   },
   "Mod_Expan_List": {
     "type": "list",
