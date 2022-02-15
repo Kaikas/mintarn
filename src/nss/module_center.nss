@@ -554,7 +554,7 @@ void main() {
     // Start nui
     ExecuteScript("nui_downtime", oPc);
     //ExecuteScript("nui_dice", oPc);
-    string sBeta = "Wir freuen uns euch mitzuteilen, dass die Beta von Mintarn am 1.10.2021 gestartet ist.\n\n" +
+    /*string sBeta = "Wir freuen uns euch mitzuteilen, dass die Beta von Mintarn am 1.10.2021 gestartet ist.\n\n" +
     "In der Beta erstellte Charaktere werden nicht mehr gelöscht. Wir haben noch zahlreiche Ideen, die wir umsetzen wollen und " +
     "es werden sicherlich auch Fehler während der Beta auftauchen, die angegangen werden müssen. Im Großen und Ganzen sind wir " +
     "aber für einen Regelbetrieb bereit und freuen uns auf eine belebte persistente Welt.\n\n" +
@@ -568,5 +568,5 @@ void main() {
     "\n\nBesucht und auf https://mintarn.de oder im Discord https://discord.gg/Tp2qyYp!";
     SendMessageToPC(oPc, sBeta);
     NWNX_Chat_SendMessage(4, sBeta, GetObjectByTag("ERZAEHLER"), oPc);
-
+    */
 }

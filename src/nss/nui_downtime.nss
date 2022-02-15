@@ -8,8 +8,10 @@ void main() {
 
     json jText = NuiText(JsonString("Dies sind Aktivitäten denen euer " +
         "Charakter nachgehen kann, während ihr nicht eingeloggt seid."));
-    json jButtonJob = NuiButton(JsonString("Wählen"));
-    json jButtonItem = NuiButton(JsonString("Abbrechen"));
+    json jButtonSelect = NuiButton(JsonString("Wählen"));
+    jButtonSelect = NuiId(jButtonSelect, "button_select");
+    json jButtonAbort = NuiButton(JsonString("Abbrechen"));
+    jButtonAbort = NuiId(jButtonAbort, "button_abort");
 
     // Dropdown
     json jDropdownbox = JsonArray();
@@ -30,14 +32,14 @@ void main() {
     jRow = JsonArrayInsert(jRow, NuiCombo(NuiBind("dropdownbox"), NuiBind("dropdownbox_selected")));
 
     jCol = JsonArrayInsert(JsonArray(), jText);
-    jCol2 = JsonArrayInsert(JsonArray(), jButtonJob);
-    jCol2 = JsonArrayInsert(jCol2, jButtonItem);
+    jCol2 = JsonArrayInsert(JsonArray(), jButtonSelect);
+    jCol2 = JsonArrayInsert(jCol2, jButtonAbort);
     jRow = JsonArrayInsert(jRow, NuiRow(jCol));
     jRow = JsonArrayInsert(jRow, NuiRow(jCol2));
 
     json jRoot = NuiCol(jRow);
 
-    SendMessageToPC(oPc, JsonDump(jRoot));
+    //SendMessageToPC(oPc, JsonDump(jRoot));
 
     json jWindow = NuiWindow(jRoot,
         JsonString("Aktivitäten"),
