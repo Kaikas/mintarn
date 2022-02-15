@@ -129,16 +129,9 @@ void main() {
                             while (NWNX_SQL_ReadyToReadNextRow()) {
                                 NWNX_SQL_ReadNextRow();
                                 iStage = StringToInt(NWNX_SQL_ReadDataInActiveRow(4));
-                                SpeakString(NWNX_SQL_ReadDataInActiveRow(0));
-                                SpeakString(NWNX_SQL_ReadDataInActiveRow(1));
-                                SpeakString(NWNX_SQL_ReadDataInActiveRow(2));
-                                SpeakString(NWNX_SQL_ReadDataInActiveRow(3));
-                                SpeakString(NWNX_SQL_ReadDataInActiveRow(4));
-                                SpeakString(NWNX_SQL_ReadDataInActiveRow(5));
-                                SpeakString(NWNX_SQL_ReadDataInActiveRow(6));
                             }
                         }
-                        if(iStage == 1){
+                        if(iStage == 0){
                             CreateItemOnObject("sw_qu_goblintali", oPc, 1);
                         }
                     }
