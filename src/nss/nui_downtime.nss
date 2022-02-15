@@ -15,11 +15,7 @@ void main() {
 
     // Dropdown
     json jDropdownboxElement = JsonArray();
-
-    json jComboEntryWork = NuiComboEntry("Arbeiten", 0);
-    //jComboEntryWork = NuiId(jComboEntryWork, "select_work");
-
-    jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, jComboEntryWork);
+    jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Tagewerk", 0));
     jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Eine Zauberschriftrolle herstellen", 1));
     jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Einen Gegenstand herstellen", 2));
     jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Einen magischen Gegenstand kaufen", 3));
@@ -32,11 +28,9 @@ void main() {
     jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Training", 10));
     jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Verbrechen", 11));
     jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Zechen", 12));
-
     json jDropdownbox = NuiCombo(NuiBind("dropdownbox"), NuiBind("dropdownbox_selected"));
     //jDropdownbox = NuiWidth(jDropdownbox, 35);
     jDropdownbox = NuiId(jDropdownbox, "select_downtime");
-    //NuiSetBindWatch
 
     jRow = JsonArrayInsert(jRow, jDropdownbox);
 
@@ -48,7 +42,7 @@ void main() {
 
     json jRoot = NuiCol(jRow);
 
-    //SendMessageToPC(oPc, JsonDump(jRoot));
+    SendMessageToPC(oPc, JsonDump(jRoot));
 
     json jWindow = NuiWindow(jRoot,
         JsonString("Aktivitäten"),
@@ -61,6 +55,9 @@ void main() {
     int token = NuiCreate(oPc, jWindow, "downtime");
 
     NuiSetBind(oPc, token, "dropdownbox", jDropdownboxElement);
-    NuiSetBind(oPc, token, "dropdownbox_selected", NuiBind("dropdownbox"));
-    //NuiSetBindWatch(oPc, token, "select_downtime", TRUE);
+    NuiSetBind(oPc, token, "dropdownbox_selected", jDropdownboxElement);
+    NuiSetBindWatch(oPc, token, "dropdownbox_selected", TRUE);
+    NuiSetBindWatch(oPc, token, "dropdownbox", TRUE);
+    NuiSetBindWatch(oPc, token, "select_downtime", TRUE);
+
 }

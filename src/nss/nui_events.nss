@@ -8,10 +8,18 @@ void main()
     int nArrayIndex = NuiGetEventArrayIndex();
     json jPayload = NuiGetEventPayload();
 
-    SendMessageToPC(oPc, "(" + IntToString(nToken) + ":" + sWindowId + ") T: " + sType + ", E: " + sElement + ", AI: " + IntToString(nArrayIndex) + ", P: " + JsonDump(jPayload));
+    /*
+    SendMessageToPC(oPc, "" +
+        "\nEVENTTYPE: " + sType +
+        "\nELEMENT: " + sElement +
+        "\nARRAYINDEX: " + IntToString(nArrayIndex) +
+        "\nPAYLOAD: " + JsonDump(jPayload));
+    */
+    //"Token: " + IntToString(nToken) +
+    //"\nWindowID:" + sWindowId +
 
     if (sWindowId == "downtime") {
-        SendMessageToPC(oPc, "SELECTED: \n\n" + JsonGetString(NuiGetBind(oPc, nToken, "select_downtime")) + "\n");
+
         if (sType == "click") {
             if (sElement == "button_abort") {
                 NuiDestroy(oPc, nToken);
@@ -19,6 +27,12 @@ void main()
             if (sElement == "select_work") {
                 SendMessageToPC(oPc, "WORK");
             }
+        }
+        if (sType == "watch" && sElement == "dropdownbox_selected") {
+            if (JsonGetInt(NuiGetBind(oPc, nToken, "dropdownbox_selected")) == 0) {
+                SendMessageToPC(oPc, "Tagewerk");
+            }
+            SendMessageToPC(oPc, "\nSELECTED: " + IntToString(JsonGetInt(NuiGetBind(oPc, nToken, "dropdownbox_selected"))) + "\n");
         }
     }
 
