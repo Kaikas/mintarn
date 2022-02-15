@@ -178,7 +178,7 @@
         },
         "Conversation": {
           "type": "resref",
-          "value": "conv_alchemist"
+          "value": ""
         },
         "CRAdjust": {
           "type": "int",
@@ -311,7 +311,7 @@
               },
               "Cost": {
                 "type": "dword",
-                "value": 1
+                "value": 100
               },
               "Cursed": {
                 "type": "byte",

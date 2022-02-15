@@ -42,7 +42,7 @@
   },
   "Conversation": {
     "type": "resref",
-    "value": "conv_alchemist"
+    "value": ""
   },
   "CRAdjust": {
     "type": "int",

@@ -134,7 +134,7 @@
   },
   "Conversation": {
     "type": "resref",
-    "value": "conv_lebensmitte"
+    "value": ""
   },
   "CRAdjust": {
     "type": "int",
