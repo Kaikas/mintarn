@@ -12,16 +12,15 @@ void main() {
     json jButtonItem = NuiButton(JsonString("Abbrechen"));
 
     // Dropdown
-    json wndlst = JsonArray();
-    wndlst = JsonArrayInsert(wndlst, NuiComboEntry("name", 3));
-    wndlst = JsonArrayInsert(wndlst, NuiComboEntry("foo", 1));
-    wndlst = JsonArrayInsert(wndlst, NuiComboEntry("bar", 2));
-    NuiSetBind(oPc, 0, "window_id_list", wndlst);
-    NuiSetBind(oPc, 1, "selected_window_token", JsonArray());
-    jRow = JsonArrayInsert(jRow, NuiCombo(NuiBind("window_id_list"), NuiBind("selected_window_token")));
+    json jDropdownbox = JsonArray();
+    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("name", 0));
+    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("foo", 1));
+    jDropdownbox = JsonArrayInsert(jDropdownbox, NuiComboEntry("bar", 2));
+    jRow = JsonArrayInsert(jRow, NuiCombo(NuiBind("dropdownbox"), NuiBind("dropdownbox_selected")));
 
     jCol = JsonArrayInsert(JsonArray(), jText);
     jCol2 = JsonArrayInsert(JsonArray(), jButtonJob);
+    jCol2 = JsonArrayInsert(jCol2, jButtonItem);
     jCol2 = JsonArrayInsert(jCol2, jButtonItem);
     jRow = JsonArrayInsert(jRow, NuiRow(jCol));
     jRow = JsonArrayInsert(jRow, NuiRow(jCol2));
@@ -38,5 +37,8 @@ void main() {
         JsonBool(TRUE),
         JsonBool(FALSE),
         JsonBool(TRUE));
-    NuiCreate(oPc, jWindow, "downtime");
+    int token = NuiCreate(oPc, jWindow, "downtime");
+
+    NuiSetBind(oPc, token, "dropdownbox", jDropdownbox);
+    NuiSetBind(oPc, token, "dropdownbox_selected", NuiBind("dropdownbox"));
 }

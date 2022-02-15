@@ -308,6 +308,15 @@ void main() {
         "PRIMARY KEY (id))";
     NWNX_SQL_ExecuteQuery(sQuery);
 
+    // Downtime activities
+    sQuery = "CREATE TABLE IF NOT EXISTS Downtime (" +
+        "id MEDIUMINT NOT NULL AUTO_INCREMENT, " +
+        "name TEXT, " +
+        "charname TEXT, " +
+        "datetime TEXT, " +
+        "PRIMARY KEY (id))";
+    NWNX_SQL_ExecuteQuery(sQuery);
+
     // Tribut
     sQuery = "CREATE TABLE IF NOT EXISTS Tribut (" +
         "id MEDIUMINT NOT NULL AUTO_INCREMENT, " +
@@ -417,29 +426,29 @@ void main() {
     skillFeat.iSkill = 35;
     skillFeat.iFeat = 1124;
     NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
-	
-	//Multi-Fertigkeitstalente:
-	
-	//Silver Palm
-	skillFeat.iModifier = 2;
+
+    //Multi-Fertigkeitstalente:
+
+    //Silver Palm
+    skillFeat.iModifier = 2;
     skillFeat.iFocusFeat = 1;
-	skillFeat.iSkill = 12;
+    skillFeat.iSkill = 12;
     skillFeat.iFeat = 1127;
     NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
-	skillFeat.iSkill = 14;
+    skillFeat.iSkill = 14;
     skillFeat.iFeat = 1127;
     NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
-	
-	//Klassen-Fertigkeitstalente:
-	
-	//Naturgespuer
-	skillFeat.iSkill = 29;
+
+    //Klassen-Fertigkeitstalente:
+
+    //Naturgespuer
+    skillFeat.iSkill = 29;
     skillFeat.iFeat = 1129;
     NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
-	skillFeat.iSkill = 35;
+    skillFeat.iSkill = 35;
     skillFeat.iFeat = 1129;
     NWNX_SkillRanks_SetSkillFeat(skillFeat, TRUE);
-	
+
 
     //struct NWNX_SkillRanks_SkillFeat debug_feat = NWNX_SkillRanks_GetSkillFeat(30, 1116);
     //WriteTimestampedLogEntry("Skill Feat: " + debug_feat.iSkill + " - " + debug_feat.iFeat + " - " + debug_feat.iModifier + " " + debug_feat.iFocusFeat);
@@ -481,7 +490,7 @@ void main() {
 
     NWNX_Events_SubscribeEvent("NWNX_ON_CAST_SPELL_BEFORE", "e_castspell");
     NWNX_Events_SubscribeEvent("NWNX_ON_CAST_SPELL_AFTER", "e_castspella");
-    
+
 
 
     // Lighting

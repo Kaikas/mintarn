@@ -6,6 +6,7 @@
 #include "global_money"
 #include "x3_inc_string"
 #include "nwnx_chat"
+#include "module_downtime"
 
 float quadratic(float x) {
     return (x/5000) * (x/5000);
@@ -137,6 +138,10 @@ void GiveXP(object oPc, int iCount, int iSumXp, int iToken) {
         //NWNX_Feedback_SetFeedbackMessageHidden(182, 1, oPc);
         iXp = iXp + Random(20);
         GiveXPToCreature(oPc, iXp);
+
+        // Determines if the player gets a token
+        GiveDowntimeToken(oPc);
+
         //NWNX_Feedback_SetFeedbackMessageHidden(182, 0, oPc);
         iSumXp = iSumXp + iXp;
         iCount = iCount + 1;
