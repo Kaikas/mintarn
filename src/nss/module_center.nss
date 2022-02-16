@@ -8,8 +8,7 @@
 #include "nwnx_chat"
 #include "module_downtime"
 
-//const float RP_XP_DELAY = 600.0;
-const float RP_XP_DELAY = 5.0;
+const float RP_XP_DELAY = 600.0;
 
 float quadratic(float x) {
     return (x/5000) * (x/5000);

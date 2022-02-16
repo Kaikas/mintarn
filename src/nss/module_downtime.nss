@@ -2,7 +2,7 @@
 #include "nwnx_time"
 
 // In seconds
-const int TOKENTIMER = 60;
+const int TOKENTIMER = 604800;
 
 void CreateDowntimeInDatabase(object oPc) {
     string sQuery = "INSERT INTO Downtime (name, charname, datetime) VALUES (?, ?, ?)";
