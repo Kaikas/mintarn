@@ -19,6 +19,7 @@ void main() {
     json jDropdownboxElement = JsonArray();
     jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Wähle eine Aktion", 0));
     jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Tagewerk", 1));
+    /*
     jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Eine Zauberschriftrolle herstellen", 2));
     jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Einen Gegenstand herstellen", 3));
     jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Einen magischen Gegenstand kaufen", 4));
@@ -31,6 +32,7 @@ void main() {
     jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Training", 11));
     jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Verbrechen", 12));
     jDropdownboxElement = JsonArrayInsert(jDropdownboxElement, NuiComboEntry("Zechen", 13));
+    */
     json jDropdownbox = NuiCombo(NuiBind("dropdownbox"), NuiBind("dropdownbox_selected"));
     //jDropdownbox = NuiWidth(jDropdownbox, 35);
     jDropdownbox = NuiId(jDropdownbox, "select_downtime");
