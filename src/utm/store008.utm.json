@@ -1,0 +1,270 @@
+{
+  "__data_type": "UTM ",
+  "BlackMarket": {
+    "type": "byte",
+    "value": 0
+  },
+  "BM_MarkDown": {
+    "type": "int",
+    "value": 25
+  },
+  "Comment": {
+    "type": "cexostring",
+    "value": ""
+  },
+  "ID": {
+    "type": "byte",
+    "value": 5
+  },
+  "IdentifyPrice": {
+    "type": "int",
+    "value": -1
+  },
+  "LocName": {
+    "type": "cexolocstring",
+    "value": {
+      "0": "Musik"
+    }
+  },
+  "MarkDown": {
+    "type": "int",
+    "value": 50
+  },
+  "MarkUp": {
+    "type": "int",
+    "value": 100
+  },
+  "MaxBuyPrice": {
+    "type": "int",
+    "value": -1
+  },
+  "OnOpenStore": {
+    "type": "resref",
+    "value": "global_storeopen"
+  },
+  "OnStoreClosed": {
+    "type": "resref",
+    "value": "global_storeclos"
+  },
+  "ResRef": {
+    "type": "resref",
+    "value": "store008"
+  },
+  "StoreGold": {
+    "type": "int",
+    "value": -1
+  },
+  "StoreList": {
+    "type": "list",
+    "value": [
+      {
+        "__struct_id": 0
+      },
+      {
+        "__struct_id": 4
+      },
+      {
+        "__struct_id": 2
+      },
+      {
+        "__struct_id": 3,
+        "ItemList": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "Infinite": {
+                "type": "byte",
+                "value": 1
+              },
+              "InventoryRes": {
+                "type": "resref",
+                "value": "mn_hh314_soc_019"
+              },
+              "Repos_PosX": {
+                "type": "word",
+                "value": 0
+              },
+              "Repos_Posy": {
+                "type": "word",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 1,
+              "Infinite": {
+                "type": "byte",
+                "value": 1
+              },
+              "InventoryRes": {
+                "type": "resref",
+                "value": "mn_hh314_soc_018"
+              },
+              "Repos_PosX": {
+                "type": "word",
+                "value": 1
+              },
+              "Repos_Posy": {
+                "type": "word",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 2,
+              "Infinite": {
+                "type": "byte",
+                "value": 1
+              },
+              "InventoryRes": {
+                "type": "resref",
+                "value": "mn_hh314_soc_015"
+              },
+              "Repos_PosX": {
+                "type": "word",
+                "value": 2
+              },
+              "Repos_Posy": {
+                "type": "word",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 3,
+              "Infinite": {
+                "type": "byte",
+                "value": 1
+              },
+              "InventoryRes": {
+                "type": "resref",
+                "value": "mn_hh314_soc_016"
+              },
+              "Repos_PosX": {
+                "type": "word",
+                "value": 3
+              },
+              "Repos_Posy": {
+                "type": "word",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 4,
+              "Infinite": {
+                "type": "byte",
+                "value": 1
+              },
+              "InventoryRes": {
+                "type": "resref",
+                "value": "mn_hh314_soc_017"
+              },
+              "Repos_PosX": {
+                "type": "word",
+                "value": 4
+              },
+              "Repos_Posy": {
+                "type": "word",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 5,
+              "Infinite": {
+                "type": "byte",
+                "value": 1
+              },
+              "InventoryRes": {
+                "type": "resref",
+                "value": "mn_hh314_soc_014"
+              },
+              "Repos_PosX": {
+                "type": "word",
+                "value": 5
+              },
+              "Repos_Posy": {
+                "type": "word",
+                "value": 0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "__struct_id": 1,
+        "ItemList": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "Infinite": {
+                "type": "byte",
+                "value": 1
+              },
+              "InventoryRes": {
+                "type": "resref",
+                "value": "mn_nh015_tor_041"
+              },
+              "Repos_PosX": {
+                "type": "word",
+                "value": 0
+              },
+              "Repos_Posy": {
+                "type": "word",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 1,
+              "Infinite": {
+                "type": "byte",
+                "value": 1
+              },
+              "InventoryRes": {
+                "type": "resref",
+                "value": "mn_nh015_tor_042"
+              },
+              "Repos_PosX": {
+                "type": "word",
+                "value": 1
+              },
+              "Repos_Posy": {
+                "type": "word",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 2,
+              "Infinite": {
+                "type": "byte",
+                "value": 1
+              },
+              "InventoryRes": {
+                "type": "resref",
+                "value": "mn_nh015_tor_040"
+              },
+              "Repos_PosX": {
+                "type": "word",
+                "value": 2
+              },
+              "Repos_Posy": {
+                "type": "word",
+                "value": 0
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "Tag": {
+    "type": "cexostring",
+    "value": "STORE_Musik"
+  },
+  "WillNotBuy": {
+    "type": "list",
+    "value": []
+  },
+  "WillOnlyBuy": {
+    "type": "list",
+    "value": []
+  }
+}
