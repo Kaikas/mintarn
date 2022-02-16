@@ -37,8 +37,19 @@ int TokenHasAlreadyBeenReceived(object oPc) {
     return 0;
 }
 
+void CreateTokenOnPlayer(object oPc) {
+    CreateItemOnObject("sw_we_aktivit", oPc);
+    string sQuery = "UPDATE Downtime SET datetime=? WHERE name=? AND charname=?";
+    if (NWNX_SQL_PrepareQuery(sQuery)) {
+        NWNX_SQL_PreparedString(0, IntToString(NWNX_Time_GetTimeStamp()));
+        NWNX_SQL_PreparedString(1, GetPCPlayerName(oPc));
+        NWNX_SQL_PreparedString(2, GetName(oPc));
+        NWNX_SQL_ExecutePreparedQuery();
+    }
+}
+
 void GiveDowntimeToken(object oPc) {
     if (!TokenHasAlreadyBeenReceived(oPc)) {
-        CreateItemOnObject("sw_we_aktivit", oPc);
+        CreateTokenOnPlayer(oPc);
     }
 }

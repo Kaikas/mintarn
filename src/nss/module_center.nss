@@ -8,6 +8,9 @@
 #include "nwnx_chat"
 #include "module_downtime"
 
+//const float RP_XP_DELAY = 600.0;
+const float RP_XP_DELAY = 5.0;
+
 float quadratic(float x) {
     return (x/5000) * (x/5000);
 }
@@ -151,7 +154,7 @@ void GiveXP(object oPc, int iCount, int iSumXp, int iToken) {
         //}
         //SendMessageToPC(oPc, "Für Rollenspiel habt ihr Erfahrung gewonnen.");
     }
-    DelayCommand(600.0, GiveXP(oPc, iCount, iSumXp, iToken));
+    DelayCommand(RP_XP_DELAY, GiveXP(oPc, iCount, iSumXp, iToken));
 }
 
 // Erzeugt einen zufälligen Token
@@ -548,7 +551,7 @@ void main() {
     // Give XP every 10 Minutes
     int nSeed = Random(1000000);
     SetLocalInt(oPc, "xp_token", nSeed);
-    DelayCommand(600.0, GiveXP(oPc, 1, 0, nSeed));
+    DelayCommand(RP_XP_DELAY, GiveXP(oPc, 1, 0, nSeed));
 
 
     // Start nui
