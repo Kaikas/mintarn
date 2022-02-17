@@ -40,8 +40,9 @@ void main() {
 
     jRow = JsonArrayInsert(jRow, jDropdownbox);
 
-    json jInput = NuiTextEdit(JsonString("Freitext zur Beschreibung der Aktivität."), NuiBind("input"), 10000, TRUE);
+    json jInput = NuiTextEdit(JsonString("Freitext zur Beschreibung der Aktivität."), NuiBind("input"), 1000, TRUE);
     jInput = NuiHeight(jInput, 100.0);
+    //jInput = NuiId(jInput, "input");
 
     jCol = JsonArrayInsert(JsonArray(), jText);
     jCol2 = JsonArrayInsert(JsonArray(), jInput);
@@ -71,5 +72,6 @@ void main() {
     NuiSetBindWatch(oPc, token, "dropdownbox", TRUE);
     NuiSetBindWatch(oPc, token, "select_downtime", TRUE);
     NuiSetBind(oPc, token, "text", jTextContent);
-    NuiSetBind(oPc, token, "input", jInput);
+    NuiSetBindWatch(oPc, token, "input_watch", TRUE);
+    NuiSetBind(oPc, token, "input", JsonString(""));
 }

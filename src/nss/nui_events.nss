@@ -49,11 +49,11 @@ void main()
         "\nARRAYINDEX: " + IntToString(nArrayIndex) +
         "\nPAYLOAD: " + JsonDump(jPayload));
     */
+
     //"Token: " + IntToString(nToken) +
     //"\nWindowID:" + sWindowId +
 
     if (sWindowId == "downtime") {
-
         if (sType == "click") {
             if (sElement == "button_abort") {
                 NuiDestroy(oPc, nToken);
@@ -64,9 +64,8 @@ void main()
                     if (CountItems(oPc, "CRAFT_Aktivitaet")) {
                         DestroyItem(oPc, "CRAFT_Aktivitaet");
                         MONEY_GiveCoinMoneyWorth(1000, oPc);
-                        NuiDestroy(oPc, nToken);
                         SetLocalString(oPc, "nui_message", "Für eure Arbeit habt ihr 10 Gold erhalten.");
-                        ExecuteScript("nui_message", oPc);
+                        SendMessageToPC(oPc, JsonDump(NuiGetBind(oPc, nToken, "input")));
                         string sAccountName = GetPCPlayerName(oPc);
                         string sName = GetName(oPc);
                         string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_DM");
@@ -74,6 +73,8 @@ void main()
                             ") hat die Aktivität Tagewerk gewählt und dafür 10 Gold erhalten. " +
                             JsonGetString(NuiGetBind(oPc, nToken, "input"))
                             , "Mintarn");
+                        NuiDestroy(oPc, nToken);
+                        ExecuteScript("nui_message", oPc);
                     } else {
                         NuiDestroy(oPc, nToken);
                         SetLocalString(oPc, "nui_message", "Ihr habt nicht genügend Aktivitätstoken!");
@@ -84,10 +85,8 @@ void main()
         }
         if (sType == "watch" && sElement == "dropdownbox_selected") {
             if (JsonGetInt(NuiGetBind(oPc, nToken, "dropdownbox_selected")) == 1) {
-                //SendMessageToPC(oPc, "Tagewerk");
                 NuiSetBind(oPc, nToken, "text", JsonString("Tagewerk: Ihr geht einem Beruf nach. "));
             }
-            //SendMessageToPC(oPc, "\nSELECTED: " + IntToString(JsonGetInt(NuiGetBind(oPc, nToken, "dropdownbox_selected"))) + "\n");
         }
     }
 

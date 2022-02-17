@@ -12607,7 +12607,7 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Aktivitäten Token"
+                      "value": "Aktivitätstoken"
                     },
                     "RESREF": {
                       "type": "resref",
