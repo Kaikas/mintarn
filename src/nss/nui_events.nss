@@ -2,6 +2,7 @@
 #include "global_money"
 #include "nwnx_webhook"
 #include "nwnx_util"
+#include "x3_inc_string"
 
 int CountItems(object oPc, string sTag) {
     int iResult = 0;
@@ -71,7 +72,7 @@ void main()
                         string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_DOWNTIME");
                         NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, sAccountName + " (" + sName +
                             ") hat die Aktivität Tagewerk gewählt und dafür 10 Gold erhalten. " +
-                            JsonGetString(NuiGetBind(oPc, nToken, "input"))
+                            StringReplace(JsonGetString(NuiGetBind(oPc, nToken, "input")), "\n", "_")
                             , "Mintarn");
                         NuiDestroy(oPc, nToken);
                         ExecuteScript("nui_message", oPc);
