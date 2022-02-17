@@ -6,6 +6,9 @@
 #include "global_money"
 #include "x3_inc_string"
 #include "nwnx_chat"
+#include "module_downtime"
+
+const float RP_XP_DELAY = 600.0;
 
 float quadratic(float x) {
     return (x/5000) * (x/5000);
@@ -137,6 +140,10 @@ void GiveXP(object oPc, int iCount, int iSumXp, int iToken) {
         //NWNX_Feedback_SetFeedbackMessageHidden(182, 1, oPc);
         iXp = iXp + Random(20);
         GiveXPToCreature(oPc, iXp);
+
+        // Determines if the player gets a token
+        GiveDowntimeToken(oPc);
+
         //NWNX_Feedback_SetFeedbackMessageHidden(182, 0, oPc);
         iSumXp = iSumXp + iXp;
         iCount = iCount + 1;
@@ -146,7 +153,7 @@ void GiveXP(object oPc, int iCount, int iSumXp, int iToken) {
         //}
         //SendMessageToPC(oPc, "FÃ¼r Rollenspiel habt ihr Erfahrung gewonnen.");
     }
-    DelayCommand(600.0, GiveXP(oPc, iCount, iSumXp, iToken));
+    DelayCommand(RP_XP_DELAY, GiveXP(oPc, iCount, iSumXp, iToken));
 }
 
 // Erzeugt einen zufÃ¤lligen Token
@@ -543,13 +550,13 @@ void main() {
     // Give XP every 10 Minutes
     int nSeed = Random(1000000);
     SetLocalInt(oPc, "xp_token", nSeed);
-    DelayCommand(600.0, GiveXP(oPc, 1, 0, nSeed));
+    DelayCommand(RP_XP_DELAY, GiveXP(oPc, 1, 0, nSeed));
 
 
     // Start nui
     ExecuteScript("nui_test", oPc);
     //ExecuteScript("nui_dice", oPc);
-    string sBeta = "Wir freuen uns euch mitzuteilen, dass die Beta von Mintarn am 1.10.2021 gestartet ist.\n\n" +
+    /*string sBeta = "Wir freuen uns euch mitzuteilen, dass die Beta von Mintarn am 1.10.2021 gestartet ist.\n\n" +
     "In der Beta erstellte Charaktere werden nicht mehr gelöscht. Wir haben noch zahlreiche Ideen, die wir umsetzen wollen und " +
     "es werden sicherlich auch Fehler während der Beta auftauchen, die angegangen werden müssen. Im Großen und Ganzen sind wir " +
     "aber für einen Regelbetrieb bereit und freuen uns auf eine belebte persistente Welt.\n\n" +
@@ -563,5 +570,5 @@ void main() {
     "\n\nBesucht und auf https://mintarn.de oder im Discord https://discord.gg/Tp2qyYp!";
     SendMessageToPC(oPc, sBeta);
     NWNX_Chat_SendMessage(4, sBeta, GetObjectByTag("ERZAEHLER"), oPc);
-
+    */
 }
