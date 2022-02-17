@@ -27,7 +27,7 @@
   "DescIdentified": {
     "type": "cexolocstring",
     "value": {
-      "0": "Eine kleine magische Brosche. Wenn ihr sie hoch haltet leuchtet sie kurz auf.\n\n((Dies ist ein Dankeschön für das Testen in der Alpha Phase von Mintarn. Vielen Dank für euren Beitrag!))"
+      "0": "Dieser Token kann für Aktivitäten ausgegeben werden."
     }
   },
   "Description": {
@@ -60,39 +60,7 @@
   },
   "PropertiesList": {
     "type": "list",
-    "value": [
-      {
-        "__struct_id": 0,
-        "ChanceAppear": {
-          "type": "byte",
-          "value": 100
-        },
-        "CostTable": {
-          "type": "byte",
-          "value": 3
-        },
-        "CostValue": {
-          "type": "word",
-          "value": 13
-        },
-        "Param1": {
-          "type": "byte",
-          "value": 255
-        },
-        "Param1Value": {
-          "type": "byte",
-          "value": 0
-        },
-        "PropertyName": {
-          "type": "word",
-          "value": 15
-        },
-        "Subtype": {
-          "type": "word",
-          "value": 329
-        }
-      }
-    ]
+    "value": []
   },
   "StackSize": {
     "type": "word",
@@ -104,7 +72,7 @@
   },
   "Tag": {
     "type": "cexostring",
-    "value": "SW_Aktivitaeten"
+    "value": "CRAFT_Aktivitaet"
   },
   "TemplateResRef": {
     "type": "resref",

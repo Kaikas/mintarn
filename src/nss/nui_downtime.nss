@@ -4,6 +4,7 @@ void main() {
     object oPc = OBJECT_SELF;
     json jCol = JsonArray();
     json jCol2 = JsonArray();
+    json jCol3 = JsonArray();
     json jRow = JsonArray();
 
     json jTextContent = JsonString("Dies sind Aktivitäten denen euer " +
@@ -39,11 +40,16 @@ void main() {
 
     jRow = JsonArrayInsert(jRow, jDropdownbox);
 
+    json jInput = NuiTextEdit(JsonString("Freitext zur Beschreibung der Aktivität."), NuiBind("input"), 10000, TRUE);
+    jInput = NuiHeight(jInput, 100.0);
+
     jCol = JsonArrayInsert(JsonArray(), jText);
-    jCol2 = JsonArrayInsert(JsonArray(), jButtonSelect);
-    jCol2 = JsonArrayInsert(jCol2, jButtonAbort);
+    jCol2 = JsonArrayInsert(JsonArray(), jInput);
+    jCol3 = JsonArrayInsert(JsonArray(), jButtonSelect);
+    jCol3 = JsonArrayInsert(jCol3, jButtonAbort);
     jRow = JsonArrayInsert(jRow, NuiRow(jCol));
     jRow = JsonArrayInsert(jRow, NuiRow(jCol2));
+    jRow = JsonArrayInsert(jRow, NuiRow(jCol3));
 
     json jRoot = NuiCol(jRow);
 
@@ -51,7 +57,7 @@ void main() {
 
     json jWindow = NuiWindow(jRoot,
         JsonString("Aktivitäten"),
-        NuiRect(-1.0, -1.0, 330.0, 300.0),
+        NuiRect(-1.0, -1.0, 330.0, 400.0),
         JsonBool(FALSE),
         JsonBool(FALSE),
         JsonBool(TRUE),
@@ -65,4 +71,5 @@ void main() {
     NuiSetBindWatch(oPc, token, "dropdownbox", TRUE);
     NuiSetBindWatch(oPc, token, "select_downtime", TRUE);
     NuiSetBind(oPc, token, "text", jTextContent);
+    NuiSetBind(oPc, token, "input", jInput);
 }

@@ -492,7 +492,194 @@
   },
   "List": {
     "type": "list",
-    "value": []
+    "value": [
+      {
+        "__struct_id": 0,
+        "AddCost": {
+          "type": "dword",
+          "value": 0
+        },
+        "BaseItem": {
+          "type": "int",
+          "value": 203
+        },
+        "Charges": {
+          "type": "byte",
+          "value": 0
+        },
+        "Cost": {
+          "type": "dword",
+          "value": 0
+        },
+        "Cursed": {
+          "type": "byte",
+          "value": 1
+        },
+        "DescIdentified": {
+          "type": "cexolocstring",
+          "value": {
+            "0": "Dieser Token kann für Aktivitäten ausgegeben werden."
+          }
+        },
+        "Description": {
+          "type": "cexolocstring",
+          "value": {
+            "0": ""
+          }
+        },
+        "Identified": {
+          "type": "byte",
+          "value": 1
+        },
+        "LocalizedName": {
+          "type": "cexolocstring",
+          "value": {
+            "0": "Aktivitäten Token"
+          }
+        },
+        "ModelPart1": {
+          "type": "byte",
+          "value": 52
+        },
+        "Plot": {
+          "type": "byte",
+          "value": 1
+        },
+        "PropertiesList": {
+          "type": "list",
+          "value": []
+        },
+        "StackSize": {
+          "type": "word",
+          "value": 1
+        },
+        "Stolen": {
+          "type": "byte",
+          "value": 0
+        },
+        "Tag": {
+          "type": "cexostring",
+          "value": "CRAFT_Aktivitaet"
+        },
+        "TemplateResRef": {
+          "type": "resref",
+          "value": "sw_we_aktivit"
+        },
+        "XOrientation": {
+          "type": "float",
+          "value": 0.0
+        },
+        "XPosition": {
+          "type": "float",
+          "value": 6.042
+        },
+        "YOrientation": {
+          "type": "float",
+          "value": 1.0
+        },
+        "YPosition": {
+          "type": "float",
+          "value": 7.247
+        },
+        "ZPosition": {
+          "type": "float",
+          "value": 0.0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "AddCost": {
+          "type": "dword",
+          "value": 0
+        },
+        "BaseItem": {
+          "type": "int",
+          "value": 203
+        },
+        "Charges": {
+          "type": "byte",
+          "value": 0
+        },
+        "Cost": {
+          "type": "dword",
+          "value": 0
+        },
+        "Cursed": {
+          "type": "byte",
+          "value": 1
+        },
+        "DescIdentified": {
+          "type": "cexolocstring",
+          "value": {
+            "0": "Dieser Token kann für Aktivitäten ausgegeben werden."
+          }
+        },
+        "Description": {
+          "type": "cexolocstring",
+          "value": {
+            "0": ""
+          }
+        },
+        "Identified": {
+          "type": "byte",
+          "value": 1
+        },
+        "LocalizedName": {
+          "type": "cexolocstring",
+          "value": {
+            "0": "Aktivitäten Token"
+          }
+        },
+        "ModelPart1": {
+          "type": "byte",
+          "value": 52
+        },
+        "Plot": {
+          "type": "byte",
+          "value": 1
+        },
+        "PropertiesList": {
+          "type": "list",
+          "value": []
+        },
+        "StackSize": {
+          "type": "word",
+          "value": 1
+        },
+        "Stolen": {
+          "type": "byte",
+          "value": 0
+        },
+        "Tag": {
+          "type": "cexostring",
+          "value": "CRAFT_Aktivitaet"
+        },
+        "TemplateResRef": {
+          "type": "resref",
+          "value": "sw_we_aktivit"
+        },
+        "XOrientation": {
+          "type": "float",
+          "value": 0.0
+        },
+        "XPosition": {
+          "type": "float",
+          "value": 6.7659
+        },
+        "YOrientation": {
+          "type": "float",
+          "value": 1.0
+        },
+        "YPosition": {
+          "type": "float",
+          "value": 6.781
+        },
+        "ZPosition": {
+          "type": "float",
+          "value": -0.0
+        }
+      }
+    ]
   },
   "Placeable List": {
     "type": "list",
@@ -16938,7 +17125,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -17102,7 +17289,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -17269,7 +17456,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -17436,7 +17623,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -17603,7 +17790,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -17770,7 +17957,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -17937,7 +18124,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -18104,7 +18291,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -18271,7 +18458,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -18438,7 +18625,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -18605,7 +18792,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
