@@ -68,7 +68,7 @@ void main()
                         SendMessageToPC(oPc, JsonDump(NuiGetBind(oPc, nToken, "input")));
                         string sAccountName = GetPCPlayerName(oPc);
                         string sName = GetName(oPc);
-                        string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_DM");
+                        string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_DOWNTIME");
                         NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, sAccountName + " (" + sName +
                             ") hat die Aktivität Tagewerk gewählt und dafür 10 Gold erhalten. " +
                             JsonGetString(NuiGetBind(oPc, nToken, "input"))
