@@ -12607,6 +12607,17 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
+                      "value": "Aktivitäten Token"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_we_aktivit"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
                       "value": "Alpha Abzeichen"
                     },
                     "RESREF": {
@@ -13854,22 +13865,6 @@
         "ID": {
           "type": "byte",
           "value": 53
-        },
-        "LIST": {
-          "type": "list",
-          "value": [
-            {
-              "__struct_id": 0,
-              "NAME": {
-                "type": "cexostring",
-                "value": "aaaa"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "aaaa"
-              }
-            }
-          ]
         },
         "STRREF": {
           "type": "dword",

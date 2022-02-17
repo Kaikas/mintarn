@@ -53,7 +53,7 @@ void main() {
 
     json jRoot = NuiCol(jRow);
 
-    SendMessageToPC(oPc, JsonDump(jRoot));
+    //SendMessageToPC(oPc, JsonDump(jRoot));
 
     json jWindow = NuiWindow(jRoot,
         JsonString("Aktivitäten"),

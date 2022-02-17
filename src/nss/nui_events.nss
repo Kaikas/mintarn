@@ -1,5 +1,7 @@
 #include "nw_inc_nui"
 #include "global_money"
+#include "nwnx_webhook"
+#include "nwnx_util"
 
 int CountItems(object oPc, string sTag) {
     int iResult = 0;
@@ -60,12 +62,22 @@ void main()
                 // Tagewerk
                 if (JsonGetInt(NuiGetBind(oPc, nToken, "dropdownbox_selected")) == 1) {
                     if (CountItems(oPc, "CRAFT_Aktivitaet")) {
-                        SendMessageToPC(oPc, JsonGetString(NuiGetBind(oPc, nToken, "input")));
                         DestroyItem(oPc, "CRAFT_Aktivitaet");
-                        MONEY_GiveCoinMoneyWorth(200, oPc);
-
+                        MONEY_GiveCoinMoneyWorth(1000, oPc);
+                        NuiDestroy(oPc, nToken);
+                        SetLocalString(oPc, "nui_message", "Für eure Arbeit habt ihr 10 Gold erhalten.");
+                        ExecuteScript("nui_message", oPc);
+                        string sAccountName = GetPCPlayerName(oPc);
+                        string sName = GetName(oPc);
+                        string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_DM");
+                        NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, sAccountName + " (" + sName +
+                            ") hat die Aktivität Tagewerk gewählt und dafür 10 Gold erhalten. " +
+                            JsonGetString(NuiGetBind(oPc, nToken, "input"))
+                            , "Mintarn");
                     } else {
-                        SendMessageToPC(oPc, "Ihr habt nicht genügend Aktivitätstoken");
+                        NuiDestroy(oPc, nToken);
+                        SetLocalString(oPc, "nui_message", "Ihr habt nicht genügend Aktivitätstoken!");
+                        ExecuteScript("nui_message", oPc);
                     }
                 }
             }
