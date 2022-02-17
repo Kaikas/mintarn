@@ -25,7 +25,7 @@ void main() {
         // Destroy items in inventory
         oItem = GetFirstItemInInventory(oPc);
         while (oItem != OBJECT_INVALID) {
-            if (GetSubString(GetTag(oItem), 0, 6) != "MIN_" && GetSubString(GetTag(oItem), 0, 6) != "CRAFT_" && GetSubString(GetTag(oItem), 0, 6) != "QUEST_" && GetSubString(GetTag(oItem), 0, 3) != "SW_" && GetTag(oItem) != "x3_it_pchide") {
+            if (GetSubString(GetTag(oItem), 0, 4) != "MIN_" && GetSubString(GetTag(oItem), 0, 6) != "CRAFT_" && GetSubString(GetTag(oItem), 0, 6) != "QUEST_" && GetSubString(GetTag(oItem), 0, 3) != "SW_" && GetTag(oItem) != "x3_it_pchide") {
                SendMessageToPC(oPc, GetTag(oItem));
                PrintString(GetTag(oItem));
                DestroyObject(oItem);
