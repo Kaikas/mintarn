@@ -72,7 +72,7 @@ void main()
                         string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_DOWNTIME");
                         NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, sAccountName + " (" + sName +
                             ") hat die Aktivität Tagewerk gewählt und dafür 10 Gold erhalten. " +
-                            StringReplace(JsonGetString(NuiGetBind(oPc, nToken, "input")), "\n", "_")
+                            StringReplace(JsonGetString(NuiGetBind(oPc, nToken, "input")), "\n", " ")
                             , "Mintarn");
                         NuiDestroy(oPc, nToken);
                         ExecuteScript("nui_message", oPc);
