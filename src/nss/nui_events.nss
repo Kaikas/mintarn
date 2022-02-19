@@ -66,14 +66,13 @@ void main()
                         DestroyItem(oPc, "CRAFT_Aktivitaet");
                         MONEY_GiveCoinMoneyWorth(1000, oPc);
                         SetLocalString(oPc, "nui_message", "Für eure Arbeit habt ihr 10 Gold erhalten.");
-                        SendMessageToPC(oPc, JsonDump(NuiGetBind(oPc, nToken, "input")));
+                        //SendMessageToPC(oPc, JsonDump(NuiGetBind(oPc, nToken, "input")));
                         string sAccountName = GetPCPlayerName(oPc);
                         string sName = GetName(oPc);
                         string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_DOWNTIME");
                         NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, sAccountName + " (" + sName +
-                            ") hat die Aktivität Tagewerk gewählt und dafür 10 Gold erhalten. " +
-                            StringReplace(JsonGetString(NuiGetBind(oPc, nToken, "input")), "\n", " ")
-                            , "Mintarn");
+                            ") hat die Aktivität Tagewerk gewählt und dafür 10 Gold erhalten.", "Mintarn");
+                        //StringReplace(JsonGetString(NuiGetBind(oPc, nToken, "input")), "\n", " ")
                         NuiDestroy(oPc, nToken);
                         ExecuteScript("nui_message", oPc);
                     } else {
@@ -86,11 +85,7 @@ void main()
         }
         if (sType == "watch" && sElement == "dropdownbox_selected") {
             if (JsonGetInt(NuiGetBind(oPc, nToken, "dropdownbox_selected")) == 1) {
-                NuiSetBind(oPc, nToken, "text", JsonString("Tagewerk: Ihr geht einem Beruf nach. " +
-                    "Wählt hier einen klassischen Beruf wie Jäger, Söldner, Kellner, Schreiner, und so weiter. " +
-                    "Bitte wählt hier keine Option, die die Spielwelt weitgehend verändert, " +
-                    "es geht hier einfach darum Gold zu verdienen."
-                    ));
+                NuiSetBind(oPc, nToken, "text", JsonString("Tagewerk: Ihr geht einem Beruf nach. "));
             }
         }
     }
