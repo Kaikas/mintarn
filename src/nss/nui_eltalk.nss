@@ -20,7 +20,7 @@ void main() {
     json jButtonAbort = NuiButton(JsonString("Abbrechen"));
     jButtonAbort = NuiId(jButtonAbort, "button_abort");
 
-    json jInput = NuiTextEdit(JsonString("Freitext zur Beschreibung der Handlungen eures Charakters."), NuiBind("input"), 1000, TRUE);
+    json jInput = NuiTextEdit(JsonString("Freitext"), NuiBind("input"), 1000, TRUE);
     jInput = NuiHeight(jInput, 100.0);
 
     jCol = JsonArrayInsert(JsonArray(), jText);
