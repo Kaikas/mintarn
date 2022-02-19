@@ -86,7 +86,11 @@ void main()
         }
         if (sType == "watch" && sElement == "dropdownbox_selected") {
             if (JsonGetInt(NuiGetBind(oPc, nToken, "dropdownbox_selected")) == 1) {
-                NuiSetBind(oPc, nToken, "text", JsonString("Tagewerk: Ihr geht einem Beruf nach. "));
+                NuiSetBind(oPc, nToken, "text", JsonString("Tagewerk: Ihr geht einem Beruf nach. " +
+                    "Wählt hier einen klassischen Beruf wie Jäger, Söldner, Kellner, Schreiner, und so weiter. " +
+                    "Bitte wählt hier keine Option, die die Spielwelt weitgehend verändert, " +
+                    "es geht hier einfach darum Gold zu verdienen."
+                    ));
             }
         }
     }
