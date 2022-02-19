@@ -3,7 +3,7 @@
 // Teleportiert den Spieler an seine letzte bekannte Position
 void main() {
     object oPc = GetLastUsedBy();
-    
+
     //Until this has a better place to be: Reset death fails and successes
     SetLocalInt(oPc, "DYING_POINTS", 0);
     SetLocalInt(oPc, "LIVING_POINTS", 0);
@@ -15,7 +15,7 @@ void main() {
         for (nSlot=0; nSlot < NUM_INVENTORY_SLOTS; nSlot++) {
            oItem = GetItemInSlot(nSlot, oPc);
            if (nSlot != INVENTORY_SLOT_CARMOUR && nSlot != INVENTORY_SLOT_CWEAPON_B && nSlot != INVENTORY_SLOT_CWEAPON_L && nSlot != INVENTORY_SLOT_CWEAPON_R) {
-               if (GetSubString(GetTag(oItem), 0, 6) != "CRAFT_" && GetSubString(GetTag(oItem), 0, 6) != "QUEST_" && GetSubString(GetTag(oItem), 0, 3) != "SW_" && GetTag(oItem) != "x3_it_pchide") {
+               if (GetSubString(GetTag(oItem), 0, 6) != "MIN_" && GetSubString(GetTag(oItem), 0, 6) != "CRAFT_" && GetSubString(GetTag(oItem), 0, 6) != "QUEST_" && GetSubString(GetTag(oItem), 0, 3) != "SW_" && GetTag(oItem) != "x3_it_pchide") {
                    SendMessageToPC(oPc, GetTag(oItem));
                    PrintString(GetTag(oItem));
                    DestroyObject(oItem);
@@ -25,7 +25,7 @@ void main() {
         // Destroy items in inventory
         oItem = GetFirstItemInInventory(oPc);
         while (oItem != OBJECT_INVALID) {
-            if (GetSubString(GetTag(oItem), 0, 6) != "CRAFT_" && GetSubString(GetTag(oItem), 0, 6) != "QUEST_" && GetSubString(GetTag(oItem), 0, 3) != "SW_" && GetTag(oItem) != "x3_it_pchide") {
+            if (GetSubString(GetTag(oItem), 0, 4) != "MIN_" && GetSubString(GetTag(oItem), 0, 6) != "CRAFT_" && GetSubString(GetTag(oItem), 0, 6) != "QUEST_" && GetSubString(GetTag(oItem), 0, 3) != "SW_" && GetTag(oItem) != "x3_it_pchide") {
                SendMessageToPC(oPc, GetTag(oItem));
                PrintString(GetTag(oItem));
                DestroyObject(oItem);

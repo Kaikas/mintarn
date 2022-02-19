@@ -7,25 +7,6 @@ void main()
     int iCount = 0;
 
 
-    //Goblin-Talismane
-    if(sItem == "goblin"){
-    object oItem = GetFirstItemInInventory(oPC);
-        while (oItem != OBJECT_INVALID)
-        {
-            if(GetTag(oItem) == "QUEST_GoblinTalisman"){
-                iCount++;
-                if(iSell == 1){DestroyObject(oItem);}
-            }
-            oItem = GetNextItemInInventory(oPC);
-        }
-
-        if(iSell == 0){
-        SetCustomToken(iToken, "Also " + IntToString(iCount) + " Anhänger, ja?\nDas sind dann " + IntToString(iCount*2) + " Kupferstücke.");
-        }
-        if(iSell == 1){
-        CreateItemOnObject("sw_we_kupfer", oPC, iCount*2);
-        }
-    }
     //Holzscheite
     if(sItem == "holz"){
         object oItem = GetFirstItemInInventory(oPC);

@@ -134,7 +134,7 @@
   },
   "Conversation": {
     "type": "resref",
-    "value": "conv_schmied"
+    "value": ""
   },
   "CRAdjust": {
     "type": "int",

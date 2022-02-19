@@ -119,7 +119,7 @@ void main() {
                     sTag == "ENEMY_GoblinJger" ||
                     sTag == "ENEMY_GoblinKrieger" ||
                     sTag == "ENEMY_GoblinSchamane"){
-                         int iStage;
+                         int iStage = 4;
                         string sQuery = "SELECT * FROM QuestStatus WHERE name=? AND charname=? AND quest=?";
                         if (NWNX_SQL_PrepareQuery(sQuery)) {
                             NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
@@ -131,7 +131,7 @@ void main() {
                                 iStage = StringToInt(NWNX_SQL_ReadDataInActiveRow(4));
                             }
                         }
-                        if(iStage == 1){
+                        if(iStage == 0){
                             CreateItemOnObject("sw_qu_goblintali", oPc, 1);
                         }
                     }

@@ -121,6 +121,83 @@
           "type": "cexostring",
           "value": ""
         }
+      },
+      {
+        "__struct_id": 4,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 4,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 4,
+        "Comment": {
+          "type": "cexostring",
+          "value": "Ein beinah sechzig Sommer alter Mann, dessen kurzes graues Haar sorgfältig nach hinten gekämmt ist. Sein Gesicht ziert ein dichter Schnurrbart, während der Rest der Gesichztsbehaarung deutlich weniger Aufmerksamkeit findet und sich so öfter ein ungepflegter Dreitagebart zeigt.\r\nSein Blick der dunkelgrünen Augen wirkt durch die schweren Augenlider etwas müde."
+        }
+      },
+      {
+        "__struct_id": 4,
+        "Comment": {
+          "type": "cexostring",
+          "value": "Ein durchschnittlich großer Halbling mit einem kessen Blick, der durch sein wettergeberbtes Gesicht, die langen Koteletten und den kleinen Kinnbart älter aussieht, als er wahrscheinlich ist. Besonders durch den munteren, frechen Blick und das lockige kurze Haar erweckt er einen spitzbübischen Eindruck.\r\nSeine Kleidung ist aufwendig gefertigt und in gutem Zustand, die er abseits seines Ladens oftmals um einen Hut oder eine andere ausgefallene Kopfbedeckung ergänzt."
+        }
+      },
+      {
+        "__struct_id": 4,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 4,
+        "Comment": {
+          "type": "cexostring",
+          "value": "Wegen der an den Seiten abrasierten Haare und dem stechenden Blick der grauen Augen mag der großgewachsene kräftige Mann in der Blühte seines Lebens zuerst etwas abschreckend wirken.\r\nSein Äußeres steht dadurch in direktem Gegensatz zu der ruhigen und besonnenen Art mit der er mit euch interagiert.\r\nSeine Kleidung wirkt zweckmäßig und robust. Die schwere Lederschürze weist einige Gebrauchsspuren, sowie ein Brandzeichen am unteren linken Ende auf.\r\n"
+        }
+      },
+      {
+        "__struct_id": 4,
+        "Comment": {
+          "type": "cexostring",
+          "value": "Ronja hat hell rotes glattes Haar, dass ihr nicht einmal bis zu den Schultern reicht. In ihr Haar geflochten sind mehrere Bänder mit deren Hilfe sie ihr widerspenstiges Haar bändigt und beiweilen zu einem Pferdeschanz zusammenbindet. \r\nAm ehesten dürfte aber eine große Narbe auffallen, die bei den Augenbrauen beginnend sich bis zru Wange hinab zieht. Das Augen scheint davon vollkommen unberührt.\r\nDie etwa Mitte Zwanzig Sommer geschätzte Damen wirkt kräftig und wie sie die Axt führt um das Holz zu spalten, legt gerade durch ihre Narbe die Vermutung nahe, dass sie das Werkzeug auch im Kampf einzusetzen vermag."
+        }
+      },
+      {
+        "__struct_id": 4,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 4,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 4,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 4,
+        "Comment": {
+          "type": "cexostring",
+          "value": "Eine etwas ältere mollige Frau, in deren blondem Haar sich die ersten grauen Strähnen finden. Ihr dunklerer Taint zeigt, dass sie viel Zeit an der freien Luft verbringt. \r\nIhre Kleidung ist schlicht aber sauber und auch ihr Äußeres, dass euch ihr Alter auf über 40 Sommer schätzen lässt, wirkt gepflegt.\r\nIhre honigbraunen Augen wirken wach und aufmerksam, was ihr erlaubt von ihrem Stand aus so ziemlich alles zu beobachten."
+        }
       }
     ]
   },
@@ -138,7 +215,15 @@
   },
   "Placeable List": {
     "type": "list",
-    "value": []
+    "value": [
+      {
+        "__struct_id": 9,
+        "Comment": {
+          "type": "cexostring",
+          "value": "Weapon Rack"
+        }
+      }
+    ]
   },
   "SoundList": {
     "type": "list",
@@ -146,11 +231,188 @@
   },
   "StoreList": {
     "type": "list",
-    "value": []
+    "value": [
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      }
+    ]
   },
   "TriggerList": {
     "type": "list",
-    "value": []
+    "value": [
+      {
+        "__struct_id": 1,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      }
+    ]
   },
   "WaypointList": {
     "type": "list",

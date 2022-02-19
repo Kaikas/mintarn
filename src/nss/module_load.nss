@@ -320,6 +320,15 @@ void main() {
         "PRIMARY KEY (id))";
     NWNX_SQL_ExecuteQuery(sQuery);
 
+    // Downtime activities
+    sQuery = "CREATE TABLE IF NOT EXISTS Downtime (" +
+        "id MEDIUMINT NOT NULL AUTO_INCREMENT, " +
+        "name TEXT, " +
+        "charname TEXT, " +
+        "datetime TEXT, " +
+        "PRIMARY KEY (id))";
+    NWNX_SQL_ExecuteQuery(sQuery);
+
     // Tribut
     sQuery = "CREATE TABLE IF NOT EXISTS Tribut (" +
         "id MEDIUMINT NOT NULL AUTO_INCREMENT, " +
@@ -494,8 +503,10 @@ void main() {
     NWNX_Events_SubscribeEvent("NWNX_ON_CAST_SPELL_BEFORE", "e_castspell");
     NWNX_Events_SubscribeEvent("NWNX_ON_CAST_SPELL_AFTER", "e_castspella");
 
-        NWNX_Events_SubscribeEvent("NWNX_ON_CLIENT_DISCONNECT_BEFORE", "e_disconnect");
+    NWNX_Events_SubscribeEvent("NWNX_ON_CLIENT_DISCONNECT_BEFORE", "e_disconnect");
 
+    SetEventScript(GetModule(), EVENT_SCRIPT_MODULE_ON_NUI_EVENT, "nui_events");
+    SetEventScript(GetModule(), EVENT_SCRIPT_MODULE_ON_PLAYER_TARGET, "nui_events_t");
 
     // Lighting
     int iDawn = 7;

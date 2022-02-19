@@ -234,13 +234,6 @@
         "__struct_id": 9,
         "Comment": {
           "type": "cexostring",
-          "value": "Weapon Rack"
-        }
-      },
-      {
-        "__struct_id": 9,
-        "Comment": {
-          "type": "cexostring",
           "value": "Chandelier"
         }
       },
@@ -360,7 +353,7 @@
         "__struct_id": 9,
         "Comment": {
           "type": "cexostring",
-          "value": "Chest - 2 (Low treasure script)\r\n\r\nHardness DC: 10"
+          "value": "Merchants Shingle - 7"
         }
       }
     ]
@@ -384,6 +377,13 @@
   "StoreList": {
     "type": "list",
     "value": [
+      {
+        "__struct_id": 11,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
       {
         "__struct_id": 11,
         "Comment": {
