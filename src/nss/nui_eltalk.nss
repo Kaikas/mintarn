@@ -12,8 +12,7 @@ void main() {
         "kann.\n\n" +
         "Hier könnt ihr Einfluss auf die Spielwelt nehmen und in Absprache mit " +
         "einem EL die Welt verändern. Ihr könnt dies aber auch als Tagebuch " +
-        "verwenden. In jedem Fall soll dies die Kommunikation zwischen euch und " +
-        "der Spielleitung verbessern.");
+        "verwenden.");
     json jText = NuiText(NuiBind("text"));
     jText = NuiId(jText, "text");
     json jButtonSelect = NuiButton(JsonString("Senden"));
@@ -21,7 +20,7 @@ void main() {
     json jButtonAbort = NuiButton(JsonString("Abbrechen"));
     jButtonAbort = NuiId(jButtonAbort, "button_abort");
 
-    json jInput = NuiTextEdit(JsonString("Freitext zur Beschreibung der Aktivität."), NuiBind("input"), 1000, TRUE);
+    json jInput = NuiTextEdit(JsonString("Freitext zur Beschreibung der Handlungen eures Charakters."), NuiBind("input"), 1000, TRUE);
     jInput = NuiHeight(jInput, 100.0);
 
     jCol = JsonArrayInsert(JsonArray(), jText);
