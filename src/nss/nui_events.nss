@@ -90,4 +90,24 @@ void main()
         }
     }
 
+    if (sWindowId == "eltalk") {
+        if (sType == "click") {
+            if (sElement == "button_abort") {
+                NuiDestroy(oPc, nToken);
+            }
+            if (sElement == "button_select") {
+                    SetLocalString(oPc, "nui_message", "Eure Nachricht ist bei der Spielleitung angekommen.");
+                    //SendMessageToPC(oPc, JsonDump(NuiGetBind(oPc, nToken, "input")));
+                    string sAccountName = GetPCPlayerName(oPc);
+                    string sName = GetName(oPc);
+                    string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_DM");
+                    NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, sAccountName + " (" + sName +
+                        ") " +
+                        StringReplace(StringReplace(JsonGetString(NuiGetBind(oPc, nToken, "input")), "\n", " "), "\"", ""), "Mintarn");
+
+                    NuiDestroy(oPc, nToken);
+                    ExecuteScript("nui_message", oPc);
+            }
+        }
+    }
 }

@@ -1,6 +1,19 @@
 #include "x3_inc_string"
 #include "nwnx_time"
 
+int CountItemsByTag(object oPc, string sTag) {
+    int iResult = 0;
+    object oItem = GetFirstItemInInventory(oPc);
+    while (oItem != OBJECT_INVALID)
+    {
+        if (sTag == GetTag(oItem)) {
+            iResult = iResult + 1;
+        }
+        oItem = GetNextItemInInventory(oPc);
+    }
+    return iResult;
+}
+
 // Checks if a player has an item with tag sItem
 int iHasItem(string sItem, object oPc) {
     object oItem;

@@ -803,4 +803,8 @@ void main() {
         DelayCommand(2.0f, RemoveEffectByName(oPc, "eff_alphalight"));
     }
 
+    // Geschichtsbuch
+    if (GetTag(oItem) == "CRAFT_Geschichte") {
+        ExecuteScript("nui_eltalk", oPc);
+    }
 }

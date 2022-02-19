@@ -169,6 +169,12 @@ string GenerateToken() {
     return sToken;
 }
 
+void GiveGeschichtsbuch(object oPc) {
+    if (CountItemsByTag(oPc, "CRAFT_Geschichte") == 0) {
+        CreateItemOnObject("sw_we_geschichte", oPc);
+    }
+}
+
 void main() {
     // Default Script
     ExecuteScript("x3_mod_pre_enter", OBJECT_SELF);
@@ -546,6 +552,8 @@ void main() {
     if (iStage == 0) {
         AddJournalQuestEntry("wache", 1, oPc, FALSE, FALSE, TRUE);
     }
+
+    GiveGeschichtsbuch(oPc);
 
     // Give XP every 10 Minutes
     int nSeed = Random(1000000);
