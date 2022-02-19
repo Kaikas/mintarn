@@ -11,7 +11,7 @@ int StartingConditional() {
         if (GetScriptParam("item") == "CRAFT_Eisenerz") {
             NWNX_SQL_PreparedString(2, "schmied_intro");
         }
-        if (GetScriptParam("item") == "CRAFT_Fackel") {
+        if (GetScriptParam("item") == "MIN_Leuchte") {
             NWNX_SQL_PreparedString(2, "lederer_intro");
         }
         if (GetScriptParam("item") == "CRAFT_Birkenholz") {
@@ -41,7 +41,7 @@ int StartingConditional() {
     if (GetScriptParam("item") == "sw_we_beduerftige" && iStage == 1) {
         return 1;
     }
-    if (GetScriptParam("item") == "CRAFT_Fackel" && iStage == 0 && iResult > 0) {
+    if (GetScriptParam("item") == "MIN_Leuchte" && iStage == 0 && iResult > 0) {
         return 1;
     }
     if (GetScriptParam("item") == "QUEST_GoblinTalisman" && iStage == 1) {

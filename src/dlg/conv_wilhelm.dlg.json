@@ -115,7 +115,7 @@
                     },
                     "Value": {
                       "type": "cexostring",
-                      "value": "CRAFT_Fackel"
+                      "value": "MIN_Leuchte"
                     }
                   }
                 ]
