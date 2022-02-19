@@ -9,10 +9,7 @@ void main() {
 
     json jTextContent = JsonString("Beschreibt was euer Charakter gerne machen " +
         "würde. Diese Information landet bei der Spielleitung, welche darauf reagieren " +
-        "kann.\n\n" +
-        "Hier könnt ihr Einfluss auf die Spielwelt nehmen und in Absprache mit " +
-        "einem EL die Welt verändern. Ihr könnt dies aber auch als Tagebuch " +
-        "verwenden.");
+        "kann.");
     json jText = NuiText(NuiBind("text"));
     jText = NuiId(jText, "text");
     json jButtonSelect = NuiButton(JsonString("Senden"));
