@@ -180,7 +180,7 @@ void PC_CreateNUIWindow(object oPlayer, int bOpenInventory = PC_OPEN_INVENTORY_W
     // Here we set the initial window position, either to the default position or wherever the player last left it
     NuiSetBind(oPlayer, nToken, "geometry", jGeometry);
     // Setting the window title
-    NuiSetBind(oPlayer, nToken, "window_name", "Truhe von " + JsonString(GetName(oPlayer)));
+    NuiSetBind(oPlayer, nToken, "window_name", JsonString("Truhe von " + GetName(oPlayer)));
     // We clear the search bar, this'll invoke the watch event, if enabled, where we do some other stuff
     NuiSetBind(oPlayer, nToken, "search", JsonString(""));
     // Enable or disable the clear button depending on if we have the search button enabled
