@@ -11,8 +11,8 @@ void main() {
     if (GetTag(OBJECT_SELF) == "SHOP_Lebensmittel_Pina") {
         oStore = GetNearestObjectByTag("STORE_Lebensmittel_Pina");
     }
-    if (GetTag(OBJECT_SELF) == "SHOP_Wilhelm_Lederer") {
-        oStore = GetNearestObjectByTag("STORE_Wilhelm_Lederer");
+    if (GetTag(OBJECT_SELF) == "SHOP_Lederer_Wilhelm") {
+        oStore = GetNearestObjectByTag("STORE_Lederer_Wilhelm");
     }
     if (GetTag(OBJECT_SELF) == "SHOP_Musik") {
         oStore = GetNearestObjectByTag("STORE_Musik");
@@ -42,5 +42,4 @@ void main() {
     if(GetObjectType(oStore) == OBJECT_TYPE_STORE) {
         OpenStore(oStore, oPc);
     }
-
 }

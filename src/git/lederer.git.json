@@ -13266,7 +13266,7 @@
         },
         "Tag": {
           "type": "cexostring",
-          "value": "SHOP_Wilhelm_Lederer"
+          "value": "SHOP_Lederer_Wilhelm"
         },
         "TemplateResRef": {
           "type": "resref",
@@ -13310,11 +13310,11 @@
         },
         "X": {
           "type": "float",
-          "value": 17.5911
+          "value": 17.5513
         },
         "Y": {
           "type": "float",
-          "value": 16.9728
+          "value": 16.8559
         },
         "Z": {
           "type": "float",
