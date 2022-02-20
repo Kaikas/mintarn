@@ -1,12 +1,9 @@
-void main()
-{
-    object oPlayer = NuiGetEventPlayer();
-    int nToken = NuiGetEventWindow();
-    string sWindowId  = NuiGetWindowId(oPlayer, nToken);
-    string sType = NuiGetEventType();
-    string sElement = NuiGetEventElement();
-    int nArrayIndex = NuiGetEventArrayIndex();
-    json jPayload = NuiGetEventPayload();
+#include "inc_perchest"
 
-    SendMessageToPC(oPlayer, "events_t (" + IntToString(nToken) + ":" + sWindowId + ") T: " + sType + ", E: " + sElement + ", AI: " + IntToString(nArrayIndex) + ", P: " + JsonDump(jPayload));
+void main() {
+    object oPlayer = GetLastPlayerToSelectTarget();
+    object oTarget = GetTargetingModeSelectedObject();
+    vector vPosition = GetTargetingModeSelectedPosition();
+
+    PC_HandleDepositEvent(oPlayer, oTarget, vPosition);
 }

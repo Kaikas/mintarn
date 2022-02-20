@@ -355,6 +355,13 @@
           "type": "cexostring",
           "value": "Merchants Shingle - 7"
         }
+      },
+      {
+        "__struct_id": 9,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
       }
     ]
   },

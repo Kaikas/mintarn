@@ -10889,7 +10889,7 @@
         },
         "Bearing": {
           "type": "float",
-          "value": -1.5217
+          "value": 3.1416
         },
         "BodyBag": {
           "type": "byte",
@@ -10932,7 +10932,7 @@
         },
         "HasInventory": {
           "type": "byte",
-          "value": 1
+          "value": 0
         },
         "HP": {
           "type": "short",
@@ -10971,7 +10971,7 @@
         },
         "OnClosed": {
           "type": "resref",
-          "value": "pchest_close"
+          "value": ""
         },
         "OnDamaged": {
           "type": "resref",
@@ -11003,7 +11003,7 @@
         },
         "OnOpen": {
           "type": "resref",
-          "value": "pchest_open"
+          "value": ""
         },
         "OnSpellCastAt": {
           "type": "resref",
@@ -11019,7 +11019,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "pchest_used"
+          "value": "nui_persistentch"
         },
         "OnUserDefined": {
           "type": "resref",
@@ -11091,11 +11091,11 @@
         },
         "X": {
           "type": "float",
-          "value": 17.5196
+          "value": 6.2293
         },
         "Y": {
           "type": "float",
-          "value": 5.4247
+          "value": 2.4592
         },
         "Z": {
           "type": "float",
@@ -19235,7 +19235,7 @@
         },
         "XPosition": {
           "type": "float",
-          "value": 6.0688
+          "value": 4.0933
         },
         "YOrientation": {
           "type": "float",
@@ -19243,7 +19243,7 @@
         },
         "YPosition": {
           "type": "float",
-          "value": 2.4411
+          "value": 2.2612
         },
         "ZPosition": {
           "type": "float",
@@ -19336,7 +19336,7 @@
         },
         "XPosition": {
           "type": "float",
-          "value": 5.1926
+          "value": 3.111
         },
         "YOrientation": {
           "type": "float",
@@ -19344,11 +19344,11 @@
         },
         "YPosition": {
           "type": "float",
-          "value": 2.5494
+          "value": 2.4601
         },
         "ZPosition": {
           "type": "float",
-          "value": 0.0
+          "value": -0.0
         }
       }
     ]

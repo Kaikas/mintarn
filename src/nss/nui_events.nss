@@ -3,6 +3,8 @@
 #include "nwnx_webhook"
 #include "nwnx_util"
 #include "x3_inc_string"
+#include "inc_perchest"
+
 
 int CountItems(object oPc, string sTag) {
     int iResult = 0;
@@ -141,5 +143,7 @@ void main()
             }
         }
     }
-
+    if (sWindowId == PC_NUI_WINDOW_ID) {
+        PC_HandleNUIEvents(oPc, nToken, sType, sElement, nArrayIndex);
+    }
 }
