@@ -13575,7 +13575,7 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "SW Name ändern"
+                      "value": "SW Name und Beschreibung"
                     },
                     "RESREF": {
                       "type": "resref",

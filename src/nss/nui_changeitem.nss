@@ -28,7 +28,7 @@ void main() {
     json jRoot = NuiCol(jRow);
 
     json jWindow = NuiWindow(jRoot,
-        JsonString("Change Item"),
+        JsonString("Name und Beschreibung"),
         NuiRect(-1.0, -1.0, 320.0, 400.0),
         JsonBool(FALSE),
         JsonBool(FALSE),

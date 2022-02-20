@@ -667,7 +667,7 @@ void main() {
     // Change Name
     if (GetTag(oItem) == "SW_ChangeName") {
         object oTarget = GetItemActivatedTarget();
-        if (GetObjectType(oTarget) == OBJECT_TYPE_ITEM) {
+        if (GetObjectType(oTarget) == OBJECT_TYPE_ITEM || GetIsDM(oPc)) {
             SetLocalObject(oPc, "changename", oTarget);
             ExecuteScript("nui_changeitem", oPc);
         }
