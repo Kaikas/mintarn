@@ -11,6 +11,7 @@ void main() {
         "würde. Diese Information landet bei der Spielleitung, welche darauf reagieren " +
         "kann.");
     json jText = NuiText(NuiBind("text"));
+    jText = NuiHeight(jText, 100.0f);
     jText = NuiId(jText, "text");
     json jButtonSelect = NuiButton(JsonString("Senden"));
     jButtonSelect = NuiId(jButtonSelect, "button_select");
@@ -19,6 +20,7 @@ void main() {
 
     json jInput = NuiTextEdit(JsonString("Freitext"), NuiBind("input"), 1000, TRUE);
     jInput = NuiHeight(jInput, 100.0);
+    jInput = NuiHeight(jInput, 200.0f);
 
     jCol = JsonArrayInsert(JsonArray(), jText);
     jCol2 = JsonArrayInsert(JsonArray(), jInput);
@@ -31,8 +33,8 @@ void main() {
     json jRoot = NuiCol(jRow);
 
     json jWindow = NuiWindow(jRoot,
-        JsonString("Geschichten und Tagebücher"),
-        NuiRect(-1.0, -1.0, 330.0, 400.0),
+        JsonString("Geschichtsbuch"),
+        NuiRect(-1.0, -1.0, 320.0, 400.0),
         JsonBool(FALSE),
         JsonBool(FALSE),
         JsonBool(TRUE),
