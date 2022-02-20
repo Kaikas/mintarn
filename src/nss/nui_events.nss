@@ -103,10 +103,27 @@ void main()
                     string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_DM");
                     NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, sAccountName + " (" + sName +
                         ") " +
-                        StringReplace(StringReplace(JsonGetString(NuiGetBind(oPc, nToken, "input")), "\n", " "), "\"", ""), "Mintarn");
+                        StringReplace(StringReplace(JsonGetString(NuiGetBind(oPc, nToken, "input")), "\"", ""), "\n", ""), "Mintarn");
 
                     NuiDestroy(oPc, nToken);
                     ExecuteScript("nui_message", oPc);
+            }
+        }
+    }
+    if (sWindowId == "changeitem") {
+        if (sType == "click") {
+            if (sElement == "button_abort") {
+                NuiDestroy(oPc, nToken);
+            }
+            if (sElement == "button_select") {
+                string sName = StringReplace(StringReplace(JsonGetString(NuiGetBind(oPc, nToken, "inputname")), "\n", " "), "\"", "");
+                string sDescription = JsonGetString(NuiGetBind(oPc, nToken, "inputdescription"));
+                object oTarget = GetLocalObject(oPc, "changename");
+                if (oTarget != OBJECT_INVALID) {
+                  SetName(oTarget, sName);
+                  SetDescription(oTarget, sDescription);
+                }
+                NuiDestroy(oPc, nToken);
             }
         }
     }

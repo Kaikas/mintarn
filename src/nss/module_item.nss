@@ -667,12 +667,16 @@ void main() {
     // Change Name
     if (GetTag(oItem) == "SW_ChangeName") {
         object oTarget = GetItemActivatedTarget();
-        SetLocalObject(oPc, "changename", oTarget);
+        if (GetObjectType(oTarget) == OBJECT_TYPE_ITEM) {
+            SetLocalObject(oPc, "changename", oTarget);
+            ExecuteScript("nui_changeitem", oPc);
+        }
     }
     // Change description
     if (GetTag(oItem) == "SW_ChangeDesc") {
         object oTarget = GetItemActivatedTarget();
         SetLocalObject(oPc, "changedesc", oTarget);
+        ExecuteScript("nui_changeitem", oPc);
     }
     // Feenstaub
     if (GetTag(oItem) == "CRAFT_Feenstaub") {

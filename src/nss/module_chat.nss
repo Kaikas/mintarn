@@ -2067,9 +2067,7 @@ void main() {
         banPlayer(sMessage) ||
         unbanPlayer(sMessage) ||
         listCDKeys(sMessage) ||
-        listBannedPlayers(sMessage) ||
-        changeName(sMessage) ||
-        changeDescription(sMessage) ||
+        listBannedPlayers(sMessage) ||        //changeName(sMessage) ||        //changeDescription(sMessage) ||
         ride(sMessage) ||
         unstuck(sMessage) ||
         report(sMessage) ||
