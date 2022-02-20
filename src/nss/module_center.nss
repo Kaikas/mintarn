@@ -262,7 +262,7 @@ void main() {
                 StringReplace(sDescription, "<br />", "\n");
                 StringReplace(sDescription, "\r", "");
                 //SendMessageToPC(oPc, sDescription);
-                SetDescription(oPc, sDescription);
+                //SetDescription(oPc, sDescription);
                 // Hitpoints
                 //NWNX_Feedback_SetCombatLogMessageHidden(11, 1);
                 NWNX_Feedback_SetCombatLogMessageHidden(3, 1, oPc);

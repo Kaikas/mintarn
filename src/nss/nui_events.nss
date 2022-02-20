@@ -127,4 +127,19 @@ void main()
             }
         }
     }
+    if (sWindowId == "changedesc") {
+        if (sType == "click") {
+            if (sElement == "button_abort") {
+                NuiDestroy(oPc, nToken);
+            }
+            if (sElement == "button_select") {
+                string sDescription = JsonGetString(NuiGetBind(oPc, nToken, "inputdescription"));
+                if (oPc != OBJECT_INVALID) {
+                  SetDescription(oPc, sDescription);
+                }
+                NuiDestroy(oPc, nToken);
+            }
+        }
+    }
+
 }
