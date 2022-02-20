@@ -41309,7 +41309,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 276
+                      "value": 10
                     },
                     "Cursed": {
                       "type": "byte",
@@ -41475,7 +41475,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 276
+                      "value": 10
                     },
                     "Cursed": {
                       "type": "byte",
@@ -41632,7 +41632,7 @@
         },
         "Tag": {
           "type": "cexostring",
-          "value": "STORE_Alchemist"
+          "value": "STORE_Alchemist_Aleriskon"
         },
         "WillNotBuy": {
           "type": "list",
