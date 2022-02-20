@@ -374,7 +374,7 @@ int report(string sMessage) {
       "): " +
       GetSubString(sMessage, 7, 300);
     NWNX_WebHook_SendWebHookHTTPS("discordapp.com",
-        NWNX_Util_GetEnvironmentVariable("WEBHOOK_FEHLER"), sLogMessage, "Mintarn", 0);
+        NWNX_Util_GetEnvironmentVariable("WEBHOOK_FEHLER"), StringReplace(sLogMessage, "\"", ""), "Mintarn", 0);
     SendMessageToPC(oPc, "Vielen Dank für die Fehlermeldung. " +
         "Sie ist im Discord angekommen und wird von uns so bald wie möglich bearbeitet.");
     return 1;
@@ -2067,9 +2067,7 @@ void main() {
         banPlayer(sMessage) ||
         unbanPlayer(sMessage) ||
         listCDKeys(sMessage) ||
-        listBannedPlayers(sMessage) ||
-        changeName(sMessage) ||
-        changeDescription(sMessage) ||
+        listBannedPlayers(sMessage) ||        //changeName(sMessage) ||        //changeDescription(sMessage) ||
         ride(sMessage) ||
         unstuck(sMessage) ||
         report(sMessage) ||

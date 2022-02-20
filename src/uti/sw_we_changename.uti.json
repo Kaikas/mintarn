@@ -41,7 +41,7 @@
   "LocalizedName": {
     "type": "cexolocstring",
     "value": {
-      "0": "SW Name ändern"
+      "0": "SW Name und Beschreibung"
     }
   },
   "ModelPart1": {

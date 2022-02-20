@@ -15,12 +15,30 @@ void main() {
 
             string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_OOC");
             NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, GetName(oPc) + " sucht bei der Taverne Zum Rettenden Ufer nach Rollenspiel.");
+        }
+        if (GetTag(OBJECT_SELF) == "RP_Hain") {
+            sMessage = GetToken(102) + GetName(oPc) + " sucht im versteckten Hain nach Rollenspiel.</c>";
 
-            object oTarget = GetFirstPC();
-            while (oTarget != OBJECT_INVALID) {
-                SendMessageToPC(oTarget, sMessage);
-                oTarget = GetNextPC();
-            }
+            string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_OOC");
+            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, GetName(oPc) + " sucht im versteckten Hain nach Rollenspiel.");
+        }
+        if (GetTag(OBJECT_SELF) == "RP_Aussenposten") {
+            sMessage = GetToken(102) + GetName(oPc) + " sucht am Auﬂenposten nach Rollenspiel.</c>";
+
+            string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_OOC");
+            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, GetName(oPc) + " sucht am Auﬂenposten nach Rollenspiel.");
+        }
+        if (GetTag(OBJECT_SELF) == "RP_Holzfaeller") {
+            sMessage = GetToken(102) + GetName(oPc) + " sucht am Holzf‰llerlager nach Rollenspiel.</c>";
+
+            string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_OOC");
+            NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, GetName(oPc) + " sucht am Holzf‰llerlager nach Rollenspiel.");
+        }
+
+        object oTarget = GetFirstPC();
+        while (oTarget != OBJECT_INVALID) {
+            SendMessageToPC(oTarget, sMessage);
+            oTarget = GetNextPC();
         }
     }
 }

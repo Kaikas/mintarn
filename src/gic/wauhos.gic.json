@@ -287,6 +287,13 @@
           "type": "cexostring",
           "value": "Places an Area Transition in the Doorway (Similar to how a transition would appear after a Door is destroyed)."
         }
+      },
+      {
+        "__struct_id": 8,
+        "Comment": {
+          "type": "cexostring",
+          "value": "Strong Door"
+        }
       }
     ]
   },
@@ -5954,13 +5961,6 @@
         "__struct_id": 9,
         "Comment": {
           "type": "cexostring",
-          "value": ""
-        }
-      },
-      {
-        "__struct_id": 9,
-        "Comment": {
-          "type": "cexostring",
           "value": "no ambient light\r\nState: Activated=on, Deactivated=off\r\nuseable, plot\r\nAnimation State: activated\r\nScript Set: p_staticlight.ini\r\nint CEP_L_AMION=1"
         }
       },
@@ -6711,13 +6711,6 @@
         "Comment": {
           "type": "cexostring",
           "value": "not sittable"
-        }
-      },
-      {
-        "__struct_id": 9,
-        "Comment": {
-          "type": "cexostring",
-          "value": ""
         }
       },
       {
@@ -8349,13 +8342,6 @@
         "Comment": {
           "type": "cexostring",
           "value": "not sittable"
-        }
-      },
-      {
-        "__struct_id": 9,
-        "Comment": {
-          "type": "cexostring",
-          "value": ""
         }
       },
       {
@@ -10960,6 +10946,34 @@
         "Comment": {
           "type": "cexostring",
           "value": "dynamic, plot\r\nScript Set: p_chair.ini"
+        }
+      },
+      {
+        "__struct_id": 9,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 9,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 9,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        }
+      },
+      {
+        "__struct_id": 9,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
         }
       },
       {

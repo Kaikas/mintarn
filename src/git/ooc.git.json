@@ -3116,7 +3116,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "desc_startc"
+          "value": "nui_changedesc"
         },
         "OnUserDefined": {
           "type": "resref",

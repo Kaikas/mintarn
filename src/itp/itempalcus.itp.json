@@ -13102,6 +13102,17 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
+                      "value": "Geschichtsbuch"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_we_geschichte"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
                       "value": "Gift"
                     },
                     "RESREF": {
@@ -13564,7 +13575,7 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "SW Name ändern"
+                      "value": "SW Name und Beschreibung"
                     },
                     "RESREF": {
                       "type": "resref",

@@ -169,6 +169,12 @@ string GenerateToken() {
     return sToken;
 }
 
+void GiveGeschichtsbuch(object oPc) {
+    if (CountItemsByTag(oPc, "CRAFT_Geschichte") == 0) {
+        CreateItemOnObject("sw_we_geschichte", oPc);
+    }
+}
+
 void main() {
     // Default Script
     ExecuteScript("x3_mod_pre_enter", OBJECT_SELF);
@@ -256,7 +262,7 @@ void main() {
                 StringReplace(sDescription, "<br />", "\n");
                 StringReplace(sDescription, "\r", "");
                 //SendMessageToPC(oPc, sDescription);
-                SetDescription(oPc, sDescription);
+                //SetDescription(oPc, sDescription);
                 // Hitpoints
                 //NWNX_Feedback_SetCombatLogMessageHidden(11, 1);
                 NWNX_Feedback_SetCombatLogMessageHidden(3, 1, oPc);
@@ -546,6 +552,8 @@ void main() {
     if (iStage == 0) {
         AddJournalQuestEntry("wache", 1, oPc, FALSE, FALSE, TRUE);
     }
+
+    GiveGeschichtsbuch(oPc);
 
     // Give XP every 10 Minutes
     int nSeed = Random(1000000);
