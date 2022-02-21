@@ -122,13 +122,6 @@
         "__struct_id": 9,
         "Comment": {
           "type": "cexostring",
-          "value": "Flower Vase"
-        }
-      },
-      {
-        "__struct_id": 9,
-        "Comment": {
-          "type": "cexostring",
           "value": "Invisible Object"
         }
       },
@@ -354,6 +347,13 @@
         "Comment": {
           "type": "cexostring",
           "value": "Merchants Shingle - 7"
+        }
+      },
+      {
+        "__struct_id": 9,
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
         }
       }
     ]

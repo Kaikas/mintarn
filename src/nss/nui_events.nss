@@ -146,5 +146,18 @@ void main()
             }
         }
     }
-
+    if (sWindowId == "changegod") {
+        if (sType == "click") {
+            if (sElement == "button_abort") {
+                NuiDestroy(oPc, nToken);
+            }
+            if (sElement == "button_select") {
+                string sGod = JsonGetString(NuiGetBind(oPc, nToken, "inputgod"));
+                if (oPc != OBJECT_INVALID) {
+                  SetDeity(oPc, sGod);
+                }
+                NuiDestroy(oPc, nToken);
+            }
+        }
+    }
 }
