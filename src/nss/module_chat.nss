@@ -2147,7 +2147,7 @@ void main() {
       //SetPCChatMessage(sMessage);
       if (GetIsDM(oPc) || GetIsDM(GetMaster(oPc)) || GetIsDMPossessed(oPc)) {
         SendMessageToPC(oPc, "Folgende Spieler im 50 Meter Radius haben euch vernommen:");
-        SendMessageToAllDMs("ErzÂ¿hler (/s)[" + GetTag(GetArea(oPc)) + "]: " + sMessage);
+        SendMessageToAllDMs("Erzähler (/s)[" + GetTag(GetArea(oPc)) + "]: " + sMessage);
         object oTalkTo = GetFirstPC();
         while (oTalkTo != OBJECT_INVALID) {
           if (GetArea(oTalkTo) == GetArea(oPc) && GetDistanceBetween(oTalkTo, oPc) < 50.0) {
