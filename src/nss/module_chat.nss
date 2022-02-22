@@ -2050,6 +2050,14 @@ int openDowntime(string sMessage) {
     return 0;
 }
 
+int ELTools(string sMessage) {
+    if (sMessage == "/eltools" && GetIsDM(oPc)) {
+        ExecuteScript("nui_eltools", oPc);
+        return 1;
+    }
+    return 0;
+}
+
 // Chat befehle
 void main() {
   string sMessage = GetPCChatMessage();
@@ -2103,6 +2111,7 @@ void main() {
         helpAnimation(sMessage) ||
         helpSkills(sMessage) ||
         openDowntime(sMessage) ||
+        ELTools(sMessage) ||
         helpMasks(sMessage)) {
         } else {
           SendMessageToPC(oPc, "Ungültiger Befehl: \"" +
