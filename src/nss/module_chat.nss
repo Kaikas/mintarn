@@ -211,6 +211,7 @@ void speak(object oSpeaker, string sMessage) {
   SetPCChatVolume(TALKVOLUME_SILENT_TALK);
   SetLocalString(oSpeaker, "sMessage", sMessage);
   SetLocalInt(oSpeaker, "iChatVolume", iChatVolume);
+  if (iChatVolume == 2) SetLocalInt(oSpeaker, "iChatVolume", TALKVOLUME_SILENT_TALK);
   if (GetIsDM(oSpeaker)) {
     SendMessageToPC(oSpeaker, "Achtung! Aus technischen Gründen kam die Nachricht nicht an. Versuche es mit /a für alle, /g für Gebiet oder /s für Umkreis.");
   } else {
@@ -2072,6 +2073,8 @@ void main() {
   string sBan = GetSubString(sMessage, 0, 4);
   string sUnban = GetSubString(sMessage, 0, 6);
   string sPferd= GetSubString(sMessage, 0, 4);
+
+  if (iChatVolume == 2) SetPCChatVolume(TALKVOLUME_TALK);
 
   if (GetSubString(sMessage, 0, 1) == ":" || GetSubString(sMessage, 0, 1) == "/") {
     if (speakAsChar(sMessage) ||
