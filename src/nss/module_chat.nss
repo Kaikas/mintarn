@@ -211,7 +211,11 @@ void speak(object oSpeaker, string sMessage) {
   SetPCChatVolume(TALKVOLUME_SILENT_TALK);
   SetLocalString(oSpeaker, "sMessage", sMessage);
   SetLocalInt(oSpeaker, "iChatVolume", iChatVolume);
-  ExecuteScript("global_speak", oSpeaker);
+  if (GetIsDM(oSpeaker)) {
+    SendMessageToPC(oSpeaker, "Achtung! Aus technischen Gründen kam die Nachricht nicht an. Versuche es mit /a für alle, /g für Gebiet oder /s für Umkreis.");
+  } else {
+      ExecuteScript("global_speak", oSpeaker);
+  }
 }
 
 int speakOOC(string sMessage, object oTarget) {
@@ -2050,6 +2054,14 @@ int openDowntime(string sMessage) {
     return 0;
 }
 
+int ELTools(string sMessage) {
+    if (sMessage == "/eltools" && GetIsDM(oPc)) {
+        ExecuteScript("nui_eltools", oPc);
+        return 1;
+    }
+    return 0;
+}
+
 // Chat befehle
 void main() {
   string sMessage = GetPCChatMessage();
@@ -2103,6 +2115,7 @@ void main() {
         helpAnimation(sMessage) ||
         helpSkills(sMessage) ||
         openDowntime(sMessage) ||
+        ELTools(sMessage) ||
         helpMasks(sMessage)) {
         } else {
           SendMessageToPC(oPc, "Ungültiger Befehl: \"" +
