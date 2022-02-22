@@ -211,7 +211,12 @@ void speak(object oSpeaker, string sMessage) {
   SetPCChatVolume(TALKVOLUME_SILENT_TALK);
   SetLocalString(oSpeaker, "sMessage", sMessage);
   SetLocalInt(oSpeaker, "iChatVolume", iChatVolume);
-  ExecuteScript("global_speak", oSpeaker);
+  if (iChatVolume == 2) SetLocalInt(oSpeaker, "iChatVolume", TALKVOLUME_SILENT_TALK);
+  if (GetIsDM(oSpeaker)) {
+    SendMessageToPC(oSpeaker, "Achtung! Aus technischen Gründen kam die Nachricht nicht an. Versuche es mit /a für alle, /g für Gebiet oder /s für Umkreis.");
+  } else {
+      ExecuteScript("global_speak", oSpeaker);
+  }
 }
 
 int speakOOC(string sMessage, object oTarget) {
@@ -2069,6 +2074,8 @@ void main() {
   string sUnban = GetSubString(sMessage, 0, 6);
   string sPferd= GetSubString(sMessage, 0, 4);
 
+  if (iChatVolume == 2) SetPCChatVolume(TALKVOLUME_TALK);
+
   if (GetSubString(sMessage, 0, 1) == ":" || GetSubString(sMessage, 0, 1) == "/") {
     if (speakAsChar(sMessage) ||
         speakOOC(sMessage, oPc) ||
@@ -2143,7 +2150,7 @@ void main() {
       //SetPCChatMessage(sMessage);
       if (GetIsDM(oPc) || GetIsDM(GetMaster(oPc)) || GetIsDMPossessed(oPc)) {
         SendMessageToPC(oPc, "Folgende Spieler im 50 Meter Radius haben euch vernommen:");
-        SendMessageToAllDMs("ErzÂ¿hler (/s)[" + GetTag(GetArea(oPc)) + "]: " + sMessage);
+        SendMessageToAllDMs("Erzähler (/s)[" + GetTag(GetArea(oPc)) + "]: " + sMessage);
         object oTalkTo = GetFirstPC();
         while (oTalkTo != OBJECT_INVALID) {
           if (GetArea(oTalkTo) == GetArea(oPc) && GetDistanceBetween(oTalkTo, oPc) < 50.0) {
