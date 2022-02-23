@@ -169,7 +169,7 @@ void main()
                 NWNX_SQL_ExecutePreparedQuery();
                 while (NWNX_SQL_ReadyToReadNextRow()) {
                     NWNX_SQL_ReadNextRow();
-                    sText = sText + NWNX_SQL_ReadDataInActiveRow(1);
+                    sText = sText + NWNX_SQL_ReadDataInActiveRow(2) + " " + NWNX_SQL_ReadDataInActiveRow(3) + "\n";
                 }
             }
             NuiSetBind(oPc, nToken, "chatbox", JsonString(sText));
