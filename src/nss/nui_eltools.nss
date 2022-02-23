@@ -49,7 +49,7 @@ void main() {
 
     json jWindow = NuiWindow(jRoot,
         JsonString("EL Tools"),
-        NuiRect(-1.0, -1.0, 1000.0, 400.0),
+        NuiRect(-1.0, -1.0, 990.0, 350.0),
         JsonBool(TRUE),
         JsonBool(FALSE),
         JsonBool(TRUE),
