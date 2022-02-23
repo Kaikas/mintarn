@@ -45,11 +45,25 @@ void SetChatbox(object oPc, int nToken) {
         }
     }
     NuiSetBind(oPc, nToken, "chatbox", JsonString(sText));
-    DelayCommand(5.0f, SetChatbox(oPc, nToken));
+    if (NuiGetWindowId(oPc, nToken) != "") DelayCommand(5.0f, SetChatbox(oPc, nToken));
 }
 
-void main()
-{
+void SetPlayerList(object oPc, int nToken) {
+    object oPlayer = GetFirstPC();
+    int i = 0;
+    while(GetIsObjectValid(oPlayer)) {
+        NuiSetBind(oPc, nToken, "player_" + IntToString(i),
+            JsonString(GetSubString(GetName(oPlayer) + " (" +
+                GetName(GetArea(oPlayer)) + ")", 0, 30)));
+        NuiSetBind(oPc, nToken, "enabled_" + IntToString(i),
+            JsonBool(TRUE));
+        i++;
+        oPlayer = GetNextPC();
+    }
+    if (NuiGetWindowId(oPc, nToken) != "") DelayCommand(5.0f, SetPlayerList(oPc, nToken));
+}
+
+void main() {
     object oPc = NuiGetEventPlayer();
     int nToken = NuiGetEventWindow();
     string sWindowId  = NuiGetWindowId(oPc, nToken);
@@ -178,6 +192,7 @@ void main()
     if (sWindowId == "eltools") {
         if (sType == "open") {
             SetChatbox(oPc, nToken);
+            SetPlayerList(oPc, nToken);
         }
     }
 }

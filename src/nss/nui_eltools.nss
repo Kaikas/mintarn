@@ -1,5 +1,7 @@
 #include "nw_inc_nui"
 
+int MAX_PLAYERS = 15;
+
 void main() {
     object oPc = OBJECT_SELF;
 
@@ -8,14 +10,18 @@ void main() {
     json jCol2 = JsonArray();
 
     object oPlayer = GetFirstPC();
-    while(GetIsObjectValid(oPlayer)) {
-        json jCheck = NuiCheck(JsonString(GetSubString(GetName(oPlayer) + " (" + GetName(GetArea(oPlayer)) + ")", 0, 30)), NuiBind("check"));
+    int i;
+    for (i = 0; i < MAX_PLAYERS; i++) {
+        json jCheck = NuiCheck(NuiBind("player_" + IntToString(i)), NuiBind("selected_" + IntToString(i)));
+        jCheck = NuiVisible(jCheck, NuiBind("enabled_" + IntToString(i)));
+        jCheck = NuiWidth(jCheck, 300.0f);
+        jCheck = NuiHeight(jCheck, 20.0f);
         jCol = JsonArrayInsert(jCol, jCheck);
-        oPlayer = GetNextPC();
     }
 
     json jTextField = NuiText(NuiBind("chatbox"));
     jTextField = NuiHeight(jTextField, 200.0f);
+    jTextField = NuiWidth(jTextField, 600.0f);
     jCol2 = JsonArrayInsert(jCol2, jTextField);
 
 
@@ -63,6 +69,10 @@ void main() {
     int token = NuiCreate(oPc, jWindow, "eltools");
 
     NuiSetBind(oPc, token, "chatbox", JsonString("Chatbox"));
+    for (i = 0; i < MAX_PLAYERS; i++) {
+        NuiSetBind(oPc, token, "player_" + IntToString(i), JsonString(""));
+        NuiSetBind(oPc, token, "enabled_" + IntToString(i), JsonBool(FALSE));
+    }
     /*
     NuiSetBind(oPc, token, "dropdownbox_selected", jDropdownboxElement);
     NuiSetBindWatch(oPc, token, "dropdownbox_selected", TRUE);
