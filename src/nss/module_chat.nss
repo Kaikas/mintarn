@@ -2066,7 +2066,7 @@ int openDowntime(string sMessage) {
 }
 
 int ELTools(string sMessage) {
-    if (sMessage == "/eltools" && GetIsDM(oPc)) {
+    if (sMessage == "/eltools" && (GetIsDM(oPc) || GetIsDMPossessed(oPc))) {
         ExecuteScript("nui_eltools", oPc);
         return 1;
     }

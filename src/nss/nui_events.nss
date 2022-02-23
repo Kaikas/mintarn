@@ -45,8 +45,8 @@ void SetChatbox(object oPc, int nToken) {
         }
     }
     NuiSetBind(oPc, nToken, "chatbox", JsonString(sText));
-    //if (NuiGetWindowId(oPc, nToken) != "")
-    DelayCommand(5.0f, SetChatbox(oPc, nToken));
+    if (GetIsDMPossessed(oPc)) SendMessageToPC(oPc, "is being posessed");
+    if (NuiGetWindowId(oPc, nToken) != "") DelayCommand(5.0f, SetChatbox(oPc, nToken));
 }
 
 void SetPlayerList(object oPc, int nToken) {
