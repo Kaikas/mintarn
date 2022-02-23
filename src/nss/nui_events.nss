@@ -3,6 +3,7 @@
 #include "nwnx_webhook"
 #include "nwnx_util"
 #include "x3_inc_string"
+#include "nwnx_sql"
 
 int CountItems(object oPc, string sTag) {
     int iResult = 0;
@@ -46,13 +47,13 @@ void main()
     string sAccountName = GetPCPlayerName(oPc);
     string sName = GetName(oPc);
 
-    /*
+
     SendMessageToPC(oPc, "" +
         "\nEVENTTYPE: " + sType +
         "\nELEMENT: " + sElement +
         "\nARRAYINDEX: " + IntToString(nArrayIndex) +
         "\nPAYLOAD: " + JsonDump(jPayload));
-    */
+
 
     //"Token: " + IntToString(nToken) +
     //"\nWindowID:" + sWindowId +
@@ -158,6 +159,20 @@ void main()
                 }
                 NuiDestroy(oPc, nToken);
             }
+        }
+    }
+    if (sWindowId == "eltools") {
+        if (sType == "open") {
+            string sQuery = "SELECT * FROM Chat ORDER BY id DESC LIMIT 50";
+            string sText = "";
+            if (NWNX_SQL_PrepareQuery(sQuery)) {
+                NWNX_SQL_ExecutePreparedQuery();
+                while (NWNX_SQL_ReadyToReadNextRow()) {
+                    NWNX_SQL_ReadNextRow();
+                    sText = sText + NWNX_SQL_ReadDataInActiveRow(1);
+                }
+            }
+            NuiSetBind(oPc, nToken, "chatbox", JsonString(sText));
         }
     }
 }

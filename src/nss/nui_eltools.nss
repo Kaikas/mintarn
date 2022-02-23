@@ -14,7 +14,7 @@ void main() {
         oPlayer = GetNextPC();
     }
 
-    json jTextField = NuiText(JsonString("Chatlog"));
+    json jTextField = NuiText(NuiBind("chatbox"));
     jTextField = NuiHeight(jTextField, 200.0f);
     jCol2 = JsonArrayInsert(jCol2, jTextField);
 
@@ -61,9 +61,9 @@ void main() {
         JsonBool(FALSE),
         JsonBool(TRUE));
     int token = NuiCreate(oPc, jWindow, "eltools");
-    /*
 
-    NuiSetBind(oPc, token, "dropdownbox", jDropdownboxElement);
+    NuiSetBind(oPc, token, "chatbox", JsonString("Chatbox"));
+    /*
     NuiSetBind(oPc, token, "dropdownbox_selected", jDropdownboxElement);
     NuiSetBindWatch(oPc, token, "dropdownbox_selected", TRUE);
     NuiSetBindWatch(oPc, token, "dropdownbox", TRUE);
