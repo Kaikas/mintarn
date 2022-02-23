@@ -8,6 +8,7 @@ void main() {
     json jRow = JsonArray();
     json jCol = JsonArray();
     json jCol2 = JsonArray();
+    json jCol3 = JsonArray();
 
     object oPlayer = GetFirstPC();
     int i;
@@ -21,28 +22,31 @@ void main() {
 
     json jTextField = NuiText(NuiBind("chatbox"));
     jTextField = NuiHeight(jTextField, 200.0f);
-    jTextField = NuiWidth(jTextField, 600.0f);
+    jTextField = NuiWidth(jTextField, 650.0f);
     jCol2 = JsonArrayInsert(jCol2, jTextField);
 
+    json jInput = NuiTextEdit(JsonString(""), NuiBind("input"), 1000, FALSE);
+    jInput = NuiWidth(jInput, 650.0);
+
+    jCol2 = JsonArrayInsert(jCol2, jInput);
+
+
+    json jButtonSend = NuiButton(JsonString("Senden"));
+    jButtonSend = NuiId(jButtonSend, "button_send");
+
+    jCol3 = JsonArrayInsert(jCol3, jButtonSend);
+
+    json jButtonSendSelected = NuiButton(JsonString("Senden (Selektion)"));
+    jButtonSendSelected = NuiId(jButtonSendSelected, "button_send_selected");
+
+    jCol3 = JsonArrayInsert(jCol3, jButtonSendSelected);
+
+    jCol2 = JsonArrayInsert(jCol2, NuiRow(jCol3));
 
     /*
-    json jCol = JsonArray();
-    json jCol2 = JsonArray();
-    json jCol3 = JsonArray();
-    json jRow = JsonArray();
-
-    json jTextContent = JsonString("Dies sind Aktivitäten denen euer " +
-        "Charakter nachgehen kann, während ihr nicht eingeloggt seid.");
-    json jText = NuiText(NuiBind("text"));
-    jText = NuiId(jText, "text");
-    json jButtonSelect = NuiButton(JsonString("Wählen"));
-    jButtonSelect = NuiId(jButtonSelect, "button_select");
     json jButtonAbort = NuiButton(JsonString("Abbrechen"));
     jButtonAbort = NuiId(jButtonAbort, "button_abort");
 
-    //json jInput = NuiTextEdit(JsonString("Freitext zur Beschreibung der Aktivität."), NuiBind("input"), 1000, TRUE);
-    //jInput = NuiHeight(jInput, 100.0);
-    //jInput = NuiId(jInput, "input");
 
     jCol = JsonArrayInsert(JsonArray(), jText);
     //jCol2 = JsonArrayInsert(JsonArray(), jInput);
