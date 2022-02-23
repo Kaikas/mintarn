@@ -31,7 +31,7 @@ void main() {
     jCol2 = JsonArrayInsert(jCol2, jInput);
 
 
-    json jButtonSend = NuiButton(JsonString("Senden"));
+    json jButtonSend = NuiButton(JsonString("Senden (Alle)"));
     jButtonSend = NuiId(jButtonSend, "button_send");
 
     jCol3 = JsonArrayInsert(jCol3, jButtonSend);
@@ -43,21 +43,6 @@ void main() {
 
     jCol2 = JsonArrayInsert(jCol2, NuiRow(jCol3));
 
-    /*
-    json jButtonAbort = NuiButton(JsonString("Abbrechen"));
-    jButtonAbort = NuiId(jButtonAbort, "button_abort");
-
-
-    jCol = JsonArrayInsert(JsonArray(), jText);
-    //jCol2 = JsonArrayInsert(JsonArray(), jInput);
-    jCol3 = JsonArrayInsert(JsonArray(), jButtonSelect);
-    jCol3 = JsonArrayInsert(jCol3, jButtonAbort);
-    jRow = JsonArrayInsert(jRow, NuiRow(jCol));
-    //jRow = JsonArrayInsert(jRow, NuiRow(jCol2));
-    jRow = JsonArrayInsert(jRow, NuiRow(jCol3));
-
-
-    */
     jRow = JsonArrayInsert(jRow, NuiCol(jCol));
     jRow = JsonArrayInsert(jRow, NuiCol(jCol2));
     json jRoot = NuiRow(jRow);
@@ -77,13 +62,4 @@ void main() {
         NuiSetBind(oPc, token, "player_" + IntToString(i), JsonString(""));
         NuiSetBind(oPc, token, "enabled_" + IntToString(i), JsonBool(FALSE));
     }
-    /*
-    NuiSetBind(oPc, token, "dropdownbox_selected", jDropdownboxElement);
-    NuiSetBindWatch(oPc, token, "dropdownbox_selected", TRUE);
-    NuiSetBindWatch(oPc, token, "dropdownbox", TRUE);
-    NuiSetBindWatch(oPc, token, "select_downtime", TRUE);
-    NuiSetBind(oPc, token, "text", jTextContent);
-    //NuiSetBindWatch(oPc, token, "input_watch", TRUE);
-    //NuiSetBind(oPc, token, "input", JsonString(""));
-    */
 }

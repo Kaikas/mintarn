@@ -4,6 +4,7 @@
 #include "nwnx_util"
 #include "x3_inc_string"
 #include "nwnx_sql"
+#include "nwnx_chat"
 
 int CountItems(object oPc, string sTag) {
     int iResult = 0;
@@ -76,13 +77,13 @@ void main() {
     string sAccountName = GetPCPlayerName(oPc);
     string sName = GetName(oPc);
 
-
+    /*
     SendMessageToPC(oPc, "" +
         "\nEVENTTYPE: " + sType +
         "\nELEMENT: " + sElement +
         "\nARRAYINDEX: " + IntToString(nArrayIndex) +
         "\nPAYLOAD: " + JsonDump(jPayload));
-
+    */
 
     //"Token: " + IntToString(nToken) +
     //"\nWindowID:" + sWindowId +
@@ -194,6 +195,24 @@ void main() {
         if (sType == "open") {
             SetChatbox(oPc, nToken);
             SetPlayerList(oPc, nToken);
+        }
+        if (sType == "click") {
+            if (sElement == "button_send") {
+                string sMessage = JsonGetString(NuiGetBind(oPc, nToken, "input"));
+                SendMessageToPC(oPc, "Folgende Spieler haben euch vernommen:");
+                SendMessageToAllDMs("Erzähler: " + sMessage);
+                object oTalkTo = GetFirstPC();
+                while (oTalkTo != OBJECT_INVALID) {
+                    if (!GetIsDM(oTalkTo)) {
+                      NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
+                    }
+                    SendMessageToPC(oPc, GetName(oTalkTo));
+                  oTalkTo = GetNextPC();
+                }
+            }
+            if (sElement == "button_send_selected") {
+
+            }
         }
     }
 }
