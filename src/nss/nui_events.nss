@@ -34,6 +34,20 @@ void DestroyItem(object oPc, string sTag) {
     }
 }
 
+void SetChatbox(object oPc, int nToken) {
+    string sQuery = "SELECT * FROM Chat ORDER BY id DESC LIMIT 50";
+    string sText = "";
+    if (NWNX_SQL_PrepareQuery(sQuery)) {
+        NWNX_SQL_ExecutePreparedQuery();
+        while (NWNX_SQL_ReadyToReadNextRow()) {
+            NWNX_SQL_ReadNextRow();
+            sText = sText + NWNX_SQL_ReadDataInActiveRow(2) + " " + NWNX_SQL_ReadDataInActiveRow(3) + "\n";
+        }
+    }
+    NuiSetBind(oPc, nToken, "chatbox", JsonString(sText));
+    DelayCommand(5.0f, SetChatbox(oPc, nToken));
+}
+
 void main()
 {
     object oPc = NuiGetEventPlayer();
@@ -163,16 +177,7 @@ void main()
     }
     if (sWindowId == "eltools") {
         if (sType == "open") {
-            string sQuery = "SELECT * FROM Chat ORDER BY id DESC LIMIT 50";
-            string sText = "";
-            if (NWNX_SQL_PrepareQuery(sQuery)) {
-                NWNX_SQL_ExecutePreparedQuery();
-                while (NWNX_SQL_ReadyToReadNextRow()) {
-                    NWNX_SQL_ReadNextRow();
-                    sText = sText + NWNX_SQL_ReadDataInActiveRow(2) + " " + NWNX_SQL_ReadDataInActiveRow(3) + "\n";
-                }
-            }
-            NuiSetBind(oPc, nToken, "chatbox", JsonString(sText));
+            SetChatbox(oPc, nToken);
         }
     }
 }
