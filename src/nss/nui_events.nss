@@ -51,8 +51,12 @@ void SetChatbox(object oPc, int nToken) {
 }
 
 void SetPlayerList(object oPc, int nToken) {
+    int i;
+    for (i = 0; i < 15; i++) {
+        NuiSetBind(oPc, nToken, "enabled_" + IntToString(i), JsonBool(FALSE));
+    }
     object oPlayer = GetFirstPC();
-    int i = 0;
+    i = 0;
     while(GetIsObjectValid(oPlayer)) {
         NuiSetBind(oPc, nToken, "player_" + IntToString(i),
             JsonString(GetSubString(GetName(oPlayer) + " (" +
