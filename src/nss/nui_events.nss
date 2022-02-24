@@ -6,61 +6,7 @@
 #include "nwnx_sql"
 #include "nwnx_chat"
 #include "inc_nui_downtime"
-
-const int MAX_PLAYERS = 15;
-
-object GetPlayerByName(string sName) {
-    object oPlayer = GetFirstPC();
-    while (GetIsObjectValid(oPlayer)) {
-        if (GetName(oPlayer) == sName) return oPlayer;
-        oPlayer = GetNextPC();
-    }
-    return oPlayer;
-}
-
-void SetChatbox(object oPc, int nToken) {
-    string sQuery = "SELECT * FROM Chat ORDER BY id DESC LIMIT 50";
-    string sText = "";
-    if (NWNX_SQL_PrepareQuery(sQuery)) {
-        NWNX_SQL_ExecutePreparedQuery();
-        while (NWNX_SQL_ReadyToReadNextRow()) {
-            NWNX_SQL_ReadNextRow();
-            int i;
-            for (i = 0; i < MAX_PLAYERS; i++) {
-                string sCompare = JsonGetString(NuiGetBind(oPc, nToken, "player_" + IntToString(i)));
-                object oPlayer = GetPlayerByName(NWNX_SQL_ReadDataInActiveRow(2));
-                string sCompare2 = GetSubString(GetName(oPlayer) + " (" + GetName(GetArea(oPlayer)) + ")", 0, 30);
-                if (sCompare == sCompare2) {
-                    if (NuiGetBind(oPc, nToken, "selected2_" + IntToString(i)) == JsonBool(TRUE)) {
-                        sText = sText + NWNX_SQL_ReadDataInActiveRow(2) + ": " + NWNX_SQL_ReadDataInActiveRow(3) + "\n";
-                    }
-                }
-           }
-        }
-    }
-    NuiSetBind(oPc, nToken, "chatbox", JsonString(sText));
-    if (GetIsDMPossessed(oPc)) SendMessageToPC(oPc, "is being posessed");
-    if (NuiGetWindowId(oPc, nToken) != "") DelayCommand(5.0f, SetChatbox(oPc, nToken));
-}
-
-void SetPlayerList(object oPc, int nToken) {
-    int i;
-    for (i = 0; i < MAX_PLAYERS; i++) {
-        NuiSetBind(oPc, nToken, "enabled_" + IntToString(i), JsonBool(FALSE));
-    }
-    object oPlayer = GetFirstPC();
-    i = 0;
-    while(GetIsObjectValid(oPlayer)) {
-        NuiSetBind(oPc, nToken, "player_" + IntToString(i),
-            JsonString(GetSubString(GetName(oPlayer) + " (" +
-                GetName(GetArea(oPlayer)) + ")", 0, 30)));
-        NuiSetBind(oPc, nToken, "enabled_" + IntToString(i),
-            JsonBool(TRUE));
-        i++;
-        oPlayer = GetNextPC();
-    }
-    if (NuiGetWindowId(oPc, nToken) != "") DelayCommand(5.0f, SetPlayerList(oPc, nToken));
-}
+#include "inc_nui_eltools"
 
 void main() {
     object oPc = NuiGetEventPlayer();
@@ -86,7 +32,7 @@ void main() {
     //"\nWindowID:" + sWindowId +
 
     if (sWindowId == "downtime") {
-        DowntimeEvents(oPc, nToken, sType, sElement)
+        DowntimeEvents(oPc, nToken, sType, sElement);
     }
 
     if (sWindowId == "eltalk") {
@@ -157,46 +103,6 @@ void main() {
         }
     }
     if (sWindowId == "eltools") {
-        if (sType == "open") {
-            SetChatbox(oPc, nToken);
-            SetPlayerList(oPc, nToken);
-        }
-        if (sType == "click") {
-            if (sElement == "button_send") {
-                string sMessage = JsonGetString(NuiGetBind(oPc, nToken, "input"));
-                SendMessageToPC(oPc, "Folgende Spieler haben euch vernommen:");
-                SendMessageToAllDMs("Erzähler: " + sMessage);
-                object oTalkTo = GetFirstPC();
-                while (oTalkTo != OBJECT_INVALID) {
-                    if (!GetIsDM(oTalkTo)) {
-                      NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
-                    }
-                    SendMessageToPC(oPc, GetName(oTalkTo));
-                  oTalkTo = GetNextPC();
-                }
-            }
-            if (sElement == "button_send_selected") {
-                string sMessage = JsonGetString(NuiGetBind(oPc, nToken, "input"));
-                SendMessageToAllDMs("Erzähler: " + sMessage);
-                SendMessageToPC(oPc, "Folgende Spieler haben euch vernommen:");
-                int i;
-                for (i = 0; i < MAX_PLAYERS; i++) {
-                    if (NuiGetBind(oPc, nToken, "selected_" + IntToString(i)) == JsonBool(TRUE)) {
-                        object oTalkTo = GetFirstPC();
-                        while (oTalkTo != OBJECT_INVALID) {
-                            if (!GetIsDM(oTalkTo)) {
-                                string sCompare = JsonGetString(NuiGetBind(oPc, nToken, "player_" + IntToString(i)));
-                                string sCompare2 = GetSubString(GetName(oTalkTo) + " (" + GetName(GetArea(oTalkTo)) + ")", 0, 30);
-                                if (sCompare == sCompare2) {
-                                    NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
-                                    SendMessageToPC(oPc, GetName(oTalkTo));
-                                }
-                            }
-                          oTalkTo = GetNextPC();
-                        }
-                    }
-                }
-            }
-        }
+        EltoolsEvents(oPc, nToken, sType, sElement);
     }
 }
