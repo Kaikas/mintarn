@@ -336,15 +336,15 @@
   },
   "Mod_Entry_X": {
     "type": "float",
-    "value": 4.753
+    "value": 4.0
   },
   "Mod_Entry_Y": {
     "type": "float",
-    "value": 5.3689
+    "value": 5.0
   },
   "Mod_Entry_Z": {
     "type": "float",
-    "value": -0.0
+    "value": 0.0
   },
   "Mod_Expan_List": {
     "type": "list",
@@ -357,6 +357,13 @@
   "Mod_HakList": {
     "type": "list",
     "value": [
+      {
+        "__struct_id": 8,
+        "Mod_Hak": {
+          "type": "cexostring",
+          "value": "sounds"
+        }
+      },
       {
         "__struct_id": 8,
         "Mod_Hak": {

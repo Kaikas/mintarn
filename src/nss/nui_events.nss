@@ -240,4 +240,10 @@ void main() {
             }
         }
     }
+    if (sWindowId == "sounds") {
+        if (sType == "click") {
+            SendMessageToPC(oPc, "Playing Emil");
+            ExecuteScript("module_sound", oPc);
+        }
+    }
 }
