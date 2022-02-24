@@ -85,6 +85,22 @@
                 "type": "byte",
                 "value": 0
               },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "emil"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "emil"
+                    }
+                  }
+                ]
+              },
               "STRREF": {
                 "type": "dword",
                 "value": 6688

@@ -243,7 +243,10 @@ void main() {
     if (sWindowId == "sounds") {
         if (sType == "click") {
             SendMessageToPC(oPc, "Playing Emil");
-            ExecuteScript("module_sound", oPc);
+            AssignCommand(oPc, PlaySound("emil"));
+
+            object oSound = GetObjectByTag("Emil_Taverne");
+            SoundObjectPlay(oSound);
         }
     }
 }
