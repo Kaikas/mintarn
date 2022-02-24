@@ -1,6 +1,6 @@
 #include "nw_inc_nui"
 
-int MAX_PLAYERS = 15;
+const int MAX_PLAYERS = 15;
 
 void main() {
     object oPc = OBJECT_SELF;

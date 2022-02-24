@@ -6,6 +6,8 @@
 #include "nwnx_sql"
 #include "nwnx_chat"
 
+const int MAX_PLAYERS = 15;
+
 int CountItems(object oPc, string sTag) {
     int iResult = 0;
     object oItem = GetFirstItemInInventory(oPc);
@@ -52,7 +54,7 @@ void SetChatbox(object oPc, int nToken) {
 
 void SetPlayerList(object oPc, int nToken) {
     int i;
-    for (i = 0; i < 15; i++) {
+    for (i = 0; i < MAX_PLAYERS; i++) {
         NuiSetBind(oPc, nToken, "enabled_" + IntToString(i), JsonBool(FALSE));
     }
     object oPlayer = GetFirstPC();
@@ -215,7 +217,26 @@ void main() {
                 }
             }
             if (sElement == "button_send_selected") {
-
+                int i;
+                for (i = 0; i < MAX_PLAYERS; i++) {
+                    if (NuiGetBind(oPc, nToken, "selected_" + IntToString(i)) == JsonBool(TRUE)) {
+                        string sMessage = JsonGetString(NuiGetBind(oPc, nToken, "input"));
+                        SendMessageToPC(oPc, "Folgende Spieler haben euch vernommen:");
+                        SendMessageToAllDMs("Erzähler: " + sMessage);
+                        object oTalkTo = GetFirstPC();
+                        while (oTalkTo != OBJECT_INVALID) {
+                            if (!GetIsDM(oTalkTo)) {
+                                string sCompare = JsonGetString(NuiGetBind(oPc, nToken, "player_" + IntToString(i)));
+                                string sCompare2 = GetSubString(GetName(oTalkTo) + " (" + GetName(GetArea(oTalkTo)) + ")", 0, 30);
+                                if (sCompare == sCompare2) {
+                                    NWNX_Chat_SendMessage(4, sMessage, GetObjectByTag("ERZAEHLER"), oTalkTo);
+                                    SendMessageToPC(oPc, GetName(oTalkTo));
+                                }
+                            }
+                          oTalkTo = GetNextPC();
+                        }
+                    }
+                }
             }
         }
     }
