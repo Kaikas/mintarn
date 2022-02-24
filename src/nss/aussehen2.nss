@@ -521,53 +521,54 @@ void main() {
     object oPc = GetPCSpeaker();
     object oCurArmor = GetItemInSlot(INVENTORY_SLOT_CHEST, oPc);
 
-    string sCategory = GetScriptParam("category");
+    if (oCurArmor != OBJECT_INVALID) {
+        string sCategory = GetScriptParam("category");
 
-    string sFunction = GetScriptParam("function");
-    if (sFunction == "settoken") {settoken(); sCategory = "ARMORCOLOR";};
-    if (sFunction == "setvariable") SetLocalString(oPc, GetScriptParam("key"), GetScriptParam("value"));
-
-
-    int iMaterial = StringToInt(GetLocalString(oPc, "material"));
-    if (iMaterial < 4) {
-        settoken();
-    } else if (iMaterial >= 4) {
-        setmetaltoken();
-    }
-
-    // SendMessageToPC(oPc, "part " + GetLocalString(oPc, "part"));
-    // SendMessageToPC(oPc, "material " + GetLocalString(oPc, "material"));
-    // SendMessageToPC(oPc, "color " + GetLocalString(oPc, "color"));
+        string sFunction = GetScriptParam("function");
+        if (sFunction == "settoken") {settoken(); sCategory = "ARMORCOLOR";};
+        if (sFunction == "setvariable") SetLocalString(oPc, GetScriptParam("key"), GetScriptParam("value"));
 
 
-    if (sCategory == "ARMOR" && oCurArmor != OBJECT_INVALID) {
-        string sAction = GetScriptParam("action");
-        string sPart = GetScriptParam("part");
-        changeArmorPart(oPc, sAction, StringToInt(sPart));
-    } else if (GetLocalString(oPc, "color") != "" && oCurArmor != OBJECT_INVALID) {
-        string sPart = GetLocalString(oPc, "part");
-        string sMaterial = GetLocalString(oPc, "material");
-        string sColor = GetLocalString(oPc, "color");
-        // SendMessageToPC(oPc, "part " + sPart);
-        // SendMessageToPC(oPc, "material " + sMaterial);
-        // SendMessageToPC(oPc, "color " + sColor);
-
-        int iPart = StringToInt(sPart);
-        int iMaterial = StringToInt(sMaterial);
-        int iNewColor = StringToInt(sColor) - 1; // -1 to fix offset in conversation
-        int iIndex = 6 + (iPart * 6) + iMaterial;
-
-        object oNewArmor = CopyItemAndModify(oCurArmor, ITEM_APPR_TYPE_ARMOR_COLOR, iIndex, iNewColor, FALSE);
-
-        if (oNewArmor != OBJECT_INVALID) {
-            TransferItemProperties(oCurArmor, oNewArmor);
-            AssignCommand(oPc, ActionEquipItem(oNewArmor, INVENTORY_SLOT_CHEST));
-            DestroyObject(oCurArmor);
+        int iMaterial = StringToInt(GetLocalString(oPc, "material"));
+        if (iMaterial < 4) {
+            settoken();
+        } else if (iMaterial >= 4) {
+            setmetaltoken();
         }
 
-        SetLocalString(oPc, "color", "");
+        // SendMessageToPC(oPc, "part " + GetLocalString(oPc, "part"));
+        // SendMessageToPC(oPc, "material " + GetLocalString(oPc, "material"));
+        // SendMessageToPC(oPc, "color " + GetLocalString(oPc, "color"));
+
+
+        if (sCategory == "ARMOR" && oCurArmor != OBJECT_INVALID) {
+            string sAction = GetScriptParam("action");
+            string sPart = GetScriptParam("part");
+            changeArmorPart(oPc, sAction, StringToInt(sPart));
+        } else if (GetLocalString(oPc, "color") != "" && oCurArmor != OBJECT_INVALID) {
+            string sPart = GetLocalString(oPc, "part");
+            string sMaterial = GetLocalString(oPc, "material");
+            string sColor = GetLocalString(oPc, "color");
+            // SendMessageToPC(oPc, "part " + sPart);
+            // SendMessageToPC(oPc, "material " + sMaterial);
+            // SendMessageToPC(oPc, "color " + sColor);
+
+            int iPart = StringToInt(sPart);
+            int iMaterial = StringToInt(sMaterial);
+            int iNewColor = StringToInt(sColor) - 1; // -1 to fix offset in conversation
+            int iIndex = 6 + (iPart * 6) + iMaterial;
+
+            object oNewArmor = CopyItemAndModify(oCurArmor, ITEM_APPR_TYPE_ARMOR_COLOR, iIndex, iNewColor, FALSE);
+
+            if (oNewArmor != OBJECT_INVALID) {
+                TransferItemProperties(oCurArmor, oNewArmor);
+                AssignCommand(oPc, ActionEquipItem(oNewArmor, INVENTORY_SLOT_CHEST));
+                DestroyObject(oCurArmor);
+            }
+
+            SetLocalString(oPc, "color", "");
+        }
     } else {
         SendMessageToPC(oPc, "Keine gültige Rüstung gefunden.");
     }
-
 }
