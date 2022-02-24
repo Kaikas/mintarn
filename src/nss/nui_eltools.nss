@@ -41,6 +41,11 @@ void main() {
 
     jCol3 = JsonArrayInsert(jCol3, jButtonSendSelected);
 
+    json jButtonChareditor = NuiButton(JsonString("Chareditor"));
+    jButtonChareditor = NuiId(jButtonChareditor, "button_chareditor");
+
+    jCol3 = JsonArrayInsert(jCol3, jButtonChareditor);
+
     jCol2 = JsonArrayInsert(jCol2, NuiRow(jCol3));
 
     jRow = JsonArrayInsert(jRow, NuiCol(jCol));

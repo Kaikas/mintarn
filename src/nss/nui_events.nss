@@ -238,6 +238,16 @@ void main() {
                     }
                 }
             }
+            if (sElement == "button_chareditor") {
+                ExecuteScript("nui_chareditor", oPc);
+            }
+        }
+    }
+    if (sWindowId == "chareditor") {
+        if (sType == "click") {
+            if (sElement == "button_choose") {
+                EnterTargetingMode(oPc, OBJECT_TYPE_CREATURE);
+            }
         }
     }
 }
