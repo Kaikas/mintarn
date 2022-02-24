@@ -27,7 +27,7 @@
         },
         "ClassLevel": {
           "type": "short",
-          "value": 6
+          "value": 7
         }
       }
     ]
@@ -196,7 +196,7 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 133
+    "value": 140
   },
   "NaturalAC": {
     "type": "byte",
