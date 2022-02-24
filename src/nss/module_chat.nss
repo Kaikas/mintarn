@@ -215,6 +215,16 @@ void speak(object oSpeaker, string sMessage) {
   if (GetIsDM(oSpeaker)) {
     SendMessageToPC(oSpeaker, "Achtung! Aus technischen Gründen kam die Nachricht nicht an. Versuche es mit /a für alle, /g für Gebiet oder /s für Umkreis.");
   } else {
+      string sAccountName = GetPCPlayerName(oPc);
+      string sName = GetName(oPc);
+      sQuery = "INSERT INTO Chat (name, charname, text, datetime) VALUES (?, ?, ?, ?)";
+      if (NWNX_SQL_PrepareQuery(sQuery)) {
+        NWNX_SQL_PreparedString(0, sAccountName);
+        NWNX_SQL_PreparedString(1, sName);
+        NWNX_SQL_PreparedString(2, sMessage);
+        NWNX_SQL_PreparedString(3, IntToString(NWNX_Time_GetTimeStamp()));
+        NWNX_SQL_ExecutePreparedQuery();
+      }
       ExecuteScript("global_speak", oSpeaker);
   }
 }
@@ -2056,7 +2066,7 @@ int openDowntime(string sMessage) {
 }
 
 int ELTools(string sMessage) {
-    if (sMessage == "/eltools" && GetIsDM(oPc)) {
+    if (sMessage == "/eltools" && (GetIsDM(oPc) || GetIsDMPossessed(oPc))) {
         ExecuteScript("nui_eltools", oPc);
         return 1;
     }
