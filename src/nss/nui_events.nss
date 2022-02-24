@@ -39,7 +39,8 @@ void DestroyItem(object oPc, string sTag) {
 
 object GetPlayerByName(string sName) {
     object oPlayer = GetFirstPC();
-    while (GetName(oPlayer) != sName) {
+    while (GetIsObjectValid(oPlayer)) {
+        if (GetName(oPlayer) == sName) return oPlayer;
         oPlayer = GetNextPC();
     }
     return oPlayer;

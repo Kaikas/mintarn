@@ -32,7 +32,7 @@ void main() {
     jTextField = NuiWidth(jTextField, 650.0f);
     jCol2 = JsonArrayInsert(jCol2, jTextField);
 
-    json jInput = NuiTextEdit(JsonString(""), NuiBind("input"), 1000, FALSE);
+    json jInput = NuiTextEdit(JsonString(""), NuiBind("input"), 1050, FALSE);
     jInput = NuiWidth(jInput, 650.0);
 
     jCol2 = JsonArrayInsert(jCol2, jInput);
