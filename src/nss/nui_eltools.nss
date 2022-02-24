@@ -17,7 +17,14 @@ void main() {
         jCheck = NuiVisible(jCheck, NuiBind("enabled_" + IntToString(i)));
         jCheck = NuiWidth(jCheck, 300.0f);
         jCheck = NuiHeight(jCheck, 20.0f);
-        jCol = JsonArrayInsert(jCol, jCheck);
+        json jCheck2 = NuiCheck(NuiBind("player2_" + IntToString(i)), NuiBind("selected2_" + IntToString(i)));
+        jCheck2 = NuiVisible(jCheck2, NuiBind("enabled_" + IntToString(i)));
+        jCheck2 = NuiWidth(jCheck2, 20.0f);
+        jCheck2 = NuiHeight(jCheck2, 20.0f);
+        json jCheckColumn = JsonArray();
+        jCheckColumn = JsonArrayInsert(jCheckColumn, jCheck2);
+        jCheckColumn = JsonArrayInsert(jCheckColumn, jCheck);
+        jCol = JsonArrayInsert(jCol, NuiRow(jCheckColumn));
     }
 
     json jTextField = NuiText(NuiBind("chatbox"));
@@ -25,7 +32,7 @@ void main() {
     jTextField = NuiWidth(jTextField, 650.0f);
     jCol2 = JsonArrayInsert(jCol2, jTextField);
 
-    json jInput = NuiTextEdit(JsonString(""), NuiBind("input"), 1000, FALSE);
+    json jInput = NuiTextEdit(JsonString(""), NuiBind("input"), 1050, FALSE);
     jInput = NuiWidth(jInput, 650.0);
 
     jCol2 = JsonArrayInsert(jCol2, jInput);

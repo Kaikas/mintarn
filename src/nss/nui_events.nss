@@ -37,6 +37,15 @@ void DestroyItem(object oPc, string sTag) {
     }
 }
 
+object GetPlayerByName(string sName) {
+    object oPlayer = GetFirstPC();
+    while (GetIsObjectValid(oPlayer)) {
+        if (GetName(oPlayer) == sName) return oPlayer;
+        oPlayer = GetNextPC();
+    }
+    return oPlayer;
+}
+
 void SetChatbox(object oPc, int nToken) {
     string sQuery = "SELECT * FROM Chat ORDER BY id DESC LIMIT 50";
     string sText = "";
@@ -44,7 +53,17 @@ void SetChatbox(object oPc, int nToken) {
         NWNX_SQL_ExecutePreparedQuery();
         while (NWNX_SQL_ReadyToReadNextRow()) {
             NWNX_SQL_ReadNextRow();
-            sText = sText + NWNX_SQL_ReadDataInActiveRow(2) + " " + NWNX_SQL_ReadDataInActiveRow(3) + "\n";
+            int i;
+            for (i = 0; i < MAX_PLAYERS; i++) {
+                string sCompare = JsonGetString(NuiGetBind(oPc, nToken, "player_" + IntToString(i)));
+                object oPlayer = GetPlayerByName(NWNX_SQL_ReadDataInActiveRow(2));
+                string sCompare2 = GetSubString(GetName(oPlayer) + " (" + GetName(GetArea(oPlayer)) + ")", 0, 30);
+                if (sCompare == sCompare2) {
+                    if (NuiGetBind(oPc, nToken, "selected2_" + IntToString(i)) == JsonBool(TRUE)) {
+                        sText = sText + NWNX_SQL_ReadDataInActiveRow(2) + ": " + NWNX_SQL_ReadDataInActiveRow(3) + "\n";
+                    }
+                }
+           }
         }
     }
     NuiSetBind(oPc, nToken, "chatbox", JsonString(sText));
@@ -217,12 +236,12 @@ void main() {
                 }
             }
             if (sElement == "button_send_selected") {
+                string sMessage = JsonGetString(NuiGetBind(oPc, nToken, "input"));
+                SendMessageToAllDMs("Erzähler: " + sMessage);
+                SendMessageToPC(oPc, "Folgende Spieler haben euch vernommen:");
                 int i;
                 for (i = 0; i < MAX_PLAYERS; i++) {
                     if (NuiGetBind(oPc, nToken, "selected_" + IntToString(i)) == JsonBool(TRUE)) {
-                        string sMessage = JsonGetString(NuiGetBind(oPc, nToken, "input"));
-                        SendMessageToPC(oPc, "Folgende Spieler haben euch vernommen:");
-                        SendMessageToAllDMs("Erzähler: " + sMessage);
                         object oTalkTo = GetFirstPC();
                         while (oTalkTo != OBJECT_INVALID) {
                             if (!GetIsDM(oTalkTo)) {
