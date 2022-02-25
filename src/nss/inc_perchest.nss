@@ -369,17 +369,18 @@ void PC_HandleDepositEvent(object oPlayer, object oItem, vector vPosition)
     string sQuery = "INSERT INTO Playerchests" +
                     "(name, charname, cdkey, item_uuid, item_name, item_baseitem, item_stacksize, item_iconresref, item_data) " +
                     "VALUES(?, ?, ?, ?, ?, ?);";
-    NWNX_SQL_PreparedString(0, GetPCPlayerName(oPlayer));
-    NWNX_SQL_PreparedString(1, GetName(oPlayer));
-    NWNX_SQL_PreparedString(2, GetPCPublicCDKey(oPlayer));
-    NWNX_SQL_PreparedString(3, sItemUUID);
-    NWNX_SQL_PreparedString(4, sItemName);
-    NWNX_SQL_PreparedInt(5, nItemBaseItem);
-    NWNX_SQL_PreparedInt(6, nItemStackSize);
-    NWNX_SQL_PreparedString(7, sItemIconResRef);
-    NWNX_SQL_PreparedString(8, JsonDump(jItemData));
-    NWNX_SQL_ExecutePreparedQuery();
-
+    if (NWNX_SQL_PrepareQuery(sQuery)) {
+        NWNX_SQL_PreparedString(0, GetPCPlayerName(oPlayer));
+        NWNX_SQL_PreparedString(1, GetName(oPlayer));
+        NWNX_SQL_PreparedString(2, GetPCPublicCDKey(oPlayer));
+        NWNX_SQL_PreparedString(3, sItemUUID);
+        NWNX_SQL_PreparedString(4, sItemName);
+        NWNX_SQL_PreparedInt(5, nItemBaseItem);
+        NWNX_SQL_PreparedInt(6, nItemStackSize);
+        NWNX_SQL_PreparedString(7, sItemIconResRef);
+        NWNX_SQL_PreparedString(8, JsonDump(jItemData));
+        NWNX_SQL_ExecutePreparedQuery();
+    }
     /*sqlquery sql = SqlPrepareQueryCampaign(PC_GetDatabaseName(oPlayer), sQuery);
 
     SqlBindString(sql, "@item_uuid", sItemUUID);
