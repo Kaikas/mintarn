@@ -424,7 +424,7 @@ void PC_UpdateItemList(object oPlayer, int nToken)
     string sSearch = GetLocalString(oPlayer, PC_SEARCH_STRING);
     string sQuery = "SELECT item_uuid, item_name, item_baseitem, item_stacksize, item_iconresref FROM Playerchests";
     if (sSearch != "") {
-        sQuery = sQuery + " WHERE item_name LIKE %?% AND name=? AND charname=? and cdkey=?";
+        sQuery = sQuery + " WHERE item_name LIKE ? AND name=? AND charname=? and cdkey=?";
     } else {
         sQuery = sQuery + " WHERE name=? AND charname=? and cdkey=?";
     }
@@ -434,7 +434,7 @@ void PC_UpdateItemList(object oPlayer, int nToken)
     if (NWNX_SQL_PrepareQuery(sQuery)) {
         if (sSearch != "") {
         //SqlBindString(sql, "@search", "%" + sSearch + "%");
-            NWNX_SQL_PreparedString(0, sSearch);
+            NWNX_SQL_PreparedString(0, "%" + sSearch + "%");
             NWNX_SQL_PreparedString(1, GetPCPlayerName(oPlayer));
             NWNX_SQL_PreparedString(2, GetName(oPlayer));
             NWNX_SQL_PreparedString(3, GetPCPublicCDKey(oPlayer));
