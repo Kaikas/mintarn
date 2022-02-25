@@ -368,7 +368,7 @@ void PC_HandleDepositEvent(object oPlayer, object oItem, vector vPosition)
     string sItemIconResRef = PC_GetIconResref(oItem, jItemData, nItemBaseItem);
     string sQuery = "INSERT INTO Playerchests" +
                     "(name, charname, cdkey, item_uuid, item_name, item_baseitem, item_stacksize, item_iconresref, item_data) " +
-                    "VALUES(?, ?, ?, ?, ?, ?);";
+                    "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?);";
     if (NWNX_SQL_PrepareQuery(sQuery)) {
         NWNX_SQL_PreparedString(0, GetPCPlayerName(oPlayer));
         NWNX_SQL_PreparedString(1, GetName(oPlayer));
