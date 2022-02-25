@@ -240,6 +240,7 @@ void main() {
         "name TEXT, " +
         "charname TEXT, " +
         "cdkey TEXT, " +
+        "item_uuid TEXT NOT NULL, " +
         "item_name TEXT NOT NULL, " +
         "item_baseitem INTEGER NOT NULL, " +
         "item_stacksize INTEGER NOT NULL, " +

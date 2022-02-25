@@ -257,7 +257,7 @@ void PC_HandleNUIEvents(object oPlayer, int nToken, string sType, string sElemen
 
 int PC_GetStoredItemAmount(object oPc)
 {// Wrapper to get the number of stored items
-    string sQuery = "SELECT (*) FROM Playerchests where name = ? AND charname = ? AND cdkey = ?";
+    string sQuery = "SELECT * FROM Playerchests where name = ? AND charname = ? AND cdkey = ?";
     if (NWNX_SQL_PrepareQuery(sQuery)) {
         NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
         NWNX_SQL_PreparedString(1, GetName(oPc));
@@ -476,8 +476,8 @@ void PC_WithdrawItems(object oPlayer, int nToken)
 
     string sDatabase = PC_GetDatabaseName(oPlayer);
     string sTable = PC_GetTableName(oPlayer);
-    string sSelectQuery = "SELECT item_data FROM Playerchests WHERE id=?;";
-    string sDeleteQuery = "DELETE FROM Playerchests WHERE id=@uuid;";
+    string sSelectQuery = "SELECT item_data FROM Playerchests WHERE item_uuid=? AND name=? AND Charname=? AND cdkey=?;";
+    string sDeleteQuery = "DELETE FROM Playerchests WHERE item_uuid=? AND name=? AND charname=? AND cdkey=?;";
     json jUUIDs = GetLocalJson(oPlayer, PC_UUID_ARRAY);// Get our array index <-> uuid map
     location locPlayer = GetLocation(oPlayer);
     int nItem, nWithdrawnItems = 0;
@@ -493,6 +493,10 @@ void PC_WithdrawItems(object oPlayer, int nToken)
             //SqlBindString(sql, "@uuid", sUUID);
             if (NWNX_SQL_PrepareQuery(sSelectQuery)) {
                 NWNX_SQL_PreparedString(0, sUUID);
+                NWNX_SQL_PreparedString(1, GetPCPlayerName(oPc));
+                NWNX_SQL_PreparedString(2, GetName(oPc));
+                NWNX_SQL_PreparedString(3, GetPCPublicCDKey(oPc));
+
                 NWNX_SQL_ExecutePreparedQuery();
 
                 //if (SqlStep(sql))
@@ -502,6 +506,9 @@ void PC_WithdrawItems(object oPlayer, int nToken)
 
                     if (NWNX_SQL_PrepareQuery(sDeleteQuery)) {
                         NWNX_SQL_PreparedString(0, sUUID);
+                        NWNX_SQL_PreparedString(1, GetPCPlayerName(oPc));
+                        NWNX_SQL_PreparedString(2, GetName(oPc));
+                        NWNX_SQL_PreparedString(3, GetPCPublicCDKey(oPc));
                         NWNX_SQL_ExecutePreparedQuery();
                     }
                     /*
