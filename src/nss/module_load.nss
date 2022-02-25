@@ -240,10 +240,12 @@ void main() {
         "name TEXT, " +
         "charname TEXT, " +
         "cdkey TEXT, " +
-        "itemtag TEXT, " +
-        "amount TEXT, " +
-        "description TEXT, " +
-        "PRIMARY KEY (id))";
+        "item_name TEXT NOT NULL, " +
+        "item_baseitem INTEGER NOT NULL, " +
+        "item_stacksize INTEGER NOT NULL, " +
+        "item_iconresref TEXT NOT NULL, " +
+        "item_data TEXT_NOT NULL, " +
+        "PRIMARY KEY(id));";
     NWNX_SQL_ExecuteQuery(sQuery);
 
     // Chat

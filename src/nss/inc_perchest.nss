@@ -5,6 +5,7 @@
 
 #include "nw_inc_nui"
 #include "nw_inc_gff"
+#include "nwnx_sql"
 
 const string PC_NUI_WINDOW_ID       = "PC_WINDOW";
 const string PC_UUID_ARRAY          = "PC_UUID_ARRAY";
@@ -44,6 +45,7 @@ string PC_GetTableName(object oPlayer)
 
 void PC_InitializeDatabase(object oPlayer)
 {// Boring database stuff
+    /*
     string sDatabase = PC_GetDatabaseName(oPlayer);
     string sTable = PC_GetTableName(oPlayer);
     string sQuery = "SELECT name FROM sqlite_master WHERE type='table' AND name=@table;";
@@ -63,6 +65,7 @@ void PC_InitializeDatabase(object oPlayer)
         sqlquery sql = SqlPrepareQueryCampaign(sDatabase, sQuery);
         SqlStep(sql);
     }
+    */
 }
 
 void PC_CreateNUIWindow(object oPlayer, int bOpenInventory = PC_OPEN_INVENTORY_WINDOW)
@@ -252,11 +255,22 @@ void PC_HandleNUIEvents(object oPlayer, int nToken, string sType, string sElemen
     }
 }
 
-int PC_GetStoredItemAmount(object oPlayer)
+int PC_GetStoredItemAmount(object oPc)
 {// Wrapper to get the number of stored items
-    string sQuery = "SELECT COUNT(*) FROM " + PC_GetTableName(oPlayer);
+    string sQuery = "SELECT (*) FROM Playerchests where name = ? AND charname = ? AND cdkey = ?";
+    if (NWNX_SQL_PrepareQuery(sQuery)) {
+        NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
+        NWNX_SQL_PreparedString(1, GetName(oPc));
+        NWNX_SQL_PreparedString(2, GetPCPublicCDKey(oPc));
+        NWNX_SQL_ExecutePreparedQuery();
+        return StringToInt(NWNX_SQL_ReadDataInActiveRow(0));
+    }
+    return 0;
+
+    /*
     sqlquery sql = SqlPrepareQueryCampaign(PC_GetDatabaseName(oPlayer), sQuery);
     return SqlStep(sql) ? SqlGetInt(sql, 0) : 0;
+    */
 }
 
 string PC_GetIconResref(object oItem, json jItem, int nBaseItem)
@@ -340,7 +354,7 @@ void PC_HandleDepositEvent(object oPlayer, object oItem, vector vPosition)
     int nStoredItems = PC_GetStoredItemAmount(oPlayer);
     if (nStoredItems >= PC_MAX_ITEMS)
     {// Check if we have space...
-        SendMessageToPC(oPlayer, "Your persistent chest is full, withdraw an item first.");
+        SendMessageToPC(oPlayer, "Die Kiste ist voll.");
         return;
     }
 
@@ -352,10 +366,21 @@ void PC_HandleDepositEvent(object oPlayer, object oItem, vector vPosition)
     int nItemStackSize = GetItemStackSize(oItem);
     json jItemData = ObjectToJson(oItem, PC_SAVE_ITEM_OBJECT_STATE);
     string sItemIconResRef = PC_GetIconResref(oItem, jItemData, nItemBaseItem);
-    string sQuery = "INSERT INTO " + PC_GetTableName(oPlayer) +
-                    "(item_uuid, item_name, item_baseitem, item_stacksize, item_iconresref, item_data) " +
-                    "VALUES(@item_uuid, @item_name, @item_baseitem, @item_stacksize, @item_iconresref, @item_data);";
-    sqlquery sql = SqlPrepareQueryCampaign(PC_GetDatabaseName(oPlayer), sQuery);
+    string sQuery = "INSERT INTO Playerchests" +
+                    "(name, charname, cdkey, item_uuid, item_name, item_baseitem, item_stacksize, item_iconresref, item_data) " +
+                    "VALUES(?, ?, ?, ?, ?, ?);";
+    NWNX_SQL_PreparedString(0, GetPCPlayerName(oPlayer));
+    NWNX_SQL_PreparedString(1, GetName(oPlayer));
+    NWNX_SQL_PreparedString(2, GetPCPublicCDKey(oPlayer));
+    NWNX_SQL_PreparedString(3, sItemUUID);
+    NWNX_SQL_PreparedString(4, sItemName);
+    NWNX_SQL_PreparedInt(5, nItemBaseItem);
+    NWNX_SQL_PreparedInt(6, nItemStackSize);
+    NWNX_SQL_PreparedString(7, sItemIconResRef);
+    NWNX_SQL_PreparedString(8, JsonDump(jItemData));
+    NWNX_SQL_ExecutePreparedQuery();
+
+    /*sqlquery sql = SqlPrepareQueryCampaign(PC_GetDatabaseName(oPlayer), sQuery);
 
     SqlBindString(sql, "@item_uuid", sItemUUID);
     SqlBindString(sql, "@item_name", sItemName);
@@ -364,6 +389,7 @@ void PC_HandleDepositEvent(object oPlayer, object oItem, vector vPosition)
     SqlBindString(sql, "@item_iconresref", sItemIconResRef);
     SqlBindJson(sql, "@item_data", jItemData);
     SqlStep(sql);
+    */
 
     int nToken = NuiFindWindow(oPlayer, PC_NUI_WINDOW_ID);
     if (nToken)
@@ -391,28 +417,34 @@ void PC_UpdateItemList(object oPlayer, int nToken)
 
     int nNumItems = PC_GetStoredItemAmount(oPlayer);
     string sSearch = GetLocalString(oPlayer, PC_SEARCH_STRING);
-    string sQuery = "SELECT item_uuid, item_name, item_baseitem, item_stacksize, item_iconresref FROM " +
-                    PC_GetTableName(oPlayer) + (sSearch != "" ? " WHERE item_name LIKE @search" : "") +" ORDER BY item_baseitem ASC, item_name ASC;";
-    sqlquery sql = SqlPrepareQueryCampaign(PC_GetDatabaseName(oPlayer), sQuery);
-
-    if (sSearch != "")
-        SqlBindString(sql, "@search", "%" + sSearch + "%");
-
-    while (SqlStep(sql))
-    {// Loop all items
-        string sUUID = SqlGetString(sql, 0);
-        string sName = SqlGetString(sql, 1);
-        int nBaseItem = SqlGetInt(sql, 2);
-        int nStackSize = SqlGetInt(sql, 3);
-        string sIconResRef = SqlGetString(sql, 4);
-
-        jUUIDArray = JsonArrayInsert(jUUIDArray, JsonString(sUUID));// Store its UUId
-        jNamesArray = JsonArrayInsert(jNamesArray, JsonString(sName + (nStackSize > 1 ? " (x" + IntToString(nStackSize) + ")" : "")));// Store its name and stacksize if >1
-        jTooltipArray = JsonArrayInsert(jTooltipArray, JsonString(GetStringByStrRef(StringToInt(Get2DAString("baseitems", "Name", nBaseItem)))));// Store the tooltip
-        jIconsArray = JsonArrayInsert(jIconsArray, JsonString(sIconResRef));// Store the icon
-        jSelectedArray = JsonArrayInsert(jSelectedArray, JsonBool(FALSE));// Set the item as not selected
+    string sQuery = "SELECT item_uuid, item_name, item_baseitem, item_stacksize, item_iconresref FROM Playerchests";
+    if (sSearch != "") {
+        sQuery = sQuery + " WHERE item_name LIKE ?";
     }
+    sQuery = sQuery + " ORDER BY item_baseitem ASC, item_name ASC;";
+    //sqlquery sql = SqlPrepareQueryCampaign(PC_GetDatabaseName(oPlayer), sQuery);
 
+    if (NWNX_SQL_PrepareQuery(sQuery)) {
+        if (sSearch != "") {
+        //SqlBindString(sql, "@search", "%" + sSearch + "%");
+            NWNX_SQL_PreparedString(0, sSearch);
+        }
+        NWNX_SQL_ExecutePreparedQuery();
+        while (NWNX_SQL_ReadyToReadNextRow()) {
+            NWNX_SQL_ReadNextRow();
+            string sUUID = NWNX_SQL_ReadDataInActiveRow(0);
+            string sName = NWNX_SQL_ReadDataInActiveRow(4);
+            int nBaseItem = StringToInt(NWNX_SQL_ReadDataInActiveRow(5));
+            int nStackSize = StringToInt(NWNX_SQL_ReadDataInActiveRow(6));
+            string sIconResRef = NWNX_SQL_ReadDataInActiveRow(7);
+
+            jUUIDArray = JsonArrayInsert(jUUIDArray, JsonString(sUUID));// Store its UUId
+            jNamesArray = JsonArrayInsert(jNamesArray, JsonString(sName + (nStackSize > 1 ? " (x" + IntToString(nStackSize) + ")" : "")));// Store its name and stacksize if >1
+            jTooltipArray = JsonArrayInsert(jTooltipArray, JsonString(GetStringByStrRef(StringToInt(Get2DAString("baseitems", "Name", nBaseItem)))));// Store the tooltip
+            jIconsArray = JsonArrayInsert(jIconsArray, JsonString(sIconResRef));// Store the icon
+            jSelectedArray = JsonArrayInsert(jSelectedArray, JsonBool(FALSE));// Set the item as not selected
+        }
+    }
     SetLocalJson(oPlayer, PC_UUID_ARRAY, jUUIDArray);// We save this array on the player for later use
     // Set the list binds to the new arrays
     NuiSetBind(oPlayer, nToken, "icons", jIconsArray);
@@ -444,31 +476,42 @@ void PC_WithdrawItems(object oPlayer, int nToken)
 
     string sDatabase = PC_GetDatabaseName(oPlayer);
     string sTable = PC_GetTableName(oPlayer);
-    string sSelectQuery = "SELECT item_data FROM " + sTable + " WHERE item_uuid=@uuid;";
-    string sDeleteQuery = "DELETE FROM " + sTable + " WHERE item_uuid=@uuid;";
+    string sSelectQuery = "SELECT item_data FROM Playerchests WHERE id=?;";
+    string sDeleteQuery = "DELETE FROM Playerchests WHERE id=@uuid;";
     json jUUIDs = GetLocalJson(oPlayer, PC_UUID_ARRAY);// Get our array index <-> uuid map
     location locPlayer = GetLocation(oPlayer);
     int nItem, nWithdrawnItems = 0;
     float fDelay = PC_ITEM_WITHDRAW_DELAY;
-    sqlquery sql;
+    //sqlquery sql;
 
     for (nItem = 0; nItem < nNumItems; nItem++)
     {// Loop all items, this will need improving for big amounts of items
         if (JsonGetInt(JsonArrayGet(jSelected, nItem)))
         {// Check if the item is selected, if so we withdraw it
             string sUUID = JsonGetString(JsonArrayGet(jUUIDs, nItem));// Use the index of the item to get its uuid from the array we stored earlier
-            sql = SqlPrepareQueryCampaign(sDatabase, sSelectQuery);
-            SqlBindString(sql, "@uuid", sUUID);
+            //sql = SqlPrepareQueryCampaign(sDatabase, sSelectQuery);
+            //SqlBindString(sql, "@uuid", sUUID);
+            if (NWNX_SQL_PrepareQuery(sSelectQuery)) {
+                NWNX_SQL_PreparedString(0, sUUID);
+                NWNX_SQL_ExecutePreparedQuery();
 
-            if (SqlStep(sql))
-            {
-                json jItem = SqlGetJson(sql, 0);
-                sql = SqlPrepareQueryCampaign(sDatabase, sDeleteQuery);// Delete the database entry of the item
-                SqlBindString(sql, "@uuid", sUUID);
-                SqlStep(sql);
+                //if (SqlStep(sql))
+                while (NWNX_SQL_ReadyToReadNextRow()) {
+                    NWNX_SQL_ReadNextRow();
+                    json jItem = JsonParse(NWNX_SQL_ReadDataInActiveRow(4));
 
-                DelayCommand(fDelay, VoidJsonToObject(jItem, locPlayer, oPlayer, PC_SAVE_ITEM_OBJECT_STATE));
-                nWithdrawnItems++;
+                    if (NWNX_SQL_PrepareQuery(sDeleteQuery)) {
+                        NWNX_SQL_PreparedString(0, sUUID);
+                        NWNX_SQL_ExecutePreparedQuery();
+                    }
+                    /*
+                    sql = SqlPrepareQueryCampaign(sDatabase, sDeleteQuery);// Delete the database entry of the item
+                    SqlBindString(sql, "@uuid", sUUID);
+                    SqlStep(sql);
+                    */
+                    DelayCommand(fDelay, VoidJsonToObject(jItem, locPlayer, oPlayer, PC_SAVE_ITEM_OBJECT_STATE));
+                    nWithdrawnItems++;
+                }
             }
         }
 
