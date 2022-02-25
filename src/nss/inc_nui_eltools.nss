@@ -34,11 +34,11 @@ void SetChatbox(object oPc, int nToken) {
         NWNX_SQL_ExecutePreparedQuery();
         while (NWNX_SQL_ReadyToReadNextRow()) {
             NWNX_SQL_ReadNextRow();
-            int i;
-            for (i = 0; i < MAX_PLAYERS; i++) {
-                if (iSelectionCounter == 0) {
-                    sText = sText + NWNX_SQL_ReadDataInActiveRow(2) + ": " + NWNX_SQL_ReadDataInActiveRow(3) + "\n";
-                } else {
+            if (iSelectionCounter == 0) {
+                sText = sText + NWNX_SQL_ReadDataInActiveRow(2) + ": " + NWNX_SQL_ReadDataInActiveRow(3) + "\n";
+            } else {
+                int i;
+                for (i = 0; i < MAX_PLAYERS; i++) {
                     string sCompare = JsonGetString(NuiGetBind(oPc, nToken, "player_" + IntToString(i)));
                     object oPlayer = GetPlayerByName(NWNX_SQL_ReadDataInActiveRow(2));
                     string sCompare2 = GetSubString(GetName(oPlayer) + " (" + GetName(GetArea(oPlayer)) + ")", 0, 30);
@@ -48,7 +48,7 @@ void SetChatbox(object oPc, int nToken) {
                         }
                     }
                 }
-           }
+            }
         }
     }
     NuiSetBind(oPc, nToken, "chatbox", JsonString(sText));
