@@ -244,7 +244,7 @@ void main() {
         "item_baseitem INTEGER NOT NULL, " +
         "item_stacksize INTEGER NOT NULL, " +
         "item_iconresref TEXT NOT NULL, " +
-        "item_data TEXT_NOT NULL, " +
+        "item_data TEXT NOT NULL, " +
         "PRIMARY KEY(id));";
     NWNX_SQL_ExecuteQuery(sQuery);
 
