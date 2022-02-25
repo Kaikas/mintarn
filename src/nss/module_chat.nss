@@ -2073,14 +2073,6 @@ int ELTools(string sMessage) {
     return 0;
 }
 
-int OpenStorage(string sMessage) {
-    if (sMessage == "/storage") {
-        ExecuteScript("nui_persistentch", oPc);
-        return 1;
-    }
-    return 0;
-}
-
 // Chat befehle
 void main() {
   string sMessage = GetPCChatMessage();
@@ -2137,7 +2129,6 @@ void main() {
         helpSkills(sMessage) ||
         openDowntime(sMessage) ||
         ELTools(sMessage) ||
-        OpenStorage(sMessage) ||
         helpMasks(sMessage)) {
         } else {
           SendMessageToPC(oPc, "Ungültiger Befehl: \"" +

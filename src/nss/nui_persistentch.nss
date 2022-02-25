@@ -4,5 +4,5 @@ void main()
 {
     object oPlayer = GetLastUsedBy();
 
-    PC_CreateNUIWindow(OBJECT_SELF);
+    PC_CreateNUIWindow(oPlayer);
 }
