@@ -493,9 +493,9 @@ void PC_WithdrawItems(object oPlayer, int nToken)
             //SqlBindString(sql, "@uuid", sUUID);
             if (NWNX_SQL_PrepareQuery(sSelectQuery)) {
                 NWNX_SQL_PreparedString(0, sUUID);
-                NWNX_SQL_PreparedString(1, GetPCPlayerName(oPc));
-                NWNX_SQL_PreparedString(2, GetName(oPc));
-                NWNX_SQL_PreparedString(3, GetPCPublicCDKey(oPc));
+                NWNX_SQL_PreparedString(1, GetPCPlayerName(oPlayer));
+                NWNX_SQL_PreparedString(2, GetName(oPlayer));
+                NWNX_SQL_PreparedString(3, GetPCPublicCDKey(oPlayer));
 
                 NWNX_SQL_ExecutePreparedQuery();
 
@@ -506,9 +506,9 @@ void PC_WithdrawItems(object oPlayer, int nToken)
 
                     if (NWNX_SQL_PrepareQuery(sDeleteQuery)) {
                         NWNX_SQL_PreparedString(0, sUUID);
-                        NWNX_SQL_PreparedString(1, GetPCPlayerName(oPc));
-                        NWNX_SQL_PreparedString(2, GetName(oPc));
-                        NWNX_SQL_PreparedString(3, GetPCPublicCDKey(oPc));
+                        NWNX_SQL_PreparedString(1, GetPCPlayerName(oPlayer));
+                        NWNX_SQL_PreparedString(2, GetName(oPlayer));
+                        NWNX_SQL_PreparedString(3, GetPCPublicCDKey(oPlayer));
                         NWNX_SQL_ExecutePreparedQuery();
                     }
                     /*
