@@ -434,10 +434,10 @@ void PC_UpdateItemList(object oPlayer, int nToken)
         while (NWNX_SQL_ReadyToReadNextRow()) {
             NWNX_SQL_ReadNextRow();
             string sUUID = NWNX_SQL_ReadDataInActiveRow(0);
-            string sName = NWNX_SQL_ReadDataInActiveRow(4);
-            int nBaseItem = StringToInt(NWNX_SQL_ReadDataInActiveRow(5));
-            int nStackSize = StringToInt(NWNX_SQL_ReadDataInActiveRow(6));
-            string sIconResRef = NWNX_SQL_ReadDataInActiveRow(7);
+            string sName = NWNX_SQL_ReadDataInActiveRow(1);
+            int nBaseItem = StringToInt(NWNX_SQL_ReadDataInActiveRow(2));
+            int nStackSize = StringToInt(NWNX_SQL_ReadDataInActiveRow(3));
+            string sIconResRef = NWNX_SQL_ReadDataInActiveRow(4);
 
             jUUIDArray = JsonArrayInsert(jUUIDArray, JsonString(sUUID));// Store its UUId
             jNamesArray = JsonArrayInsert(jNamesArray, JsonString(sName + (nStackSize > 1 ? " (x" + IntToString(nStackSize) + ")" : "")));// Store its name and stacksize if >1
