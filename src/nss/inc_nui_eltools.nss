@@ -16,21 +16,36 @@ object GetPlayerByName(string sName) {
     return oPlayer;
 }
 
+int CountSelectedCheckboxes(object oPc, int nToken) {
+    int i, iCount;
+    for (i = 0; i < MAX_PLAYERS; i++) {
+        if (NuiGetBind(oPc, nToken, "selected2_" + IntToString(i)) == JsonBool(TRUE)) {
+            iCount++;
+        }
+    }
+    return iCount;
+}
+
 void SetChatbox(object oPc, int nToken) {
     string sQuery = "SELECT * FROM Chat ORDER BY id DESC LIMIT 50";
     string sText = "";
+    int iSelectionCounter = CountSelectedCheckboxes(oPc, nToken);
     if (NWNX_SQL_PrepareQuery(sQuery)) {
         NWNX_SQL_ExecutePreparedQuery();
         while (NWNX_SQL_ReadyToReadNextRow()) {
             NWNX_SQL_ReadNextRow();
             int i;
             for (i = 0; i < MAX_PLAYERS; i++) {
-                string sCompare = JsonGetString(NuiGetBind(oPc, nToken, "player_" + IntToString(i)));
-                object oPlayer = GetPlayerByName(NWNX_SQL_ReadDataInActiveRow(2));
-                string sCompare2 = GetSubString(GetName(oPlayer) + " (" + GetName(GetArea(oPlayer)) + ")", 0, 30);
-                if (sCompare == sCompare2) {
-                    if (NuiGetBind(oPc, nToken, "selected2_" + IntToString(i)) == JsonBool(TRUE)) {
-                        sText = sText + NWNX_SQL_ReadDataInActiveRow(2) + ": " + NWNX_SQL_ReadDataInActiveRow(3) + "\n";
+                if (iSelectionCounter == 0) {
+                    sText = sText + NWNX_SQL_ReadDataInActiveRow(2) + ": " + NWNX_SQL_ReadDataInActiveRow(3) + "\n";
+                } else {
+                    string sCompare = JsonGetString(NuiGetBind(oPc, nToken, "player_" + IntToString(i)));
+                    object oPlayer = GetPlayerByName(NWNX_SQL_ReadDataInActiveRow(2));
+                    string sCompare2 = GetSubString(GetName(oPlayer) + " (" + GetName(GetArea(oPlayer)) + ")", 0, 30);
+                    if (sCompare == sCompare2) {
+                        if (NuiGetBind(oPc, nToken, "selected2_" + IntToString(i)) == JsonBool(TRUE)) {
+                            sText = sText + NWNX_SQL_ReadDataInActiveRow(2) + ": " + NWNX_SQL_ReadDataInActiveRow(3) + "\n";
+                        }
                     }
                 }
            }
