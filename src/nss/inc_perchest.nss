@@ -257,15 +257,19 @@ void PC_HandleNUIEvents(object oPlayer, int nToken, string sType, string sElemen
 
 int PC_GetStoredItemAmount(object oPc)
 {// Wrapper to get the number of stored items
+    int iCount = 0;
     string sQuery = "SELECT * FROM Playerchests where name = ? AND charname = ? AND cdkey = ?";
     if (NWNX_SQL_PrepareQuery(sQuery)) {
         NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
         NWNX_SQL_PreparedString(1, GetName(oPc));
         NWNX_SQL_PreparedString(2, GetPCPublicCDKey(oPc));
         NWNX_SQL_ExecutePreparedQuery();
-        return StringToInt(NWNX_SQL_ReadDataInActiveRow(0));
+        while (NWNX_SQL_ReadyToReadNextRow()) {
+            NWNX_SQL_ReadNextRow();
+            iCount += 1;
+        }
     }
-    return 0;
+    return iCount;
 
     /*
     sqlquery sql = SqlPrepareQueryCampaign(PC_GetDatabaseName(oPlayer), sQuery);
