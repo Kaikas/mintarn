@@ -507,7 +507,7 @@ void PC_WithdrawItems(object oPlayer, int nToken)
                 //if (SqlStep(sql))
                 while (NWNX_SQL_ReadyToReadNextRow()) {
                     NWNX_SQL_ReadNextRow();
-                    json jItem = JsonParse(NWNX_SQL_ReadDataInActiveRow(4));
+                    json jItem = JsonParse(NWNX_SQL_ReadDataInActiveRow(0));
 
                     if (NWNX_SQL_PrepareQuery(sDeleteQuery)) {
                         NWNX_SQL_PreparedString(0, sUUID);
