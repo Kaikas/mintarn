@@ -9761,6 +9761,17 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
+                      "value": "Bauernkleidung"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_ru_einfach005"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
                       "value": "Bettlerkleidung"
                     },
                     "RESREF": {
@@ -13745,6 +13756,17 @@
                     "RESREF": {
                       "type": "resref",
                       "value": "sw_we_tabak"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Tablett"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_we_tablett"
                     }
                   },
                   {
