@@ -424,7 +424,7 @@ void PC_UpdateItemList(object oPlayer, int nToken)
     string sSearch = GetLocalString(oPlayer, PC_SEARCH_STRING);
     string sQuery = "SELECT item_uuid, item_name, item_baseitem, item_stacksize, item_iconresref FROM Playerchests";
     if (sSearch != "") {
-        sQuery = sQuery + " WHERE item_name LIKE ? AND name=? AND charname=? and cdkey=?";
+        sQuery = sQuery + " WHERE item_name LIKE %?% AND name=? AND charname=? and cdkey=?";
     } else {
         sQuery = sQuery + " WHERE name=? AND charname=? and cdkey=?";
     }
