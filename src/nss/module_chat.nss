@@ -211,7 +211,22 @@ void speak(object oSpeaker, string sMessage) {
   SetPCChatVolume(TALKVOLUME_SILENT_TALK);
   SetLocalString(oSpeaker, "sMessage", sMessage);
   SetLocalInt(oSpeaker, "iChatVolume", iChatVolume);
-  ExecuteScript("global_speak", oSpeaker);
+  if (iChatVolume == 2) SetLocalInt(oSpeaker, "iChatVolume", TALKVOLUME_SILENT_TALK);
+  if (GetIsDM(oSpeaker)) {
+    SendMessageToPC(oSpeaker, "Achtung! Aus technischen Gründen kam die Nachricht nicht an. Versuche es mit /a für alle, /g für Gebiet oder /s für Umkreis.");
+  } else {
+      string sAccountName = GetPCPlayerName(oPc);
+      string sName = GetName(oPc);
+      sQuery = "INSERT INTO Chat (name, charname, text, datetime) VALUES (?, ?, ?, ?)";
+      if (NWNX_SQL_PrepareQuery(sQuery)) {
+        NWNX_SQL_PreparedString(0, sAccountName);
+        NWNX_SQL_PreparedString(1, sName);
+        NWNX_SQL_PreparedString(2, sMessage);
+        NWNX_SQL_PreparedString(3, IntToString(NWNX_Time_GetTimeStamp()));
+        NWNX_SQL_ExecutePreparedQuery();
+      }
+      ExecuteScript("global_speak", oSpeaker);
+  }
 }
 
 int speakOOC(string sMessage, object oTarget) {
@@ -2050,6 +2065,14 @@ int openDowntime(string sMessage) {
     return 0;
 }
 
+int ELTools(string sMessage) {
+    if (sMessage == "/eltools" && (GetIsDM(oPc) || GetIsDMPossessed(oPc))) {
+        ExecuteScript("nui_eltools", oPc);
+        return 1;
+    }
+    return 0;
+}
+
 // Chat befehle
 void main() {
   string sMessage = GetPCChatMessage();
@@ -2060,6 +2083,8 @@ void main() {
   string sBan = GetSubString(sMessage, 0, 4);
   string sUnban = GetSubString(sMessage, 0, 6);
   string sPferd= GetSubString(sMessage, 0, 4);
+
+  if (iChatVolume == 2) SetPCChatVolume(TALKVOLUME_TALK);
 
   if (GetSubString(sMessage, 0, 1) == ":" || GetSubString(sMessage, 0, 1) == "/") {
     if (speakAsChar(sMessage) ||
@@ -2103,6 +2128,7 @@ void main() {
         helpAnimation(sMessage) ||
         helpSkills(sMessage) ||
         openDowntime(sMessage) ||
+        ELTools(sMessage) ||
         helpMasks(sMessage)) {
         } else {
           SendMessageToPC(oPc, "Ungültiger Befehl: \"" +
@@ -2134,7 +2160,7 @@ void main() {
       //SetPCChatMessage(sMessage);
       if (GetIsDM(oPc) || GetIsDM(GetMaster(oPc)) || GetIsDMPossessed(oPc)) {
         SendMessageToPC(oPc, "Folgende Spieler im 50 Meter Radius haben euch vernommen:");
-        SendMessageToAllDMs("ErzÂ¿hler (/s)[" + GetTag(GetArea(oPc)) + "]: " + sMessage);
+        SendMessageToAllDMs("Erzähler (/s)[" + GetTag(GetArea(oPc)) + "]: " + sMessage);
         object oTalkTo = GetFirstPC();
         while (oTalkTo != OBJECT_INVALID) {
           if (GetArea(oTalkTo) == GetArea(oPc) && GetDistanceBetween(oTalkTo, oPc) < 50.0) {

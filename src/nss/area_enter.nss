@@ -80,6 +80,7 @@ void Nether() {
   if (GetTag(oArea) == "AREA_Nether") {
     string sMessage = "Ihr seid gestorben. Wenn ihr betet könnte sich ein Gott eurer annehmen. (( Gebt /beten ein. ))";
     SendMessageToPC(oPc, sMessage);
+    ExecuteScript("nui_death", oPc);
   }
 }
 

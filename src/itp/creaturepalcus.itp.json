@@ -848,7 +848,7 @@
                           "__struct_id": 0,
                           "CR": {
                             "type": "float",
-                            "value": 7.0
+                            "value": 8.0
                           },
                           "FACTION": {
                             "type": "cexostring",
@@ -2686,6 +2686,25 @@
                     "RESREF": {
                       "type": "resref",
                       "value": "aleriskon001"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "CR": {
+                      "type": "float",
+                      "value": 4.0
+                    },
+                    "FACTION": {
+                      "type": "cexostring",
+                      "value": "Commoner"
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Klaudia"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "klaudia"
                     }
                   },
                   {

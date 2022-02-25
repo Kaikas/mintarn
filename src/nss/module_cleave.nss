@@ -48,6 +48,15 @@ void main()
                 NWNX_SQL_PreparedString(20, sName);
                 NWNX_SQL_ExecutePreparedQuery();
             }
+        } else {
+            string sQuery = "UPDATE Users SET health=?, maxhealth=? WHERE name=? AND charname=?";
+            if (NWNX_SQL_PrepareQuery(sQuery)) {
+                NWNX_SQL_PreparedInt(0, GetCurrentHitPoints(oPc));
+                NWNX_SQL_PreparedInt(1, GetMaxHitPoints(oPc));
+                NWNX_SQL_PreparedString(2, sAccountName);
+                NWNX_SQL_PreparedString(3, sName);
+                NWNX_SQL_ExecutePreparedQuery();
+            }
         }
     }
 }

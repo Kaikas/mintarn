@@ -26,7 +26,7 @@ void main() {
     json jWindow = NuiWindow(jRoot,
         JsonString(GetName(oPc)),
         NuiRect(-1.0, -1.0, 320.0, 400.0),
-        JsonBool(FALSE),
+        JsonBool(TRUE),
         JsonBool(FALSE),
         JsonBool(TRUE),
         JsonBool(FALSE),

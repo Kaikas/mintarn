@@ -1,4 +1,4 @@
-// Mintarn aussehen ändern
+// Mintarn aussehen ï¿½ndern
 
 void TransferItemProperties(object oSource, object oTarget);
 
@@ -42,6 +42,17 @@ void portraitnext(object oPc) {
 
 }
 
+void portraitfirst(object oPc) {
+    int iPortraitId = 1;
+    string sPortrait = Get2DAString("portraits", "BaseResRef", iPortraitId);
+    SetLocalInt(oPc, "aussehen_portrait", iPortraitId);
+    SetPortraitResRef(oPc, "po_" + sPortrait);
+    ClearAllActions();
+    ActionPauseConversation();
+    ActionWait(1.0);
+    ActionResumeConversation();
+}
+
 // Switches to a previous Portrait
 void portraitprevious(object oPc) {
     int iPortraitId = GetLocalInt(oPc, "aussehen_portrait") - 1;
@@ -75,6 +86,7 @@ void portraitback(object oPc) {
 
 // Changes the torso to the next optic
 void torsonext(object oPc) {
+    SendMessageToPC(oPc, "Hallo Welt: " + Get2DAString("app", "TORSO", 5));
     object oArmor = GetItemInSlot(INVENTORY_SLOT_CHEST, oPc);
     int iAppearanceNumber = GetItemAppearance(oArmor, ITEM_APPR_TYPE_ARMOR_MODEL, ITEM_APPR_ARMOR_MODEL_TORSO) + 1;
     if (iAppearanceNumber > 255) iAppearanceNumber = 1;
@@ -155,32 +167,57 @@ string Get2DAArmorTypeFile(int iType) {
     return sRet;
 }
 
+string Get2DAAppearanceColumn(int iArmorPart) {
+    string sRet;
+    switch(iArmorPart) {
+        case ITEM_APPR_ARMOR_MODEL_TORSO: sRet = "TORSO";
+        case ITEM_APPR_ARMOR_MODEL_BELT: sRet = "BELT";
+        case ITEM_APPR_ARMOR_MODEL_LBICEP: sRet = "BICEP";
+        case ITEM_APPR_ARMOR_MODEL_LFOOT: sRet = "FOOT";
+        case ITEM_APPR_ARMOR_MODEL_LFOREARM: sRet = "ARM";
+        case ITEM_APPR_ARMOR_MODEL_LHAND: sRet = "HAND";
+        case ITEM_APPR_ARMOR_MODEL_LSHIN: sRet = "SHIN";
+        case ITEM_APPR_ARMOR_MODEL_LSHOULDER: sRet = "SHOUL";
+        case ITEM_APPR_ARMOR_MODEL_LTHIGH: sRet = "THIGH";
+        case ITEM_APPR_ARMOR_MODEL_NECK: sRet = "NECK";
+        case ITEM_APPR_ARMOR_MODEL_PELVIS: sRet = "PELVIS";
+        case ITEM_APPR_ARMOR_MODEL_RBICEP: sRet = "BICEP";
+        case ITEM_APPR_ARMOR_MODEL_RFOOT: sRet = "FOOT";
+        case ITEM_APPR_ARMOR_MODEL_RFOREARM: sRet = "ARM";
+        case ITEM_APPR_ARMOR_MODEL_RHAND: sRet = "HAND";
+        case ITEM_APPR_ARMOR_MODEL_ROBE: sRet = "ROBE";
+        case ITEM_APPR_ARMOR_MODEL_RSHIN: sRet = "SHIN";
+        case ITEM_APPR_ARMOR_MODEL_RSHOULDER: sRet = "SHOUL";
+        case ITEM_APPR_ARMOR_MODEL_RTHIGH: sRet = "THIGH";
+    }
+    return sRet;
+}
+
 // Changes the appearance of a part to the next available one
-void armornext(object oPc, int iType, int iMax) {
+void armornext(object oPc, int iArmorPart, int iMax) {
     object oArmor = GetItemInSlot(INVENTORY_SLOT_CHEST, oPc);
-    string sTypeFileName = Get2DAArmorTypeFile(iType);
+    int iAppearanceId = GetItemAppearance(oArmor, ITEM_APPR_TYPE_ARMOR_MODEL, iArmorPart);
+    string sColumn = Get2DAAppearanceColumn(iArmorPart);
 
-    int iAppearanceNumber = GetItemAppearance(oArmor, ITEM_APPR_TYPE_ARMOR_MODEL, iType);
-    iAppearanceNumber = iAppearanceNumber + 1;
+    SendMessageToPC(oPc, "Debug A: " + IntToString(iAppearanceId));
 
-    int iHasArmor = StringToInt(Get2DAString(sTypeFileName, "HASMODEL", iAppearanceNumber));
-    while (iHasArmor != 1) {
-        iAppearanceNumber = iAppearanceNumber + 1;
-        iHasArmor = StringToInt(Get2DAString(sTypeFileName, "HASMODEL", iAppearanceNumber));
-        if (iAppearanceNumber > iMax) iAppearanceNumber = 1;
+    int i = 0;
+    while (StringToInt(Get2DAString("app", sColumn, i)) != iAppearanceId) {
+        i = i + 1;
+        if (Get2DAString("app", sColumn, i) == "****") {
+            i = 0;
+        }
     }
 
+    SendMessageToPC(oPc, "Debug B: " + IntToString(i));
+    SendMessageToPC(oPc, "Debug C: " + Get2DAString("app", sColumn, i + 1));
 
-
-    object oNewArmor = CopyItemAndModify(oArmor, ITEM_APPR_TYPE_ARMOR_MODEL, iType, iAppearanceNumber, FALSE);
+    object oNewArmor = CopyItemAndModify(oArmor, ITEM_APPR_TYPE_ARMOR_MODEL, iArmorPart, StringToInt(Get2DAString("app", sColumn, i + 1)), FALSE);
     if (oNewArmor != OBJECT_INVALID) {
         TransferItemProperties(oArmor, oNewArmor);
         AssignCommand(oPc, ActionEquipItem(oNewArmor, INVENTORY_SLOT_CHEST));
         DestroyObject(oArmor);
-    } else {
-        SendMessageToPC(oPc, "Could not find valid Model.");
     }
-    SendMessageToPC(oPc, "Model: " + IntToString(iAppearanceNumber));
 }
 
 // Changes the appearance of a part to the previous available one
@@ -575,7 +612,7 @@ void settoken() {
     SetCustomToken(1017, "Helles Olive");
     SetCustomToken(1018, "Dunkles Olive");
     SetCustomToken(1019, "Sehr dunkles Olive");
-    SetCustomToken(1020, "Weiß");
+    SetCustomToken(1020, "Weiï¿½");
     SetCustomToken(1021, "Hellgrau");
     SetCustomToken(1022, "Dunkelgrau");
     SetCustomToken(1023, "Schwarz");
@@ -583,10 +620,10 @@ void settoken() {
     SetCustomToken(1025, "Dunkelblau");
     SetCustomToken(1026, "Hellaquamarin");
     SetCustomToken(1027, "Dunkelaquamarin");
-    SetCustomToken(1028, "Helltürkis");
-    SetCustomToken(1029, "Dunekltürkis");
-    SetCustomToken(1030, "Hellgrün");
-    SetCustomToken(1031, "Dunkelgrün");
+    SetCustomToken(1028, "Helltï¿½rkis");
+    SetCustomToken(1029, "Dunekltï¿½rkis");
+    SetCustomToken(1030, "Hellgrï¿½n");
+    SetCustomToken(1031, "Dunkelgrï¿½n");
     SetCustomToken(1032, "Hellgelb");
     SetCustomToken(1033, "Dunkelgelb");
     SetCustomToken(1034, "Hellorange");
@@ -599,50 +636,50 @@ void settoken() {
     SetCustomToken(1041, "Dunkellila");
     SetCustomToken(1042, "Hellviolett");
     SetCustomToken(1043, "Dunkelviolett");
-    SetCustomToken(1044, "Weiß (glänzend)");
-    SetCustomToken(1045, "Schwarz (glänzend)");
-    SetCustomToken(1046, "Blau (glänzend)");
-    SetCustomToken(1047, "Aquamarin (glänzend)");
-    SetCustomToken(1048, "Türkis (glänzend)");
-    SetCustomToken(1049, "Grün (glänzend)");
-    SetCustomToken(1050, "Gelb (glänzend)");
-    SetCustomToken(1051, "Orange (glänzend)");
-    SetCustomToken(1052, "Rot (glänzend)");
-    SetCustomToken(1053, "Rosa (glänzend)");
-    SetCustomToken(1054, "Lila (glänzend)");
-    SetCustomToken(1055, "Violett (glänzend)");
+    SetCustomToken(1044, "Weiï¿½ (glï¿½nzend)");
+    SetCustomToken(1045, "Schwarz (glï¿½nzend)");
+    SetCustomToken(1046, "Blau (glï¿½nzend)");
+    SetCustomToken(1047, "Aquamarin (glï¿½nzend)");
+    SetCustomToken(1048, "Tï¿½rkis (glï¿½nzend)");
+    SetCustomToken(1049, "Grï¿½n (glï¿½nzend)");
+    SetCustomToken(1050, "Gelb (glï¿½nzend)");
+    SetCustomToken(1051, "Orange (glï¿½nzend)");
+    SetCustomToken(1052, "Rot (glï¿½nzend)");
+    SetCustomToken(1053, "Rosa (glï¿½nzend)");
+    SetCustomToken(1054, "Lila (glï¿½nzend)");
+    SetCustomToken(1055, "Violett (glï¿½nzend)");
     SetCustomToken(1056, "Silber");
     SetCustomToken(1057, "Obsidian");
     SetCustomToken(1058, "Gold");
     SetCustomToken(1059, "Kupfer");
     SetCustomToken(1060, "Grau");
     SetCustomToken(1061, "Spiegelnd");
-    SetCustomToken(1062, "Reines Weiß");
+    SetCustomToken(1062, "Reines Weiï¿½");
     SetCustomToken(1063, "Reines Schwarz");
     SetCustomToken(1064, "Malvenfarbien Metallic");
     SetCustomToken(1065, "Malvenfarben Metallic (gegraut)");
     SetCustomToken(1066, "Gold Metallic");
     SetCustomToken(1067, "Gold Metallic (gegraut)");
-    SetCustomToken(1068, "Grün Metallic");
-    SetCustomToken(1069, "Grün Metallic");
+    SetCustomToken(1068, "Grï¿½n Metallic");
+    SetCustomToken(1069, "Grï¿½n Metallic");
     SetCustomToken(1070, "Indigo Metallic");
     SetCustomToken(1071, "Indigo Metallic (gegraut)");
     SetCustomToken(1072, "Violett Metallic");
     SetCustomToken(1073, "Violett Metallic (gegraut)");
     SetCustomToken(1074, "Braun Metallic");
     SetCustomToken(1075, "Braun Metallic (gegraut)");
-    SetCustomToken(1076, "Türkis Metallic");
-    SetCustomToken(1077, "Türkis Metallic (gegraut)");
+    SetCustomToken(1076, "Tï¿½rkis Metallic");
+    SetCustomToken(1077, "Tï¿½rkis Metallic (gegraut)");
     SetCustomToken(1078, "Blau Metallic");
     SetCustomToken(1079, "Blau Metallic (gegraut)");
     SetCustomToken(1080, "Olive Metallic");
     SetCustomToken(1081, "Olive Metallic (gegraut)");
     SetCustomToken(1082, "Aquamarin Metallic");
     SetCustomToken(1083, "Aquamarin Metallic (gegraut)");
-    SetCustomToken(1084, "Farngrün Metallic (gegraut)");
+    SetCustomToken(1084, "Farngrï¿½n Metallic (gegraut)");
     SetCustomToken(1085, "Marshland Metallic");
     SetCustomToken(1086, "Marshland Metallic (gegraut)");
-    SetCustomToken(1087, "Farngrün (Metallic)");
+    SetCustomToken(1087, "Farngrï¿½n (Metallic)");
     SetCustomToken(1088, "Hellstes Rot Metallic");
     SetCustomToken(1089, "Hellrot Metallic");
     SetCustomToken(1090, "Rot Metallic");
@@ -659,10 +696,10 @@ void settoken() {
     SetCustomToken(1101, "Sangriafarben");
     SetCustomToken(1102, "Sangriafarben");
     SetCustomToken(1103, "Sangriafarben (dunkel)");
-    SetCustomToken(1104, "Waldgrün");
-    SetCustomToken(1105, "Waldgrün (hell)");
-    SetCustomToken(1106, "Waldgrün");
-    SetCustomToken(1107, "Waldgrün (dunkel)");
+    SetCustomToken(1104, "Waldgrï¿½n");
+    SetCustomToken(1105, "Waldgrï¿½n (hell)");
+    SetCustomToken(1106, "Waldgrï¿½n");
+    SetCustomToken(1107, "Waldgrï¿½n (dunkel)");
     SetCustomToken(1108, "Kleefarben (sehr hell)");
     SetCustomToken(1109, "Kleefarben (hell)");
     SetCustomToken(1110, "Kleefarben");
@@ -695,10 +732,10 @@ void settoken() {
     SetCustomToken(1137, "Hell-Mitternachtsblau");
     SetCustomToken(1138, "Mitternachtsblau");
     SetCustomToken(1139, "Dunkel-Mitternachtsblau");
-    SetCustomToken(1140, "Hellstes Matttürkis");
-    SetCustomToken(1141, "Helles Matttürkis");
-    SetCustomToken(1142, "Matttürkis");
-    SetCustomToken(1143, "Dunkles Matttürkis");
+    SetCustomToken(1140, "Hellstes Matttï¿½rkis");
+    SetCustomToken(1141, "Helles Matttï¿½rkis");
+    SetCustomToken(1142, "Matttï¿½rkis");
+    SetCustomToken(1143, "Dunkles Matttï¿½rkis");
     SetCustomToken(1144, "Hellstes Magenta");
     SetCustomToken(1145, "Hellmagenta");
     SetCustomToken(1146, "Magenta");
@@ -707,8 +744,8 @@ void settoken() {
     SetCustomToken(1149, "Himmelblau");
     SetCustomToken(1150, "Hell-Mosque");
     SetCustomToken(1151, "Mosque");
-    SetCustomToken(1152, "Hell-Saftgrün");
-    SetCustomToken(1153, "Saftgrün");
+    SetCustomToken(1152, "Hell-Saftgrï¿½n");
+    SetCustomToken(1153, "Saftgrï¿½n");
     SetCustomToken(1154, "Buttered Rum (hell)");
     SetCustomToken(1155, "Buttered Rum");
     SetCustomToken(1156, "Burnt Sienna (hell)");
@@ -735,10 +772,10 @@ void settoken() {
 
 // Sets the tokens for metal colors
 void setmetaltoken() {
-    SetCustomToken(1000, "Silber (sehr hell, glänzend)");
-    SetCustomToken(1001, "Silber (hell, glänzend)");
-    SetCustomToken(1002, "Obisdian (dunkel, glänzend)");
-    SetCustomToken(1003, "Obsidian (sehr dunkel, glänzend)");
+    SetCustomToken(1000, "Silber (sehr hell, glï¿½nzend)");
+    SetCustomToken(1001, "Silber (hell, glï¿½nzend)");
+    SetCustomToken(1002, "Obisdian (dunkel, glï¿½nzend)");
+    SetCustomToken(1003, "Obsidian (sehr dunkel, glï¿½nzend)");
     SetCustomToken(1004, "Silber (sehr hell, matt)");
     SetCustomToken(1005, "Silber (hell, matt)");
     SetCustomToken(1006, "Obsidian (dunkel, matt)");
@@ -771,14 +808,14 @@ void setmetaltoken() {
     SetCustomToken(1033, "Dunkelblau");
     SetCustomToken(1034, "Hellblau (matt)");
     SetCustomToken(1035, "Dunkelblau (matt)");
-    SetCustomToken(1036, "Helltürkis");
-    SetCustomToken(1037, "Dunkeltürkis");
-    SetCustomToken(1038, "Helltürkis (matt)");
-    SetCustomToken(1039, "Dunkeltürkis (matt)");
-    SetCustomToken(1040, "Hellgrün");
-    SetCustomToken(1041, "Dunkelgrün");
-    SetCustomToken(1042, "Hellgrün (matt)");
-    SetCustomToken(1043, "Dunkelgrün (matt)");
+    SetCustomToken(1036, "Helltï¿½rkis");
+    SetCustomToken(1037, "Dunkeltï¿½rkis");
+    SetCustomToken(1038, "Helltï¿½rkis (matt)");
+    SetCustomToken(1039, "Dunkeltï¿½rkis (matt)");
+    SetCustomToken(1040, "Hellgrï¿½n");
+    SetCustomToken(1041, "Dunkelgrï¿½n");
+    SetCustomToken(1042, "Hellgrï¿½n (matt)");
+    SetCustomToken(1043, "Dunkelgrï¿½n (matt)");
     SetCustomToken(1044, "Hellolive");
     SetCustomToken(1045, "Dunkelolive");
     SetCustomToken(1046, "Hellolive (matt)");
@@ -797,32 +834,32 @@ void setmetaltoken() {
     SetCustomToken(1059, "Kupfer");
     SetCustomToken(1060, "Grau");
     SetCustomToken(1061, "Spiegelnd");
-    SetCustomToken(1062, "Reines Weiß");
+    SetCustomToken(1062, "Reines Weiï¿½");
     SetCustomToken(1063, "Reines Schwarz");
     SetCustomToken(1064, "Malve Metallic");
     SetCustomToken(1065, "Malve Metallic (gegraut)");
     SetCustomToken(1066, "Gold Metallic");
     SetCustomToken(1067, "Gold Metallic (gegraut)");
-    SetCustomToken(1068, "Grün Metallic");
-    SetCustomToken(1069, "Grün Metallic");
+    SetCustomToken(1068, "Grï¿½n Metallic");
+    SetCustomToken(1069, "Grï¿½n Metallic");
     SetCustomToken(1070, "Indigo Metallic");
     SetCustomToken(1071, "Indigo Metallic (gegraut)");
     SetCustomToken(1072, "Violett Metallic");
     SetCustomToken(1073, "Violett Metallic (gegraut)");
     SetCustomToken(1074, "Braun Metallic");
     SetCustomToken(1075, "Braun Metallic (gegraut)");
-    SetCustomToken(1076, "Türkis Metallic");
-    SetCustomToken(1077, "Türkis Metallic (gegraut)");
+    SetCustomToken(1076, "Tï¿½rkis Metallic");
+    SetCustomToken(1077, "Tï¿½rkis Metallic (gegraut)");
     SetCustomToken(1078, "Blau Metallic");
     SetCustomToken(1079, "Blau Metallic (gegraut)");
     SetCustomToken(1080, "Olive Metallic");
     SetCustomToken(1081, "Olive Metallic (gegraut)");
     SetCustomToken(1082, "Aquamarin Metallic");
     SetCustomToken(1083, "Aquamarin Metallic (gegraut)");
-    SetCustomToken(1084, "Farngrün Metallic (gegraut)");
+    SetCustomToken(1084, "Farngrï¿½n Metallic (gegraut)");
     SetCustomToken(1085, "Marshland Metallic");
     SetCustomToken(1086, "Marshland Metallic (gegraut)");
-    SetCustomToken(1087, "Farngrünes Metallic");
+    SetCustomToken(1087, "Farngrï¿½nes Metallic");
     SetCustomToken(1088, "Hellstes Rot Metallic");
     SetCustomToken(1089, "Hellrot Metallic");
     SetCustomToken(1090, "Rot Metallic");
@@ -839,10 +876,10 @@ void setmetaltoken() {
     SetCustomToken(1101, "Sangriafarben");
     SetCustomToken(1102, "Sangriafarben");
     SetCustomToken(1103, "Sangriafarben (dunkel)");
-    SetCustomToken(1104, "Waldgrün");
-    SetCustomToken(1105, "Waldgrün (hell)");
-    SetCustomToken(1106, "Waldgrün");
-    SetCustomToken(1107, "Waldgrün (dunkel)");
+    SetCustomToken(1104, "Waldgrï¿½n");
+    SetCustomToken(1105, "Waldgrï¿½n (hell)");
+    SetCustomToken(1106, "Waldgrï¿½n");
+    SetCustomToken(1107, "Waldgrï¿½n (dunkel)");
     SetCustomToken(1108, "Kleefarben (sehr hell)");
     SetCustomToken(1109, "Kleefarben (hell)");
     SetCustomToken(1110, "Kleefarben");
@@ -875,10 +912,10 @@ void setmetaltoken() {
     SetCustomToken(1137, "Hell-Mitternachtsblau");
     SetCustomToken(1138, "Mitternachtsblau");
     SetCustomToken(1139, "Dunkel-Mitternachtsblau");
-    SetCustomToken(1140, "Hellstes Matttürkis");
-    SetCustomToken(1141, "Helles Mattürkis");
-    SetCustomToken(1142, "Matttürkis");
-    SetCustomToken(1143, "Dunkles Matttürkis");
+    SetCustomToken(1140, "Hellstes Matttï¿½rkis");
+    SetCustomToken(1141, "Helles Mattï¿½rkis");
+    SetCustomToken(1142, "Matttï¿½rkis");
+    SetCustomToken(1143, "Dunkles Matttï¿½rkis");
     SetCustomToken(1144, "Hellstes Magenta");
     SetCustomToken(1145, "Hellmagenta");
     SetCustomToken(1146, "Magenta");
@@ -887,8 +924,8 @@ void setmetaltoken() {
     SetCustomToken(1149, "Himmelblau");
     SetCustomToken(1150, "Hell-Mosque");
     SetCustomToken(1151, "Mosque");
-    SetCustomToken(1152, "Hell-Saftgrün");
-    SetCustomToken(1153, "Saftgrün");
+    SetCustomToken(1152, "Hell-Saftgrï¿½n");
+    SetCustomToken(1153, "Saftgrï¿½n");
     SetCustomToken(1154, "Buttered Rum (hell)");
     SetCustomToken(1155, "Buttered Rum");
     SetCustomToken(1156, "Burnt Sienna (hell)");
@@ -920,6 +957,7 @@ void main() {
     // Armour
     if (GetScriptParam("action") == "portraitnext") portraitnext(oPc);
     if (GetScriptParam("action") == "portraitprevious") portraitprevious(oPc);
+    if (GetScriptParam("action") == "portraitfirst") portraitfirst(oPc);
     if (GetScriptParam("action") == "portraitsave") portraitsave(oPc);
     if (GetScriptParam("action") == "portraitback") portraitback(oPc);
     if (GetScriptParam("action") == "torsonext") torsonext(oPc);
