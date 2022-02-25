@@ -11003,7 +11003,7 @@
         },
         "OnOpen": {
           "type": "resref",
-          "value": "nui_persistentch"
+          "value": ""
         },
         "OnSpellCastAt": {
           "type": "resref",
@@ -11019,7 +11019,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": ""
+          "value": "nui_persistentch"
         },
         "OnUserDefined": {
           "type": "resref",
