@@ -351,7 +351,7 @@ void PC_HandleDepositEvent(object oPlayer, object oItem, vector vPosition)
 
     if (GetItemPossessor(oItem) != oPlayer)
     {// Check if we actually own the item
-        SendMessageToPC(oPlayer, "You do not own '" + GetName(oItem) + "'");
+        SendMessageToPC(oPlayer, "Du besitzt '" + GetName(oItem) + "' nicht.");
         return;
     }
 
