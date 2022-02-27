@@ -11047,7 +11047,7 @@
         },
         "Tag": {
           "type": "cexostring",
-          "value": "x2_medium_Chest3"
+          "value": "PLAYERCHEST"
         },
         "TemplateResRef": {
           "type": "resref",
