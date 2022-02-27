@@ -9,6 +9,17 @@
 #include "inc_nui_downtime"
 #include "inc_nui_eltools"
 
+string GenerateToken() {
+    string sToken = IntToString(Random(9)) +
+    IntToString(Random(9)) +
+    IntToString(Random(9)) +
+    IntToString(Random(9)) +
+    IntToString(Random(9)) +
+    IntToString(Random(9)) +
+    IntToString(Random(9)) +
+    IntToString(Random(9));
+    return sToken;
+}
 
 void main() {
     object oPc = NuiGetEventPlayer();
@@ -64,9 +75,11 @@ void main() {
                 string sItemName = StringReplace(StringReplace(JsonGetString(NuiGetBind(oPc, nToken, "inputname")), "\n", " "), "\"", "");
                 string sDescription = JsonGetString(NuiGetBind(oPc, nToken, "inputdescription"));
                 object oTarget = GetLocalObject(oPc, "changename");
+                string sTag = GetTag(oTarget) + GenerateToken();
                 if (oTarget != OBJECT_INVALID) {
                   SetName(oTarget, sItemName);
                   SetDescription(oTarget, sDescription);
+                  SetTag(oTarget, sTag);
                   string webhook = NWNX_Util_GetEnvironmentVariable("WEBHOOK_LOGS");
                   NWNX_WebHook_SendWebHookHTTPS("discordapp.com", webhook, sAccountName + " (" + sName +
                         ") " +
