@@ -341,6 +341,13 @@ string PC_GetIconResref(object oItem, json jItem, int nBaseItem)
 
 void PC_HandleDepositEvent(object oPlayer, object oItem, vector vPosition)
 {// This function is fired in the module on player target event
+    object oPlayerChest = GetNearestObjectByTag("PLAYERCHEST", oPlayer);
+    float fDistance = GetDistanceBetween(oPlayer, oPlayerChest);
+    if (fDistance < 0.01f || fDistance > 5.0f) {
+        SendMessageToPC(oPlayer, "Keine Truhe in Reichweite!");
+        return;
+    }
+
     if (!GetLocalInt(oPlayer, PC_TARGETING_MODE))// Make sure it only fires if we're actually depositing an item
         return;
 
@@ -482,6 +489,13 @@ void VoidJsonToObject(json jObject, location locLocation, object oOwner = OBJECT
 
 void PC_WithdrawItems(object oPlayer, int nToken)
 {
+    object oPlayerChest = GetNearestObjectByTag("PLAYERCHEST", oPlayer);
+    float fDistance = GetDistanceBetween(oPlayer, oPlayerChest);
+    if (fDistance < 0.01f || fDistance > 5.0f) {
+        SendMessageToPC(oPlayer, "Keine Truhe in Reichweite!");
+        return;
+    }
+
     json jSelected = NuiGetBind(oPlayer, nToken, "selected");// This gets the array of selected items
 
     int nNumItems = JsonGetLength(jSelected);
