@@ -341,6 +341,13 @@ string PC_GetIconResref(object oItem, json jItem, int nBaseItem)
 
 void PC_HandleDepositEvent(object oPlayer, object oItem, vector vPosition)
 {// This function is fired in the module on player target event
+    // Check for plot flag, cursed flag and droppable flag
+    if (GetPlotFlag(oItem) || GetItemCursedFlag(oItem) || !GetDroppableFlag(oItem)) {
+        SendMessageToPC(oPlayer, "Dieser Gegenstand lässt sich nicht verstauen.");
+        return;
+    }
+
+    // Check for distance to chest
     object oPlayerChest = GetNearestObjectByTag("PLAYERCHEST", oPlayer);
     float fDistance = GetDistanceBetween(oPlayer, oPlayerChest);
     if (fDistance < 0.01f || fDistance > 5.0f) {
