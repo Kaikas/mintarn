@@ -38,7 +38,7 @@
   },
   "Con": {
     "type": "byte",
-    "value": 22
+    "value": 26
   },
   "Conversation": {
     "type": "resref",
@@ -50,7 +50,7 @@
   },
   "CurrentHitPoints": {
     "type": "short",
-    "value": 91
+    "value": 103
   },
   "DecayTime": {
     "type": "dword",
@@ -109,13 +109,6 @@
         "__struct_id": 1,
         "Feat": {
           "type": "word",
-          "value": 332
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
           "value": 1125
         }
       },
@@ -162,7 +155,7 @@
   },
   "HitPoints": {
     "type": "short",
-    "value": 91
+    "value": 103
   },
   "Int": {
     "type": "byte",
@@ -196,7 +189,7 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 147
+    "value": 175
   },
   "NaturalAC": {
     "type": "byte",
