@@ -54,7 +54,7 @@ void main()
     //Düsterwolf: Curse Song
     if(GetTag(OBJECT_SELF) == "ENEMY_Duesterwolf"){
         if(!GetHasFeatEffect(FEAT_CURSE_SONG,OBJECT_SELF)){
-            SpeakString("*Das schaurige Heulen des Wols fährt euch durch Mark und Bein!*");
+            SpeakString("*Das schaurige Heulen des Wolfs fährt euch durch Mark und Bein!*");
             ClearActions(CLEAR_X0_I0_TALENT_BardSong);
             ActionUseFeat(FEAT_CURSE_SONG,OBJECT_SELF);
         }
