@@ -111930,7 +111930,9 @@
         "Description": {
           "id": 14547,
           "type": "cexolocstring",
-          "value": {}
+          "value": {
+            "0": "Ein Hochbeet mit zahlreichen Kräutern und Pflanzen."
+          }
         },
         "DisarmDC": {
           "type": "byte",
@@ -113065,7 +113067,9 @@
         "Description": {
           "id": 14547,
           "type": "cexolocstring",
-          "value": {}
+          "value": {
+            "0": "Ein Hochbeet mit zahlreichen Kräutern und Pflanzen."
+          }
         },
         "DisarmDC": {
           "type": "byte",
