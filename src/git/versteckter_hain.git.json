@@ -121196,7 +121196,7 @@
         },
         "Appearance": {
           "type": "dword",
-          "value": 3752
+          "value": 3751
         },
         "AutoRemoveKey": {
           "type": "byte",
@@ -121402,15 +121402,15 @@
         },
         "X": {
           "type": "float",
-          "value": 49.3159
+          "value": 49.3033
         },
         "Y": {
           "type": "float",
-          "value": 109.8097
+          "value": 110.3258
         },
         "Z": {
           "type": "float",
-          "value": 9.5
+          "value": 9.618700000000001
         }
       }
     ]
