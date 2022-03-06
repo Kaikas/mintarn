@@ -2076,6 +2076,14 @@ int ELTools(string sMessage) {
     return 0;
 }
 
+int RKofPlayer(string sMessage) {
+    if (sMessage == "/rk") {
+        speak(oPc, StringToRGBString("RK: " + IntToString(GetAC(oPc)), "333"));
+        return 1;
+    }
+    return 0;
+}
+
 // Chat befehle
 void main() {
   string sMessage = GetPCChatMessage();
@@ -2132,6 +2140,7 @@ void main() {
         helpSkills(sMessage) ||
         openDowntime(sMessage) ||
         ELTools(sMessage) ||
+        RKofPlayer (sMessage) ||
         helpMasks(sMessage)) {
         } else {
           SendMessageToPC(oPc, "Ungültiger Befehl: \"" +
