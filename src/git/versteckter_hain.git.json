@@ -116928,7 +116928,9 @@
         "Description": {
           "id": 14547,
           "type": "cexolocstring",
-          "value": {}
+          "value": {
+            "0": "Saatgut von Höfen aus dem Süden."
+          }
         },
         "DisarmDC": {
           "type": "byte",
@@ -118290,7 +118292,9 @@
         "Description": {
           "id": 14547,
           "type": "cexolocstring",
-          "value": {}
+          "value": {
+            "0": "Saatgut von Höfen aus dem Süden."
+          }
         },
         "DisarmDC": {
           "type": "byte",
@@ -118517,7 +118521,9 @@
         "Description": {
           "id": 14547,
           "type": "cexolocstring",
-          "value": {}
+          "value": {
+            "0": "Saatgut von Höfen aus dem Süden."
+          }
         },
         "DisarmDC": {
           "type": "byte",
