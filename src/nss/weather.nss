@@ -12,7 +12,7 @@ void main() {
     saveFog(GetObjectByTag("AREA_Banditenfestung"));
     saveFog(GetObjectByTag("AREA_Hgelland"));
     saveFog(GetObjectByTag("AREA_Banditenfestung"));
-    saveFog(GetObjectByTag("AREA_versteckterHain"));
+    //saveFog(GetObjectByTag("AREA_versteckterHain"));
     saveFog(GetObjectByTag("AREA_Westmark"));
     weather();
 }

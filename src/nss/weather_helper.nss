@@ -76,7 +76,7 @@ void setWind(object oArea, int iWindStrength) {
   if (sWindDirection == "Südostwind") vDirection = Vector(-1.0, 1.0, 0.0);
   if (sWindDirection == "Nordwestwind") vDirection = Vector(1.0, -1.0, 0.0);
   if (sWindDirection == "Südwestwind") vDirection = Vector(1.0, 1.0, 0.0);
-  
+
   SetAreaWind(oArea, vDirection, fWindStrength, fWindStrength * 50.0, fWindStrength * 1.0);
 }
 
@@ -87,7 +87,7 @@ void setWindForAreas(int iWindStrength) {
     setWind(GetObjectByTag("AREA_Banditenfestung"), iWindStrength);
     setWind(GetObjectByTag("AREA_Hgelland"), iWindStrength);
     setWind(GetObjectByTag("AREA_Banditenfestung"), iWindStrength);
-    setWind(GetObjectByTag("AREA_versteckterHain"), iWindStrength);
+    //setWind(GetObjectByTag("AREA_versteckterHain"), iWindStrength);
     setWind(GetObjectByTag("AREA_Westmark"), iWindStrength);
 }
 
