@@ -63,8 +63,8 @@ void main() {
     // The skill Animal Handling is the general skill that all classes can use for
     // working with animals.
     if (StringToInt(NWNX_Events_GetEventData("SKILL_ID")) == SKILL_ANIMAL_EMPATHY) {
-      AnimalEmpathy(OBJECT_SELF, StringToObject(NWNX_Events_GetEventData("TARGET_OBJECT_ID")));
-      NWNX_Events_SkipEvent();
+      //AnimalEmpathy(OBJECT_SELF, StringToObject(NWNX_Events_GetEventData("TARGET_OBJECT_ID")));
+      //NWNX_Events_SkipEvent();
     }
     if (StringToInt(NWNX_Events_GetEventData("SKILL_ID")) == SKILL_PICK_POCKET) {
         object oTarget = StringToObject(NWNX_Events_GetEventData("TARGET_OBJECT_ID"));
