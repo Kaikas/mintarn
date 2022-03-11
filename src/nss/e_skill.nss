@@ -63,6 +63,12 @@ void main() {
     // The skill Animal Handling is the general skill that all classes can use for
     // working with animals.
     if (StringToInt(NWNX_Events_GetEventData("SKILL_ID")) == SKILL_ANIMAL_EMPATHY) {
+      if (!(GetLevelByClass(CLASS_TYPE_RANGER, OBJECT_SELF) > 0 || 
+            GetLevelByClass(CLASS_TYPE_DRUID, OBJECT_SELF))) {
+          SendMessageToPC(OBJECT_SELF, "Das können nur Druiden oder Waldläufer.");
+          NWNX_Events_SkipEvent();
+        }
+      }
       //AnimalEmpathy(OBJECT_SELF, StringToObject(NWNX_Events_GetEventData("TARGET_OBJECT_ID")));
       //NWNX_Events_SkipEvent();
     }
