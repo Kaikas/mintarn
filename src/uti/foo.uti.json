@@ -26,7 +26,9 @@
   },
   "DescIdentified": {
     "type": "cexolocstring",
-    "value": {}
+    "value": {
+      "0": "bar"
+    }
   },
   "Description": {
     "type": "cexolocstring",
@@ -76,7 +78,7 @@
   },
   "Tag": {
     "type": "cexostring",
-    "value": "foo"
+    "value": "CRAFT_foo"
   },
   "TemplateResRef": {
     "type": "resref",

@@ -24387,7 +24387,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 276
+                      "value": 10
                     },
                     "Cursed": {
                       "type": "byte",
@@ -24553,7 +24553,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 276
+                      "value": 10
                     },
                     "Cursed": {
                       "type": "byte",
@@ -27002,7 +27002,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Igitt, ein Kind!"
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -27111,7 +27113,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Ein Fächer. Zum Fächern."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -27220,7 +27224,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Eine hübsche, runde Kugel."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -27329,7 +27335,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Ein Schirm. "
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -27648,7 +27656,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Prost!"
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -27757,7 +27767,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Schreibzeug."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -27858,7 +27870,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Ein Geldbeutel mit einer unbestimmten Menge an Geld enthalten."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -27959,7 +27973,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Eine Feldflasche."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -28060,11 +28076,15 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Besteck, wie man es benutzt um Kohlenstoffverbindungen seinem integrierten Biomassekraftwerk zuzuführen."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": ""
+                      }
                     },
                     "Identified": {
                       "type": "byte",
@@ -28264,7 +28284,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Ein verständiger Schlosser kann hiermit verklemmten Schlüssern zu Leibe rücken. Strengstens legal, versteht sich!"
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -28294,7 +28316,39 @@
                     },
                     "PropertiesList": {
                       "type": "list",
-                      "value": []
+                      "value": [
+                        {
+                          "__struct_id": 0,
+                          "ChanceAppear": {
+                            "type": "byte",
+                            "value": 100
+                          },
+                          "CostTable": {
+                            "type": "byte",
+                            "value": 25
+                          },
+                          "CostValue": {
+                            "type": "word",
+                            "value": 1
+                          },
+                          "Param1": {
+                            "type": "byte",
+                            "value": 255
+                          },
+                          "Param1Value": {
+                            "type": "byte",
+                            "value": 0
+                          },
+                          "PropertyName": {
+                            "type": "word",
+                            "value": 55
+                          },
+                          "Subtype": {
+                            "type": "word",
+                            "value": 0
+                          }
+                        }
+                      ]
                     },
                     "Repos_PosX": {
                       "type": "word",
@@ -28365,7 +28419,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Ein Stock zum Wandern."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -28466,7 +28522,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Ein Stab wie sie üblicherweise geistliche nutzen."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -28567,7 +28625,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Ein Wachsstummel samt Docht und Halter."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -28668,11 +28728,15 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Die Standarte des Helm."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": ""
+                      }
                     },
                     "Identified": {
                       "type": "byte",
@@ -29144,7 +29208,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 150050
+                      "value": 50
                     },
                     "Cursed": {
                       "type": "byte",
@@ -29494,7 +29558,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 10
+                      "value": 7
                     },
                     "Cursed": {
                       "type": "byte",
@@ -29631,7 +29695,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 20
+                      "value": 17
                     },
                     "Cursed": {
                       "type": "byte",
@@ -29768,7 +29832,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 30
+                      "value": 27
                     },
                     "Cursed": {
                       "type": "byte",
@@ -29905,7 +29969,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 20
+                      "value": 17
                     },
                     "Cursed": {
                       "type": "byte",
@@ -30042,7 +30106,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 20
+                      "value": 17
                     },
                     "Cursed": {
                       "type": "byte",
@@ -30179,7 +30243,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 40
+                      "value": 37
                     },
                     "Cursed": {
                       "type": "byte",
@@ -30316,7 +30380,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 30
+                      "value": 27
                     },
                     "Cursed": {
                       "type": "byte",
@@ -31857,7 +31921,7 @@
                     "DescIdentified": {
                       "type": "cexolocstring",
                       "value": {
-                        "0": ""
+                        "0": "Ein Beutel. Stabil und handlich."
                       }
                     },
                     "Description": {
@@ -36704,7 +36768,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "benutzt man zum Abbauen von Steinen und Dingen die in Steinen stecken."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -37297,7 +37363,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Kann man benutzen um in relativer Sicherheit Feuer zu transportieren."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -38028,7 +38096,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Es wird gesagt jenes Im Hause zu haben würde einem den Zimmermann ersparen."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -38183,7 +38253,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Kann man benutzen um in relativer Sicherheit Feuer zu transportieren."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -38381,7 +38453,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -38545,7 +38617,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -38712,7 +38784,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -38879,7 +38951,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -39046,7 +39118,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -39213,7 +39285,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -39380,7 +39452,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -39547,7 +39619,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -39714,7 +39786,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -39881,7 +39953,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -40048,7 +40120,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -40326,7 +40398,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Der Bogen zur Geige."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -40435,7 +40509,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Ein Zupfinstrument."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -40544,7 +40620,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Eine Laute. Meist in der nähe von Barden zu finden."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -40653,7 +40731,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Eine Flöte, benannt nach Pan."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -40762,7 +40842,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Musikinstrument zum Musik machen."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -40879,7 +40961,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "TRÖT."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -40980,7 +41064,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Die Violine zum Bogen."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -41184,7 +41270,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Ein Buch, bereit gelesen zu werden."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -41293,7 +41381,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Ein Buch, bereit gelesen zu werden."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -41511,11 +41601,15 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Eine Feder."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": ""
+                      }
                     },
                     "Identified": {
                       "type": "byte",
@@ -41612,7 +41706,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Eine Karte."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -41713,7 +41809,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Zum Unterschreiben."
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -48516,7 +48614,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -48680,7 +48778,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -48847,7 +48945,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -49014,7 +49112,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -49181,7 +49279,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -49348,7 +49446,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -49515,7 +49613,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -49682,7 +49780,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -49849,7 +49947,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -50016,7 +50114,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -50183,7 +50281,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 334
+                      "value": 21
                     },
                     "Cursed": {
                       "type": "byte",
@@ -63541,7 +63639,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Natürlich ist men Fisch frisch!"
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",
@@ -63650,7 +63750,9 @@
                     },
                     "DescIdentified": {
                       "type": "cexolocstring",
-                      "value": {}
+                      "value": {
+                        "0": "Natürlich ist men Fisch frisch!"
+                      }
                     },
                     "Description": {
                       "type": "cexolocstring",

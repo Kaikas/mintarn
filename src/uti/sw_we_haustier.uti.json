@@ -26,7 +26,9 @@
   },
   "DescIdentified": {
     "type": "cexolocstring",
-    "value": {}
+    "value": {
+      "0": "Hiermit könnt ihr euch ein (nicht sehr loyales) Haustier beschwören."
+    }
   },
   "Description": {
     "type": "cexolocstring",

@@ -26,7 +26,9 @@
   },
   "DescIdentified": {
     "type": "cexolocstring",
-    "value": {}
+    "value": {
+      "0": "Ein Geldbeutel mit einer unbestimmten Menge an Geld enthalten."
+    }
   },
   "Description": {
     "type": "cexolocstring",

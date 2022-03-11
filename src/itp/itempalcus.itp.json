@@ -13377,17 +13377,6 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
-                      "value": "Schaufel"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "sw_we_schaufel"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "NAME": {
-                      "type": "cexostring",
                       "value": "Scherben"
                     },
                     "RESREF": {

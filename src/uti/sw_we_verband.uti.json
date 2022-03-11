@@ -26,7 +26,9 @@
   },
   "DescIdentified": {
     "type": "cexolocstring",
-    "value": {}
+    "value": {
+      "0": "Ein verschnürtes Paket aus Verbänden, Salben und den üblichsten Heilkräutern."
+    }
   },
   "Description": {
     "type": "cexolocstring",

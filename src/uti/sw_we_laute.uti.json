@@ -26,7 +26,9 @@
   },
   "DescIdentified": {
     "type": "cexolocstring",
-    "value": {}
+    "value": {
+      "0": "Eine Laute. Meist in der nähe von Barden zu finden."
+    }
   },
   "Description": {
     "type": "cexolocstring",

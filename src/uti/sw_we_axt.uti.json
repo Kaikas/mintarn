@@ -26,7 +26,9 @@
   },
   "DescIdentified": {
     "type": "cexolocstring",
-    "value": {}
+    "value": {
+      "0": "Es wird gesagt jenes Im Hause zu haben würde einem den Zimmermann ersparen."
+    }
   },
   "Description": {
     "type": "cexolocstring",

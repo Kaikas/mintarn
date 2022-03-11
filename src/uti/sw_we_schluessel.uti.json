@@ -26,7 +26,9 @@
   },
   "DescIdentified": {
     "type": "cexolocstring",
-    "value": {}
+    "value": {
+      "0": "Ein Schlüssel. Passt wahrscheinlich in ein Schloss."
+    }
   },
   "Description": {
     "type": "cexolocstring",

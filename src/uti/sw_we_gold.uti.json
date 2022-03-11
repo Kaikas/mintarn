@@ -26,7 +26,9 @@
   },
   "DescIdentified": {
     "type": "cexolocstring",
-    "value": {}
+    "value": {
+      "0": "Eine golden schimmernde Münze.\nEine Goldmünze = 10 Silbermünzen = 100 Kupfermünzen"
+    }
   },
   "Description": {
     "type": "cexolocstring",

@@ -990,7 +990,9 @@
               },
               "DescIdentified": {
                 "type": "cexolocstring",
-                "value": {}
+                "value": {
+                  "0": "Kann man benutzen um in relativer Sicherheit Feuer zu transportieren."
+                }
               },
               "Description": {
                 "type": "cexolocstring",
@@ -2441,7 +2443,9 @@
               },
               "DescIdentified": {
                 "type": "cexolocstring",
-                "value": {}
+                "value": {
+                  "0": "Kann man benutzen um in relativer Sicherheit Feuer zu transportieren."
+                }
               },
               "Description": {
                 "type": "cexolocstring",

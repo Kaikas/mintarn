@@ -26,7 +26,9 @@
   },
   "DescIdentified": {
     "type": "cexolocstring",
-    "value": {}
+    "value": {
+      "0": "Eine Flöte, benannt nach Pan."
+    }
   },
   "Description": {
     "type": "cexolocstring",
