@@ -2,7 +2,7 @@
   "__data_type": "UTC ",
   "Appearance_Type": {
     "type": "word",
-    "value": 181
+    "value": 184
   },
   "BodyBag": {
     "type": "byte",
@@ -14,7 +14,7 @@
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 1.0
+    "value": 3.0
   },
   "ClassList": {
     "type": "list",
@@ -27,7 +27,7 @@
         },
         "ClassLevel": {
           "type": "short",
-          "value": 2
+          "value": 4
         }
       }
     ]
@@ -50,7 +50,7 @@
   },
   "CurrentHitPoints": {
     "type": "short",
-    "value": 7
+    "value": 14
   },
   "DecayTime": {
     "type": "dword",
@@ -103,7 +103,7 @@
   "FirstName": {
     "type": "cexolocstring",
     "value": {
-      "0": "Wolf"
+      "0": "Geisterwolf"
     }
   },
   "fortbonus": {
@@ -120,7 +120,7 @@
   },
   "HitPoints": {
     "type": "short",
-    "value": 7
+    "value": 14
   },
   "Int": {
     "type": "byte",
@@ -154,11 +154,11 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 7
+    "value": 14
   },
   "NaturalAC": {
     "type": "byte",
-    "value": 0
+    "value": 4
   },
   "NoPermDeath": {
     "type": "byte",
@@ -182,7 +182,7 @@
   },
   "PortraitId": {
     "type": "word",
-    "value": 319
+    "value": 320
   },
   "Race": {
     "type": "byte",
@@ -515,7 +515,7 @@
   },
   "Str": {
     "type": "byte",
-    "value": 12
+    "value": 14
   },
   "Subrace": {
     "type": "cexostring",
@@ -523,7 +523,7 @@
   },
   "Tag": {
     "type": "cexostring",
-    "value": "ENEMY_Wolf"
+    "value": "ENEMY_Ghostwolf"
   },
   "Tail_New": {
     "type": "dword",
@@ -535,11 +535,11 @@
   },
   "TemplateResRef": {
     "type": "resref",
-    "value": "wolf"
+    "value": "ghostwolf"
   },
   "WalkRate": {
     "type": "int",
-    "value": 5
+    "value": 7
   },
   "willbonus": {
     "type": "short",

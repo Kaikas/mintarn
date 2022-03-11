@@ -628,6 +628,25 @@
                           },
                           "NAME": {
                             "type": "cexostring",
+                            "value": "Geisterwolf"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "ghostwolf"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "CR": {
+                            "type": "float",
+                            "value": 3.0
+                          },
+                          "FACTION": {
+                            "type": "cexostring",
+                            "value": "Hostile"
+                          },
+                          "NAME": {
+                            "type": "cexostring",
                             "value": "Ghoul"
                           },
                           "RESREF": {
@@ -1323,7 +1342,7 @@
                           "__struct_id": 0,
                           "CR": {
                             "type": "float",
-                            "value": 2.0
+                            "value": 1.0
                           },
                           "FACTION": {
                             "type": "cexostring",
