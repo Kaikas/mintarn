@@ -4,12 +4,12 @@
 
 // Animal Empathy
 void AnimalEmpathy(object oPc, object oTarget) {
-    // Duration of the dominated effect. 10 Minutes + 
+    // Duration of the dominated effect. 10 Minutes +
     float fDuration = IntToFloat(600 + GetHitDice(oPc));
     effect eDom = EffectDominated();
 
     // Needs to be Ranger or Druid
-    if (!(GetLevelByClass(CLASS_TYPE_RANGER, OBJECT_SELF) > 0 || 
+    if (!(GetLevelByClass(CLASS_TYPE_RANGER, OBJECT_SELF) > 0 ||
           GetLevelByClass(CLASS_TYPE_DRUID, OBJECT_SELF))) {
       return;
     }
@@ -22,7 +22,7 @@ void AnimalEmpathy(object oPc, object oTarget) {
 
     // If create is a companion we do not posess it
     if (GetMaster(oTarget) != OBJECT_INVALID) return;
-    
+
     // Calculate DC
     int nDC = 15;
     if(nRacialType != RACIAL_TYPE_ANIMAL) nDC = 19;
@@ -52,8 +52,9 @@ void AnimalEmpathy(object oPc, object oTarget) {
 }
 
 void main() {
+    int iSkillUsed = StringToInt(NWNX_Events_GetEventData("SKILL_ID"));
     // Handles the Taunt skill which is deactivated.
-    if (StringToInt(NWNX_Events_GetEventData("SKILL_ID")) == SKILL_TAUNT) {
+    if (iSkillUsed == SKILL_TAUNT) {
         SendMessageToPC(OBJECT_SELF, "Euer Versuch zu provozieren zeigt keine Wirkung.");
         NWNX_Events_SkipEvent();
     }
@@ -62,21 +63,20 @@ void main() {
     //
     // The skill Animal Handling is the general skill that all classes can use for
     // working with animals.
-    if (StringToInt(NWNX_Events_GetEventData("SKILL_ID")) == SKILL_ANIMAL_EMPATHY) {
-      if (!(GetLevelByClass(CLASS_TYPE_RANGER, OBJECT_SELF) > 0 || 
-            GetLevelByClass(CLASS_TYPE_DRUID, OBJECT_SELF))) {
-          SendMessageToPC(OBJECT_SELF, "Das k√∂nnen nur Druiden oder Waldl√§ufer.");
+    if (iSkillUsed == SKILL_ANIMAL_EMPATHY) {
+      if (GetLevelByClass(CLASS_TYPE_RANGER, OBJECT_SELF) < 1 || GetLevelByClass(CLASS_TYPE_DRUID, OBJECT_SELF) < 1) {
+          SendMessageToPC(OBJECT_SELF, "Das kˆnnen nur Druiden oder Waldl‰ufer.");
           NWNX_Events_SkipEvent();
         }
       }
       //AnimalEmpathy(OBJECT_SELF, StringToObject(NWNX_Events_GetEventData("TARGET_OBJECT_ID")));
       //NWNX_Events_SkipEvent();
-    }
-    if (StringToInt(NWNX_Events_GetEventData("SKILL_ID")) == SKILL_PICK_POCKET) {
+
+    if (iSkillUsed == SKILL_PICK_POCKET) {
         object oTarget = StringToObject(NWNX_Events_GetEventData("TARGET_OBJECT_ID"));
         if (GetIsPC(oTarget)) {
           NWNX_WebHook_SendWebHookHTTPS("discordapp.com", NWNX_Util_GetEnvironmentVariable("WEBHOOK_LOGS"), "Pick pocket: " + GetPCPlayerName(OBJECT_SELF) + " - " + GetName(OBJECT_SELF) + " steals from " + GetPCPlayerName(oTarget) + " - " + GetName(oTarget), "Mintarn");
         }
-    
+
     }
 }
