@@ -47,7 +47,7 @@ void main() {
         }
     }
     // Sizes
-    if (GetTag(OBJECT_SELF) == "NPC_GronkGall") {
+    if (GetTag(OBJECT_SELF) == "NPC_GronkGall" || GetTag(OBJECT_SELF) == "ENEMY_Brutmutter") {
         SetObjectVisualTransform(OBJECT_SELF, OBJECT_VISUAL_TRANSFORM_SCALE, 1.25);
     }
     if (GetTag(OBJECT_SELF) == "NPC_Hoondarrh") {
