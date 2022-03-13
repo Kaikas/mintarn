@@ -47,6 +47,12 @@ int StartingConditional() {
     if (GetScriptParam("item") == "QUEST_GoblinTalisman" && iStage == 1) {
         return 0;
     }
+    if (iResult > 0 && GetScriptParam("item") == "CRAFT_Birkenholz") {
+        return 1;
+    }
+    if (iResult > 0 && GetScriptParam("item") == "CRAFT_Eisenerz") {
+        return 1;
+    }
     if (iResult > 4 && iStage == 0) {
         return 1;
     } else {
