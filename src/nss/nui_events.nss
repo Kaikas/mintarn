@@ -97,6 +97,7 @@ void main() {
                 string sDescription = JsonGetString(NuiGetBind(oPc, nToken, "inputdescription"));
                 if (oPc != OBJECT_INVALID) {
                   SetDescription(oPc, sDescription);
+                  ExportSingleCharacter(oPc);
                 }
                 NuiDestroy(oPc, nToken);
             }
@@ -111,6 +112,7 @@ void main() {
                 string sGod = JsonGetString(NuiGetBind(oPc, nToken, "inputgod"));
                 if (oPc != OBJECT_INVALID) {
                   SetDeity(oPc, sGod);
+                  ExportSingleCharacter(oPc);
                 }
                 NuiDestroy(oPc, nToken);
             }
