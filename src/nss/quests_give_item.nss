@@ -120,7 +120,7 @@ void main() {
         if (count == 0) {
             RemoveJournalQuestEntry("quests", oPc, FALSE, FALSE);
         }
-        CreateItemOnObject("sw_re_fackel", oPc, 1);
+        //CreateItemOnObject("sw_re_fackel", oPc, 1);
         AddJournalQuestEntry("lederer", 1, oPc, FALSE, FALSE, FALSE);
         sQuery = "INSERT INTO QuestStatus (name, charname, quest, stage) VALUES (?, ?, ?, ?)";
         if (NWNX_SQL_PrepareQuery(sQuery)) {

@@ -307,7 +307,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "<CUSTOM101>*Als ihr näher herantretet, fällt sein Blick auf das Siegel des Pakets und er atmet erleichtert aus*<CUSTOM100>\n\nSehr schön, mein Tabak war schon fast verbraucht. <CUSTOM101>*Suchenden Blickes sieht er sich um und öffnet schließlich eine Schublade an seinem Arbeitstisch, um eine kleine Schriftrolle in die Hand zu nehmen.*<CUSTOM100> Ich habe gerade keine kleinen Münzen, aber nehmt doch dieses Rezept für eine Fackel als Lohn für die Lieferung. Wenn ihr eine angefertigt habt, kommt zurück und vielleicht könnt ihr noch mehr lernen. \n<CUSTOM101>*Der Lederer überreicht euch die Schriftrolle und nimmt im Gegenzug die Lieferung entgegen*<CUSTOM100>\n\nSchaut euch gerne noch etwas um. Vielleicht findet ihr etwas Passendes. Ich mache euch auch einen guten Preis."
+            "0": "<CUSTOM101>*Als ihr näher herantretet, fällt sein Blick auf das Siegel des Pakets und er atmet erleichtert aus*<CUSTOM100>\n\nSehr schön, mein Tabak war schon fast verbraucht. <CUSTOM101>*Suchenden Blickes sieht er sich um und öffnet schließlich eine Schublade an seinem Arbeitstisch, um eine kleine Schriftrolle in die Hand zu nehmen.*<CUSTOM100> Ich habe gerade keine kleinen Münzen, aber vielleicht könnt ihr mir eine Fackel bringen, ich entlohne euch auch großzügig dafür.\n<CUSTOM101>*Der Lederer nimmt die Lieferung entgegen*<CUSTOM100>\n\nSchaut euch gerne noch etwas um. Vielleicht findet ihr etwas Passendes. Ich mache euch auch einen guten Preis."
           }
         }
       }
@@ -315,7 +315,7 @@
   },
   "NumWords": {
     "type": "dword",
-    "value": 174
+    "value": 154
   },
   "PreventZoomIn": {
     "type": "byte",
