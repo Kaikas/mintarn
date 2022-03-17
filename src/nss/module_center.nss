@@ -303,9 +303,10 @@ void main() {
                 ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
                 if (NWNX_SQL_PrepareQuery(sQuery)) {
                     // Remove gold from player
-                    TakeGoldFromCreature(100000, oPc, TRUE);
+                    int nGold  = GetGold(oPc);
+                    AssignCommand (oPc, TakeGoldFromCreature(nGold, oPc, TRUE));
                     // Give gold to new player
-                    GiveGoldToCreature(oPc, 500);
+                    GiveGoldToCreature(oPc, 15000);
                     // Destroy equipped items
                     object oItem;
                     int nSlot;
@@ -434,7 +435,7 @@ void main() {
     // Money
     int nGold  = GetGold(oPc);
     MONEY_GiveCoinMoneyWorth(nGold, oPc);
-    TakeGoldFromCreature(nGold, oPc, TRUE);
+    AssignCommand (oPc, TakeGoldFromCreature(nGold, oPc, TRUE));
 
     // Quests
     //ExecuteScript("quests_enter", OBJECT_SELF);
