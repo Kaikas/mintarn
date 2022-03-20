@@ -32,6 +32,6 @@ void main() {
     if (GetIsObjectValid(oTarget)) {
       SignalEvent(oTarget, EventSpellCastAt(oTarget, GetSpellId(), FALSE));
       ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectVisualEffect(VFX_IMP_IMPROVE_ABILITY_SCORE), oTarget);
-      ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eStealth, oTarget, HoursToSeconds(nDuration));
+      ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eStealth, oTarget, Mintarn_HourSpellToSeconds(nDuration));
     }
 }

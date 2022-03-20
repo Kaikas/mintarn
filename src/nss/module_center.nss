@@ -254,7 +254,7 @@ void main() {
             if (StringToInt(sId) > 0) {
                 // Teleport
                 location lStart = GetLocation(GetObjectByTag("WP_START_OOC"));
-                DelayCommand(0.0, AssignCommand(oPc, JumpToLocation(lStart)));
+                // DelayCommand(0.0, AssignCommand(oPc, JumpToLocation(lStart)));
                 // Description
                 string sDescription = NWNX_SQL_ReadDataInActiveRow(14);
                 //SendMessageToPC(oPc, sDescription);
