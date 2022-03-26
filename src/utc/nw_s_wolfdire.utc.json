@@ -10,11 +10,11 @@
   },
   "Cha": {
     "type": "byte",
-    "value": 10
+    "value": 4
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 5.0
+    "value": 2.0
   },
   "ClassList": {
     "type": "list",
@@ -23,11 +23,11 @@
         "__struct_id": 2,
         "Class": {
           "type": "int",
-          "value": 12
+          "value": 23
         },
         "ClassLevel": {
           "type": "short",
-          "value": 6
+          "value": 2
         }
       }
     ]
@@ -50,11 +50,11 @@
   },
   "CurrentHitPoints": {
     "type": "short",
-    "value": 30
+    "value": 17
   },
   "DecayTime": {
     "type": "dword",
-    "value": 0
+    "value": 5000
   },
   "Deity": {
     "type": "cexostring",
@@ -67,7 +67,7 @@
   },
   "Dex": {
     "type": "byte",
-    "value": 17
+    "value": 10
   },
   "Disarmable": {
     "type": "byte",
@@ -77,10 +77,10 @@
     "type": "list",
     "value": [
       {
-        "__struct_id": 65536,
+        "__struct_id": 16384,
         "EquippedRes": {
           "type": "resref",
-          "value": "nw_it_crewps005"
+          "value": "nw_it_crewps010"
         }
       }
     ]
@@ -157,7 +157,7 @@
   },
   "HitPoints": {
     "type": "short",
-    "value": 30
+    "value": 17
   },
   "Int": {
     "type": "byte",
@@ -189,11 +189,11 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 54
+    "value": 25
   },
   "NaturalAC": {
     "type": "byte",
-    "value": 4
+    "value": 7
   },
   "NoPermDeath": {
     "type": "byte",
@@ -221,7 +221,7 @@
   },
   "Race": {
     "type": "byte",
-    "value": 8
+    "value": 19
   },
   "refbonus": {
     "type": "short",
@@ -546,11 +546,11 @@
   },
   "StartingPackage": {
     "type": "byte",
-    "value": 0
+    "value": 85
   },
   "Str": {
     "type": "byte",
-    "value": 16
+    "value": 15
   },
   "Subrace": {
     "type": "cexostring",
@@ -586,6 +586,6 @@
   },
   "Wis": {
     "type": "byte",
-    "value": 12
+    "value": 13
   }
 }

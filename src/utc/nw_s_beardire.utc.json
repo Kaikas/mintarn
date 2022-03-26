@@ -10,11 +10,11 @@
   },
   "Cha": {
     "type": "byte",
-    "value": 10
+    "value": 9
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 8.0
+    "value": 6.0
   },
   "ClassList": {
     "type": "list",
@@ -23,11 +23,11 @@
         "__struct_id": 2,
         "Class": {
           "type": "int",
-          "value": 12
+          "value": 23
         },
         "ClassLevel": {
           "type": "short",
-          "value": 12
+          "value": 8
         }
       }
     ]
@@ -38,7 +38,7 @@
   },
   "Con": {
     "type": "byte",
-    "value": 19
+    "value": 17
   },
   "Conversation": {
     "type": "resref",
@@ -50,7 +50,7 @@
   },
   "CurrentHitPoints": {
     "type": "short",
-    "value": 54
+    "value": 28
   },
   "DecayTime": {
     "type": "dword",
@@ -67,7 +67,7 @@
   },
   "Dex": {
     "type": "byte",
-    "value": 13
+    "value": 10
   },
   "Disarmable": {
     "type": "byte",
@@ -80,21 +80,7 @@
         "__struct_id": 16384,
         "EquippedRes": {
           "type": "resref",
-          "value": "nw_it_crewpsp006"
-        }
-      },
-      {
-        "__struct_id": 32768,
-        "EquippedRes": {
-          "type": "resref",
-          "value": "nw_it_crewpsp006"
-        }
-      },
-      {
-        "__struct_id": 65536,
-        "EquippedRes": {
-          "type": "resref",
-          "value": "nw_it_crewps017"
+          "value": "nw_it_crewps020"
         }
       }
     ]
@@ -134,7 +120,7 @@
   },
   "HitPoints": {
     "type": "short",
-    "value": 54
+    "value": 28
   },
   "Int": {
     "type": "byte",
@@ -166,11 +152,11 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 102
+    "value": 52
   },
   "NaturalAC": {
     "type": "byte",
-    "value": 7
+    "value": 10
   },
   "NoPermDeath": {
     "type": "byte",
@@ -198,7 +184,7 @@
   },
   "Race": {
     "type": "byte",
-    "value": 8
+    "value": 19
   },
   "refbonus": {
     "type": "short",
@@ -523,11 +509,11 @@
   },
   "StartingPackage": {
     "type": "byte",
-    "value": 0
+    "value": 85
   },
   "Str": {
     "type": "byte",
-    "value": 24
+    "value": 23
   },
   "Subrace": {
     "type": "cexostring",
@@ -563,6 +549,6 @@
   },
   "Wis": {
     "type": "byte",
-    "value": 12
+    "value": 10
   }
 }
