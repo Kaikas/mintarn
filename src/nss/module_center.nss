@@ -563,9 +563,6 @@ void main() {
 
 
     // Start nui
-    SendMessageToPC(oPc, IntToString(GetIsPC(oPc)));
-    SendMessageToPC(oPc, ObjectToString(GetArea(oPc)));
-
     //ExecuteScript("nui_dice", oPc);
     /*string sBeta = "Wir freuen uns euch mitzuteilen, dass die Beta von Mintarn am 1.10.2021 gestartet ist.\n\n" +
     "In der Beta erstellte Charaktere werden nicht mehr gelöscht. Wir haben noch zahlreiche Ideen, die wir umsetzen wollen und " +
