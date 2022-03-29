@@ -2,7 +2,7 @@
   "__data_type": "UTC ",
   "Appearance_Type": {
     "type": "word",
-    "value": 175
+    "value": 1294
   },
   "BodyBag": {
     "type": "byte",
@@ -63,7 +63,11 @@
   "Description": {
     "id": 12449,
     "type": "cexolocstring",
-    "value": {}
+    "value": {
+      "0": "Ein massiver Bär. Wär's ein wilder, so könntet ihr in Gefahr sein - dieser aber verhält sich atypisch, und folgt einem Druiden oder Waldläufer auf seiner Mission.",
+      "4": "Ein massiver Bär. Wär's ein wilder, so könntet ihr in Gefahr sein - dieser aber verhält sich atypisch, und folgt einem Druiden oder Waldläufer auf seiner Mission.",
+      "5": "Ein massiver Bär. Wär's ein wilder, so könntet ihr in Gefahr sein - dieser aber verhält sich atypisch, und folgt einem Druiden oder Waldläufer auf seiner Mission."
+    }
   },
   "Dex": {
     "type": "byte",
@@ -140,7 +144,9 @@
     "id": 12779,
     "type": "cexolocstring",
     "value": {
-      "0": "Summoned Dire Wolf N"
+      "0": "N Summoned Bear",
+      "4": "Herbeigezauberter Bär",
+      "5": "Herbeigezauberter Bär"
     }
   },
   "fortbonus": {
@@ -217,7 +223,7 @@
   },
   "PortraitId": {
     "type": "word",
-    "value": 184
+    "value": 2227
   },
   "Race": {
     "type": "byte",

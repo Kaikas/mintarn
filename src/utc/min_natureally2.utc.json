@@ -2,7 +2,7 @@
   "__data_type": "UTC ",
   "Appearance_Type": {
     "type": "word",
-    "value": 22
+    "value": 181
   },
   "BodyBag": {
     "type": "byte",
@@ -63,7 +63,11 @@
   "Description": {
     "id": 12398,
     "type": "cexolocstring",
-    "value": {}
+    "value": {
+      "0": "Dieser Wolf scheint, anders als seine wilden Artgenossen, dem Ruf eines Druiden oder Waldläufers zu folgen.",
+      "4": "Dieser Wolf scheint, anders als seine wilden Artgenossen, dem Ruf eines Druiden oder Waldläufers zu folgen.",
+      "5": "Dieser Wolf scheint, anders als seine wilden Artgenossen, dem Ruf eines Druiden oder Waldläufers zu folgen."
+    }
   },
   "Dex": {
     "type": "byte",
@@ -105,7 +109,9 @@
     "id": 12737,
     "type": "cexolocstring",
     "value": {
-      "0": "Summoned Dire Boar N"
+      "0": "N Summoned Wolf",
+      "4": "Herbeigezauberter Wolf",
+      "5": "Herbeigezauberter Wolf"
     }
   },
   "fortbonus": {
@@ -182,7 +188,7 @@
   },
   "PortraitId": {
     "type": "word",
-    "value": 182
+    "value": 319
   },
   "Race": {
     "type": "byte",

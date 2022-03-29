@@ -2,7 +2,7 @@
   "__data_type": "UTC ",
   "Appearance_Type": {
     "type": "word",
-    "value": 158
+    "value": 6394
   },
   "BodyBag": {
     "type": "byte",
@@ -14,7 +14,7 @@
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 4.0
+    "value": 5.0
   },
   "ClassList": {
     "type": "list",
@@ -63,7 +63,11 @@
   "Description": {
     "id": 12717,
     "type": "cexolocstring",
-    "value": {}
+    "value": {
+      "0": "Ein furchterregender Haufen an scharfen Zähnen, geschärften Krallen und Bergen von Muskeln. Es spricht für die Macht des Druiden oder Waldläufers der einen solchen Schreckenstiger an seiner Seite hat.",
+      "4": "Ein furchterregender Haufen an scharfen Zähnen, geschärften Krallen und Bergen von Muskeln. Es spricht für die Macht des Druiden oder Waldläufers der einen solchen Schreckenstiger an seiner Seite hat.",
+      "5": "Ein furchterregender Haufen an scharfen Zähnen, geschärften Krallen und Bergen von Muskeln. Es spricht für die Macht des Druiden oder Waldläufers der einen solchen Schreckenstiger an seiner Seite hat."
+    }
   },
   "Dex": {
     "type": "byte",
@@ -126,7 +130,9 @@
     "id": 12769,
     "type": "cexolocstring",
     "value": {
-      "0": "Summoned Dire Spider N"
+      "0": "N Summoned Dire Tiger",
+      "4": "Herbeigezauberter Schreckenstiger",
+      "5": "Herbeigezauberter Schreckenstiger"
     }
   },
   "fortbonus": {
@@ -203,7 +209,7 @@
   },
   "PortraitId": {
     "type": "word",
-    "value": 300
+    "value": 166
   },
   "Race": {
     "type": "byte",

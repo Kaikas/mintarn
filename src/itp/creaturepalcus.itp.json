@@ -16240,6 +16240,82 @@
               "__struct_id": 0,
               "CR": {
                 "type": "float",
+                "value": 4.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "N Summoned Bear"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "min_natureally3"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 5.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "N Summoned Dire Tiger"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "min_natureally4"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 1.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "N Summoned Wolf"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "min_natureally2"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 2.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Commoner"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "N Summoned Wolverine"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "min_natureally1"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
                 "value": 2.0
               },
               "FACTION": {
@@ -20971,25 +21047,6 @@
               "__struct_id": 0,
               "CR": {
                 "type": "float",
-                "value": 2.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Summoned Dire Badger N"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "min_natureally1"
-              }
-            },
-            {
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
                 "value": 6.0
               },
               "FACTION": {
@@ -21028,25 +21085,6 @@
               "__struct_id": 0,
               "CR": {
                 "type": "float",
-                "value": 1.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Summoned Dire Boar N"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "min_natureally2"
-              }
-            },
-            {
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
                 "value": 4.0
               },
               "FACTION": {
@@ -21060,25 +21098,6 @@
               "STRREF": {
                 "type": "dword",
                 "value": 12769
-              }
-            },
-            {
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 4.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Summoned Dire Spider N"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "min_natureally4"
               }
             },
             {
@@ -21117,25 +21136,6 @@
               "RESREF": {
                 "type": "resref",
                 "value": "nw_s_wolfdire"
-              }
-            },
-            {
-              "__struct_id": 0,
-              "CR": {
-                "type": "float",
-                "value": 4.0
-              },
-              "FACTION": {
-                "type": "cexostring",
-                "value": "Commoner"
-              },
-              "NAME": {
-                "type": "cexostring",
-                "value": "Summoned Dire Wolf N"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "min_natureally3"
               }
             },
             {
