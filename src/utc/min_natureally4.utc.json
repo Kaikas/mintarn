@@ -86,13 +86,6 @@
           "type": "resref",
           "value": "nw_it_crewps017"
         }
-      },
-      {
-        "__struct_id": 131072,
-        "EquippedRes": {
-          "type": "resref",
-          "value": "nw_it_creitem007"
-        }
       }
     ]
   },
