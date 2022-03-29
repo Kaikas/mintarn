@@ -2768,6 +2768,25 @@
                     "__struct_id": 0,
                     "CR": {
                       "type": "float",
+                      "value": 5.0
+                    },
+                    "FACTION": {
+                      "type": "cexostring",
+                      "value": "Commoner"
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Oktavia"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "npc_oktavia"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "CR": {
+                      "type": "float",
                       "value": 4.0
                     },
                     "FACTION": {
