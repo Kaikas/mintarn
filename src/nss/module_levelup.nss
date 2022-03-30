@@ -1,6 +1,7 @@
 #include "nwnx_creature"
 
 void SetMaxHP(object oPlayer) {
+    if(GetIsPC(oPlayer)){
     int nLevel, nCharacterLevel = GetHitDice(oPlayer);
 
     for(nLevel = 1; nLevel <= nCharacterLevel; nLevel++)
@@ -14,7 +15,7 @@ void SetMaxHP(object oPlayer) {
         //}
         NWNX_Creature_SetMaxHitPointsByLevel(oPlayer, nLevel, nMaxHP);
     }
-}
+} }
 
 void main() {
     object oPc = GetPCLevellingUp();

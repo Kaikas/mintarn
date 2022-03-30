@@ -13888,6 +13888,33 @@
           "type": "byte",
           "value": 53
         },
+        "LIST": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Kreatur_avg_1"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "kreatur_avg_001"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Kreatur_Off_1"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "kreatur_off_1"
+              }
+            }
+          ]
+        },
         "STRREF": {
           "type": "dword",
           "value": 6732

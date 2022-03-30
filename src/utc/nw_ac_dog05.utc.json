@@ -2,7 +2,7 @@
   "__data_type": "UTC ",
   "Appearance_Type": {
     "type": "word",
-    "value": 176
+    "value": 159
   },
   "BodyBag": {
     "type": "byte",
@@ -10,11 +10,11 @@
   },
   "Cha": {
     "type": "byte",
-    "value": 5
+    "value": 3
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 4.0
+    "value": 0.3333
   },
   "ClassList": {
     "type": "list",
@@ -23,11 +23,11 @@
         "__struct_id": 2,
         "Class": {
           "type": "int",
-          "value": 12
+          "value": 26
         },
         "ClassLevel": {
           "type": "short",
-          "value": 5
+          "value": 1
         }
       }
     ]
@@ -38,11 +38,11 @@
   },
   "Con": {
     "type": "byte",
-    "value": 14
+    "value": 12
   },
   "Conversation": {
     "type": "resref",
-    "value": "nw_g_animal"
+    "value": ""
   },
   "CRAdjust": {
     "type": "int",
@@ -50,7 +50,7 @@
   },
   "CurrentHitPoints": {
     "type": "short",
-    "value": 26
+    "value": 4
   },
   "DecayTime": {
     "type": "dword",
@@ -61,69 +61,50 @@
     "value": ""
   },
   "Description": {
-    "id": 12351,
     "type": "cexolocstring",
-    "value": {
-      "0": ""
-    }
+    "value": {}
   },
   "Dex": {
     "type": "byte",
-    "value": 16
+    "value": 17
   },
   "Disarmable": {
     "type": "byte",
-    "value": 0
+    "value": 97
   },
   "Equip_ItemList": {
     "type": "list",
     "value": [
       {
-        "__struct_id": 65536,
+        "__struct_id": 131072,
         "EquippedRes": {
           "type": "resref",
-          "value": "nw_it_crewps005"
+          "value": "nw_it_creitem005"
         }
       }
     ]
   },
   "FactionID": {
     "type": "word",
-    "value": 2
+    "value": 4
   },
   "FeatList": {
     "type": "list",
-    "value": [
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
-          "value": 206
-        }
-      },
-      {
-        "__struct_id": 1,
-        "Feat": {
-          "type": "word",
-          "value": 289
-        }
-      }
-    ]
+    "value": []
   },
   "FirstName": {
-    "id": 12352,
     "type": "cexolocstring",
     "value": {
-      "0": "Hund"
+      "0": "Dog"
     }
   },
   "fortbonus": {
     "type": "short",
-    "value": 1
+    "value": 0
   },
   "Gender": {
     "type": "byte",
-    "value": 2
+    "value": 0
   },
   "GoodEvil": {
     "type": "byte",
@@ -131,15 +112,15 @@
   },
   "HitPoints": {
     "type": "short",
-    "value": 26
+    "value": 4
   },
   "Int": {
     "type": "byte",
-    "value": 5
+    "value": 10
   },
   "Interruptable": {
     "type": "byte",
-    "value": 1
+    "value": 119
   },
   "IsImmortal": {
     "type": "byte",
@@ -151,7 +132,9 @@
   },
   "LastName": {
     "type": "cexolocstring",
-    "value": {}
+    "value": {
+      "0": ""
+    }
   },
   "LawfulChaotic": {
     "type": "byte",
@@ -163,11 +146,11 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 36
+    "value": 5
   },
   "NaturalAC": {
     "type": "byte",
-    "value": 3
+    "value": 0
   },
   "NoPermDeath": {
     "type": "byte",
@@ -191,67 +174,67 @@
   },
   "PortraitId": {
     "type": "word",
-    "value": 189
+    "value": 301
   },
   "Race": {
     "type": "byte",
-    "value": 8
+    "value": 25
   },
   "refbonus": {
     "type": "short",
-    "value": 1
+    "value": 0
   },
   "ScriptAttacked": {
     "type": "resref",
-    "value": "nw_ch_ac5"
+    "value": "x2_def_attacked"
   },
   "ScriptDamaged": {
     "type": "resref",
-    "value": "nw_ch_ac5"
+    "value": "x2_def_ondamage"
   },
   "ScriptDeath": {
     "type": "resref",
-    "value": "nw_ch_ac7"
+    "value": "x2_def_ondeath"
   },
   "ScriptDialogue": {
     "type": "resref",
-    "value": "nw_ch_ac4"
+    "value": "x2_def_onconv"
   },
   "ScriptDisturbed": {
     "type": "resref",
-    "value": "nw_ch_ac8"
+    "value": "x2_def_ondisturb"
   },
   "ScriptEndRound": {
     "type": "resref",
-    "value": "nw_ch_ac3"
+    "value": "x2_def_endcombat"
   },
   "ScriptHeartbeat": {
     "type": "resref",
-    "value": "nw_ch_ac1"
+    "value": "x2_def_heartbeat"
   },
   "ScriptOnBlocked": {
     "type": "resref",
-    "value": "nw_ch_ace"
+    "value": "x2_def_onblocked"
   },
   "ScriptOnNotice": {
     "type": "resref",
-    "value": "nw_ch_ac2"
+    "value": "x2_def_percept"
   },
   "ScriptRested": {
     "type": "resref",
-    "value": "nw_ch_acani9"
+    "value": "x2_def_rested"
   },
   "ScriptSpawn": {
     "type": "resref",
-    "value": "nw_ch_acani9"
+    "value": "x2_def_spawn"
   },
   "ScriptSpellAt": {
     "type": "resref",
-    "value": "nw_ch_acb"
+    "value": "x2_def_spellcast"
   },
   "ScriptUserDefine": {
     "type": "resref",
-    "value": "nw_ch_acd"
+    "value": "x2_def_userdef"
   },
   "SkillList": {
     "type": "list",
@@ -295,20 +278,6 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 3
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
           "value": 0
         }
       },
@@ -316,7 +285,7 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 1
+          "value": 0
         }
       },
       {
@@ -379,7 +348,21 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 3
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
         }
       },
       {
@@ -512,7 +495,7 @@
   },
   "SoundSetFile": {
     "type": "word",
-    "value": 19
+    "value": 110
   },
   "SpecAbilityList": {
     "type": "list",
@@ -520,11 +503,11 @@
   },
   "StartingPackage": {
     "type": "byte",
-    "value": 74
+    "value": 88
   },
   "Str": {
     "type": "byte",
-    "value": 14
+    "value": 11
   },
   "Subrace": {
     "type": "cexostring",
@@ -532,11 +515,11 @@
   },
   "Tag": {
     "type": "cexostring",
-    "value": "NW_AC_DOG05"
+    "value": "nw_ac_dog05"
   },
   "Tail_New": {
     "type": "dword",
-    "value": 205
+    "value": 0
   },
   "TemplateList": {
     "type": "list",
@@ -548,18 +531,18 @@
   },
   "WalkRate": {
     "type": "int",
-    "value": 7
+    "value": 4
   },
   "willbonus": {
     "type": "short",
-    "value": 1
+    "value": 0
   },
   "Wings_New": {
     "type": "dword",
-    "value": 205
+    "value": 0
   },
   "Wis": {
     "type": "byte",
-    "value": 12
+    "value": 10
   }
 }

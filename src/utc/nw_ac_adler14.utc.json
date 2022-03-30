@@ -10,11 +10,11 @@
   },
   "Cha": {
     "type": "byte",
-    "value": 5
+    "value": 7
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 10.0
+    "value": 1.0
   },
   "ClassList": {
     "type": "list",
@@ -27,7 +27,7 @@
         },
         "ClassLevel": {
           "type": "short",
-          "value": 13
+          "value": 1
         }
       }
     ]
@@ -38,7 +38,7 @@
   },
   "Con": {
     "type": "byte",
-    "value": 9
+    "value": 13
   },
   "Conversation": {
     "type": "resref",
@@ -50,7 +50,7 @@
   },
   "CurrentHitPoints": {
     "type": "short",
-    "value": 83
+    "value": 8
   },
   "DecayTime": {
     "type": "dword",
@@ -79,10 +79,10 @@
     "type": "list",
     "value": [
       {
-        "__struct_id": 65536,
+        "__struct_id": 16384,
         "EquippedRes": {
           "type": "resref",
-          "value": "nw_it_crewps012"
+          "value": "kreatur_off_1"
         }
       }
     ]
@@ -98,7 +98,14 @@
         "__struct_id": 1,
         "Feat": {
           "type": "word",
-          "value": 206
+          "value": 42
+        }
+      },
+      {
+        "__struct_id": 1,
+        "Feat": {
+          "type": "word",
+          "value": 291
         }
       },
       {
@@ -119,7 +126,7 @@
   },
   "fortbonus": {
     "type": "short",
-    "value": 0
+    "value": 3
   },
   "Gender": {
     "type": "byte",
@@ -131,11 +138,11 @@
   },
   "HitPoints": {
     "type": "short",
-    "value": 83
+    "value": 8
   },
   "Int": {
     "type": "byte",
-    "value": 5
+    "value": 3
   },
   "Interruptable": {
     "type": "byte",
@@ -163,11 +170,11 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 70
+    "value": 9
   },
   "NaturalAC": {
     "type": "byte",
-    "value": 4
+    "value": 0
   },
   "NoPermDeath": {
     "type": "byte",
@@ -199,7 +206,7 @@
   },
   "refbonus": {
     "type": "short",
-    "value": 0
+    "value": 3
   },
   "ScriptAttacked": {
     "type": "resref",
@@ -295,28 +302,14 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 4
+          "value": 3
         }
       },
       {
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 9
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 4
+          "value": 3
         }
       },
       {
@@ -330,7 +323,7 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 0
+          "value": 3
         }
       },
       {
@@ -379,7 +372,21 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 9
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 3
         }
       },
       {
@@ -524,7 +531,7 @@
   },
   "Str": {
     "type": "byte",
-    "value": 24
+    "value": 12
   },
   "Subrace": {
     "type": "cexostring",
@@ -532,7 +539,7 @@
   },
   "Tag": {
     "type": "cexostring",
-    "value": "NW_AC_ADLER14"
+    "value": "NW_AC_ADLER01"
   },
   "Tail_New": {
     "type": "dword",
@@ -544,7 +551,7 @@
   },
   "TemplateResRef": {
     "type": "resref",
-    "value": "nw_ac_adler14"
+    "value": "nw_ac_adler01"
   },
   "WalkRate": {
     "type": "int",
@@ -560,6 +567,6 @@
   },
   "Wis": {
     "type": "byte",
-    "value": 8
+    "value": 12
   }
 }
