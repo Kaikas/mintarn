@@ -111,10 +111,10 @@ void RestFull(object oPc) {
         AssignCommand(oPc, ClearAllActions());
     } else {
         if (iTimeSinceLastRest < 14400) {
-            SendMessageToPC(oPc, "Ihr müsst noch " + 
-                IntToString((1 + (14400 - iTimeSinceLastRest) / 60) / 60) + 
-                " Stunden und " + 
-                IntToString((1 + (14400 - iTimeSinceLastRest) / 60) % 60) + 
+            SendMessageToPC(oPc, "Ihr müsst noch " +
+                IntToString((1 + (14400 - iTimeSinceLastRest) / 60) / 60) +
+                " Stunden und " +
+                IntToString((1 + (14400 - iTimeSinceLastRest) / 60) % 60) +
                 " Minuten warten bis ihr erneut rasten könnt!");
             AssignCommand(oPc, ClearAllActions());
         } else {
@@ -178,7 +178,7 @@ void main() {
     }
     switch (iRestType) {
         case REST_EVENTTYPE_REST_STARTED:
-            if (GetTag(GetArea(oPc)) == "AREA_UnterDeck") {
+            if (GetTag(GetArea(oPc)) == "AREA_UnterDeck" || GetTag(GetArea(oPc)) == "OOC") {
               //pass
             } else {
                 // Start rest conversation
