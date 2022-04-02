@@ -2213,7 +2213,21 @@ void main() {
       //}
     }
   }
+  object oArea = GetArea(oPc);
+  if(ObjectToString(oArea) == "OOC"){
+    int iOtherInArea = 0;
+    object oOther = GetFirstObjectInArea(oArea);
+    SendMessageToPC(oPc, ObjectToString(oOther));
+    while(oOther != OBJECT_INVALID){
+        if((GetIsDM(oOther) || GetIsPC(oOther)) && oOther != oPc){
+        iOtherInArea = 1;
+        break;
+        }
 
+        oOther = GetNextObjectInArea(oArea);
+        SendMessageToPC(oPc, ObjectToString(oOther));
+    }
+  if(iOtherInArea){
   sQuery = "INSERT INTO Chat (name, charname, text, datetime) VALUES (?, ?, ?, ?)";
   if (NWNX_SQL_PrepareQuery(sQuery)) {
     NWNX_SQL_PreparedString(0, sAccountName);
@@ -2241,5 +2255,6 @@ void main() {
     }
     NWNX_SQL_PreparedString(3, IntToString(NWNX_Time_GetTimeStamp()));
     NWNX_SQL_ExecutePreparedQuery();
+  }}
   }
 }

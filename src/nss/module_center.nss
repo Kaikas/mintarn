@@ -38,10 +38,8 @@ void GiveXP(object oPc, int iCount, int iSumXp, int iToken) {
             //SendMessageToPC(oPc, IntToString(NWNX_Time_GetTimeStamp() - StringToInt(NWNX_SQL_ReadDataInActiveRow(4))));
             if (NWNX_Time_GetTimeStamp() - StringToInt(NWNX_SQL_ReadDataInActiveRow(4)) < 601) {
                 if (GetSubString(NWNX_SQL_ReadDataInActiveRow(3), 0, 1) != "/" && GetSubString(NWNX_SQL_ReadDataInActiveRow(3), 0, 1) != "(") {
-                    if (GetTag(GetArea(oPc)) != "OOC") {
-                        iTalked = iTalked + 1;
-                        iCharacters = iCharacters + GetStringLength(NWNX_SQL_ReadDataInActiveRow(3));
-                    }
+                    iTalked = iTalked + 1;
+                    iCharacters = iCharacters + GetStringLength(NWNX_SQL_ReadDataInActiveRow(3));
                 }
             }
         }
