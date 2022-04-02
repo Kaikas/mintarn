@@ -1559,7 +1559,7 @@ int companion(string sMessage) {
     if (!GetIsInCombat(oPc) && GetName(oCreature) != sCompName) {
       //SummonAnimalCompanion(oPc);
       //DelayCommand(1.0f, spawnCompanion(oPc));
-      ExecuteScript("nw_s2_yuukicom", oPc);
+      ExecuteScript("nw_s2_animalcom", oPc);
       return 1;
     }
     else{
@@ -2221,9 +2221,9 @@ void main() {
     while(oOther != OBJECT_INVALID){
         if((GetIsDM(oOther) || GetIsPC(oOther)) && oOther != oPc){
         iOtherInArea = 1;
+        SendMessageToPC(oPc, "Found " + GetName(oOther));
         break;
         }
-
         oOther = GetNextObjectInArea(oArea);
         SendMessageToPC(oPc, ObjectToString(oOther));
     }
