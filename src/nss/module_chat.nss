@@ -2214,7 +2214,7 @@ void main() {
     }
   }
   object oArea = GetArea(oPc);
-  if(ObjectToString(oArea) == "OOC"){
+  if(GetTag(oArea) != "OOC"){
     int iOtherInArea = 0;
     object oOther = GetFirstObjectInArea(oArea);
     SendMessageToPC(oPc, ObjectToString(oOther));
