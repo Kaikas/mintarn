@@ -2216,20 +2216,18 @@ void main() {
   object oArea = GetArea(oPc);
   if(GetTag(oArea) != "OOC"){
     int iOtherInArea = 0;
-    object oOther = GetFirstObjectInArea(oArea);
+    object oOther = GetFirstPC();
     SendMessageToPC(oPc, ObjectToString(oOther));
     while(oOther != OBJECT_INVALID){
-        if((GetIsDM(oOther) || GetIsPC(oOther)) && oOther != oPc){
+        if((GetArea(oOther) == GetArea(oPc)) && oOther != oPc){
         iOtherInArea = 1;
-        SendMessageToPC(oPc, "Found " + GetName(oOther));
         break;
         }
-        oOther = GetNextObjectInArea(oArea);
-        SendMessageToPC(oPc, ObjectToString(oOther));
+        oOther = GetNextPC();
     }
-  if(iOtherInArea){
-  sQuery = "INSERT INTO Chat (name, charname, text, datetime) VALUES (?, ?, ?, ?)";
-  if (NWNX_SQL_PrepareQuery(sQuery)) {
+   if(iOtherInArea){
+   sQuery = "INSERT INTO Chat (name, charname, text, datetime) VALUES (?, ?, ?, ?)";
+   if (NWNX_SQL_PrepareQuery(sQuery)) {
     NWNX_SQL_PreparedString(0, sAccountName);
     NWNX_SQL_PreparedString(1, sName);
     if (sFirstChar == ":" && sSecondChar == "1") {
