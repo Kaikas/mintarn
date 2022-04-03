@@ -4042,6 +4042,44 @@
               "__struct_id": 0,
               "CR": {
                 "type": "float",
+                "value": 0.5
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Defender"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "ausgeglichen"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "ausgeglichen"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 1.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Defender"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "ausgeglichen4"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "ausgeglichen4"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
                 "value": 2.0
               },
               "FACTION": {
@@ -6354,6 +6392,44 @@
               "STRREF": {
                 "type": "dword",
                 "value": 12341
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 0.5
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Defender"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "defensiv"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "defensiv"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 1.0
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Defender"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "defensiv4"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "defensiv4"
               }
             },
             {
@@ -16329,6 +16405,44 @@
               "RESREF": {
                 "type": "resref",
                 "value": "min_natureally1"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 0.25
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Defender"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "offensiv"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "offensiv"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "CR": {
+                "type": "float",
+                "value": 0.1667
+              },
+              "FACTION": {
+                "type": "cexostring",
+                "value": "Defender"
+              },
+              "NAME": {
+                "type": "cexostring",
+                "value": "offensiv4"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "offensiv4"
               }
             },
             {
