@@ -32,9 +32,14 @@ void main()
         int i;
         for(i = 1; i <= 1+iDruidBonus; i++){
            LevelUpHenchman(oCompanion);
-           SpeakString(IntToString(GetCurrentHitPoints(oCompanion)));
-           NWNX_Creature_SetMaxHitPointsByLevel(oCompanion, i, 4+i%2);
         }
+
+        SpeakString("Before Adjust: " + IntToString(GetCurrentHitPoints(oCompanion)));
+        NWNX_Object_SetCurrentHitPoints(oCompanion, 1);
+         for(i = 1; i <= GetHitDice(oCompanion); i++){
+            NWNX_Creature_SetMaxHitPointsByLevel(oCompanion, i, 2);
+            }
+        SpeakString("After Adjust: " + IntToString(GetCurrentHitPoints(oCompanion)));
 
         //NWNX_Creature_SetLevelByPosition(oCompanion, 0, 2+(iDruidBonus*2));
         NWNX_Creature_SetSkillRank(oCompanion, SKILL_LISTEN, 3+iDruidBonus);
