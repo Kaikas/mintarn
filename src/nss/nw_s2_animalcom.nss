@@ -30,17 +30,36 @@ void main()
 
         //Bonus HD: Extra eight-sided (d8) Hit Dice, each of which gains a Constitution modifier, as normal. An animal companion gains additional skill points, feats and ability scores for bonus HD as normal for advancing a monster’s Hit Dice.
         int i;
+        SpeakString("1 to 20, HP per Level before levelup");
+        for(i = 1; i <= 20; i++){
+             SpeakString(IntToString(NWNX_Creature_GetMaxHitPointsByLevel(oCompanion, i)));
+         }
+
         for(i = 1; i <= 1+iDruidBonus; i++){
            LevelUpHenchman(oCompanion);
         }
+        SpeakString("1 to 20, HP per Level after levelup");
+        for(i = 1; i <= 20; i++){
+            SpeakString(IntToString(NWNX_Creature_GetMaxHitPointsByLevel(oCompanion, i)));
+         }
 
+        NWNX_Creature_LevelDown(oCompanion, GetHitDice(oCompanion)-1);
+        SetCurrentHitPoints(oCompanion, 2);
+        NWNX_Creature_SetMaxHitPointsByLevel(oCompanion, 1, 2);
         SpeakString("Before Adjust: " + IntToString(GetCurrentHitPoints(oCompanion)));
-        NWNX_Object_SetCurrentHitPoints(oCompanion, 1);
          for(i = 1; i <= GetHitDice(oCompanion); i++){
             NWNX_Creature_SetMaxHitPointsByLevel(oCompanion, i, 2);
             }
         SpeakString("After Adjust: " + IntToString(GetCurrentHitPoints(oCompanion)));
 
+        for(i = 1; i <= 1+iDruidBonus; i++){
+           LevelUpHenchman(oCompanion);
+           SetCurrentHitPoints(oCompanion, 2);
+           NWNX_Creature_SetMaxHitPointsByLevel(oCompanion, i, 3);
+        }
+        for(i = 1; i <= 20; i++){
+             SpeakString(IntToString(NWNX_Creature_GetMaxHitPointsByLevel(oCompanion, i)));
+         }
         //NWNX_Creature_SetLevelByPosition(oCompanion, 0, 2+(iDruidBonus*2));
         NWNX_Creature_SetSkillRank(oCompanion, SKILL_LISTEN, 3+iDruidBonus);
         NWNX_Creature_SetSkillRank(oCompanion, SKILL_SPOT, 3+iDruidBonus);

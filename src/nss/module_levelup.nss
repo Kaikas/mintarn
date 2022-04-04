@@ -3,7 +3,6 @@
 void SetMaxHP(object oPlayer) {
     if(GetIsPC(oPlayer)){
     int nLevel, nCharacterLevel = GetHitDice(oPlayer);
-    AssignCommand(oPlayer, ActionSpeakString("LevelingUp"));
     for(nLevel = 1; nLevel <= nCharacterLevel; nLevel++)
     {
         int nMaxHP = StringToInt(Get2DAString("classes", "HitDie", NWNX_Creature_GetClassByLevel(oPlayer, nLevel)));
@@ -13,7 +12,7 @@ void SetMaxHP(object oPlayer) {
         //} else {
         //    NWNX_Creature_SetMaxHitPointsByLevel(oPlayer, nLevel, nMaxHP);
         //}
-        NWNX_Creature_SetMaxHitPointsByLevel(oPlayer, nLevel, nMaxHP);
+        NWNX_Creature_SetMaxHitPointsByLevel(oPlayer, nLevel, nMaxHP/2);
     }
 } }
 
