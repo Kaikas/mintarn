@@ -14,7 +14,7 @@
 },
 "ChallengeRating": {
 "type": "float",
-"value": 1.0
+"value": 0.5
 },
 "ClassList": {
 "type": "list",
@@ -50,7 +50,7 @@
 },
 "CurrentHitPoints": {
 "type": "short",
-"value": 4
+"value": 1
 },
 "DecayTime": {
 "type": "dword",
@@ -70,7 +70,7 @@
 },
 "Disarmable": {
 "type": "byte",
-"value": 0
+"value": 1
 },
 "Equip_ItemList": {
 "type": "list",
@@ -120,7 +120,7 @@
 },
 "HitPoints": {
 "type": "short",
-"value": 4
+"value": 1
 },
 "Int": {
 "type": "byte",
@@ -154,7 +154,7 @@
 },
 "MaxHitPoints": {
 "type": "short",
-"value": 7
+"value": 4
 },
 "NaturalAC": {
 "type": "byte",
@@ -194,55 +194,55 @@
 },
 "ScriptAttacked": {
 "type": "resref",
-"value": ""
+"value": "x2_def_attacked"
 },
 "ScriptDamaged": {
 "type": "resref",
-"value": ""
+"value": "x2_def_ondamage"
 },
 "ScriptDeath": {
 "type": "resref",
-"value": ""
+"value": "x2_def_ondeath"
 },
 "ScriptDialogue": {
 "type": "resref",
-"value": ""
+"value": "x2_def_onconv"
 },
 "ScriptDisturbed": {
 "type": "resref",
-"value": ""
+"value": "x2_def_ondisturb"
 },
 "ScriptEndRound": {
 "type": "resref",
-"value": ""
+"value": "x2_def_endcombat"
 },
 "ScriptHeartbeat": {
 "type": "resref",
-"value": ""
+"value": "x2_def_heartbeat"
 },
 "ScriptOnBlocked": {
 "type": "resref",
-"value": ""
+"value": "x2_def_onblocked"
 },
 "ScriptOnNotice": {
 "type": "resref",
-"value": ""
+"value": "x2_def_percept"
 },
 "ScriptRested": {
 "type": "resref",
-"value": ""
+"value": "x2_def_rested"
 },
 "ScriptSpawn": {
 "type": "resref",
-"value": ""
+"value": "x2_def_spawn"
 },
 "ScriptSpellAt": {
 "type": "resref",
-"value": ""
+"value": "x2_def_spellcast"
 },
 "ScriptUserDefine": {
 "type": "resref",
-"value": ""
+"value": "x2_def_userdef"
 },
 "SkillList": {
 "type": "list",
@@ -293,13 +293,6 @@
 "__struct_id": 0,
 "Rank": {
 "type": "byte",
-"value": 2
-}
-},
-{
-"__struct_id": 0,
-"Rank": {
-"type": "byte",
 "value": 0
 }
 },
@@ -370,7 +363,14 @@
 "__struct_id": 0,
 "Rank": {
 "type": "byte",
-"value": 2
+"value": 0
+}
+},
+{
+"__struct_id": 0,
+"Rank": {
+"type": "byte",
+"value": 0
 }
 },
 {
@@ -511,7 +511,7 @@
 },
 "StartingPackage": {
 "type": "byte",
-"value": 134
+"value": 74
 },
 "Str": {
 "type": "byte",
@@ -539,7 +539,7 @@
 },
 "WalkRate": {
 "type": "int",
-"value": 7
+"value": 5
 },
 "willbonus": {
 "type": "short",
