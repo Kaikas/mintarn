@@ -13,10 +13,12 @@ void SetMaxHP(object oPlayer) {
         //    NWNX_Creature_SetMaxHitPointsByLevel(oPlayer, nLevel, nMaxHP);
         //}
         NWNX_Creature_SetMaxHitPointsByLevel(oPlayer, nLevel, nMaxHP/2);
+        SetCurrentHitPoints(oPlayer, GetMaxHitPoints(oPlayer));
     }
 } }
 
 void main() {
-    object oPc = GetPCLevellingUp();
-    SetMaxHP(oPc);
+    //Currently not needed - module setting enforces max HP
+    //object oPc = GetPCLevellingUp();
+    //SetMaxHP(oPc);
 }
