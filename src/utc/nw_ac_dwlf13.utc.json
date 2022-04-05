@@ -523,7 +523,7 @@
 },
 "Tag": {
 "type": "cexostring",
-"value": "nw_ac_dwlf"
+"value": "nw_ac_dwlf13"
 },
 "Tail_New": {
 "type": "dword",
@@ -535,7 +535,7 @@
 },
 "TemplateResRef": {
 "type": "resref",
-"value": "nw_ac_dwlf"
+"value": "nw_ac_dwlf13"
 },
 "WalkRate": {
 "type": "int",

@@ -523,7 +523,7 @@
 },
 "Tag": {
 "type": "cexostring",
-"value": "nw_ac_doberman"
+"value": "nw_ac_doberman13"
 },
 "Tail_New": {
 "type": "dword",
@@ -535,7 +535,7 @@
 },
 "TemplateResRef": {
 "type": "resref",
-"value": "nw_ac_doberman"
+"value": "nw_ac_doberman13"
 },
 "WalkRate": {
 "type": "int",

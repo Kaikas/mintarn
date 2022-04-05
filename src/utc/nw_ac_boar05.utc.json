@@ -523,7 +523,7 @@
 },
 "Tag": {
 "type": "cexostring",
-"value": "nw_ac_boar"
+"value": "nw_ac_boar05"
 },
 "Tail_New": {
 "type": "dword",
@@ -535,7 +535,7 @@
 },
 "TemplateResRef": {
 "type": "resref",
-"value": "nw_ac_boar"
+"value": "nw_ac_boar05"
 },
 "WalkRate": {
 "type": "int",
