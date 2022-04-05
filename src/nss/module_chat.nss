@@ -2213,11 +2213,12 @@ void main() {
       //}
     }
   }
+
+  //RPXP only when other person in Area
   object oArea = GetArea(oPc);
   if(GetTag(oArea) != "OOC"){
     int iOtherInArea = 0;
     object oOther = GetFirstPC();
-    SendMessageToPC(oPc, ObjectToString(oOther));
     while(oOther != OBJECT_INVALID){
         if((GetArea(oOther) == GetArea(oPc)) && oOther != oPc){
         iOtherInArea = 1;
