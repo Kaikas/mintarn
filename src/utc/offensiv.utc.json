@@ -23,7 +23,7 @@
         "__struct_id": 2,
         "Class": {
           "type": "int",
-          "value": 45
+          "value": 12
         },
         "ClassLevel": {
           "type": "short",
