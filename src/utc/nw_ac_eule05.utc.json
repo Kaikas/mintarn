@@ -38,11 +38,11 @@
 },
 "Con": {
 "type": "byte",
-"value": 13
+"value": 15
 },
 "Conversation": {
 "type": "resref",
-"value": ""
+"value": "nw_g_animal"
 },
 "CRAdjust": {
 "type": "int",
@@ -74,7 +74,15 @@
 },
 "Equip_ItemList": {
 "type": "list",
-"value": []
+"value": [
+{
+"__struct_id": 16384,
+"EquippedRes": {
+"type": "resref",
+"value": "nw_it_crewps005"
+}
+}
+]
 },
 "FactionID": {
 "type": "word",
@@ -82,7 +90,15 @@
 },
 "FeatList": {
 "type": "list",
-"value": []
+"value": [
+{
+"__struct_id": 1,
+"Feat": {
+"type": "word",
+"value": 289
+}
+}
+]
 },
 "FirstName": {
 "type": "cexolocstring",
@@ -138,7 +154,7 @@
 },
 "MaxHitPoints": {
 "type": "short",
-"value": 7
+"value": 8
 },
 "NaturalAC": {
 "type": "byte",
@@ -166,7 +182,7 @@
 },
 "PortraitId": {
 "type": "word",
-"value": 1949
+"value": 206
 },
 "Race": {
 "type": "byte",
@@ -487,7 +503,7 @@
 },
 "SoundSetFile": {
 "type": "word",
-"value": 1949
+"value": 854
 },
 "SpecAbilityList": {
 "type": "list",
@@ -523,7 +539,7 @@
 },
 "WalkRate": {
 "type": "int",
-"value": 5
+"value": 4
 },
 "willbonus": {
 "type": "short",

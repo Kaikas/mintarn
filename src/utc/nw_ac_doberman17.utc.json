@@ -14,7 +14,7 @@
 },
 "ChallengeRating": {
 "type": "float",
-"value": 0.125
+"value": 0.1667
 },
 "ClassList": {
 "type": "list",
@@ -42,7 +42,7 @@
 },
 "Conversation": {
 "type": "resref",
-"value": ""
+"value": "nw_g_animal"
 },
 "CRAdjust": {
 "type": "int",
@@ -50,7 +50,7 @@
 },
 "CurrentHitPoints": {
 "type": "short",
-"value": 1
+"value": 2
 },
 "DecayTime": {
 "type": "dword",
@@ -90,7 +90,15 @@
 },
 "FeatList": {
 "type": "list",
-"value": []
+"value": [
+{
+"__struct_id": 1,
+"Feat": {
+"type": "word",
+"value": 289
+}
+}
+]
 },
 "FirstName": {
 "type": "cexolocstring",
@@ -112,7 +120,7 @@
 },
 "HitPoints": {
 "type": "short",
-"value": 1
+"value": 2
 },
 "Int": {
 "type": "byte",
@@ -146,7 +154,7 @@
 },
 "MaxHitPoints": {
 "type": "short",
-"value": 2
+"value": 3
 },
 "NaturalAC": {
 "type": "byte",
@@ -174,7 +182,7 @@
 },
 "PortraitId": {
 "type": "word",
-"value": 1393
+"value": 2189
 },
 "Race": {
 "type": "byte",
@@ -495,7 +503,7 @@
 },
 "SoundSetFile": {
 "type": "word",
-"value": 1393
+"value": 27
 },
 "SpecAbilityList": {
 "type": "list",
@@ -531,7 +539,7 @@
 },
 "WalkRate": {
 "type": "int",
-"value": 5
+"value": 4
 },
 "willbonus": {
 "type": "short",

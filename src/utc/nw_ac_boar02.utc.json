@@ -2,7 +2,7 @@
 "__data_type": "UTC ",
 "Appearance_Type": {
 "type": "word",
-"value": 22
+"value": 21
 },
 "BodyBag": {
 "type": "byte",
@@ -42,7 +42,7 @@
 },
 "Conversation": {
 "type": "resref",
-"value": ""
+"value": "nw_g_animal"
 },
 "CRAdjust": {
 "type": "int",
@@ -90,7 +90,15 @@
 },
 "FeatList": {
 "type": "list",
-"value": []
+"value": [
+{
+"__struct_id": 1,
+"Feat": {
+"type": "word",
+"value": 289
+}
+}
+]
 },
 "FirstName": {
 "type": "cexolocstring",
@@ -174,7 +182,7 @@
 },
 "PortraitId": {
 "type": "word",
-"value": 22
+"value": 152
 },
 "Race": {
 "type": "byte",
@@ -495,7 +503,7 @@
 },
 "SoundSetFile": {
 "type": "word",
-"value": 22
+"value": 10
 },
 "SpecAbilityList": {
 "type": "list",
@@ -531,7 +539,7 @@
 },
 "WalkRate": {
 "type": "int",
-"value": 5
+"value": 4
 },
 "willbonus": {
 "type": "short",

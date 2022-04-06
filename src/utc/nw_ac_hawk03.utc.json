@@ -14,7 +14,7 @@
 },
 "ChallengeRating": {
 "type": "float",
-"value": 0.3333
+"value": 0.25
 },
 "ClassList": {
 "type": "list",
@@ -42,7 +42,7 @@
 },
 "Conversation": {
 "type": "resref",
-"value": ""
+"value": "nw_g_animal"
 },
 "CRAdjust": {
 "type": "int",
@@ -182,7 +182,7 @@
 },
 "PortraitId": {
 "type": "word",
-"value": 144
+"value": 206
 },
 "Race": {
 "type": "byte",
@@ -503,7 +503,7 @@
 },
 "SoundSetFile": {
 "type": "word",
-"value": 144
+"value": 38
 },
 "SpecAbilityList": {
 "type": "list",
@@ -539,7 +539,7 @@
 },
 "WalkRate": {
 "type": "int",
-"value": 5
+"value": 4
 },
 "willbonus": {
 "type": "short",
