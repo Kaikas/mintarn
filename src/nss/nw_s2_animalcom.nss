@@ -26,7 +26,11 @@ void main()
         int iDruidBonus = (GetLevelByClass(CLASS_TYPE_DRUID, oPc) + (GetLevelByClass(CLASS_TYPE_RANGER, oPc)/2))/3;
 
         //Bonus HD: Extra eight-sided (d8) Hit Dice, each of which gains a Constitution modifier, as normal. An animal companion gains additional skill points, feats and ability scores for bonus HD as normal for advancing a monster’s Hit Dice.
+<<<<<<< Updated upstream
         int i;
+=======
+        int i = 1;
+>>>>>>> Stashed changes
         for(i = 1; i <= 1+iDruidBonus; i++){
            LevelUpHenchman(oCompanion);
         }
@@ -45,6 +49,13 @@ void main()
         NWNX_Creature_ModifyRawAbilityScore(oCompanion, ABILITY_STRENGTH, iDruidBonus);
         NWNX_Creature_ModifyRawAbilityScore(oCompanion, ABILITY_DEXTERITY, iDruidBonus);
 
+<<<<<<< Updated upstream
+=======
+        //An animal companion gains ability scores for bonus HD as normal for advancing a monster’s Hit Dice.
+        NWNX_Creature_ModifyRawAbilityScore(oCompanion, ABILITY_STRENGTH, (GetHitDice(oCompanion)/4)*(-1)); // Remove NWN ability bonus
+        NWNX_Creature_ModifyRawAbilityScore(oCompanion, ABILITY_CONSTITUTION, (GetHitDice(oCompanion)/4));  // Ability bonus from advancing every 4 levels
+
+>>>>>>> Stashed changes
         //A druid’s animal companion is superior to a normal animal of its kind and has special powers and gains additional feats for bonus HD as normal.
         if (iDruidBonus >= 1 ) {
            NWNX_Creature_AddFeat(oCompanion, FEAT_EVASION); // Special power from level 3 druid
