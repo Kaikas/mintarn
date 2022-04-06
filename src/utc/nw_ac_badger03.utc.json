@@ -50,7 +50,7 @@
 },
 "CurrentHitPoints": {
 "type": "short",
-"value": 4
+"value": 8
 },
 "DecayTime": {
 "type": "dword",
@@ -66,7 +66,7 @@
 },
 "Dex": {
 "type": "byte",
-"value": 21
+"value": 17
 },
 "Disarmable": {
 "type": "byte",
@@ -120,7 +120,7 @@
 },
 "HitPoints": {
 "type": "short",
-"value": 4
+"value": 8
 },
 "Int": {
 "type": "byte",
@@ -154,11 +154,11 @@
 },
 "MaxHitPoints": {
 "type": "short",
-"value": 5
+"value": 9
 },
 "NaturalAC": {
 "type": "byte",
-"value": 3
+"value": 2
 },
 "NoPermDeath": {
 "type": "byte",
@@ -551,6 +551,6 @@
 },
 "Wis": {
 "type": "byte",
-"value": 12
+"value": 14
 }
 }
