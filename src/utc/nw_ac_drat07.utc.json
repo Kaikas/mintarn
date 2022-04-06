@@ -103,7 +103,7 @@
 "FirstName": {
 "type": "cexolocstring",
 "value": {
-"4": "Schreckensratte"
+"4": "AC_Schreckensratte"
 }
 },
 "fortbonus": {
@@ -182,7 +182,7 @@
 },
 "PortraitId": {
 "type": "word",
-"value": 240
+"value": 387
 },
 "Race": {
 "type": "byte",
@@ -503,7 +503,7 @@
 },
 "SoundSetFile": {
 "type": "word",
-"value": 0
+"value": 387
 },
 "SpecAbilityList": {
 "type": "list",

@@ -95,7 +95,7 @@
 "FirstName": {
 "type": "cexolocstring",
 "value": {
-"4": "Hund"
+"4": "AC_Hund"
 }
 },
 "fortbonus": {
@@ -174,7 +174,7 @@
 },
 "PortraitId": {
 "type": "word",
-"value": 240
+"value": 176
 },
 "Race": {
 "type": "byte",
@@ -495,7 +495,7 @@
 },
 "SoundSetFile": {
 "type": "word",
-"value": 0
+"value": 176
 },
 "SpecAbilityList": {
 "type": "list",

@@ -103,7 +103,7 @@
 "FirstName": {
 "type": "cexolocstring",
 "value": {
-"4": "Braunb\u00e4r"
+"4": "AC_Braunb\u00e4r"
 }
 },
 "fortbonus": {
@@ -182,7 +182,7 @@
 },
 "PortraitId": {
 "type": "word",
-"value": 240
+"value": 13
 },
 "Race": {
 "type": "byte",
@@ -503,7 +503,7 @@
 },
 "SoundSetFile": {
 "type": "word",
-"value": 0
+"value": 13
 },
 "SpecAbilityList": {
 "type": "list",

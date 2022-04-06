@@ -87,7 +87,7 @@
 "FirstName": {
 "type": "cexolocstring",
 "value": {
-"4": "Schleiereule"
+"4": "AC_Schleiereule"
 }
 },
 "fortbonus": {
@@ -166,7 +166,7 @@
 },
 "PortraitId": {
 "type": "word",
-"value": 240
+"value": 1949
 },
 "Race": {
 "type": "byte",
@@ -487,7 +487,7 @@
 },
 "SoundSetFile": {
 "type": "word",
-"value": 0
+"value": 1949
 },
 "SpecAbilityList": {
 "type": "list",

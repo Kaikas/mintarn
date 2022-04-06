@@ -103,7 +103,7 @@
 "FirstName": {
 "type": "cexolocstring",
 "value": {
-"4": "Falke"
+"4": "AC_Falke"
 }
 },
 "fortbonus": {
@@ -182,7 +182,7 @@
 },
 "PortraitId": {
 "type": "word",
-"value": 240
+"value": 144
 },
 "Race": {
 "type": "byte",
@@ -503,7 +503,7 @@
 },
 "SoundSetFile": {
 "type": "word",
-"value": 0
+"value": 144
 },
 "SpecAbilityList": {
 "type": "list",

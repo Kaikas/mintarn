@@ -103,7 +103,7 @@
 "FirstName": {
 "type": "cexolocstring",
 "value": {
-"4": "Wolf"
+"4": "AC_Wolf"
 }
 },
 "fortbonus": {
@@ -182,7 +182,7 @@
 },
 "PortraitId": {
 "type": "word",
-"value": 240
+"value": 181
 },
 "Race": {
 "type": "byte",
@@ -503,7 +503,7 @@
 },
 "SoundSetFile": {
 "type": "word",
-"value": 0
+"value": 181
 },
 "SpecAbilityList": {
 "type": "list",

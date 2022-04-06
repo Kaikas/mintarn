@@ -103,7 +103,7 @@
 "FirstName": {
 "type": "cexolocstring",
 "value": {
-"4": "Luchs"
+"4": "AC_Luchs"
 }
 },
 "fortbonus": {
@@ -182,7 +182,7 @@
 },
 "PortraitId": {
 "type": "word",
-"value": 240
+"value": 6407
 },
 "Race": {
 "type": "byte",
@@ -503,7 +503,7 @@
 },
 "SoundSetFile": {
 "type": "word",
-"value": 0
+"value": 6407
 },
 "SpecAbilityList": {
 "type": "list",

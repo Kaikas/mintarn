@@ -95,7 +95,7 @@
 "FirstName": {
 "type": "cexolocstring",
 "value": {
-"4": "Wildsau"
+"4": "AC_Wildsau"
 }
 },
 "fortbonus": {
@@ -174,7 +174,7 @@
 },
 "PortraitId": {
 "type": "word",
-"value": 240
+"value": 22
 },
 "Race": {
 "type": "byte",
@@ -495,7 +495,7 @@
 },
 "SoundSetFile": {
 "type": "word",
-"value": 0
+"value": 22
 },
 "SpecAbilityList": {
 "type": "list",

@@ -87,7 +87,7 @@
 "FirstName": {
 "type": "cexolocstring",
 "value": {
-"4": "Schwarzb\u00e4r"
+"4": "AC_Schwarzb\u00e4r"
 }
 },
 "fortbonus": {
@@ -166,7 +166,7 @@
 },
 "PortraitId": {
 "type": "word",
-"value": 240
+"value": 12
 },
 "Race": {
 "type": "byte",
@@ -487,7 +487,7 @@
 },
 "SoundSetFile": {
 "type": "word",
-"value": 0
+"value": 12
 },
 "SpecAbilityList": {
 "type": "list",
