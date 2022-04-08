@@ -110,17 +110,7 @@ void BringBack()
 
 void main()
 {
-    //Delete the Familiar buff on the master
     object oMaster = GetMaster();
-    if(GetHasSpellEffect(916, oMaster)){
-        effect eEff = GetFirstEffect(oMaster);
-        while (GetIsEffectValid(eEff)){
-            if (GetEffectSpellId(eEff) == 916){
-                RemoveEffect(oMaster,eEff);
-            }
-            eEff = GetNextEffect(oMaster);
-        }
-    }
     ApplyEffectToObject(DURATION_TYPE_TEMPORARY, SupernaturalEffect(EffectNegativeLevel(GetHitDice(oMaster)/2)), oMaster, HoursToSeconds(4));
     SendMessageToPC(oMaster, "Euer Vertrauter ist gestorben - eure Verbindung zu ihm lässt es euch spüren als ob ihr es selbst gewesen wärt.");
     SetLocalString(OBJECT_SELF,"sX3_DEATH_SCRIPT","nw_ch_ac7");
@@ -160,6 +150,16 @@ void main()
         // * I am a familiar, give 1d6 damage to my master
         if (GetAssociate(ASSOCIATE_TYPE_FAMILIAR, oMaster) == OBJECT_SELF)
         {
+            //Delete the Familiar buff on the master
+            if(GetHasSpellEffect(916, oMaster)){
+                effect eEff = GetFirstEffect(oMaster);
+                while (GetIsEffectValid(eEff)){
+                    if (GetEffectSpellId(eEff) == 916){
+                        RemoveEffect(oMaster,eEff);
+                    }
+                    eEff = GetNextEffect(oMaster);
+                }
+            }
             // April 2002: Made it so that familiar death can never kill the player
             // only wound them.
             int nDam =d6();
