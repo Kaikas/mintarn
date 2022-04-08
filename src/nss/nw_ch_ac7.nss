@@ -121,6 +121,8 @@ void main()
             eEff = GetNextEffect(oMaster);
         }
     }
+    ApplyEffectToObject(DURATION_TYPE_TEMPORARY, SupernaturalEffect(EffectNegativeLevel(GetHitDice(oMaster)/2)), oMaster, HoursToSeconds(4));
+    SendMessageToPC(oMaster, "Euer Vertrauter ist gestorben - eure Verbindung zu ihm lässt es euch spüren als ob ihr es selbst gewesen wärt.");
     SetLocalString(OBJECT_SELF,"sX3_DEATH_SCRIPT","nw_ch_ac7");
     if (HorseHandleDeath()) return;
     DeleteLocalString(OBJECT_SELF,"sX3_DEATH_SCRIPT");
