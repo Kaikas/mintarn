@@ -194,15 +194,15 @@
 },
 "ScriptAttacked": {
 "type": "resref",
-"value": "x2_def_attacked"
+"value": "nw_ch_ac5"
 },
 "ScriptDamaged": {
 "type": "resref",
-"value": "x2_def_ondamage"
+"value": "nw_ch_ac5"
 },
 "ScriptDeath": {
 "type": "resref",
-"value": "x2_def_ondeath"
+"value": "nw_ch_ac7"
 },
 "ScriptDialogue": {
 "type": "resref",
@@ -210,39 +210,39 @@
 },
 "ScriptDisturbed": {
 "type": "resref",
-"value": "x2_def_ondisturb"
+"value": "nw_ch_ac8"
 },
 "ScriptEndRound": {
 "type": "resref",
-"value": "x2_def_endcombat"
+"value": "nw_ch_ac3"
 },
 "ScriptHeartbeat": {
 "type": "resref",
-"value": "x2_def_heartbeat"
+"value": "nw_ch_ac1"
 },
 "ScriptOnBlocked": {
 "type": "resref",
-"value": "x2_def_onblocked"
+"value": "nw_ch_ace"
 },
 "ScriptOnNotice": {
 "type": "resref",
-"value": "x2_def_percept"
+"value": "nw_ch_ac2"
 },
 "ScriptRested": {
 "type": "resref",
-"value": "x2_def_rested"
+"value": "nw_ch_aca"
 },
 "ScriptSpawn": {
 "type": "resref",
-"value": "x2_def_spawn"
+"value": "nw_ch_acani9"
 },
 "ScriptSpellAt": {
 "type": "resref",
-"value": "x2_def_spellcast"
+"value": "nw_ch_acb"
 },
 "ScriptUserDefine": {
 "type": "resref",
-"value": "x2_def_userdef"
+"value": "nw_ch_acd"
 },
 "SkillList": {
 "type": "list",

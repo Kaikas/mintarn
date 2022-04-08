@@ -14,7 +14,7 @@
 },
 "ChallengeRating": {
 "type": "float",
-"value": 0.1667
+"value": 1.0
 },
 "ClassList": {
 "type": "list",
@@ -38,7 +38,7 @@
 },
 "Con": {
 "type": "byte",
-"value": 13
+"value": 15
 },
 "Conversation": {
 "type": "resref",
@@ -50,7 +50,7 @@
 },
 "CurrentHitPoints": {
 "type": "short",
-"value": 2
+"value": 6
 },
 "DecayTime": {
 "type": "dword",
@@ -66,7 +66,7 @@
 },
 "Dex": {
 "type": "byte",
-"value": 14
+"value": 15
 },
 "Disarmable": {
 "type": "byte",
@@ -79,7 +79,7 @@
 "__struct_id": 16384,
 "EquippedRes": {
 "type": "resref",
-"value": "nw_it_crewps015"
+"value": "nw_it_crewps005"
 }
 }
 ]
@@ -120,7 +120,7 @@
 },
 "HitPoints": {
 "type": "short",
-"value": 2
+"value": 6
 },
 "Int": {
 "type": "byte",
@@ -128,7 +128,7 @@
 },
 "Interruptable": {
 "type": "byte",
-"value": 1
+"value": 0
 },
 "IsImmortal": {
 "type": "byte",
@@ -154,15 +154,15 @@
 },
 "MaxHitPoints": {
 "type": "short",
-"value": 3
+"value": 8
 },
 "NaturalAC": {
 "type": "byte",
-"value": 0
+"value": 4
 },
 "NoPermDeath": {
 "type": "byte",
-"value": 1
+"value": 0
 },
 "PaletteID": {
 "type": "byte",
@@ -194,15 +194,15 @@
 },
 "ScriptAttacked": {
 "type": "resref",
-"value": "x2_def_attacked"
+"value": "nw_ch_ac5"
 },
 "ScriptDamaged": {
 "type": "resref",
-"value": "x2_def_ondamage"
+"value": "nw_ch_ac5"
 },
 "ScriptDeath": {
 "type": "resref",
-"value": "x2_def_ondeath"
+"value": "nw_ch_ac7"
 },
 "ScriptDialogue": {
 "type": "resref",
@@ -210,39 +210,39 @@
 },
 "ScriptDisturbed": {
 "type": "resref",
-"value": "x2_def_ondisturb"
+"value": "nw_ch_ac8"
 },
 "ScriptEndRound": {
 "type": "resref",
-"value": "x2_def_endcombat"
+"value": "nw_ch_ac3"
 },
 "ScriptHeartbeat": {
 "type": "resref",
-"value": "x2_def_heartbeat"
+"value": "nw_ch_ac1"
 },
 "ScriptOnBlocked": {
 "type": "resref",
-"value": "x2_def_onblocked"
+"value": "nw_ch_ace"
 },
 "ScriptOnNotice": {
 "type": "resref",
-"value": "x2_def_percept"
+"value": "nw_ch_ac2"
 },
 "ScriptRested": {
 "type": "resref",
-"value": "x2_def_rested"
+"value": "nw_ch_aca"
 },
 "ScriptSpawn": {
 "type": "resref",
-"value": "x2_def_spawn"
+"value": "nw_ch_acani9"
 },
 "ScriptSpellAt": {
 "type": "resref",
-"value": "x2_def_spellcast"
+"value": "nw_ch_acb"
 },
 "ScriptUserDefine": {
 "type": "resref",
-"value": "x2_def_userdef"
+"value": "nw_ch_acd"
 },
 "SkillList": {
 "type": "list",
@@ -515,7 +515,7 @@
 },
 "Str": {
 "type": "byte",
-"value": 20
+"value": 15
 },
 "Subrace": {
 "type": "cexostring",
@@ -551,6 +551,6 @@
 },
 "Wis": {
 "type": "byte",
-"value": 12
+"value": 14
 }
 }
