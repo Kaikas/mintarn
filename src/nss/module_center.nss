@@ -563,13 +563,12 @@ void main() {
 
     //Remove the familiar buff so it doesn't persist without familiar
     if(GetHasSpellEffect(916, oPc)){
-        effect eEff = GetFirstEffect(oTarget);
+        effect eEff = GetFirstEffect(oPc);
         while (GetIsEffectValid(eEff)){
             if (GetEffectSpellId(eEff) == 916){
-                RemoveEffect(oTarget,eEff);
-                }
+                RemoveEffect(oPc,eEff);
             }
-            eEff = GetNextEffect(oTarget);
+            eEff = GetNextEffect(oPc);
         }
     }
 
