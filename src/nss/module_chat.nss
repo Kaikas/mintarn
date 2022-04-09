@@ -1530,8 +1530,9 @@ int familiar(string sMessage) {
     oCreature = GetNextObjectInArea();
     }
     if (!GetIsInCombat(oPc) && GetName(oCreature) != sCompName) {
-      SummonFamiliar(oPc);
-      spawnFamiliar(oPc);
+      //SummonFamiliar(oPc);
+      //spawnFamiliar(oPc);
+      ExecuteScript("nw_s2_familiar", oPc);
       return 1;
     }
     else{

@@ -476,6 +476,7 @@ void main() {
     NWNX_Events_SubscribeEvent("NWNX_ON_TRAP_FLAG_BEFORE", "e_flagtrap");
     NWNX_Events_SubscribeEvent("NWNX_ON_USE_SKILL_BEFORE", "e_skill");
     NWNX_Events_SubscribeEvent("NWNX_ON_COMBAT_MODE_ON", "e_cmode");
+    NWNX_Events_SubscribeEvent("NWNX_ON_REMOVE_ASSOCIATE_BEFORE", "e_assoc");
 
     NWNX_Events_SubscribeEvent("NWNX_ON_PVP_ATTITUDE_CHANGE_BEFORE", "e_pvp");
     NWNX_Events_SubscribeEvent("NWNX_ON_START_COMBAT_ROUND_BEFORE", "e_combatround");

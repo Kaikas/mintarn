@@ -3,7 +3,6 @@
 void SetMaxHP(object oPlayer) {
     if(GetIsPC(oPlayer)){
     int nLevel, nCharacterLevel = GetHitDice(oPlayer);
-
     for(nLevel = 1; nLevel <= nCharacterLevel; nLevel++)
     {
         int nMaxHP = StringToInt(Get2DAString("classes", "HitDie", NWNX_Creature_GetClassByLevel(oPlayer, nLevel)));
@@ -13,11 +12,13 @@ void SetMaxHP(object oPlayer) {
         //} else {
         //    NWNX_Creature_SetMaxHitPointsByLevel(oPlayer, nLevel, nMaxHP);
         //}
-        NWNX_Creature_SetMaxHitPointsByLevel(oPlayer, nLevel, nMaxHP);
+        NWNX_Creature_SetMaxHitPointsByLevel(oPlayer, nLevel, nMaxHP/2);
+        SetCurrentHitPoints(oPlayer, GetMaxHitPoints(oPlayer));
     }
 } }
 
 void main() {
-    object oPc = GetPCLevellingUp();
-    SetMaxHP(oPc);
+    //Currently not needed - module setting enforces max HP
+    //object oPc = GetPCLevellingUp();
+    //SetMaxHP(oPc);
 }

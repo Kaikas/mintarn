@@ -559,6 +559,16 @@ void main() {
     SetLocalInt(oPc, "xp_token", nSeed);
     DelayCommand(RP_XP_DELAY, GiveXP(oPc, 1, 0, nSeed));
 
+    //Remove the familiar buff so it doesn't persist without familiar
+    if(GetHasSpellEffect(916, oPc)){
+        effect eEff = GetFirstEffect(oPc);
+        while (GetIsEffectValid(eEff)){
+            if (GetEffectSpellId(eEff) == 916){
+                RemoveEffect(oPc,eEff);
+            }
+            eEff = GetNextEffect(oPc);
+        }
+    }
 
     // Start nui
     //ExecuteScript("nui_dice", oPc);

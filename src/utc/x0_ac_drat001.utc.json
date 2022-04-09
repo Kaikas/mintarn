@@ -63,7 +63,9 @@
   "Description": {
     "id": 9166,
     "type": "cexolocstring",
-    "value": {}
+    "value": {
+      "4": "Many people dismiss the danger of the dire rat, but their bite can be deadly. Their cunning and sneaky nature can make them a good companion for a cunning and sneaky druid or ranger."
+    }
   },
   "Dex": {
     "type": "byte",
@@ -551,7 +553,7 @@
   },
   "WalkRate": {
     "type": "int",
-    "value": 5
+    "value": 7
   },
   "willbonus": {
     "type": "short",
