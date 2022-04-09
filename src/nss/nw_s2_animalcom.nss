@@ -23,7 +23,7 @@ void main()
 
     if(oCompanion != OBJECT_INVALID){
         //The druid’s class levels stack with levels of any other classes that are entitled to an animal companion for the purpose of determining the companion’s bonus. Except that the ranger’s effective druid level is one-half his ranger level
-        int iDruidBonus = (GetLevelByClass(CLASS_TYPE_DRUID, oPc) + (GetLevelByClass(CLASS_TYPE_RANGER, oPc)/2))/3;
+        int iDruidBonus = (GetLevelByClass(CLASS_TYPE_DRUID, oPc) + GetLevelByClass(44, oPc)  + (GetLevelByClass(CLASS_TYPE_RANGER, oPc) + GetLevelByClass(43, oPc)/2))/3;
 
         //Bonus HD: Extra eight-sided (d8) Hit Dice, each of which gains a Constitution modifier, as normal. An animal companion gains additional skill points, feats and ability scores for bonus HD as normal for advancing a monster’s Hit Dice.
         int i = 1;
@@ -68,6 +68,9 @@ void main()
            NWNX_Creature_AddFeat(oCompanion, FEAT_IMPROVED_EVASION); // Special power from level 15 druid
            NWNX_Creature_AddFeatByLevel(oCompanion, FEAT_BLIND_FIGHT, 12); // General feat for advancing to 12 HD
         }
+
+        SetCurrentHitPoints(oCompanion, GetMaxHitPoints(oCompanion));
+
 
     }
     else{SpeakString("No Animal Companion Found!");}
