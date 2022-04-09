@@ -14,7 +14,7 @@
 },
 "ChallengeRating": {
 "type": "float",
-"value": 1.0
+"value": 0.1667
 },
 "ClassList": {
 "type": "list",
@@ -38,7 +38,7 @@
 },
 "Con": {
 "type": "byte",
-"value": 15
+"value": 13
 },
 "Conversation": {
 "type": "resref",
@@ -50,7 +50,7 @@
 },
 "CurrentHitPoints": {
 "type": "short",
-"value": 6
+"value": 2
 },
 "DecayTime": {
 "type": "dword",
@@ -66,7 +66,7 @@
 },
 "Dex": {
 "type": "byte",
-"value": 15
+"value": 14
 },
 "Disarmable": {
 "type": "byte",
@@ -79,7 +79,7 @@
 "__struct_id": 16384,
 "EquippedRes": {
 "type": "resref",
-"value": "nw_it_crewps005"
+"value": "nw_it_crewps015"
 }
 }
 ]
@@ -120,7 +120,7 @@
 },
 "HitPoints": {
 "type": "short",
-"value": 6
+"value": 2
 },
 "Int": {
 "type": "byte",
@@ -128,7 +128,7 @@
 },
 "Interruptable": {
 "type": "byte",
-"value": 0
+"value": 1
 },
 "IsImmortal": {
 "type": "byte",
@@ -154,15 +154,15 @@
 },
 "MaxHitPoints": {
 "type": "short",
-"value": 8
+"value": 3
 },
 "NaturalAC": {
 "type": "byte",
-"value": 4
+"value": 0
 },
 "NoPermDeath": {
 "type": "byte",
-"value": 0
+"value": 1
 },
 "PaletteID": {
 "type": "byte",
@@ -515,7 +515,7 @@
 },
 "Str": {
 "type": "byte",
-"value": 15
+"value": 20
 },
 "Subrace": {
 "type": "cexostring",
@@ -551,6 +551,6 @@
 },
 "Wis": {
 "type": "byte",
-"value": 14
+"value": 12
 }
 }

@@ -14,7 +14,7 @@
 },
 "ChallengeRating": {
 "type": "float",
-"value": 0.5
+"value": 0.25
 },
 "ClassList": {
 "type": "list",
@@ -50,7 +50,7 @@
 },
 "CurrentHitPoints": {
 "type": "short",
-"value": 4
+"value": 1
 },
 "DecayTime": {
 "type": "dword",
@@ -66,7 +66,7 @@
 },
 "Dex": {
 "type": "byte",
-"value": 21
+"value": 17
 },
 "Disarmable": {
 "type": "byte",
@@ -79,7 +79,7 @@
 "__struct_id": 16384,
 "EquippedRes": {
 "type": "resref",
-"value": "nw_it_crewps002"
+"value": "nw_it_crewps003"
 }
 }
 ]
@@ -120,7 +120,7 @@
 },
 "HitPoints": {
 "type": "short",
-"value": 4
+"value": 1
 },
 "Int": {
 "type": "byte",
@@ -128,7 +128,7 @@
 },
 "Interruptable": {
 "type": "byte",
-"value": 0
+"value": 1
 },
 "IsImmortal": {
 "type": "byte",
@@ -154,15 +154,15 @@
 },
 "MaxHitPoints": {
 "type": "short",
-"value": 5
+"value": 2
 },
 "NaturalAC": {
 "type": "byte",
-"value": 3
+"value": 1
 },
 "NoPermDeath": {
 "type": "byte",
-"value": 0
+"value": 1
 },
 "PaletteID": {
 "type": "byte",
@@ -515,7 +515,7 @@
 },
 "Str": {
 "type": "byte",
-"value": 9
+"value": 12
 },
 "Subrace": {
 "type": "cexostring",
