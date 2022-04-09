@@ -27,7 +27,6 @@ void main()
         string sTag = GetTag(oFamiliar);
         int iTagLength = GetStringLength(sTag);
         sTag = GetSubString(sTag, 0, iTagLength-2);
-        SpeakString(sTag);
 
         effect eFamiliarBuff;
         int iClassLevels;
@@ -102,37 +101,37 @@ void main()
         }
 
 
-        if(sTag == "NW_FM_BAT"){
+        if(sTag == "nw_fm_bat"){
             eFamiliarBuff = EffectSkillIncrease(6,3);
         }
-        else if(sTag == "NW_FM_CAT"){
+        else if(sTag == "nw_fm_cat"){
             eFamiliarBuff = EffectSkillIncrease(8,3);
         }
-        else if(sTag == "NW_FM_HAWK"){
+        else if(sTag == "nw_fm_hawk"){
             eFamiliarBuff = EffectSkillIncrease(17,2);
         }
-        else if(sTag == "NW_FM_LIZ"){
+        else if(sTag == "nw_fm_liz"){
             eFamiliarBuff = EffectSkillIncrease(34,3);
         }
-        else if(sTag == "NW_FM_OWL"){
+        else if(sTag == "nw_fm_owl"){
             eFamiliarBuff = EffectSkillIncrease(17,2);
         }
-        else if(sTag == "NW_FM_RAT"){
+        else if(sTag == "nw_fm_rat"){
             eFamiliarBuff = EffectSavingThrowIncrease(SAVING_THROW_FORT,2);
         }
-        else if(sTag == "NW_FM_RAVE"){
+        else if(sTag == "nw_fm_rave"){
             eFamiliarBuff = EffectSkillIncrease(14,3);
         }
-        else if(sTag == "NW_FM_VIP"){
+        else if(sTag == "nw_fm_vip"){
             eFamiliarBuff = EffectSkillIncrease(23,3);
         }
-        else if(sTag == "NW_FM_FROG"){
+        else if(sTag == "nw_fm_frog"){
             eFamiliarBuff = EffectTemporaryHitpoints(3);
         }
-        else if(sTag == "NW_FM_WEAS"){
+        else if(sTag == "nw_fm_weas"){
             eFamiliarBuff = EffectSavingThrowIncrease(SAVING_THROW_REFLEX,2);
         }
-        else if(sTag == "NW_FM_FERR"){
+        else if(sTag == "nw_fm_ferr"){
             eFamiliarBuff = EffectSavingThrowIncrease(SAVING_THROW_REFLEX,2);
         }
         else {SpeakString("Familiar not implemented:" + sTag );}
