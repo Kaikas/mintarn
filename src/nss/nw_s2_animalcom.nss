@@ -34,7 +34,7 @@ void main()
         NWNX_Creature_SetSkillRank(oCompanion, SKILL_LISTEN, 3+iDruidBonus);
         NWNX_Creature_SetSkillRank(oCompanion, SKILL_SPOT, 3+iDruidBonus);
         NWNX_Creature_ModifyRawAbilityScore(oCompanion, ABILITY_CONSTITUTION, (iDruidBonus/2)-(iDruidBonus/4));
-        if (((GetLevelByClass(CLASS_TYPE_DRUID, oPc) + (GetLevelByClass(CLASS_TYPE_RANGER, oPc)) > 3) && (iDruidBonus < 1 ))) {
+        if (((GetLevelByClass(CLASS_TYPE_DRUID, oPc) + (GetLevelByClass(CLASS_TYPE_RANGER, oPc)+GetLevelByClass(43, oPc)) > 3) && (iDruidBonus < 1 ))) {
            NWNX_Creature_ModifyRawAbilityScore(oCompanion, ABILITY_STRENGTH, -6);
         }
 
