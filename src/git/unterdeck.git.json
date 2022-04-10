@@ -12446,7 +12446,7 @@
         },
         "ScriptOnEnter": {
           "type": "resref",
-          "value": "trigger_unterdec"
+          "value": "trigger_message"
         },
         "ScriptOnExit": {
           "type": "resref",

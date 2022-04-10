@@ -16361,7 +16361,7 @@
         },
         "ScriptOnEnter": {
           "type": "resref",
-          "value": "trigger_lederer2"
+          "value": ""
         },
         "ScriptOnExit": {
           "type": "resref",

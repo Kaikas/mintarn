@@ -29662,7 +29662,7 @@
         },
         "ScriptOnEnter": {
           "type": "resref",
-          "value": "trigger_dungeon3"
+          "value": ""
         },
         "ScriptOnExit": {
           "type": "resref",
@@ -29865,7 +29865,7 @@
         },
         "ScriptOnEnter": {
           "type": "resref",
-          "value": "trigger_dungeon1"
+          "value": ""
         },
         "ScriptOnExit": {
           "type": "resref",
@@ -30068,7 +30068,7 @@
         },
         "ScriptOnEnter": {
           "type": "resref",
-          "value": "trigger_dungeon2"
+          "value": ""
         },
         "ScriptOnExit": {
           "type": "resref",

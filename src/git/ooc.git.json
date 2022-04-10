@@ -11366,7 +11366,7 @@
         },
         "ScriptOnEnter": {
           "type": "resref",
-          "value": "trigger_ooc"
+          "value": ""
         },
         "ScriptOnExit": {
           "type": "resref",

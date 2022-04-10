@@ -139,7 +139,7 @@
               },
               "Cost": {
                 "type": "dword",
-                "value": 80
+                "value": 0
               },
               "Cursed": {
                 "type": "byte",
@@ -830,7 +830,7 @@
               },
               "Cost": {
                 "type": "dword",
-                "value": 80
+                "value": 0
               },
               "Cursed": {
                 "type": "byte",
@@ -1521,7 +1521,7 @@
               },
               "Cost": {
                 "type": "dword",
-                "value": 80
+                "value": 0
               },
               "Cursed": {
                 "type": "byte",
@@ -30460,7 +30460,7 @@
         },
         "ScriptOnEnter": {
           "type": "resref",
-          "value": "trigger_untersch"
+          "value": ""
         },
         "ScriptOnExit": {
           "type": "resref",
