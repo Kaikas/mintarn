@@ -2179,7 +2179,6 @@ void main() {
         helpSkills(sMessage) ||
         openDowntime(sMessage) ||
         ELTools(sMessage) ||
-        queryDatabase(sMessage) ||
         RKofPlayer (sMessage) ||
         helpMasks(sMessage)) {
         } else {
