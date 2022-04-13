@@ -303,7 +303,8 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Wenn das nicht meine Lieferung ist. <CUSTOM101>*stellt er erfreuten Tones fest und verharrt einen Moment, den er euch eingehend betrachtet.*<CUSTOM100>\nIhr seht mir ganz danach aus, als wäret ihr neu in der Stadt. Da hilft sicher jede Kleinigkeit. Im Tausch gegen das Rauchkraut kann ich euch ein paar Tränke bieten. Wartet hier. Ich hole sie schnell.\n<CUSTOM101>*einen Augenblick später kommt der Mann mit ein paar kleinen Phiolen zurück und hält diese anbietend hin, während er die andere Hand ausstreckt, um das Packet in Empfang zu nehmen*<CUSTOM100>\n"
+            "0": "Wenn das nicht meine Lieferung ist. <CUSTOM101>*stellt er erfreuten Tones fest und verharrt einen Moment, den er euch eingehend betrachtet.*<CUSTOM100>\nIhr seht mir ganz danach aus, als wäret ihr neu in der Stadt. Da hilft sicher jede Kleinigkeit. Im Tausch gegen das Rauchkraut kann ich euch ein paar Tränke bieten. Wartet hier. Ich hole sie schnell.\n<CUSTOM101>*einen Augenblick später kommt der Mann mit ein paar kleinen Phiolen zurück und hält diese anbietend hin, während er die andere Hand ausstreckt, um das Packet in Empfang zu nehmen*<CUSTOM100>\n",
+            "4": "Wenn das nicht meine Lieferung ist. <CUSTOM101>*stellt er erfreuten Tones fest und verharrt einen Moment, den er euch eingehend betrachtet.*<CUSTOM100>\nIhr seht mir ganz danach aus, als wäret ihr neu in der Stadt. Da hilft sicher jede Kleinigkeit. Im Tausch gegen das Rauchkraut kann ich euch ein paar Tränke bieten.\n<CUSTOM101>*er hebt den Deckel des Podiums an dem er steht und bietet euch daraus fünf Ampullen an, während er die andere Hand ausstreckt, um das Packet in Empfang zu nehmen*<CUSTOM100>\n"
           }
         }
       },
@@ -372,7 +373,8 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": " <CUSTOM101>*mit einem frommen Gruß verabschiedet sich der Priester und macht sich auf, um den Tabak zu verstauen*<CUSTOM101>"
+            "0": " <CUSTOM101>*mit einem frommen Gruß verabschiedet sich der Priester und macht sich auf, um den Tabak zu verstauen*<CUSTOM101>",
+            "4": " <CUSTOM101>*mit einem frommen Gruß verabschiedet sich der Priester und verstaut den Tabak im Podium*<CUSTOM101>"
           }
         }
       }
@@ -380,7 +382,7 @@
   },
   "NumWords": {
     "type": "dword",
-    "value": 196
+    "value": 192
   },
   "PreventZoomIn": {
     "type": "byte",
@@ -886,6 +888,21 @@
     "value": [
       {
         "__struct_id": 0,
+        "Active": {
+          "type": "resref",
+          "value": ""
+        },
+        "ConditionParams": {
+          "type": "list",
+          "value": []
+        },
+        "Index": {
+          "type": "dword",
+          "value": 7
+        }
+      },
+      {
+        "__struct_id": 1,
         "Active": {
           "type": "resref",
           "value": ""

@@ -35,17 +35,17 @@ void main() {
         if (count == 0) {
             RemoveJournalQuestEntry("quests", oPc, FALSE, FALSE);
         }
-        CreateItemOnObject(GetScriptParam("item"), oPc, 1);
-        CreateItemOnObject(GetScriptParam("sw_ha_spitzhacke"), oPc, 1);
-        AddJournalQuestEntry("schmied", 1, oPc, FALSE, FALSE, FALSE);
-        sQuery = "INSERT INTO QuestStatus (name, charname, quest, stage) VALUES (?, ?, ?, ?)";
-        if (NWNX_SQL_PrepareQuery(sQuery)) {
-            NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
-            NWNX_SQL_PreparedString(1, GetName(oPc));
-            NWNX_SQL_PreparedString(2, "schmied_intro");
-            NWNX_SQL_PreparedString(3, "0");
-            NWNX_SQL_ExecutePreparedQuery();
-        }
+        CreateItemOnObject("sw_we_silber", oPc, 1);
+        //We disabled the collection quests
+        //AddJournalQuestEntry("schmied", 1, oPc, FALSE, FALSE, FALSE);
+        //sQuery = "INSERT INTO QuestStatus (name, charname, quest, stage) VALUES (?, ?, ?, ?)";
+        //if (NWNX_SQL_PrepareQuery(sQuery)) {
+        //    NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
+        //    NWNX_SQL_PreparedString(1, GetName(oPc));
+        //    NWNX_SQL_PreparedString(2, "schmied_intro");
+        //    NWNX_SQL_PreparedString(3, "0");
+        //    NWNX_SQL_ExecutePreparedQuery();
+        //}
     }
 
     // Schreiner
@@ -78,16 +78,17 @@ void main() {
         if (count == 0) {
             RemoveJournalQuestEntry("quests", oPc, FALSE, FALSE);
         }
-        CreateItemOnObject(GetScriptParam("item"), oPc, 1);
-        AddJournalQuestEntry("schreiner", 1, oPc, FALSE, FALSE, FALSE);
-        sQuery = "INSERT INTO QuestStatus (name, charname, quest, stage) VALUES (?, ?, ?, ?)";
-        if (NWNX_SQL_PrepareQuery(sQuery)) {
-            NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
-            NWNX_SQL_PreparedString(1, GetName(oPc));
-            NWNX_SQL_PreparedString(2, "schreiner_intro");
-            NWNX_SQL_PreparedString(3, "0");
-            NWNX_SQL_ExecutePreparedQuery();
-        }
+        CreateItemOnObject("sw_we_silber", oPc, 1);
+        //We disabled the collection quests
+        //AddJournalQuestEntry("schreiner", 1, oPc, FALSE, FALSE, FALSE);
+        //sQuery = "INSERT INTO QuestStatus (name, charname, quest, stage) VALUES (?, ?, ?, ?)";
+        //if (NWNX_SQL_PrepareQuery(sQuery)) {
+        //    NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
+        //    NWNX_SQL_PreparedString(1, GetName(oPc));
+        //    NWNX_SQL_PreparedString(2, "schreiner_intro");
+        //    NWNX_SQL_PreparedString(3, "0");
+        //    NWNX_SQL_ExecutePreparedQuery();
+        //}
     }
 
     // Lederer
@@ -120,16 +121,18 @@ void main() {
         if (count == 0) {
             RemoveJournalQuestEntry("quests", oPc, FALSE, FALSE);
         }
+        CreateItemOnObject("sw_we_silber", oPc, 1);
+        //We disabled the collection quests
         //CreateItemOnObject("sw_re_fackel", oPc, 1);
-        AddJournalQuestEntry("lederer", 1, oPc, FALSE, FALSE, FALSE);
-        sQuery = "INSERT INTO QuestStatus (name, charname, quest, stage) VALUES (?, ?, ?, ?)";
-        if (NWNX_SQL_PrepareQuery(sQuery)) {
-            NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
-            NWNX_SQL_PreparedString(1, GetName(oPc));
-            NWNX_SQL_PreparedString(2, "lederer_intro");
-            NWNX_SQL_PreparedString(3, "0");
-            NWNX_SQL_ExecutePreparedQuery();
-        }
+        //AddJournalQuestEntry("lederer", 1, oPc, FALSE, FALSE, FALSE);
+        //sQuery = "INSERT INTO QuestStatus (name, charname, quest, stage) VALUES (?, ?, ?, ?)";
+        //if (NWNX_SQL_PrepareQuery(sQuery)) {
+        //    NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
+        //    NWNX_SQL_PreparedString(1, GetName(oPc));
+        //    NWNX_SQL_PreparedString(2, "lederer_intro");
+        //    NWNX_SQL_PreparedString(3, "0");
+        //    NWNX_SQL_ExecutePreparedQuery();
+        //}
     }
     // Tempel
     if (GetScriptParam("item") == "sw_we_tempel") {
@@ -163,14 +166,14 @@ void main() {
         }
         //CreateItemOnObject(GetScriptParam("item"), oPc, 1);
         //AddJournalQuestEntry("tempel", 1, oPc, FALSE, FALSE, FALSE);
-        sQuery = "INSERT INTO QuestStatus (name, charname, quest, stage) VALUES (?, ?, ?, ?)";
-        if (NWNX_SQL_PrepareQuery(sQuery)) {
-            NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
-            NWNX_SQL_PreparedString(1, GetName(oPc));
-            NWNX_SQL_PreparedString(2, "tempel_intro");
-            NWNX_SQL_PreparedString(3, "0");
-            NWNX_SQL_ExecutePreparedQuery();
-        }
+        //sQuery = "INSERT INTO QuestStatus (name, charname, quest, stage) VALUES (?, ?, ?, ?)";
+        //if (NWNX_SQL_PrepareQuery(sQuery)) {
+        //    NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
+        //    NWNX_SQL_PreparedString(1, GetName(oPc));
+        //    NWNX_SQL_PreparedString(2, "tempel_intro");
+        //    NWNX_SQL_PreparedString(3, "0");
+        //    NWNX_SQL_ExecutePreparedQuery();
+        //}
 
         // Give potions
         CreateItemOnObject("sw_tr_kleineheil", oPc);
