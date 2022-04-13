@@ -35,7 +35,8 @@ void main() {
         if (count == 0) {
             RemoveJournalQuestEntry("quests", oPc, FALSE, FALSE);
         }
-        CreateItemOnObject("sw_we_silber", oPc, 1);
+        GiveXPToCreature(oPc, 1000);
+        MONEY_GiveCoinMoneyWorth(50, oPc);
         //We disabled the collection quests
         //AddJournalQuestEntry("schmied", 1, oPc, FALSE, FALSE, FALSE);
         //sQuery = "INSERT INTO QuestStatus (name, charname, quest, stage) VALUES (?, ?, ?, ?)";
@@ -78,7 +79,8 @@ void main() {
         if (count == 0) {
             RemoveJournalQuestEntry("quests", oPc, FALSE, FALSE);
         }
-        CreateItemOnObject("sw_we_silber", oPc, 1);
+        GiveXPToCreature(oPc, 1000);
+        MONEY_GiveCoinMoneyWorth(50, oPc);
         //We disabled the collection quests
         //AddJournalQuestEntry("schreiner", 1, oPc, FALSE, FALSE, FALSE);
         //sQuery = "INSERT INTO QuestStatus (name, charname, quest, stage) VALUES (?, ?, ?, ?)";
@@ -121,7 +123,8 @@ void main() {
         if (count == 0) {
             RemoveJournalQuestEntry("quests", oPc, FALSE, FALSE);
         }
-        CreateItemOnObject("sw_we_silber", oPc, 1);
+        GiveXPToCreature(oPc, 1000);
+        MONEY_GiveCoinMoneyWorth(50, oPc);
         //We disabled the collection quests
         //CreateItemOnObject("sw_re_fackel", oPc, 1);
         //AddJournalQuestEntry("lederer", 1, oPc, FALSE, FALSE, FALSE);
