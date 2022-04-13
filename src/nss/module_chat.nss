@@ -46,41 +46,6 @@ string sQuery;
 int iBonus;
 int iRand = Random(20) + 1;
 
-int queryDatabase(string sMessage) {
-  if (GetIsDM(oPc) && GetSubString(sMessage, 0, 8) == "/queryDB") {
-    SetPCChatVolume(TALKVOLUME_SILENT_TALK);
-    string sQuery = GetStringRight(sMessage, GetStringLength(sMessage)-9);
-    SendMessageToPC(oPc, sQuery);
-    if (NWNX_SQL_PrepareQuery(sQuery)) {
-        NWNX_SQL_ExecutePreparedQuery();
-
-        string s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,sReply;
-
-        while (NWNX_SQL_ReadyToReadNextRow()) {
-            NWNX_SQL_ReadNextRow();
-            s0 =(NWNX_SQL_ReadDataInActiveRow(0));
-            s1 =(NWNX_SQL_ReadDataInActiveRow(1));
-            s2 =(NWNX_SQL_ReadDataInActiveRow(2));
-            s3 =(NWNX_SQL_ReadDataInActiveRow(3));
-            s4 =(NWNX_SQL_ReadDataInActiveRow(4));
-            s5 =(NWNX_SQL_ReadDataInActiveRow(5));
-            s6 =(NWNX_SQL_ReadDataInActiveRow(6));
-            s7 =(NWNX_SQL_ReadDataInActiveRow(7));
-            s8 =(NWNX_SQL_ReadDataInActiveRow(8));
-            s9 =(NWNX_SQL_ReadDataInActiveRow(9));
-            s10 =(NWNX_SQL_ReadDataInActiveRow(10));
-            sReply = "Response: " + s0 + " | "
-            + s1 + " | " + s2 + " | " + s3 + " | "
-            + s4 + " | " + s5 + " | " + s6 + " | "
-            + s7 + " | " + s8 + " | " + s9 + " | " + s10 + " | ";
-            SendMessageToPC(oPc, sReply);
-        }
-    }
-    return 1;
-  }
-  return 0;
-}
-
 // Setzt einen Würfel wurf zusammen
 string printRoll(string sValue, int iRand, int iBonus) {
   return StringToRGBString("[" +
