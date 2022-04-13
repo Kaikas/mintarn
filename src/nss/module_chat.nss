@@ -49,6 +49,10 @@ int iRand = Random(20) + 1;
 int queryDatabase(string sMessage) {
   if (GetIsDM(oPc) && GetSubString(sMessage, 0, 8) == "/queryDB") {
     SetPCChatVolume(TALKVOLUME_SILENT_TALK);
+    if(FindSubString(sMessage, "DROP") != -1){
+        SendMessageToPC(oPc, "No dropping, you insane idiot.");
+        return 1;
+    }
     string sQuery = GetStringRight(sMessage, GetStringLength(sMessage)-9);
     SendMessageToPC(oPc, sQuery);
     if (NWNX_SQL_PrepareQuery(sQuery)) {
