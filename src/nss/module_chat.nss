@@ -1624,20 +1624,40 @@ int phenotype(string sMessage, object oTarget) {
   return 0;
 }
 
-int afk(string sMessage) {
+int vfx_afk(string sMessage) {
   if (sMessage == "/afk") {
-    if (GetLocalInt(oPc, "afk") == 1) {
-      SetLocalInt(oPc, "afk", 0);
+    if (GetLocalInt(oPc, "vfx_afk_playing") == 1) {
+      SetLocalInt(oPc, "vfx_afk_playing", 0);
       effect eEffect = GetFirstEffect(oPc);
       while(GetIsEffectValid(eEffect)) {
-        if(GetEffectTag(eEffect) == "eff_afk") {
+        if(GetEffectTag(eEffect) == "vfx_afk") {
           RemoveEffect(oPc, eEffect);
         }
         eEffect = GetNextEffect(oPc);
       }
     } else {
-      SetLocalInt(oPc, "afk", 1);
-      ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(EffectVisualEffect(8192), "eff_afk"), oPc);
+      SetLocalInt(oPc, "vfx_afk_playing", 1);
+      ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(EffectVisualEffect(8192), "vfx_afk"), oPc);
+    }
+    return 1;
+  }
+  return 0;
+}
+
+int vfx_musik(string sMessage) {
+  if (sMessage == "/musik") {
+    if (GetLocalInt(oPc, "vfx_musik_playing") == 1) {
+      SetLocalInt(oPc, "vfx_musik_playing", 0);
+      effect eEffect = GetFirstEffect(oPc);
+      while(GetIsEffectValid(eEffect)) {
+        if(GetEffectTag(eEffect) == "vfx_musik") {
+          RemoveEffect(oPc, eEffect);
+        }
+        eEffect = GetNextEffect(oPc);
+      }
+    } else {
+      SetLocalInt(oPc, "vfx_musik_playing", 1);
+      ApplyEffectToObject(DURATION_TYPE_PERMANENT, TagEffect(EffectVisualEffect(8192), "vfx_musik_playing"), oPc);
     }
     return 1;
   }
@@ -2138,7 +2158,8 @@ void main() {
         token(sMessage) ||
         hindurchzwaengen(sMessage) ||
         phenotype(sMessage, oPc) ||
-        afk(sMessage) ||
+        vfx_afk(sMessage) ||
+        vfx_musik(sMessage) ||
         ghost(sMessage) ||
         climb(sMessage) ||
         backpack(sMessage) ||
