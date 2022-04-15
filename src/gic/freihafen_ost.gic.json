@@ -23281,13 +23281,6 @@
           "type": "cexostring",
           "value": "Ballista"
         }
-      },
-      {
-        "__struct_id": 9,
-        "Comment": {
-          "type": "cexostring",
-          "value": ""
-        }
       }
     ]
   },
