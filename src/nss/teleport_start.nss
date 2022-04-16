@@ -49,7 +49,6 @@ void main() {
         if (NWNX_SQL_ReadDataInActiveRow(7) != "" && NWNX_SQL_ReadDataInActiveRow(7) != "OOC" && GetObjectByTag(NWNX_SQL_ReadDataInActiveRow(7)) != OBJECT_INVALID) {
             vector vPosition = Vector(StringToFloat(NWNX_SQL_ReadDataInActiveRow(4)), StringToFloat(NWNX_SQL_ReadDataInActiveRow(5)), StringToFloat(NWNX_SQL_ReadDataInActiveRow(6)));
             location locTarget = Location(GetObjectByTag(NWNX_SQL_ReadDataInActiveRow(7)), vPosition, StringToFloat(NWNX_SQL_ReadDataInActiveRow(3)));
-            SetDescription(oPc, NWNX_SQL_ReadDataInActiveRow(14));
             DelayCommand(1.0, AssignCommand(oPc, JumpToLocation(locTarget)));
         } else {
             location lStart = GetLocation(GetObjectByTag("WP_START_AUF_SEE"));
