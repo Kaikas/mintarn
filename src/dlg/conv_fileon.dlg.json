@@ -122,8 +122,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Was darf es für euch sein? Ein Getränk oder ein Zimmer oder gleich beides? Oder habt ihr eine Lieferung für mich? <CUSTOM101>*fragt der Wirt und schaut euch dabei mit einem fragenden Blick an, eure Ausrüstung und das Gepäck genau inspizierend*<CUSTOM100>",
-            "4": "<CUSTOM101>*der gealterte Wirt mustert euch neugierig und lächelt euch freundlich entgegen*<CUSTOM100>Willkommen im rettenden Ufer! Was darf es für euch sein? Ein Getränk, ein Zimmer oder gleich beides? Oder habt ihr eine Lieferung für mich? <CUSTOM101>*für sein sichtbares Alter wirkt er noch recht munter, wie er euch da aufmerksam entgegenblickt*<CUSTOM100>"
+            "0": "<CUSTOM101>*der gealterte Wirt mustert euch neugierig und lächelt euch freundlich entgegen*<CUSTOM100>Willkommen im rettenden Ufer! Was darf es für euch sein? Ein Getränk, ein Zimmer oder gleich beides? Oder habt ihr eine Lieferung für mich? <CUSTOM101>*für sein sichtbares Alter wirkt er noch recht munter, wie er euch da aufmerksam entgegenblickt*<CUSTOM100>",
           }
         }
       },

@@ -203,8 +203,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "<CUSTOM101>*Als ihr an den Schmied herantretet, schaut er mit einem grimmigen Gesichtsausdruck zu euch auf, der sich sofort erhellt, als sein Blick auf die Schatulle fällt*<CUSTOM100>\nIst das eine Lieferung für mich? <CUSTOM101>*fragt er neugierig und mit tiefer brummiger Stimme*<CUSTOM100>\nNa, wenn der Wirt euch eingespannt hat, dann könnt ihr auch gleich etwas für mich erledigen. Nehmt euch die Spitzhacke da aus der Ecke und sammelt etwas Eisenerz für mich. Die Spitzhacke dort sollte dafür ausreichen. Stellt einfach den Tabak daneben ab. Nur nicht zu nah am Feuer!\n<CUSTOM101>*er deutet dabei auf eine Spitzhacke, die sich zwischen einigen Rohlingen Werkzeugen mehrere Schritte vom Feuer entfernt gegen die Wand gelehnt auf euch wartet*<CUSTOM100>\nWenn ihr nichts findet oder das Sammeln von Metallen nichts für euch ist, dann bringt mir die Hacke ja zurück <CUSTOM101>*wirft er brummigen Tones völlig trocken hinterher*<CUSTOM100>",
-            "4": "<CUSTOM101>*Als ihr an den Schmied herantretet, schaut er mit einem grimmigen Gesichtsausdruck zu euch auf, der sich sofort erhellt, als sein Blick auf die Schatulle fällt*<CUSTOM100>\nIst das eine Lieferung für mich? <CUSTOM101>*fragt er neugierig und mit tiefer brummiger Stimme*<CUSTOM100>\nStellt einfach den die Schachtel da drüben ab, neben der Esse. Nur nicht zu nah am Feuer!\nUnd hier ist die Bezahlung.\n<CUSTOM101>*dabei drückt er euch eine Silbermünze in die Hand*<CUSTOM100>"
+            "0": "<CUSTOM101>*Als ihr an den Schmied herantretet, schaut er mit einem grimmigen Gesichtsausdruck zu euch auf, der sich sofort erhellt, als sein Blick auf die Schatulle fällt*<CUSTOM100>\nIst das eine Lieferung für mich? <CUSTOM101>*fragt er neugierig und mit tiefer brummiger Stimme*<CUSTOM100>\nStellt einfach den die Schachtel da drüben ab, neben der Esse. Nur nicht zu nah am Feuer!\nUnd hier ist die Bezahlung.\n<CUSTOM101>*dabei drückt er euch eine Silbermünze in die Hand*<CUSTOM100>",
           }
         }
       }
@@ -384,8 +383,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "<CUSTOM101>*Ihr nehmt die Spitzhacke und verabschiedet euch von dem Schmied*<CUSTOM100>",
-            "4": "<CUSTOM101>*Ihr nehmt eure Bezahlung an euch und verabschiedet euch von dem Schmied*<CUSTOM100>"
+            "0": "<CUSTOM101>*Ihr nehmt eure Bezahlung an euch und verabschiedet euch von dem Schmied*<CUSTOM100>",
           }
         }
       },

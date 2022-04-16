@@ -215,8 +215,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Ist das Paket ist wohl für mich? Meine Tabaklieferung nehme ich an? Als kleines Dankeschön nehmt doch diese Axt hier und wenn dir damit etwas Birkenholz gesammelt habt, dann kehrt zu mir zurück und ich werde euch dafür angemessen entlohnen.\n<CUSTOM101>*Sie tritt an einen Holzscheit heran, in dem eine simple Axt steckt und überreicht sie euch*<CUSTOM101>\nWenn ihr nichts von mir kaufen wollt, dann macht bitte Platz. Ich erwarte eine Lieferung und wie ihr seht ist es hier ziemlich eng.",
-            "4": "Ist das Paket ist wohl für mich? Meine Tabaklieferung nehme ich an? Sehr gut, auf die warte ich schon ewig!\n<CUSTOM101>*Sie zählt aus einer Geldkatze ein paar Münzen raus und überreicht sie euch*<CUSTOM101>\nSo. Wenn ihr nichts von mir kaufen wollt, dann macht bitte Platz. Ich erwarte eine Lieferung und wie ihr seht ist es hier ziemlich eng."
+            "0": "Ist das Paket ist wohl für mich? Meine Tabaklieferung nehme ich an? Sehr gut, auf die warte ich schon ewig!\n<CUSTOM101>*Sie zählt aus einer Geldkatze ein paar Münzen raus und überreicht sie euch*<CUSTOM101>\nSo. Wenn ihr nichts von mir kaufen wollt, dann macht bitte Platz. Ich erwarte eine Lieferung und wie ihr seht ist es hier ziemlich eng.",
           }
         }
       }
@@ -384,8 +383,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "<CUSTOM101>*Ihr nehmt die Axt entgegen, schaut euch noch einmal kurz um und verabschiedet euch, bevor ihr Platz macht für die Lieferung*<CUSTOM100>",
-            "4": "<CUSTOM101>*Ihr nehmt die Münze entgegen, schaut euch noch einmal kurz um und verabschiedet euch, bevor ihr Platz macht für die Lieferung*<CUSTOM100>"
+            "0": "<CUSTOM101>*Ihr nehmt die Münze entgegen, schaut euch noch einmal kurz um und verabschiedet euch, bevor ihr Platz macht für die Lieferung*<CUSTOM100>",
           }
         }
       },
