@@ -382,7 +382,7 @@
   },
   "NumWords": {
     "type": "dword",
-    "value": 192
+    "value": 187
   },
   "PreventZoomIn": {
     "type": "byte",
@@ -823,63 +823,6 @@
             "0": "<CUSTOM101>*ihr verabschiedet euch und geht ebenfalls eurer Wege*<CUSTOM100>"
           }
         }
-      },
-      {
-        "__struct_id": 7,
-        "ActionParams": {
-          "type": "list",
-          "value": [
-            {
-              "__struct_id": 0,
-              "Key": {
-                "type": "cexostring",
-                "value": "store"
-              },
-              "Value": {
-                "type": "cexostring",
-                "value": "STORE_Tempel"
-              }
-            }
-          ]
-        },
-        "Animation": {
-          "type": "dword",
-          "value": 0
-        },
-        "AnimLoop": {
-          "type": "byte",
-          "value": 1
-        },
-        "Comment": {
-          "type": "cexostring",
-          "value": ""
-        },
-        "Delay": {
-          "type": "dword",
-          "value": 0
-        },
-        "EntriesList": {
-          "type": "list",
-          "value": []
-        },
-        "Quest": {
-          "type": "cexostring",
-          "value": ""
-        },
-        "Script": {
-          "type": "resref",
-          "value": "store_start"
-        },
-        "Sound": {
-          "type": "resref",
-          "value": ""
-        },
-        "Text": {
-          "type": "cexolocstring",
-          "value": {
-            "0": "Lasst mich eure Waren sehen."
-          }
-        }
       }
     ]
   },
@@ -888,21 +831,6 @@
     "value": [
       {
         "__struct_id": 0,
-        "Active": {
-          "type": "resref",
-          "value": ""
-        },
-        "ConditionParams": {
-          "type": "list",
-          "value": []
-        },
-        "Index": {
-          "type": "dword",
-          "value": 7
-        }
-      },
-      {
-        "__struct_id": 1,
         "Active": {
           "type": "resref",
           "value": ""
