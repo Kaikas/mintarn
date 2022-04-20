@@ -2711,6 +2711,25 @@
                     "__struct_id": 0,
                     "CR": {
                       "type": "float",
+                      "value": 6.0
+                    },
+                    "FACTION": {
+                      "type": "cexostring",
+                      "value": "Commoner"
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Leonora"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "npc_oktavia"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "CR": {
+                      "type": "float",
                       "value": 10.0
                     },
                     "FACTION": {
@@ -2743,25 +2762,6 @@
                     "RESREF": {
                       "type": "resref",
                       "value": "navardellin"
-                    }
-                  },
-                  {
-                    "__struct_id": 0,
-                    "CR": {
-                      "type": "float",
-                      "value": 5.0
-                    },
-                    "FACTION": {
-                      "type": "cexostring",
-                      "value": "Commoner"
-                    },
-                    "NAME": {
-                      "type": "cexostring",
-                      "value": "Oktavia"
-                    },
-                    "RESREF": {
-                      "type": "resref",
-                      "value": "npc_oktavia"
                     }
                   },
                   {
@@ -2876,6 +2876,25 @@
                     "RESREF": {
                       "type": "resref",
                       "value": "vegim"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "CR": {
+                      "type": "float",
+                      "value": 5.0
+                    },
+                    "FACTION": {
+                      "type": "cexostring",
+                      "value": "Commoner"
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Waldblüte"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "waldbluete"
                     }
                   },
                   {

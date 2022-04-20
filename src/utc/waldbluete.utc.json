@@ -2,7 +2,7 @@
   "__data_type": "UTC ",
   "Appearance_Type": {
     "type": "word",
-    "value": 236
+    "value": 51
   },
   "BodyBag": {
     "type": "byte",
@@ -10,11 +10,11 @@
   },
   "Cha": {
     "type": "byte",
-    "value": 26
+    "value": 19
   },
   "ChallengeRating": {
     "type": "float",
-    "value": 6.0
+    "value": 5.0
   },
   "ClassList": {
     "type": "list",
@@ -27,7 +27,7 @@
         },
         "ClassLevel": {
           "type": "short",
-          "value": 8
+          "value": 6
         }
       }
     ]
@@ -38,7 +38,7 @@
   },
   "Con": {
     "type": "byte",
-    "value": 14
+    "value": 12
   },
   "Conversation": {
     "type": "resref",
@@ -50,7 +50,7 @@
   },
   "CurrentHitPoints": {
     "type": "short",
-    "value": 37
+    "value": 34
   },
   "DecayTime": {
     "type": "dword",
@@ -63,17 +63,16 @@
   "Description": {
     "type": "cexolocstring",
     "value": {
-      "0": "Eine Frau die kein Problem damit zu haben scheint ihren Körper zur Schau zu stellen - man kann sie mit Fug und recht als schön bezeichnen, mit symetrischen Zügen und gefälliger Körperform. Ihre dezent rötlichen Lippen kann man durchaus als sinnlich bezeichnen.",
-      "4": "Eine äusserst gepflegt auftretende Frau in Gewändern die dem Adel würdig sind.Man kann sie mit Fug und recht als schön bezeichnen, mit symetrischen Zügen und gefälliger Körperform, akzentuiert durch eng anliegende Kleidung die ihre Kurven gut betont.Ihre dezent rötlichen Lippen könnte man durchaus als sinnlich bezeichnen."
+      "0": "Eine Nymphe, wie man sie sich vorstellt - äusserlich am ehesten eine Elfe, doch auch mit einer ausserweltlichen Schönheit der ihre Feennatur verrät."
     }
   },
   "Dex": {
     "type": "byte",
-    "value": 14
+    "value": 17
   },
   "Disarmable": {
     "type": "byte",
-    "value": 0
+    "value": 1
   },
   "Equip_ItemList": {
     "type": "list",
@@ -90,14 +89,21 @@
         "__struct_id": 1,
         "Feat": {
           "type": "word",
-          "value": 1089
+          "value": 7
         }
       },
       {
         "__struct_id": 1,
         "Feat": {
           "type": "word",
-          "value": 46
+          "value": 10
+        }
+      },
+      {
+        "__struct_id": 1,
+        "Feat": {
+          "type": "word",
+          "value": 42
         }
       }
     ]
@@ -105,7 +111,7 @@
   "FirstName": {
     "type": "cexolocstring",
     "value": {
-      "0": "Leonora"
+      "0": "Waldblüte"
     }
   },
   "fortbonus": {
@@ -122,11 +128,11 @@
   },
   "HitPoints": {
     "type": "short",
-    "value": 37
+    "value": 34
   },
   "Int": {
     "type": "byte",
-    "value": 12
+    "value": 16
   },
   "Interruptable": {
     "type": "byte",
@@ -134,7 +140,7 @@
   },
   "IsImmortal": {
     "type": "byte",
-    "value": 1
+    "value": 0
   },
   "IsPC": {
     "type": "byte",
@@ -143,12 +149,12 @@
   "LastName": {
     "type": "cexolocstring",
     "value": {
-      "0": "Vogelsang"
+      "0": ""
     }
   },
   "LawfulChaotic": {
     "type": "byte",
-    "value": 100
+    "value": 0
   },
   "Lootable": {
     "type": "byte",
@@ -156,7 +162,7 @@
   },
   "MaxHitPoints": {
     "type": "short",
-    "value": 53
+    "value": 40
   },
   "NaturalAC": {
     "type": "byte",
@@ -164,7 +170,7 @@
   },
   "NoPermDeath": {
     "type": "byte",
-    "value": 0
+    "value": 1
   },
   "PaletteID": {
     "type": "byte",
@@ -184,7 +190,7 @@
   },
   "PortraitId": {
     "type": "word",
-    "value": 92
+    "value": 4247
   },
   "Race": {
     "type": "byte",
@@ -236,7 +242,7 @@
   },
   "ScriptSpawn": {
     "type": "resref",
-    "value": "global_onspawn"
+    "value": "x2_def_spawn"
   },
   "ScriptSpellAt": {
     "type": "resref",
@@ -253,63 +259,7 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 10
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 0
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 11
-        }
-      },
-      {
-        "__struct_id": 0,
-        "Rank": {
-          "type": "byte",
-          "value": 1
+          "value": 9
         }
       },
       {
@@ -330,14 +280,42 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 11
+          "value": 0
         }
       },
       {
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 10
+          "value": 9
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 9
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 9
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 9
         }
       },
       {
@@ -352,6 +330,20 @@
         "Rank": {
           "type": "byte",
           "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 2
         }
       },
       {
@@ -386,6 +378,13 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
+          "value": 9
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
           "value": 0
         }
       },
@@ -393,28 +392,35 @@
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 1
+          "value": 0
         }
       },
       {
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 1
+          "value": 0
         }
       },
       {
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 1
+          "value": 0
         }
       },
       {
         "__struct_id": 0,
         "Rank": {
           "type": "byte",
-          "value": 1
+          "value": 0
+        }
+      },
+      {
+        "__struct_id": 0,
+        "Rank": {
+          "type": "byte",
+          "value": 0
         }
       },
       {
@@ -505,7 +511,7 @@
   },
   "SoundSetFile": {
     "type": "word",
-    "value": 65535
+    "value": 31
   },
   "SpecAbilityList": {
     "type": "list",
@@ -525,7 +531,7 @@
   },
   "Tag": {
     "type": "cexostring",
-    "value": "NPC_oktavia"
+    "value": "waldbluete"
   },
   "Tail_New": {
     "type": "dword",
@@ -537,11 +543,11 @@
   },
   "TemplateResRef": {
     "type": "resref",
-    "value": "npc_oktavia"
+    "value": "waldbluete"
   },
   "WalkRate": {
     "type": "int",
-    "value": 7
+    "value": 4
   },
   "willbonus": {
     "type": "short",
@@ -553,6 +559,6 @@
   },
   "Wis": {
     "type": "byte",
-    "value": 10
+    "value": 17
   }
 }
