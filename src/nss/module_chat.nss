@@ -168,6 +168,15 @@ int setWindFromChat(string sMessage) {
   return 0;
 }
 
+int nuiMenu(string sMessage) {
+  if (GetSubString(sMessage, 0, 5) == "/menu") {
+    SetPCChatVolume(TALKVOLUME_SILENT_TALK);
+    ExecuteScript("nui_menu", oPc);
+    return 1;
+  }
+  return 0;
+}
+
 int setmodulefog(string sMessage) {
   if (GetSubString(sMessage, 0, 7) == "/setfog" && GetIsDM(oPc)) {
   SendMessageToPC(oPc, "Format: /setfog x y || x = 0|1, y = 0|1|2. Only sets fog in CURRENT AREA");
@@ -315,30 +324,6 @@ int listCDKeys(string sMessage) {
 int listBannedPlayers(string sMessage) {
   if (sMessage == "/banlist") {
     SendMessageToPC(oPc, NWNX_Administration_GetBannedList());
-    return 1;
-  }
-  return 0;
-}
-
-int changeName(string sMessage) {
-  if (GetSubString(sMessage, 0, 11) == "/changename") {
-    SetPCChatVolume(TALKVOLUME_SILENT_TALK);
-    object oTarget = GetLocalObject(oPc, "changename");
-    if (oTarget != OBJECT_INVALID) {
-      SetName(oTarget, GetSubString(sMessage, 11, 1000));
-    }
-    return 1;
-  }
-  return 0;
-}
-
-int changeDescription(string sMessage) {
-  if (GetSubString(sMessage, 0, 11) == "/changedesc") {
-    SetPCChatVolume(TALKVOLUME_SILENT_TALK);
-    object oTarget = GetLocalObject(oPc, "changedesc");
-    if (oTarget != OBJECT_INVALID) {
-      SetName(oTarget, GetSubString(sMessage, 11, 1000));
-    }
     return 1;
   }
   return 0;
@@ -2118,7 +2103,8 @@ void main() {
         banPlayer(sMessage) ||
         unbanPlayer(sMessage) ||
         listCDKeys(sMessage) ||
-        listBannedPlayers(sMessage) ||        //changeName(sMessage) ||        //changeDescription(sMessage) ||
+        listBannedPlayers(sMessage) ||
+        nuiMenu(sMessage) ||
         ride(sMessage) ||
         unstuck(sMessage) ||
         report(sMessage) ||
