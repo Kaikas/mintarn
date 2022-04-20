@@ -1675,6 +1675,20 @@ int ghost(string sMessage) {
   return 0;
 }
 
+int hain_entry(string sMessage) {
+  if (sMessage == "/feenweg" || sMessage == "/Feenweg") {
+    if (GetHasSpell(859) && GetTag(GetArea(oPc)) == "AREA_Westmark" && GetDistanceBetween(oPc, GetObjectByTag("WP_WESTMARK_HAIN")) < 4.0) {
+      AssignCommand(oPc,ActionSpeakString(colorText("*Ihr wirkt einen Zauber um den Weg in den Hain freizulegen, und geht zügig hindurch, bevor sich die Rankenmauer wieder schließt*")));
+      AssignCommand(oPc,ActionCastSpellAtObject(859,oPc));
+      location lLocation = GetLocation(GetObjectByTag("WP_HAIN"));
+      DelayCommand(3.0, AssignCommand(oPc, JumpToLocation(lLocation)));
+      return 1;
+    }
+  }
+  return 0;
+}
+
+
 int climb(string sMessage) {
   if (sMessage == "/klettern" || sMessage == "/climb") {
     if (GetTag(GetArea(oPc)) == "AREA_FreihafenWest" && GetDistanceBetween(oPc, GetObjectByTag("KLETTERN_Tempel")) < 2.0) {
@@ -2142,6 +2156,7 @@ void main() {
         ride(sMessage) ||
         unstuck(sMessage) ||
         report(sMessage) ||
+        hain_entry(sMessage) ||
         setWindFromChat(sMessage) ||
         deleteHint(sMessage) ||
         delete(sMessage) ||

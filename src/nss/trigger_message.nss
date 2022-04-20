@@ -27,6 +27,9 @@ void main() {
     if(sTag == "trigger_kueche"){
         FloatingTextStringOnCreature(StringToRGBString("Ihr befindet euch nun in einer Küche.", "333"), oPc, FALSE);
     }
+    if(sTag == "trigger_hain"){
+        FloatingTextStringOnCreature(StringToRGBString("Vor euch liegt ein wahrhaftiges Meer aus Ranken und Gestrüpp, meterhoch, wo einst der Weg in den Hain lag. Ein paar bunte Knospen an der grün-braunen Mauer deutet auf den ursprung der Blockade hin.", "333"), oPc, FALSE);
+    }
 
     //Messages unused:
     // Das Feuer knistert und strahlt eine angenehme wärme aus.
