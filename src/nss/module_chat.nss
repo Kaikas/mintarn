@@ -1677,11 +1677,11 @@ int ghost(string sMessage) {
 
 int hain_entry(string sMessage) {
   if (sMessage == "/feenweg" || sMessage == "/Feenweg") {
-    if (GetHasSpell(859) && GetTag(GetArea(oPc)) == "AREA_Westmark" && GetDistanceBetween(oPc, GetObjectByTag("WP_WESTMARK_HAIN")) < 4.0) {
-      AssignCommand(oPc,ActionSpeakString(colorText("*Ihr wirkt einen Zauber um den Weg in den Hain freizulegen, und geht zügig hindurch, bevor sich die Rankenmauer wieder schließt*")));
+    if (GetHasSpell(859, oPc) && GetDistanceBetween(oPc, GetObjectByTag("WP_WESTMARK_HAIN")) < 4.0 && GetTag(GetArea(oPc)) == "AREA_Westmark")  {
+      AssignCommand(oPc,ActionSpeakString(colorText("*Ihr wirkt einen Zauber um nach nahegelegenen Feenwegen zu suchen, die euch in den Hain leiten könnten*")));
       AssignCommand(oPc,ActionCastSpellAtObject(859,oPc));
       location lLocation = GetLocation(GetObjectByTag("WP_HAIN"));
-      DelayCommand(3.0, AssignCommand(oPc, JumpToLocation(lLocation)));
+      DelayCommand(4.0, AssignCommand(oPc, JumpToLocation(lLocation)));
       return 1;
     }
   }

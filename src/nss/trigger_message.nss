@@ -28,7 +28,8 @@ void main() {
         FloatingTextStringOnCreature(StringToRGBString("Ihr befindet euch nun in einer Küche.", "333"), oPc, FALSE);
     }
     if(sTag == "trigger_hain"){
-        FloatingTextStringOnCreature(StringToRGBString("Vor euch liegt ein wahrhaftiges Meer aus Ranken und Gestrüpp, meterhoch, wo einst der Weg in den Hain lag. Ein paar bunte Knospen an der grün-braunen Mauer deutet auf den ursprung der Blockade hin.", "333"), oPc, FALSE);
+        FloatingTextStringOnCreature(StringToRGBString("Vor euch liegt ein wahrhaftiges Meer aus Ranken und Gestrüpp, meterhoch, das sich nahtlos in die umgebende Vegetation verwuchert hat. Ein paar bunte Knospen an der grün-braunen Mauer deuten auf den ursprung der Blockade hin.", "333"), oPc, FALSE);
+        FloatingTextStringOnCreature(StringToRGBString("Bei genauerem Betrachten der Umgebung erkennt ihr Runen aus dem elfischen Alphabet. Wenn ihr des sylvanischen mächtig seid, so könnt ihr 'Hintertür benutzen!' lesen.", "333"), oPc, FALSE);
     }
 
     //Messages unused:
