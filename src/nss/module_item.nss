@@ -595,31 +595,6 @@ void main() {
             ApplyEffectToObject(DURATION_TYPE_INSTANT, eVis, oPc);
         }
     }
-         //Geas Item (for Martermaske/Char Emil)
-    if (GetTag(oItem) == "SW_HainAccess") {
-        if (GetDistanceBetween(oPc, GetObjectByTag("WP_WESTMARK_HAIN")) < 6.0 && GetTag(GetArea(oPc)) == "AREA_Westmark"){
-            //No Armor means naked means pass (fey don't care :D); otherwise, get armor AC value
-            int nAC = 0;
-            object oArmor = GetItemInSlot(INVENTORY_SLOT_CHEST, oPc);
-            if(GetBaseItemType(oArmor) == BASE_ITEM_ARMOR){
-                int nAppearance = GetItemAppearance(oArmor, ITEM_APPR_TYPE_ARMOR_MODEL, ITEM_APPR_ARMOR_MODEL_TORSO);
-                nAC = StringToInt(Get2DAString("parts_chest", "ACBONUS", nAppearance));
-            }
-            //berry gets eaten regardless
-            DestroyObject(oItem);
-            //Armors with Iron are AC 4 and above - fey don't like those.
-            if(nAC < 3){
-                FloatingTextStringOnCreature("Ihr bietet die Beere den Büschen vor euch an - nach einem Moment eilt eine Fee in größe eines Bierkrugs herbei, schnappt sich die Beere und steckt sie sich gierig in den Mund. Die Fee schnappt sich dann, die Backen vollgestopft wie ein Hamster, euren Finger, und zerrt euch in die Feenwege.",oPc);
-                location lLocation = GetLocation(GetObjectByTag("WP_HAIN"));
-                DelayCommand(4.0, AssignCommand(oPc, JumpToLocation(lLocation)));
-            }
-            else{
-                FloatingTextStringOnCreature("Ihr bietet die Beere den Büschen vor euch an - nach einem Moment eilt eine Fee in größe eines Bierkrugs herbei, schnappt sich die Beere und steckt sie sich gierig in den Mund. Aber statt euch mitzunehmen gibt sie ein ersticktes 'Hmpf!' von sich, deutet vage auf eure Rüstung, und schwirrt davon.",oPc);
-            }
-        }
-    }
-
-
 
     // DM Items
 
