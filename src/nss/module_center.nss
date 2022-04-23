@@ -25,26 +25,30 @@ void GiveXP(object oPc, int iCount, int iSumXp, int iToken) {
     if (GetHitDice(oPc) > 14) return;
 
     // Prüft ob der Spieler in den letzten 5 Minuten etwas geschrieben hat.
-    string sQuery = "SELECT * FROM Chat WHERE name=? AND charname=? ORDER BY id DESC LIMIT 1";
+    //string sQuery = "SELECT * FROM Chat WHERE name=? AND charname=? ORDER BY id DESC LIMIT 1";
     int iTalked = 0;
     int iCharacters = 0;
-    if (NWNX_SQL_PrepareQuery(sQuery)) {
-        NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
-        NWNX_SQL_PreparedString(1, GetName(oPc));
-        NWNX_SQL_ExecutePreparedQuery();
-
-        while (NWNX_SQL_ReadyToReadNextRow()) {
-            NWNX_SQL_ReadNextRow();
-            //SendMessageToPC(oPc, IntToString(NWNX_Time_GetTimeStamp() - StringToInt(NWNX_SQL_ReadDataInActiveRow(4))));
-            if (NWNX_Time_GetTimeStamp() - StringToInt(NWNX_SQL_ReadDataInActiveRow(4)) < 601) {
-                if (GetSubString(NWNX_SQL_ReadDataInActiveRow(3), 0, 1) != "/" && GetSubString(NWNX_SQL_ReadDataInActiveRow(3), 0, 1) != "(") {
-                    iTalked = iTalked + 1;
-                    iCharacters = iCharacters + GetStringLength(NWNX_SQL_ReadDataInActiveRow(3));
-                }
-            }
-        }
-    }
+    //if (NWNX_SQL_PrepareQuery(sQuery)) {
+    //    NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
+    //    NWNX_SQL_PreparedString(1, GetName(oPc));
+    //    NWNX_SQL_ExecutePreparedQuery();
+    //
+    //    while (NWNX_SQL_ReadyToReadNextRow()) {
+    //        NWNX_SQL_ReadNextRow();
+    //        //SendMessageToPC(oPc, IntToString(NWNX_Time_GetTimeStamp() - StringToInt(NWNX_SQL_ReadDataInActiveRow(4))));
+    //        if (NWNX_Time_GetTimeStamp() - StringToInt(NWNX_SQL_ReadDataInActiveRow(4)) < 601) {
+    //            if (GetSubString(NWNX_SQL_ReadDataInActiveRow(3), 0, 1) != "/" && GetSubString(NWNX_SQL_ReadDataInActiveRow(3), 0, 1) != "(") {
+    //                iTalked = iTalked + 1;
+    //                iCharacters = iCharacters + GetStringLength(NWNX_SQL_ReadDataInActiveRow(3));
+    //            }
+    //        }
+    //    }
+    //}
     // Basisexp
+
+    iCharacters = GetLocalInt(oPc,"RPXP_Counter");
+    if(iCharacters > 0) iTalked = 1;
+
     int iXp = 400;
     if (iCharacters > 30) iXp = 420;
     if (iCharacters > 60) iXp = 440;
