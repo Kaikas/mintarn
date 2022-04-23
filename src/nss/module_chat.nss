@@ -216,17 +216,7 @@ void speak(object oSpeaker, string sMessage) {
     SendMessageToPC(oSpeaker, "Achtung! Aus technischen Gründen kam die Nachricht nicht an. Versuche es mit /a für alle, /g für Gebiet oder /s für Umkreis.");
   } else {
       string sFirstChar = GetSubString(sMessage, 0, 1);
-      if (sFirstChar != ":" && GetTag(GetArea(oSpeaker)) != "OOC") {
-        int iOtherInArea = 0;
-        object oOther = GetFirstPC();
-        while(oOther != OBJECT_INVALID){
-            if((GetArea(oOther) == GetArea(oPc)) && oOther != oPc){
-                iOtherInArea = 1;
-                break;
-            }
-            oOther = GetNextPC();
-        }
-        if(iOtherInArea){
+      if (sFirstChar != ":") {
             string sAccountName = GetPCPlayerName(oPc);
             string sName = GetName(oPc);
             sQuery = "INSERT INTO Chat (name, charname, text, datetime) VALUES (?, ?, ?, ?)";
@@ -237,7 +227,6 @@ void speak(object oSpeaker, string sMessage) {
                 NWNX_SQL_PreparedString(3, IntToString(NWNX_Time_GetTimeStamp()));
                 NWNX_SQL_ExecutePreparedQuery();
             }
-        }
         ExecuteScript("global_speak", oSpeaker);
         }
     }
@@ -1676,16 +1665,50 @@ int ghost(string sMessage) {
 }
 
 int hain_entry(string sMessage) {
-  if (sMessage == "/feenweg" || sMessage == "/Feenweg") {
-    if (GetHasSpell(859, oPc) && GetDistanceBetween(oPc, GetObjectByTag("WP_WESTMARK_HAIN")) < 4.0 && GetTag(GetArea(oPc)) == "AREA_Westmark")  {
-      FloatingTextStringOnCreature("*Ihr wirkt einen Zauber um nach nahegelegenen Feenwegen zu suchen, die euch in den Hain leiten könnten*", oPc);
-      AssignCommand(oPc,ActionCastSpellAtObject(859,oPc));
-      location lLocation = GetLocation(GetObjectByTag("WP_HAIN"));
-      DelayCommand(4.0, AssignCommand(oPc, JumpToLocation(lLocation)));
-      return 1;
+    if (sMessage == "/feenweg" || sMessage == "/Feenweg"){
+        if(GetDistanceBetween(oPc, GetObjectByTag("WP_WESTMARK_HAIN")) < 10.0 && GetTag(GetArea(oPc)) == "AREA_Westmark"){
+            SetPCChatVolume(TALKVOLUME_SILENT_TALK);
+            if(GetHasSpell(859, oPc)){
+                FloatingTextStringOnCreature("*Ihr wirkt einen Zauber um nach nahegelegenen Feenwegen zu suchen, die euch in den Hain leiten könnten*", oPc);
+                AssignCommand(oPc,ActionCastSpellAtObject(859,oPc));
+                location lLocation = GetLocation(GetObjectByTag("WP_HAIN"));
+                DelayCommand(4.0, AssignCommand(oPc, JumpToLocation(lLocation)));
+                return 1;
+            }
+            else{
+                object oBeere = GetFirstItemInInventory(oPc);
+                while(oBeere != OBJECT_INVALID){
+                    if(GetTag(oBeere) == "SW_HainAccess")break;
+                    oBeere = GetNextItemInInventory(oPc);
+                }
+                if(GetTag(oBeere) == "SW_HainAccess"){
+                    //No Armor means naked means pass (fey don't care :D); otherwise, get armor AC value
+                    int nAC = 0;
+                    object oArmor = GetItemInSlot(INVENTORY_SLOT_CHEST, oPc);
+                    if(GetBaseItemType(oArmor) == BASE_ITEM_ARMOR){
+                        int nAppearance = GetItemAppearance(oArmor, ITEM_APPR_TYPE_ARMOR_MODEL, ITEM_APPR_ARMOR_MODEL_TORSO);
+                        nAC = StringToInt(Get2DAString("parts_chest", "ACBONUS", nAppearance));
+                    }
+                    //berry gets eaten regardless
+                    DestroyObject(oBeere);
+                    //Armors with Iron are AC 4 and above - fey don't like those.
+                    if(nAC < 3){
+                        FloatingTextStringOnCreature("Ihr bietet die Beere den Büschen vor euch an - nach einem Moment eilt eine Fee in größe eines Bierkrugs herbei, schnappt sich die Beere und steckt sie sich gierig in den Mund. Die Fee schnappt sich dann, die Backen vollgestopft wie ein Hamster, euren Finger, und zerrt euch in die Feenwege.",oPc);
+                        location lLocation = GetLocation(GetObjectByTag("WP_HAIN"));
+                        DelayCommand(4.0, AssignCommand(oPc, JumpToLocation(lLocation)));
+                    }
+                    else{
+                        FloatingTextStringOnCreature("Ihr bietet die Beere den Büschen vor euch an - nach einem Moment eilt eine Fee in größe eines Bierkrugs herbei, schnappt sich die Beere und steckt sie sich gierig in den Mund. Aber statt euch mitzunehmen gibt sie ein ersticktes 'Hmpf!' von sich, deutet vage auf eure Rüstung, und schwirrt davon.",oPc);
+                    }
+                }
+                else{
+                    FloatingTextStringOnCreature("Ihr habt weder den Zauber noch die Beeren um die Feenwege hier zu erreichen.",oPc);
+                }
+            }
+        }
+        return 1;
     }
-  }
-  return 0;
+    return 0;
 }
 
 
@@ -2263,20 +2286,24 @@ void main() {
       //}
     }
   }
-
-  //RPXP only when other person in Area
   object oArea = GetArea(oPc);
   if(GetTag(oArea) != "OOC"){
     int iOtherInArea = 0;
     object oOther = GetFirstPC();
     while(oOther != OBJECT_INVALID){
         if((GetArea(oOther) == GetArea(oPc)) && oOther != oPc){
-        iOtherInArea = 1;
-        break;
+            iOtherInArea = 1;
+            break;
         }
         oOther = GetNextPC();
     }
    if(iOtherInArea){
+        int iRPXP = GetLocalInt(oPc,"RPXP_Counter");
+        iRPXP = iRPXP + GetStringLength(sMessage);
+        SetLocalInt(oPc,"RPXP_Counter",iRPXP);
+   }
+  }
+
    sQuery = "INSERT INTO Chat (name, charname, text, datetime) VALUES (?, ?, ?, ?)";
    if (NWNX_SQL_PrepareQuery(sQuery)) {
     NWNX_SQL_PreparedString(0, sAccountName);
@@ -2304,6 +2331,5 @@ void main() {
     }
     NWNX_SQL_PreparedString(3, IntToString(NWNX_Time_GetTimeStamp()));
     NWNX_SQL_ExecutePreparedQuery();
-  }}
   }
 }
