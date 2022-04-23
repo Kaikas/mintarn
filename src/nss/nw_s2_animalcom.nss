@@ -52,16 +52,16 @@ void main()
         //A druid’s animal companion is superior to a normal animal of its kind and has special powers and gains additional feats for bonus HD as normal.
         if (iDruidBonus >= 1 ) {
            NWNX_Creature_AddFeat(oCompanion, FEAT_EVASION); // Special power from level 3 druid
-           NWNX_Creature_RemoveFeatByLevel(oCompanion, FEAT_POWER_ATTACK, 3); // Remove NWN feat selection
+           NWNX_Creature_RemoveFeat(oCompanion, FEAT_POWER_ATTACK); // Remove NWN feat selection
            NWNX_Creature_AddFeatByLevel(oCompanion, FEAT_ALERTNESS, 3); // General feat for advancing to 3 HD
         }
         if (iDruidBonus >= 2 ) {
            NWNX_Creature_AddFeat(oCompanion, FEAT_HARDINESS_VERSUS_ENCHANTMENTS); // Special power from level 6 druid
-           NWNX_Creature_RemoveFeatByLevel(oCompanion, FEAT_CLEAVE, 6); // Remove NWN feat selection
+           NWNX_Creature_RemoveFeat(oCompanion, FEAT_CLEAVE); // Remove NWN feat selection
            NWNX_Creature_AddFeatByLevel(oCompanion, FEAT_TOUGHNESS, 6); //General feat for advancing to 6 HD
         }
         if (iDruidBonus >= 4 ) {
-           NWNX_Creature_RemoveFeatByLevel(oCompanion, FEAT_DODGE, 9); // Remove NWN feat selection
+           NWNX_Creature_RemoveFeat(oCompanion, FEAT_DODGE); // Remove NWN feat selection
            NWNX_Creature_AddFeatByLevel(oCompanion, FEAT_WEAPON_SPECIALIZATION_CREATURE, 9); // General feat for advancing to 9 HD
         }
         if (iDruidBonus >= 5 ) {
