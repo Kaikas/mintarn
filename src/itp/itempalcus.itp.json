@@ -13839,6 +13839,17 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
+                      "value": "Winterbeere"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "sw_hainaccess"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
                       "value": "Wunderbeutel"
                     },
                     "RESREF": {
