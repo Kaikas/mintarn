@@ -8,6 +8,21 @@
 #include "inc_nui_downtime"
 #include "inc_nui_eltools"
 
+//Returns TRUE if oItem is stackable
+int GetIsStackableItem(object oItem)
+{
+    //Must have a chest tagged checkchest
+    object oCopy=CopyItem(oItem, GetObjectByTag("checkchest"));
+    //Set the stacksize to two
+    SetItemStackSize(oCopy, 2);
+    //Check if it really is two - otherwise, not stackable!
+    int bStack=GetItemStackSize(oCopy)==2;
+    //Destroy the test copy
+    DestroyObject(oCopy);
+    //Return bStack which is TRUE if item is stackable
+    return bStack;
+}
+
 string GenerateToken() {
     string sToken = IntToString(Random(9)) +
     IntToString(Random(9)) +
@@ -74,7 +89,9 @@ void main() {
                 string sItemName = StringReplace(StringReplace(JsonGetString(NuiGetBind(oPc, nToken, "inputname")), "\n", " "), "\"", "");
                 string sDescription = JsonGetString(NuiGetBind(oPc, nToken, "inputdescription"));
                 object oTarget = GetLocalObject(oPc, "changename");
-                string sTag = GetTag(oTarget) + GenerateToken();
+                string sTag = GetTag(oTarget);
+                if(GetIsStackableItem(oTarget))sTag = GetTag(oTarget) + GenerateToken();
+
                 if (oTarget != OBJECT_INVALID) {
                   SetName(oTarget, sItemName);
                   SetDescription(oTarget, sDescription);
