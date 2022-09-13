@@ -14246,7 +14246,7 @@
                     "__struct_id": 4,
                     "AddCost": {
                       "type": "dword",
-                      "value": 0
+                      "value": 25
                     },
                     "BaseItem": {
                       "type": "int",
@@ -14266,7 +14266,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 100
+                      "value": 125
                     },
                     "Cursed": {
                       "type": "byte",
@@ -14371,7 +14371,7 @@
                     "__struct_id": 5,
                     "AddCost": {
                       "type": "dword",
-                      "value": 0
+                      "value": 25
                     },
                     "BaseItem": {
                       "type": "int",
@@ -14391,7 +14391,7 @@
                     },
                     "Cost": {
                       "type": "dword",
-                      "value": 100
+                      "value": 125
                     },
                     "Cursed": {
                       "type": "byte",
@@ -14470,6 +14470,999 @@
                     "TemplateResRef": {
                       "type": "resref",
                       "value": "sw_he_hut2"
+                    },
+                    "XOrientation": {
+                      "type": "float",
+                      "value": 0.0
+                    },
+                    "XPosition": {
+                      "type": "float",
+                      "value": -1.0
+                    },
+                    "YOrientation": {
+                      "type": "float",
+                      "value": 1.0
+                    },
+                    "YPosition": {
+                      "type": "float",
+                      "value": -1.0
+                    },
+                    "ZPosition": {
+                      "type": "float",
+                      "value": -1.0
+                    }
+                  },
+                  {
+                    "__struct_id": 6,
+                    "AddCost": {
+                      "type": "dword",
+                      "value": 0
+                    },
+                    "ArmorPart_Belt": {
+                      "type": "byte",
+                      "value": 11
+                    },
+                    "ArmorPart_LBicep": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_LFArm": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_LFoot": {
+                      "type": "byte",
+                      "value": 8
+                    },
+                    "ArmorPart_LHand": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_LShin": {
+                      "type": "byte",
+                      "value": 89
+                    },
+                    "ArmorPart_LShoul": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_LThigh": {
+                      "type": "byte",
+                      "value": 4
+                    },
+                    "ArmorPart_Neck": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_Pelvis": {
+                      "type": "byte",
+                      "value": 3
+                    },
+                    "ArmorPart_RBicep": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_RFArm": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_RFoot": {
+                      "type": "byte",
+                      "value": 8
+                    },
+                    "ArmorPart_RHand": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_Robe": {
+                      "type": "byte",
+                      "value": 171
+                    },
+                    "ArmorPart_RShin": {
+                      "type": "byte",
+                      "value": 89
+                    },
+                    "ArmorPart_RShoul": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_RThigh": {
+                      "type": "byte",
+                      "value": 4
+                    },
+                    "ArmorPart_Torso": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "BaseItem": {
+                      "type": "int",
+                      "value": 16
+                    },
+                    "Charges": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "Cloth1Color": {
+                      "type": "byte",
+                      "value": 24
+                    },
+                    "Cloth2Color": {
+                      "type": "byte",
+                      "value": 24
+                    },
+                    "Cost": {
+                      "type": "dword",
+                      "value": 100
+                    },
+                    "Cursed": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "DescIdentified": {
+                      "type": "cexolocstring",
+                      "value": {}
+                    },
+                    "Description": {
+                      "type": "cexolocstring",
+                      "value": {
+                        "0": ""
+                      }
+                    },
+                    "Identified": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "Infinite": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "Leather1Color": {
+                      "type": "byte",
+                      "value": 32
+                    },
+                    "Leather2Color": {
+                      "type": "byte",
+                      "value": 63
+                    },
+                    "LocalizedName": {
+                      "type": "cexolocstring",
+                      "value": {
+                        "0": "Adelskleid"
+                      }
+                    },
+                    "Metal1Color": {
+                      "type": "byte",
+                      "value": 50
+                    },
+                    "Metal2Color": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "Plot": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "PropertiesList": {
+                      "type": "list",
+                      "value": []
+                    },
+                    "Repos_PosX": {
+                      "type": "word",
+                      "value": 2
+                    },
+                    "Repos_Posy": {
+                      "type": "word",
+                      "value": 3
+                    },
+                    "StackSize": {
+                      "type": "word",
+                      "value": 1
+                    },
+                    "Stolen": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "Tag": {
+                      "type": "cexostring",
+                      "value": "CRAFT_ru_adelig1"
+                    },
+                    "TemplateResRef": {
+                      "type": "resref",
+                      "value": "sw_ru_adelig1"
+                    },
+                    "XOrientation": {
+                      "type": "float",
+                      "value": 0.0
+                    },
+                    "XPosition": {
+                      "type": "float",
+                      "value": -1.0
+                    },
+                    "YOrientation": {
+                      "type": "float",
+                      "value": 1.0
+                    },
+                    "YPosition": {
+                      "type": "float",
+                      "value": -1.0
+                    },
+                    "ZPosition": {
+                      "type": "float",
+                      "value": -1.0
+                    }
+                  },
+                  {
+                    "__struct_id": 7,
+                    "AddCost": {
+                      "type": "dword",
+                      "value": 0
+                    },
+                    "ArmorPart_Belt": {
+                      "type": "byte",
+                      "value": 187
+                    },
+                    "ArmorPart_LBicep": {
+                      "type": "byte",
+                      "value": 160
+                    },
+                    "ArmorPart_LFArm": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_LFoot": {
+                      "type": "byte",
+                      "value": 9
+                    },
+                    "ArmorPart_LHand": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_LShin": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_LShoul": {
+                      "type": "byte",
+                      "value": 123
+                    },
+                    "ArmorPart_LThigh": {
+                      "type": "byte",
+                      "value": 122
+                    },
+                    "ArmorPart_Neck": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_Pelvis": {
+                      "type": "byte",
+                      "value": 122
+                    },
+                    "ArmorPart_RBicep": {
+                      "type": "byte",
+                      "value": 160
+                    },
+                    "ArmorPart_RFArm": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_RFoot": {
+                      "type": "byte",
+                      "value": 9
+                    },
+                    "ArmorPart_RHand": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_Robe": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "ArmorPart_RShin": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_RShoul": {
+                      "type": "byte",
+                      "value": 123
+                    },
+                    "ArmorPart_RThigh": {
+                      "type": "byte",
+                      "value": 122
+                    },
+                    "ArmorPart_Torso": {
+                      "type": "byte",
+                      "value": 8
+                    },
+                    "BaseItem": {
+                      "type": "int",
+                      "value": 16
+                    },
+                    "Charges": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "Cloth1Color": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "Cloth2Color": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "Cost": {
+                      "type": "dword",
+                      "value": 100
+                    },
+                    "Cursed": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "DescIdentified": {
+                      "type": "cexolocstring",
+                      "value": {}
+                    },
+                    "Description": {
+                      "type": "cexolocstring",
+                      "value": {
+                        "0": ""
+                      }
+                    },
+                    "Identified": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "Infinite": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "Leather1Color": {
+                      "type": "byte",
+                      "value": 117
+                    },
+                    "Leather2Color": {
+                      "type": "byte",
+                      "value": 63
+                    },
+                    "LocalizedName": {
+                      "type": "cexolocstring",
+                      "value": {
+                        "0": "Armenkleidung"
+                      }
+                    },
+                    "Metal1Color": {
+                      "type": "byte",
+                      "value": 23
+                    },
+                    "Metal2Color": {
+                      "type": "byte",
+                      "value": 23
+                    },
+                    "Plot": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "PropertiesList": {
+                      "type": "list",
+                      "value": []
+                    },
+                    "Repos_PosX": {
+                      "type": "word",
+                      "value": 4
+                    },
+                    "Repos_Posy": {
+                      "type": "word",
+                      "value": 3
+                    },
+                    "StackSize": {
+                      "type": "word",
+                      "value": 1
+                    },
+                    "Stolen": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "Tag": {
+                      "type": "cexostring",
+                      "value": "CRAFT_ru_armf1"
+                    },
+                    "TemplateResRef": {
+                      "type": "resref",
+                      "value": "sw_ru_armf1"
+                    },
+                    "XOrientation": {
+                      "type": "float",
+                      "value": 0.0
+                    },
+                    "XPosition": {
+                      "type": "float",
+                      "value": -1.0
+                    },
+                    "YOrientation": {
+                      "type": "float",
+                      "value": 1.0
+                    },
+                    "YPosition": {
+                      "type": "float",
+                      "value": -1.0
+                    },
+                    "ZPosition": {
+                      "type": "float",
+                      "value": -1.0
+                    }
+                  },
+                  {
+                    "__struct_id": 8,
+                    "AddCost": {
+                      "type": "dword",
+                      "value": 0
+                    },
+                    "ArmorPart_Belt": {
+                      "type": "byte",
+                      "value": 109
+                    },
+                    "ArmorPart_LBicep": {
+                      "type": "byte",
+                      "value": 136
+                    },
+                    "ArmorPart_LFArm": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_LFoot": {
+                      "type": "byte",
+                      "value": 3
+                    },
+                    "ArmorPart_LHand": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_LShin": {
+                      "type": "byte",
+                      "value": 2
+                    },
+                    "ArmorPart_LShoul": {
+                      "type": "byte",
+                      "value": 123
+                    },
+                    "ArmorPart_LThigh": {
+                      "type": "byte",
+                      "value": 151
+                    },
+                    "ArmorPart_Neck": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_Pelvis": {
+                      "type": "byte",
+                      "value": 151
+                    },
+                    "ArmorPart_RBicep": {
+                      "type": "byte",
+                      "value": 136
+                    },
+                    "ArmorPart_RFArm": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_RFoot": {
+                      "type": "byte",
+                      "value": 3
+                    },
+                    "ArmorPart_RHand": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_Robe": {
+                      "type": "byte",
+                      "value": 154
+                    },
+                    "ArmorPart_RShin": {
+                      "type": "byte",
+                      "value": 2
+                    },
+                    "ArmorPart_RShoul": {
+                      "type": "byte",
+                      "value": 123
+                    },
+                    "ArmorPart_RThigh": {
+                      "type": "byte",
+                      "value": 151
+                    },
+                    "ArmorPart_Torso": {
+                      "type": "byte",
+                      "value": 131
+                    },
+                    "BaseItem": {
+                      "type": "int",
+                      "value": 16
+                    },
+                    "Charges": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "Cloth1Color": {
+                      "type": "byte",
+                      "value": 116
+                    },
+                    "Cloth2Color": {
+                      "type": "byte",
+                      "value": 124
+                    },
+                    "Cost": {
+                      "type": "dword",
+                      "value": 100
+                    },
+                    "Cursed": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "DescIdentified": {
+                      "type": "cexolocstring",
+                      "value": {}
+                    },
+                    "Description": {
+                      "type": "cexolocstring",
+                      "value": {
+                        "0": ""
+                      }
+                    },
+                    "Identified": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "Infinite": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "Leather1Color": {
+                      "type": "byte",
+                      "value": 116
+                    },
+                    "Leather2Color": {
+                      "type": "byte",
+                      "value": 63
+                    },
+                    "LocalizedName": {
+                      "type": "cexolocstring",
+                      "value": {
+                        "0": "Bauernkleidung"
+                      }
+                    },
+                    "Metal1Color": {
+                      "type": "byte",
+                      "value": 23
+                    },
+                    "Metal2Color": {
+                      "type": "byte",
+                      "value": 23
+                    },
+                    "Plot": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "PropertiesList": {
+                      "type": "list",
+                      "value": []
+                    },
+                    "Repos_PosX": {
+                      "type": "word",
+                      "value": 6
+                    },
+                    "Repos_Posy": {
+                      "type": "word",
+                      "value": 3
+                    },
+                    "StackSize": {
+                      "type": "word",
+                      "value": 1
+                    },
+                    "Stolen": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "Tag": {
+                      "type": "cexostring",
+                      "value": "CRAFT_ru_bauerf1"
+                    },
+                    "TemplateResRef": {
+                      "type": "resref",
+                      "value": "sw_ru_bauerf1"
+                    },
+                    "XOrientation": {
+                      "type": "float",
+                      "value": 0.0
+                    },
+                    "XPosition": {
+                      "type": "float",
+                      "value": -1.0
+                    },
+                    "YOrientation": {
+                      "type": "float",
+                      "value": 1.0
+                    },
+                    "YPosition": {
+                      "type": "float",
+                      "value": -1.0
+                    },
+                    "ZPosition": {
+                      "type": "float",
+                      "value": -1.0
+                    }
+                  },
+                  {
+                    "__struct_id": 9,
+                    "AddCost": {
+                      "type": "dword",
+                      "value": 0
+                    },
+                    "ArmorPart_Belt": {
+                      "type": "byte",
+                      "value": 20
+                    },
+                    "ArmorPart_LBicep": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_LFArm": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_LFoot": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_LHand": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_LShin": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_LShoul": {
+                      "type": "byte",
+                      "value": 99
+                    },
+                    "ArmorPart_LThigh": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_Neck": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_Pelvis": {
+                      "type": "byte",
+                      "value": 3
+                    },
+                    "ArmorPart_RBicep": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_RFArm": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_RFoot": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_RHand": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_Robe": {
+                      "type": "byte",
+                      "value": 187
+                    },
+                    "ArmorPart_RShin": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_RShoul": {
+                      "type": "byte",
+                      "value": 99
+                    },
+                    "ArmorPart_RThigh": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "ArmorPart_Torso": {
+                      "type": "byte",
+                      "value": 151
+                    },
+                    "BaseItem": {
+                      "type": "int",
+                      "value": 16
+                    },
+                    "Charges": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "Cloth1Color": {
+                      "type": "byte",
+                      "value": 11
+                    },
+                    "Cloth2Color": {
+                      "type": "byte",
+                      "value": 11
+                    },
+                    "Cost": {
+                      "type": "dword",
+                      "value": 100
+                    },
+                    "Cursed": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "DescIdentified": {
+                      "type": "cexolocstring",
+                      "value": {}
+                    },
+                    "Description": {
+                      "type": "cexolocstring",
+                      "value": {}
+                    },
+                    "Identified": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "Infinite": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "Leather1Color": {
+                      "type": "byte",
+                      "value": 11
+                    },
+                    "Leather2Color": {
+                      "type": "byte",
+                      "value": 11
+                    },
+                    "LocalizedName": {
+                      "type": "cexolocstring",
+                      "value": {
+                        "0": "Bettlerkleidung"
+                      }
+                    },
+                    "Metal1Color": {
+                      "type": "byte",
+                      "value": 15
+                    },
+                    "Metal2Color": {
+                      "type": "byte",
+                      "value": 15
+                    },
+                    "Plot": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "PropertiesList": {
+                      "type": "list",
+                      "value": []
+                    },
+                    "Repos_PosX": {
+                      "type": "word",
+                      "value": 8
+                    },
+                    "Repos_Posy": {
+                      "type": "word",
+                      "value": 3
+                    },
+                    "StackSize": {
+                      "type": "word",
+                      "value": 1
+                    },
+                    "Stolen": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "Tag": {
+                      "type": "cexostring",
+                      "value": "CRAFT_Bettlerkleidung"
+                    },
+                    "TemplateResRef": {
+                      "type": "resref",
+                      "value": "sw_ru_bettler"
+                    },
+                    "XOrientation": {
+                      "type": "float",
+                      "value": 0.0
+                    },
+                    "XPosition": {
+                      "type": "float",
+                      "value": -1.0
+                    },
+                    "YOrientation": {
+                      "type": "float",
+                      "value": 1.0
+                    },
+                    "YPosition": {
+                      "type": "float",
+                      "value": -1.0
+                    },
+                    "ZPosition": {
+                      "type": "float",
+                      "value": -1.0
+                    }
+                  },
+                  {
+                    "__struct_id": 10,
+                    "AddCost": {
+                      "type": "dword",
+                      "value": 0
+                    },
+                    "ArmorPart_Belt": {
+                      "type": "byte",
+                      "value": 4
+                    },
+                    "ArmorPart_LBicep": {
+                      "type": "byte",
+                      "value": 131
+                    },
+                    "ArmorPart_LFArm": {
+                      "type": "byte",
+                      "value": 127
+                    },
+                    "ArmorPart_LFoot": {
+                      "type": "byte",
+                      "value": 12
+                    },
+                    "ArmorPart_LHand": {
+                      "type": "byte",
+                      "value": 192
+                    },
+                    "ArmorPart_LShin": {
+                      "type": "byte",
+                      "value": 89
+                    },
+                    "ArmorPart_LShoul": {
+                      "type": "byte",
+                      "value": 19
+                    },
+                    "ArmorPart_LThigh": {
+                      "type": "byte",
+                      "value": 4
+                    },
+                    "ArmorPart_Neck": {
+                      "type": "byte",
+                      "value": 151
+                    },
+                    "ArmorPart_Pelvis": {
+                      "type": "byte",
+                      "value": 4
+                    },
+                    "ArmorPart_RBicep": {
+                      "type": "byte",
+                      "value": 131
+                    },
+                    "ArmorPart_RFArm": {
+                      "type": "byte",
+                      "value": 127
+                    },
+                    "ArmorPart_RFoot": {
+                      "type": "byte",
+                      "value": 12
+                    },
+                    "ArmorPart_RHand": {
+                      "type": "byte",
+                      "value": 192
+                    },
+                    "ArmorPart_Robe": {
+                      "type": "byte",
+                      "value": 186
+                    },
+                    "ArmorPart_RShin": {
+                      "type": "byte",
+                      "value": 89
+                    },
+                    "ArmorPart_RShoul": {
+                      "type": "byte",
+                      "value": 19
+                    },
+                    "ArmorPart_RThigh": {
+                      "type": "byte",
+                      "value": 4
+                    },
+                    "ArmorPart_Torso": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "BaseItem": {
+                      "type": "int",
+                      "value": 16
+                    },
+                    "Charges": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "Cloth1Color": {
+                      "type": "byte",
+                      "value": 24
+                    },
+                    "Cloth2Color": {
+                      "type": "byte",
+                      "value": 118
+                    },
+                    "Cost": {
+                      "type": "dword",
+                      "value": 100
+                    },
+                    "Cursed": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "DescIdentified": {
+                      "type": "cexolocstring",
+                      "value": {}
+                    },
+                    "Description": {
+                      "type": "cexolocstring",
+                      "value": {
+                        "0": ""
+                      }
+                    },
+                    "Identified": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "Infinite": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "Leather1Color": {
+                      "type": "byte",
+                      "value": 126
+                    },
+                    "Leather2Color": {
+                      "type": "byte",
+                      "value": 119
+                    },
+                    "LocalizedName": {
+                      "type": "cexolocstring",
+                      "value": {
+                        "0": "Bürgerkleidung"
+                      }
+                    },
+                    "Metal1Color": {
+                      "type": "byte",
+                      "value": 50
+                    },
+                    "Metal2Color": {
+                      "type": "byte",
+                      "value": 1
+                    },
+                    "Plot": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "PropertiesList": {
+                      "type": "list",
+                      "value": []
+                    },
+                    "Repos_PosX": {
+                      "type": "word",
+                      "value": 0
+                    },
+                    "Repos_Posy": {
+                      "type": "word",
+                      "value": 6
+                    },
+                    "StackSize": {
+                      "type": "word",
+                      "value": 1
+                    },
+                    "Stolen": {
+                      "type": "byte",
+                      "value": 0
+                    },
+                    "Tag": {
+                      "type": "cexostring",
+                      "value": "CRAFT_ru_burger1"
+                    },
+                    "TemplateResRef": {
+                      "type": "resref",
+                      "value": "sw_ru_burger1"
                     },
                     "XOrientation": {
                       "type": "float",

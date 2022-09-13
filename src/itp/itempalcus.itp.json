@@ -3371,6 +3371,17 @@
                           "__struct_id": 0,
                           "NAME": {
                             "type": "cexostring",
+                            "value": "Keule"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "mn_hh028_eis_001"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "NAME": {
+                            "type": "cexostring",
                             "value": "Meisterhafte Keule"
                           },
                           "RESREF": {
