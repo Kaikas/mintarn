@@ -26,8 +26,11 @@ void GiveXP(object oPc, int iCount, int iSumXp, int iToken) {
 
     // Prüft ob der Spieler in den letzten 5 Minuten etwas geschrieben hat.
     //string sQuery = "SELECT * FROM Chat WHERE name=? AND charname=? ORDER BY id DESC LIMIT 1";
-    int iTalked = 0;
+
     int iCharacters = 0;
+    iCharacters = GetLocalInt(oPc,"RPXP_Counter");
+    SetLocalInt(oPc,"RPXP_Counter", 0);
+
     //if (NWNX_SQL_PrepareQuery(sQuery)) {
     //    NWNX_SQL_PreparedString(0, GetPCPlayerName(oPc));
     //    NWNX_SQL_PreparedString(1, GetName(oPc));
@@ -46,9 +49,6 @@ void GiveXP(object oPc, int iCount, int iSumXp, int iToken) {
     //}
     // Basisexp
 
-    iCharacters = GetLocalInt(oPc,"RPXP_Counter");
-    if(iCharacters > 0) iTalked = 1;
-
     int iXp = 400;
     if (iCharacters > 30) iXp = 420;
     if (iCharacters > 60) iXp = 440;
@@ -57,7 +57,7 @@ void GiveXP(object oPc, int iCount, int iSumXp, int iToken) {
     if (iCharacters > 150) iXp = 500;
 
     // Player has spoken, give XP
-    if (iTalked > 0) {
+    if (iCharacters > 0) {
         int iXpPenalty = -1;
         int iDatetime = 0;
         int iMoschEp = 0;
